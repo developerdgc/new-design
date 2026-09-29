@@ -13,11 +13,11 @@ Backgrounds alternate dark and light down the page:
 | Header (unchanged) | White |
 | Hero: full width video, 3 feature icons | Dark |
 | Trust: Trustpilot badge + 6 client logos | White |
-| About Us: photo, "Since 2004" badge, 2x2 stats | Dark |
-| Our Services: 3 cards | Light |
-| CTA: Book Now / Call + quote form | Blue |
+| About Us: photo, "Since 2004" badge, 2x2 stats | White |
+| Our Services: 3 cards | Dark |
+| CTA: blue banner with photo, Book Now / Call + quote form | Light |
 | Occasions: 6 black cards | White |
-| Why Customers Book With Us | Dark |
+| Why Customers Book With Us (photo background) | Dark |
 | Blog | Light |
 | Footer (unchanged) | Dark |
 
