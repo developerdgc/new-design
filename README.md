@@ -1,6 +1,6 @@
 # Limos 4 Less — Homepage Redesign
 
-A simpler homepage for [limos4less.com](https://limos4less.com/). All text, images, and links come from the current website.
+A simpler, more polished homepage for [limos4less.com](https://limos4less.com/). All text, images, and links come from the current website.
 
 **Open `index.html` in a browser to view it.** Screenshots are in `preview/`.
 
@@ -17,6 +17,12 @@ A simpler homepage for [limos4less.com](https://limos4less.com/). All text, imag
 | Areas served only in an FAQ answer | "Areas we serve" list |
 | Long paragraphs in About / Why Us | Short points and stats |
 | 10 menu items + Log In button | 5 menu items + Call + Book a Ride |
+
+## Design
+
+Light theme to match the rest of the site. White and soft lavender sections, brand indigo for buttons, and small champagne-gold accents. Headings use Sora; body text stays Inter. Header and footer are unchanged.
+
+Highlights: hero with a boarding-pass style trip card, scrolling client logos, a dashed-road "how it works" timeline, image tiles for services, an airport departure-board list, seat and luggage icons for the fleet, and a two-column FAQ.
 
 ## Sections
 

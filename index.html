@@ -7,7 +7,7 @@
   <meta name="description" content="Airport car service across Maryland, DC, and Virginia since 2004. Sedan and SUV transfers to BWI, Reagan National, and Dulles. Call 410-737-7600.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,198 +46,284 @@
 
 <main id="main">
 
-  <!-- 2. HERO -->
+  <!-- Icon set -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3Z"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M21.4 11.6 12.4 2.6A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7c0 .6.2 1.1.6 1.4l9 9a2 2 0 0 0 2.8 0l7-7a2 2 0 0 0 0-2.8ZM6.5 8A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4 0-8 2-8 5v2h16v-2c0-3-4-5-8-5Z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M9 2h6a1 1 0 0 1 1 1v3h2a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-1v1h-2v-1H9v1H7v-1H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V3a1 1 0 0 1 1-1Zm1 2v2h4V4h-4Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3 1.4-1.4Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m9.5 16.6-4.1-4.1L4 13.9l5.5 5.5L20 8.9l-1.4-1.4-9.1 9.1Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6 12 2Z"/></symbol>
+  </svg>
+
+  <!-- HERO -->
   <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__inner">
       <div class="hero__text">
-        <p class="eyebrow">Maryland · Washington DC · Virginia — since 2004</p>
-        <h1>Airport Car Service in Maryland, DC, and Virginia</h1>
+        <p class="pill"><span class="pill__dot"></span>Serving Maryland, DC &amp; Virginia since 2004</p>
+        <h1>Airport car service in <span class="hl">Maryland, DC, and Virginia</span></h1>
         <p class="lead">Chauffeured sedans and SUVs to BWI, Reagan National, and Dulles, plus point to point and hourly rides across the region. Family run since 2004.</p>
 
         <div class="hero__actions">
-          <a class="btn btn--primary btn--lg" href="https://customer.moovs.app/limos-4-less/request/new">Book Online</a>
-          <a class="btn btn--light btn--lg" href="tel:+14107377600">Call 410-737-7600</a>
+          <a class="btn btn--primary btn--lg" href="https://customer.moovs.app/limos-4-less/request/new">Book Online <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--light btn--lg" href="tel:+14107377600"><svg><use href="#i-phone"/></svg>410-737-7600</a>
         </div>
 
-        <p class="hero__note">
-          <strong>Riding today?</strong> Please call. Online booking is for rides at least 1 day ahead.
-        </p>
+        <p class="hero__note"><strong>Riding today?</strong> Please call us. Online booking is for rides at least 1 day ahead.</p>
 
-        <a class="rating" href="https://www.trustpilot.com/review/limos4less.com">
-          <span class="rating__stars" aria-hidden="true">★★★★★</span>
-          <span><strong>4.7</strong> on Trustpilot · 1,207 reviews</span>
-        </a>
+        <div class="proof">
+          <a class="proof__rating" href="https://www.trustpilot.com/review/limos4less.com">
+            <span class="stars" aria-label="4.7 out of 5 stars">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </span>
+            <span><strong>4.7</strong> Trustpilot · 1,207 reviews</span>
+          </a>
+          <span class="proof__sep" aria-hidden="true"></span>
+          <span class="proof__item"><strong>40K+</strong> trips completed</span>
+        </div>
       </div>
 
-      <div class="hero__media">
-        <img src="assets/img/hero.webp" alt="Chauffeur opening the car door for an airport passenger" width="1000" height="667">
-        <ul class="hero__badges">
-          <li>✈ Flight tracked</li>
-          <li>✓ Price quoted up front</li>
-        </ul>
+      <div class="hero__visual">
+        <div class="hero__frame">
+          <img src="assets/img/hero.webp" alt="Chauffeur opening the car door for an airport passenger" width="1000" height="667">
+        </div>
+
+        <!-- boarding-pass style trip card -->
+        <div class="pass" aria-label="Example airport trip">
+          <div class="pass__row">
+            <div>
+              <span class="pass__label">From</span>
+              <span class="pass__code">Your door</span>
+            </div>
+            <div class="pass__path" aria-hidden="true"><svg><use href="#i-plane"/></svg></div>
+            <div class="pass__to">
+              <span class="pass__label">To</span>
+              <span class="pass__code">BWI · DCA · IAD</span>
+            </div>
+          </div>
+          <div class="pass__foot">
+            <span><svg><use href="#i-check"/></svg>Flight tracked</span>
+            <span><svg><use href="#i-check"/></svg>Chauffeur named</span>
+            <span><svg><use href="#i-check"/></svg>Fare fixed</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TRUSTED BY -->
   <section class="clients" aria-label="Trusted by">
-    <div class="container clients__inner">
-      <p>Trusted by travelers and teams from</p>
-      <div class="clients__logos">
+    <p class="clients__title">Trusted by travelers and teams from</p>
+    <div class="marquee">
+      <div class="marquee__track">
         <img src="assets/img/client-amazon.avif" alt="Amazon" loading="lazy">
         <img src="assets/img/client-hopkins.avif" alt="Johns Hopkins Medicine" loading="lazy">
         <img src="assets/img/client-umd.avif" alt="University of Maryland" loading="lazy">
         <img src="assets/img/client-fox5.avif" alt="FOX 5 Washington DC" loading="lazy">
         <img src="assets/img/client-spirit.avif" alt="Spirit" loading="lazy">
         <img src="assets/img/client-apg.avif" alt="Aberdeen Proving Ground" loading="lazy">
+        <img src="assets/img/client-amazon.avif" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/img/client-hopkins.avif" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/img/client-umd.avif" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/img/client-fox5.avif" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/img/client-spirit.avif" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/img/client-apg.avif" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- 3. HOW IT WORKS -->
+  <!-- HOW IT WORKS -->
   <section class="section" id="how">
     <div class="container">
-      <div class="section__head">
-        <h2>How it works</h2>
-        <p>Three simple steps. No surprises.</p>
+      <div class="head">
+        <p class="kicker">How it works</p>
+        <h2>Booked in minutes. Picked up on time.</h2>
       </div>
-      <ol class="steps">
-        <li>
-          <span class="steps__num">1</span>
+
+      <ol class="road">
+        <li class="road__step">
+          <span class="road__num">1</span>
           <h3>Book online or call</h3>
-          <p>Book online in two minutes, up to 1 day before pickup. For a ride within 24 hours, call <a href="tel:+14107377600">410-737-7600</a>.</p>
+          <p>Book online in two minutes, up to 1 day before pickup. Riding within 24 hours? Call <a href="tel:+14107377600">410-737-7600</a>.</p>
         </li>
-        <li>
-          <span class="steps__num">2</span>
+        <li class="road__step">
+          <span class="road__num">2</span>
           <h3>Get your fixed quote</h3>
-          <p>Every extra that applies is listed on your quote before you book. The fare on your confirmation is the fare you pay.</p>
+          <p>Every extra is listed on your quote before you book. The fare on your confirmation is the fare you pay.</p>
         </li>
-        <li>
-          <span class="steps__num">3</span>
+        <li class="road__step">
+          <span class="road__num">3</span>
           <h3>Your chauffeur arrives</h3>
-          <p>Your chauffeur is named on your confirmation. On airport rides we track your flight, so a late landing moves the pickup.</p>
+          <p>The chauffeur named on your confirmation shows up. We track your flight, so a late landing moves the pickup.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- 4. SERVICES -->
-  <section class="section section--alt" id="services">
+  <!-- SERVICES -->
+  <section class="section section--tint" id="services">
     <div class="container">
-      <div class="section__head">
-        <h2>What we do</h2>
-        <p>Pick the ride you need.</p>
+      <div class="head head--split">
+        <div>
+          <p class="kicker">Our services</p>
+          <h2>One company for every ride</h2>
+        </div>
+        <a class="btn btn--light" href="https://limos4less.com/our-services/">View all services <svg><use href="#i-arrow"/></svg></a>
       </div>
 
-      <div class="cards">
-        <article class="card">
+      <div class="bento">
+        <a class="tile tile--big" href="https://limos4less.com/airport-transportation/">
           <img src="assets/img/svc-airport.webp" alt="" loading="lazy">
-          <div class="card__body">
+          <div class="tile__body">
+            <span class="tile__tag">Main service</span>
             <h3>Airport Transfers</h3>
             <p>To and from BWI, Reagan National, and Dulles. Flight tracking on every booking.</p>
-            <a class="link" href="https://limos4less.com/airport-transportation/">Airport rides →</a>
+            <span class="tile__go">Airport rides <svg><use href="#i-arrow"/></svg></span>
           </div>
-        </article>
-
-        <article class="card">
+        </a>
+        <a class="tile" href="https://limos4less.com/point-to-point-transfers/">
           <img src="assets/img/svc-point.jpg" alt="" loading="lazy">
-          <div class="card__body">
+          <div class="tile__body">
             <h3>Point to Point &amp; Long Distance</h3>
             <p>Any address to any address, one way or round trip. Philadelphia or NYC? No problem.</p>
-            <a class="link" href="https://limos4less.com/point-to-point-transfers/">Point to point →</a>
+            <span class="tile__go">Learn more <svg><use href="#i-arrow"/></svg></span>
           </div>
-        </article>
-
-        <article class="card">
+        </a>
+        <a class="tile" href="https://limos4less.com/hourly-chauffeur-services/">
           <img src="assets/img/svc-hourly.webp" alt="" loading="lazy">
-          <div class="card__body">
+          <div class="tile__body">
             <h3>Hourly Chauffeur</h3>
             <p>One car and one chauffeur for a block of hours. Stops and waiting included.</p>
-            <a class="link" href="https://limos4less.com/hourly-chauffeur-services/">Hourly service →</a>
+            <span class="tile__go">Learn more <svg><use href="#i-arrow"/></svg></span>
           </div>
-        </article>
-
-        <article class="card">
+        </a>
+        <a class="tile tile--wide" href="https://limos4less.com/our-services/">
           <img src="assets/img/svc-events.jpg" alt="" loading="lazy">
-          <div class="card__body">
+          <div class="tile__body">
             <h3>Events &amp; Weddings</h3>
-            <p>Weddings, birthdays, graduations, concerts, and games. Arrive on time and in style.</p>
-            <a class="link" href="https://limos4less.com/our-services/">All services →</a>
+            <p>Weddings, birthdays, graduations, concerts, and games.</p>
+            <span class="tile__go">Learn more <svg><use href="#i-arrow"/></svg></span>
           </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- 5. AIRPORTS -->
+  <!-- AIRPORTS: departure board -->
   <section class="section" id="airports">
-    <div class="container">
-      <div class="section__head">
-        <h2>Airports we serve</h2>
-        <p>Arrivals and departures, day or night.</p>
+    <div class="container airports">
+      <div class="airports__intro">
+        <p class="kicker">Airports we serve</p>
+        <h2>Never miss a flight. Never wait at arrivals.</h2>
+        <p class="muted">Give us your flight number when you book. If you land late, your pickup moves with you.</p>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg>Flight tracking on every airport ride</li>
+          <li><svg><use href="#i-check"/></svg>Meet and greet inside baggage claim</li>
+          <li><svg><use href="#i-check"/></svg>Arrivals and departures</li>
+        </ul>
       </div>
 
-      <div class="airports">
-        <a class="airport" href="https://limos4less.com/baltimore-airport-car-service/">
-          <span class="airport__code">BWI</span>
-          <span class="airport__name">Baltimore/Washington International Thurgood Marshall Airport</span>
+      <div class="board">
+        <div class="board__top">
+          <span><svg><use href="#i-plane"/></svg>Airport transfers</span>
+          <span class="board__live">Flight tracked</span>
+        </div>
+        <div class="board__cols" aria-hidden="true">
+          <span>Code</span><span>Airport</span><span>Status</span>
+        </div>
+        <a class="board__row" href="https://limos4less.com/baltimore-airport-car-service/">
+          <span class="board__code">BWI</span>
+          <span class="board__name">Baltimore/Washington International Thurgood Marshall</span>
+          <span class="board__status">Tracked</span>
         </a>
-        <a class="airport" href="https://limos4less.com/dca-airport-car-service/">
-          <span class="airport__code">DCA</span>
-          <span class="airport__name">Ronald Reagan Washington National Airport</span>
+        <a class="board__row" href="https://limos4less.com/dca-airport-car-service/">
+          <span class="board__code">DCA</span>
+          <span class="board__name">Ronald Reagan Washington National</span>
+          <span class="board__status">Tracked</span>
         </a>
-        <a class="airport" href="https://limos4less.com/dulles-airport-car-service/">
-          <span class="airport__code">IAD</span>
-          <span class="airport__name">Washington Dulles International Airport</span>
+        <a class="board__row" href="https://limos4less.com/dulles-airport-car-service/">
+          <span class="board__code">IAD</span>
+          <span class="board__name">Washington Dulles International</span>
+          <span class="board__status">Tracked</span>
         </a>
       </div>
-
-      <ul class="ticks">
-        <li>Flight tracking. A delayed landing moves your pickup without a call from you.</li>
-        <li>Meet and greet inside baggage claim at all three airports.</li>
-      </ul>
     </div>
   </section>
 
-  <!-- 6. FLEET -->
-  <section class="section section--alt" id="fleet">
-    <div class="container fleet">
-      <div class="fleet__media">
-        <img src="assets/img/fleet-sedan.webp" alt="Black luxury sedan from the Limos 4 Less fleet" loading="lazy">
+  <!-- FLEET -->
+  <section class="section section--tint" id="fleet">
+    <div class="container">
+      <div class="head">
+        <p class="kicker">Our fleet</p>
+        <h2>Pick the right car for your group</h2>
+        <p>Every car is cleaned and inspected before each ride.</p>
       </div>
-      <div class="fleet__text">
-        <h2>Choose your car</h2>
-        <p class="muted">Every car is cleaned and inspected before each ride.</p>
 
-        <div class="vehicles">
-          <div class="vehicle">
-            <h3>Sedan</h3>
-            <ul>
-              <li><strong>Up to 3</strong> passengers</li>
-              <li><strong>3–4</strong> bags</li>
-            </ul>
-            <p>Best for solo travelers, couples, and business trips.</p>
-          </div>
-          <div class="vehicle">
-            <h3>SUV</h3>
-            <ul>
-              <li><strong>Up to 7</strong> passengers</li>
-              <li><strong>6–7</strong> bags</li>
-            </ul>
-            <p>Best for families, groups, and extra luggage.</p>
-          </div>
+      <div class="fleet">
+        <div class="fleet__photo">
+          <img src="assets/img/fleet-sedan.webp" alt="Black luxury sedan from the Limos 4 Less fleet" loading="lazy">
         </div>
 
-        <p class="small">Child seats available on request. Pets welcome at no extra cost. Just tell us when you book.</p>
+        <div class="fleet__cards">
+          <div class="car">
+            <div class="car__head">
+              <h3>Sedan</h3>
+              <span class="car__tag">Solo &amp; business</span>
+            </div>
+            <div class="car__row">
+              <span class="car__label">Passengers</span>
+              <span class="icons" aria-label="Up to 3 passengers">
+                <svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg>
+              </span>
+              <strong>Up to 3</strong>
+            </div>
+            <div class="car__row">
+              <span class="car__label">Luggage</span>
+              <span class="icons icons--bag" aria-label="3 to 4 bags">
+                <svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg class="dim"><use href="#i-bag"/></svg>
+              </span>
+              <strong>3–4 bags</strong>
+            </div>
+          </div>
+
+          <div class="car car--featured">
+            <div class="car__head">
+              <h3>SUV</h3>
+              <span class="car__tag">Families &amp; groups</span>
+            </div>
+            <div class="car__row">
+              <span class="car__label">Passengers</span>
+              <span class="icons" aria-label="Up to 7 passengers">
+                <svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg><svg><use href="#i-user"/></svg>
+              </span>
+              <strong>Up to 7</strong>
+            </div>
+            <div class="car__row">
+              <span class="car__label">Luggage</span>
+              <span class="icons icons--bag" aria-label="6 to 7 bags">
+                <svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg><use href="#i-bag"/></svg><svg class="dim"><use href="#i-bag"/></svg>
+              </span>
+              <strong>6–7 bags</strong>
+            </div>
+          </div>
+
+          <p class="fleet__note">Child seats on request. Pets ride free. Just tell us when you book.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. WHY US -->
-  <section class="section section--dark" id="why">
+  <!-- WHY US -->
+  <section class="section" id="why">
     <div class="container">
-      <div class="section__head">
-        <h2>Why customers book with us</h2>
+      <div class="head">
+        <p class="kicker">Why Limos 4 Less</p>
+        <h2>Why customers keep booking with us</h2>
         <p>Most of our bookings come from people who have ridden with us before.</p>
       </div>
 
@@ -250,61 +336,77 @@
 
       <div class="features">
         <div class="feature">
-          <span class="feature__icon" aria-hidden="true">☎</span>
+          <span class="feature__icon"><svg><use href="#i-phone"/></svg></span>
           <h3>A person answers the phone</h3>
           <p>You reach a person at the office, not a queue. That includes the night before an early pickup.</p>
         </div>
         <div class="feature">
-          <span class="feature__icon" aria-hidden="true">✓</span>
+          <span class="feature__icon"><svg><use href="#i-shield"/></svg></span>
           <h3>Checked chauffeurs</h3>
           <p>Every chauffeur is licensed and background checked. The name on your confirmation is who shows up.</p>
         </div>
         <div class="feature">
-          <span class="feature__icon" aria-hidden="true">✈</span>
+          <span class="feature__icon"><svg><use href="#i-plane"/></svg></span>
           <h3>Flight tracking</h3>
           <p>Give us your flight number and we watch your arrival for you.</p>
         </div>
         <div class="feature">
-          <span class="feature__icon" aria-hidden="true">$</span>
+          <span class="feature__icon"><svg><use href="#i-tag"/></svg></span>
           <h3>Upfront pricing</h3>
-          <p>No hidden fees. Tip is up to you and never required.</p>
+          <p>No hidden fees. Tipping is up to you and never required.</p>
         </div>
       </div>
 
-      <div class="center">
-        <a class="btn btn--light" href="https://www.trustpilot.com/review/limos4less.com">★ 4.7 · Read our reviews on Trustpilot</a>
-      </div>
+      <a class="review-band" href="https://www.trustpilot.com/review/limos4less.com">
+        <span class="review-band__score">4.7</span>
+        <span class="review-band__text">
+          <span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span>Rated by 1,207 customers on Trustpilot</span>
+        </span>
+        <span class="review-band__go">Read reviews <svg><use href="#i-arrow"/></svg></span>
+      </a>
     </div>
   </section>
 
-  <!-- 8. AREAS -->
-  <section class="section" id="areas">
-    <div class="container">
-      <div class="section__head">
-        <h2>Areas we serve</h2>
-        <p>Across Maryland, Washington DC, and Northern Virginia.</p>
+  <!-- AREAS -->
+  <section class="section section--tint" id="areas">
+    <div class="container areas">
+      <div class="areas__intro">
+        <p class="kicker">Areas we serve</p>
+        <h2>Across Maryland, DC, and Northern Virginia</h2>
+        <div class="states" aria-hidden="true"><span>MD</span><span>DC</span><span>VA</span></div>
       </div>
       <ul class="chips">
-        <li>Silver Spring</li>
-        <li>Montgomery County</li>
-        <li>Baltimore</li>
-        <li>Columbia</li>
-        <li>Laurel</li>
-        <li>College Park</li>
-        <li>Frederick</li>
-        <li>Hagerstown</li>
-        <li>Washington DC</li>
-        <li>Arlington</li>
-        <li>+ surrounding areas</li>
+        <li><svg><use href="#i-pin"/></svg>Silver Spring</li>
+        <li><svg><use href="#i-pin"/></svg>Montgomery County</li>
+        <li><svg><use href="#i-pin"/></svg>Baltimore</li>
+        <li><svg><use href="#i-pin"/></svg>Columbia</li>
+        <li><svg><use href="#i-pin"/></svg>Laurel</li>
+        <li><svg><use href="#i-pin"/></svg>College Park</li>
+        <li><svg><use href="#i-pin"/></svg>Frederick</li>
+        <li><svg><use href="#i-pin"/></svg>Hagerstown</li>
+        <li><svg><use href="#i-pin"/></svg>Washington DC</li>
+        <li><svg><use href="#i-pin"/></svg>Arlington</li>
+        <li class="chips__more">+ surrounding areas</li>
       </ul>
     </div>
   </section>
 
-  <!-- 9. FAQ -->
-  <section class="section section--alt" id="faq">
-    <div class="container container--narrow">
-      <div class="section__head">
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq-wrap">
+      <div class="faq-side">
+        <p class="kicker">FAQ</p>
         <h2>Common questions</h2>
+        <p class="muted">Can't find your answer? Call us and a person answers.</p>
+        <div class="help">
+          <span class="help__icon"><svg><use href="#i-phone"/></svg></span>
+          <div>
+            <span class="help__label">Call us</span>
+            <a href="tel:+14107377600">410-737-7600</a>
+          </div>
+        </div>
+        <a class="link" href="https://limos4less.com/faqs/">See all FAQs <svg><use href="#i-arrow"/></svg></a>
       </div>
 
       <div class="faq">
@@ -333,21 +435,25 @@
           <p>Yes. Tell us what you'd like and we will do our best, depending on availability.</p>
         </details>
       </div>
-
-      <p class="center muted">More questions? <a href="https://limos4less.com/faqs/">See all FAQs</a></p>
     </div>
   </section>
 
   <!-- FINAL CTA -->
   <section class="cta" id="contact">
-    <div class="container cta__inner">
-      <div>
-        <h2>Ready to book your ride?</h2>
-        <p>Book online in two minutes, or call and a person answers.</p>
-      </div>
-      <div class="cta__actions">
-        <a class="btn btn--light btn--lg" href="https://customer.moovs.app/limos-4-less/request/new">Book Online</a>
-        <a class="btn btn--outline btn--lg" href="tel:+14107377600">Call 410-737-7600</a>
+    <div class="container">
+      <div class="cta__card">
+        <div class="cta__text">
+          <p class="kicker">Ready when you are</p>
+          <h2>Book your next ride with Limos 4 Less</h2>
+          <p>Book online in two minutes, or call and a person answers.</p>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="https://customer.moovs.app/limos-4-less/request/new">Book Online <svg><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--light btn--lg" href="tel:+14107377600"><svg><use href="#i-phone"/></svg>410-737-7600</a>
+          </div>
+        </div>
+        <div class="cta__img">
+          <img src="assets/img/cta-car.webp" alt="" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
