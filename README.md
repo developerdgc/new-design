@@ -10,7 +10,7 @@ Backgrounds alternate dark and light down the page:
 
 | Section | Background |
 |---|---|
-| Header (unchanged) | White |
+| Top bar + header, same as the live site (phone shown as a gold button) | Black / White |
 | Hero: full width video, 3 feature icons | Dark |
 | Trust: Trustpilot badge + 6 client logos | White |
 | About Us: photo, "Since 2004" badge, 2x2 stats | White |
@@ -19,7 +19,7 @@ Backgrounds alternate dark and light down the page:
 | Occasions: 6 black cards | White |
 | Why Customers Book With Us (photo background) | Dark |
 | Blog | Light |
-| Footer (unchanged) | Dark |
+| Footer, same as the live site | Black |
 
 ## Design
 
