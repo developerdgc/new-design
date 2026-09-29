@@ -6,20 +6,24 @@ A simpler, more polished homepage for [limos4less.com](https://limos4less.com/).
 
 ## Structure
 
-1. Header (unchanged)
-2. Hero: full width, background video from the live site; header + hero fit one screen
-3. Trust strip: Trustpilot 4.7 + 6 client logos in one row
-4. About Us: photo, "Since 2004" badge, stats (20+, 10M+, 40K+, 1000+)
-5. Our Services: 3 compact cards
-6. CTA: blue band with Book Now / Call and a quote request form
-7. Occasions: black section, 6 compact cards
-8. Why Customers Book With Us: 4 short points in one row
-9. Blog: 3 posts
-10. Footer (unchanged)
+Backgrounds alternate dark and light down the page:
+
+| Section | Background |
+|---|---|
+| Header (unchanged) | White |
+| Hero: full width video, 3 feature icons | Dark |
+| Trust: Trustpilot badge + 6 client logos | White |
+| About Us: photo, "Since 2004" badge, 2x2 stats | Dark |
+| Our Services: 3 cards | Light |
+| CTA: Book Now / Call + quote form | Blue |
+| Occasions: 6 black cards | White |
+| Why Customers Book With Us | Dark |
+| Blog | Light |
+| Footer (unchanged) | Dark |
 
 ## Design
 
-Black, brand blue, and white sections with gold as the luxury accent. Headings use Montserrat like the live site. Content width is 1300px with 20px side padding, matching the live homepage. Corners are tight (6-10px) with visible borders.
+Gold is the accent. Headings use Montserrat like the live site. Content width is 1300px with 20px side padding, matching the live homepage. Corners are small (4-8px); cards on light backgrounds have visible borders and a soft shadow.
 
 The quote form in the CTA is not connected yet. Hook it up to the site's form handler (for example the form used on the Contact Us page).
 
