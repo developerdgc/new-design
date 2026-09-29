@@ -113,7 +113,7 @@
   </section>
 
   <!-- ABOUT US -->
-  <section class="section section--dark about" id="about">
+  <section class="section about" id="about">
     <div class="container about__grid">
       <div class="about__media">
         <img src="assets/img/hero.webp" alt="Limos 4 Less chauffeur greeting an airport passenger" loading="lazy">
@@ -142,14 +142,14 @@
   </section>
 
   <!-- OUR SERVICES -->
-  <section class="section section--tint" id="services">
+  <section class="section section--dark svc-sec" id="services">
     <div class="container">
       <div class="head head--split">
         <div>
           <p class="kicker">What we do</p>
           <h2>Our Services</h2>
         </div>
-        <a class="btn btn--outline-dark" href="https://limos4less.com/our-services/">View All Services <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--outline-gold" href="https://limos4less.com/our-services/">View All Services <svg><use href="#i-arrow"/></svg></a>
       </div>
 
       <div class="svc">
@@ -192,7 +192,10 @@
 
   <!-- CTA + QUOTE FORM -->
   <section class="cta" id="contact">
-    <div class="container cta__grid">
+    <div class="container">
+      <div class="cta__card">
+        <img class="cta__bg" src="assets/img/occ-airport.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="cta__grid">
       <div class="cta__text">
         <p class="kicker kicker--light">Reservations</p>
         <h2>Book your airport car before you fly.</h2>
@@ -201,6 +204,11 @@
           <a class="btn btn--gold btn--lg" href="https://customer.moovs.app/limos-4-less/request/new">Book Now <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn--glass btn--lg" href="tel:+14107377600"><svg><use href="#i-phone"/></svg>410-737-7600</a>
         </div>
+        <ul class="cta__ticks">
+          <li>BWI · DCA · IAD</li>
+          <li>Flight tracked</li>
+          <li>Fare quoted up front</li>
+        </ul>
         <p class="cta__note"><svg><use href="#i-clock"/></svg>Online booking is for rides at least 1 day ahead. Riding within 24 hours? Please call.</p>
       </div>
 
@@ -227,6 +235,8 @@
         <button class="btn btn--gold btn--block" type="submit">Get My Quote <svg><use href="#i-arrow"/></svg></button>
         <p class="quote__msg" id="quote-msg" role="status" hidden></p>
       </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -278,6 +288,7 @@
 
   <!-- WHY CHOOSE US -->
   <section class="section section--dark why-sec" id="why">
+    <img class="why-sec__bg" src="assets/img/svc-hourly.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="container why">
       <div class="why__intro">
         <p class="kicker">Why choose us</p>
