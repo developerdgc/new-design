@@ -3,7 +3,7 @@ const { execFile } = require('child_process');
 const fs=require('fs');
 const run=(u)=>new Promise((res,rej)=>execFile('curl',['-sSL','--max-time','40','-D','-',u],{maxBuffer:1e8,encoding:'buffer'},(e,o)=>e?rej(e):res(o)));
 const cache={};
-const PAGES=['','about-us/','our-services/','contact-us/','faqs/','blog/','privacy-policy/','terms-conditions/','cookie-policy/','gbp-optimization/','web-development/','custom-web-design/','responsive-development/','ui-ux-designing/','graphic-designing/','reviews/','seo-digital-marketing/','landing-pages/','software-development/','social-media-marketing/','branding/','google-ads/','citations-backlinks/','e-commerce-solutions/','how-to-rank-higher-on-google-maps-in-2026/','does-your-small-business-really-need-branding/'];
+const PAGES=['','about-us/','services/','contact-us/','faqs/','blog/','privacy-policy/','terms-conditions/','cookie-policy/','services/gbp-optimization/','services/web-development/','services/custom-web-design/','services/responsive-development/','services/ui-ux-designing/','services/graphic-designing/','services/reviews/','services/seo-digital-marketing/','services/landing-pages/','services/software-development/','services/social-media-marketing/','services/branding/','services/google-ads/','services/citations-backlinks/','services/e-commerce-solutions/','how-to-rank-higher-on-google-maps-in-2026/','does-your-small-business-really-need-branding/'];
 (async()=>{const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium'});
 const p=await b.newPage({viewport:{width:1366,height:800}});
 const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>{if(m.type()==='error')errs.push('console:'+m.text().slice(0,120))});
