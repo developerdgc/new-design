@@ -2,402 +2,408 @@
 <title>DigiRanx Pro Website</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: dark agency site in the Xcelliance structure. Floating pill header, full-width sections on an ink ground,
-   brand gradient (cyan > violet > magenta from the logo) used only on accents, CTAs and the 3D hero object. */
+/* Layout: Xcelliance template structure 1:1 (dark hero, white content sections, gradient-image cards, navy footer),
+   recoloured to the DigiRanx Pro logo: template blue -> cyan/violet gradient, template lime -> logo magenta.
+   Deliberately single-theme (light page with dark bands), like the template. */
 :root{
-  --ink:#07060E;          /* page ground */
-  --ink-2:#0D0B19;        /* alternate section ground */
-  --panel:#141127;        /* cards */
-  --panel-2:#1B1734;      /* raised cards / hover */
-  --line:rgba(170,160,255,.14);
-  --text:#EEEDF7;
-  --muted:#A7A4C0;
+  --navy:#110A2E;          /* template #05314B: dark bands, card bg, footer */
+  --navy-2:#0A0620;        /* template #021520: deepest */
+  --white:#FFFFFF;
+  --light:#F6F5FB;         /* template #F6F6F6 */
+  --line:#E6E3F0;
+  --head:#120B35;          /* headings on white */
+  --text:#625E74;          /* template #6A6A6A body */
   --cyan:#1EC8F5;
-  --violet:#8A3BFF;
-  --magenta:#FF2EA6;
-  --grad:linear-gradient(100deg,var(--cyan) 0%,var(--violet) 55%,var(--magenta) 100%);
-  --display:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;
-  --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
-  --radius:18px;
-  --wrap:1240px;
-  --gut:clamp(16px,4vw,32px);
-  color-scheme:dark;
+  --violet:#7B3BFF;
+  --magenta:#FF2EA6;       /* replaces template lime #8BD70D */
+  --blue-ink:#4B2BD6;      /* eyebrow on white (template #0D26D7) */
+  --grad:linear-gradient(90deg,#16B4F0 0%,#7B3BFF 100%);
+  --grad-3:linear-gradient(90deg,#1EC8F5 0%,#7B3BFF 55%,#FF2EA6 100%);
+  --overlay:linear-gradient(180deg,rgba(30,170,245,.80) 0%,rgba(98,46,240,.92) 100%);
+  --font:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --wrap:1200px;
+  --gut:clamp(16px,4vw,24px);
+  --shadow:0 10px 40px -12px rgba(30,16,90,.18);
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+body{margin:0;background:var(--white);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.65;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
-h1,h2,h3,h4{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4,h5{font-family:var(--font);color:var(--head);line-height:1.15;margin:0;text-wrap:balance;font-weight:700}
 p{margin:0}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
-.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.ico{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
-.eyebrow::before{content:"";width:28px;height:2px;border-radius:2px;background:var(--grad)}
-.sec{padding-block:clamp(64px,9vw,112px)}
-.sec.alt{background:var(--ink-2)}
-.sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:clamp(32px,5vw,52px)}
+.ico{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.eyebrow{display:inline-block;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-ink)}
+.dark .eyebrow,.eyebrow.on-dark{color:var(--magenta)}
+.sec{padding-block:clamp(64px,8vw,100px)}
+.sec.light{background:var(--light)}
+.sec-head{display:grid;gap:12px;max-width:760px;margin-bottom:clamp(32px,4vw,48px)}
 .sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
-.sec-head h2{font-size:clamp(30px,4.4vw,50px);font-weight:800}
-.sec-head p{color:var(--muted);font-size:17px}
-.lead{color:var(--muted);font-size:17px}
+.sec-head h2{font-size:clamp(28px,3.4vw,38px)}
+.sec-head p{font-size:15.5px}
+.dark h1,.dark h2,.dark h3,.dark h4{color:#fff}
+.dark p{color:rgba(255,255,255,.82)}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;font-family:var(--display);font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
-.btn .ico{font-size:18px;transition:transform .2s}
-.btn:hover .ico{transform:translateX(3px)}
-.btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 30px -10px rgba(138,59,255,.7)}
-.btn-grad:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(255,46,166,.65)}
-.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
-.btn-ghost:hover{border-color:var(--cyan);background:rgba(30,200,245,.08)}
+/* Buttons (template: pill, gradient, small) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:999px;border:0;cursor:pointer;font-family:var(--font);font-weight:600;font-size:15px;line-height:1.2;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn .ico{font-size:16px}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 8px 22px -10px rgba(123,59,255,.7)}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(123,59,255,.8)}
+.btn-white{background:#fff;color:var(--blue-ink)}
+.btn-white:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid var(--blue-ink);color:var(--head);padding:10px 22px}
+.btn-outline:hover{background:var(--blue-ink);color:#fff}
+.btn-sm{padding:9px 18px;font-size:14px}
 
-/* ---------- Header ---------- */
-.hdr{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:50;padding-inline:var(--gut)}
-.hdr-bar{max-width:var(--wrap);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 12px 10px 22px;border-radius:999px;background:rgba(10,9,22,.82);border:1px solid rgba(190,180,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 40px -20px rgba(0,0,0,.8)}
+/* ---------- Header (pill, per reference screenshot) ---------- */
+.hdr{position:absolute;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 16px);z-index:50;padding-inline:var(--gut)}
+.hdr-bar{position:relative;max-width:1280px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 12px 10px 24px;border-radius:999px;background:rgba(10,6,32,.78);border:1px solid rgba(200,190,255,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .brand{display:flex;align-items:center;gap:10px;flex:none}
 .brand img.mark{width:40px;height:auto}
-.brand img.word{width:150px;height:auto}
-.brand small{display:block;font-family:var(--display);font-size:10.5px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-top:2px;padding-left:2px}
-.nav{display:flex;align-items:center;gap:4px}
-.nav>li{list-style:none;position:static}
-.nav ul{padding:0;margin:0}
-.nav-link{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:16.5px;color:var(--text);background:none;border:0;cursor:pointer}
+.brand img.word{width:148px;height:auto}
+.brand small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--magenta);margin-top:2px;padding-left:2px}
+.nav{display:flex;align-items:center;gap:2px;margin:0;padding:0}
+.nav>li{list-style:none}
+.nav-link{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;font-weight:600;font-size:16.5px;color:#fff;background:none;border:0;cursor:pointer}
 .nav-link .ico{font-size:16px;transition:transform .2s}
 .nav-link:hover,.nav-link.active{color:var(--cyan)}
 .has-mega:hover .nav-link .ico,.has-mega.open .nav-link .ico{transform:rotate(180deg)}
 .hdr-cta{display:flex;align-items:center;gap:10px}
-.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--panel);cursor:pointer;align-items:center;justify-content:center}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;align-items:center;justify-content:center}
 .burger .ico{font-size:22px}
 
-/* Mega menu */
-.mega{position:absolute;left:var(--gut);right:var(--gut);top:calc(100% + 10px);max-width:var(--wrap);margin-inline:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 300px;gap:8px;padding:22px;border-radius:24px;background:#0E0C1D;border:1px solid rgba(190,180,255,.18);box-shadow:0 40px 80px -30px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+/* Mega menu: white panel, links only */
+.mega{position:absolute;left:0;right:0;top:calc(100% + 12px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px;padding:24px;border-radius:24px;background:#fff;box-shadow:0 30px 70px -20px rgba(10,6,32,.45);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
 .has-mega:hover .mega,.has-mega:focus-within .mega,.has-mega.open .mega{opacity:1;visibility:visible;transform:none}
-.mega-col h4{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:6px 12px 10px}
+.mega::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+.mega-col h4{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-ink);padding:4px 12px 10px;border-bottom:1px solid var(--line);margin-bottom:6px}
 .mega-col a{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:12px;transition:background .15s}
-.mega-col a:hover{background:var(--panel-2)}
-.mega-col a:hover .mi{background:var(--grad);color:#fff;border-color:transparent}
-.mi{width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;background:rgba(138,59,255,.12);border:1px solid var(--line);color:var(--cyan);font-size:19px;transition:background .15s,color .15s}
-.mega-col b{display:block;font-family:var(--display);font-size:15.5px;font-weight:700;line-height:1.2}
-.mega-col span.sub{display:block;font-size:12.5px;color:var(--muted);line-height:1.35}
-.mega-promo{border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;min-height:100%;background:linear-gradient(180deg,rgba(7,6,14,.1),rgba(7,6,14,.92)),var(--promo) center/cover}
-.mega-promo h5{font-family:var(--display);font-size:22px;font-weight:800;margin:0 0 6px;line-height:1.15}
-.mega-promo p{font-size:14px;color:var(--muted);margin-bottom:14px}
-.mega-promo .btn{padding:11px 18px;font-size:14.5px;align-self:flex-start}
+.mega-col a:hover{background:var(--light)}
+.mega-col a:hover .mi{background:var(--grad);color:#fff}
+.mi{width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;background:#F1ECFF;color:var(--violet);font-size:19px;transition:background .15s,color .15s}
+.mega-col b{display:block;font-size:15.5px;font-weight:700;color:var(--head);line-height:1.2}
+.mega-col span.sub{display:block;font-size:12.5px;color:var(--text);line-height:1.35}
+.mega-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;padding:14px 12px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--text)}
+.mega-foot a{color:var(--blue-ink);font-weight:700;display:inline-flex;align-items:center;gap:6px}
 
 /* Mobile drawer */
-.drawer{position:fixed;inset:0;z-index:60;background:rgba(4,3,10,.7);backdrop-filter:blur(6px);display:none}
+.drawer{position:fixed;inset:0;z-index:60;background:rgba(10,6,32,.6);display:none}
 .drawer.open{display:block}
-.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(400px,100%);background:#0C0A18;border-left:1px solid var(--line);padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);overflow-y:auto;display:flex;flex-direction:column;gap:6px}
-.drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.drawer a.dl,.drawer button.dl{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 6px;border:0;border-bottom:1px solid var(--line);background:none;font-family:var(--display);font-size:19px;font-weight:700;cursor:pointer;text-align:left}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(380px,100%);background:#fff;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);overflow-y:auto;display:flex;flex-direction:column;gap:4px}
+.drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding:10px 12px;border-radius:16px;background:var(--navy)}
+.drawer a.dl,.drawer button.dl{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 4px;border:0;border-bottom:1px solid var(--line);background:none;font-size:18px;font-weight:700;color:var(--head);cursor:pointer;text-align:left}
 .drawer .dsub{display:none;padding:6px 0 10px}
 .drawer .dsub.open{display:grid;gap:2px}
-.drawer .dsub a{display:flex;align-items:center;gap:12px;padding:8px 6px;font-weight:600}
+.drawer .dsub a{display:flex;align-items:center;gap:12px;padding:7px 4px;font-weight:600;color:var(--head)}
 .drawer .dsub .mi{width:32px;height:32px;font-size:16px}
 
-/* ---------- Hero ---------- */
-.hero{position:relative;overflow:hidden;padding-block:calc(env(safe-area-inset-top,0px) + 150px) 90px;background:
-  radial-gradient(60% 70% at 85% 40%,rgba(138,59,255,.28),transparent 70%),
-  radial-gradient(40% 50% at 10% 10%,rgba(30,200,245,.14),transparent 70%),
-  var(--ink)}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(170,160,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(170,160,255,.06) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);-webkit-mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:32px;align-items:center}
-.hero h1{font-size:clamp(40px,6.4vw,80px);font-weight:900;letter-spacing:-.025em;line-height:1.02;margin:18px 0 22px}
-.hero .lead{font-size:clamp(16px,1.6vw,19px);max-width:560px}
+/* ---------- Hero (template: dark blue, particles, wave lines, 3D globe right) ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;padding-block:calc(env(safe-area-inset-top,0px) + 150px) 170px;background:
+  radial-gradient(55% 60% at 75% 45%,rgba(123,59,255,.45),transparent 70%),
+  radial-gradient(40% 50% at 15% 20%,rgba(30,200,245,.18),transparent 70%),
+  linear-gradient(180deg,#0B0624 0%,#1A0E52 60%,#2A1478 100%)}
+.hero .stars-bg{position:absolute;inset:0;background-image:
+  radial-gradient(1.6px 1.6px at 12% 22%,rgba(140,220,255,.9),transparent 60%),
+  radial-gradient(1.4px 1.4px at 28% 68%,rgba(255,120,210,.8),transparent 60%),
+  radial-gradient(2px 2px at 44% 30%,rgba(140,220,255,.7),transparent 60%),
+  radial-gradient(1.4px 1.4px at 58% 80%,rgba(180,150,255,.8),transparent 60%),
+  radial-gradient(1.8px 1.8px at 70% 14%,rgba(140,220,255,.8),transparent 60%),
+  radial-gradient(1.4px 1.4px at 86% 60%,rgba(255,120,210,.7),transparent 60%),
+  radial-gradient(2px 2px at 94% 32%,rgba(140,220,255,.7),transparent 60%),
+  radial-gradient(1.4px 1.4px at 6% 84%,rgba(180,150,255,.8),transparent 60%);
+  background-size:520px 420px;opacity:.9;pointer-events:none}
+.hero .waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:260px;pointer-events:none;opacity:.55}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(38px,5.2vw,62px);font-weight:700;line-height:1.12;margin-bottom:20px}
+.hero p.lead{color:rgba(255,255,255,.85);font-size:clamp(16px,1.5vw,18px);max-width:500px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line);max-width:660px}
-.hero-meta div{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--muted)}
-.hero-meta b{display:block;color:var(--text);font-family:var(--display);font-size:16px}
-.hero-meta .ico{font-size:22px;color:var(--cyan)}
-.stars{display:inline-flex;gap:2px;color:#FFC542}
-.stars svg{width:15px;height:15px;fill:currentColor;stroke:none}
-.hero-3d{position:relative;aspect-ratio:1/1;width:100%;max-width:600px;justify-self:end}
+.btn-ghost-w{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost-w:hover{background:rgba(255,255,255,.1)}
+.hero-3d{position:relative;aspect-ratio:1/1;width:100%;max-width:520px;justify-self:end}
 .hero-3d canvas{width:100%!important;height:100%!important;display:block}
-.hero-3d .fallback{position:absolute;inset:12%;width:76%;height:auto;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(138,59,255,.45))}
-.float-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(20,17,39,.88);border:1px solid var(--line);backdrop-filter:blur(8px);font-size:13.5px;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);animation:bob 6s ease-in-out infinite}
-.float-chip b{font-family:var(--display);font-size:17px;display:block;line-height:1.1}
-.float-chip .mi{width:34px;height:34px;font-size:17px}
-.chip-a{left:0;top:18%}
-.chip-b{right:2%;bottom:14%;animation-delay:-3s}
-@keyframes bob{50%{transform:translateY(-10px)}}
-.marquee{border-block:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding-block:18px}
-.marquee-track{display:flex;gap:46px;width:max-content;animation:scroll 40s linear infinite}
-.marquee span{display:inline-flex;align-items:center;gap:46px;font-family:var(--display);font-weight:800;font-size:clamp(20px,2.4vw,28px);white-space:nowrap;color:var(--muted)}
-.marquee span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--grad)}
-@keyframes scroll{to{transform:translateX(-50%)}}
+.hero-3d .fallback{position:absolute;inset:15%;width:70%;height:auto;object-fit:contain}
 
-/* ---------- About ---------- */
-.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
-.about-media{position:relative;display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto;gap:14px}
-.about-media img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
-.about-media .m1{grid-row:1/3;aspect-ratio:3/4}
-.about-media .m2{aspect-ratio:1/1}
-.badge-card{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:20px;border-radius:var(--radius);background:var(--grad);color:#fff}
-.badge-card b{font-family:var(--display);font-size:clamp(30px,3.6vw,44px);font-weight:900;line-height:1}
-.badge-card span{font-size:14px;font-weight:600;line-height:1.35}
-.about-copy{display:grid;gap:22px}
-.about-copy h2{font-size:clamp(30px,4.2vw,48px);font-weight:800}
-.ticks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;padding:0;margin:0;list-style:none}
-.ticks li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:15.5px}
-.ticks .ico{color:var(--cyan);font-size:20px;margin-top:2px}
-.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:clamp(40px,6vw,72px)}
-.fact{padding:22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel)}
-.fact b{display:block;font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:900;line-height:1.05}
-.fact span{color:var(--muted);font-size:14px}
+/* Feature trio overlapping hero (template white box with 3 navy cards) */
+.trio-wrap{position:relative;z-index:2;margin-top:-110px}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:14px;border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+.trio a{display:grid;gap:12px;align-content:start;padding:30px 24px;border-radius:12px;background:var(--navy);color:#fff;transition:transform .25s}
+.trio a:hover{transform:translateY(-4px)}
+.trio a.img{background:linear-gradient(180deg,rgba(30,170,245,.55),rgba(98,46,240,.92)),url(img/s-seo.jpg) center/cover}
+.trio .ico{font-size:34px;color:var(--magenta);margin-bottom:22px}
+.trio h3{color:#fff;font-size:21px}
+.trio p{color:rgba(255,255,255,.75);font-size:14.5px}
 
-/* ---------- Services ---------- */
+/* ---------- About (template "Who we are") ---------- */
+.about{background:#fff;position:relative}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,56px);align-items:center}
+.about-img{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img .tagline{position:absolute;left:0;bottom:0;display:flex;align-items:center;gap:12px;padding:14px 22px;border-top-right-radius:16px;background:rgba(17,10,46,.92);color:#fff;font-weight:600;font-size:clamp(16px,1.6vw,19px)}
+.about-img .tagline::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--magenta)}
+.about-copy{display:grid;gap:18px;justify-items:start}
+.about-copy h2{font-size:clamp(28px,3.4vw,38px)}
+.about-copy p{font-size:15.5px}
+.quote-line{border-left:3px solid var(--magenta);padding-left:16px;font-size:18px;color:var(--head);font-weight:500}
+
+/* ---------- Services cards (template "What we offer") ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc{display:flex;flex-direction:column;gap:14px;padding:14px;border-radius:16px;background:#fff;box-shadow:var(--shadow);transition:transform .25s}
+.svc:hover{transform:translateY(-4px)}
+.svc-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 8px 0}
+.svc-top h3{font-size:19px;font-weight:600}
+.svc-top .ico{font-size:24px;color:var(--magenta)}
+.svc-body{position:relative;display:grid;gap:18px;align-content:end;min-height:190px;padding:22px 18px;border-radius:10px;overflow:hidden;background:var(--overlay),var(--bg) center/cover;color:#fff;flex:1}
+.svc-body p{color:rgba(255,255,255,.92);font-size:14.5px}
+.svc-body .btn{justify-self:start}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:34px}
-.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-family:var(--display);font-weight:700;font-size:15px;color:var(--muted)}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:600;font-size:15px;color:var(--head)}
 .tab[aria-pressed="true"]{background:var(--grad);color:#fff;border-color:transparent}
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.svc{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
-.svc::after{content:"";position:absolute;inset:auto -40% -60% auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(138,59,255,.35),transparent 70%);opacity:0;transition:opacity .3s}
-.svc:hover{transform:translateY(-4px);border-color:rgba(30,200,245,.45);background:var(--panel-2)}
-.svc:hover::after{opacity:1}
-.svc .mi{width:56px;height:56px;border-radius:16px;font-size:26px}
-.svc:hover .mi{background:var(--grad);color:#fff;border-color:transparent}
-.svc h3{font-size:22px;font-weight:800}
-.svc p{color:var(--muted);font-size:15px;flex:1}
-.svc .more{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;color:var(--cyan);font-size:15px}
-.svc .grp{position:absolute;top:24px;right:24px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.center-btn{display:flex;justify-content:center;margin-top:40px}
 
-/* ---------- CTA form ---------- */
-.cta-form-sec{position:relative;overflow:hidden}
-.cta-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);border-radius:30px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
-.cta-side{position:relative;padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:linear-gradient(160deg,rgba(7,6,14,.55),rgba(7,6,14,.92)),var(--cta-img) center/cover}
-.cta-side h2{font-size:clamp(30px,3.8vw,46px);font-weight:800}
-.cta-side ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.cta-side li{display:flex;gap:12px;align-items:center;font-weight:600}
-.cta-side li .mi{width:36px;height:36px;font-size:17px}
-.contact-mini{display:grid;gap:10px;font-size:15px}
-.contact-mini div{display:flex;align-items:center;gap:10px}
-.contact-mini .ico{color:var(--cyan);font-size:18px}
-.form{padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}
-.form h3{grid-column:1/-1;font-size:26px;font-weight:800}
-.form p.note{grid-column:1/-1;color:var(--muted);font-size:14.5px;margin-top:-6px}
-.field{display:grid;gap:7px;min-width:0}
+/* ---------- CTA with form (template "Company in numbers" band) ---------- */
+.band{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(17,10,46,.95) 0%,rgba(40,20,120,.85) 50%,rgba(98,46,240,.55) 100%),var(--bg) center/cover}
+.band-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.band h2{font-size:clamp(28px,3.4vw,40px);margin:12px 0 14px}
+.band .facts{display:flex;flex-wrap:wrap;gap:36px;margin-top:30px;padding-top:28px;border-top:1px dashed rgba(255,255,255,.35)}
+.band .facts b{display:block;font-size:clamp(32px,3.6vw,44px);font-weight:700;color:#fff;line-height:1}
+.band .facts span{color:rgba(255,255,255,.82);font-size:16px}
+.form-card{background:#fff;border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form h3,.dark .form h3{grid-column:1/-1;font-size:24px;color:var(--head)}
+.form p.note{grid-column:1/-1;font-size:14.5px;margin-top:-6px;color:var(--text)}
+.field{display:grid;gap:6px;min-width:0}
 .field.full{grid-column:1/-1}
-.field label{font-size:13.5px;font-weight:700;color:var(--muted)}
-.field input,.field select,.field textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--ink);font-size:15.5px;transition:border-color .2s}
-.field textarea{min-height:120px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan)}
+.field label{font-size:13.5px;font-weight:700;color:var(--head)}
+.field input,.field select,.field textarea{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--light);font-size:15px;color:var(--head)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--violet);background:#fff}
 .form .btn{grid-column:1/-1;justify-self:start}
-.form-ok{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:14px;background:rgba(30,200,245,.1);border:1px solid rgba(30,200,245,.4);font-size:15px}
-.form-ok .ico{color:var(--cyan);font-size:22px;margin-top:1px}
+.form-ok{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:12px;background:#F1ECFF;font-size:14.5px;color:var(--head)}
+.form-ok .ico{color:var(--violet);font-size:22px;margin-top:1px}
 
-/* ---------- Reviews ---------- */
-.rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.rev-top .sec-head{margin:0}
-.g-score{display:flex;align-items:center;gap:16px;padding:16px 22px;border-radius:18px;border:1px solid var(--line);background:var(--panel)}
-.g-score .g{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285F4;font-family:var(--display);font-weight:900;font-size:24px}
-.g-score b{font-family:var(--display);font-size:28px;font-weight:900;line-height:1}
-.g-score small{display:block;color:var(--muted);font-size:13px}
-.rev-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 36px)/3);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:none}
+/* ---------- Reviews (template testimonials) ---------- */
+.reviews{position:relative;background:#fff}
+.reviews::before{content:"";position:absolute;inset:80px 15% 40px;background-image:radial-gradient(circle,rgba(123,59,255,.10) 2px,transparent 2.5px);background-size:12px 12px;mask-image:radial-gradient(60% 60% at 50% 50%,#000,transparent);-webkit-mask-image:radial-gradient(60% 60% at 50% 50%,#000,transparent);pointer-events:none}
+.qdiv{display:flex;align-items:center;gap:16px;color:var(--magenta);font-size:54px;font-weight:800;line-height:.6;height:28px}
+.qdiv::before,.qdiv::after{content:"";width:60px;height:1px;background:var(--line)}
+.rev-track{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 30px;scrollbar-width:none}
 .rev-track::-webkit-scrollbar{display:none}
-.rev{scroll-snap-align:start;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line)}
+.rev{scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:30px 26px;border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+.rev .stars{color:var(--magenta)}
 .rev q{quotes:none;font-size:16px;line-height:1.7;flex:1}
-.rev .who{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
-.rev .who img{width:48px;height:48px;border-radius:50%;object-fit:cover}
-.rev .who b{display:block;font-family:var(--display);font-size:16.5px}
-.rev .who span{font-size:13.5px;color:var(--muted)}
-.rev .r-top{display:flex;justify-content:space-between;align-items:center}
-.rev .qmark{font-family:var(--display);font-size:56px;line-height:.5;height:24px;font-weight:900}
-.rev-nav{display:flex;gap:10px;margin-top:24px;justify-content:center}
-.rev-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--panel);cursor:pointer;display:grid;place-items:center}
-.rev-nav button:hover{border-color:var(--cyan)}
-.rev-nav .ico{font-size:20px}
+.rev .who{display:flex;align-items:center;gap:12px;text-align:left}
+.rev .who img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.rev .who b{display:block;color:var(--head);font-size:16px}
+.rev .who span{font-size:13.5px}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:16px;height:16px;fill:currentColor;stroke:none}
+.dots{display:flex;justify-content:center;gap:8px}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;background:#D9D3F0;cursor:pointer;padding:0;transition:width .2s,background .2s}
+.dots button[aria-current="true"]{width:28px;background:var(--grad)}
 
-/* ---------- Why choose ---------- */
-.why-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,72px);align-items:center}
-.why-img{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
-.why-img img{width:100%;height:100%;object-fit:cover}
-.why-img .badge-card{position:absolute;left:18px;right:18px;bottom:18px;flex-direction:row;align-items:center;gap:14px}
-.why-img .badge-card .ico{font-size:34px;flex:none}
-.why-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:34px}
-.why-item{padding:24px;border-radius:20px;border:1px solid var(--line);background:var(--panel);display:grid;gap:10px;align-content:start}
-.why-item .mi{width:48px;height:48px;font-size:22px}
-.why-item h3{font-size:19px;font-weight:800}
-.why-item p{color:var(--muted);font-size:14.5px}
+/* ---------- Why choose (template) ---------- */
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,72px);align-items:center}
+.why-list{display:grid;gap:22px;margin-top:28px}
+.why-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start}
+.why-item .circ{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--magenta);color:#fff;font-size:20px}
+.why-item h3{font-size:20px;font-weight:600;margin-bottom:4px}
+.why-item p{font-size:14.5px}
+.why-media{position:relative;padding-bottom:40px}
+.why-media img{width:90%;aspect-ratio:4/4.2;object-fit:cover;border-radius:16px}
+.why-card{position:absolute;right:0;bottom:0;width:min(270px,62%);padding:22px;border-radius:14px;background:#fff;box-shadow:var(--shadow);display:grid;gap:10px}
+.why-card h4{font-size:18px;font-weight:600}
+.why-card p{font-size:13.5px}
+.bar{display:grid;gap:5px;font-size:13px;font-weight:700;color:var(--head)}
+.bar span.t{display:flex;justify-content:space-between}
+.bar i{display:block;height:5px;border-radius:5px;background:#ECE8F7;overflow:hidden}
+.bar i::after{content:"";display:block;height:100%;width:var(--w);background:var(--grad-3);border-radius:5px}
 
 /* ---------- FAQ ---------- */
-.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,72px);align-items:start}
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,64px);align-items:start}
 .faq-list{display:grid;gap:12px}
-.faq{border-radius:18px;border:1px solid var(--line);background:var(--panel);overflow:hidden}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 22px;font-family:var(--display);font-weight:700;font-size:18px}
+.faq{border-radius:14px;background:#fff;box-shadow:0 6px 24px -12px rgba(30,16,90,.18);border:1px solid var(--line);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 20px;font-weight:700;font-size:17px;color:var(--head)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);transition:transform .25s,background .25s}
-.faq[open] summary .pm{transform:rotate(45deg);background:var(--grad);border-color:transparent}
-.faq .ans{padding:0 22px 22px;color:var(--muted);font-size:15.5px;max-width:68ch}
-.faq-aside{display:grid;gap:20px;position:sticky;top:120px}
-.help-card{padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:12px}
-.help-card h3{font-size:22px}
-.help-card p{color:var(--muted);font-size:15px}
-.copy-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:12px;background:var(--ink);border:1px solid var(--line);font-weight:700;font-size:15px}
+.faq summary .pm{width:32px;height:32px;flex:none;border-radius:50%;display:grid;place-items:center;background:#F1ECFF;color:var(--violet);transition:transform .25s,background .25s}
+.faq[open] summary .pm{transform:rotate(45deg);background:var(--grad);color:#fff}
+.faq .ans{padding:0 20px 20px;font-size:15.5px;max-width:68ch}
+.faq-aside{display:grid;gap:22px;position:sticky;top:30px}
+.help-card{padding:26px;border-radius:16px;background:var(--navy);color:#fff;display:grid;gap:12px}
+.help-card h3{color:#fff;font-size:22px}
+.help-card p{color:rgba(255,255,255,.78);font-size:15px}
+.copy-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border-radius:10px;background:rgba(255,255,255,.08);font-weight:700;font-size:15px;color:#fff}
 .copy-row span{display:flex;align-items:center;gap:10px;min-width:0;overflow-wrap:anywhere;user-select:all}
-.copy-row .ico{color:var(--cyan);font-size:18px}
+.copy-row .ico{color:var(--magenta);font-size:18px}
 .copy-btn{border:0;background:none;color:var(--cyan);font-weight:700;font-size:13px;cursor:pointer;padding:4px 6px}
 
-/* ---------- Final CTA ---------- */
-.final{position:relative;overflow:hidden;border-radius:32px;padding:clamp(40px,6vw,80px) clamp(24px,5vw,72px);background:var(--grad);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center}
-.final::before{content:"";position:absolute;right:-60px;top:-80px;width:360px;height:360px;background:url(logo-icon.png) center/contain no-repeat;opacity:.2;filter:brightness(2) saturate(0)}
-.final h2{position:relative;font-size:clamp(30px,4.4vw,54px);font-weight:900;color:#fff}
-.final p{position:relative;color:rgba(255,255,255,.88);font-size:17px;margin-top:12px;max-width:560px}
-.final .acts{position:relative;display:flex;flex-wrap:wrap;gap:12px}
-.btn-white{background:#fff;color:#130F2A}
-.btn-white:hover{transform:translateY(-2px)}
-.btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff;background:transparent}
-.btn-line:hover{background:rgba(255,255,255,.12)}
+/* ---------- Final CTA (template "Elevating businesses" banner) ---------- */
+.final{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;min-height:330px;border-radius:16px;overflow:hidden;background:linear-gradient(90deg,rgba(30,170,245,.35) 0%,rgba(98,46,240,.85) 55%,rgba(75,30,210,.98) 100%),url(img/about-meeting.jpg) left center/cover}
+.final-copy{grid-column:2;padding:clamp(28px,4vw,48px);display:grid;gap:14px;justify-items:start}
+.final h2{color:#fff;font-size:clamp(26px,3vw,36px)}
+.final p{color:rgba(255,255,255,.9);font-size:15.5px}
+.final .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.final .btn-ghost-w{padding:10px 22px}
 
-/* ---------- Footer ---------- */
-.ftr{border-top:1px solid var(--line);background:#05040B;padding-block:72px calc(env(safe-area-inset-bottom,0px) + 28px)}
-.ftr-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr 1.2fr;gap:40px}
-.ftr h4{font-size:18px;font-weight:800;margin-bottom:18px}
-.ftr p{color:var(--muted);font-size:15px}
-.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.ftr ul a{color:var(--muted);font-size:15px;transition:color .15s}
+/* ---------- Footer (template) ---------- */
+.connect{background:var(--grad);padding-block:16px}
+.connect .wrap{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.connect h3{color:#fff;font-size:clamp(20px,2.2vw,26px);font-weight:600}
+.socials{display:flex;gap:12px}
+.socials span{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.45);color:#fff}
+.socials .ico{font-size:16px}
+.ftr{background:var(--navy);color:rgba(255,255,255,.82);padding-block:60px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.ftr-grid{display:grid;grid-template-columns:1.5fr .8fr .9fr 1.2fr;gap:40px}
+.ftr h4{color:#fff;font-size:17px;font-weight:600;margin-bottom:18px}
+.ftr p{font-size:15px;color:rgba(255,255,255,.85)}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.ftr ul a{font-size:15px;color:rgba(255,255,255,.85)}
 .ftr ul a:hover{color:var(--cyan)}
-.ftr .logo-full{width:220px;margin-bottom:18px}
-.socials{display:flex;gap:10px;margin-top:22px}
-.socials span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--text);cursor:default}
-.socials .ico{font-size:18px}
-.ftr .cinfo{display:grid;gap:14px}
-.ftr .cinfo div{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15px}
-.ftr .cinfo .ico{color:var(--cyan);font-size:19px;margin-top:3px}
-.ftr .cinfo b{color:var(--text);font-weight:700}
-.news{display:flex;gap:8px;margin-top:16px;padding:6px;border-radius:999px;border:1px solid var(--line);background:var(--ink)}
-.news input{flex:1;min-width:0;border:0;background:none;padding:10px 14px;font-size:15px}
-.news input:focus{outline:none}
-.news button{width:46px;height:46px;flex:none;border-radius:50%;border:0;background:var(--grad);color:#fff;cursor:pointer;display:grid;place-items:center}
-.news-msg{font-size:13.5px;color:var(--cyan);margin-top:10px;min-height:1.4em}
-.ftr-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.ftr .logo-full{width:190px;margin-bottom:16px}
+.ftr .inline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:15px}
+.ftr .inline span{display:flex;align-items:center;gap:8px}
+.ftr .inline .ico,.ftr .cinfo .ico{color:var(--magenta);font-size:17px}
+.ftr .cinfo{display:grid;gap:14px;font-size:15px}
+.ftr .cinfo div{display:flex;gap:12px;align-items:flex-start}
+.ftr .cinfo .ico{margin-top:4px}
+.ftr-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:13.5px}
+.ftr-bot nav{display:flex;flex-wrap:wrap;gap:6px 0}
+.ftr-bot nav a{padding-inline:10px;border-left:1px solid rgba(255,255,255,.25)}
+.ftr-bot nav a:first-child{padding-left:0;border:0}
 .ftr-bot a:hover{color:var(--cyan)}
 
-/* ---------- Inner page hero ---------- */
-.phero{position:relative;overflow:hidden;padding-block:calc(env(safe-area-inset-top,0px) + 160px) 80px;background:
-  linear-gradient(180deg,rgba(7,6,14,.72),rgba(7,6,14,.96)),var(--ph-img,none) center/cover,var(--ink)}
-.phero::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 20%,rgba(138,59,255,.35),transparent 70%);pointer-events:none}
-.phero .wrap{position:relative;z-index:1;display:grid;gap:18px}
-.phero h1{font-size:clamp(38px,6vw,72px);font-weight:900;letter-spacing:-.02em;max-width:900px}
-.phero p{color:var(--muted);font-size:18px;max-width:680px}
-.crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14.5px;color:var(--muted);font-weight:600}
-.crumbs a:hover{color:var(--cyan)}
-.crumbs .ico{font-size:14px;transform:rotate(-90deg)}
+/* ---------- Inner page banner ---------- */
+.phero{position:relative;overflow:hidden;padding-block:calc(env(safe-area-inset-top,0px) + 170px) 90px;background:linear-gradient(90deg,rgba(11,6,36,.94) 0%,rgba(26,14,82,.88) 55%,rgba(98,46,240,.6) 100%),var(--ph) center/cover;color:#fff;text-align:center}
+.phero .wrap{position:relative;display:grid;gap:14px;justify-items:center}
+.phero h1{color:#fff;font-size:clamp(34px,5vw,56px)}
+.phero p{color:rgba(255,255,255,.85);font-size:17px;max-width:640px}
+.crumbs{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.1);font-size:14.5px;font-weight:600}
+.crumbs a{color:var(--cyan)}
+.crumbs .ico{font-size:14px;transform:rotate(-90deg);opacity:.7}
 
 /* About page */
-.mv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.mv{padding:30px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:12px;align-content:start}
-.mv .mi{width:52px;height:52px;font-size:24px}
-.mv h3{font-size:22px;font-weight:800}
-.mv p{color:var(--muted);font-size:15.5px}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:s}
-.step{position:relative;padding:28px;border-radius:22px;border:1px solid var(--line);background:var(--panel);display:grid;gap:10px;align-content:start}
-.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-weight:900;font-size:44px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.step h3{font-size:20px;font-weight:800}
-.step p{color:var(--muted);font-size:15px}
+.mv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mv{padding:30px 26px;border-radius:16px;background:#fff;box-shadow:var(--shadow);display:grid;gap:12px;align-content:start}
+.mv .circ{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--magenta);color:#fff;font-size:22px}
+.mv h3{font-size:21px;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
+.step{padding:28px 24px;border-radius:16px;background:#fff;box-shadow:var(--shadow);display:grid;gap:10px;align-content:start}
+.step::before{counter-increment:s;content:"0" counter(s);font-size:40px;font-weight:800;line-height:1;background:var(--grad-3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:20px;font-weight:600}
+.step p{font-size:15px}
 
 /* Service detail */
-.sd-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(28px,5vw,56px);align-items:start}
-.sd-main{display:grid;gap:28px;min-width:0}
-.sd-main .cover{border-radius:24px;aspect-ratio:16/9;object-fit:cover;width:100%}
-.sd-main h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
-.sd-main p{color:var(--muted);font-size:16.5px}
+.sd-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(28px,5vw,48px);align-items:start}
+.sd-main{display:grid;gap:22px;min-width:0}
+.sd-main .cover{border-radius:16px;aspect-ratio:16/8;object-fit:cover;width:100%}
+.sd-main h2{font-size:clamp(26px,3vw,34px)}
+.sd-main p{font-size:16px}
 .feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.feat{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}
-.feat .ico{font-size:20px;color:var(--cyan);margin-top:2px}
-.feat b{font-family:var(--display);font-size:16.5px;display:block}
-.feat span{color:var(--muted);font-size:14.5px}
-.sd-side{display:grid;gap:18px;position:sticky;top:120px}
-.side-list{padding:20px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:4px}
-.side-list h4{font-size:18px;font-weight:800;padding:4px 8px 10px}
-.side-list a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;font-weight:600;font-size:15px}
-.side-list a:hover{background:var(--panel-2)}
+.feat{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:14px;background:var(--light)}
+.feat .ico{font-size:20px;color:var(--magenta);margin-top:2px}
+.feat b{display:block;color:var(--head);font-size:16.5px}
+.feat span{font-size:14.5px}
+.sd-side{display:grid;gap:20px;position:sticky;top:30px}
+.side-list{padding:18px;border-radius:16px;background:var(--light);display:grid;gap:4px}
+.side-list h4{font-size:19px;padding:4px 8px 10px}
+.side-list a{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;font-weight:600;font-size:15px;color:var(--head);background:#fff}
+.side-list a:hover{color:var(--violet)}
 .side-list a.cur{background:var(--grad);color:#fff}
-.side-list a.cur .mi{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
-.side-list .mi{width:34px;height:34px;font-size:16px}
+.side-list a.cur .mi{background:rgba(255,255,255,.2);color:#fff}
+.side-list .mi{width:32px;height:32px;font-size:16px}
 
-/* Pricing */
-.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
-.plan{position:relative;display:flex;flex-direction:column;gap:18px;padding:32px 28px;border-radius:24px;background:var(--panel);border:1px solid var(--line)}
-.plan.pop{background:linear-gradient(var(--panel-2),var(--panel-2)) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 30px 60px -30px rgba(138,59,255,.6)}
-.plan .tagpop{position:absolute;top:-13px;left:28px;padding:5px 12px;border-radius:999px;background:var(--grad);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.plan h3{font-size:22px;font-weight:800}
-.plan .pdesc{color:var(--muted);font-size:14.5px;margin-top:-8px}
-.plan .amt{display:flex;align-items:baseline;gap:6px;font-family:var(--display)}
-.plan .amt b{font-size:50px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
-.plan .amt span{color:var(--muted);font-weight:600}
-.plan ul{list-style:none;padding:18px 0 0;margin:0;display:grid;gap:11px;border-top:1px solid var(--line);flex:1}
-.plan li{display:flex;gap:10px;font-size:15px;align-items:flex-start}
-.plan li .ico{color:var(--cyan);font-size:18px;margin-top:3px}
+/* Pricing (template) */
+.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.plan{display:flex;flex-direction:column;border-radius:16px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.plan-head{padding:22px 20px;text-align:center;background:var(--grad);color:#fff}
+.plan.pop .plan-head{background:linear-gradient(90deg,#1EC8F5,#7B3BFF 60%,#FF2EA6)}
+.plan-head h3{color:#fff;font-size:24px;font-weight:600}
+.plan-head p{color:rgba(255,255,255,.85);font-size:13.5px}
+.plan-body{display:flex;flex-direction:column;gap:18px;padding:24px 20px 22px;flex:1}
+.amt{text-align:center;color:var(--head)}
+.amt .num{display:inline-flex;align-items:flex-start;gap:3px;font-weight:700;font-variant-numeric:tabular-nums}
+.amt .cur{font-size:24px;color:var(--violet);margin-top:4px}
+.amt .big{font-size:52px;line-height:1}
+.amt small{display:block;font-size:14px;font-weight:600;color:var(--text);margin-top:4px}
+.plan ul{list-style:none;margin:0;padding:6px 16px;border:1px dashed var(--line);border-radius:12px;flex:1}
+.plan li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.plan li:last-child{border-bottom:0}
+.plan li .ico{color:var(--violet);font-size:17px;margin-top:3px}
 .plan .btn{width:100%}
-.price-note{margin-top:18px;color:var(--muted);font-size:14px;text-align:center}
+.pay{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.pay span{padding:3px 7px;border-radius:5px;border:1px solid var(--line);font-size:10.5px;font-weight:800;letter-spacing:.03em;color:var(--head)}
+.need{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-top:34px;font-size:18px;font-weight:600;color:var(--head)}
 
 /* Blog */
-.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.post{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:transform .25s,border-color .25s}
-.post:hover{transform:translateY(-4px);border-color:rgba(30,200,245,.45)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.post{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow);transition:transform .25s}
+.post:hover{transform:translateY(-4px)}
 .post img{aspect-ratio:16/10;object-fit:cover;width:100%}
-.post .pb{padding:22px 24px 26px;display:grid;gap:10px;flex:1;align-content:start}
-.post .meta{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted);font-weight:600}
-.post .cat{padding:4px 10px;border-radius:999px;background:rgba(30,200,245,.12);color:var(--cyan);font-weight:700}
-.post h3{font-size:21px;font-weight:800}
-.post p{color:var(--muted);font-size:15px}
-.article{max-width:780px;margin-inline:auto;display:grid;gap:22px}
-.article img{border-radius:24px;aspect-ratio:16/9;object-fit:cover;width:100%}
-.article p{color:#CFCDE0;font-size:17.5px;line-height:1.8}
-.article h2{font-size:30px;font-weight:800;margin-top:10px}
-.article ul{color:#CFCDE0;font-size:17px;line-height:1.8;padding-left:22px;margin:0}
+.post .pb{padding:20px 22px 24px;display:grid;gap:10px;flex:1;align-content:start}
+.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;font-weight:600}
+.cat{padding:4px 10px;border-radius:999px;background:#FFE6F4;color:#D0157F;font-weight:700}
+.post h3{font-size:20px;font-weight:700}
+.post p{font-size:15px}
+.more{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--blue-ink);font-size:15px}
+.article{max-width:780px;margin-inline:auto;display:grid;gap:20px}
+.article img{border-radius:16px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.article p,.article ul{font-size:17.5px;line-height:1.8}
+.article ul{padding-left:22px;margin:0}
+.article h2{font-size:28px;margin-top:8px}
 
 /* Contact */
-.ci-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:40px}
-.ci{padding:24px;border-radius:20px;background:var(--panel);border:1px solid var(--line);display:grid;gap:10px;align-content:start;min-width:0}
-.ci .mi{width:48px;height:48px;font-size:22px}
-.ci h3{font-size:18px;font-weight:800}
-.ci p{color:var(--muted);font-size:15px;overflow-wrap:anywhere}
-.ci a{color:var(--text);font-weight:700}
-.map-card{border-radius:24px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;padding:26px;background:linear-gradient(180deg,rgba(7,6,14,.15),rgba(7,6,14,.9)),url(img/s-gbp.jpg) center/cover;border:1px solid var(--line);margin-top:20px}
-.map-card div{display:grid;gap:6px}
-.map-card b{font-family:var(--display);font-size:22px}
+.ci-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-bottom:48px}
+.ci{padding:26px 22px;border-radius:16px;background:#fff;box-shadow:var(--shadow);display:grid;gap:10px;align-content:start;min-width:0}
+.ci .circ{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--magenta);color:#fff;font-size:20px}
+.ci h3{font-size:19px;font-weight:600}
+.ci p{font-size:15px;overflow-wrap:anywhere}
+.ci a{color:var(--head);font-weight:700}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,48px);align-items:stretch}
+.map-card{border-radius:16px;overflow:hidden;position:relative;min-height:320px;display:flex;align-items:flex-end;padding:26px;background:linear-gradient(180deg,rgba(17,10,46,.1),rgba(17,10,46,.92)),url(img/s-gbp.jpg) center/cover;color:#fff}
+.map-card div{display:grid;gap:8px;justify-items:start}
+.map-card b{font-size:22px}
 
-.pg{animation:pgIn .5s ease both}
-@keyframes pgIn{from{transform:translateY(12px)}to{transform:none}}
+.pg{animation:pgIn .45s ease both}
+@keyframes pgIn{from{transform:translateY(10px)}to{transform:none}}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1100px){
   .nav,.hdr-cta .btn{display:none}
   .burger{display:inline-flex}
   .svc-grid,.blog-grid,.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .rev-track{grid-auto-columns:calc((100% - 18px)/2)}
+  .rev-track{grid-auto-columns:calc((100% - 24px)/2)}
   .ftr-grid{grid-template-columns:1fr 1fr}
-  .facts,.ci-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ci-grid,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sd-grid{grid-template-columns:minmax(0,1fr)}
   .sd-side{position:static}
 }
 @media (max-width:860px){
-  .hero-grid,.about-grid,.why-grid,.faq-wrap,.cta-box,.final{grid-template-columns:minmax(0,1fr)}
+  .hero-grid,.about-grid,.why-grid,.faq-wrap,.band-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
   .hero{padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
-  .hero-3d{justify-self:center;max-width:460px}
+  .hero-3d{justify-self:center;max-width:400px;margin-top:-10px}
+  .trio{grid-template-columns:minmax(0,1fr)}
   .faq-aside{position:static}
   .mv-grid{grid-template-columns:minmax(0,1fr)}
+  .final{grid-template-columns:minmax(0,1fr);background:linear-gradient(180deg,rgba(30,170,245,.55),rgba(98,46,240,.95)),url(img/about-meeting.jpg) center/cover}
+  .final-copy{grid-column:1}
 }
 @media (max-width:620px){
-  .svc-grid,.blog-grid,.price-grid,.why-list,.feat-grid,.steps,.ftr-grid,.ticks{grid-template-columns:minmax(0,1fr)}
+  .svc-grid,.blog-grid,.price-grid,.feat-grid,.steps,.ftr-grid,.ci-grid{grid-template-columns:minmax(0,1fr)}
   .form{grid-template-columns:minmax(0,1fr)}
   .rev-track{grid-auto-columns:88%}
-  .brand img.word{width:120px}
+  .brand img.word{width:118px}
   .brand small{display:none}
-  .brand img.mark{width:34px}
+  .brand img.mark{width:32px}
   .hdr-bar{padding:8px 8px 8px 16px}
-  .chip-a{left:-4px;top:6%}
-  .chip-b{right:-4px;bottom:4%}
-  .facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .ci-grid{grid-template-columns:minmax(0,1fr)}
+  .why-card{position:relative;width:100%;margin-top:-30px}
+  .why-media img{width:100%}
+  .why-media{padding-bottom:0}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -405,7 +411,7 @@ p{margin:0}
 </style>
 
 <header class="hdr" id="hdr">
-  <div class="hdr-bar" style="position:relative">
+  <div class="hdr-bar">
     <a class="brand" href="#home" aria-label="DigiRanx Pro home">
       <img class="mark" src="logo-icon.png" alt="">
       <span><img class="word" src="logo-word.png" alt="DigiRanx Pro"><small>Grow your business with us</small></span>
@@ -422,7 +428,7 @@ p{margin:0}
       <li><a class="nav-link" data-r="contact" href="#contact">Contact Us</a></li>
     </ul>
     <div class="hdr-cta">
-      <a class="btn btn-grad" href="#contact">Let's Talk <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-grad" href="#contact">Let's Talk</a>
       <button class="burger" id="burger" aria-label="Open menu"><svg class="ico"><use href="#i-menu"/></svg></button>
     </div>
   </div>
@@ -431,7 +437,7 @@ p{margin:0}
 <div class="drawer" id="drawer" aria-hidden="true">
   <div class="drawer-panel" role="dialog" aria-label="Menu">
     <div class="drawer-top">
-      <a class="brand" href="#home"><img class="mark" src="logo-icon.png" alt=""><img class="word" src="logo-word.png" alt="DigiRanx Pro" style="width:130px"></a>
+      <a class="brand" href="#home"><img class="mark" src="logo-icon.png" alt=""><img class="word" src="logo-word.png" alt="DigiRanx Pro" style="width:120px"></a>
       <button class="burger" style="display:inline-flex" id="drawerClose" aria-label="Close menu"><svg class="ico"><use href="#i-x"/></svg></button>
     </div>
     <a class="dl" href="#home">Home</a>
@@ -441,23 +447,32 @@ p{margin:0}
     <a class="dl" href="#blog">Our Blog</a>
     <a class="dl" href="#faqs">FAQs</a>
     <a class="dl" href="#contact">Contact Us</a>
-    <a class="btn btn-grad" href="#contact" style="margin-top:20px">Let's Talk <svg class="ico"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-grad" href="#contact" style="margin-top:20px">Let's Talk</a>
   </div>
 </div>
 
 <main id="app"></main>
 
+<div class="connect">
+  <div class="wrap">
+    <h3>Get connected with us</h3>
+    <div class="socials" aria-label="Social profiles (links added on WordPress)">
+      <span title="Facebook"><svg class="ico"><use href="#i-fb"/></svg></span>
+      <span title="Instagram"><svg class="ico"><use href="#i-ig"/></svg></span>
+      <span title="LinkedIn"><svg class="ico"><use href="#i-in"/></svg></span>
+      <span title="YouTube"><svg class="ico"><use href="#i-yt"/></svg></span>
+    </div>
+  </div>
+</div>
 <footer class="ftr">
   <div class="wrap">
     <div class="ftr-grid">
       <div>
-        <img class="logo-full" src="logo-full.png" alt="DigiRanx Pro — Grow your business with us">
+        <img class="logo-full" src="logo-full.png" alt="DigiRanx Pro - Grow your business with us">
         <p>Your trusted partner in building a stronger online presence with creative strategies and results-driven digital solutions.</p>
-        <div class="socials" aria-label="Social profiles (links added on WordPress)">
-          <span title="Facebook"><svg class="ico"><use href="#i-fb"/></svg></span>
-          <span title="Instagram"><svg class="ico"><use href="#i-ig"/></svg></span>
-          <span title="LinkedIn"><svg class="ico"><use href="#i-in"/></svg></span>
-          <span title="YouTube"><svg class="ico"><use href="#i-yt"/></svg></span>
+        <div class="inline">
+          <span><svg class="ico"><use href="#i-phone"/></svg>+44 7445 652671</span>
+          <span><svg class="ico"><use href="#i-mail"/></svg>info@digiranxpro.com</span>
         </div>
       </div>
       <div>
@@ -476,24 +491,18 @@ p{margin:0}
         <ul id="ftrSvc"></ul>
       </div>
       <div>
-        <h4>Get in Touch</h4>
+        <h4>Contact Info</h4>
         <div class="cinfo">
           <div><svg class="ico"><use href="#i-pin"/></svg><span>Office 1922, 85 Dunstall Hill, Wolverhampton, WV6 0SR, UK</span></div>
-          <div><svg class="ico"><use href="#i-phone"/></svg><a href="tel:+447445652671"><b>+44 7445 652671</b></a></div>
-          <div><svg class="ico"><use href="#i-mail"/></svg><a href="mailto:info@digiranxpro.com"><b>info@digiranxpro.com</b></a></div>
-          <div><svg class="ico"><use href="#i-clock"/></svg><span>Mon – Fri: 8am – 10pm<br>Sat – Sun: Closed</span></div>
+          <div><svg class="ico"><use href="#i-clock"/></svg><span>Monday – Friday: 8am – 10pm<br>Saturday – Sunday: Closed</span></div>
+          <div><svg class="ico"><use href="#i-phone"/></svg><span>+44 7445 652671</span></div>
+          <div><svg class="ico"><use href="#i-mail"/></svg><span>info@digiranxpro.com</span></div>
         </div>
-        <h4 style="margin-top:26px;margin-bottom:0">Subscribe Newsletter</h4>
-        <form class="news" id="newsForm">
-          <input id="newsEmail" type="email" placeholder="Your email address" aria-label="Email address" required>
-          <button aria-label="Subscribe"><svg class="ico"><use href="#i-arrow"/></svg></button>
-        </form>
-        <div class="news-msg" id="newsMsg" aria-live="polite"></div>
       </div>
     </div>
     <div class="ftr-bot">
-      <span>© 2026 DIGIRANX PRO LTD. All rights reserved.</span>
-      <span><a href="#faqs">Privacy Policy</a> · <a href="#faqs">Terms &amp; Conditions</a></span>
+      <nav><a href="#faqs">Privacy Policy</a><a href="#faqs">Terms of Use</a><a href="#contact">Contact Us</a></nav>
+      <span>Copyright © 2026 DIGIRANX PRO LTD. All rights reserved.</span>
     </div>
   </div>
 </footer>
@@ -519,7 +528,6 @@ p{margin:0}
     <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
@@ -529,7 +537,6 @@ p{margin:0}
     <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
     <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
@@ -538,7 +545,6 @@ p{margin:0}
     <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
   </defs>
 </svg>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ================= DATA ================= */
@@ -718,89 +724,49 @@ const POSTS = [
 ];
 
 /* ================= HELPERS ================= */
+const HOME_SERVICES = ["seo-digital-marketing","gbp-optimization","web-development","social-media-marketing","google-ads","branding"];
 const ic = (n,cls="ico")=>`<svg class="${cls}"><use href="#i-${n}"/></svg>`;
 const stars = ()=>`<span class="stars" aria-label="5 out of 5 stars">${Array(5).fill(ic("star","")).join("")}</span>`;
 const mi = n=>`<span class="mi">${ic(n)}</span>`;
-const svcCard = s=>`<a class="svc" href="#service-${s.slug}" data-g="${s.group}">
-  <span class="grp">${GROUPS[s.group].name.split(" ")[0]}</span>${mi(s.icon)}
-  <h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more ${ic("arrow")}</span></a>`;
+const circ = n=>`<span class="circ">${ic(n)}</span>`;
+const svcCard = s=>`<article class="svc" data-g="${s.group}">
+  <div class="svc-top"><h3>${s.name}</h3>${ic(s.icon)}</div>
+  <div class="svc-body" style="--bg:url(img/${s.img}.jpg)"><p>${s.short}</p><a class="btn btn-white btn-sm" href="#service-${s.slug}">Learn More</a></div>
+</article>`;
 const faqItem = (q,a,open)=>`<details class="faq"${open?" open":""}><summary>${q}<span class="pm">${ic("plus")}</span></summary><div class="ans">${a}</div></details>`;
-const pageHero = (title,lead,crumb,img)=>`<section class="phero" style="--ph-img:url(img/${img}.jpg)"><div class="wrap">
+const pageHero = (title,lead,crumb,img)=>`<section class="phero" style="--ph:url(img/${img}.jpg)"><div class="wrap">
+  <h1>${title}</h1>${lead?`<p>${lead}</p>`:""}
   <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a>${crumb.map(c=>`${ic("chev")}${c[1]?`<a href="#${c[1]}">${c[0]}</a>`:`<span>${c[0]}</span>`}`).join("")}</nav>
-  <h1>${title}</h1>${lead?`<p>${lead}</p>`:""}</div></section>`;
+</div></section>`;
 const contactRow = (icon,text)=>`<div class="copy-row"><span>${ic(icon)}${text}</span><button class="copy-btn" data-copy="${text}">Copy</button></div>`;
+const WAVES = `<svg class="waves" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#1EC8F5"/><stop offset=".6" stop-color="#7B3BFF"/><stop offset="1" stop-color="#FF2EA6"/></linearGradient></defs>${Array.from({length:14},(_,i)=>`<path d="M0 ${150+i*5} C 360 ${60+i*9}, 720 ${230-i*4}, 1080 ${120+i*6} S 1440 ${90+i*7}, 1440 ${100+i*7}" fill="none" stroke="url(#wg)" stroke-width="1" opacity="${(.15+i*.035).toFixed(2)}"/>`).join("")}</svg>`;
 
 /* ================= SECTIONS ================= */
-const S_ABOUT = (full)=>`
-<section class="sec" id="about-sec"><div class="wrap">
-  <div class="about-grid">
-    <div class="about-media">
-      <img class="m1" src="img/about-office.jpg" alt="DigiRanx Pro team planning a client campaign">
-      <img class="m2" src="img/about-meeting.jpg" alt="Strategy meeting at the Wolverhampton office">
-      <div class="badge-card"><b>15+</b><span>Digital services under one roof</span></div>
-    </div>
-    <div class="about-copy">
-      <span class="eyebrow">About Us</span>
-      <h2>Helping businesses grow and <span class="grad-text">shine online</span></h2>
-      <p class="lead">At DIGIRANX PRO LTD, we're a passionate team dedicated to helping businesses grow and shine online. Based in Wolverhampton, we combine creativity, experience, and smart strategies to strengthen your online presence, connect with your audience, and help your brand grow in today's digital world.</p>
-      <ul class="ticks">
-        <li>${ic("check")}UK-based team in Wolverhampton</li>
-        <li>${ic("check")}One partner for web, SEO and ads</li>
-        <li>${ic("check")}Clear monthly reporting</li>
-        <li>${ic("check")}No long lock-in contracts</li>
-      </ul>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
-        ${full?`<a class="btn btn-grad" href="#services">Explore our services ${ic("arrow")}</a>`:`<a class="btn btn-grad" href="#about">More about us ${ic("arrow")}</a>`}
-        <a class="btn btn-ghost" href="#contact">${ic("phone")} +44 7445 652671</a>
-      </div>
-    </div>
-  </div>
-  <div class="facts">
-    <div class="fact"><b class="grad-text">15+</b><span>Services from web to ads</span></div>
-    <div class="fact"><b class="grad-text">14 hrs</b><span>Support a day, Mon–Fri</span></div>
-    <div class="fact"><b class="grad-text">24 hrs</b><span>Average first response time</span></div>
-    <div class="fact"><b class="grad-text">100%</b><span>UK-based account team</span></div>
+const S_ABOUT = (more=true)=>`
+<section class="sec about"><div class="wrap about-grid">
+  <div class="about-img"><img src="img/about-office.jpg" alt="DigiRanx Pro team working on a client campaign"><span class="tagline">Proudly based in Wolverhampton</span></div>
+  <div class="about-copy">
+    <span class="eyebrow">Who We Are</span>
+    <h2>Helping businesses grow and shine online</h2>
+    <p>At DIGIRANX PRO LTD, we're a passionate team dedicated to helping businesses grow and shine online. Based in Wolverhampton, we combine creativity, experience, and smart strategies to strengthen your online presence, connect with your audience, and help your brand grow in today's digital world.</p>
+    <p class="quote-line">Where creative thinking meets digital growth.</p>
+    ${more?`<a class="btn btn-grad" href="#about">More About Us</a>`:`<a class="btn btn-grad" href="#services">Explore Our Services</a>`}
   </div>
 </div></section>`;
 
-const S_SERVICES = (alt)=>`
-<section class="sec${alt?" alt":""}" id="services-sec"><div class="wrap">
+const S_SERVICES = (list,{light=false,tabs=false,viewAll=false}={})=>`
+<section class="sec${light?" light":""}"><div class="wrap">
   <div class="sec-head center">
-    <span class="eyebrow">Our Services</span>
-    <h2>Everything you need to <span class="grad-text">grow online</span></h2>
+    <span class="eyebrow">What We Offer</span>
+    <h2>Digital Services That Help Your Business Grow</h2>
     <p>From your first website to page-one rankings, every digital service your business needs, handled by one team.</p>
   </div>
-  <div class="tabs" role="group" aria-label="Filter services">
-    <button class="tab" data-f="all" aria-pressed="true">All Services</button>
-    ${Object.entries(GROUPS).map(([k,g])=>`<button class="tab" data-f="${k}" aria-pressed="false">${g.name}</button>`).join("")}
-  </div>
-  <div class="svc-grid" id="svcGrid">${SERVICES.map(svcCard).join("")}</div>
+  ${tabs?`<div class="tabs" role="group" aria-label="Filter services"><button class="tab" data-f="all" aria-pressed="true">All Services</button>${Object.entries(GROUPS).map(([k,g])=>`<button class="tab" data-f="${k}" aria-pressed="false">${g.name}</button>`).join("")}</div>`:""}
+  <div class="svc-grid" id="svcGrid">${list.map(svcCard).join("")}</div>
+  ${viewAll?`<div class="center-btn"><a class="btn btn-grad" href="#services">View All Services ${ic("arrow")}</a></div>`:""}
 </div></section>`;
 
-const S_CTA_FORM = ()=>`
-<section class="sec cta-form-sec" id="audit"><div class="wrap">
-  <div class="cta-box">
-    <div class="cta-side" style="--cta-img:url(img/cta-work.jpg)">
-      <div style="display:grid;gap:16px">
-        <span class="eyebrow">Free Growth Audit</span>
-        <h2>Let's find out what's holding your business back online</h2>
-        <p class="lead">Tell us about your business and we'll send a free audit of your website, Google profile and competitors within one working day.</p>
-      </div>
-      <ul>
-        <li>${mi("trend")} Website & SEO health check</li>
-        <li>${mi("pin")} Google Maps visibility report</li>
-        <li>${mi("target")} Competitor & ads snapshot</li>
-      </ul>
-      <div class="contact-mini">
-        <div>${ic("phone")}<b>+44 7445 652671</b></div>
-        <div>${ic("mail")}<b>info@digiranxpro.com</b></div>
-      </div>
-    </div>
-    ${FORM("audit")}
-  </div>
-</div></section>`;
-
-const FORM = (id,title="Request your free audit",note="We reply within one working day, Monday to Friday.")=>`
+const FORM = (id,title="Request Your Free Audit",note="We reply within one working day, Monday to Friday.")=>`
 <form class="form" id="form-${id}" novalidate>
   <h3>${title}</h3><p class="note">${note}</p>
   <div class="field"><label for="${id}-name">Full name</label><input id="${id}-name" name="name" required placeholder="John Smith" autocomplete="name"></div>
@@ -808,146 +774,153 @@ const FORM = (id,title="Request your free audit",note="We reply within one worki
   <div class="field"><label for="${id}-phone">Phone number</label><input id="${id}-phone" name="phone" type="tel" placeholder="07xxx xxxxxx" autocomplete="tel"></div>
   <div class="field"><label for="${id}-svc">Service needed</label><select id="${id}-svc" name="service"><option value="">Select a service</option>${SERVICES.map(s=>`<option>${s.name}</option>`).join("")}<option>Not sure yet</option></select></div>
   <div class="field full"><label for="${id}-msg">About your business</label><textarea id="${id}-msg" name="message" placeholder="Your website, what you sell and what you'd like to improve"></textarea></div>
-  <button class="btn btn-grad" type="submit">Send my request ${ic("arrow")}</button>
+  <button class="btn btn-grad" type="submit">Send Request ${ic("arrow")}</button>
   <div class="form-ok" hidden>${ic("check")}<span><b>Thanks, your request is ready.</b><br>This is a design preview, so nothing was sent. On the live WordPress site this form will email info@digiranxpro.com.</span></div>
 </form>`;
 
-const S_REVIEWS = (alt)=>`
-<section class="sec${alt?" alt":""}" id="reviews"><div class="wrap">
-  <div class="rev-top">
-    <div class="sec-head">
-      <span class="eyebrow">Customer Reviews</span>
-      <h2>What our clients <span class="grad-text">say about us</span></h2>
+const S_CTA_FORM = (img="cta-work")=>`
+<section class="sec band dark" id="audit" style="--bg:url(img/${img}.jpg)"><div class="wrap band-grid">
+  <div>
+    <span class="eyebrow on-dark">Free Growth Audit</span>
+    <h2>Let's Find Out What's Holding Your Business Back Online</h2>
+    <p>Tell us about your business and we'll send a free audit of your website, Google profile and competitors within one working day.</p>
+    <div class="facts">
+      <div><b>15+</b><span>Digital Services</span></div>
+      <div><b>8am–10pm</b><span>Monday to Friday</span></div>
+      <div><b>24 hrs</b><span>Reply Time</span></div>
     </div>
-    <div class="g-score"><span class="g">G</span><div><b>4.9</b> ${stars()}<small>Based on Google reviews</small></div></div>
+  </div>
+  <div class="form-card">${FORM("audit")}</div>
+</div></section>`;
+
+const S_REVIEWS = ()=>`
+<section class="sec reviews"><div class="wrap">
+  <div class="sec-head center" style="margin-bottom:28px">
+    <span class="eyebrow">Testimonials</span>
+    <h2>Reviews From Our Happy Clients</h2>
+    <div class="qdiv" aria-hidden="true">”</div>
   </div>
   <div class="rev-track" id="revTrack">
-    ${REVIEWS.map(r=>`<article class="rev"><div class="r-top">${stars()}<span class="qmark grad-text">"</span></div><q>${r[0]}</q>
-      <div class="who"><img src="img/${r[3]}.jpg" alt="" loading="lazy"><div><b>${r[1]}</b><span>${r[2]}</span></div></div></article>`).join("")}
+    ${REVIEWS.map(r=>`<article class="rev">${stars()}<q>${r[0]}</q>
+      <div class="who"><img src="img/${r[3]}.jpg" alt=""><div><b>${r[1]}</b><span>${r[2]}</span></div></div></article>`).join("")}
   </div>
-  <div class="rev-nav"><button data-dir="-1" aria-label="Previous reviews">${ic("left")}</button><button data-dir="1" aria-label="Next reviews">${ic("arrow")}</button></div>
+  <div class="dots" id="revDots">${REVIEWS.map((_,i)=>`<button aria-label="Show review ${i+1}"${i===0?' aria-current="true"':""} data-i="${i}"></button>`).join("")}</div>
 </div></section>`;
 
-const S_WHY = (alt)=>`
-<section class="sec${alt?" alt":""}" id="why"><div class="wrap">
-  <div class="why-grid">
-    <div class="why-img"><img src="img/why-team.jpg" alt="DigiRanx Pro strategists mapping a growth plan">
-      <div class="badge-card">${ic("shield")}<span><b style="font-size:22px;display:block">Results-driven</b>Every plan is built around leads and sales, not vanity metrics.</span></div>
+const S_WHY = (light)=>`
+<section class="sec${light?" light":""}"><div class="wrap why-grid">
+  <div>
+    <span class="eyebrow">Why Choose Us</span>
+    <h2 style="font-size:clamp(28px,3.4vw,38px);margin:12px 0 14px">Where Creative Thinking Meets Digital Growth</h2>
+    <p>We are a small, focused team. You speak to the people doing the work, decisions happen quickly, and your business never gets lost in a queue.</p>
+    <div class="why-list">
+      <div class="why-item">${circ("users")}<div><h3>One Team, Every Channel</h3><p>Web, SEO, ads, social and branding planned together, not in silos.</p></div></div>
+      <div class="why-item">${circ("chart")}<div><h3>Clear, Honest Reporting</h3><p>Monthly reports in plain English that show calls, leads and sales.</p></div></div>
+      <div class="why-item">${circ("clock")}<div><h3>Long Support Hours</h3><p>Available 8am to 10pm, Monday to Friday, when you need us.</p></div></div>
     </div>
-    <div>
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="eyebrow">Why Choose Us</span>
-        <h2>Where creative thinking meets <span class="grad-text">digital growth</span></h2>
-        <p>We are a small, focused team. That means you speak to the people doing the work, decisions happen quickly, and your business never gets lost in a queue.</p>
-      </div>
-      <div class="why-list">
-        <div class="why-item">${mi("users")}<h3>One team, every channel</h3><p>Web, SEO, ads, social and branding work together instead of in silos.</p></div>
-        <div class="why-item">${mi("chart")}<h3>Clear, honest reporting</h3><p>Monthly reports in plain English that show calls, leads and sales.</p></div>
-        <div class="why-item">${mi("clock")}<h3>Long support hours</h3><p>We're available 8am to 10pm, Monday to Friday, when you need us.</p></div>
-        <div class="why-item">${mi("zap")}<h3>Fast turnaround</h3><p>Quick launches and quick fixes, without cutting corners.</p></div>
-      </div>
+  </div>
+  <div class="why-media">
+    <img src="img/why-team.jpg" alt="DigiRanx Pro strategists planning a campaign">
+    <div class="why-card">
+      <h4>Building Brands With Smart Digital Strategy</h4>
+      <p>What every client gets from day one.</p>
+      <div class="bar"><span class="t">Reply within 1 working day<span>100%</span></span><i style="--w:100%"></i></div>
+      <div class="bar"><span class="t">UK-based account team<span>100%</span></span><i style="--w:100%"></i></div>
     </div>
   </div>
 </div></section>`;
 
-const S_FAQ = (list,alt)=>`
-<section class="sec${alt?" alt":""}" id="faq-sec"><div class="wrap">
-  <div class="faq-wrap">
-    <div class="faq-aside">
-      <div class="sec-head" style="margin:0">
-        <span class="eyebrow">FAQs</span>
-        <h2>Questions? <span class="grad-text">We've got answers</span></h2>
-        <p>The things business owners ask us most. Can't see yours? Call or email and we'll help.</p>
-      </div>
-      <div class="help-card">
-        <h3>Still have a question?</h3>
-        <p>Talk to our team Monday to Friday, 8am to 10pm.</p>
-        ${contactRow("phone","+44 7445 652671")}
-        ${contactRow("mail","info@digiranxpro.com")}
-      </div>
+const S_FAQ = (list,light)=>`
+<section class="sec${light?" light":""}"><div class="wrap faq-wrap">
+  <div class="faq-aside">
+    <div class="sec-head" style="margin:0">
+      <span class="eyebrow">FAQs</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>The things business owners ask us most. Can't see yours? Call or email and we'll help.</p>
     </div>
-    <div class="faq-list">${list.map((f,i)=>faqItem(f[1],f[2],i===0)).join("")}</div>
+    <div class="help-card">
+      <h3>Still Have a Question?</h3>
+      <p>Talk to our team Monday to Friday, 8am to 10pm.</p>
+      ${contactRow("phone","+44 7445 652671")}
+      ${contactRow("mail","info@digiranxpro.com")}
+    </div>
   </div>
+  <div class="faq-list">${list.map((f,i)=>faqItem(f[1],f[2],i===0)).join("")}</div>
 </div></section>`;
 
 const S_FINAL = ()=>`
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="final">
-    <div><h2>Ready to grow your business online?</h2>
-    <p>Book a free 30-minute strategy call. We'll look at your website, your Google profile and your competitors, and give you a clear plan.</p></div>
-    <div class="acts"><a class="btn btn-white" href="#contact">Book a free call ${ic("arrow")}</a><a class="btn btn-line" href="#services">View services</a></div>
-  </div>
+  <div class="final"><div class="final-copy">
+    <h2>Ready to Grow Your Business Online?</h2>
+    <p>Book a free 30-minute strategy call. We'll look at your website, your Google profile and your competitors, and give you a clear plan.</p>
+    <div class="acts"><a class="btn btn-white" href="#contact">Book a Free Call</a><a class="btn btn-ghost-w" href="#services">View Services</a></div>
+  </div></div>
 </div></section>`;
 
 /* ================= PAGES ================= */
 function pageHome(){
   return `
-<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <span class="eyebrow">Digital Marketing Agency · Wolverhampton</span>
-    <h1>Where creative thinking meets <span class="grad-text">digital growth.</span></h1>
-    <p class="lead">DIGIRANX PRO builds websites, ranks businesses on Google and runs ads that bring in real customers. One UK team for everything your business needs online.</p>
-    <div class="hero-actions">
-      <button class="btn btn-grad" data-scroll="audit">Get a free audit ${ic("arrow")}</button>
-      <a class="btn btn-ghost" href="#services">Explore services</a>
+<section class="hero"><div class="stars-bg"></div>${WAVES}
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Where Creative Thinking Meets Digital Growth</h1>
+      <p class="lead">DIGIRANX PRO builds websites, ranks businesses on Google and runs ads that bring in real customers. One Wolverhampton team for everything your business needs online.</p>
+      <div class="hero-actions">
+        <button class="btn btn-grad" data-scroll="audit">Get a Free Audit</button>
+        <a class="btn btn-ghost-w" href="#services">Our Services</a>
+      </div>
     </div>
-    <div class="hero-meta">
-      <div>${stars()}<span><b>4.9 rating</b>From happy clients</span></div>
-      <div>${ic("pin")}<span><b>Wolverhampton</b>Serving the whole UK</span></div>
-      <div>${ic("clock")}<span><b>8am – 10pm</b>Monday to Friday</span></div>
-    </div>
+    <div class="hero-3d" id="hero3d"><img class="fallback" id="hero3dFallback" src="logo-icon.png" alt=""></div>
   </div>
-  <div class="hero-3d" id="hero3d">
-    <img class="fallback" id="hero3dFallback" src="logo-icon.png" alt="">
-    <div class="float-chip chip-a">${mi("trend")}<span><b>+212%</b>Organic traffic</span></div>
-    <div class="float-chip chip-b">${mi("pin")}<span><b>Top 3</b>Google Maps ranking</span></div>
-  </div>
-</div></section>
-<div class="marquee" aria-hidden="true"><div class="marquee-track">${[0,1].map(()=>`<span>${["GBP Optimization","SEO & Digital Marketing","Web Development","Google Ads","Social Media Marketing","Branding","E-commerce Solutions","UI/UX Designing"].map(t=>`<span>${t}</span>`).join("")}</span>`).join("")}</div></div>
-${S_ABOUT(false)}
-${S_SERVICES(true)}
+</section>
+<div class="wrap trio-wrap"><div class="trio">
+  <a href="#service-seo-digital-marketing">${ic("trend")}<h3>Get Found on Google</h3><p>SEO and Google Business Profile work that puts you in front of local buyers.</p></a>
+  <a href="#service-web-development">${ic("code")}<h3>Websites That Convert</h3><p>Fast, mobile-friendly websites designed to turn visitors into enquiries.</p></a>
+  <a class="img" href="#service-google-ads">${ic("target")}<h3>Ads & Social That Sell</h3><p>Google Ads and social campaigns that bring ready-to-buy customers.</p></a>
+</div></div>
+${S_ABOUT(true)}
+${S_SERVICES(HOME_SERVICES.map(k=>SVC[k]),{light:true,viewAll:true})}
 ${S_CTA_FORM()}
-${S_REVIEWS(true)}
-${S_WHY(false)}
-${S_FAQ(FAQS.slice(0,6),true)}
-<div style="height:clamp(64px,9vw,112px)"></div>
+${S_REVIEWS()}
+${S_WHY(true)}
+${S_FAQ(FAQS.slice(0,6),false)}
 ${S_FINAL()}`;
 }
 
 function pageAbout(){
-  return pageHero("About DIGIRANX PRO","A Wolverhampton team helping businesses grow and shine online with creative strategy and results-driven digital work.",[["About Us"]],"about-office")+
-  S_ABOUT(true)+`
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">What drives us</span><h2>Our mission, vision and <span class="grad-text">values</span></h2></div>
+  return pageHero("About Us","A Wolverhampton team helping businesses grow and shine online.",[["About Us"]],"about-office")+
+  S_ABOUT(false)+`
+<section class="sec light"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">What Drives Us</span><h2>Our Mission, Vision and Values</h2></div>
   <div class="mv-grid">
-    <div class="mv">${mi("target")}<h3>Our Mission</h3><p>To give every business, big or small, the online presence it deserves, with honest advice and work that brings in real customers.</p></div>
-    <div class="mv">${mi("eye")}<h3>Our Vision</h3><p>To be the West Midlands' most trusted digital partner, known for creative ideas and measurable growth.</p></div>
-    <div class="mv">${mi("heart")}<h3>Our Values</h3><p>Transparency in every report, creativity in every project, and treating your budget like it's our own.</p></div>
+    <div class="mv">${circ("target")}<h3>Our Mission</h3><p>To give every business, big or small, the online presence it deserves, with honest advice and work that brings in real customers.</p></div>
+    <div class="mv">${circ("eye")}<h3>Our Vision</h3><p>To be the West Midlands' most trusted digital partner, known for creative ideas and measurable growth.</p></div>
+    <div class="mv">${circ("heart")}<h3>Our Values</h3><p>Transparency in every report, creativity in every project, and treating your budget like it's our own.</p></div>
   </div>
 </div></section>
 <section class="sec"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">How we work</span><h2>A simple process from <span class="grad-text">first call to growth</span></h2></div>
+  <div class="sec-head center"><span class="eyebrow">How We Work</span><h2>A Simple Process From First Call to Growth</h2></div>
   <div class="steps">
     <div class="step"><h3>Discover</h3><p>A free call and audit to understand your business, customers and competitors.</p></div>
-    <div class="step"><h3>Plan</h3><p>A clear proposal with goals, timelines and fixed prices. No surprises.</p></div>
+    <div class="step"><h3>Plan</h3><p>A clear proposal with goals, timelines and fixed prices.</p></div>
     <div class="step"><h3>Create</h3><p>We design, build and launch, keeping you updated at every stage.</p></div>
     <div class="step"><h3>Grow</h3><p>We track results every month and keep improving what works.</p></div>
   </div>
-</div></section>`+S_WHY(true)+S_REVIEWS(false)+S_FINAL();
+</div></section>`+S_WHY(true)+S_REVIEWS()+S_FINAL();
 }
 
 function pageServices(){
   return pageHero("Our Services","Fifteen digital services, one team. Pick what you need today and add more as you grow.",[["Our Services"]],"about-meeting")+
-  S_SERVICES(false)+`
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">How we work</span><h2>Every service follows the <span class="grad-text">same clear process</span></h2></div>
+  S_SERVICES(SERVICES,{tabs:true})+S_CTA_FORM("about-meeting")+`
+<section class="sec"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">How We Work</span><h2>Every Service Follows the Same Clear Process</h2></div>
   <div class="steps">
     <div class="step"><h3>Discover</h3><p>Free audit and call to understand your goals.</p></div>
     <div class="step"><h3>Plan</h3><p>Fixed-price proposal with clear deliverables.</p></div>
     <div class="step"><h3>Deliver</h3><p>We build, launch and keep you updated.</p></div>
     <div class="step"><h3>Report</h3><p>Monthly results and next steps in plain English.</p></div>
   </div>
-</div></section>`+S_CTA_FORM()+S_FINAL();
+</div></section>`+S_FINAL();
 }
 
 function pageService(s){
@@ -957,20 +930,20 @@ function pageService(s){
   <div class="sd-main">
     <img class="cover" src="img/${s.img}.jpg" alt="${s.name} by DigiRanx Pro">
     <span class="eyebrow">${GROUPS[s.group].name}</span>
-    <h2>${s.name} that brings <span class="grad-text">real results</span></h2>
+    <h2>${s.name} That Brings Real Results</h2>
     <p>${s.intro}</p>
-    <h2 style="font-size:28px">What's included</h2>
+    <h2 style="font-size:26px">What's Included</h2>
     <div class="feat-grid">${s.feats.map(f=>`<div class="feat">${ic("check")}<div><b>${f[0]}</b><span>${f[1]}</span></div></div>`).join("")}</div>
   </div>
   <aside class="sd-side">
     <div class="side-list"><h4>All Services</h4>
       ${SERVICES.map(x=>`<a href="#service-${x.slug}"${x.slug===s.slug?' class="cur" aria-current="page"':""}>${mi(x.icon)}${x.name}</a>`).join("")}
     </div>
-    <div class="help-card"><h3>Need help choosing?</h3><p>Call us Monday to Friday, 8am to 10pm.</p>${contactRow("phone","+44 7445 652671")}${contactRow("mail","info@digiranxpro.com")}</div>
+    <div class="help-card"><h3>Need Help Choosing?</h3><p>Call us Monday to Friday, 8am to 10pm.</p>${contactRow("phone","+44 7445 652671")}${contactRow("mail","info@digiranxpro.com")}</div>
   </aside>
 </div></section>
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">How it works</span><h2>Our ${s.name} <span class="grad-text">process</span></h2></div>
+<section class="sec light"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">How It Works</span><h2>Our ${s.name} Process</h2></div>
   <div class="steps">
     <div class="step"><h3>Audit</h3><p>We review where you are now and where your competitors are.</p></div>
     <div class="step"><h3>Strategy</h3><p>A clear plan and fixed price agreed with you.</p></div>
@@ -979,20 +952,23 @@ function pageService(s){
   </div>
 </div></section>
 <section class="sec" id="pricing"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">Pricing</span><h2>${s.name} <span class="grad-text">packages</span></h2><p>Simple, fixed prices. All prices in GBP and exclude VAT.</p></div>
+  <div class="sec-head center"><span class="eyebrow">Choose Price Package</span><h2>${s.name} Packages</h2><p>Simple, fixed prices in GBP. All prices exclude VAT.</p></div>
   <div class="price-grid">${s.plans.map(p=>`
-    <div class="plan${p.pop?" pop":""}">${p.pop?'<span class="tagpop">Most popular</span>':""}
-      <div><h3>${p.name}</h3></div><p class="pdesc">${p.desc}</p>
-      <div class="amt">${p.price==="Custom"?`<b>Custom</b><span>quote</span>`:`<b>£${p.price}</b><span>${p.unit}</span>`}</div>
-      <ul>${p.feats.map(f=>`<li>${ic("check")}${f}</li>`).join("")}</ul>
-      <a class="btn ${p.pop?"btn-grad":"btn-ghost"}" href="#contact">Choose ${p.name} ${ic("arrow")}</a>
+    <div class="plan${p.pop?" pop":""}">
+      <div class="plan-head"><h3>${p.name} Plan</h3><p>${p.desc}</p></div>
+      <div class="plan-body">
+        <div class="amt">${p.price==="Custom"?`<span class="num"><span class="big">Custom</span></span><small>Get a quote</small>`:`<span class="num"><span class="cur">£</span><span class="big">${p.price}</span></span><small>${p.unit==="one-off"?"One-off":"Monthly"}</small>`}</div>
+        <ul>${p.feats.map(f=>`<li>${ic("check")}${f}</li>`).join("")}</ul>
+        <a class="btn btn-grad" href="#contact">Get Started</a>
+        <div class="pay" aria-label="Accepted payments"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span></div>
+      </div>
     </div>`).join("")}
   </div>
-  <p class="price-note">Need something different? We'll put together a custom package for you.</p>
+  <div class="need">Need a custom package? <a class="btn btn-outline btn-sm" href="#contact">Contact Our Team</a></div>
 </div></section>
 ${S_FAQ(s.faqs.map(f=>["",f[0],f[1]]).concat(FAQS.filter(f=>f[0]!=="general").slice(0,3)),true)}
 <section class="sec"><div class="wrap">
-  <div class="sec-head center"><span class="eyebrow">Related</span><h2>Services that work well <span class="grad-text">together</span></h2></div>
+  <div class="sec-head center"><span class="eyebrow">Related Services</span><h2>Services That Work Well Together</h2></div>
   <div class="svc-grid">${related.map(svcCard).join("")}</div>
 </div></section>
 ${S_FINAL()}`;
@@ -1001,9 +977,9 @@ ${S_FINAL()}`;
 function pageBlog(){
   return pageHero("Our Blog","Practical guides on SEO, Google Maps, websites and ads for UK business owners.",[["Our Blog"]],"blog-1")+`
 <section class="sec"><div class="wrap">
-  <div class="blog-grid">${POSTS.map(p=>`<a class="post" href="#${p.slug}"><img src="img/${p.img}.jpg" alt="" loading="lazy"><div class="pb">
+  <div class="blog-grid">${POSTS.map(p=>`<a class="post" href="#${p.slug}"><img src="img/${p.img}.jpg" alt=""><div class="pb">
     <div class="meta"><span class="cat">${p.cat}</span><span>${p.date}</span><span>${p.read} read</span></div>
-    <h3>${p.title}</h3><p>${p.ex}</p><span class="more" style="color:var(--cyan);font-weight:700;display:inline-flex;gap:8px;align-items:center">Read article ${ic("arrow")}</span></div></a>`).join("")}</div>
+    <h3>${p.title}</h3><p>${p.ex}</p><span class="more">Read More ${ic("arrow")}</span></div></a>`).join("")}</div>
 </div></section>`+S_FINAL();
 }
 
@@ -1011,22 +987,20 @@ function pagePost(p){
   const body = p.body.map(b=>b[0]==="p"?`<p>${b[1]}</p>`:b[0]==="h"?`<h2>${b[1]}</h2>`:`<ul>${b[1].map(i=>`<li>${i}</li>`).join("")}</ul>`).join("");
   return pageHero(p.title,"",[["Our Blog","blog"],[p.cat]],p.img)+`
 <section class="sec"><div class="wrap"><article class="article">
-  <div class="post" style="background:none;border:0"><div class="meta"><span class="cat">${p.cat}</span><span>${p.date}</span><span>${p.read} read</span><span>By DigiRanx Pro</span></div></div>
+  <div class="meta"><span class="cat">${p.cat}</span><span>${p.date}</span><span>${p.read} read</span><span>By DigiRanx Pro</span></div>
   <img src="img/${p.img}.jpg" alt="">
   ${body}
-  <div class="help-card" style="margin-top:20px"><h3>Want us to do this for you?</h3><p>Our team can handle it end to end. Get a free audit and a clear plan.</p><a class="btn btn-grad" href="#contact" style="justify-self:start">Get a free audit ${ic("arrow")}</a></div>
+  <div class="help-card" style="margin-top:16px"><h3>Want Us to Do This for You?</h3><p>Our team can handle it end to end. Get a free audit and a clear plan.</p><a class="btn btn-grad" href="#contact" style="justify-self:start">Get a Free Audit</a></div>
 </article></div></section>`;
 }
 
 function pageFaqs(){
   const cats = {general:"General",process:"Process",pricing:"Pricing & Payments",support:"Support"};
-  return pageHero("Frequently Asked Questions","Straight answers about our services, pricing and how we work.",[["FAQs"]],"why-team")+
+  return pageHero("FAQs","Straight answers about our services, pricing and how we work.",[["FAQs"]],"why-team")+
   Object.entries(cats).map(([k,name],i)=>`
-<section class="sec${i%2?" alt":""}" style="padding-block:clamp(48px,6vw,80px)"><div class="wrap">
-  <div class="faq-wrap">
-    <div class="sec-head" style="margin:0"><span class="eyebrow">${name}</span><h2>${name} <span class="grad-text">questions</span></h2></div>
-    <div class="faq-list">${FAQS.filter(f=>f[0]===k).map((f,j)=>faqItem(f[1],f[2],j===0)).join("")}</div>
-  </div>
+<section class="sec${i%2?" light":""}" style="padding-block:clamp(48px,6vw,80px)"><div class="wrap faq-wrap">
+  <div class="sec-head" style="margin:0"><span class="eyebrow">${name}</span><h2>${name} Questions</h2></div>
+  <div class="faq-list">${FAQS.filter(f=>f[0]===k).map((f,j)=>faqItem(f[1],f[2],j===0)).join("")}</div>
 </div></section>`).join("")+S_FINAL();
 }
 
@@ -1034,22 +1008,17 @@ function pageContact(){
   return pageHero("Contact Us","Tell us about your business and we'll reply within one working day.",[["Contact Us"]],"cta-work")+`
 <section class="sec"><div class="wrap">
   <div class="ci-grid">
-    <div class="ci">${mi("phone")}<h3>Call Us</h3><p><a href="tel:+447445652671">+44 7445 652671</a></p></div>
-    <div class="ci">${mi("mail")}<h3>Email Us</h3><p><a href="mailto:info@digiranxpro.com">info@digiranxpro.com</a></p></div>
-    <div class="ci">${mi("pin")}<h3>Visit Us</h3><p>Office 1922, 85 Dunstall Hill, Wolverhampton, WV6 0SR, UK</p></div>
-    <div class="ci">${mi("clock")}<h3>Opening Hours</h3><p>Mon – Fri: 8am – 10pm<br>Sat – Sun: Closed</p></div>
+    <div class="ci">${circ("phone")}<h3>Call Us</h3><p><a href="tel:+447445652671">+44 7445 652671</a></p></div>
+    <div class="ci">${circ("mail")}<h3>Email Us</h3><p><a href="mailto:info@digiranxpro.com">info@digiranxpro.com</a></p></div>
+    <div class="ci">${circ("pin")}<h3>Visit Us</h3><p>Office 1922, 85 Dunstall Hill, Wolverhampton, WV6 0SR, UK</p></div>
+    <div class="ci">${circ("clock")}<h3>Opening Hours</h3><p>Mon – Fri: 8am – 10pm<br>Sat – Sun: Closed</p></div>
   </div>
-  <div class="cta-box">
-    <div class="cta-side" style="--cta-img:url(img/about-meeting.jpg)">
-      <div style="display:grid;gap:16px"><span class="eyebrow">Get in touch</span><h2>Let's grow your business together</h2>
-      <p class="lead">Whether you need a new website, more calls from Google or a full marketing plan, we're here to help.</p></div>
-      <div class="contact-mini">${contactRow("phone","+44 7445 652671")}${contactRow("mail","info@digiranxpro.com")}</div>
-    </div>
-    ${FORM("contact","Send us a message","Fill in the form and our team will be in touch.")}
+  <div class="contact-grid">
+    <a class="map-card" href="https://www.google.com/maps/search/?api=1&query=85+Dunstall+Hill+Wolverhampton+WV6+0SR" target="_blank" rel="noopener">
+      <div><span class="eyebrow on-dark">Our Office</span><b>85 Dunstall Hill, Wolverhampton</b><span class="btn btn-white btn-sm">Open in Google Maps</span></div>
+    </a>
+    <div class="form-card">${FORM("contact","Send Us a Message","Fill in the form and our team will be in touch.")}</div>
   </div>
-  <a class="map-card" href="https://www.google.com/maps/search/?api=1&query=85+Dunstall+Hill+Wolverhampton+WV6+0SR" target="_blank" rel="noopener">
-    <div><span class="eyebrow">Our office</span><b>85 Dunstall Hill, Wolverhampton</b><span style="color:var(--muted)">Open in Google Maps ${ic("arrow")}</span></div>
-  </a>
 </div></section>`+S_FAQ(FAQS.slice(0,4),true);
 }
 
@@ -1074,7 +1043,8 @@ function route(){
   closeMenus();
   window.scrollTo(0,0);
   bindPage();
-  if(document.getElementById("hero3d")) stop3d = initHero3D(document.getElementById("hero3d"));
+  const host=document.getElementById("hero3d");
+  if(host) stop3d = initHero3D(host);
 }
 window.addEventListener("hashchange",route);
 
@@ -1094,10 +1064,12 @@ function bindPage(){
     if(!ok){(name.value.trim()?email:name).focus();return;}
     f.querySelector(".form-ok").hidden=false;
   }));
-  const track=app.querySelector("#revTrack");
-  app.querySelectorAll(".rev-nav button").forEach(b=>b.addEventListener("click",()=>{
-    const card=track.querySelector(".rev"); track.scrollBy({left:(card.offsetWidth+18)*Number(b.dataset.dir),behavior:"smooth"});
-  }));
+  const track=app.querySelector("#revTrack"), dots=app.querySelector("#revDots");
+  if(track&&dots){
+    const cards=[...track.children];
+    dots.addEventListener("click",e=>{const b=e.target.closest("button"); if(!b) return; track.scrollTo({left:cards[+b.dataset.i].offsetLeft-track.offsetLeft-4,behavior:"smooth"});});
+    track.addEventListener("scroll",()=>{const w=cards[0].offsetWidth+24; const i=Math.min(cards.length-1,Math.round(track.scrollLeft/w)); dots.querySelectorAll("button").forEach((d,j)=>d.setAttribute("aria-current",j===i));},{passive:true});
+  }
   app.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{
     document.getElementById(b.dataset.scroll)?.scrollIntoView({behavior:"smooth"});
   }));
@@ -1109,10 +1081,10 @@ document.addEventListener("click",e=>{
 });
 function selectText(btn){const s=btn.previousElementSibling;const r=document.createRange();r.selectNodeContents(s);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);}
 
-/* Mega menu + drawer */
+/* Mega menu (links only) + drawer */
 const mega=document.getElementById("mega"), megaLi=document.getElementById("megaLi"), megaBtn=document.getElementById("megaBtn");
 mega.innerHTML = Object.entries(GROUPS).map(([k,g])=>`<div class="mega-col"><h4>${g.name}</h4>${SERVICES.filter(s=>s.group===k).map(s=>`<a href="#service-${s.slug}">${mi(s.icon)}<span><b>${s.name}</b><span class="sub">${s.short.split(/[,.]/)[0]}</span></span></a>`).join("")}</div>`).join("")+
- `<div class="mega-promo" style="--promo:url(img/hero-team.jpg)"><h5>Not sure where to start?</h5><p>Get a free audit of your website and Google presence.</p><a class="btn btn-grad" href="#contact">Free audit ${ic("arrow")}</a></div>`;
+  `<div class="mega-foot"><span>15 services, one team. Mon – Fri, 8am – 10pm.</span><a href="#services">View All Services ${ic("arrow")}</a></div>`;
 megaBtn.addEventListener("click",()=>{const o=megaLi.classList.toggle("open");megaBtn.setAttribute("aria-expanded",o);});
 document.addEventListener("click",e=>{if(!megaLi.contains(e.target)){megaLi.classList.remove("open");megaBtn.setAttribute("aria-expanded","false");}});
 document.addEventListener("keydown",e=>{if(e.key==="Escape") closeMenus();});
@@ -1122,11 +1094,10 @@ document.getElementById("burger").addEventListener("click",()=>{drawer.classList
 document.getElementById("drawerClose").addEventListener("click",closeMenus);
 drawer.addEventListener("click",e=>{if(e.target===drawer) closeMenus();});
 document.getElementById("dSvcBtn").addEventListener("click",e=>{const o=document.getElementById("dSvc").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o);});
-function closeMenus(){drawer.classList.remove("open");drawer.setAttribute("aria-hidden","true");megaLi.classList.remove("open");megaBtn.setAttribute("aria-expanded","false");mega.style.pointerEvents="none";requestAnimationFrame(()=>setTimeout(()=>mega.style.pointerEvents="",250));}
-document.getElementById("ftrSvc").innerHTML = SERVICES.slice(0,7).map(s=>`<li><a href="#service-${s.slug}">${s.name}</a></li>`).join("")+`<li><a href="#services">View all services</a></li>`;
-document.getElementById("newsForm").addEventListener("submit",e=>{e.preventDefault();const v=document.getElementById("newsEmail").value;document.getElementById("newsMsg").textContent=/^\S+@\S+\.\S+$/.test(v)?"Thanks! Newsletter sign-up goes live on the WordPress site.":"Please enter a valid email address.";});
+function closeMenus(){drawer.classList.remove("open");drawer.setAttribute("aria-hidden","true");megaLi.classList.remove("open");megaBtn.setAttribute("aria-expanded","false");mega.style.pointerEvents="none";setTimeout(()=>mega.style.pointerEvents="",250);}
+document.getElementById("ftrSvc").innerHTML = HOME_SERVICES.map(k=>`<li><a href="#service-${k}">${SVC[k].name}</a></li>`).join("")+`<li><a href="#services">View All Services</a></li>`;
 
-/* ================= 3D HERO ================= */
+/* ================= 3D HERO: wireframe network globe (template style, brand colours) ================= */
 function initHero3D(host){
   if(!window.THREE) return null;
   let renderer;
@@ -1136,49 +1107,57 @@ function initHero3D(host){
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));
   host.prepend(renderer.domElement);
   const scene=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(35,1,.1,100); cam.position.set(0,0,9.2);
-  const cyan=new THREE.Color("#1EC8F5"), violet=new THREE.Color("#8A3BFF"), mag=new THREE.Color("#FF2EA6");
+  const cam=new THREE.PerspectiveCamera(38,1,.1,100); cam.position.set(0,0,8.4);
+  const cyan=new THREE.Color("#1EC8F5"), violet=new THREE.Color("#7B3BFF"), mag=new THREE.Color("#FF2EA6");
   const grad=t=>t<.5?cyan.clone().lerp(violet,t*2):violet.clone().lerp(mag,(t-.5)*2);
+  const R=2.45;
 
-  const group=new THREE.Group(); scene.add(group);
-  // the "D" arc from the logo
-  const arcLen=Math.PI*1.12, R=1.55, r=.52;
-  const tor=new THREE.TorusGeometry(R,r,64,220,arcLen);
-  const pos=tor.attributes.position, cols=[];
-  for(let i=0;i<pos.count;i++){const a=Math.atan2(pos.getY(i),pos.getX(i)); let t=(a<0?a+Math.PI*2:a)/arcLen; t=Math.min(Math.max(t,0),1); const c=grad(1-t); cols.push(c.r,c.g,c.b);}
-  tor.setAttribute("color",new THREE.Float32BufferAttribute(cols,3));
-  const mat=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.22,metalness:.15,clearcoat:1,clearcoatRoughness:.12,emissive:new THREE.Color("#2a0a55"),emissiveIntensity:.35});
-  const arc=new THREE.Mesh(tor,mat); arc.rotation.z=-arcLen/2; arc.position.x=.55;
-  // rounded caps
-  [0,arcLen].forEach((a,k)=>{const cap=new THREE.Mesh(new THREE.SphereGeometry(r,48,32),new THREE.MeshPhysicalMaterial({color:k?cyan:mag,roughness:.22,clearcoat:1,emissive:new THREE.Color("#2a0a55"),emissiveIntensity:.35})); cap.position.set(Math.cos(a)*R,Math.sin(a)*R,0); arc.add(cap);});
-  group.add(arc);
-  // dissolving dot field
-  const dots=[]; const sg=new THREE.SphereGeometry(1,20,14);
-  const inst=new THREE.InstancedMesh(sg,new THREE.MeshPhysicalMaterial({roughness:.3,clearcoat:.8,emissive:new THREE.Color("#1a0638"),emissiveIntensity:.4}),400);
-  let n=0; const step=.27;
-  for(let y=-1.9;y<=1.9;y+=step){for(let x=-2.4;x<=.55;x+=step){
-    const xx=x+((Math.round(y/step))%2?step/2:0);
-    const edge=-1.2-Math.abs(y)*.55;               // slanted left edge like the logo
-    const k=(xx-edge)/(0.55-edge); if(k<0) continue;
-    if(Math.random()>Math.min(1,k*1.4+.1)) continue;
-    const s=.035+.085*Math.min(1,k);
-    dots.push({x:xx,y,s,p:Math.random()*6.28,z:(Math.random()-.5)*.4});
-    if(++n>=400) break;}}
-  inst.count=dots.length;
-  const m4=new THREE.Matrix4();
-  dots.forEach((d,i)=>{inst.setColorAt(i,grad((1.9-d.y)/3.8));});
-  group.add(inst);
-  group.rotation.set(.12,-.38,0);
-  // lights
-  scene.add(new THREE.AmbientLight(0xffffff,.55));
-  const key=new THREE.DirectionalLight(0xffffff,1.3); key.position.set(3,4,6); scene.add(key);
-  const l1=new THREE.PointLight(0x1EC8F5,2.2,20); l1.position.set(-4,3,3); scene.add(l1);
-  const l2=new THREE.PointLight(0xFF2EA6,1.4,20); l2.position.set(4,-3,3); scene.add(l2);
-  // orbit ring
-  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.75,.012,8,200),new THREE.MeshBasicMaterial({color:0x8A3BFF,transparent:true,opacity:.45}));
-  ring.rotation.x=1.25; scene.add(ring);
+  // irregular geodesic: icosahedron vertices, jittered, merged
+  const base=new THREE.IcosahedronGeometry(R,2);
+  const p=base.attributes.position, map=new Map(), verts=[], idx=[];
+  const keyOf=(x,y,z)=>`${x.toFixed(3)},${y.toFixed(3)},${z.toFixed(3)}`;
+  let seed=7; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+  for(let i=0;i<p.count;i++){
+    const k=keyOf(p.getX(i),p.getY(i),p.getZ(i));
+    if(!map.has(k)){const v=new THREE.Vector3(p.getX(i),p.getY(i),p.getZ(i)); v.multiplyScalar(1+(rnd()-.5)*.08); map.set(k,verts.length); verts.push(v);}
+    idx.push(map.get(k));
+  }
+  const edges=new Set(), segs=[], cols=[];
+  for(let i=0;i<idx.length;i+=3){[[0,1],[1,2],[2,0]].forEach(([a,b])=>{
+    const A=idx[i+a],B=idx[i+b],k=A<B?A+"-"+B:B+"-"+A; if(edges.has(k)) return; edges.add(k);
+    if(rnd()<.18) return;                      // drop some edges for an organic network look
+    const va=verts[A],vb=verts[B]; segs.push(va.x,va.y,va.z,vb.x,vb.y,vb.z);
+    [va,vb].forEach(v=>{const c=grad((R-v.y)/(2*R)); cols.push(c.r,c.g,c.b);});
+  });}
+  const lg=new THREE.BufferGeometry();
+  lg.setAttribute("position",new THREE.Float32BufferAttribute(segs,3));
+  lg.setAttribute("color",new THREE.Float32BufferAttribute(cols,3));
+  const lines=new THREE.LineSegments(lg,new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.85}));
 
-  let mx=0,my=0,raf,t0=performance.now(),vis=true;
+  // glowing nodes
+  const cv=document.createElement("canvas"); cv.width=cv.height=64; const cx=cv.getContext("2d");
+  const g=cx.createRadialGradient(32,32,0,32,32,32); g.addColorStop(0,"rgba(255,255,255,1)"); g.addColorStop(.25,"rgba(255,255,255,.85)"); g.addColorStop(1,"rgba(255,255,255,0)");
+  cx.fillStyle=g; cx.fillRect(0,0,64,64);
+  const tex=new THREE.CanvasTexture(cv);
+  const np=[],nc=[]; verts.forEach(v=>{np.push(v.x,v.y,v.z); const c=grad((R-v.y)/(2*R)); nc.push(c.r,c.g,c.b);});
+  const ng=new THREE.BufferGeometry(); ng.setAttribute("position",new THREE.Float32BufferAttribute(np,3)); ng.setAttribute("color",new THREE.Float32BufferAttribute(nc,3));
+  const nodes=new THREE.Points(ng,new THREE.PointsMaterial({size:.26,map:tex,vertexColors:true,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));
+
+  // a few larger "hub" nodes
+  const hubs=new THREE.Points(new THREE.BufferGeometry().setFromPoints(verts.filter((_,i)=>i%9===0)),new THREE.PointsMaterial({size:.55,map:tex,color:0xffffff,transparent:true,opacity:.75,depthWrite:false,blending:THREE.AdditiveBlending}));
+
+  // inner glow core
+  const core=new THREE.Mesh(new THREE.SphereGeometry(R*.96,48,32),new THREE.MeshBasicMaterial({color:0x2a1478,transparent:true,opacity:.18}));
+
+  const globe=new THREE.Group(); globe.add(core,lines,nodes,hubs); scene.add(globe);
+  globe.rotation.set(.35,0,.18);
+
+  // drifting particles around the globe
+  const dp=[]; for(let i=0;i<160;i++){const r=R*(1.15+rnd()*1.1),t=rnd()*Math.PI*2,ph=Math.acos(2*rnd()-1); dp.push(r*Math.sin(ph)*Math.cos(t),r*Math.cos(ph),r*Math.sin(ph)*Math.sin(t));}
+  const dust=new THREE.Points(new THREE.BufferGeometry().setAttribute("position",new THREE.Float32BufferAttribute(dp,3)),new THREE.PointsMaterial({size:.09,map:tex,color:0x8fdcff,transparent:true,opacity:.7,depthWrite:false,blending:THREE.AdditiveBlending}));
+  scene.add(dust);
+
+  let mx=0,my=0,raf,vis=true,t0=performance.now();
   const onMove=e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);};
   addEventListener("pointermove",onMove);
   const size=()=>{const w=host.clientWidth,h=host.clientHeight; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix();};
@@ -1188,13 +1167,9 @@ function initHero3D(host){
     raf=requestAnimationFrame(frame);
     if(!vis) return;
     const t=(now-t0)/1000;
-    dots.forEach((d,i)=>{const b=reduce?0:Math.sin(t*1.6+d.p)*.08; m4.makeScale(d.s,d.s,d.s); m4.setPosition(d.x,d.y+b*.4,d.z+b); inst.setMatrixAt(i,m4);});
-    inst.instanceMatrix.needsUpdate=true;
-    const sway=reduce?0:Math.sin(t*.5)*.18;
-    group.rotation.y+=((-.38+sway+mx*.5)-group.rotation.y)*.05;
-    group.rotation.x+=((.12+my*.3)-group.rotation.x)*.05;
-    group.position.y=reduce?0:Math.sin(t*.8)*.08;
-    ring.rotation.z=t*.15;
+    if(!reduce){globe.rotation.y=t*.12; dust.rotation.y=-t*.03;}
+    globe.rotation.x+=((.35+my*.25)-globe.rotation.x)*.04;
+    globe.position.x+=((mx*.25)-globe.position.x)*.04;
     renderer.render(scene,cam);
   }
   raf=requestAnimationFrame(frame);
