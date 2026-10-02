@@ -115,3 +115,6 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Rank Math REST appeared after the setup wizard. `site/wp-build/apply_seo.py` wrote title, meta description and focus keyword for all 30 pages/posts (`seo.json`); verified live.
 - Sitemaps: page-sitemap.xml and post-sitemap.xml return 200; sitemap_index.xml was a stale LiteSpeed-cached 404 (fresh request returns 200) - purge LiteSpeed cache.
 - Remaining in Rank Math UI: Titles & Meta > Local SEO (address, phone, email, hours Mon-Fri 08:00-22:00); Titles & Meta > Pages > Schema Type = None (pages currently get Article schema); WP user display name shows as "Taha Dev" in Person schema.
+
+### Hero Lottie
+- Client added an Elementor Pro Lottie widget with `digiranx-globe-lottie.json` (attachment 314, loop, autoplay). Kit CSS adds a soft glow and limits it to 420px on tablet / 320px on mobile.
