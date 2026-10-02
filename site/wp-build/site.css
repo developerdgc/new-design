@@ -61,3 +61,11 @@ html{scroll-behavior:smooth}
 .dg-side-link:hover .e-con{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important}
 .dg-side-link:hover .e-svg-base{color:#FFFFFF!important}
 .dg-benefit{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#1EC8F5,#7B3BFF 55%,#FF2EA6) border-box!important;border-color:transparent!important}
+.dg-chip a{color:#fff!important}.dg-chip:hover{background:#fff}.dg-chip:hover a{color:#110A2E!important}
+[data-elementor-type=header] .e-button-base,.dg-mega-item>.e-con:first-child p{white-space:nowrap}
+@media (min-width:1025px) and (max-width:1200px){
+[data-elementor-type=header] .e-button-base,.dg-mega-item>.e-con:first-child{padding:8px 8px!important;font-size:14.5px!important}
+.dg-mega-item>.e-con:first-child p{font-size:14.5px!important}
+[data-elementor-type=header] img[alt="DigiRanx Pro"]{width:118px!important}
+.dg-call-btn p{font-size:14px!important}
+}
