@@ -1,0 +1,1670 @@
+{
+ "GROUPS": {
+  "grow": {
+   "name": "Search & Ads",
+   "sub": "Get found and win customers"
+  },
+  "design": {
+   "name": "Design & Social",
+   "sub": "Look sharp everywhere"
+  },
+  "build": {
+   "name": "Build & Develop",
+   "sub": "Websites, stores and software"
+  }
+ },
+ "SERVICES": [
+  {
+   "slug": "gbp-optimization",
+   "name": "GBP Optimization",
+   "icon": "pin",
+   "group": "grow",
+   "img": "s-gbp",
+   "short": "Rank in the Google Map Pack and turn local searches into calls.",
+   "intro": "Your Google Business Profile is often the first thing a local customer sees. We set it up properly, fill every field, add photos and posts every week, and keep your details consistent so Google trusts you and shows you higher in Maps.",
+   "feats": [
+    [
+     "Full profile audit",
+     "Categories, services, hours and attributes checked line by line."
+    ],
+    [
+     "Keyword-rich description",
+     "Written for your trade and your town, not stuffed."
+    ],
+    [
+     "Weekly Google posts",
+     "Offers, updates and photos that keep the profile active."
+    ],
+    [
+     "Photo & video uploads",
+     "Geo-relevant images that show your work."
+    ],
+    [
+     "Q&A and review replies",
+     "Answers ready before customers ask."
+    ],
+    [
+     "Monthly insight report",
+     "Calls, direction requests and searches you appeared in."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "149",
+     "unit": "one-off",
+     "desc": "A clean, fully optimised profile",
+     "feats": [
+      "Complete profile setup or fix",
+      "Category & service mapping",
+      "10 photo uploads",
+      "Basic citation check"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "249",
+     "unit": "/month",
+     "desc": "Steady local ranking gains",
+     "feats": [
+      "Everything in Starter",
+      "4 Google posts a month",
+      "Review reply management",
+      "Monthly ranking report",
+      "Q&A seeding"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "399",
+     "unit": "/month",
+     "desc": "For competitive local markets",
+     "feats": [
+      "Everything in Growth",
+      "8 Google posts a month",
+      "Geo-grid rank tracking",
+      "20 local citations a month",
+      "Competitor monitoring"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "How long before I rank higher in Maps?",
+     "Most profiles see movement in 4 to 8 weeks. Competitive trades in big towns can take 3 months."
+    ],
+    [
+     "Can you fix a suspended profile?",
+     "Yes. We find the cause, correct it and file the reinstatement request with Google for you."
+    ]
+   ]
+  },
+  {
+   "slug": "web-development",
+   "name": "Web Development",
+   "icon": "code",
+   "group": "build",
+   "img": "s-webdev",
+   "short": "Fast, secure WordPress and custom-coded websites built to convert.",
+   "intro": "We build websites that load quickly, rank well and are easy for you to update. Every site is built on clean code, set up with analytics from day one, and handed over with training so you are never stuck.",
+   "feats": [
+    [
+     "WordPress or custom code",
+     "We pick the stack that suits your goals and budget."
+    ],
+    [
+     "Speed optimised",
+     "Core Web Vitals checked before launch."
+    ],
+    [
+     "On-page SEO built in",
+     "Titles, schema and clean URLs from the start."
+    ],
+    [
+     "Secure hosting setup",
+     "SSL, backups and security hardening."
+    ],
+    [
+     "Contact & booking forms",
+     "Leads go straight to your inbox or CRM."
+    ],
+    [
+     "Training & handover",
+     "A walkthrough so you can edit your own pages."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "699",
+     "unit": "one-off",
+     "desc": "Up to 5 pages",
+     "feats": [
+      "5 responsive pages",
+      "Contact form & map",
+      "Basic on-page SEO",
+      "1 month support"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Business",
+     "price": "1,299",
+     "unit": "one-off",
+     "desc": "Up to 12 pages",
+     "feats": [
+      "12 responsive pages",
+      "Blog setup",
+      "Speed & SEO optimisation",
+      "Analytics & Search Console",
+      "3 months support"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "2,499",
+     "unit": "one-off",
+     "desc": "Large or custom builds",
+     "feats": [
+      "Unlimited pages",
+      "Custom features & integrations",
+      "Booking or membership area",
+      "Advanced SEO setup",
+      "6 months support"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "How long does a website take?",
+     "A 5-page site usually takes 2 to 3 weeks. Larger builds take 4 to 8 weeks depending on content."
+    ],
+    [
+     "Will I be able to edit the site myself?",
+     "Yes. We build on WordPress with Elementor unless you need something custom, and we train you before handover."
+    ]
+   ]
+  },
+  {
+   "slug": "custom-web-design",
+   "name": "Custom Web Design",
+   "icon": "pen",
+   "group": "design",
+   "img": "s-design",
+   "short": "Original website designs made for your brand, never a recycled theme.",
+   "intro": "We design your website from a blank canvas around your brand, your customers and your goals. You see every page in a clickable prototype before a single line of code is written.",
+   "feats": [
+    [
+     "Discovery workshop",
+     "We learn your customers and what makes you different."
+    ],
+    [
+     "Wireframes first",
+     "Page structure agreed before visuals."
+    ],
+    [
+     "Clickable prototype",
+     "Review the design on your own phone and laptop."
+    ],
+    [
+     "Brand-matched visuals",
+     "Colours, type and imagery that feel like you."
+    ],
+    [
+     "Conversion-led layout",
+     "Clear calls to action on every page."
+    ],
+    [
+     "Design system handover",
+     "Reusable styles so new pages stay consistent."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "499",
+     "unit": "one-off",
+     "desc": "Homepage + 3 inner pages",
+     "feats": [
+      "Custom homepage design",
+      "3 inner page designs",
+      "Mobile versions",
+      "2 revision rounds"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Business",
+     "price": "999",
+     "unit": "one-off",
+     "desc": "Up to 10 page designs",
+     "feats": [
+      "10 page designs",
+      "Clickable prototype",
+      "Mobile & tablet layouts",
+      "Icon set",
+      "3 revision rounds"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "1,999",
+     "unit": "one-off",
+     "desc": "Full design system",
+     "feats": [
+      "Unlimited page designs",
+      "Component library",
+      "Micro-interactions",
+      "Brand imagery direction",
+      "Unlimited revisions for 30 days"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Do you also build the design?",
+     "Yes. Most clients pair this with our Web Development service so one team handles both."
+    ],
+    [
+     "What do I need to provide?",
+     "Your logo, any brand colours and examples of sites you like. We guide you through the rest."
+    ]
+   ]
+  },
+  {
+   "slug": "responsive-development",
+   "name": "Responsive Development",
+   "icon": "devices",
+   "group": "build",
+   "img": "s-responsive",
+   "short": "Websites that look and work perfectly on every phone, tablet and screen.",
+   "intro": "Most visitors now browse on their phones. We rebuild or fix your site so every page, menu and form works smoothly on any screen size, and Google's mobile-first index treats you well.",
+   "feats": [
+    [
+     "Mobile-first layouts",
+     "Designed for thumbs first, then scaled up."
+    ],
+    [
+     "Cross-device testing",
+     "Real iPhone, Android, tablet and desktop checks."
+    ],
+    [
+     "Touch-friendly menus",
+     "Easy navigation on small screens."
+    ],
+    [
+     "Image optimisation",
+     "Smaller files and faster loading on 4G."
+    ],
+    [
+     "Mobile speed fixes",
+     "Better Core Web Vitals scores."
+    ],
+    [
+     "Accessibility checks",
+     "Readable text and proper contrast."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Fix",
+     "price": "299",
+     "unit": "one-off",
+     "desc": "Repair an existing site",
+     "feats": [
+      "Mobile audit report",
+      "Fix up to 5 pages",
+      "Menu & form fixes",
+      "Speed quick wins"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Rebuild",
+     "price": "599",
+     "unit": "one-off",
+     "desc": "Rebuild key templates",
+     "feats": [
+      "Up to 12 pages made responsive",
+      "New mobile navigation",
+      "Image optimisation",
+      "Cross-device testing"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Complete",
+     "price": "1,099",
+     "unit": "one-off",
+     "desc": "Full responsive overhaul",
+     "feats": [
+      "Unlimited pages",
+      "Mobile-first redesign",
+      "Accessibility fixes",
+      "Core Web Vitals tuning",
+      "1 month support"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Can you fix my site without redesigning it?",
+     "Yes. Our Fix plan keeps your design and only corrects how it behaves on smaller screens."
+    ],
+    [
+     "Which devices do you test on?",
+     "Current iPhone and Android models, iPad, and desktop Chrome, Safari, Edge and Firefox."
+    ]
+   ]
+  },
+  {
+   "slug": "ui-ux-design",
+   "name": "UI/UX Designing",
+   "icon": "layout",
+   "group": "design",
+   "img": "s-uiux",
+   "short": "User journeys and interfaces that feel easy and keep people coming back.",
+   "intro": "Good design is how something works, not only how it looks. We map your user journeys, test them with real people and design clean interfaces for websites, web apps and mobile apps.",
+   "feats": [
+    [
+     "User research",
+     "Interviews and analytics to find friction."
+    ],
+    [
+     "Journey mapping",
+     "Every step from first visit to purchase."
+    ],
+    [
+     "Wireframes & flows",
+     "Structure tested before visuals."
+    ],
+    [
+     "High-fidelity UI",
+     "Pixel-perfect screens in Figma."
+    ],
+    [
+     "Usability testing",
+     "Real users, real feedback."
+    ],
+    [
+     "Developer-ready files",
+     "Specs and assets your developers can use."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Audit",
+     "price": "399",
+     "unit": "one-off",
+     "desc": "UX review of an existing product",
+     "feats": [
+      "Heuristic UX audit",
+      "Top 10 issues report",
+      "Quick-win recommendations",
+      "1 hour walkthrough call"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Product",
+     "price": "899",
+     "unit": "one-off",
+     "desc": "Design a key flow",
+     "feats": [
+      "User journey mapping",
+      "Wireframes for 1 core flow",
+      "Up to 10 UI screens",
+      "Clickable prototype",
+      "Usability test with 5 users"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Full UX",
+     "price": "1,799",
+     "unit": "one-off",
+     "desc": "End-to-end product design",
+     "feats": [
+      "Research & personas",
+      "Full information architecture",
+      "Up to 30 UI screens",
+      "Design system in Figma",
+      "2 rounds of user testing"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Do you design mobile apps too?",
+     "Yes. We design iOS and Android interfaces following each platform's guidelines."
+    ],
+    [
+     "What tools do you use?",
+     "Figma for design and prototyping, plus Maze or live sessions for testing."
+    ]
+   ]
+  },
+  {
+   "slug": "graphic-design",
+   "name": "Graphic Designing",
+   "icon": "palette",
+   "group": "design",
+   "img": "s-graphic",
+   "short": "Social posts, flyers, brochures and ads that stop the scroll.",
+   "intro": "From a single flyer to a full month of social content, our designers create on-brand graphics that look professional in print and online. Fast turnaround and unlimited small edits.",
+   "feats": [
+    [
+     "Social media graphics",
+     "Posts, stories and covers sized for every platform."
+    ],
+    [
+     "Print design",
+     "Flyers, leaflets, brochures and business cards."
+    ],
+    [
+     "Ad creatives",
+     "Static and animated banners for Google and Meta."
+    ],
+    [
+     "Infographics",
+     "Complex information made simple."
+    ],
+    [
+     "Packaging & labels",
+     "Print-ready artwork files."
+    ],
+    [
+     "Source files included",
+     "You own every design we make."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Pack",
+     "price": "99",
+     "unit": "one-off",
+     "desc": "5 designs",
+     "feats": [
+      "5 custom designs",
+      "2 revisions each",
+      "Print & web formats",
+      "3 working day delivery"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Monthly",
+     "price": "249",
+     "unit": "/month",
+     "desc": "Ongoing design support",
+     "feats": [
+      "20 designs a month",
+      "Social, print & ads",
+      "Unlimited small edits",
+      "48 hour turnaround",
+      "Brand templates"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Pro",
+     "price": "499",
+     "unit": "/month",
+     "desc": "For busy marketing teams",
+     "feats": [
+      "50 designs a month",
+      "Animated graphics",
+      "Dedicated designer",
+      "24 hour turnaround",
+      "Monthly strategy call"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Do I get the source files?",
+     "Yes. You receive print-ready PDFs, PNGs and the editable source files."
+    ],
+    [
+     "Can you print for me?",
+     "We can arrange printing through our UK print partners and deliver to your door."
+    ]
+   ]
+  },
+  {
+   "slug": "reviews",
+   "name": "Reviews",
+   "icon": "star",
+   "group": "grow",
+   "img": "s-reviews",
+   "short": "Collect more genuine 5-star reviews and reply to every one professionally.",
+   "intro": "Reviews decide who gets the call. We set up simple systems that ask happy customers for a review at the right moment, and we reply to every review on your behalf so your reputation keeps growing.",
+   "feats": [
+    [
+     "Review request system",
+     "SMS, email and QR codes that make reviewing easy."
+    ],
+    [
+     "Google, Facebook & Trustpilot",
+     "All platforms managed in one place."
+    ],
+    [
+     "Professional replies",
+     "Every review answered within 24 hours."
+    ],
+    [
+     "Negative review handling",
+     "Calm, policy-safe responses that protect you."
+    ],
+    [
+     "Review widgets",
+     "Show your best reviews on your website."
+    ],
+    [
+     "Monthly reputation report",
+     "Rating trend and new review count."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "99",
+     "unit": "/month",
+     "desc": "1 platform",
+     "feats": [
+      "Google review management",
+      "Review request templates",
+      "Replies to all reviews",
+      "Monthly report"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "199",
+     "unit": "/month",
+     "desc": "Up to 3 platforms",
+     "feats": [
+      "Google, Facebook & Trustpilot",
+      "Automated SMS & email requests",
+      "QR code review cards",
+      "Website review widget",
+      "Replies within 24 hours"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "349",
+     "unit": "/month",
+     "desc": "Multi-location brands",
+     "feats": [
+      "Unlimited platforms",
+      "Multiple locations",
+      "Negative review alerts",
+      "Sentiment analysis",
+      "Quarterly strategy call"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Do you write fake reviews?",
+     "Never. Fake reviews break Google's rules and UK law. We only help you collect real reviews from real customers."
+    ],
+    [
+     "Can you remove bad reviews?",
+     "We can request removal of reviews that break platform policies, and we reply professionally to the rest."
+    ]
+   ]
+  },
+  {
+   "slug": "seo-digital-marketing",
+   "name": "SEO & Digital Marketing",
+   "icon": "trend",
+   "group": "grow",
+   "img": "s-seo",
+   "short": "Rank on page one of Google and grow organic traffic that converts.",
+   "intro": "We combine technical SEO, quality content and smart link building to move you up Google for the searches your customers actually make. Every month you get a clear report showing rankings, traffic and leads.",
+   "feats": [
+    [
+     "Keyword research",
+     "The terms your buyers search, ranked by intent."
+    ],
+    [
+     "Technical SEO fixes",
+     "Speed, indexing, schema and site structure."
+    ],
+    [
+     "On-page optimisation",
+     "Titles, headings and content for every key page."
+    ],
+    [
+     "Content writing",
+     "Blog posts and service pages written by UK writers."
+    ],
+    [
+     "Link building",
+     "Relevant, safe backlinks from real sites."
+    ],
+    [
+     "Monthly reporting",
+     "Rankings, traffic and leads in plain English."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Local",
+     "price": "299",
+     "unit": "/month",
+     "desc": "Local businesses",
+     "feats": [
+      "Up to 10 keywords",
+      "Technical SEO audit",
+      "On-page fixes for 5 pages",
+      "GBP optimisation",
+      "Monthly report"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "549",
+     "unit": "/month",
+     "desc": "Regional growth",
+     "feats": [
+      "Up to 25 keywords",
+      "2 blog posts a month",
+      "On-page fixes for 15 pages",
+      "5 quality backlinks a month",
+      "Competitor tracking"
+     ],
+     "pop": true
+    },
+    {
+     "name": "National",
+     "price": "899",
+     "unit": "/month",
+     "desc": "National campaigns",
+     "feats": [
+      "Up to 60 keywords",
+      "4 blog posts a month",
+      "Full technical SEO",
+      "12 quality backlinks a month",
+      "Dedicated account manager"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "How long does SEO take to work?",
+     "Expect early movement in 2 to 3 months and strong results in 6 to 12 months, depending on competition."
+    ],
+    [
+     "Are there long contracts?",
+     "No. After an initial 3 months our SEO plans run month to month."
+    ]
+   ]
+  },
+  {
+   "slug": "landing-pages",
+   "name": "Landing Pages",
+   "icon": "window",
+   "group": "build",
+   "img": "s-landing",
+   "short": "High-converting landing pages for ads, offers and product launches.",
+   "intro": "A landing page has one job: turn a visitor into a lead. We design and build focused pages with clear offers, strong proof and fast load times, then A/B test them so your ad spend works harder.",
+   "feats": [
+    [
+     "Conversion copywriting",
+     "Headlines and offers that get clicks."
+    ],
+    [
+     "Fast-loading build",
+     "Under 2 seconds on mobile."
+    ],
+    [
+     "Form & CRM integration",
+     "Leads sent to your inbox, CRM or Google Sheets."
+    ],
+    [
+     "Tracking setup",
+     "Google Ads, Meta Pixel and GA4 events."
+    ],
+    [
+     "A/B testing",
+     "Test headlines, images and offers."
+    ],
+    [
+     "Thank-you page",
+     "Next steps that keep leads warm."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Single",
+     "price": "249",
+     "unit": "one-off",
+     "desc": "1 landing page",
+     "feats": [
+      "1 custom landing page",
+      "Copywriting included",
+      "Form integration",
+      "Tracking setup"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Campaign",
+     "price": "449",
+     "unit": "one-off",
+     "desc": "Page + variation",
+     "feats": [
+      "1 page + 1 A/B variation",
+      "Conversion copywriting",
+      "CRM integration",
+      "Thank-you page",
+      "30 days optimisation"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Funnel",
+     "price": "799",
+     "unit": "one-off",
+     "desc": "Multi-step funnel",
+     "feats": [
+      "Up to 4 funnel pages",
+      "Upsell & thank-you pages",
+      "Email follow-up setup",
+      "A/B testing for 60 days",
+      "Monthly conversion report"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Can you connect the page to my CRM?",
+     "Yes. We connect to HubSpot, Mailchimp, Zoho, Google Sheets and most other tools."
+    ],
+    [
+     "Do you write the copy?",
+     "Yes. Conversion copywriting is included in every plan."
+    ]
+   ]
+  },
+  {
+   "slug": "software-development",
+   "name": "Software Development",
+   "icon": "cpu",
+   "group": "build",
+   "img": "s-software",
+   "short": "Custom web apps, portals and automations built around your workflow.",
+   "intro": "When off-the-shelf tools do not fit, we build software that does. From booking systems and client portals to internal dashboards and API integrations, we plan, build and support it end to end.",
+   "feats": [
+    [
+     "Requirements workshop",
+     "We map how your business really works."
+    ],
+    [
+     "Web apps & portals",
+     "Client portals, booking systems and dashboards."
+    ],
+    [
+     "API integrations",
+     "Connect your CRM, payments and accounting."
+    ],
+    [
+     "Automation",
+     "Cut out repetitive admin work."
+    ],
+    [
+     "Secure & scalable",
+     "Modern frameworks and cloud hosting."
+    ],
+    [
+     "Ongoing support",
+     "Updates, monitoring and new features."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "MVP",
+     "price": "2,499",
+     "unit": "one-off",
+     "desc": "Validate an idea quickly",
+     "feats": [
+      "Discovery workshop",
+      "Core features only",
+      "Web app (desktop & mobile)",
+      "Cloud deployment",
+      "1 month support"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Business",
+     "price": "4,999",
+     "unit": "one-off",
+     "desc": "Full business tool",
+     "feats": [
+      "Full feature set",
+      "User roles & permissions",
+      "2 third-party integrations",
+      "Admin dashboard",
+      "3 months support"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Enterprise",
+     "price": "Custom",
+     "unit": "quote",
+     "desc": "Complex systems",
+     "feats": [
+      "Dedicated dev team",
+      "Unlimited integrations",
+      "SLA-backed support",
+      "Security review",
+      "Ongoing roadmap planning"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Who owns the code?",
+     "You do. Full source code and IP transfer to you on final payment."
+    ],
+    [
+     "Can you work with my existing system?",
+     "Yes. We regularly extend and integrate with existing software through APIs."
+    ]
+   ]
+  },
+  {
+   "slug": "social-media-marketing",
+   "name": "Social Media Marketing",
+   "icon": "share",
+   "group": "design",
+   "img": "s-social",
+   "short": "Content, community and paid social that builds a loyal audience.",
+   "intro": "We plan, create and post content across Facebook, Instagram, LinkedIn and TikTok, manage your comments and messages, and run paid campaigns that bring in followers who actually buy.",
+   "feats": [
+    [
+     "Monthly content calendar",
+     "Planned posts approved by you in advance."
+    ],
+    [
+     "Custom graphics & reels",
+     "Designed in-house for your brand."
+    ],
+    [
+     "Community management",
+     "Comments and DMs answered daily."
+    ],
+    [
+     "Paid social ads",
+     "Meta, TikTok and LinkedIn campaigns."
+    ],
+    [
+     "Hashtag & trend research",
+     "Reach the right local audience."
+    ],
+    [
+     "Monthly analytics",
+     "Reach, engagement and leads tracked."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "249",
+     "unit": "/month",
+     "desc": "2 platforms",
+     "feats": [
+      "12 posts a month",
+      "2 platforms",
+      "Custom graphics",
+      "Monthly report"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "449",
+     "unit": "/month",
+     "desc": "3 platforms + reels",
+     "feats": [
+      "20 posts a month",
+      "3 platforms",
+      "4 reels or short videos",
+      "Community management",
+      "Ad campaign setup"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "749",
+     "unit": "/month",
+     "desc": "Full social presence",
+     "feats": [
+      "30 posts a month",
+      "4 platforms",
+      "8 reels or short videos",
+      "Daily community management",
+      "Paid ads management"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Do I need to provide photos?",
+     "It helps, but it is not required. We use brand-safe stock and design custom graphics, and can arrange a local photo shoot."
+    ],
+    [
+     "Is ad spend included?",
+     "No. Ad spend is paid directly to the platform so you keep full control of your budget."
+    ]
+   ]
+  },
+  {
+   "slug": "branding",
+   "name": "Branding",
+   "icon": "gem",
+   "group": "design",
+   "img": "s-branding",
+   "short": "Logos and brand identities that make you memorable and trusted.",
+   "intro": "Your brand is how people remember you. We create logos, colour palettes, typography and brand guidelines that make your business look established from day one, online and in print.",
+   "feats": [
+    [
+     "Brand discovery",
+     "Your story, values and audience."
+    ],
+    [
+     "Logo design",
+     "Multiple concepts with refinements."
+    ],
+    [
+     "Colour & typography",
+     "A palette and font system that works everywhere."
+    ],
+    [
+     "Brand guidelines",
+     "Rules so everything stays consistent."
+    ],
+    [
+     "Stationery design",
+     "Business cards, letterheads and email signatures."
+    ],
+    [
+     "Social media kit",
+     "Profile images, covers and post templates."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Logo",
+     "price": "299",
+     "unit": "one-off",
+     "desc": "Logo design",
+     "feats": [
+      "3 logo concepts",
+      "3 revision rounds",
+      "All file formats",
+      "Colour & mono versions"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Identity",
+     "price": "699",
+     "unit": "one-off",
+     "desc": "Complete identity",
+     "feats": [
+      "Logo design",
+      "Colour palette & typography",
+      "Business card & letterhead",
+      "Social media kit",
+      "Mini brand guide"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Brand Book",
+     "price": "1,299",
+     "unit": "one-off",
+     "desc": "Full brand system",
+     "feats": [
+      "Brand strategy workshop",
+      "Full visual identity",
+      "40-page brand guidelines",
+      "Stationery suite",
+      "Brand launch assets"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Will I own the logo?",
+     "Yes. Full copyright transfers to you once the project is paid."
+    ],
+    [
+     "Can you refresh my existing logo?",
+     "Yes. A refresh keeps the recognition you have built while modernising the look."
+    ]
+   ]
+  },
+  {
+   "slug": "google-ads",
+   "name": "Google Ads",
+   "icon": "target",
+   "group": "grow",
+   "img": "s-ads",
+   "short": "Pay-per-click campaigns that bring ready-to-buy customers today.",
+   "intro": "Google Ads puts you at the top of search results the same day. Our team builds campaigns around high-intent keywords, writes ads that get clicks, tracks every call and form, and cuts wasted spend every week.",
+   "feats": [
+    [
+     "Account setup or audit",
+     "Clean structure from day one."
+    ],
+    [
+     "High-intent keyword research",
+     "Only searches likely to convert."
+    ],
+    [
+     "Ad copy & extensions",
+     "Call, sitelink and location extensions."
+    ],
+    [
+     "Conversion tracking",
+     "Calls, forms and purchases tracked."
+    ],
+    [
+     "Weekly optimisation",
+     "Negative keywords and bid adjustments."
+    ],
+    [
+     "Transparent reporting",
+     "Cost per lead in plain numbers."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "199",
+     "unit": "/month",
+     "desc": "Spend up to £1,000",
+     "feats": [
+      "1 search campaign",
+      "Keyword & ad setup",
+      "Conversion tracking",
+      "Monthly report"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "349",
+     "unit": "/month",
+     "desc": "Spend up to £3,000",
+     "feats": [
+      "Up to 3 campaigns",
+      "Search & Performance Max",
+      "Call tracking",
+      "Weekly optimisation",
+      "Landing page advice"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Scale",
+     "price": "599",
+     "unit": "/month",
+     "desc": "Spend over £3,000",
+     "feats": [
+      "Unlimited campaigns",
+      "Search, Display & YouTube",
+      "Remarketing",
+      "A/B ad testing",
+      "Fortnightly strategy calls"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Is ad spend included in the price?",
+     "No. The plan price is our management fee. Ad spend is paid directly to Google."
+    ],
+    [
+     "How quickly will I get leads?",
+     "Campaigns can go live within 3 to 5 working days, and most clients see enquiries in the first week."
+    ]
+   ]
+  },
+  {
+   "slug": "citations-backlinks",
+   "name": "Citations & Backlinks",
+   "icon": "link",
+   "group": "grow",
+   "img": "s-citations",
+   "short": "Trusted UK directory listings and quality backlinks that lift rankings.",
+   "intro": "Consistent business listings and good backlinks are two of the strongest local ranking signals. We build and clean up your citations on trusted UK directories and earn relevant backlinks that strengthen your whole site.",
+   "feats": [
+    [
+     "Citation audit",
+     "Find wrong or duplicate listings."
+    ],
+    [
+     "UK directory submissions",
+     "Yell, Thomson Local, Bing Places and more."
+    ],
+    [
+     "NAP consistency",
+     "Name, address and phone matched everywhere."
+    ],
+    [
+     "Niche directories",
+     "Listings specific to your industry."
+    ],
+    [
+     "Quality backlinks",
+     "Guest posts and outreach on real sites."
+    ],
+    [
+     "Live link report",
+     "Every link listed with its URL."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "149",
+     "unit": "one-off",
+     "desc": "Citation foundation",
+     "feats": [
+      "Citation audit",
+      "30 UK citations",
+      "NAP clean-up",
+      "Live link report"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Growth",
+     "price": "299",
+     "unit": "/month",
+     "desc": "Ongoing link building",
+     "feats": [
+      "20 citations a month",
+      "4 quality backlinks a month",
+      "Niche directories",
+      "Monthly report"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Authority",
+     "price": "549",
+     "unit": "/month",
+     "desc": "Competitive niches",
+     "feats": [
+      "40 citations a month",
+      "10 quality backlinks a month",
+      "Digital PR outreach",
+      "Anchor text planning",
+      "Toxic link monitoring"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Are your backlinks safe?",
+     "Yes. We only use real, relevant websites. No link farms, no private blog networks."
+    ],
+    [
+     "What is NAP consistency?",
+     "Your Name, Address and Phone number shown exactly the same on every site. Google uses it to trust your business."
+    ]
+   ]
+  },
+  {
+   "slug": "ecommerce-solutions",
+   "name": "E-commerce Solutions",
+   "icon": "cart",
+   "group": "build",
+   "img": "s-ecom",
+   "short": "Online stores on Shopify or WooCommerce that are easy to run and built to sell.",
+   "intro": "We build online stores that are easy for you to manage and easy for customers to buy from. Secure payments, delivery options, stock management and marketing tools are all set up and ready on launch day.",
+   "feats": [
+    [
+     "Shopify or WooCommerce",
+     "The right platform for your products."
+    ],
+    [
+     "Product upload",
+     "Products, variants and images added for you."
+    ],
+    [
+     "Secure payments",
+     "Stripe, PayPal, Apple Pay and Klarna."
+    ],
+    [
+     "Shipping & tax setup",
+     "UK and international rules configured."
+    ],
+    [
+     "Abandoned cart emails",
+     "Recover sales automatically."
+    ],
+    [
+     "Store training",
+     "Manage orders and stock with confidence."
+    ]
+   ],
+   "plans": [
+    {
+     "name": "Starter",
+     "price": "1,199",
+     "unit": "one-off",
+     "desc": "Up to 50 products",
+     "feats": [
+      "Shopify or WooCommerce store",
+      "Up to 50 products uploaded",
+      "Payment & shipping setup",
+      "Basic SEO",
+      "1 month support"
+     ],
+     "pop": false
+    },
+    {
+     "name": "Business",
+     "price": "2,199",
+     "unit": "one-off",
+     "desc": "Up to 300 products",
+     "feats": [
+      "Custom store design",
+      "Up to 300 products",
+      "Abandoned cart emails",
+      "Reviews & upsell apps",
+      "3 months support"
+     ],
+     "pop": true
+    },
+    {
+     "name": "Premium",
+     "price": "3,999",
+     "unit": "one-off",
+     "desc": "Large catalogues",
+     "feats": [
+      "Unlimited products",
+      "Custom features",
+      "ERP or inventory integration",
+      "Advanced SEO & analytics",
+      "6 months support"
+     ],
+     "pop": false
+    }
+   ],
+   "faqs": [
+    [
+     "Shopify or WooCommerce?",
+     "Shopify is simpler to run; WooCommerce gives more control and no monthly platform fee. We recommend one after a short call."
+    ],
+    [
+     "Can you move my existing store?",
+     "Yes. We migrate products, customers and orders with redirects to protect your SEO."
+    ]
+   ]
+  }
+ ],
+ "REVIEWS": [
+  [
+   "Our Google profile went from page two to the top three in Maps within six weeks. The phone has not stopped ringing since.",
+   "James Whitfield",
+   "Whitfield Plumbing, Wolverhampton",
+   "p-1"
+  ],
+  [
+   "They rebuilt our website and it finally looks like the business we are. Bookings through the site have doubled.",
+   "Sophie Harrington",
+   "Glow Beauty Studio, Telford",
+   "p-2"
+  ],
+  [
+   "Clear reports, honest advice and no jargon. Our Google Ads cost per lead dropped by almost half in two months.",
+   "Daniel Okafor",
+   "Okafor Property Services, Birmingham",
+   "p-3"
+  ],
+  [
+   "The branding pack was spot on. Customers now comment on how professional our vans and leaflets look.",
+   "Emily Carter",
+   "Carter & Co Cleaning, Walsall",
+   "p-4"
+  ],
+  [
+   "We launched our Shopify store with DigiRanx Pro and took our first 100 orders in the first month.",
+   "Raj Mehta",
+   "Spice Route Foods, Dudley",
+   "p-5"
+  ],
+  [
+   "Friendly team, quick replies even late in the evening, and our social pages finally feel alive.",
+   "Hannah Lewis",
+   "The Corner Café, Wolverhampton",
+   "p-6"
+  ]
+ ],
+ "FAQS": [
+  [
+   "general",
+   "What does DIGIRANX PRO do?",
+   "We are a Wolverhampton digital agency. We build websites and online stores, run SEO, Google Ads and social media, and help local businesses get found on Google Maps."
+  ],
+  [
+   "general",
+   "Do you only work with businesses in Wolverhampton?",
+   "No. We are based in Wolverhampton and work with businesses across the West Midlands, the rest of the UK and abroad, all remotely or in person."
+  ],
+  [
+   "process",
+   "How do we get started?",
+   "Book a free call or fill in the form. We review your current website and Google presence, then send a clear proposal with costs and timelines."
+  ],
+  [
+   "pricing",
+   "How much does a website cost?",
+   "Our websites start from £699 for a 5-page site. Every service page shows our package prices so you know what to expect before we talk."
+  ],
+  [
+   "process",
+   "How long until I see results?",
+   "Google Ads can bring enquiries in the first week. Google Business Profile work shows results in 4 to 8 weeks, and SEO builds strongly over 6 to 12 months."
+  ],
+  [
+   "pricing",
+   "Do you have long contracts?",
+   "No. Monthly services run on a rolling basis after a short minimum term, usually 3 months for SEO. You can cancel with 30 days' notice."
+  ],
+  [
+   "support",
+   "What are your working hours?",
+   "Monday to Friday, 8am to 10pm. We are closed on Saturday and Sunday, and reply to weekend messages first thing Monday."
+  ],
+  [
+   "support",
+   "Will I have one point of contact?",
+   "Yes. Every client gets an account manager who knows your business and replies by phone, email or WhatsApp."
+  ],
+  [
+   "pricing",
+   "How do I pay?",
+   "Websites and one-off projects are paid 50% upfront and 50% on launch. Monthly services are billed at the start of each month by card or bank transfer."
+  ],
+  [
+   "process",
+   "Do I own my website and accounts?",
+   "Yes. Your website, domain, Google accounts and ad accounts are always in your name. We are given access, never ownership."
+  ],
+  [
+   "support",
+   "Do you offer website maintenance?",
+   "Yes. We offer care plans covering updates, backups, security monitoring and small content changes each month."
+  ],
+  [
+   "general",
+   "Can you work with my existing website?",
+   "Yes. We can improve, redesign or fix an existing site rather than starting again, if that is the better option."
+  ]
+ ],
+ "POSTS": [
+  {
+   "slug": "post-gbp-guide",
+   "title": "How to Rank Higher on Google Maps in 2026",
+   "cat": "Local SEO",
+   "date": "28 Sep 2026",
+   "img": "s-gbp",
+   "read": "6 min",
+   "ex": "A step-by-step guide to optimising your Google Business Profile so local customers find you first.",
+   "body": [
+    [
+     "p",
+     "When someone searches for a service near them, Google shows three businesses in the Map Pack before any website. Getting into those three spots is the fastest way for a local business to win more calls."
+    ],
+    [
+     "h",
+     "1. Choose the right primary category"
+    ],
+    [
+     "p",
+     "Your primary category is the strongest ranking signal on your profile. Pick the most specific one that describes your main service, then add secondary categories for everything else you offer."
+    ],
+    [
+     "h",
+     "2. Keep your details identical everywhere"
+    ],
+    [
+     "p",
+     "Your business name, address and phone number must match on your website, your profile and every directory. Even small differences like 'Rd' and 'Road' can confuse Google."
+    ],
+    [
+     "h",
+     "3. Post every week and reply to every review"
+    ],
+    [
+     "ul",
+     [
+      "Share an offer, update or project photo every week",
+      "Reply to every review within 48 hours",
+      "Add new photos of your real work each month"
+     ]
+    ],
+    [
+     "p",
+     "Do these three things consistently for two months and most businesses see a clear rise in Maps visibility."
+    ]
+   ]
+  },
+  {
+   "slug": "post-website-cost",
+   "title": "How Much Does a Small Business Website Cost in the UK?",
+   "cat": "Web Design",
+   "date": "19 Sep 2026",
+   "img": "s-webdev",
+   "read": "5 min",
+   "ex": "What you should expect to pay for a website in 2026, and what is worth paying extra for.",
+   "body": [
+    [
+     "p",
+     "Website prices in the UK range from a few hundred pounds to tens of thousands. The difference usually comes down to three things: how many pages you need, how custom the design is, and what the site needs to do."
+    ],
+    [
+     "h",
+     "What affects the price"
+    ],
+    [
+     "ul",
+     [
+      "Number of pages and amount of content",
+      "Custom design versus a template",
+      "Features like booking, shop or member areas",
+      "SEO, copywriting and photography"
+     ]
+    ],
+    [
+     "p",
+     "For most small service businesses a professional 5 to 12 page website costs between £700 and £1,500. Online stores and custom features cost more."
+    ],
+    [
+     "h",
+     "What is worth paying for"
+    ],
+    [
+     "p",
+     "Speed, mobile layout and basic SEO are not optional extras. A cheap site that loads slowly and does not rank will cost you more in lost enquiries than you saved."
+    ]
+   ]
+  },
+  {
+   "slug": "post-google-ads",
+   "title": "Google Ads for Local Businesses: A Beginner's Guide",
+   "cat": "Google Ads",
+   "date": "10 Sep 2026",
+   "img": "s-ads",
+   "read": "7 min",
+   "ex": "Set up your first campaign without wasting budget on the wrong clicks.",
+   "body": [
+    [
+     "p",
+     "Google Ads can bring enquiries within days, but a poorly set up campaign can spend your budget on people who were never going to buy."
+    ],
+    [
+     "h",
+     "Start with search campaigns"
+    ],
+    [
+     "p",
+     "Search campaigns show your ad when someone types a specific query. They are the most predictable place to start for local service businesses."
+    ],
+    [
+     "h",
+     "Three settings to check first"
+    ],
+    [
+     "ul",
+     [
+      "Location targeting set to 'presence', not 'interest'",
+      "Negative keywords added for jobs, free and DIY searches",
+      "Conversion tracking on calls and forms before launch"
+     ]
+    ],
+    [
+     "p",
+     "Review your search terms report every week and add negatives. This one habit usually cuts wasted spend by 20 to 30 percent."
+    ]
+   ]
+  },
+  {
+   "slug": "post-reviews",
+   "title": "Why Google Reviews Matter More Than Ever",
+   "cat": "Reputation",
+   "date": "02 Sep 2026",
+   "img": "s-reviews",
+   "read": "4 min",
+   "ex": "How reviews affect your ranking and conversions, and the simple system to collect more.",
+   "body": [
+    [
+     "p",
+     "Reviews influence both where you rank and whether people choose you. A business with 80 reviews at 4.8 stars will usually beat one with 10 reviews at 5 stars."
+    ],
+    [
+     "h",
+     "Ask at the right moment"
+    ],
+    [
+     "p",
+     "The best time to ask is straight after a job is finished and the customer is happy. Send a short text with a direct link to your review form."
+    ],
+    [
+     "h",
+     "Reply to every review"
+    ],
+    [
+     "p",
+     "Replies show future customers that you care. Thank happy customers by name, and answer unhappy ones calmly with an offer to put things right."
+    ]
+   ]
+  },
+  {
+   "slug": "post-social",
+   "title": "5 Social Media Ideas for Local Businesses",
+   "cat": "Social Media",
+   "date": "25 Aug 2026",
+   "img": "s-social",
+   "read": "4 min",
+   "ex": "Simple post ideas that build trust and bring in local customers without hours of work.",
+   "body": [
+    [
+     "p",
+     "You do not need to go viral to win customers from social media. You need to show up regularly and show real people doing real work."
+    ],
+    [
+     "h",
+     "Five ideas that work"
+    ],
+    [
+     "ul",
+     [
+      "Before and after photos of your work",
+      "A short video introducing a team member",
+      "Answers to questions customers often ask",
+      "Customer reviews turned into graphics",
+      "Behind the scenes on a busy day"
+     ]
+    ],
+    [
+     "p",
+     "Post three times a week, reply to every comment, and you will build a local audience that remembers you when they need you."
+    ]
+   ]
+  },
+  {
+   "slug": "post-brand",
+   "title": "Does Your Small Business Really Need Branding?",
+   "cat": "Branding",
+   "date": "14 Aug 2026",
+   "img": "s-branding",
+   "read": "5 min",
+   "ex": "Why a consistent look helps customers trust you, and where to start on a small budget.",
+   "body": [
+    [
+     "p",
+     "Branding is more than a logo. It is the colours, words and feeling people connect with your business every time they see it."
+    ],
+    [
+     "h",
+     "Consistency builds trust"
+    ],
+    [
+     "p",
+     "When your van, website, invoices and social posts all look the same, customers see an established business. When they all look different, they wonder if you are."
+    ],
+    [
+     "h",
+     "Where to start"
+    ],
+    [
+     "ul",
+     [
+      "A clear logo that works small and large",
+      "Two or three brand colours",
+      "One or two fonts used everywhere"
+     ]
+    ],
+    [
+     "p",
+     "Start with these and apply them everywhere. You can grow into a full brand guide later."
+    ]
+   ]
+  }
+ ]
+}

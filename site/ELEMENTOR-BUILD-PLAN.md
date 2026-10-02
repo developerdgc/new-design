@@ -62,3 +62,8 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Site-wide CSS lives in the Elementor kit (post 7) custom CSS: `site/wp-build/site.css` (mega menu hover, icon fill fix, footer link colours).
 - Builder scripts: `site/wp-build/*.py` (generate `elementor-build-composition` payloads).
 - Notes: V4 breakpoints are only `tablet` (<=1024) and `mobile` (<=767). `build-composition` into an already-published document does not reach the live site; build into a fresh draft and publish, or use `manage-elements` + publish.
+
+### Phase 3 (homepage) - done
+- Home page **39** published (Elementor Full Width template): hero, 3-card strip, About, dark Services (6 + View All), light audit form (e-form, emails info@digiranxpro.com), Reviews (6), Why Choose Us, FAQ (6, FAQ schema on), final CTA.
+- Hero visual uses the logo mark until `digiranx-hero-globe.png` is uploaded; then swap the "Hero Globe" image.
+- Shared section builders: `site/wp-build/blocks.py`; page builder: `site/wp-build/b_home.py`.
