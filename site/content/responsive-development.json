@@ -1,0 +1,59 @@
+{
+ "slug": "responsive-development",
+ "metaTitle": "Responsive Web Development UK | DigiRanx Pro",
+ "metaDesc": "Responsive web development from DigiRanx Pro in Wolverhampton. We fix or rebuild your site so it works on every phone, tablet and screen. From £299.",
+ "intro": {
+  "h2": "Responsive Web Development for Every Screen",
+  "paras": [
+   "Responsive web development makes sure your website works properly on every phone, tablet, laptop and desktop. At DigiRanx Pro, we fix and rebuild sites so that menus open with a thumb, text is readable without zooming and forms can be filled in on the move. We are based in Wolverhampton and help businesses across the West Midlands and the UK make their websites mobile friendly.",
+   "Many customers now find local businesses on their phones, often while standing in a queue or sitting in a van between jobs. If your site shows tiny text, buttons that overlap or a menu that will not open, they leave. Google also uses the mobile version of your site to decide where you rank, so a poor phone experience can hold back your search visibility as well as your enquiries.",
+   "You do not always need a new website to fix this. Sometimes a handful of templates are the problem, and correcting them solves most of the issues. Other times the site was built before mobile browsing was common and a full rebuild makes more sense. We look at your site honestly, explain what is wrong in plain terms and recommend the smallest change that will do the job well.",
+   "Our work covers layout, navigation, images, speed and accessibility. We design for small screens first, then scale up, so the most important information always appears where people expect it. Every change is tested on real devices before it goes live, because a site that looks fine in a desktop preview can still fail on an actual phone held in one hand."
+  ]
+ },
+ "why": {
+  "h2": "Why Businesses Choose Us for Mobile-Friendly Websites",
+  "lead": "A responsive site is not just a desktop page squeezed onto a phone. It needs thought about how people hold, tap and scroll on smaller screens.",
+  "points": [
+   {"t": "Mobile-First Thinking", "d": "We plan each layout for thumbs first and then expand it for tablets and desktops. That keeps your key message, phone number and call to action near the top of the screen, where mobile visitors can act on them straight away without hunting around."},
+   {"t": "Real Device Testing", "d": "We check your site on current iPhone and Android models, an iPad, and desktop Chrome, Safari, Edge and Firefox. Simulators miss problems that only show up on real hardware, such as sticky menus covering content or keyboards hiding form fields."},
+   {"t": "Fix Without a Full Redesign", "d": "If you like your current design, we can keep it. Our Fix plan corrects how existing pages behave on smaller screens without changing your branding, so you get a working mobile site quickly and at a lower cost than starting again."},
+   {"t": "Plain Reports, Clear Prices", "d": "Every project starts with an audit you can actually read. We list what is broken, why it matters and what it will cost to fix. You choose the package and know the price up front, with no surprise extras added later."}
+  ]
+ },
+ "benefits": {
+  "h2": "What Responsive Development Does for Your Business",
+  "lead": "A site that works well on every screen makes it easier for customers to contact you and gives search engines fewer reasons to rank you lower.",
+  "items": [
+   {"t": "Touch-Friendly Navigation", "d": "We replace fiddly menus with clear mobile navigation that opens easily and lists your main services. Buttons are large enough to tap accurately, and links are spaced so visitors do not hit the wrong one by mistake."},
+   {"t": "Forms That Work on Phones", "d": "We fix forms so fields are the right size, the correct keyboard appears for phone numbers and emails, and the submit button stays visible. That removes one of the most common reasons mobile visitors give up on an enquiry."},
+   {"t": "Faster Loading on Mobile Data", "d": "We compress and resize images, serve modern formats and trim heavy scripts. Pages load faster on 4G, which matters for customers checking your site outside, on the road or anywhere with a weak signal."},
+   {"t": "Better Core Web Vitals", "d": "Core Web Vitals measure loading speed, responsiveness and layout stability. Our Complete package includes tuning these scores, giving Google clearer signals about the quality of your pages and giving visitors a smoother experience."},
+   {"t": "Readable, Accessible Pages", "d": "We check text size, line spacing and colour contrast so pages are easy to read for everyone, including people with visual impairments. Good accessibility also tends to make a site clearer and easier to use for all visitors."},
+   {"t": "Consistent Brand on Every Screen", "d": "Your logo, colours and imagery should look as professional on a small phone as on a large monitor. We make sure your branding scales cleanly, so customers get the same impression of your business wherever they see it."}
+  ]
+ },
+ "steps": {
+  "h2": "Our Responsive Development Process",
+  "lead": "We follow the same clear steps on every project, whether we are fixing five pages or rebuilding your whole website for mobile.",
+  "items": [
+   {"t": "Mobile Audit", "d": "We review your site on real phones, tablets and desktops and record every problem we find. You receive a short report that explains each issue, shows where it happens and ranks fixes by how much they affect your visitors."},
+   {"t": "Plan and Package", "d": "Based on the audit, we recommend the Fix, Rebuild or Complete package. We agree which pages are included, what will change and what will stay the same, so the scope is clear before we touch any code."},
+   {"t": "Build on Staging", "d": "We make all changes on a private copy of your site, so your live website keeps working throughout. You can view progress on your own phone at any time and tell us if anything does not feel right."},
+   {"t": "Cross-Device Testing", "d": "We test every updated page on our device list, checking layout, navigation, forms and speed. Anything that does not work properly is fixed and retested, so no device is left with a broken experience after launch."},
+   {"t": "Go Live and Monitor", "d": "Once you approve the changes, we move them to your live site and check everything again. On the Complete package you also get one month of support to handle any follow-up questions or small adjustments."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Does Responsive Development Cost?", "a": "Our Fix plan is £299 to repair up to five pages, including a mobile audit, menu and form fixes and speed quick wins. Rebuild is £599 for up to twelve pages with new mobile navigation. Complete is £1,099 for a full mobile-first overhaul with unlimited pages. All prices are one-off fees in GBP, excluding VAT."},
+  {"q": "Can You Fix My Site Without Redesigning It?", "a": "Yes. Our Fix plan keeps your current design and only corrects how it behaves on smaller screens. We adjust layouts, menus, forms and images so they work on phones and tablets, while your colours, logo and overall look stay the same. It is often the quickest way to a usable mobile site."},
+  {"q": "Which Devices Do You Test On?", "a": "We test on current iPhone and Android models, an iPad, and desktop versions of Chrome, Safari, Edge and Firefox. This covers the devices and browsers most of your customers are likely to use. If your audience relies on a particular device, tell us and we will include it in our checks."},
+  {"q": "Will a Responsive Site Help My Google Rankings?", "a": "Google uses the mobile version of your site when deciding where to rank it, so a poor mobile experience can hold you back. Fixing layout, speed and usability removes those barriers. Responsive work alone will not guarantee higher rankings, but it gives your SEO a much stronger foundation to build on."},
+  {"q": "Does Responsive Development Work on Any Platform?", "a": "We work with WordPress sites most often, and we can also update custom HTML and CSS builds. Some hosted website builders limit how much the layout can be changed. If that is the case with your site, we will tell you during the audit and explain your options, including a rebuild if it makes more sense."},
+  {"q": "How Long Does It Take to Make My Site Responsive?", "a": "It depends on the number of pages and how the site was built. A Fix project on a few templates can often be finished quickly, while a Complete overhaul takes longer. We give you a timeline after the audit, once we know exactly what needs changing, and keep you updated as work progresses."}
+ ],
+ "cta": {
+  "h2": "Get Your Website Working on Every Device",
+  "p": "Send us your website address and we will start with a mobile audit so you know exactly what needs fixing. Call +44 7445 652671 or email info@digiranxpro.com. We are open Monday to Friday, 8am to 10pm."
+ }
+}

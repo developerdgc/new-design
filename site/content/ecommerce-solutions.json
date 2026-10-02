@@ -1,0 +1,59 @@
+{
+ "slug": "ecommerce-solutions",
+ "metaTitle": "Ecommerce Website Development Wolverhampton | DigiRanx Pro",
+ "metaDesc": "Ecommerce website development in Wolverhampton. Shopify and WooCommerce stores with payments, shipping and training included. From £1,199.",
+ "intro": {
+  "h2": "Ecommerce Website Development Wolverhampton Retailers Can Grow With",
+  "paras": [
+   "DigiRanx Pro provides ecommerce website development Wolverhampton retailers and product brands can rely on from launch day. We build online stores on Shopify and WooCommerce that are easy for you to manage and easy for customers to buy from. From our base in Wolverhampton we help shops, makers and wholesalers across the West Midlands and the UK start selling online or move to a better platform.",
+   "An online shop has more moving parts than a brochure website. Products need variants and clear photos. Payments must be secure and quick. Delivery rates, VAT and stock levels all need to be right before the first order arrives. We set all of this up for you, so launch day is about taking orders rather than fixing settings and answering confused customer emails.",
+   "Choosing a platform is one of the first decisions. Shopify is simpler to run and handles hosting and security for you. WooCommerce runs on WordPress, gives you more control and has no monthly platform fee. Neither is right for everyone. After a short call about your products, budget and plans, we recommend the option that suits your business and explain why.",
+   "We also think about what happens after launch. Abandoned cart emails help you recover sales from shoppers who leave without paying. Reviews and upsell apps encourage larger orders. Product pages are written and structured with search in mind. And before we hand over, we train you to manage orders, update stock and add new products with confidence."
+  ]
+ },
+ "why": {
+  "h2": "Why Choose Us to Build Your Online Store",
+  "lead": "We build stores that make day-to-day selling simple for you, and buying straightforward for your customers.",
+  "points": [
+   {"t": "Honest Platform Advice", "d": "We build on both Shopify and WooCommerce, so we have no reason to push one over the other. We compare running costs, flexibility and ease of use against your product range and plans, then recommend the platform that genuinely fits your business."},
+   {"t": "Everything Set Up for Launch", "d": "Payments, shipping zones, tax rules, product variants and email notifications are configured and tested before your store opens. You do not have to work through settings screens yourself or discover missing details when the first real order comes in."},
+   {"t": "Built With Selling in Mind", "d": "We design product pages, collections and checkout flows that help customers find what they want and buy it quickly. Clear photos, honest descriptions, visible delivery costs and simple navigation all reduce the doubts that cause shoppers to leave."},
+   {"t": "Training So You Stay in Control", "d": "Every store is handed over with training on orders, refunds, stock and new products. You will know how to run the shop yourself, and you can still call us during your support period whenever something new comes up."}
+  ]
+ },
+ "benefits": {
+  "h2": "Features Included in Our Ecommerce Builds",
+  "lead": "Our online store development covers the features most UK retailers need, with more advanced options available as your range and order volume grow.",
+  "items": [
+   {"t": "Secure Payment Options", "d": "We set up Stripe, PayPal, Apple Pay and Klarna so customers can pay the way they prefer. Payments are processed securely by trusted providers, and money goes straight to your account without extra steps on your side."},
+   {"t": "UK and International Shipping", "d": "We configure delivery zones, rates and tax rules for the UK and any international markets you want to sell to. Customers see accurate costs before checkout, which avoids surprises and reduces abandoned baskets."},
+   {"t": "Product Upload Done for You", "d": "We add your products, variants such as size and colour, and images for you. Starter covers up to 50 products, Business up to 300 and Premium is unlimited, so your shop opens with a complete range."},
+   {"t": "Abandoned Cart Recovery", "d": "Automatic emails remind shoppers about items left in their basket. It is a simple way to bring back customers who were interrupted or undecided, and it works in the background without any effort from you."},
+   {"t": "Reviews and Upsell Apps", "d": "On our Business package we add product reviews and upsell tools. Genuine reviews help new customers trust your products, while related product suggestions make it easy for shoppers to add useful items to their order."},
+   {"t": "Inventory and ERP Integration", "d": "For larger catalogues, our Premium package can connect your store to your ERP or inventory system. Stock levels stay in step across channels, which reduces overselling and saves time spent updating figures by hand."}
+  ]
+ },
+ "steps": {
+  "h2": "How We Build Your Ecommerce Website",
+  "lead": "Our process takes you from first conversation to first order in clear, manageable stages.",
+  "items": [
+   {"t": "Discovery and Platform Choice", "d": "We talk through your products, customers, delivery needs and budget. Based on that, we recommend Shopify or WooCommerce, agree the package and list exactly what is included, so you know the scope before any work begins."},
+   {"t": "Store Design", "d": "We design your homepage, collection pages, product pages and basket around your brand. On Business and Premium packages the design is fully custom. You review layouts on your own devices and give feedback before we build."},
+   {"t": "Build and Product Upload", "d": "We build the store, add your products and variants, and configure payments, shipping, tax and email notifications. You supply product details and photos, and we guide you on the format so everything uploads cleanly."},
+   {"t": "Testing and Test Orders", "d": "We place test orders using each payment method and delivery option, then check confirmation emails, stock changes and refunds. Pages are tested on phones, tablets and desktops so the checkout works smoothly everywhere."},
+   {"t": "Launch and Training", "d": "We open the store, connect analytics and submit your site to Google. Then we train you on managing orders, stock and products. Your support period starts at launch, giving you help while you settle in."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Does an Ecommerce Website Cost?", "a": "Our Starter package is £1,199 for up to 50 products with payment and shipping setup. Business is £2,199 for a custom design, up to 300 products, abandoned cart emails and reviews apps. Premium is £3,999 for unlimited products, custom features and ERP integration. All are one-off prices in GBP, excluding VAT."},
+  {"q": "Should I Choose Shopify or WooCommerce?", "a": "Shopify is simpler to run because hosting, security and updates are handled for you, but it has a monthly fee. WooCommerce gives you more control and no monthly platform fee, though it needs hosting and maintenance. We recommend one after a short call about your products, budget and how you want to run the shop."},
+  {"q": "Can You Move My Existing Store?", "a": "Yes. We migrate products, customers and orders to your new platform and set up redirects from old page addresses to new ones. Redirects help protect the search visibility your existing store has built, and they make sure customers using old links still reach the right products."},
+  {"q": "Which Payment Methods Can I Accept?", "a": "We set up Stripe, PayPal, Apple Pay and Klarna as standard, which covers card payments, digital wallets and buy now pay later. Fees are charged by each payment provider rather than by us. If you need another provider, let us know and we will check whether your platform supports it."},
+  {"q": "Will My Store Be Found on Google?", "a": "Every store includes basic SEO, such as page titles, meta descriptions and clean product URLs. Premium adds advanced SEO and analytics. This gives your shop a good technical base, but ranking for competitive product searches usually takes ongoing content and SEO work, which we are happy to discuss separately."},
+  {"q": "Do You Work With Retailers Outside Wolverhampton?", "a": "Yes. We are based in Wolverhampton and work with retailers in Birmingham, Walsall, Dudley, Telford and across the UK. Most of the project runs through video calls, email and a shared preview link, so your location makes no difference to how we work together or the quality of your store."}
+ ],
+ "cta": {
+  "h2": "Start Selling Online With DigiRanx Pro",
+  "p": "Tell us what you sell and how many products you have, and we will recommend a platform and package. Call +44 7445 652671 or email info@digiranxpro.com, Monday to Friday, 8am to 10pm."
+ }
+}

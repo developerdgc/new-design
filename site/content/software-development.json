@@ -1,0 +1,59 @@
+{
+ "slug": "software-development",
+ "metaTitle": "Custom Software Development UK | DigiRanx Pro",
+ "metaDesc": "Custom software development in the UK from DigiRanx Pro, Wolverhampton. Web apps, client portals, booking systems and API integrations. From £2,499.",
+ "intro": {
+  "h2": "Custom Software Development UK Businesses Can Build On",
+  "paras": [
+   "DigiRanx Pro offers custom software development UK businesses can use to replace spreadsheets, manual admin and tools that never quite fit. We build web apps, client portals, booking systems, internal dashboards and API integrations around the way your business actually works. Our team is based in Wolverhampton, and we work with organisations across the West Midlands and the rest of the UK.",
+   "Off-the-shelf software suits many tasks, but it often forces you to change your process to fit the tool. Staff copy data between systems, keep side spreadsheets and work around missing features. Over time that costs hours every week and creates room for mistakes. Bespoke software turns the process around, so the tool fits how your team works rather than the other way round.",
+   "Every project starts with understanding, not code. We sit down with you and the people who will use the system, map the current workflow and agree what the software must do first. That keeps the first version focused and affordable. Further features can follow once the core is working and you have seen how your team uses it day to day.",
+   "We build with modern frameworks and host on reliable cloud platforms, with security considered at every stage. When the project is complete, you own the full source code and intellectual property. We can then continue to support the system with updates, monitoring and new features, or hand it to your own developers with clear documentation."
+  ]
+ },
+ "why": {
+  "h2": "Why Choose DigiRanx Pro for Bespoke Software",
+  "lead": "Custom software is a significant investment. We keep it manageable by starting small, communicating clearly and building on solid technical foundations.",
+  "points": [
+   {"t": "We Map the Process First", "d": "Our requirements workshop looks at how your business really runs, including the workarounds and exceptions. Building on an accurate picture of the process means the finished software solves the real problem rather than the version described in a quick brief."},
+   {"t": "Start With an MVP", "d": "If you are testing an idea, our MVP package builds only the core features needed to prove it. You get something working in front of users sooner, learn what matters most and spend further budget on features backed by real feedback."},
+   {"t": "You Own the Code", "d": "Full source code and intellectual property transfer to you on final payment. You are never locked in. You can keep working with us, bring development in-house or appoint another team, and the software remains your business asset throughout."},
+   {"t": "Works With Your Existing Systems", "d": "We regularly extend and integrate with existing software through APIs. Rather than replacing everything at once, we can connect your CRM, payment provider and accounting package so data flows between them without being typed in twice."}
+  ]
+ },
+ "benefits": {
+  "h2": "What Custom Software Can Do for Your Business",
+  "lead": "Well-planned software removes friction from daily work and gives you a clearer view of what is happening in your business.",
+  "items": [
+   {"t": "Client Portals", "d": "Give customers a secure place to log in, view documents, track progress or update their details. A portal cuts down on routine emails and phone calls and gives clients a more professional experience of working with you."},
+   {"t": "Booking and Scheduling Systems", "d": "Booking systems built around your services, staff and availability let customers book without back-and-forth messages. Rules for deposits, cancellations and capacity can be built in to suit how your business actually operates."},
+   {"t": "Internal Dashboards", "d": "Dashboards pull key figures from your systems into one screen. Managers can see jobs, sales or workloads at a glance instead of opening several tools and spreadsheets to piece the picture together each morning."},
+   {"t": "API Integrations", "d": "We connect your CRM, payments and accounting software so information moves between them automatically. That reduces double entry, keeps records consistent and frees your team from copying details from one screen to another."},
+   {"t": "Admin Automation", "d": "Repetitive tasks such as sending reminders, creating invoices or updating records can often run automatically. Automation saves time each week and reduces the small errors that creep in when people repeat the same task by hand."},
+   {"t": "User Roles and Permissions", "d": "Our Business package includes user roles, so staff, managers and clients each see only what they need. Sensitive information stays protected, and each person gets a simpler screen focused on their own tasks."}
+  ]
+ },
+ "steps": {
+  "h2": "Our Software Development Process",
+  "lead": "We follow a clear sequence from first workshop to live system, with your input at every stage.",
+  "items": [
+   {"t": "Requirements Workshop", "d": "We meet you and key users to map your current process, the problems it causes and the outcomes you want. Together we agree the features for the first release and write them up in a plain-language specification."},
+   {"t": "Plan and Prototype", "d": "We plan the data structure, integrations and screens, then share simple prototypes of the main flows. You can click through them and confirm the software will work the way your team expects before full development starts."},
+   {"t": "Build in Stages", "d": "We develop the software in short stages and share working versions as we go. Regular reviews let you test features early, raise changes while they are easy to make and see steady progress towards launch."},
+   {"t": "Test and Secure", "d": "We test features, user roles and integrations with realistic data, and check for common security issues. On Enterprise projects this includes a formal security review. Problems are fixed before anyone relies on the system for real work."},
+   {"t": "Deploy and Support", "d": "We deploy to cloud hosting, migrate any existing data and train your users. After launch, your support period covers fixes and questions, and we can continue with monitoring, updates and new features as your needs grow."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Does Custom Software Cost?", "a": "Our MVP package is £2,499 and covers a discovery workshop, core features, a web app for desktop and mobile, cloud deployment and one month of support. Business is £4,999 for a full feature set with user roles, two integrations and an admin dashboard. Enterprise projects are quoted individually. Prices are in GBP, excluding VAT."},
+  {"q": "Who Owns the Code?", "a": "You do. Full source code and intellectual property transfer to you on final payment. That means you are free to host the software where you like, extend it with another developer or bring development in-house. We provide the code and the information needed to deploy and maintain it."},
+  {"q": "Can You Work With My Existing System?", "a": "Yes. We regularly extend and integrate with existing software through APIs. If your current system has an API, we can usually connect to it, read and write data, and build new features around it. We check what is possible during the requirements workshop before committing to an approach."},
+  {"q": "How Long Does a Software Project Take?", "a": "It depends on the scope. An MVP with a focused set of core features is quicker to deliver than a full business tool with several integrations. After the requirements workshop we give you a realistic timeline broken into stages, so you know when to expect each working version."},
+  {"q": "Will the Software Work on Phones?", "a": "Yes. We build web apps that work in the browser on desktops, tablets and phones, so your team and clients do not need to install anything. Layouts adapt to the screen size, and the most common tasks are designed to be quick to complete on a smaller device."},
+  {"q": "What Happens After the Software Launches?", "a": "Each package includes a support period, from one month on MVP to three months on Business, with SLA-backed support on Enterprise. After that, we can continue with ongoing support covering updates, monitoring and new features. Software works best when it keeps improving alongside your business."}
+ ],
+ "cta": {
+  "h2": "Talk to Us About Your Software Idea",
+  "p": "Describe the problem you want to solve and how your team works today. We will suggest a sensible first step and a clear price. Call +44 7445 652671 or email info@digiranxpro.com, Monday to Friday, 8am to 10pm."
+ }
+}

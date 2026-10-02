@@ -1,0 +1,59 @@
+{
+ "slug": "ui-ux-design",
+ "metaTitle": "UI/UX Design Services Wolverhampton | DigiRanx Pro",
+ "metaDesc": "UI/UX design services from DigiRanx Pro in Wolverhampton. User research, journey mapping, Figma prototypes and usability testing. Audits from £399.",
+ "intro": {
+  "h2": "UI/UX Design Services That Make Products Easy to Use",
+  "paras": [
+   "Our UI/UX design services help people get things done on your website, web app or mobile app without stopping to think. Good design is how something works, not only how it looks. At DigiRanx Pro we map the journeys your users take, find the points where they hesitate or give up, and design clean interfaces that remove that friction. The aim is simple: fewer abandoned forms, fewer support emails and more people completing the task they came for.",
+   "User experience and user interface design are two halves of the same job. UX covers the structure: what goes on each screen, in what order, and how one step leads to the next. UI covers the look and feel: layout, typography, colour, buttons and the small details that make an interface feel trustworthy. We work on both together, so the screens we hand over are attractive and grounded in how people really behave.",
+   "We base decisions on evidence rather than opinion. That means talking to your customers, reviewing your analytics and watching real people try your product. Wireframes and flows are tested before any visual polish is added, which keeps changes quick and inexpensive. When the structure works, we produce high-fidelity screens in Figma, a clickable prototype you can share, and developer-ready specifications so your build team knows exactly what to create.",
+   "DigiRanx Pro is a Wolverhampton studio working with start-ups, local firms and established companies across Birmingham, Walsall, Dudley, Telford and the wider UK. Much of UX work runs well remotely, with research calls, shared Figma files and online testing sessions. Whether you need a quick audit of an existing product or end-to-end design for something new, we keep the process transparent and the deliverables practical."
+  ]
+ },
+ "why": {
+  "h2": "Why Work With Our UX Design Team",
+  "lead": "There are many ways to approach product design. These are the principles that guide how we work with you.",
+  "points": [
+   {"t": "Research Before Pixels", "d": "We start by understanding your users through interviews, analytics and journey mapping. That research shapes every screen, so design choices are linked to real problems people face rather than personal taste or what a competitor happens to be doing."},
+   {"t": "Testing With Real People", "d": "Our Product and Full UX packages include usability testing with real users. Watching someone struggle with a flow shows problems that internal teams miss, and fixing them in a prototype is far cheaper than fixing them after launch."},
+   {"t": "Files Developers Can Use", "d": "We deliver organised Figma files, clear specifications and exported assets. Your developers get spacing, states and behaviours documented, which cuts down on back-and-forth questions and keeps the built product close to the approved design."},
+   {"t": "Scoped, Fixed-Price Packages", "d": "From a £399 audit to a full end-to-end design project, each package lists exactly what you receive. You can start small with an audit, then move on to a larger piece of work once you have seen how we operate."}
+  ]
+ },
+ "benefits": {
+  "h2": "What Better User Experience Design Gives You",
+  "lead": "Investing in user experience design pays back in ways that show up in your numbers and your customer feedback.",
+  "items": [
+   {"t": "Fewer Drop-Offs", "d": "When each step of a journey is clear, fewer people abandon sign-ups, checkouts or enquiry forms halfway through. Removing confusing fields and unclear labels often has more impact than any amount of extra traffic."},
+   {"t": "Lower Support Demand", "d": "Interfaces that explain themselves reduce the number of calls and emails asking how to do basic tasks. Your team spends less time answering repeat questions and more time on work that grows the business."},
+   {"t": "Faster, Cheaper Development", "d": "Problems are solved in wireframes and prototypes rather than in code. Developers build from a tested design with clear specifications, which means fewer rewrites, fewer surprises and a more predictable project timeline."},
+   {"t": "A Consistent Interface", "d": "A design system in Figma gives every screen the same buttons, forms and type styles. As your product grows, new features look and behave like the rest, so users never feel they have landed somewhere unfamiliar."},
+   {"t": "Confidence in Decisions", "d": "Research and usability testing replace guesswork with evidence. When stakeholders disagree about a feature or layout, you can point to what users actually did, which makes decisions faster and less personal."},
+   {"t": "Apps That Feel Native", "d": "For iOS and Android apps we follow each platform's guidelines, so navigation, gestures and controls behave the way people expect on their device. That familiarity makes a new app easier to adopt."}
+  ]
+ },
+ "steps": {
+  "h2": "How Our UI/UX Design Process Works",
+  "lead": "We follow a clear, repeatable process that moves from understanding the problem to delivering screens ready for build.",
+  "items": [
+   {"t": "Research and Discovery", "d": "We review your analytics, speak with users and stakeholders, and look at the product as a first-time visitor would. From this we define who your users are, what they are trying to achieve and where they currently struggle."},
+   {"t": "Journey Mapping and Architecture", "d": "Next we map every step from first visit to completed task. We organise content and features into a logical information architecture, so people can find what they need and the product has room to grow."},
+   {"t": "Wireframes and Flows", "d": "We sketch the key screens and connect them into flows. These low-detail wireframes let us test structure and logic quickly, before time is spent on colour, imagery and fine visual detail."},
+   {"t": "High-Fidelity UI and Prototype", "d": "Once the flows work, we design polished screens in Figma using your brand. We link them into a clickable prototype that behaves like the real product, ready for stakeholder review and testing."},
+   {"t": "Usability Testing and Handover", "d": "We test the prototype with real users, refine the design based on what we observe, then hand over developer-ready files, specifications and assets. Your team receives everything needed to build with confidence."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Do Your UI/UX Design Services Cost?", "a": "Our Audit package is £399 for a heuristic UX review with a top ten issues report. Product is £899 for journey mapping, up to ten UI screens, a prototype and testing with five users. Full UX is £1,799 for end-to-end design with up to 30 screens. All prices are one-off, in GBP and exclude VAT."},
+  {"q": "Do You Design Mobile Apps Too?", "a": "Yes. We design iOS and Android interfaces following each platform's guidelines, as well as websites and web apps. The research and journey mapping work is the same, but navigation patterns, gestures and controls are adapted so the app feels natural on each operating system."},
+  {"q": "What Tools Do You Use?", "a": "We use Figma for wireframes, interface design, design systems and clickable prototypes. For usability testing we use Maze or run live sessions where we watch users complete tasks. You get access to the Figma files throughout, so you can follow progress and leave comments directly on screens."},
+  {"q": "What Is the Difference Between UI and UX?", "a": "UX, or user experience, is about structure and flow: what each screen contains and how users move through a task. UI, or user interface, is the visual layer: layout, typography, colour and controls. Both matter, and our UI/UX design services cover them together so the product works well and looks right."},
+  {"q": "Can You Review an Existing Website or App?", "a": "Yes. The Audit package is designed for this. We carry out a heuristic review of your current product, list the ten most important issues and suggest quick wins you can act on straight away. It finishes with a one hour walkthrough call so you can ask questions about each finding."},
+  {"q": "Do You Build the Product as Well?", "a": "Our UI/UX packages focus on research, design and prototyping. We hand over developer-ready files that any competent team can build from. If you need development too, we also offer web development and software development services, so design and build can stay with one Wolverhampton team if you prefer."}
+ ],
+ "cta": {
+  "h2": "Talk to Us About Your Product",
+  "p": "Whether you need a quick UX audit or a full product design, we would like to hear about it. Call +44 7445 652671 or email info@digiranxpro.com, Monday to Friday between 8am and 10pm, to book an initial chat."
+ }
+}

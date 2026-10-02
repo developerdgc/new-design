@@ -1,0 +1,59 @@
+{
+ "slug": "landing-pages",
+ "metaTitle": "Landing Page Design Wolverhampton | DigiRanx Pro",
+ "metaDesc": "Landing page design for ads, offers and launches. Copywriting, tracking and CRM integration included. Wolverhampton based, serving the UK. From £249.",
+ "intro": {
+  "h2": "Landing Page Design That Turns Clicks Into Leads",
+  "paras": [
+   "Good landing page design gives every paid click a fair chance of becoming a lead. DigiRanx Pro designs and builds focused pages for Google Ads, Meta campaigns, special offers and product launches. We are based in Wolverhampton and work with businesses across the West Midlands and the UK. Every page we build has one clear goal, persuasive copy and fast loading, so the money you spend on ads is not wasted.",
+   "Sending ad traffic to your homepage is one of the most common ways budgets leak. Visitors arrive expecting the offer they clicked on and instead find menus, general information and several different calls to action. Many leave without doing anything. A dedicated landing page matches the ad, answers the obvious questions and asks for one action, which makes the decision easier for your visitor.",
+   "We write the copy as well as building the page. That matters because headlines, offers and proof do most of the persuading. We start by learning who your customers are, what stops them enquiring and what makes your offer worth acting on. Then we shape the page around those answers, rather than filling a template with generic sales language that could apply to anyone.",
+   "Launching the page is the start, not the end. We set up tracking so you can see which ads and keywords produce leads, and on our Campaign and Funnel plans we run A/B tests on headlines, images and offers. Each test tells you a little more about what your customers respond to, which helps your future campaigns too."
+  ]
+ },
+ "why": {
+  "h2": "Why Work With DigiRanx Pro on Your Landing Pages",
+  "lead": "A landing page is a small piece of work with a big effect on your advertising costs. We treat it with the same care as a full website.",
+  "points": [
+   {"t": "Copywriting in Every Plan", "d": "Conversion copywriting is included in every package, not sold as an extra. We write headlines, benefit points, form labels and button text that speak to your customer's problem, then show how your offer solves it in plain, specific language."},
+   {"t": "Built for Speed", "d": "We aim for pages that load in under two seconds on mobile. Lean code, compressed images and no unnecessary plugins keep things quick. Faster pages mean fewer visitors leave before the content appears, which protects the budget you put into each click."},
+   {"t": "Tracking You Can Trust", "d": "We set up Google Ads conversion tracking, the Meta Pixel and GA4 events so you can see which campaigns produce real enquiries. Accurate data lets you move budget towards ads that work and away from the ones that do not."},
+   {"t": "Connected to Your Tools", "d": "Leads can go straight to your inbox, Google Sheets or CRM. We connect to HubSpot, Mailchimp, Zoho and most other common tools, so new enquiries land where your team already works and can be followed up quickly."}
+  ]
+ },
+ "benefits": {
+  "h2": "What a Focused Landing Page Gives You",
+  "lead": "Every element on the page has a job. Here is what our landing page service delivers for your campaigns and your team.",
+  "items": [
+   {"t": "A Message That Matches the Ad", "d": "Visitors see the same offer and wording they clicked on, so they know they are in the right place. That continuity builds trust in the first few seconds and makes it more likely they will read on and fill in the form."},
+   {"t": "One Clear Call to Action", "d": "We remove distractions such as full menus and unrelated links. The page guides visitors towards a single action, whether that is requesting a quote, booking a call or claiming an offer, so the next step is never in doubt."},
+   {"t": "Proof Where It Counts", "d": "We place your genuine reviews, guarantees and service details close to the form, where doubts are strongest. Real, specific reassurance helps hesitant visitors feel confident about giving you their details and starting a conversation."},
+   {"t": "Thank-You Pages That Keep Leads Warm", "d": "After someone submits the form, a thank-you page tells them what happens next and when. It can also offer a useful download or booking link, keeping your business in mind until your team gets in touch."},
+   {"t": "Testing That Guides Decisions", "d": "A/B testing compares two versions of a headline, image or offer with real traffic. Instead of guessing what works, you see which version gets more enquiries and keep the stronger one, then test the next idea."},
+   {"t": "Multi-Step Funnels", "d": "Our Funnel plan builds up to four connected pages, including upsell and thank-you pages, plus email follow-up. It suits offers that need more explanation or businesses that want to nurture leads before a sales call."}
+  ]
+ },
+ "steps": {
+  "h2": "How We Create Your Landing Page",
+  "lead": "From the first brief to the first test result, our process keeps the page focused on your campaign goal.",
+  "items": [
+   {"t": "Campaign Brief", "d": "We learn about your offer, your audience, the ads you are running and the action you want visitors to take. We also look at competitor pages and agree how success will be measured before any design work begins."},
+   {"t": "Copy and Wireframe", "d": "We write the page copy and sketch a simple layout showing where the headline, proof, form and call to action will sit. You review the words and structure first, which keeps feedback focused and saves time later."},
+   {"t": "Design and Build", "d": "We design the page in your brand colours and build it for speed on mobile and desktop. Forms are connected to your inbox, CRM or Google Sheets, and every field is checked to make sure leads arrive correctly."},
+   {"t": "Tracking and Launch", "d": "We install Google Ads, Meta Pixel and GA4 tracking, send test submissions and confirm each conversion is recorded. Once everything checks out, the page goes live and your ads can start sending traffic to it."},
+   {"t": "Test and Optimise", "d": "On Campaign and Funnel plans, we run A/B tests and review results with you. We change one element at a time, keep the winning version and report what we learned, so each round builds on the last."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Does a Landing Page Cost?", "a": "Our Single plan is £249 for one custom landing page with copywriting, form integration and tracking. Campaign is £449 for a page plus one A/B variation, CRM integration, a thank-you page and 30 days of optimisation. Funnel is £799 for up to four pages with email follow-up and 60 days of testing. All prices exclude VAT."},
+  {"q": "Can You Connect the Page to My CRM?", "a": "Yes. We connect landing pages to HubSpot, Mailchimp, Zoho, Google Sheets and most other common tools. Leads arrive in the system your team already uses, with the details you need to follow up. If you use something less common, tell us and we will check the connection options before we start."},
+  {"q": "Do You Write the Copy?", "a": "Yes. Conversion copywriting is included in every plan. We write the headline, supporting text, benefit points, form labels and button wording. You review everything before launch and can request changes. If you already have copy you like, we can refine it so it fits the page structure and campaign."},
+  {"q": "Do I Need a Landing Page if I Have a Website?", "a": "If you run paid ads, a dedicated page usually works better than sending traffic to your homepage. A landing page matches the ad, focuses on one offer and removes distractions. Your main website still matters for people researching your business, but campaign traffic benefits from a page built for one purpose."},
+  {"q": "Where Will My Landing Page Be Hosted?", "a": "We can add the page to your existing WordPress website or host it on a suitable landing page platform, depending on your setup and needs. Either way, we make sure it loads quickly, uses your domain where possible and keeps tracking accurate. We will recommend the best option during the brief."},
+  {"q": "Do You Manage the Ads as Well?", "a": "This service covers designing, writing and building the landing page, plus setting up tracking. If you would like us to plan and manage the ads that send traffic to it, we can talk about that separately. Many clients run their own ads and simply want a page that makes their spend work harder."}
+ ],
+ "cta": {
+  "h2": "Get a Landing Page Built for Your Next Campaign",
+  "p": "Tell us about your offer and the ads you plan to run, and we will recommend the right plan. Call +44 7445 652671 or email info@digiranxpro.com, Monday to Friday between 8am and 10pm."
+ }
+}
