@@ -69,3 +69,34 @@ html{scroll-behavior:smooth}
 [data-elementor-type=header] img[alt="DigiRanx Pro"]{width:118px!important}
 .dg-call-btn p{font-size:14px!important}
 }
+/* ===== v2 hover system (gradients are background-image, so hovers must reset background) ===== */
+.dg-btn{transition:background .25s,color .25s,border-color .25s,box-shadow .25s,transform .25s!important;cursor:pointer}
+.dg-btn:hover{transform:translateY(-2px)}
+.dg-btn-grad:hover,.dg-btn-grad:focus-visible{background:#110A2E!important;color:#FFFFFF!important;box-shadow:0 12px 26px -12px rgba(17,10,46,.75)!important}
+.dg-btn-white:hover,.dg-btn-white:focus-visible{background:#110A2E!important;color:#FFFFFF!important}
+.dg-btn-outline:hover,.dg-btn-outline:focus-visible{background:#110A2E!important;color:#FFFFFF!important;border-color:#110A2E!important}
+.dg-btn-ghost-w:hover,.dg-btn-ghost-w:focus-visible{background:#FFFFFF!important;color:#110A2E!important;border-color:#FFFFFF!important}
+.dg-btn.dg-btn-grad-on-dark:hover,.dg-btn.dg-btn-grad-on-dark:focus-visible{background:#FFFFFF!important;color:#110A2E!important}
+.dg-btn.dg-btn-white-on-dark:hover,.dg-btn.dg-btn-white-on-dark:focus-visible{background:#1EC8F5!important;color:#110A2E!important}
+/* header call button */
+.dg-call-btn{transition:background .25s,box-shadow .25s!important}
+.dg-call-btn:hover{background:#FFFFFF!important;box-shadow:0 10px 24px -10px rgba(255,255,255,.5)!important}
+.dg-call-btn:hover p{color:#110A2E!important}
+.dg-call-btn:hover>.e-con:first-child{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important}
+.dg-call-btn:hover .e-svg-base{color:#FFFFFF!important}
+/* back to top */
+.dg-to-top{transition:background .25s,transform .25s!important}
+.dg-to-top:hover{background:#110A2E!important;transform:translateY(-3px)}
+/* tabs */
+.dg-tab{transition:background .2s,color .2s,border-color .2s!important}
+.dg-tab p{color:inherit!important}
+.dg-tab:not([aria-selected="true"]):hover{background:#110A2E!important;color:#FFFFFF!important;border-color:#110A2E!important}
+.dg-tab[aria-selected="true"],.dg-tab.e--selected{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important;color:#FFFFFF!important;border-color:transparent!important}
+.dg-tab[aria-selected="true"]:hover{background:#110A2E!important}
+/* forms: font family and sizes */
+.e-form-base,.e-form-base input,.e-form-base select,.e-form-base textarea,.e-form-base button,.e-form-base label,.e-form-base p{font-family:Urbanist,sans-serif!important}
+.e-form-base input,.e-form-base select,.e-form-base textarea{font-size:15.5px!important;color:#0E0A1F!important;line-height:1.4!important}
+.e-form-base input::placeholder,.e-form-base textarea::placeholder{color:#8C88A0!important;font-family:Urbanist,sans-serif!important}
+.e-form-base label{font-size:14px!important;font-weight:700!important;color:#0E0A1F!important}
+.e-form-base button[type=submit]{font-size:15.5px!important;font-weight:600!important}
+.e-form-base{padding:0!important}

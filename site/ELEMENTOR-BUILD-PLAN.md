@@ -100,3 +100,13 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Deactivate unused Hostinger plugins (e.g. Hostinger Reach) if not needed.
 - Install an SMTP plugin (e.g. WP Mail SMTP) so form emails reach the inbox reliably.
 - Phase 6 (Rank Math meta titles/descriptions, LocalBusiness schema) when ready - copy is in `site/content/*.json`.
+
+### Revision 1 (after client review)
+- Hover fix: Elementor stores gradients as `background-image`, so class hovers that only changed `background-color` were invisible. Kit CSS now resets `background` on hover for all buttons, header call button, back-to-top and tabs (`site/wp-build/site.css`, "v2 hover system").
+- Hero: shorter padding; new brighter globe `digiranx-hero-globe-v2.webp` (attachment 276), max-width 580px.
+- Entrance animations (scrollIn, slide/fade) on Home: About image/copy, 6 service cards (staggered), audit copy/form, Why copy/media, final CTA (`animonly.py`).
+- Header bar padding 14px (taller).
+- Home audit section tightened (padding 56px, smaller heading/facts, shorter textarea).
+- Paragraph sizes +1px site-wide (default p 17px; local sizes bumped via `restyle.py`).
+- Forms: Urbanist font, 15.5px inputs, 14px labels, no inner padding.
+- Privacy Policy page (3) had `_elementor_edit_mode` empty, so the Elementor layout never rendered; set to `builder` via REST.
