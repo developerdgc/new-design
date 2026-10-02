@@ -13,8 +13,8 @@
   --white:#FFFFFF;
   --light:#F6F5FB;         /* template #F6F6F6 */
   --line:#E6E3F0;
-  --head:#120B35;          /* headings on white */
-  --text:#625E74;          /* template #6A6A6A body */
+  --head:#0E0A1F;          /* headings on white */
+  --text:#16141F;          /* template #6A6A6A body */
   --cyan:#1EC8F5;
   --violet:#7B3BFF;
   --magenta:#FF2EA6;       /* replaces template lime #8BD70D */
@@ -1081,6 +1081,23 @@ const S_WHY = (light)=>`
   </div>
 </div></section>`;
 
+const S_FAQ_SPLIT = (list,light)=>`
+<section class="sec${light?" light":""}"><div class="wrap faq-wrap">
+  <div class="faq-aside">
+    <div class="sec-head" style="margin:0">
+      <span class="eyebrow">FAQs</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>The things business owners ask us most. Can't see yours? Call or email and we'll help.</p>
+    </div>
+    <div class="help-card">
+      <h3>Still Have a Question?</h3>
+      <p>Talk to our team Monday to Friday, 8am to 10pm.</p>
+      ${contactRow("phone","+44 7445 652671")}
+      ${contactRow("mail","info@digiranxpro.com")}
+    </div>
+  </div>
+  <div class="faq-list">${list.map((f,i)=>faqItem(f[1],f[2],i===0)).join("")}</div>
+</div></section>`;
 const GENERAL_FAQ_FOR_SERVICE = [2,7,6,9]; /* get started, one contact, hours, ownership */
 const S_FAQ = (list,light,head={})=>{
   const half=Math.ceil(list.length/2), cols=[list.slice(0,half),list.slice(half)];
@@ -1135,7 +1152,7 @@ ${S_SERVICES_HOME(HOME_SERVICES.map(k=>SVC[k]))}
 ${S_CTA_FORM("cta-work","lite")}
 ${S_REVIEWS()}
 ${S_WHY(true)}
-${S_FAQ(FAQS.slice(0,10).map(f=>[f[1],f[2]]),false)}
+${S_FAQ_SPLIT(FAQS.slice(0,6),false)}
 ${S_FINAL()}`;
 }
 
