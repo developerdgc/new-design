@@ -44,3 +44,13 @@ html{scroll-behavior:smooth}
 .dg-crumbs a{color:#1EC8F5!important}
 .dg-card-tint.dg-card:hover{border-color:#9B6BFF}
 .dg-btn-ghost-w{border:1.5px solid rgba(255,255,255,.55)!important}.dg-btn-ghost-w:hover{border-color:#fff!important}
+.dg-tab[aria-selected="true"],.dg-tab.e--selected{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important;color:#fff!important;border-color:transparent!important}
+.dg-tab[aria-selected="true"]:hover{background:#110A2E!important}
+.dg-policy-text ul{margin:0;padding-left:22px;display:grid;gap:6px}
+.dg-policy-text li{line-height:1.7}
+.dg-btn-outline{border:2px solid #4B2BD6!important}
+.dg-btn-outline:hover{border-color:#110A2E!important}
+.dg-policy-text li,.dg-policy-text ul{font-family:Urbanist,sans-serif;color:#16141F;font-size:16px}
+.dg-post-card a,.dg-post-card{color:inherit}
+.dg-post-body p,.dg-post-body li{font-family:Urbanist,sans-serif;font-size:17.5px;line-height:1.8;color:#16141F}
+.dg-post-body h2{font-size:28px;margin:18px 0 6px}
