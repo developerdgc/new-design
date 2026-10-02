@@ -1,0 +1,59 @@
+{
+ "slug": "web-development",
+ "metaTitle": "Web Development Wolverhampton | DigiRanx Pro",
+ "metaDesc": "Fast, secure WordPress and custom-coded websites built in Wolverhampton for West Midlands and UK businesses. Fixed prices from £699. Get a free quote.",
+ "intro": {
+  "h2": "Web Development Wolverhampton Businesses Can Rely On",
+  "paras": [
+   "DigiRanx Pro offers web development Wolverhampton businesses can depend on for speed, security and steady enquiries. We build WordPress and custom-coded websites from our office on Dunstall Hill, and we work with firms across the West Midlands and the wider UK. Every site we deliver is built on clean code, set up with analytics from day one and handed over with training, so you stay in control of your own content.",
+   "A website is often the first place a customer checks before they call you. If it loads slowly, breaks on a phone or hides your phone number, they move on to a competitor. Our job is to remove those barriers. We plan each page around what your visitors need to know, then build it so the next step, whether a call, a form or a booking, is always obvious.",
+   "We are a new agency, and we are open about that. What we bring is a careful, modern approach to building websites and a direct line to the people doing the work. You will not be passed between account managers. You speak to the developer building your site, you get honest answers about cost and timing, and you see progress at every stage rather than waiting for a big reveal.",
+   "Whether you run a trade business in Walsall, a clinic in Dudley or a growing service firm in Birmingham, the principles are the same. Your site should load quickly, appear in search results for the right terms and be simple to update. That is what our website development service is built to deliver, with fixed prices and clear packages so you know what you are paying for before we start."
+  ]
+ },
+ "why": {
+  "h2": "Why Choose DigiRanx Pro for Your Website Build",
+  "lead": "Plenty of companies can put a website online. We focus on building sites that are quick, secure and easy for you to run long after launch.",
+  "points": [
+   {"t": "The Right Stack for Your Goals", "d": "We build on WordPress with Elementor for most clients because it is familiar and easy to edit. When you need something WordPress cannot do well, we write custom code instead. We explain the trade-offs plainly and recommend the option that fits your budget."},
+   {"t": "SEO Built In From the Start", "d": "Page titles, meta descriptions, schema markup and clean URLs are set up as we build, not bolted on later. That gives search engines a clear picture of your services and locations, and gives your future SEO work a solid base to grow from."},
+   {"t": "Speed Checked Before Launch", "d": "We test Core Web Vitals before your site goes live and fix what slows it down. That means compressed images, lean code and sensible caching. A faster site keeps visitors on the page and makes a better impression on customers using mobile data."},
+   {"t": "Local Team, Direct Contact", "d": "We are based in Wolverhampton and available Monday to Friday from 8am to 10pm. You can call, email or meet us to talk through your project. You deal with the people building your site, so questions get answered quickly and clearly."}
+  ]
+ },
+ "benefits": {
+  "h2": "What You Get With Our Website Development Service",
+  "lead": "Each package includes the essentials a business website needs to win and handle enquiries. Larger packages add more pages, more features and longer support.",
+  "items": [
+   {"t": "Responsive Pages on Every Device", "d": "Every page is built to work on phones, tablets and desktops. Menus, buttons and forms are sized for touch, and layouts adjust to the screen, so customers have the same easy experience wherever they find you."},
+   {"t": "Contact and Booking Forms", "d": "Forms send leads straight to your inbox or CRM, so nothing slips through. On our Premium package we can add a booking or membership area, letting customers reserve appointments or access private content without a phone call."},
+   {"t": "Secure Hosting Setup", "d": "We configure SSL, regular backups and security hardening as part of the build. Your site is protected against common attacks, and if something does go wrong, a recent backup means it can be restored quickly."},
+   {"t": "Analytics From Day One", "d": "We connect Google Analytics and Search Console before launch on our Business and Premium packages. You can see where visitors come from, which pages they read and which search terms bring them to your site."},
+   {"t": "Training and Handover", "d": "Before we hand over, we walk you through editing pages, adding blog posts and changing images. You leave the session confident to make everyday updates yourself, without paying a developer for every small change."},
+   {"t": "Support After Launch", "d": "Each package includes a support period, from one month on Starter to six months on Premium. If a plugin needs updating, a form stops working or you have a question, we are on hand to help."}
+  ]
+ },
+ "steps": {
+  "h2": "How We Build Your Website",
+  "lead": "Our process is simple and predictable. You know what is happening at each stage, what we need from you and when your site will be ready.",
+  "items": [
+   {"t": "Discovery Call", "d": "We start with a call or meeting to understand your business, your customers and what you want the site to achieve. We agree the pages you need, the features required and which package suits your plans and budget."},
+   {"t": "Sitemap and Content Plan", "d": "We map out every page and the key message each one carries. You supply your logo, photos and any existing text, and we guide you on what is missing so content never holds up the build."},
+   {"t": "Design and Development", "d": "We build the site on a private staging link you can view at any time. You see real pages on your own phone and laptop, give feedback, and we make changes before anything goes public."},
+   {"t": "Testing and SEO Checks", "d": "We test forms, links, page speed and mobile layouts across browsers. We set up titles, schema and redirects, connect analytics and run a final check list so launch day brings no surprises."},
+   {"t": "Launch and Training", "d": "We put the site live, submit it to Google and walk you through managing it. Your support period starts from launch, so you have help on hand while you settle into running your new website."}
+  ]
+ },
+ "faqs": [
+  {"q": "How Much Does a Website Cost?", "a": "Our Starter package is £699 for up to five pages. Business is £1,299 for up to twelve pages with a blog, speed and SEO optimisation and analytics. Premium is £2,499 for larger or custom builds. All prices are one-off fees in GBP, excluding VAT, and we confirm the final scope in writing before work starts."},
+  {"q": "How Long Does a Website Take to Build?", "a": "A five-page site usually takes two to three weeks from the point we have your content. Larger builds with more pages or custom features take four to eight weeks. The biggest factor is usually content, so we help you plan text and images early to keep the project on schedule."},
+  {"q": "Will I Be Able to Edit the Site Myself?", "a": "Yes. We build on WordPress with Elementor unless your project needs something custom. Before handover we train you to update text, swap images and publish blog posts. Most clients handle day-to-day changes themselves and only come back to us for larger additions or new features."},
+  {"q": "Do You Only Work With Wolverhampton Businesses?", "a": "No. We are based in Wolverhampton and enjoy meeting local clients in person, but we build websites for businesses across the West Midlands, including Birmingham, Walsall, Dudley and Telford, and throughout the UK. Remote projects run on video calls, email and a shared staging link."},
+  {"q": "Can You Redesign My Existing Website?", "a": "Yes. We review your current site, keep what works and rebuild what does not. Where page addresses change, we set up redirects so you keep any search visibility you have built. We can also move your existing content across so you do not have to start again from scratch."},
+  {"q": "Is Hosting Included in the Price?", "a": "Our packages include a secure hosting setup, covering SSL, backups and security hardening. The hosting plan itself is paid to the provider, so the account stays in your name and under your control. We recommend a suitable host during the discovery call based on the size and traffic of your site."}
+ ],
+ "cta": {
+  "h2": "Start Your Website Project Today",
+  "p": "Tell us about your business and what you need from your website. We will reply with a clear recommendation and a fixed price. Call +44 7445 652671 or email info@digiranxpro.com, Monday to Friday, 8am to 10pm."
+ }
+}
