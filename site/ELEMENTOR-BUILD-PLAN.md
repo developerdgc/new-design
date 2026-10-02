@@ -76,3 +76,9 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Site title "DigiRanx Pro", tagline "Where creative thinking meets digital growth". Sample "Hello world!" post moved to Trash.
 - WordPress REST API also accepts the application password (used for settings, categories, post meta).
 - Overflow check passed at 360/390/768/1024/1280px on all live pages.
+
+### Phase 5 (15 service pages) - done
+- Built from `site/content/<slug>.json` with `site/wp-build/b_service.py` (run all: `run_services.py`). Layout: hero, intro + cover, What's Included, Why Choose Us, Benefits, sidebar (All Services + Request a Quote form), Packages (3 plans), 5-step timeline, 10 FAQs (FAQ schema), call CTA.
+- All 15 published with the Elementor Full Width template. URLs: /gbp-optimization/, /web-development/, /custom-web-design/, /responsive-development/, /ui-ux-designing/, /graphic-designing/, /reviews/, /seo-digital-marketing/, /landing-pages/, /software-development/, /social-media-marketing/, /branding/, /google-ads/, /citations-backlinks/, /e-commerce-solutions/.
+- Image attachment 92 slug changed to `custom-web-design-image` so the page could take `/custom-web-design/`.
+- Overflow check passed at 375/768/1280px on all 15 pages.
