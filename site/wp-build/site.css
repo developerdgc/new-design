@@ -1,0 +1,28 @@
+/* DigiRanx site-wide helpers (kit custom CSS) */
+.e-svg-base svg{fill:none}
+.dg-fill-icon svg{fill:currentColor;stroke:none}
+/* mega menu */
+.dg-mega-item:hover .dg-mega-panel,.dg-mega-item:focus-within .dg-mega-panel{opacity:1!important;visibility:visible!important;transform:none!important}
+.dg-mega-item>.e-con:first-child svg{transition:transform .2s}
+.dg-mega-item:hover>.e-con:first-child svg{transform:rotate(180deg)}
+.dg-mega-panel::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+.dg-mega-link:hover p{color:#FFFFFF!important}
+.dg-mega-link:hover p+p{color:rgba(255,255,255,.75)!important}
+.dg-mega-link:hover>.e-con:first-child{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important;color:#FFFFFF!important}
+.dg-mega-link p+p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+/* header call button */
+.dg-call-btn:hover p{color:#110A2E!important}
+.dg-call-btn:hover>.e-con:first-child{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important}
+@media (max-width:1340px){.dg-call-btn>.e-div-block-base p:first-child{display:none}}
+.e-svg-base svg[stroke="none"]{fill:currentColor}
+.dg-mega-item{position:static!important}
+.dg-mega-item>.e-con:first-child a{color:inherit!important}
+.dg-mega-item:hover>.e-con:first-child,.dg-mega-item:hover>.e-con:first-child p,.dg-mega-item:hover>.e-con:first-child .e-svg-base{color:#1EC8F5!important}
+.e-con:has(> .dg-mega-item){position:static!important}
+html{scroll-behavior:smooth}
+.dg-footer a{color:inherit!important}
+.dg-footer a:hover{color:#1EC8F5!important}
+.dg-social:hover .e-svg-base{color:#110A2E!important}
+.dg-to-top:hover{box-shadow:0 0 0 2px #fff,0 12px 26px -10px rgba(17,10,46,.8)}
+.dg-mobile-menu>p a,.dg-mobile-menu a.e-con p{color:#0E0A1F!important}
+.dg-mobile-menu>p a:hover,.dg-mobile-menu a.e-con:hover p{color:#7B3BFF!important}

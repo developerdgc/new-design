@@ -54,3 +54,11 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
   Services: GBP 47, Web Development 48, Custom Web Design 49, Responsive Development 50, UI/UX 51, Graphic 52, Reviews 53, SEO 54, Landing Pages 55, Software 56, Social Media 57, Branding 58, Google Ads 59, Citations & Backlinks 60, E-commerce 61.
 - Media upload pack: `site/wp-upload/` (SEO-named images, logos, SVG icons). MCP cannot upload media; upload manually.
 - `site/tools-mcp.py`: CLI client for the MCP server (reads `DIGIRANX_MCP_AUTH`).
+
+### Phase 2 (header, footer, mobile menu) - done
+- Header site part **141** (published, all pages): pill bar, logo, nav, 5/5/5 mega menu with icons, call button, burger (tablet/mobile) that opens popup **133**.
+- Footer site part **132** (published, all pages): "Get Connected" strip, 4 columns, policy links, copyright, Back to Top button.
+- Mobile menu popup **133** (published): links, services accordion (15), call button.
+- Site-wide CSS lives in the Elementor kit (post 7) custom CSS: `site/wp-build/site.css` (mega menu hover, icon fill fix, footer link colours).
+- Builder scripts: `site/wp-build/*.py` (generate `elementor-build-composition` payloads).
+- Notes: V4 breakpoints are only `tablet` (<=1024) and `mobile` (<=767). `build-composition` into an already-published document does not reach the live site; build into a fresh draft and publish, or use `manage-elements` + publish.
