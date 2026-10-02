@@ -100,3 +100,8 @@ html{scroll-behavior:smooth}
 .e-form-base label{font-size:14px!important;font-weight:700!important;color:#0E0A1F!important}
 .e-form-base button[type=submit]{font-size:15.5px!important;font-weight:600!important}
 .e-form-base{padding:0!important}
+/* hero lottie globe */
+.elementor-widget-lottie{max-width:100%}
+.elementor-widget-lottie svg{filter:drop-shadow(0 0 16px rgba(123,59,255,.55)) drop-shadow(0 0 4px rgba(30,200,245,.45))}
+@media (max-width:1024px){.elementor-widget-lottie{width:420px!important;max-width:100%!important;margin-inline:auto!important}.elementor-widget-lottie .e-lottie__container,.elementor-widget-lottie .e-lottie__animation{width:100%!important;max-width:100%!important}.elementor-widget-lottie svg{width:100%!important;height:auto!important}}
+@media (max-width:767px){.elementor-widget-lottie{width:320px!important}}
