@@ -54,3 +54,10 @@ html{scroll-behavior:smooth}
 .dg-post-card a,.dg-post-card{color:inherit}
 .dg-post-body p,.dg-post-body li{font-family:Urbanist,sans-serif;font-size:17.5px;line-height:1.8;color:#16141F}
 .dg-post-body h2{font-size:28px;margin:18px 0 6px}
+/* service pages */
+.dg-side-link{transition:background .2s,border-color .2s}
+.dg-side-link:hover{background:#110A2E!important;border-color:#110A2E!important}
+.dg-side-link:hover p{color:#FFFFFF!important}
+.dg-side-link:hover .e-con{background:linear-gradient(90deg,#16B4F0,#7B3BFF)!important}
+.dg-side-link:hover .e-svg-base{color:#FFFFFF!important}
+.dg-benefit{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#1EC8F5,#7B3BFF 55%,#FF2EA6) border-box!important;border-color:transparent!important}
