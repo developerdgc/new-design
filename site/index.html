@@ -1,0 +1,1205 @@
+<meta charset="utf-8">
+<title>DigiRanx Pro Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dark agency site in the Xcelliance structure. Floating pill header, full-width sections on an ink ground,
+   brand gradient (cyan > violet > magenta from the logo) used only on accents, CTAs and the 3D hero object. */
+:root{
+  --ink:#07060E;          /* page ground */
+  --ink-2:#0D0B19;        /* alternate section ground */
+  --panel:#141127;        /* cards */
+  --panel-2:#1B1734;      /* raised cards / hover */
+  --line:rgba(170,160,255,.14);
+  --text:#EEEDF7;
+  --muted:#A7A4C0;
+  --cyan:#1EC8F5;
+  --violet:#8A3BFF;
+  --magenta:#FF2EA6;
+  --grad:linear-gradient(100deg,var(--cyan) 0%,var(--violet) 55%,var(--magenta) 100%);
+  --display:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+  --radius:18px;
+  --wrap:1240px;
+  --gut:clamp(16px,4vw,32px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ico{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.eyebrow::before{content:"";width:28px;height:2px;border-radius:2px;background:var(--grad)}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.sec.alt{background:var(--ink-2)}
+.sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:clamp(32px,5vw,52px)}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
+.sec-head h2{font-size:clamp(30px,4.4vw,50px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17px}
+.lead{color:var(--muted);font-size:17px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;font-family:var(--display);font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn .ico{font-size:18px;transition:transform .2s}
+.btn:hover .ico{transform:translateX(3px)}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 30px -10px rgba(138,59,255,.7)}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(255,46,166,.65)}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--cyan);background:rgba(30,200,245,.08)}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:50;padding-inline:var(--gut)}
+.hdr-bar{max-width:var(--wrap);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 12px 10px 22px;border-radius:999px;background:rgba(10,9,22,.82);border:1px solid rgba(190,180,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 40px -20px rgba(0,0,0,.8)}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand img.mark{width:40px;height:auto}
+.brand img.word{width:150px;height:auto}
+.brand small{display:block;font-family:var(--display);font-size:10.5px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-top:2px;padding-left:2px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav>li{list-style:none;position:static}
+.nav ul{padding:0;margin:0}
+.nav-link{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:16.5px;color:var(--text);background:none;border:0;cursor:pointer}
+.nav-link .ico{font-size:16px;transition:transform .2s}
+.nav-link:hover,.nav-link.active{color:var(--cyan)}
+.has-mega:hover .nav-link .ico,.has-mega.open .nav-link .ico{transform:rotate(180deg)}
+.hdr-cta{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--panel);cursor:pointer;align-items:center;justify-content:center}
+.burger .ico{font-size:22px}
+
+/* Mega menu */
+.mega{position:absolute;left:var(--gut);right:var(--gut);top:calc(100% + 10px);max-width:var(--wrap);margin-inline:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 300px;gap:8px;padding:22px;border-radius:24px;background:#0E0C1D;border:1px solid rgba(190,180,255,.18);box-shadow:0 40px 80px -30px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.has-mega:hover .mega,.has-mega:focus-within .mega,.has-mega.open .mega{opacity:1;visibility:visible;transform:none}
+.mega-col h4{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:6px 12px 10px}
+.mega-col a{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:12px;transition:background .15s}
+.mega-col a:hover{background:var(--panel-2)}
+.mega-col a:hover .mi{background:var(--grad);color:#fff;border-color:transparent}
+.mi{width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;background:rgba(138,59,255,.12);border:1px solid var(--line);color:var(--cyan);font-size:19px;transition:background .15s,color .15s}
+.mega-col b{display:block;font-family:var(--display);font-size:15.5px;font-weight:700;line-height:1.2}
+.mega-col span.sub{display:block;font-size:12.5px;color:var(--muted);line-height:1.35}
+.mega-promo{border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;min-height:100%;background:linear-gradient(180deg,rgba(7,6,14,.1),rgba(7,6,14,.92)),var(--promo) center/cover}
+.mega-promo h5{font-family:var(--display);font-size:22px;font-weight:800;margin:0 0 6px;line-height:1.15}
+.mega-promo p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.mega-promo .btn{padding:11px 18px;font-size:14.5px;align-self:flex-start}
+
+/* Mobile drawer */
+.drawer{position:fixed;inset:0;z-index:60;background:rgba(4,3,10,.7);backdrop-filter:blur(6px);display:none}
+.drawer.open{display:block}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(400px,100%);background:#0C0A18;border-left:1px solid var(--line);padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);overflow-y:auto;display:flex;flex-direction:column;gap:6px}
+.drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.drawer a.dl,.drawer button.dl{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 6px;border:0;border-bottom:1px solid var(--line);background:none;font-family:var(--display);font-size:19px;font-weight:700;cursor:pointer;text-align:left}
+.drawer .dsub{display:none;padding:6px 0 10px}
+.drawer .dsub.open{display:grid;gap:2px}
+.drawer .dsub a{display:flex;align-items:center;gap:12px;padding:8px 6px;font-weight:600}
+.drawer .dsub .mi{width:32px;height:32px;font-size:16px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding-block:calc(env(safe-area-inset-top,0px) + 150px) 90px;background:
+  radial-gradient(60% 70% at 85% 40%,rgba(138,59,255,.28),transparent 70%),
+  radial-gradient(40% 50% at 10% 10%,rgba(30,200,245,.14),transparent 70%),
+  var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(170,160,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(170,160,255,.06) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);-webkit-mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:32px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,80px);font-weight:900;letter-spacing:-.025em;line-height:1.02;margin:18px 0 22px}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);max-width:560px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line);max-width:660px}
+.hero-meta div{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--muted)}
+.hero-meta b{display:block;color:var(--text);font-family:var(--display);font-size:16px}
+.hero-meta .ico{font-size:22px;color:var(--cyan)}
+.stars{display:inline-flex;gap:2px;color:#FFC542}
+.stars svg{width:15px;height:15px;fill:currentColor;stroke:none}
+.hero-3d{position:relative;aspect-ratio:1/1;width:100%;max-width:600px;justify-self:end}
+.hero-3d canvas{width:100%!important;height:100%!important;display:block}
+.hero-3d .fallback{position:absolute;inset:12%;width:76%;height:auto;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(138,59,255,.45))}
+.float-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(20,17,39,.88);border:1px solid var(--line);backdrop-filter:blur(8px);font-size:13.5px;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);animation:bob 6s ease-in-out infinite}
+.float-chip b{font-family:var(--display);font-size:17px;display:block;line-height:1.1}
+.float-chip .mi{width:34px;height:34px;font-size:17px}
+.chip-a{left:0;top:18%}
+.chip-b{right:2%;bottom:14%;animation-delay:-3s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.marquee{border-block:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding-block:18px}
+.marquee-track{display:flex;gap:46px;width:max-content;animation:scroll 40s linear infinite}
+.marquee span{display:inline-flex;align-items:center;gap:46px;font-family:var(--display);font-weight:800;font-size:clamp(20px,2.4vw,28px);white-space:nowrap;color:var(--muted)}
+.marquee span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--grad)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.about-media{position:relative;display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto;gap:14px}
+.about-media img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.about-media .m1{grid-row:1/3;aspect-ratio:3/4}
+.about-media .m2{aspect-ratio:1/1}
+.badge-card{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:20px;border-radius:var(--radius);background:var(--grad);color:#fff}
+.badge-card b{font-family:var(--display);font-size:clamp(30px,3.6vw,44px);font-weight:900;line-height:1}
+.badge-card span{font-size:14px;font-weight:600;line-height:1.35}
+.about-copy{display:grid;gap:22px}
+.about-copy h2{font-size:clamp(30px,4.2vw,48px);font-weight:800}
+.ticks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;padding:0;margin:0;list-style:none}
+.ticks li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:15.5px}
+.ticks .ico{color:var(--cyan);font-size:20px;margin-top:2px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:clamp(40px,6vw,72px)}
+.fact{padding:22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel)}
+.fact b{display:block;font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:900;line-height:1.05}
+.fact span{color:var(--muted);font-size:14px}
+
+/* ---------- Services ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:34px}
+.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-family:var(--display);font-weight:700;font-size:15px;color:var(--muted)}
+.tab[aria-pressed="true"]{background:var(--grad);color:#fff;border-color:transparent}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.svc{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
+.svc::after{content:"";position:absolute;inset:auto -40% -60% auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(138,59,255,.35),transparent 70%);opacity:0;transition:opacity .3s}
+.svc:hover{transform:translateY(-4px);border-color:rgba(30,200,245,.45);background:var(--panel-2)}
+.svc:hover::after{opacity:1}
+.svc .mi{width:56px;height:56px;border-radius:16px;font-size:26px}
+.svc:hover .mi{background:var(--grad);color:#fff;border-color:transparent}
+.svc h3{font-size:22px;font-weight:800}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc .more{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;color:var(--cyan);font-size:15px}
+.svc .grp{position:absolute;top:24px;right:24px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+/* ---------- CTA form ---------- */
+.cta-form-sec{position:relative;overflow:hidden}
+.cta-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);border-radius:30px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.cta-side{position:relative;padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:linear-gradient(160deg,rgba(7,6,14,.55),rgba(7,6,14,.92)),var(--cta-img) center/cover}
+.cta-side h2{font-size:clamp(30px,3.8vw,46px);font-weight:800}
+.cta-side ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.cta-side li{display:flex;gap:12px;align-items:center;font-weight:600}
+.cta-side li .mi{width:36px;height:36px;font-size:17px}
+.contact-mini{display:grid;gap:10px;font-size:15px}
+.contact-mini div{display:flex;align-items:center;gap:10px}
+.contact-mini .ico{color:var(--cyan);font-size:18px}
+.form{padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}
+.form h3{grid-column:1/-1;font-size:26px;font-weight:800}
+.form p.note{grid-column:1/-1;color:var(--muted);font-size:14.5px;margin-top:-6px}
+.field{display:grid;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:13.5px;font-weight:700;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--ink);font-size:15.5px;transition:border-color .2s}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan)}
+.form .btn{grid-column:1/-1;justify-self:start}
+.form-ok{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:14px;background:rgba(30,200,245,.1);border:1px solid rgba(30,200,245,.4);font-size:15px}
+.form-ok .ico{color:var(--cyan);font-size:22px;margin-top:1px}
+
+/* ---------- Reviews ---------- */
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.rev-top .sec-head{margin:0}
+.g-score{display:flex;align-items:center;gap:16px;padding:16px 22px;border-radius:18px;border:1px solid var(--line);background:var(--panel)}
+.g-score .g{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285F4;font-family:var(--display);font-weight:900;font-size:24px}
+.g-score b{font-family:var(--display);font-size:28px;font-weight:900;line-height:1}
+.g-score small{display:block;color:var(--muted);font-size:13px}
+.rev-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 36px)/3);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:none}
+.rev-track::-webkit-scrollbar{display:none}
+.rev{scroll-snap-align:start;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line)}
+.rev q{quotes:none;font-size:16px;line-height:1.7;flex:1}
+.rev .who{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.rev .who img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.rev .who b{display:block;font-family:var(--display);font-size:16.5px}
+.rev .who span{font-size:13.5px;color:var(--muted)}
+.rev .r-top{display:flex;justify-content:space-between;align-items:center}
+.rev .qmark{font-family:var(--display);font-size:56px;line-height:.5;height:24px;font-weight:900}
+.rev-nav{display:flex;gap:10px;margin-top:24px;justify-content:center}
+.rev-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--panel);cursor:pointer;display:grid;place-items:center}
+.rev-nav button:hover{border-color:var(--cyan)}
+.rev-nav .ico{font-size:20px}
+
+/* ---------- Why choose ---------- */
+.why-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,72px);align-items:center}
+.why-img{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.why-img img{width:100%;height:100%;object-fit:cover}
+.why-img .badge-card{position:absolute;left:18px;right:18px;bottom:18px;flex-direction:row;align-items:center;gap:14px}
+.why-img .badge-card .ico{font-size:34px;flex:none}
+.why-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:34px}
+.why-item{padding:24px;border-radius:20px;border:1px solid var(--line);background:var(--panel);display:grid;gap:10px;align-content:start}
+.why-item .mi{width:48px;height:48px;font-size:22px}
+.why-item h3{font-size:19px;font-weight:800}
+.why-item p{color:var(--muted);font-size:14.5px}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,72px);align-items:start}
+.faq-list{display:grid;gap:12px}
+.faq{border-radius:18px;border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 22px;font-family:var(--display);font-weight:700;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);transition:transform .25s,background .25s}
+.faq[open] summary .pm{transform:rotate(45deg);background:var(--grad);border-color:transparent}
+.faq .ans{padding:0 22px 22px;color:var(--muted);font-size:15.5px;max-width:68ch}
+.faq-aside{display:grid;gap:20px;position:sticky;top:120px}
+.help-card{padding:28px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:12px}
+.help-card h3{font-size:22px}
+.help-card p{color:var(--muted);font-size:15px}
+.copy-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:12px;background:var(--ink);border:1px solid var(--line);font-weight:700;font-size:15px}
+.copy-row span{display:flex;align-items:center;gap:10px;min-width:0;overflow-wrap:anywhere;user-select:all}
+.copy-row .ico{color:var(--cyan);font-size:18px}
+.copy-btn{border:0;background:none;color:var(--cyan);font-weight:700;font-size:13px;cursor:pointer;padding:4px 6px}
+
+/* ---------- Final CTA ---------- */
+.final{position:relative;overflow:hidden;border-radius:32px;padding:clamp(40px,6vw,80px) clamp(24px,5vw,72px);background:var(--grad);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center}
+.final::before{content:"";position:absolute;right:-60px;top:-80px;width:360px;height:360px;background:url(logo-icon.png) center/contain no-repeat;opacity:.2;filter:brightness(2) saturate(0)}
+.final h2{position:relative;font-size:clamp(30px,4.4vw,54px);font-weight:900;color:#fff}
+.final p{position:relative;color:rgba(255,255,255,.88);font-size:17px;margin-top:12px;max-width:560px}
+.final .acts{position:relative;display:flex;flex-wrap:wrap;gap:12px}
+.btn-white{background:#fff;color:#130F2A}
+.btn-white:hover{transform:translateY(-2px)}
+.btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+
+/* ---------- Footer ---------- */
+.ftr{border-top:1px solid var(--line);background:#05040B;padding-block:72px calc(env(safe-area-inset-bottom,0px) + 28px)}
+.ftr-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr 1.2fr;gap:40px}
+.ftr h4{font-size:18px;font-weight:800;margin-bottom:18px}
+.ftr p{color:var(--muted);font-size:15px}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.ftr ul a{color:var(--muted);font-size:15px;transition:color .15s}
+.ftr ul a:hover{color:var(--cyan)}
+.ftr .logo-full{width:220px;margin-bottom:18px}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--text);cursor:default}
+.socials .ico{font-size:18px}
+.ftr .cinfo{display:grid;gap:14px}
+.ftr .cinfo div{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15px}
+.ftr .cinfo .ico{color:var(--cyan);font-size:19px;margin-top:3px}
+.ftr .cinfo b{color:var(--text);font-weight:700}
+.news{display:flex;gap:8px;margin-top:16px;padding:6px;border-radius:999px;border:1px solid var(--line);background:var(--ink)}
+.news input{flex:1;min-width:0;border:0;background:none;padding:10px 14px;font-size:15px}
+.news input:focus{outline:none}
+.news button{width:46px;height:46px;flex:none;border-radius:50%;border:0;background:var(--grad);color:#fff;cursor:pointer;display:grid;place-items:center}
+.news-msg{font-size:13.5px;color:var(--cyan);margin-top:10px;min-height:1.4em}
+.ftr-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.ftr-bot a:hover{color:var(--cyan)}
+
+/* ---------- Inner page hero ---------- */
+.phero{position:relative;overflow:hidden;padding-block:calc(env(safe-area-inset-top,0px) + 160px) 80px;background:
+  linear-gradient(180deg,rgba(7,6,14,.72),rgba(7,6,14,.96)),var(--ph-img,none) center/cover,var(--ink)}
+.phero::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 20%,rgba(138,59,255,.35),transparent 70%);pointer-events:none}
+.phero .wrap{position:relative;z-index:1;display:grid;gap:18px}
+.phero h1{font-size:clamp(38px,6vw,72px);font-weight:900;letter-spacing:-.02em;max-width:900px}
+.phero p{color:var(--muted);font-size:18px;max-width:680px}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14.5px;color:var(--muted);font-weight:600}
+.crumbs a:hover{color:var(--cyan)}
+.crumbs .ico{font-size:14px;transform:rotate(-90deg)}
+
+/* About page */
+.mv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mv{padding:30px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.mv .mi{width:52px;height:52px;font-size:24px}
+.mv h3{font-size:22px;font-weight:800}
+.mv p{color:var(--muted);font-size:15.5px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:s}
+.step{position:relative;padding:28px;border-radius:22px;border:1px solid var(--line);background:var(--panel);display:grid;gap:10px;align-content:start}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-weight:900;font-size:44px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:20px;font-weight:800}
+.step p{color:var(--muted);font-size:15px}
+
+/* Service detail */
+.sd-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(28px,5vw,56px);align-items:start}
+.sd-main{display:grid;gap:28px;min-width:0}
+.sd-main .cover{border-radius:24px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.sd-main h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.sd-main p{color:var(--muted);font-size:16.5px}
+.feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.feat{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}
+.feat .ico{font-size:20px;color:var(--cyan);margin-top:2px}
+.feat b{font-family:var(--display);font-size:16.5px;display:block}
+.feat span{color:var(--muted);font-size:14.5px}
+.sd-side{display:grid;gap:18px;position:sticky;top:120px}
+.side-list{padding:20px;border-radius:22px;background:var(--panel);border:1px solid var(--line);display:grid;gap:4px}
+.side-list h4{font-size:18px;font-weight:800;padding:4px 8px 10px}
+.side-list a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;font-weight:600;font-size:15px}
+.side-list a:hover{background:var(--panel-2)}
+.side-list a.cur{background:var(--grad);color:#fff}
+.side-list a.cur .mi{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+.side-list .mi{width:34px;height:34px;font-size:16px}
+
+/* Pricing */
+.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;gap:18px;padding:32px 28px;border-radius:24px;background:var(--panel);border:1px solid var(--line)}
+.plan.pop{background:linear-gradient(var(--panel-2),var(--panel-2)) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 30px 60px -30px rgba(138,59,255,.6)}
+.plan .tagpop{position:absolute;top:-13px;left:28px;padding:5px 12px;border-radius:999px;background:var(--grad);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.plan h3{font-size:22px;font-weight:800}
+.plan .pdesc{color:var(--muted);font-size:14.5px;margin-top:-8px}
+.plan .amt{display:flex;align-items:baseline;gap:6px;font-family:var(--display)}
+.plan .amt b{font-size:50px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.plan .amt span{color:var(--muted);font-weight:600}
+.plan ul{list-style:none;padding:18px 0 0;margin:0;display:grid;gap:11px;border-top:1px solid var(--line);flex:1}
+.plan li{display:flex;gap:10px;font-size:15px;align-items:flex-start}
+.plan li .ico{color:var(--cyan);font-size:18px;margin-top:3px}
+.plan .btn{width:100%}
+.price-note{margin-top:18px;color:var(--muted);font-size:14px;text-align:center}
+
+/* Blog */
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.post{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:transform .25s,border-color .25s}
+.post:hover{transform:translateY(-4px);border-color:rgba(30,200,245,.45)}
+.post img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.post .pb{padding:22px 24px 26px;display:grid;gap:10px;flex:1;align-content:start}
+.post .meta{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted);font-weight:600}
+.post .cat{padding:4px 10px;border-radius:999px;background:rgba(30,200,245,.12);color:var(--cyan);font-weight:700}
+.post h3{font-size:21px;font-weight:800}
+.post p{color:var(--muted);font-size:15px}
+.article{max-width:780px;margin-inline:auto;display:grid;gap:22px}
+.article img{border-radius:24px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.article p{color:#CFCDE0;font-size:17.5px;line-height:1.8}
+.article h2{font-size:30px;font-weight:800;margin-top:10px}
+.article ul{color:#CFCDE0;font-size:17px;line-height:1.8;padding-left:22px;margin:0}
+
+/* Contact */
+.ci-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:40px}
+.ci{padding:24px;border-radius:20px;background:var(--panel);border:1px solid var(--line);display:grid;gap:10px;align-content:start;min-width:0}
+.ci .mi{width:48px;height:48px;font-size:22px}
+.ci h3{font-size:18px;font-weight:800}
+.ci p{color:var(--muted);font-size:15px;overflow-wrap:anywhere}
+.ci a{color:var(--text);font-weight:700}
+.map-card{border-radius:24px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;padding:26px;background:linear-gradient(180deg,rgba(7,6,14,.15),rgba(7,6,14,.9)),url(img/s-gbp.jpg) center/cover;border:1px solid var(--line);margin-top:20px}
+.map-card div{display:grid;gap:6px}
+.map-card b{font-family:var(--display);font-size:22px}
+
+.pg{animation:pgIn .5s ease both}
+@keyframes pgIn{from{transform:translateY(12px)}to{transform:none}}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .nav,.hdr-cta .btn{display:none}
+  .burger{display:inline-flex}
+  .svc-grid,.blog-grid,.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rev-track{grid-auto-columns:calc((100% - 18px)/2)}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+  .facts,.ci-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sd-grid{grid-template-columns:minmax(0,1fr)}
+  .sd-side{position:static}
+}
+@media (max-width:860px){
+  .hero-grid,.about-grid,.why-grid,.faq-wrap,.cta-box,.final{grid-template-columns:minmax(0,1fr)}
+  .hero{padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+  .hero-3d{justify-self:center;max-width:460px}
+  .faq-aside{position:static}
+  .mv-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  .svc-grid,.blog-grid,.price-grid,.why-list,.feat-grid,.steps,.ftr-grid,.ticks{grid-template-columns:minmax(0,1fr)}
+  .form{grid-template-columns:minmax(0,1fr)}
+  .rev-track{grid-auto-columns:88%}
+  .brand img.word{width:120px}
+  .brand small{display:none}
+  .brand img.mark{width:34px}
+  .hdr-bar{padding:8px 8px 8px 16px}
+  .chip-a{left:-4px;top:6%}
+  .chip-b{right:-4px;bottom:4%}
+  .facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ci-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-bar" style="position:relative">
+    <a class="brand" href="#home" aria-label="DigiRanx Pro home">
+      <img class="mark" src="logo-icon.png" alt="">
+      <span><img class="word" src="logo-word.png" alt="DigiRanx Pro"><small>Grow your business with us</small></span>
+    </a>
+    <ul class="nav" id="nav">
+      <li><a class="nav-link" data-r="home" href="#home">Home</a></li>
+      <li><a class="nav-link" data-r="about" href="#about">About Us</a></li>
+      <li class="has-mega" id="megaLi">
+        <button class="nav-link" data-r="services" id="megaBtn" aria-expanded="false" aria-controls="mega">Our Services <svg class="ico"><use href="#i-chev"/></svg></button>
+        <div class="mega" id="mega"></div>
+      </li>
+      <li><a class="nav-link" data-r="blog" href="#blog">Our Blog</a></li>
+      <li><a class="nav-link" data-r="faqs" href="#faqs">FAQs</a></li>
+      <li><a class="nav-link" data-r="contact" href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="hdr-cta">
+      <a class="btn btn-grad" href="#contact">Let's Talk <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="drawer-top">
+      <a class="brand" href="#home"><img class="mark" src="logo-icon.png" alt=""><img class="word" src="logo-word.png" alt="DigiRanx Pro" style="width:130px"></a>
+      <button class="burger" style="display:inline-flex" id="drawerClose" aria-label="Close menu"><svg class="ico"><use href="#i-x"/></svg></button>
+    </div>
+    <a class="dl" href="#home">Home</a>
+    <a class="dl" href="#about">About Us</a>
+    <button class="dl" id="dSvcBtn" aria-expanded="false">Our Services <svg class="ico"><use href="#i-chev"/></svg></button>
+    <div class="dsub" id="dSvc"></div>
+    <a class="dl" href="#blog">Our Blog</a>
+    <a class="dl" href="#faqs">FAQs</a>
+    <a class="dl" href="#contact">Contact Us</a>
+    <a class="btn btn-grad" href="#contact" style="margin-top:20px">Let's Talk <svg class="ico"><use href="#i-arrow"/></svg></a>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img class="logo-full" src="logo-full.png" alt="DigiRanx Pro — Grow your business with us">
+        <p>Your trusted partner in building a stronger online presence with creative strategies and results-driven digital solutions.</p>
+        <div class="socials" aria-label="Social profiles (links added on WordPress)">
+          <span title="Facebook"><svg class="ico"><use href="#i-fb"/></svg></span>
+          <span title="Instagram"><svg class="ico"><use href="#i-ig"/></svg></span>
+          <span title="LinkedIn"><svg class="ico"><use href="#i-in"/></svg></span>
+          <span title="YouTube"><svg class="ico"><use href="#i-yt"/></svg></span>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#blog">Our Blog</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul id="ftrSvc"></ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <div class="cinfo">
+          <div><svg class="ico"><use href="#i-pin"/></svg><span>Office 1922, 85 Dunstall Hill, Wolverhampton, WV6 0SR, UK</span></div>
+          <div><svg class="ico"><use href="#i-phone"/></svg><a href="tel:+447445652671"><b>+44 7445 652671</b></a></div>
+          <div><svg class="ico"><use href="#i-mail"/></svg><a href="mailto:info@digiranxpro.com"><b>info@digiranxpro.com</b></a></div>
+          <div><svg class="ico"><use href="#i-clock"/></svg><span>Mon – Fri: 8am – 10pm<br>Sat – Sun: Closed</span></div>
+        </div>
+        <h4 style="margin-top:26px;margin-bottom:0">Subscribe Newsletter</h4>
+        <form class="news" id="newsForm">
+          <input id="newsEmail" type="email" placeholder="Your email address" aria-label="Email address" required>
+          <button aria-label="Subscribe"><svg class="ico"><use href="#i-arrow"/></svg></button>
+        </form>
+        <div class="news-msg" id="newsMsg" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© 2026 DIGIRANX PRO LTD. All rights reserved.</span>
+      <span><a href="#faqs">Privacy Policy</a> · <a href="#faqs">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-devices" viewBox="0 0 24 24"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-4"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M6 4v5"/><path d="M7 14h6"/><path d="M7 17h10"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h2l2.7 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L22 7H5.1"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  </defs>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ================= DATA ================= */
+const GROUPS = {
+  grow:   {name:"Grow & Get Found", sub:"Rank, advertise and win reviews"},
+  design: {name:"Design & Brand",   sub:"Look sharp everywhere"},
+  build:  {name:"Build & Develop",  sub:"Websites, stores and software"}
+};
+const P = (name,price,unit,desc,feats,pop)=>({name,price,unit,desc,feats,pop:!!pop});
+const SERVICES = [
+ {slug:"gbp-optimization",name:"GBP Optimization",icon:"pin",group:"grow",img:"s-gbp",
+  short:"Rank in the Google Map Pack and turn local searches into calls.",
+  intro:"Your Google Business Profile is often the first thing a local customer sees. We set it up properly, fill every field, add photos and posts every week, and keep your details consistent so Google trusts you and shows you higher in Maps.",
+  feats:[["Full profile audit","Categories, services, hours and attributes checked line by line."],["Keyword-rich description","Written for your trade and your town, not stuffed."],["Weekly Google posts","Offers, updates and photos that keep the profile active."],["Photo & video uploads","Geo-relevant images that show your work."],["Q&A and review replies","Answers ready before customers ask."],["Monthly insight report","Calls, direction requests and searches you appeared in."]],
+  plans:[P("Starter","149","one-off","A clean, fully optimised profile",["Complete profile setup or fix","Category & service mapping","10 photo uploads","Basic citation check"]),
+         P("Growth","249","/month","Steady local ranking gains",["Everything in Starter","4 Google posts a month","Review reply management","Monthly ranking report","Q&A seeding"],1),
+         P("Premium","399","/month","For competitive local markets",["Everything in Growth","8 Google posts a month","Geo-grid rank tracking","20 local citations a month","Competitor monitoring"])],
+  faqs:[["How long before I rank higher in Maps?","Most profiles see movement in 4 to 8 weeks. Competitive trades in big towns can take 3 months."],["Can you fix a suspended profile?","Yes. We find the cause, correct it and file the reinstatement request with Google for you."]]},
+ {slug:"web-development",name:"Web Development",icon:"code",group:"build",img:"s-webdev",
+  short:"Fast, secure WordPress and custom-coded websites built to convert.",
+  intro:"We build websites that load quickly, rank well and are easy for you to update. Every site is built on clean code, set up with analytics from day one, and handed over with training so you are never stuck.",
+  feats:[["WordPress or custom code","We pick the stack that suits your goals and budget."],["Speed optimised","Core Web Vitals checked before launch."],["On-page SEO built in","Titles, schema and clean URLs from the start."],["Secure hosting setup","SSL, backups and security hardening."],["Contact & booking forms","Leads go straight to your inbox or CRM."],["Training & handover","A walkthrough so you can edit your own pages."]],
+  plans:[P("Starter","699","one-off","Up to 5 pages",["5 responsive pages","Contact form & map","Basic on-page SEO","1 month support"]),
+         P("Business","1,299","one-off","Up to 12 pages",["12 responsive pages","Blog setup","Speed & SEO optimisation","Analytics & Search Console","3 months support"],1),
+         P("Premium","2,499","one-off","Large or custom builds",["Unlimited pages","Custom features & integrations","Booking or membership area","Advanced SEO setup","6 months support"])],
+  faqs:[["How long does a website take?","A 5-page site usually takes 2 to 3 weeks. Larger builds take 4 to 8 weeks depending on content."],["Will I be able to edit the site myself?","Yes. We build on WordPress with Elementor unless you need something custom, and we train you before handover."]]},
+ {slug:"custom-web-design",name:"Custom Web Design",icon:"pen",group:"design",img:"s-design",
+  short:"Original website designs made for your brand, never a recycled theme.",
+  intro:"We design your website from a blank canvas around your brand, your customers and your goals. You see every page in a clickable prototype before a single line of code is written.",
+  feats:[["Discovery workshop","We learn your customers and what makes you different."],["Wireframes first","Page structure agreed before visuals."],["Clickable prototype","Review the design on your own phone and laptop."],["Brand-matched visuals","Colours, type and imagery that feel like you."],["Conversion-led layout","Clear calls to action on every page."],["Design system handover","Reusable styles so new pages stay consistent."]],
+  plans:[P("Starter","499","one-off","Homepage + 3 inner pages",["Custom homepage design","3 inner page designs","Mobile versions","2 revision rounds"]),
+         P("Business","999","one-off","Up to 10 page designs",["10 page designs","Clickable prototype","Mobile & tablet layouts","Icon set","3 revision rounds"],1),
+         P("Premium","1,999","one-off","Full design system",["Unlimited page designs","Component library","Micro-interactions","Brand imagery direction","Unlimited revisions for 30 days"])],
+  faqs:[["Do you also build the design?","Yes. Most clients pair this with our Web Development service so one team handles both."],["What do I need to provide?","Your logo, any brand colours and examples of sites you like. We guide you through the rest."]]},
+ {slug:"responsive-development",name:"Responsive Development",icon:"devices",group:"build",img:"s-responsive",
+  short:"Websites that look and work perfectly on every phone, tablet and screen.",
+  intro:"Over 60% of visits now come from phones. We rebuild or fix your site so every page, menu and form works smoothly on any screen size, and Google's mobile-first index treats you well.",
+  feats:[["Mobile-first layouts","Designed for thumbs first, then scaled up."],["Cross-device testing","Real iPhone, Android, tablet and desktop checks."],["Touch-friendly menus","Easy navigation on small screens."],["Image optimisation","Smaller files and faster loading on 4G."],["Mobile speed fixes","Better Core Web Vitals scores."],["Accessibility checks","Readable text and proper contrast."]],
+  plans:[P("Fix","299","one-off","Repair an existing site",["Mobile audit report","Fix up to 5 pages","Menu & form fixes","Speed quick wins"]),
+         P("Rebuild","599","one-off","Rebuild key templates",["Up to 12 pages made responsive","New mobile navigation","Image optimisation","Cross-device testing"],1),
+         P("Complete","1,099","one-off","Full responsive overhaul",["Unlimited pages","Mobile-first redesign","Accessibility fixes","Core Web Vitals tuning","1 month support"])],
+  faqs:[["Can you fix my site without redesigning it?","Yes. Our Fix plan keeps your design and only corrects how it behaves on smaller screens."],["Which devices do you test on?","Current iPhone and Android models, iPad, and desktop Chrome, Safari, Edge and Firefox."]]},
+ {slug:"ui-ux-design",name:"UI/UX Designing",icon:"layout",group:"design",img:"s-uiux",
+  short:"User journeys and interfaces that feel easy and keep people coming back.",
+  intro:"Good design is how something works, not only how it looks. We map your user journeys, test them with real people and design clean interfaces for websites, web apps and mobile apps.",
+  feats:[["User research","Interviews and analytics to find friction."],["Journey mapping","Every step from first visit to purchase."],["Wireframes & flows","Structure tested before visuals."],["High-fidelity UI","Pixel-perfect screens in Figma."],["Usability testing","Real users, real feedback."],["Developer-ready files","Specs and assets your developers can use."]],
+  plans:[P("Audit","399","one-off","UX review of an existing product",["Heuristic UX audit","Top 10 issues report","Quick-win recommendations","1 hour walkthrough call"]),
+         P("Product","899","one-off","Design a key flow",["User journey mapping","Wireframes for 1 core flow","Up to 10 UI screens","Clickable prototype","Usability test with 5 users"],1),
+         P("Full UX","1,799","one-off","End-to-end product design",["Research & personas","Full information architecture","Up to 30 UI screens","Design system in Figma","2 rounds of user testing"])],
+  faqs:[["Do you design mobile apps too?","Yes. We design iOS and Android interfaces following each platform's guidelines."],["What tools do you use?","Figma for design and prototyping, plus Maze or live sessions for testing."]]},
+ {slug:"graphic-design",name:"Graphic Designing",icon:"palette",group:"design",img:"s-graphic",
+  short:"Social posts, flyers, brochures and ads that stop the scroll.",
+  intro:"From a single flyer to a full month of social content, our designers create on-brand graphics that look professional in print and online. Fast turnaround and unlimited small edits.",
+  feats:[["Social media graphics","Posts, stories and covers sized for every platform."],["Print design","Flyers, leaflets, brochures and business cards."],["Ad creatives","Static and animated banners for Google and Meta."],["Infographics","Complex information made simple."],["Packaging & labels","Print-ready artwork files."],["Source files included","You own every design we make."]],
+  plans:[P("Pack","99","one-off","5 designs",["5 custom designs","2 revisions each","Print & web formats","3 working day delivery"]),
+         P("Monthly","249","/month","Ongoing design support",["20 designs a month","Social, print & ads","Unlimited small edits","48 hour turnaround","Brand templates"],1),
+         P("Pro","499","/month","For busy marketing teams",["50 designs a month","Animated graphics","Dedicated designer","24 hour turnaround","Monthly strategy call"])],
+  faqs:[["Do I get the source files?","Yes. You receive print-ready PDFs, PNGs and the editable source files."],["Can you print for me?","We can arrange printing through our UK print partners and deliver to your door."]]},
+ {slug:"reviews",name:"Reviews",icon:"star",group:"grow",img:"s-reviews",
+  short:"Collect more genuine 5-star reviews and reply to every one professionally.",
+  intro:"Reviews decide who gets the call. We set up simple systems that ask happy customers for a review at the right moment, and we reply to every review on your behalf so your reputation keeps growing.",
+  feats:[["Review request system","SMS, email and QR codes that make reviewing easy."],["Google, Facebook & Trustpilot","All platforms managed in one place."],["Professional replies","Every review answered within 24 hours."],["Negative review handling","Calm, policy-safe responses that protect you."],["Review widgets","Show your best reviews on your website."],["Monthly reputation report","Rating trend and new review count."]],
+  plans:[P("Starter","99","/month","1 platform",["Google review management","Review request templates","Replies to all reviews","Monthly report"]),
+         P("Growth","199","/month","Up to 3 platforms",["Google, Facebook & Trustpilot","Automated SMS & email requests","QR code review cards","Website review widget","Replies within 24 hours"],1),
+         P("Premium","349","/month","Multi-location brands",["Unlimited platforms","Multiple locations","Negative review alerts","Sentiment analysis","Quarterly strategy call"])],
+  faqs:[["Do you write fake reviews?","Never. Fake reviews break Google's rules and UK law. We only help you collect real reviews from real customers."],["Can you remove bad reviews?","We can request removal of reviews that break platform policies, and we reply professionally to the rest."]]},
+ {slug:"seo-digital-marketing",name:"SEO & Digital Marketing",icon:"trend",group:"grow",img:"s-seo",
+  short:"Rank on page one of Google and grow organic traffic that converts.",
+  intro:"We combine technical SEO, quality content and smart link building to move you up Google for the searches your customers actually make. Every month you get a clear report showing rankings, traffic and leads.",
+  feats:[["Keyword research","The terms your buyers search, ranked by intent."],["Technical SEO fixes","Speed, indexing, schema and site structure."],["On-page optimisation","Titles, headings and content for every key page."],["Content writing","Blog posts and service pages written by UK writers."],["Link building","Relevant, safe backlinks from real sites."],["Monthly reporting","Rankings, traffic and leads in plain English."]],
+  plans:[P("Local","299","/month","Local businesses",["Up to 10 keywords","Technical SEO audit","On-page fixes for 5 pages","GBP optimisation","Monthly report"]),
+         P("Growth","549","/month","Regional growth",["Up to 25 keywords","2 blog posts a month","On-page fixes for 15 pages","5 quality backlinks a month","Competitor tracking"],1),
+         P("National","899","/month","National campaigns",["Up to 60 keywords","4 blog posts a month","Full technical SEO","12 quality backlinks a month","Dedicated account manager"])],
+  faqs:[["How long does SEO take to work?","Expect early movement in 2 to 3 months and strong results in 6 to 12 months, depending on competition."],["Are there long contracts?","No. After an initial 3 months our SEO plans run month to month."]]},
+ {slug:"landing-pages",name:"Landing Pages",icon:"window",group:"design",img:"s-landing",
+  short:"High-converting landing pages for ads, offers and product launches.",
+  intro:"A landing page has one job: turn a visitor into a lead. We design and build focused pages with clear offers, strong proof and fast load times, then A/B test them so your ad spend works harder.",
+  feats:[["Conversion copywriting","Headlines and offers that get clicks."],["Fast-loading build","Under 2 seconds on mobile."],["Form & CRM integration","Leads sent to your inbox, CRM or Google Sheets."],["Tracking setup","Google Ads, Meta Pixel and GA4 events."],["A/B testing","Test headlines, images and offers."],["Thank-you page","Next steps that keep leads warm."]],
+  plans:[P("Single","249","one-off","1 landing page",["1 custom landing page","Copywriting included","Form integration","Tracking setup"]),
+         P("Campaign","449","one-off","Page + variation",["1 page + 1 A/B variation","Conversion copywriting","CRM integration","Thank-you page","30 days optimisation"],1),
+         P("Funnel","799","one-off","Multi-step funnel",["Up to 4 funnel pages","Upsell & thank-you pages","Email follow-up setup","A/B testing for 60 days","Monthly conversion report"])],
+  faqs:[["Can you connect the page to my CRM?","Yes. We connect to HubSpot, Mailchimp, Zoho, Google Sheets and most other tools."],["Do you write the copy?","Yes. Conversion copywriting is included in every plan."]]},
+ {slug:"software-development",name:"Software Development",icon:"cpu",group:"build",img:"s-software",
+  short:"Custom web apps, portals and automations built around your workflow.",
+  intro:"When off-the-shelf tools do not fit, we build software that does. From booking systems and client portals to internal dashboards and API integrations, we plan, build and support it end to end.",
+  feats:[["Requirements workshop","We map how your business really works."],["Web apps & portals","Client portals, booking systems and dashboards."],["API integrations","Connect your CRM, payments and accounting."],["Automation","Cut out repetitive admin work."],["Secure & scalable","Modern frameworks and cloud hosting."],["Ongoing support","Updates, monitoring and new features."]],
+  plans:[P("MVP","2,499","one-off","Validate an idea quickly",["Discovery workshop","Core features only","Web app (desktop & mobile)","Cloud deployment","1 month support"]),
+         P("Business","4,999","one-off","Full business tool",["Full feature set","User roles & permissions","2 third-party integrations","Admin dashboard","3 months support"],1),
+         P("Enterprise","Custom","quote","Complex systems",["Dedicated dev team","Unlimited integrations","SLA-backed support","Security review","Ongoing roadmap planning"])],
+  faqs:[["Who owns the code?","You do. Full source code and IP transfer to you on final payment."],["Can you work with my existing system?","Yes. We regularly extend and integrate with existing software through APIs."]]},
+ {slug:"social-media-marketing",name:"Social Media Marketing",icon:"share",group:"grow",img:"s-social",
+  short:"Content, community and paid social that builds a loyal audience.",
+  intro:"We plan, create and post content across Facebook, Instagram, LinkedIn and TikTok, manage your comments and messages, and run paid campaigns that bring in followers who actually buy.",
+  feats:[["Monthly content calendar","Planned posts approved by you in advance."],["Custom graphics & reels","Designed in-house for your brand."],["Community management","Comments and DMs answered daily."],["Paid social ads","Meta, TikTok and LinkedIn campaigns."],["Hashtag & trend research","Reach the right local audience."],["Monthly analytics","Reach, engagement and leads tracked."]],
+  plans:[P("Starter","249","/month","2 platforms",["12 posts a month","2 platforms","Custom graphics","Monthly report"]),
+         P("Growth","449","/month","3 platforms + reels",["20 posts a month","3 platforms","4 reels or short videos","Community management","Ad campaign setup"],1),
+         P("Premium","749","/month","Full social presence",["30 posts a month","4 platforms","8 reels or short videos","Daily community management","Paid ads management"])],
+  faqs:[["Do I need to provide photos?","It helps, but it is not required. We use brand-safe stock and design custom graphics, and can arrange a local photo shoot."],["Is ad spend included?","No. Ad spend is paid directly to the platform so you keep full control of your budget."]]},
+ {slug:"branding",name:"Branding",icon:"gem",group:"design",img:"s-branding",
+  short:"Logos and brand identities that make you memorable and trusted.",
+  intro:"Your brand is how people remember you. We create logos, colour palettes, typography and brand guidelines that make your business look established from day one, online and in print.",
+  feats:[["Brand discovery","Your story, values and audience."],["Logo design","Multiple concepts with refinements."],["Colour & typography","A palette and font system that works everywhere."],["Brand guidelines","Rules so everything stays consistent."],["Stationery design","Business cards, letterheads and email signatures."],["Social media kit","Profile images, covers and post templates."]],
+  plans:[P("Logo","299","one-off","Logo design",["3 logo concepts","3 revision rounds","All file formats","Colour & mono versions"]),
+         P("Identity","699","one-off","Complete identity",["Logo design","Colour palette & typography","Business card & letterhead","Social media kit","Mini brand guide"],1),
+         P("Brand Book","1,299","one-off","Full brand system",["Brand strategy workshop","Full visual identity","40-page brand guidelines","Stationery suite","Brand launch assets"])],
+  faqs:[["Will I own the logo?","Yes. Full copyright transfers to you once the project is paid."],["Can you refresh my existing logo?","Yes. A refresh keeps the recognition you have built while modernising the look."]]},
+ {slug:"google-ads",name:"Google Ads",icon:"target",group:"grow",img:"s-ads",
+  short:"Pay-per-click campaigns that bring ready-to-buy customers today.",
+  intro:"Google Ads puts you at the top of search results the same day. Our certified team builds campaigns around high-intent keywords, writes ads that get clicks, tracks every call and form, and cuts wasted spend every week.",
+  feats:[["Account setup or audit","Clean structure from day one."],["High-intent keyword research","Only searches likely to convert."],["Ad copy & extensions","Call, sitelink and location extensions."],["Conversion tracking","Calls, forms and purchases tracked."],["Weekly optimisation","Negative keywords and bid adjustments."],["Transparent reporting","Cost per lead in plain numbers."]],
+  plans:[P("Starter","199","/month","Spend up to £1,000",["1 search campaign","Keyword & ad setup","Conversion tracking","Monthly report"]),
+         P("Growth","349","/month","Spend up to £3,000",["Up to 3 campaigns","Search & Performance Max","Call tracking","Weekly optimisation","Landing page advice"],1),
+         P("Scale","599","/month","Spend over £3,000",["Unlimited campaigns","Search, Display & YouTube","Remarketing","A/B ad testing","Fortnightly strategy calls"])],
+  faqs:[["Is ad spend included in the price?","No. The plan price is our management fee. Ad spend is paid directly to Google."],["How quickly will I get leads?","Campaigns can go live within 3 to 5 working days, and most clients see enquiries in the first week."]]},
+ {slug:"citations-backlinks",name:"Citations & Backlinks",icon:"link",group:"grow",img:"s-citations",
+  short:"Trusted UK directory listings and quality backlinks that lift rankings.",
+  intro:"Consistent business listings and good backlinks are two of the strongest local ranking signals. We build and clean up your citations on trusted UK directories and earn relevant backlinks that strengthen your whole site.",
+  feats:[["Citation audit","Find wrong or duplicate listings."],["UK directory submissions","Yell, Thomson Local, Bing Places and more."],["NAP consistency","Name, address and phone matched everywhere."],["Niche directories","Listings specific to your industry."],["Quality backlinks","Guest posts and outreach on real sites."],["Live link report","Every link listed with its URL."]],
+  plans:[P("Starter","149","one-off","Citation foundation",["Citation audit","30 UK citations","NAP clean-up","Live link report"]),
+         P("Growth","299","/month","Ongoing link building",["20 citations a month","4 quality backlinks a month","Niche directories","Monthly report"],1),
+         P("Authority","549","/month","Competitive niches",["40 citations a month","10 quality backlinks a month","Digital PR outreach","Anchor text planning","Toxic link monitoring"])],
+  faqs:[["Are your backlinks safe?","Yes. We only use real, relevant websites. No link farms, no private blog networks."],["What is NAP consistency?","Your Name, Address and Phone number shown exactly the same on every site. Google uses it to trust your business."]]},
+ {slug:"ecommerce-solutions",name:"E-commerce Solutions",icon:"cart",group:"build",img:"s-ecom",
+  short:"Online stores on Shopify or WooCommerce that are easy to run and built to sell.",
+  intro:"We build online stores that are easy for you to manage and easy for customers to buy from. Secure payments, delivery options, stock management and marketing tools are all set up and ready on launch day.",
+  feats:[["Shopify or WooCommerce","The right platform for your products."],["Product upload","Products, variants and images added for you."],["Secure payments","Stripe, PayPal, Apple Pay and Klarna."],["Shipping & tax setup","UK and international rules configured."],["Abandoned cart emails","Recover sales automatically."],["Store training","Manage orders and stock with confidence."]],
+  plans:[P("Starter","1,199","one-off","Up to 50 products",["Shopify or WooCommerce store","Up to 50 products uploaded","Payment & shipping setup","Basic SEO","1 month support"]),
+         P("Business","2,199","one-off","Up to 300 products",["Custom store design","Up to 300 products","Abandoned cart emails","Reviews & upsell apps","3 months support"],1),
+         P("Premium","3,999","one-off","Large catalogues",["Unlimited products","Custom features","ERP or inventory integration","Advanced SEO & analytics","6 months support"])],
+  faqs:[["Shopify or WooCommerce?","Shopify is simpler to run; WooCommerce gives more control and no monthly platform fee. We recommend one after a short call."],["Can you move my existing store?","Yes. We migrate products, customers and orders with redirects to protect your SEO."]]}
+];
+const SVC = Object.fromEntries(SERVICES.map(s=>[s.slug,s]));
+
+const REVIEWS = [
+ ["Our Google profile went from page two to the top three in Maps within six weeks. The phone has not stopped ringing since.","James Whitfield","Whitfield Plumbing, Wolverhampton","p-1"],
+ ["They rebuilt our website and it finally looks like the business we are. Bookings through the site have doubled.","Sophie Harrington","Glow Beauty Studio, Telford","p-2"],
+ ["Clear reports, honest advice and no jargon. Our Google Ads cost per lead dropped by almost half in two months.","Daniel Okafor","Okafor Property Services, Birmingham","p-3"],
+ ["The branding pack was spot on. Customers now comment on how professional our vans and leaflets look.","Emily Carter","Carter & Co Cleaning, Walsall","p-4"],
+ ["We launched our Shopify store with DigiRanx Pro and took our first 100 orders in the first month.","Raj Mehta","Spice Route Foods, Dudley","p-5"],
+ ["Friendly team, quick replies even late in the evening, and our social pages finally feel alive.","Hannah Lewis","The Corner Café, Wolverhampton","p-6"]
+];
+
+const FAQS = [
+ ["general","What does DIGIRANX PRO do?","We are a Wolverhampton digital agency. We build websites and online stores, run SEO, Google Ads and social media, and help local businesses get found on Google Maps."],
+ ["general","Do you only work with businesses in Wolverhampton?","No. We are based in Wolverhampton and work with businesses across the West Midlands, the rest of the UK and abroad, all remotely or in person."],
+ ["process","How do we get started?","Book a free call or fill in the form. We review your current website and Google presence, then send a clear proposal with costs and timelines."],
+ ["pricing","How much does a website cost?","Our websites start from £699 for a 5-page site. Every service page shows our package prices so you know what to expect before we talk."],
+ ["process","How long until I see results?","Google Ads can bring enquiries in the first week. Google Business Profile work shows results in 4 to 8 weeks, and SEO builds strongly over 6 to 12 months."],
+ ["pricing","Do you have long contracts?","No. Monthly services run on a rolling basis after a short minimum term, usually 3 months for SEO. You can cancel with 30 days' notice."],
+ ["support","What are your working hours?","Monday to Friday, 8am to 10pm. We are closed on Saturday and Sunday, and reply to weekend messages first thing Monday."],
+ ["support","Will I have one point of contact?","Yes. Every client gets an account manager who knows your business and replies by phone, email or WhatsApp."],
+ ["pricing","How do I pay?","Websites and one-off projects are paid 50% upfront and 50% on launch. Monthly services are billed at the start of each month by card or bank transfer."],
+ ["process","Do I own my website and accounts?","Yes. Your website, domain, Google accounts and ad accounts are always in your name. We are given access, never ownership."],
+ ["support","Do you offer website maintenance?","Yes. We offer care plans covering updates, backups, security monitoring and small content changes each month."],
+ ["general","Can you work with my existing website?","Yes. We can improve, redesign or fix an existing site rather than starting again, if that is the better option."]
+];
+
+const POSTS = [
+ {slug:"post-gbp-guide",title:"How to Rank Higher on Google Maps in 2026",cat:"Local SEO",date:"28 Sep 2026",img:"s-gbp",read:"6 min",
+  ex:"A step-by-step guide to optimising your Google Business Profile so local customers find you first.",
+  body:[["p","When someone searches for a service near them, Google shows three businesses in the Map Pack before any website. Getting into those three spots is the fastest way for a local business to win more calls."],["h","1. Choose the right primary category"],["p","Your primary category is the strongest ranking signal on your profile. Pick the most specific one that describes your main service, then add secondary categories for everything else you offer."],["h","2. Keep your details identical everywhere"],["p","Your business name, address and phone number must match on your website, your profile and every directory. Even small differences like 'Rd' and 'Road' can confuse Google."],["h","3. Post every week and reply to every review"],["ul",["Share an offer, update or project photo every week","Reply to every review within 48 hours","Add new photos of your real work each month"]],["p","Do these three things consistently for two months and most businesses see a clear rise in Maps visibility."]]},
+ {slug:"post-website-cost",title:"How Much Does a Small Business Website Cost in the UK?",cat:"Web Design",date:"19 Sep 2026",img:"s-webdev",read:"5 min",
+  ex:"What you should expect to pay for a website in 2026, and what is worth paying extra for.",
+  body:[["p","Website prices in the UK range from a few hundred pounds to tens of thousands. The difference usually comes down to three things: how many pages you need, how custom the design is, and what the site needs to do."],["h","What affects the price"],["ul",["Number of pages and amount of content","Custom design versus a template","Features like booking, shop or member areas","SEO, copywriting and photography"]],["p","For most small service businesses a professional 5 to 12 page website costs between £700 and £1,500. Online stores and custom features cost more."],["h","What is worth paying for"],["p","Speed, mobile layout and basic SEO are not optional extras. A cheap site that loads slowly and does not rank will cost you more in lost enquiries than you saved."]]},
+ {slug:"post-google-ads",title:"Google Ads for Local Businesses: A Beginner's Guide",cat:"Google Ads",date:"10 Sep 2026",img:"s-ads",read:"7 min",
+  ex:"Set up your first campaign without wasting budget on the wrong clicks.",
+  body:[["p","Google Ads can bring enquiries within days, but a poorly set up campaign can spend your budget on people who were never going to buy."],["h","Start with search campaigns"],["p","Search campaigns show your ad when someone types a specific query. They are the most predictable place to start for local service businesses."],["h","Three settings to check first"],["ul",["Location targeting set to 'presence', not 'interest'","Negative keywords added for jobs, free and DIY searches","Conversion tracking on calls and forms before launch"]],["p","Review your search terms report every week and add negatives. This one habit usually cuts wasted spend by 20 to 30 percent."]]},
+ {slug:"post-reviews",title:"Why Google Reviews Matter More Than Ever",cat:"Reputation",date:"02 Sep 2026",img:"s-reviews",read:"4 min",
+  ex:"How reviews affect your ranking and conversions, and the simple system to collect more.",
+  body:[["p","Reviews influence both where you rank and whether people choose you. A business with 80 reviews at 4.8 stars will usually beat one with 10 reviews at 5 stars."],["h","Ask at the right moment"],["p","The best time to ask is straight after a job is finished and the customer is happy. Send a short text with a direct link to your review form."],["h","Reply to every review"],["p","Replies show future customers that you care. Thank happy customers by name, and answer unhappy ones calmly with an offer to put things right."]]},
+ {slug:"post-social",title:"5 Social Media Ideas for Local Businesses",cat:"Social Media",date:"25 Aug 2026",img:"s-social",read:"4 min",
+  ex:"Simple post ideas that build trust and bring in local customers without hours of work.",
+  body:[["p","You do not need to go viral to win customers from social media. You need to show up regularly and show real people doing real work."],["h","Five ideas that work"],["ul",["Before and after photos of your work","A short video introducing a team member","Answers to questions customers often ask","Customer reviews turned into graphics","Behind the scenes on a busy day"]],["p","Post three times a week, reply to every comment, and you will build a local audience that remembers you when they need you."]]},
+ {slug:"post-brand",title:"Does Your Small Business Really Need Branding?",cat:"Branding",date:"14 Aug 2026",img:"s-branding",read:"5 min",
+  ex:"Why a consistent look helps customers trust you, and where to start on a small budget.",
+  body:[["p","Branding is more than a logo. It is the colours, words and feeling people connect with your business every time they see it."],["h","Consistency builds trust"],["p","When your van, website, invoices and social posts all look the same, customers see an established business. When they all look different, they wonder if you are."],["h","Where to start"],["ul",["A clear logo that works small and large","Two or three brand colours","One or two fonts used everywhere"]],["p","Start with these and apply them everywhere. You can grow into a full brand guide later."]]}
+];
+
+/* ================= HELPERS ================= */
+const ic = (n,cls="ico")=>`<svg class="${cls}"><use href="#i-${n}"/></svg>`;
+const stars = ()=>`<span class="stars" aria-label="5 out of 5 stars">${Array(5).fill(ic("star","")).join("")}</span>`;
+const mi = n=>`<span class="mi">${ic(n)}</span>`;
+const svcCard = s=>`<a class="svc" href="#service-${s.slug}" data-g="${s.group}">
+  <span class="grp">${GROUPS[s.group].name.split(" ")[0]}</span>${mi(s.icon)}
+  <h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more ${ic("arrow")}</span></a>`;
+const faqItem = (q,a,open)=>`<details class="faq"${open?" open":""}><summary>${q}<span class="pm">${ic("plus")}</span></summary><div class="ans">${a}</div></details>`;
+const pageHero = (title,lead,crumb,img)=>`<section class="phero" style="--ph-img:url(img/${img}.jpg)"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a>${crumb.map(c=>`${ic("chev")}${c[1]?`<a href="#${c[1]}">${c[0]}</a>`:`<span>${c[0]}</span>`}`).join("")}</nav>
+  <h1>${title}</h1>${lead?`<p>${lead}</p>`:""}</div></section>`;
+const contactRow = (icon,text)=>`<div class="copy-row"><span>${ic(icon)}${text}</span><button class="copy-btn" data-copy="${text}">Copy</button></div>`;
+
+/* ================= SECTIONS ================= */
+const S_ABOUT = (full)=>`
+<section class="sec" id="about-sec"><div class="wrap">
+  <div class="about-grid">
+    <div class="about-media">
+      <img class="m1" src="img/about-office.jpg" alt="DigiRanx Pro team planning a client campaign">
+      <img class="m2" src="img/about-meeting.jpg" alt="Strategy meeting at the Wolverhampton office">
+      <div class="badge-card"><b>15+</b><span>Digital services under one roof</span></div>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">About Us</span>
+      <h2>Helping businesses grow and <span class="grad-text">shine online</span></h2>
+      <p class="lead">At DIGIRANX PRO LTD, we're a passionate team dedicated to helping businesses grow and shine online. Based in Wolverhampton, we combine creativity, experience, and smart strategies to strengthen your online presence, connect with your audience, and help your brand grow in today's digital world.</p>
+      <ul class="ticks">
+        <li>${ic("check")}UK-based team in Wolverhampton</li>
+        <li>${ic("check")}One partner for web, SEO and ads</li>
+        <li>${ic("check")}Clear monthly reporting</li>
+        <li>${ic("check")}No long lock-in contracts</li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+        ${full?`<a class="btn btn-grad" href="#services">Explore our services ${ic("arrow")}</a>`:`<a class="btn btn-grad" href="#about">More about us ${ic("arrow")}</a>`}
+        <a class="btn btn-ghost" href="#contact">${ic("phone")} +44 7445 652671</a>
+      </div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact"><b class="grad-text">15+</b><span>Services from web to ads</span></div>
+    <div class="fact"><b class="grad-text">14 hrs</b><span>Support a day, Mon–Fri</span></div>
+    <div class="fact"><b class="grad-text">24 hrs</b><span>Average first response time</span></div>
+    <div class="fact"><b class="grad-text">100%</b><span>UK-based account team</span></div>
+  </div>
+</div></section>`;
+
+const S_SERVICES = (alt)=>`
+<section class="sec${alt?" alt":""}" id="services-sec"><div class="wrap">
+  <div class="sec-head center">
+    <span class="eyebrow">Our Services</span>
+    <h2>Everything you need to <span class="grad-text">grow online</span></h2>
+    <p>From your first website to page-one rankings, every digital service your business needs, handled by one team.</p>
+  </div>
+  <div class="tabs" role="group" aria-label="Filter services">
+    <button class="tab" data-f="all" aria-pressed="true">All Services</button>
+    ${Object.entries(GROUPS).map(([k,g])=>`<button class="tab" data-f="${k}" aria-pressed="false">${g.name}</button>`).join("")}
+  </div>
+  <div class="svc-grid" id="svcGrid">${SERVICES.map(svcCard).join("")}</div>
+</div></section>`;
+
+const S_CTA_FORM = ()=>`
+<section class="sec cta-form-sec" id="audit"><div class="wrap">
+  <div class="cta-box">
+    <div class="cta-side" style="--cta-img:url(img/cta-work.jpg)">
+      <div style="display:grid;gap:16px">
+        <span class="eyebrow">Free Growth Audit</span>
+        <h2>Let's find out what's holding your business back online</h2>
+        <p class="lead">Tell us about your business and we'll send a free audit of your website, Google profile and competitors within one working day.</p>
+      </div>
+      <ul>
+        <li>${mi("trend")} Website & SEO health check</li>
+        <li>${mi("pin")} Google Maps visibility report</li>
+        <li>${mi("target")} Competitor & ads snapshot</li>
+      </ul>
+      <div class="contact-mini">
+        <div>${ic("phone")}<b>+44 7445 652671</b></div>
+        <div>${ic("mail")}<b>info@digiranxpro.com</b></div>
+      </div>
+    </div>
+    ${FORM("audit")}
+  </div>
+</div></section>`;
+
+const FORM = (id,title="Request your free audit",note="We reply within one working day, Monday to Friday.")=>`
+<form class="form" id="form-${id}" novalidate>
+  <h3>${title}</h3><p class="note">${note}</p>
+  <div class="field"><label for="${id}-name">Full name</label><input id="${id}-name" name="name" required placeholder="John Smith" autocomplete="name"></div>
+  <div class="field"><label for="${id}-email">Email address</label><input id="${id}-email" name="email" type="email" required placeholder="john@company.co.uk" autocomplete="email"></div>
+  <div class="field"><label for="${id}-phone">Phone number</label><input id="${id}-phone" name="phone" type="tel" placeholder="07xxx xxxxxx" autocomplete="tel"></div>
+  <div class="field"><label for="${id}-svc">Service needed</label><select id="${id}-svc" name="service"><option value="">Select a service</option>${SERVICES.map(s=>`<option>${s.name}</option>`).join("")}<option>Not sure yet</option></select></div>
+  <div class="field full"><label for="${id}-msg">About your business</label><textarea id="${id}-msg" name="message" placeholder="Your website, what you sell and what you'd like to improve"></textarea></div>
+  <button class="btn btn-grad" type="submit">Send my request ${ic("arrow")}</button>
+  <div class="form-ok" hidden>${ic("check")}<span><b>Thanks, your request is ready.</b><br>This is a design preview, so nothing was sent. On the live WordPress site this form will email info@digiranxpro.com.</span></div>
+</form>`;
+
+const S_REVIEWS = (alt)=>`
+<section class="sec${alt?" alt":""}" id="reviews"><div class="wrap">
+  <div class="rev-top">
+    <div class="sec-head">
+      <span class="eyebrow">Customer Reviews</span>
+      <h2>What our clients <span class="grad-text">say about us</span></h2>
+    </div>
+    <div class="g-score"><span class="g">G</span><div><b>4.9</b> ${stars()}<small>Based on Google reviews</small></div></div>
+  </div>
+  <div class="rev-track" id="revTrack">
+    ${REVIEWS.map(r=>`<article class="rev"><div class="r-top">${stars()}<span class="qmark grad-text">"</span></div><q>${r[0]}</q>
+      <div class="who"><img src="img/${r[3]}.jpg" alt="" loading="lazy"><div><b>${r[1]}</b><span>${r[2]}</span></div></div></article>`).join("")}
+  </div>
+  <div class="rev-nav"><button data-dir="-1" aria-label="Previous reviews">${ic("left")}</button><button data-dir="1" aria-label="Next reviews">${ic("arrow")}</button></div>
+</div></section>`;
+
+const S_WHY = (alt)=>`
+<section class="sec${alt?" alt":""}" id="why"><div class="wrap">
+  <div class="why-grid">
+    <div class="why-img"><img src="img/why-team.jpg" alt="DigiRanx Pro strategists mapping a growth plan">
+      <div class="badge-card">${ic("shield")}<span><b style="font-size:22px;display:block">Results-driven</b>Every plan is built around leads and sales, not vanity metrics.</span></div>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Where creative thinking meets <span class="grad-text">digital growth</span></h2>
+        <p>We are a small, focused team. That means you speak to the people doing the work, decisions happen quickly, and your business never gets lost in a queue.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item">${mi("users")}<h3>One team, every channel</h3><p>Web, SEO, ads, social and branding work together instead of in silos.</p></div>
+        <div class="why-item">${mi("chart")}<h3>Clear, honest reporting</h3><p>Monthly reports in plain English that show calls, leads and sales.</p></div>
+        <div class="why-item">${mi("clock")}<h3>Long support hours</h3><p>We're available 8am to 10pm, Monday to Friday, when you need us.</p></div>
+        <div class="why-item">${mi("zap")}<h3>Fast turnaround</h3><p>Quick launches and quick fixes, without cutting corners.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>`;
+
+const S_FAQ = (list,alt)=>`
+<section class="sec${alt?" alt":""}" id="faq-sec"><div class="wrap">
+  <div class="faq-wrap">
+    <div class="faq-aside">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">FAQs</span>
+        <h2>Questions? <span class="grad-text">We've got answers</span></h2>
+        <p>The things business owners ask us most. Can't see yours? Call or email and we'll help.</p>
+      </div>
+      <div class="help-card">
+        <h3>Still have a question?</h3>
+        <p>Talk to our team Monday to Friday, 8am to 10pm.</p>
+        ${contactRow("phone","+44 7445 652671")}
+        ${contactRow("mail","info@digiranxpro.com")}
+      </div>
+    </div>
+    <div class="faq-list">${list.map((f,i)=>faqItem(f[1],f[2],i===0)).join("")}</div>
+  </div>
+</div></section>`;
+
+const S_FINAL = ()=>`
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="final">
+    <div><h2>Ready to grow your business online?</h2>
+    <p>Book a free 30-minute strategy call. We'll look at your website, your Google profile and your competitors, and give you a clear plan.</p></div>
+    <div class="acts"><a class="btn btn-white" href="#contact">Book a free call ${ic("arrow")}</a><a class="btn btn-line" href="#services">View services</a></div>
+  </div>
+</div></section>`;
+
+/* ================= PAGES ================= */
+function pageHome(){
+  return `
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Digital Marketing Agency · Wolverhampton</span>
+    <h1>Where creative thinking meets <span class="grad-text">digital growth.</span></h1>
+    <p class="lead">DIGIRANX PRO builds websites, ranks businesses on Google and runs ads that bring in real customers. One UK team for everything your business needs online.</p>
+    <div class="hero-actions">
+      <button class="btn btn-grad" data-scroll="audit">Get a free audit ${ic("arrow")}</button>
+      <a class="btn btn-ghost" href="#services">Explore services</a>
+    </div>
+    <div class="hero-meta">
+      <div>${stars()}<span><b>4.9 rating</b>From happy clients</span></div>
+      <div>${ic("pin")}<span><b>Wolverhampton</b>Serving the whole UK</span></div>
+      <div>${ic("clock")}<span><b>8am – 10pm</b>Monday to Friday</span></div>
+    </div>
+  </div>
+  <div class="hero-3d" id="hero3d">
+    <img class="fallback" id="hero3dFallback" src="logo-icon.png" alt="">
+    <div class="float-chip chip-a">${mi("trend")}<span><b>+212%</b>Organic traffic</span></div>
+    <div class="float-chip chip-b">${mi("pin")}<span><b>Top 3</b>Google Maps ranking</span></div>
+  </div>
+</div></section>
+<div class="marquee" aria-hidden="true"><div class="marquee-track">${[0,1].map(()=>`<span>${["GBP Optimization","SEO & Digital Marketing","Web Development","Google Ads","Social Media Marketing","Branding","E-commerce Solutions","UI/UX Designing"].map(t=>`<span>${t}</span>`).join("")}</span>`).join("")}</div></div>
+${S_ABOUT(false)}
+${S_SERVICES(true)}
+${S_CTA_FORM()}
+${S_REVIEWS(true)}
+${S_WHY(false)}
+${S_FAQ(FAQS.slice(0,6),true)}
+<div style="height:clamp(64px,9vw,112px)"></div>
+${S_FINAL()}`;
+}
+
+function pageAbout(){
+  return pageHero("About DIGIRANX PRO","A Wolverhampton team helping businesses grow and shine online with creative strategy and results-driven digital work.",[["About Us"]],"about-office")+
+  S_ABOUT(true)+`
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">What drives us</span><h2>Our mission, vision and <span class="grad-text">values</span></h2></div>
+  <div class="mv-grid">
+    <div class="mv">${mi("target")}<h3>Our Mission</h3><p>To give every business, big or small, the online presence it deserves, with honest advice and work that brings in real customers.</p></div>
+    <div class="mv">${mi("eye")}<h3>Our Vision</h3><p>To be the West Midlands' most trusted digital partner, known for creative ideas and measurable growth.</p></div>
+    <div class="mv">${mi("heart")}<h3>Our Values</h3><p>Transparency in every report, creativity in every project, and treating your budget like it's our own.</p></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">How we work</span><h2>A simple process from <span class="grad-text">first call to growth</span></h2></div>
+  <div class="steps">
+    <div class="step"><h3>Discover</h3><p>A free call and audit to understand your business, customers and competitors.</p></div>
+    <div class="step"><h3>Plan</h3><p>A clear proposal with goals, timelines and fixed prices. No surprises.</p></div>
+    <div class="step"><h3>Create</h3><p>We design, build and launch, keeping you updated at every stage.</p></div>
+    <div class="step"><h3>Grow</h3><p>We track results every month and keep improving what works.</p></div>
+  </div>
+</div></section>`+S_WHY(true)+S_REVIEWS(false)+S_FINAL();
+}
+
+function pageServices(){
+  return pageHero("Our Services","Fifteen digital services, one team. Pick what you need today and add more as you grow.",[["Our Services"]],"about-meeting")+
+  S_SERVICES(false)+`
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">How we work</span><h2>Every service follows the <span class="grad-text">same clear process</span></h2></div>
+  <div class="steps">
+    <div class="step"><h3>Discover</h3><p>Free audit and call to understand your goals.</p></div>
+    <div class="step"><h3>Plan</h3><p>Fixed-price proposal with clear deliverables.</p></div>
+    <div class="step"><h3>Deliver</h3><p>We build, launch and keep you updated.</p></div>
+    <div class="step"><h3>Report</h3><p>Monthly results and next steps in plain English.</p></div>
+  </div>
+</div></section>`+S_CTA_FORM()+S_FINAL();
+}
+
+function pageService(s){
+  const related = SERVICES.filter(x=>x.group===s.group && x.slug!==s.slug).slice(0,3);
+  return pageHero(s.name,s.short,[["Our Services","services"],[s.name]],s.img)+`
+<section class="sec"><div class="wrap sd-grid">
+  <div class="sd-main">
+    <img class="cover" src="img/${s.img}.jpg" alt="${s.name} by DigiRanx Pro">
+    <span class="eyebrow">${GROUPS[s.group].name}</span>
+    <h2>${s.name} that brings <span class="grad-text">real results</span></h2>
+    <p>${s.intro}</p>
+    <h2 style="font-size:28px">What's included</h2>
+    <div class="feat-grid">${s.feats.map(f=>`<div class="feat">${ic("check")}<div><b>${f[0]}</b><span>${f[1]}</span></div></div>`).join("")}</div>
+  </div>
+  <aside class="sd-side">
+    <div class="side-list"><h4>All Services</h4>
+      ${SERVICES.map(x=>`<a href="#service-${x.slug}"${x.slug===s.slug?' class="cur" aria-current="page"':""}>${mi(x.icon)}${x.name}</a>`).join("")}
+    </div>
+    <div class="help-card"><h3>Need help choosing?</h3><p>Call us Monday to Friday, 8am to 10pm.</p>${contactRow("phone","+44 7445 652671")}${contactRow("mail","info@digiranxpro.com")}</div>
+  </aside>
+</div></section>
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">How it works</span><h2>Our ${s.name} <span class="grad-text">process</span></h2></div>
+  <div class="steps">
+    <div class="step"><h3>Audit</h3><p>We review where you are now and where your competitors are.</p></div>
+    <div class="step"><h3>Strategy</h3><p>A clear plan and fixed price agreed with you.</p></div>
+    <div class="step"><h3>Execute</h3><p>Our team delivers the work and keeps you updated.</p></div>
+    <div class="step"><h3>Improve</h3><p>We measure results and keep improving.</p></div>
+  </div>
+</div></section>
+<section class="sec" id="pricing"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">Pricing</span><h2>${s.name} <span class="grad-text">packages</span></h2><p>Simple, fixed prices. All prices in GBP and exclude VAT.</p></div>
+  <div class="price-grid">${s.plans.map(p=>`
+    <div class="plan${p.pop?" pop":""}">${p.pop?'<span class="tagpop">Most popular</span>':""}
+      <div><h3>${p.name}</h3></div><p class="pdesc">${p.desc}</p>
+      <div class="amt">${p.price==="Custom"?`<b>Custom</b><span>quote</span>`:`<b>£${p.price}</b><span>${p.unit}</span>`}</div>
+      <ul>${p.feats.map(f=>`<li>${ic("check")}${f}</li>`).join("")}</ul>
+      <a class="btn ${p.pop?"btn-grad":"btn-ghost"}" href="#contact">Choose ${p.name} ${ic("arrow")}</a>
+    </div>`).join("")}
+  </div>
+  <p class="price-note">Need something different? We'll put together a custom package for you.</p>
+</div></section>
+${S_FAQ(s.faqs.map(f=>["",f[0],f[1]]).concat(FAQS.filter(f=>f[0]!=="general").slice(0,3)),true)}
+<section class="sec"><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">Related</span><h2>Services that work well <span class="grad-text">together</span></h2></div>
+  <div class="svc-grid">${related.map(svcCard).join("")}</div>
+</div></section>
+${S_FINAL()}`;
+}
+
+function pageBlog(){
+  return pageHero("Our Blog","Practical guides on SEO, Google Maps, websites and ads for UK business owners.",[["Our Blog"]],"blog-1")+`
+<section class="sec"><div class="wrap">
+  <div class="blog-grid">${POSTS.map(p=>`<a class="post" href="#${p.slug}"><img src="img/${p.img}.jpg" alt="" loading="lazy"><div class="pb">
+    <div class="meta"><span class="cat">${p.cat}</span><span>${p.date}</span><span>${p.read} read</span></div>
+    <h3>${p.title}</h3><p>${p.ex}</p><span class="more" style="color:var(--cyan);font-weight:700;display:inline-flex;gap:8px;align-items:center">Read article ${ic("arrow")}</span></div></a>`).join("")}</div>
+</div></section>`+S_FINAL();
+}
+
+function pagePost(p){
+  const body = p.body.map(b=>b[0]==="p"?`<p>${b[1]}</p>`:b[0]==="h"?`<h2>${b[1]}</h2>`:`<ul>${b[1].map(i=>`<li>${i}</li>`).join("")}</ul>`).join("");
+  return pageHero(p.title,"",[["Our Blog","blog"],[p.cat]],p.img)+`
+<section class="sec"><div class="wrap"><article class="article">
+  <div class="post" style="background:none;border:0"><div class="meta"><span class="cat">${p.cat}</span><span>${p.date}</span><span>${p.read} read</span><span>By DigiRanx Pro</span></div></div>
+  <img src="img/${p.img}.jpg" alt="">
+  ${body}
+  <div class="help-card" style="margin-top:20px"><h3>Want us to do this for you?</h3><p>Our team can handle it end to end. Get a free audit and a clear plan.</p><a class="btn btn-grad" href="#contact" style="justify-self:start">Get a free audit ${ic("arrow")}</a></div>
+</article></div></section>`;
+}
+
+function pageFaqs(){
+  const cats = {general:"General",process:"Process",pricing:"Pricing & Payments",support:"Support"};
+  return pageHero("Frequently Asked Questions","Straight answers about our services, pricing and how we work.",[["FAQs"]],"why-team")+
+  Object.entries(cats).map(([k,name],i)=>`
+<section class="sec${i%2?" alt":""}" style="padding-block:clamp(48px,6vw,80px)"><div class="wrap">
+  <div class="faq-wrap">
+    <div class="sec-head" style="margin:0"><span class="eyebrow">${name}</span><h2>${name} <span class="grad-text">questions</span></h2></div>
+    <div class="faq-list">${FAQS.filter(f=>f[0]===k).map((f,j)=>faqItem(f[1],f[2],j===0)).join("")}</div>
+  </div>
+</div></section>`).join("")+S_FINAL();
+}
+
+function pageContact(){
+  return pageHero("Contact Us","Tell us about your business and we'll reply within one working day.",[["Contact Us"]],"cta-work")+`
+<section class="sec"><div class="wrap">
+  <div class="ci-grid">
+    <div class="ci">${mi("phone")}<h3>Call Us</h3><p><a href="tel:+447445652671">+44 7445 652671</a></p></div>
+    <div class="ci">${mi("mail")}<h3>Email Us</h3><p><a href="mailto:info@digiranxpro.com">info@digiranxpro.com</a></p></div>
+    <div class="ci">${mi("pin")}<h3>Visit Us</h3><p>Office 1922, 85 Dunstall Hill, Wolverhampton, WV6 0SR, UK</p></div>
+    <div class="ci">${mi("clock")}<h3>Opening Hours</h3><p>Mon – Fri: 8am – 10pm<br>Sat – Sun: Closed</p></div>
+  </div>
+  <div class="cta-box">
+    <div class="cta-side" style="--cta-img:url(img/about-meeting.jpg)">
+      <div style="display:grid;gap:16px"><span class="eyebrow">Get in touch</span><h2>Let's grow your business together</h2>
+      <p class="lead">Whether you need a new website, more calls from Google or a full marketing plan, we're here to help.</p></div>
+      <div class="contact-mini">${contactRow("phone","+44 7445 652671")}${contactRow("mail","info@digiranxpro.com")}</div>
+    </div>
+    ${FORM("contact","Send us a message","Fill in the form and our team will be in touch.")}
+  </div>
+  <a class="map-card" href="https://www.google.com/maps/search/?api=1&query=85+Dunstall+Hill+Wolverhampton+WV6+0SR" target="_blank" rel="noopener">
+    <div><span class="eyebrow">Our office</span><b>85 Dunstall Hill, Wolverhampton</b><span style="color:var(--muted)">Open in Google Maps ${ic("arrow")}</span></div>
+  </a>
+</div></section>`+S_FAQ(FAQS.slice(0,4),true);
+}
+
+/* ================= ROUTER ================= */
+const app = document.getElementById("app");
+let stop3d = null;
+function route(){
+  const h = (location.hash||"#home").slice(1) || "home";
+  let html, key = h;
+  if(h==="home") html = pageHome();
+  else if(h==="about") html = pageAbout();
+  else if(h==="services") html = pageServices();
+  else if(h.startsWith("service-") && SVC[h.slice(8)]) {html = pageService(SVC[h.slice(8)]); key="services";}
+  else if(h==="blog") html = pageBlog();
+  else if(h.startsWith("post-") && POSTS.find(p=>p.slug===h)) {html = pagePost(POSTS.find(p=>p.slug===h)); key="blog";}
+  else if(h==="faqs") html = pageFaqs();
+  else if(h==="contact") html = pageContact();
+  else {html = pageHome(); key="home";}
+  if(stop3d){stop3d();stop3d=null;}
+  app.innerHTML = `<div class="pg">${html}</div>`;
+  document.querySelectorAll(".nav-link").forEach(a=>a.classList.toggle("active",a.dataset.r===key));
+  closeMenus();
+  window.scrollTo(0,0);
+  bindPage();
+  if(document.getElementById("hero3d")) stop3d = initHero3D(document.getElementById("hero3d"));
+}
+window.addEventListener("hashchange",route);
+
+/* ================= INTERACTIONS ================= */
+function bindPage(){
+  app.querySelectorAll(".tabs").forEach(t=>t.addEventListener("click",e=>{
+    const b=e.target.closest(".tab"); if(!b) return;
+    t.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    const f=b.dataset.f;
+    app.querySelectorAll("#svcGrid .svc").forEach(c=>c.hidden = !(f==="all"||c.dataset.g===f));
+  }));
+  app.querySelectorAll("form.form").forEach(f=>f.addEventListener("submit",e=>{
+    e.preventDefault();
+    const name=f.querySelector("[name=name]"), email=f.querySelector("[name=email]");
+    let ok=true;
+    [name,email].forEach(i=>{const bad=!i.value.trim()||(i.type==="email"&&!/^\S+@\S+\.\S+$/.test(i.value)); i.style.borderColor=bad?"var(--magenta)":""; if(bad) ok=false;});
+    if(!ok){(name.value.trim()?email:name).focus();return;}
+    f.querySelector(".form-ok").hidden=false;
+  }));
+  const track=app.querySelector("#revTrack");
+  app.querySelectorAll(".rev-nav button").forEach(b=>b.addEventListener("click",()=>{
+    const card=track.querySelector(".rev"); track.scrollBy({left:(card.offsetWidth+18)*Number(b.dataset.dir),behavior:"smooth"});
+  }));
+  app.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{
+    document.getElementById(b.dataset.scroll)?.scrollIntoView({behavior:"smooth"});
+  }));
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest(".copy-btn"); if(!c) return;
+  const done=()=>{c.textContent="Copied";setTimeout(()=>c.textContent="Copy",1600);};
+  try{navigator.clipboard.writeText(c.dataset.copy).then(done,()=>selectText(c));}catch(_){selectText(c);}
+});
+function selectText(btn){const s=btn.previousElementSibling;const r=document.createRange();r.selectNodeContents(s);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);}
+
+/* Mega menu + drawer */
+const mega=document.getElementById("mega"), megaLi=document.getElementById("megaLi"), megaBtn=document.getElementById("megaBtn");
+mega.innerHTML = Object.entries(GROUPS).map(([k,g])=>`<div class="mega-col"><h4>${g.name}</h4>${SERVICES.filter(s=>s.group===k).map(s=>`<a href="#service-${s.slug}">${mi(s.icon)}<span><b>${s.name}</b><span class="sub">${s.short.split(/[,.]/)[0]}</span></span></a>`).join("")}</div>`).join("")+
+ `<div class="mega-promo" style="--promo:url(img/hero-team.jpg)"><h5>Not sure where to start?</h5><p>Get a free audit of your website and Google presence.</p><a class="btn btn-grad" href="#contact">Free audit ${ic("arrow")}</a></div>`;
+megaBtn.addEventListener("click",()=>{const o=megaLi.classList.toggle("open");megaBtn.setAttribute("aria-expanded",o);});
+document.addEventListener("click",e=>{if(!megaLi.contains(e.target)){megaLi.classList.remove("open");megaBtn.setAttribute("aria-expanded","false");}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape") closeMenus();});
+const drawer=document.getElementById("drawer");
+document.getElementById("dSvc").innerHTML = `<a href="#services">${mi("layout")}All Services</a>`+SERVICES.map(s=>`<a href="#service-${s.slug}">${mi(s.icon)}${s.name}</a>`).join("");
+document.getElementById("burger").addEventListener("click",()=>{drawer.classList.add("open");drawer.setAttribute("aria-hidden","false");});
+document.getElementById("drawerClose").addEventListener("click",closeMenus);
+drawer.addEventListener("click",e=>{if(e.target===drawer) closeMenus();});
+document.getElementById("dSvcBtn").addEventListener("click",e=>{const o=document.getElementById("dSvc").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o);});
+function closeMenus(){drawer.classList.remove("open");drawer.setAttribute("aria-hidden","true");megaLi.classList.remove("open");megaBtn.setAttribute("aria-expanded","false");mega.style.pointerEvents="none";requestAnimationFrame(()=>setTimeout(()=>mega.style.pointerEvents="",250));}
+document.getElementById("ftrSvc").innerHTML = SERVICES.slice(0,7).map(s=>`<li><a href="#service-${s.slug}">${s.name}</a></li>`).join("")+`<li><a href="#services">View all services</a></li>`;
+document.getElementById("newsForm").addEventListener("submit",e=>{e.preventDefault();const v=document.getElementById("newsEmail").value;document.getElementById("newsMsg").textContent=/^\S+@\S+\.\S+$/.test(v)?"Thanks! Newsletter sign-up goes live on the WordPress site.":"Please enter a valid email address.";});
+
+/* ================= 3D HERO ================= */
+function initHero3D(host){
+  if(!window.THREE) return null;
+  let renderer;
+  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});}catch(_){return null;}
+  document.getElementById("hero3dFallback")?.remove();
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  host.prepend(renderer.domElement);
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(35,1,.1,100); cam.position.set(0,0,9.2);
+  const cyan=new THREE.Color("#1EC8F5"), violet=new THREE.Color("#8A3BFF"), mag=new THREE.Color("#FF2EA6");
+  const grad=t=>t<.5?cyan.clone().lerp(violet,t*2):violet.clone().lerp(mag,(t-.5)*2);
+
+  const group=new THREE.Group(); scene.add(group);
+  // the "D" arc from the logo
+  const arcLen=Math.PI*1.12, R=1.55, r=.52;
+  const tor=new THREE.TorusGeometry(R,r,64,220,arcLen);
+  const pos=tor.attributes.position, cols=[];
+  for(let i=0;i<pos.count;i++){const a=Math.atan2(pos.getY(i),pos.getX(i)); let t=(a<0?a+Math.PI*2:a)/arcLen; t=Math.min(Math.max(t,0),1); const c=grad(1-t); cols.push(c.r,c.g,c.b);}
+  tor.setAttribute("color",new THREE.Float32BufferAttribute(cols,3));
+  const mat=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.22,metalness:.15,clearcoat:1,clearcoatRoughness:.12,emissive:new THREE.Color("#2a0a55"),emissiveIntensity:.35});
+  const arc=new THREE.Mesh(tor,mat); arc.rotation.z=-arcLen/2; arc.position.x=.55;
+  // rounded caps
+  [0,arcLen].forEach((a,k)=>{const cap=new THREE.Mesh(new THREE.SphereGeometry(r,48,32),new THREE.MeshPhysicalMaterial({color:k?cyan:mag,roughness:.22,clearcoat:1,emissive:new THREE.Color("#2a0a55"),emissiveIntensity:.35})); cap.position.set(Math.cos(a)*R,Math.sin(a)*R,0); arc.add(cap);});
+  group.add(arc);
+  // dissolving dot field
+  const dots=[]; const sg=new THREE.SphereGeometry(1,20,14);
+  const inst=new THREE.InstancedMesh(sg,new THREE.MeshPhysicalMaterial({roughness:.3,clearcoat:.8,emissive:new THREE.Color("#1a0638"),emissiveIntensity:.4}),400);
+  let n=0; const step=.27;
+  for(let y=-1.9;y<=1.9;y+=step){for(let x=-2.4;x<=.55;x+=step){
+    const xx=x+((Math.round(y/step))%2?step/2:0);
+    const edge=-1.2-Math.abs(y)*.55;               // slanted left edge like the logo
+    const k=(xx-edge)/(0.55-edge); if(k<0) continue;
+    if(Math.random()>Math.min(1,k*1.4+.1)) continue;
+    const s=.035+.085*Math.min(1,k);
+    dots.push({x:xx,y,s,p:Math.random()*6.28,z:(Math.random()-.5)*.4});
+    if(++n>=400) break;}}
+  inst.count=dots.length;
+  const m4=new THREE.Matrix4();
+  dots.forEach((d,i)=>{inst.setColorAt(i,grad((1.9-d.y)/3.8));});
+  group.add(inst);
+  group.rotation.set(.12,-.38,0);
+  // lights
+  scene.add(new THREE.AmbientLight(0xffffff,.55));
+  const key=new THREE.DirectionalLight(0xffffff,1.3); key.position.set(3,4,6); scene.add(key);
+  const l1=new THREE.PointLight(0x1EC8F5,2.2,20); l1.position.set(-4,3,3); scene.add(l1);
+  const l2=new THREE.PointLight(0xFF2EA6,1.4,20); l2.position.set(4,-3,3); scene.add(l2);
+  // orbit ring
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.75,.012,8,200),new THREE.MeshBasicMaterial({color:0x8A3BFF,transparent:true,opacity:.45}));
+  ring.rotation.x=1.25; scene.add(ring);
+
+  let mx=0,my=0,raf,t0=performance.now(),vis=true;
+  const onMove=e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);};
+  addEventListener("pointermove",onMove);
+  const size=()=>{const w=host.clientWidth,h=host.clientHeight; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix();};
+  const ro=new ResizeObserver(size); ro.observe(host); size();
+  const io=new IntersectionObserver(([en])=>{vis=en.isIntersecting;}); io.observe(host);
+  function frame(now){
+    raf=requestAnimationFrame(frame);
+    if(!vis) return;
+    const t=(now-t0)/1000;
+    dots.forEach((d,i)=>{const b=reduce?0:Math.sin(t*1.6+d.p)*.08; m4.makeScale(d.s,d.s,d.s); m4.setPosition(d.x,d.y+b*.4,d.z+b); inst.setMatrixAt(i,m4);});
+    inst.instanceMatrix.needsUpdate=true;
+    const sway=reduce?0:Math.sin(t*.5)*.18;
+    group.rotation.y+=((-.38+sway+mx*.5)-group.rotation.y)*.05;
+    group.rotation.x+=((.12+my*.3)-group.rotation.x)*.05;
+    group.position.y=reduce?0:Math.sin(t*.8)*.08;
+    ring.rotation.z=t*.15;
+    renderer.render(scene,cam);
+  }
+  raf=requestAnimationFrame(frame);
+  return ()=>{cancelAnimationFrame(raf);removeEventListener("pointermove",onMove);ro.disconnect();io.disconnect();renderer.dispose();};
+}
+
+route();
+</script>
