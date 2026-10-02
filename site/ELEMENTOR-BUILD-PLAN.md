@@ -67,3 +67,12 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Home page **39** published (Elementor Full Width template): hero, 3-card strip, About, dark Services (6 + View All), light audit form (e-form, emails info@digiranxpro.com), Reviews (6), Why Choose Us, FAQ (6, FAQ schema on), final CTA.
 - Hero visual uses the logo mark until `digiranx-hero-globe.png` is uploaded; then swap the "Hero Globe" image.
 - Shared section builders: `site/wp-build/blocks.py`; page builder: `site/wp-build/b_home.py`.
+
+### Phase 4 (inner pages + blog) - done
+- Published: About Us 40, Our Services 41 (filter tabs, 15 services), Contact Us 44 (info cards, map card, form, 10 FAQs), FAQs 43 (12 FAQs in one 2-column box), Privacy 3, Terms 45, Cookie 46.
+- Hero globe image (attachment 167) placed on Home.
+- Blog: page 42 set as Posts page via REST; 6 posts (189, 192, 195, 198, 201, 204) with categories, slugs, excerpts, featured images and Elementor bodies.
+- Theme Builder: Blog Archive **208** (include/archive, loop grid) and Blog Single Post **209** (include/singular/post).
+- Site title "DigiRanx Pro", tagline "Where creative thinking meets digital growth". Sample "Hello world!" post moved to Trash.
+- WordPress REST API also accepts the application password (used for settings, categories, post meta).
+- Overflow check passed at 360/390/768/1024/1280px on all live pages.
