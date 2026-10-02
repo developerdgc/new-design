@@ -87,7 +87,7 @@ def form(b,cid,fields_id,title=None,note=None,subject="New enquiry from digiranx
         if kind=="textarea":
             inner.append(e("e-form-textarea",f"{cid} {label} Field",cfg={"placeholder":ph,"rows":4,"required":required},style=INP+" min-height: 110px;"))
         elif kind=="select":
-            opts=[{"key":"Select a service","value":"Select a service"}]+[{"key":v[0],"value":v[0]} for v in SERVICE_NAMES.values()]+[{"key":"Not sure yet","value":"Not sure yet"}]
+            opts=[{"key":"Select a service","value":"Select a service"}]+[{"key":v[0].replace("&","and"),"value":v[0].replace("&","and")} for v in SERVICE_NAMES.values()]+[{"key":"Not sure yet","value":"Not sure yet"}]
             inner.append(e("e-form-select",f"{cid} {label} Field",cfg={"name":key,"options":opts},style=INP))
         else:
             inner.append(e("e-form-input",f"{cid} {label} Field",cfg={"placeholder":ph,"type":kind,"required":required,"_cssid":fid},style=INP))

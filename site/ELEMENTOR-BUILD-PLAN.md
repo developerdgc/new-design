@@ -37,7 +37,7 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 3. **Homepage:** Hero (texture bg + 3D globe), 3-card strip, About, dark Services band (6 + View All), light audit form, Reviews (world-dots bg), Why Choose Us, FAQ (split layout, 6), final CTA.
 4. **Inner pages:** About, Services listing (15 + filter), Contact, FAQs (2-column box, 12), Blog archive + Single Post template, Privacy Policy, Terms & Conditions, Cookie Policy.
 5. **15 service pages:** one master layout (Hero, Intro + What's Included, Why Choose Us, Benefits, Packages, Steps timeline, 10 FAQs, call CTA; sidebar with All Services + Request a Quote form), then duplicate and fill from `site/content/<slug>.json`.
-6. **SEO:** Rank Math titles and descriptions from the JSON files, LocalBusiness schema, sitemap.
+6. **SEO (skipped for now at the client's request):** Rank Math titles and descriptions from the JSON files, LocalBusiness schema, sitemap.
 7. **QA:** responsive pass, form emails to info@digiranxpro.com, speed check.
 
 ## Before going live
@@ -82,3 +82,21 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - All 15 published with the Elementor Full Width template. URLs: /gbp-optimization/, /web-development/, /custom-web-design/, /responsive-development/, /ui-ux-designing/, /graphic-designing/, /reviews/, /seo-digital-marketing/, /landing-pages/, /software-development/, /social-media-marketing/, /branding/, /google-ads/, /citations-backlinks/, /e-commerce-solutions/.
 - Image attachment 92 slug changed to `custom-web-design-image` so the page could take `/custom-web-design/`.
 - Overflow check passed at 375/768/1280px on all 15 pages.
+
+### Phase 7 (QA) - done
+- All 26 pages/posts return 200, one H1 each, page titles "<Page> – DigiRanx Pro"; 30 internal links all 200.
+- Alt text set on 34 Media Library images via REST (renders site-wide).
+- Favicon: `digiranx-pro-favicon.png` (attachment 251) set as Site Icon.
+- Custom 404 site part **252** (returns HTTP 404).
+- Header nav kept on one line at 1025-1200px (kit CSS).
+- Form test: contact form submitted once ("TEST - QA check"); Elementor reported "Email sent successfully" and showed the success message.
+- Bug fixed: select options with "&" rendered as "&amp;amp;"; all 18 forms now use "and".
+- Overflow check passed at 360/390/768/1024/1366px on all pages including 404.
+- Speed: home TTFB ~0.5s (LiteSpeed cache hit), uncached inner pages 1.3-2.3s on first hit. Home ~78 requests / ~3.3 MB uncompressed (JS ~830 KB from Elementor + plugins, Roboto fonts from the default kit ~200 KB).
+
+## Recommended next steps (manual, in WP Admin)
+- LiteSpeed Cache: enable page cache for all pages, image optimisation (WebP), CSS/JS minify.
+- Elementor > Settings: load Google Fonts locally; remove unused Roboto/Roboto Slab from the default kit typography.
+- Deactivate unused Hostinger plugins (e.g. Hostinger Reach) if not needed.
+- Install an SMTP plugin (e.g. WP Mail SMTP) so form emails reach the inbox reliably.
+- Phase 6 (Rank Math meta titles/descriptions, LocalBusiness schema) when ready - copy is in `site/content/*.json`.
