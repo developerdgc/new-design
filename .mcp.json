@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "digiranxpro-com-elementor": {
+      "type": "http",
+      "url": "https://digiranxpro.com/wp-json/elementor/mcp/",
+      "headers": {
+        "Authorization": "Basic ${DIGIRANX_MCP_AUTH}"
+      }
+    }
+  }
+}
