@@ -44,3 +44,13 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 - Replace placeholder claims: hero "4.9 rating", the AI-written reviews, and package prices if they change.
 - Add real social media links.
 - Have the policy pages reviewed.
+
+## Progress log
+### Phase 1 (setup) - done via MCP on 2 Oct 2026
+- 18 V4 global variables (`dg-*` colours, `dg-font` Urbanist, radius, container, section padding).
+- Site-wide default styles for h1-h6, p, a (Urbanist, capitalised headings, dark text).
+- 22 global classes: `dg-section`, `dg-wrap`, `dg-bg-light`, `dg-bg-dark`, `dg-sec-head(-center)`, `dg-eyebrow(-dark)`, `dg-lead`, `dg-btn` + `dg-btn-grad|white|outline|ghost-w` (+ `-on-dark` hover modifiers), `dg-card(-tint)`, `dg-icon-box`, `dg-icon-circle`, `dg-text-white`, `dg-text-soft-white`.
+- Draft pages (post IDs): Home 39, About Us 40, Our Services 41, Blog 42, FAQs 43, Contact Us 44, Terms & Conditions 45, Cookie Policy 46, Privacy Policy 3.
+  Services: GBP 47, Web Development 48, Custom Web Design 49, Responsive Development 50, UI/UX 51, Graphic 52, Reviews 53, SEO 54, Landing Pages 55, Software 56, Social Media 57, Branding 58, Google Ads 59, Citations & Backlinks 60, E-commerce 61.
+- Media upload pack: `site/wp-upload/` (SEO-named images, logos, SVG icons). MCP cannot upload media; upload manually.
+- `site/tools-mcp.py`: CLI client for the MCP server (reads `DIGIRANX_MCP_AUTH`).
