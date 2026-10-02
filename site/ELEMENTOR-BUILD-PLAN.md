@@ -118,3 +118,6 @@ Shared data (services, packages, reviews, general FAQs, blog posts, policies): i
 
 ### Hero Lottie
 - Client added an Elementor Pro Lottie widget with `digiranx-globe-lottie.json` (attachment 314, loop, autoplay). Kit CSS adds a soft glow and limits it to 420px on tablet / 320px on mobile.
+
+### Service URL hierarchy
+- Page 41 slug changed to `services`; the 15 service pages now have parent 41, so URLs are `/services/<slug>/`. Old `/<slug>/` URLs 301 automatically. `/our-services/` returns 404 and needs a manual Rank Math redirect to `/services/` (the Hostinger WAF blocks the Rank Math redirection REST call).
