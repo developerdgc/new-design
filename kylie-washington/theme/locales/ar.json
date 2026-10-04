@@ -94,6 +94,7 @@
       "description": "الوصف",
       "add_to_cart_button": "إضافة إلى السلة",
       "pre_order_button": "الطلب المسبق",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "نفد من المخزون",
       "unavailable_button": "غير متوفر",
       "choose_options": "حدِّد الخيارات",

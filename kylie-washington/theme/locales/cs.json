@@ -94,6 +94,7 @@
       "description": "Popis",
       "add_to_cart_button": "Přidat do košíku",
       "pre_order_button": "Rezervace",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Vyprodáno",
       "unavailable_button": "Není k dispozici",
       "choose_options": "Vyberte možnosti",

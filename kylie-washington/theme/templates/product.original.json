@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "lg",
+        "product_info_size": 38,
+        "show_sticky_add_to_cart": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 24,
+        "mobile_controls": "dots",
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "none"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "enquire": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/contact",
+            "text": "Enquire about this work",
+            "stretch": true,
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#1f1d1b"
+          }
+        },
+        "about": {
+          "type": "accordion",
+          "settings": {
+            "title": "About the Work",
+            "show_below_gallery": false,
+            "icon": "none",
+            "liquid": "{{ product.description }}"
+          }
+        },
+        "details": {
+          "type": "accordion",
+          "settings": {
+            "title": "Artwork Details",
+            "show_below_gallery": false,
+            "icon": "none",
+            "liquid": "{% render 'artwork-details', product: product %}"
+          }
+        },
+        "collecting": {
+          "type": "accordion",
+          "settings": {
+            "title": "Collecting this Work",
+            "show_below_gallery": false,
+            "icon": "none",
+            "content": "<p>Each painting is a one-of-a-kind original by Kylie Washington, made in her studio at Pearl Beach on the NSW Central Coast.</p><p>If you would like more photographs, a closer look at the surface, or advice on hanging, please <a href=\"/pages/contact\">get in touch</a> before purchasing.</p>"
+          }
+        },
+        "delivery": {
+          "type": "accordion",
+          "settings": {
+            "title": "Delivery",
+            "show_below_gallery": false,
+            "icon": "none",
+            "content": "<p>Please allow up to 4 business days for your painting to be carefully packed and dispatched. You will receive an email as soon as it is on its way.</p><p>Free shipping within Australia with Australia Post, typically 3–10 business days (longer for remote areas).</p><p>We do not currently ship outside Australia. Please <a href=\"/pages/contact\">enquire</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "separator",
+        "variant_picker",
+        "buy_buttons",
+        "enquire",
+        "about",
+        "details",
+        "collecting",
+        "delivery"
+      ]
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

@@ -94,6 +94,7 @@
       "description": "説明文",
       "add_to_cart_button": "カートに追加",
       "pre_order_button": "先行予約",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "売り切れ",
       "unavailable_button": "選択不可能",
       "choose_options": "オプションを選択",

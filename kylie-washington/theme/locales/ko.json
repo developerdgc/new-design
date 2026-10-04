@@ -94,6 +94,7 @@
       "description": "상세정보",
       "add_to_cart_button": "장바구니 담기",
       "pre_order_button": "예약 주문",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "매진",
       "unavailable_button": "이용 불가",
       "choose_options": "옵션 선택",

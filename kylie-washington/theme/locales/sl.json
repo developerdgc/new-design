@@ -94,6 +94,7 @@
       "description": "Opis",
       "add_to_cart_button": "Dodaj v košarico",
       "pre_order_button": "Prednaročilo",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Razprodano",
       "unavailable_button": "Ni na voljo",
       "choose_options": "Izberite možnosti",

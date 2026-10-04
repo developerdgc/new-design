@@ -94,6 +94,7 @@
       "description": "Описание",
       "add_to_cart_button": "Добавить в корзину",
       "pre_order_button": "Предзаказ",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Нет в наличии",
       "unavailable_button": "Недоступно",
       "choose_options": "Выберите параметры",

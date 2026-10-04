@@ -171,8 +171,16 @@
               </a>
             {%- endif -%}
 
+            {%- if show_title -%}
+              {%- render 'artwork-caption', product: product -%}
+            {%- endif -%}
+
             {%- if show_prices -%}
-              {%- render 'price-list', product: product, context: 'card' -%}
+              {%- if product.tags contains 'Sold' -%}
+                <span class="artwork-sold text-subdued">{{ 'product.general.sold_out_badge' | t }}</span>
+              {%- else -%}
+                {%- render 'price-list', product: product, context: 'card' -%}
+              {%- endif -%}
             {%- endif -%}
           </div>
         {%- endif -%}

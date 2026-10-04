@@ -103,13 +103,22 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 
 ### Phase A (theme settings): DONE Oct 4, pushed to #146130927667
 - `config/settings_data.json` `current` is now an object (was the "Prestige" preset). Colour schemes: 1 = paper `#f7f5f1`/ink `#1f1d1b` (default) · 2 = white (modals/drawers) · 3 = ink dark · 4 = transparent/white text (image overlays) · 5 = line-beige `#e3ded6`.
-- Fonts: headings Jost 400 uppercase, letter spacing 15; body Instrument Sans 400, 15px desktop / 14px mobile. Buttons heading font, uppercase, square corners. Section spacing `lg`.
+- Fonts (changed in Phase B at user's request for something more distinctive): headings **Tenor Sans** uppercase, letter spacing 12; body **Karla**, 16px desktop / 15px mobile. Confirmed loading on the preview. Buttons heading font, uppercase, square corners. Section spacing `lg`.
 - Product cards: natural ratio, no hover image, no vendor, no rating, no quick buy, no discount badge, colour swatches hidden, body font. Sale accent set to ink (no red). Image zoom on hover off.
 - Newsletter popup disabled (`overlay-group.json`). Free shipping bar off. Empty cart link → Originals.
 - Locale `en.default.json`: "Sold out" → "Sold" (button + badge).
 - Social: instagram.com/kyliewashington_art, youtube.com/@kyliewashington_art (URL format assumed; confirm).
 - Not settable in theme settings, do in Phase B CSS: muted text `#6E6962`, line colour `#E3DED6`. Favicon/logo: need files from client.
 - Playwright screenshots of the preview fail with ERR_CERT_AUTHORITY_INVALID through the sandbox proxy; verify visually via the preview link instead.
+
+### Phase B (templates + custom code): DONE Oct 4, pushed to #146130927667
+- `templates/product.original.json`: title, price, variant picker (Colour Studies), buy button "Acquire this work" (no quantity, no dynamic checkout), outline "Enquire about this work" button → /pages/contact, accordions About the Work (description) / Artwork Details (`snippets/artwork-details.liquid`, metafields) / Collecting this Work / Delivery (text from client shipping policy). Sticky add to cart off. Related products below.
+- `templates/product.print.json`: size buttons (block style, price updates), print note, buy button, accordions Print Details / Sizes (built from the product's own Size option values) / Delivery (14-day print-to-order).
+- `templates/collection.json` + `collection.archive.json`: title banner without image, 3 per row desktop / 1 per row mobile, wider spacing, filter drawer, no grid switcher/result count. Archive has no sort.
+- Assigned via Admin API: 57 Originals → `original`, 45 prints → `print`, Archive collection → `archive`. (Live Horizon theme has no such templates, so it falls back to its default; harmless.)
+- Custom code: `snippets/artwork-caption.liquid` (Year · Medium · Size under cards for products tagged `Originals`); `product-card.liquid` shows "Sold" instead of price for tag `Sold`; `buy-buttons.liquid` uses `product.general.acquire_button` for tag `Originals`; `assets/kylie.css` (muted #6E6962, details list) loaded in `layout/theme.liquid`; `acquire_button` key added to every locale.
+- Not yet visually verified: product pages 404 on the storefront while products are Draft. Collections render without Liquid errors.
+- Preview check from the sandbox works with curl (cookie jar + POST /password with `$STORE_PASSWORD`, then `?preview_theme_id=`); Playwright does not (TLS).
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)

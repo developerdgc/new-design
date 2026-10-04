@@ -94,6 +94,7 @@
       "description": "Descripción",
       "add_to_cart_button": "Añadir a la cesta",
       "pre_order_button": "Pedido previo",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Agotado",
       "unavailable_button": "No disponible",
       "choose_options": "Elige opciones",

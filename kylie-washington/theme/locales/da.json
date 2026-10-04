@@ -94,6 +94,7 @@
       "description": "Beskrivelse",
       "add_to_cart_button": "Føj til indkøbskurv",
       "pre_order_button": "Forudbestil",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Udsolgt",
       "unavailable_button": "Ikke tilgængelig",
       "choose_options": "Vælg muligheder",

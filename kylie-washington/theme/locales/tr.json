@@ -94,6 +94,7 @@
       "description": "Açıklama",
       "add_to_cart_button": "Sepete ekle",
       "pre_order_button": "Ön sipariş ver",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Tükendi",
       "unavailable_button": "Mevcut değil",
       "choose_options": "Seçenekleri belirleyin",

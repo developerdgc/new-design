@@ -94,6 +94,7 @@
       "description": "Descriere",
       "add_to_cart_button": "Adaugă în coș",
       "pre_order_button": "Precomandă",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Stoc epuizat",
       "unavailable_button": "Indisponibil",
       "choose_options": "Alege opțiunile",

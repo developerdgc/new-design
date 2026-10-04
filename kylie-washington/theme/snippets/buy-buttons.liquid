@@ -46,6 +46,8 @@
         else
           if product.template_suffix contains 'pre-order'
             assign button_content = 'product.general.pre_order_button' | t
+          elsif product.tags contains 'Originals'
+            assign button_content = 'product.general.acquire_button' | t
           else
             assign button_content = 'product.general.add_to_cart_button' | t
           endif

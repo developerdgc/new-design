@@ -94,6 +94,7 @@
       "description": "Kuvaus",
       "add_to_cart_button": "Lisää ostoskoriin",
       "pre_order_button": "Tee ennakkotilaus",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Loppuunmyyty",
       "unavailable_button": "Ei saatavilla",
       "choose_options": "Valitse vaihtoehdot",

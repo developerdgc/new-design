@@ -94,6 +94,7 @@
       "description": "Beschrijving",
       "add_to_cart_button": "Toevoegen aan winkelwagen",
       "pre_order_button": "Vooruitbestellen",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Uitverkocht",
       "unavailable_button": "Niet beschikbaar",
       "choose_options": "Opties kiezen",

@@ -94,6 +94,7 @@
       "description": "Aprašymas",
       "add_to_cart_button": "Įdėti į krepšelį",
       "pre_order_button": "Pateikti išankstinį užsakymą",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Išparduota",
       "unavailable_button": "Neprieinama",
       "choose_options": "Pasirinkti parinktis",

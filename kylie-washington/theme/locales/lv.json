@@ -94,6 +94,7 @@
       "description": "Apraksts",
       "add_to_cart_button": "Pievienot grozam",
       "pre_order_button": "Pasūtīt iepriekš",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Izpārdots",
       "unavailable_button": "Nav pieejams",
       "choose_options": "Izvēlieties variantus",

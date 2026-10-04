@@ -1,0 +1,31 @@
+{%- doc -%}
+  Gallery-style caption under an original artwork card: Year · Medium · Size.
+  Uses the product metafields custom.custom_year / custom_medium / custom_dimensions.
+  Only rendered for products tagged "Originals".
+
+  @param {object} product
+{%- enddoc -%}
+
+{%- if product.tags contains 'Originals' -%}
+  {%- liquid
+    assign parts = ''
+    assign year = product.metafields.custom.custom_year.value
+    assign medium = product.metafields.custom.custom_medium.value
+    assign size = product.metafields.custom.custom_dimensions.value
+
+    if year != blank
+      assign parts = parts | append: year | append: '|'
+    endif
+    if medium != blank
+      assign parts = parts | append: medium | append: '|'
+    endif
+    if size != blank
+      assign parts = parts | append: size | append: '|'
+    endif
+    assign parts = parts | split: '|'
+  -%}
+
+  {%- if parts.size > 0 -%}
+    <p class="artwork-caption text-subdued">{{ parts | join: ' · ' | escape }}</p>
+  {%- endif -%}
+{%- endif -%}

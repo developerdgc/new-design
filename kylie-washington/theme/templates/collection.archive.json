@@ -24,7 +24,7 @@
         "horizontal_spacing_factor": 1.5,
         "vertical_spacing_factor": 1.5,
         "filter_layout": "drawer",
-        "show_sort_by": true,
+        "show_sort_by": false,
         "show_filters": true,
         "show_results_count": false,
         "show_filter_group_name": true,

@@ -1,0 +1,33 @@
+/* Kylie Washington Studio: overrides on top of Prestige theme.css */
+:root {
+  --kw-muted: #6e6962;
+  --kw-line: #e3ded6;
+}
+
+/* Muted text and hairlines from the design system */
+.text-subdued { color: var(--kw-muted); }
+.product-card__info .price-list { color: var(--kw-muted); }
+
+/* Gallery caption under artwork cards */
+.artwork-caption {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.artwork-sold {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Artwork details list on the product page */
+.artwork-details { display: grid; gap: 0.5rem; margin: 0; }
+.artwork-details > div {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1rem;
+  padding-block-end: 0.5rem;
+  border-bottom: 1px solid var(--kw-line);
+}
+.artwork-details dt { color: var(--kw-muted); }
+.artwork-details dd { margin: 0; }

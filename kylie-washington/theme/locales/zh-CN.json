@@ -94,6 +94,7 @@
       "description": "描述",
       "add_to_cart_button": "添加到购物车",
       "pre_order_button": "预购",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "已售罄",
       "unavailable_button": "暂不可用",
       "choose_options": "选择选项",

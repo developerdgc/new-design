@@ -94,6 +94,7 @@
       "description": "תיאור",
       "add_to_cart_button": "הוסף לעגלה",
       "pre_order_button": "הזמן מראש",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "אזל מהמלאי",
       "unavailable_button": "לא זמין",
       "added_to_cart": "התווסף לעגלת הקניות שלך!",

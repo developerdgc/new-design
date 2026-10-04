@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "lg",
+        "product_info_size": 38,
+        "show_sticky_add_to_cart": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 24,
+        "mobile_controls": "dots",
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "none"
+          }
+        },
+        "size_note": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Limited edition fine art print on museum-grade paper with archival inks. Printed to order in Australia.</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "details": {
+          "type": "accordion",
+          "settings": {
+            "title": "Print Details",
+            "show_below_gallery": false,
+            "icon": "none",
+            "liquid": "{{ product.description }}"
+          }
+        },
+        "sizes": {
+          "type": "accordion",
+          "settings": {
+            "title": "Sizes",
+            "show_below_gallery": false,
+            "icon": "none",
+            "liquid": "{%- assign size_option = product.options_by_name['Size'] -%}\n{%- if size_option -%}<ul>{%- for value in size_option.values -%}<li>{{ value | replace: ' - ', ': ' | replace: ' x ', ' × ' }}</li>{%- endfor -%}</ul>{%- endif -%}\n<p>Frame not included. Custom sizes are available on request, please <a href=\"/pages/contact\">enquire</a>.</p>"
+          }
+        },
+        "delivery": {
+          "type": "accordion",
+          "settings": {
+            "title": "Delivery",
+            "show_below_gallery": false,
+            "icon": "none",
+            "content": "<p>Prints are made to order and typically dispatched within 14 days. You will receive a tracking number once your order is on its way.</p><p>Free shipping within Australia with Australia Post, typically 3–10 business days (longer for remote areas).</p><p>We do not currently ship outside Australia. Please <a href=\"/pages/contact\">enquire</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "separator",
+        "variant_picker",
+        "size_note",
+        "buy_buttons",
+        "details",
+        "sizes",
+        "delivery"
+      ]
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

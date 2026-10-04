@@ -94,6 +94,7 @@
       "description": "Опис",
       "add_to_cart_button": "Додати в кошик",
       "pre_order_button": "Попереднє замовлення",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Розпродано",
       "unavailable_button": "Недоступно",
       "choose_options": "Виберіть варіанти",

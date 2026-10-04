@@ -94,6 +94,7 @@
       "description": "Περιγραφή",
       "add_to_cart_button": "Προσθήκη στο καλάθι",
       "pre_order_button": "Προ-παραγγελία",
+      "acquire_button": "Acquire this work",
       "sold_out_button": "Εξαντλήθηκε",
       "unavailable_button": "Μη διαθέσιμο",
       "choose_options": "Επιλέξτε χαρακτηριστικά",

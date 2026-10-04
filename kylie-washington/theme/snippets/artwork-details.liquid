@@ -1,0 +1,20 @@
+{%- doc -%}
+  Artwork details list for the product page (Medium, Size, Framing, Year), from custom metafields.
+
+  @param {object} product
+{%- enddoc -%}
+
+{%- liquid
+  assign medium = product.metafields.custom.custom_medium.value
+  assign size = product.metafields.custom.custom_dimensions.value
+  assign framing = product.metafields.custom.custom_framing.value
+  assign year = product.metafields.custom.custom_year.value
+-%}
+
+<dl class="artwork-details">
+  {%- if medium != blank -%}<div><dt>Medium</dt><dd>{{ medium | escape }}</dd></div>{%- endif -%}
+  {%- if size != blank -%}<div><dt>Size</dt><dd>{{ size | escape }}</dd></div>{%- endif -%}
+  {%- if framing != blank -%}<div><dt>Presentation</dt><dd>{{ framing | escape }}</dd></div>{%- endif -%}
+  {%- if year != blank -%}<div><dt>Year</dt><dd>{{ year | escape }}</dd></div>{%- endif -%}
+  <div><dt>Artist</dt><dd>Kylie Washington</dd></div>
+</dl>
