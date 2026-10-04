@@ -39,7 +39,7 @@ h1 em,h2 em,h3 em{font-style:normal;color:#FF8A1F}
 @keyframes emPing{0%{box-shadow:0 0 0 0 rgba(59,227,154,.7)}70%{box-shadow:0 0 0 8px rgba(59,227,154,0)}100%{box-shadow:0 0 0 0 rgba(59,227,154,0)}}
 
 /* active nav item per page */
-.elementor-page-32 .em-nl-home,.elementor-page-33 .em-nl-about,.elementor-page-34 .em-nl-services,.elementor-page-35 .em-nl-blog,.single-post .em-nl-blog,.elementor-page-36 .em-nl-contact,.page-id-32 .em-nl-home,.page-id-33 .em-nl-about,.page-id-34 .em-nl-services,.page-id-35 .em-nl-blog,.page-id-36 .em-nl-contact{background:#fff!important;color:#071233!important}
+.elementor-page-32 .em-nl-home,.elementor-page-33 .em-nl-about,.elementor-page-34 .em-nl-services,.elementor-page-35 .em-nl-blog,.single-post .em-nl-blog,.elementor-page-36 .em-nl-contact,.elementor-page-165 .em-nl-faq,.page-id-165 .em-nl-faq,.page-id-32 .em-nl-home,.page-id-33 .em-nl-about,.page-id-34 .em-nl-services,.page-id-35 .em-nl-blog,.page-id-36 .em-nl-contact{background:#fff!important;color:#071233!important}
 @media (max-width:1100px){.em-status{display:none!important}}
 
 /* hero */
@@ -131,3 +131,12 @@ h1 em,h2 em,h3 em{font-style:normal;color:#FF8A1F}
 .em-social{transition:background .25s,transform .25s,border-color .25s!important}
 .em-social:hover{background:linear-gradient(90deg,#FFA53D,#FF5F3A)!important;border-color:transparent!important;color:#fff!important;transform:translateY(-3px)}
 .em-vtab{min-width:0;overflow:hidden}.em-vtab p{white-space:normal!important;overflow-wrap:anywhere}
+
+/* FAQ page accordion */
+.em-faq-plus{transition:transform .3s,background .3s}
+.em-acc details[open] .em-faq-plus{transform:rotate(45deg);background:linear-gradient(135deg,#FFA53D,#FF5F3A)!important}
+.em-acc details summary{list-style:none}
+.em-acc details summary::-webkit-details-marker{display:none}
+.em-acc details{transition:border-color .25s,background .25s,box-shadow .25s}
+.em-acc details[open]{box-shadow:0 24px 50px -34px rgba(7,18,51,.5)}
+@media (max-width:1200px) and (min-width:1025px){.em-nav-link{padding:9px 10px!important;font-size:14.5px!important}}

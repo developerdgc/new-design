@@ -60,7 +60,7 @@ def about():
                                 col(b, "TL List", stops, "gap: 22px; max-width: 820px; width: 100%; align-self: center; border-left: 2px solid #B8CCEE; padding-left: 0px; margin-left: 8px;")], ["em-band-light"])
     vids = section(b, "Videos", [head(b, "Vid Head", "Video Reviews", "What Our <strong>Clients Say</strong>", dark=True), HM.videos("About Player")],
                    ["em-band-dark"], "background: radial-gradient(50% 70% at 0% 0%, rgba(31,107,224,0.35), transparent 70%), #040B22;")
-    return [ban, bento, mvs, tl, vids, faq_chat(b, "FAQ"), cta(b, "CTA")]
+    return [ban, HM.make_ticker("Ab Ticker"), bento, mvs, tl, vids, faq_chat(b, "FAQ"), cta(b, "CTA")]
 
 # ---------- SERVICES ----------
 def services():
@@ -170,7 +170,7 @@ def blog():
     nl = flex(b, "NL", [col(b, "NL Txt", [eyebrow(b, "NL Eb", "Newsletter", True), H(b, "NL H", "Get One Useful Tip <strong>Every Month</strong>", "h2", "color: #FFFFFF;", ["em-h2"]),
                                          P(b, "NL P", "SEO, Google Ads and local search ideas you can use the same day. No spam, unsubscribe anytime.", "color: rgba(255,255,255,0.75);")], "gap: 14px; flex: 1 1 55%;"),
                         nl_form], "gap: 32px; align-items: center; padding: 48px; border-radius: 28px; background: #071233; @media(--tablet){ flex-direction: column; align-items: stretch; padding: 32px; }", ["em-band-dark"])
-    return [ban, section(b, "Feat Sec", [feat], ["em-band-light"]),
+    return [ban, HM.make_ticker("Blog Ticker"), section(b, "Feat Sec", [feat], ["em-band-light"]),
             section(b, "Posts", [head(b, "Posts Head", "Latest Articles", "Read, Learn, <strong>Grow</strong>", center=True), filt]),
             section(b, "NL Sec", [nl], ["em-band-light"]), cta(b, "CTA")]
 
@@ -206,7 +206,7 @@ def contact():
     frm = HM.audit_form("Contact Card", "Book Free Consultation", "Tell us a little about your business.", "Book Free Consultation")
     form = section(b, "Form Sec", [flex(b, "Form Grid", [form_l, col(b, "Form R", [frm], "flex: 1 1 55%;")], "gap: 56px; align-items: center; @media(--tablet){ flex-direction: column; align-items: stretch; }")],
                    style="background: linear-gradient(120deg, #E3F3FF 0%, #F2F7FF 50%, #FFF0E4 100%);")
-    return [ban, top, form, faq_chat(b, "FAQ")]
+    return [ban, HM.make_ticker("Ct Ticker"), top, form, faq_chat(b, "FAQ")]
 
 # ---------- POSTS ----------
 def post(i):
@@ -232,11 +232,143 @@ def post(i):
     more = [post_card(k, C["POSTS"][k], "More") for k in range(6) if k != i][:3]
     rel = section(b, "More", [head(b, "More Head", "Keep Reading", "More From <strong>Our Blog</strong>", center=True),
                               e("e-grid", "More Grid", more, style="grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; gap: 22px; padding: 0px; @media(--tablet){ grid-template-columns: 1fr; }")], ["em-band-light"])
-    return [hero, art, rel]
+    return [hero, HM.make_ticker("Post Ticker"), art, rel]
+
+
+# ---------- FAQS ----------
+FAQ10 = C["FAQ"] + [
+    ["What services does EmmEnn Tech offer?", "SEO, local SEO and Google Business Profile, Google Ads, website development, social media marketing and AI search optimization. You can use one service or combine them into one plan."],
+    ["How much do your services cost?", "Pricing depends on your goals, market and the services you need. After a free audit we send a clear monthly quote with no hidden fees. Ad spend and third-party tools are billed separately."],
+    ["Is the growth audit really free?", "Yes. We review your website, Google profile and competitors, then walk you through what we found on a 30-minute call. There is no obligation to sign up."],
+    ["Who will I be working with?", "You work directly with the EmmEnn Tech team that does the work. You get one point of contact, plain-English updates and a reply within one business day."]]
+
+def faq_page():
+    ban = banner(b, "Banner", "FAQs", "Questions, <strong>Answered Plainly</strong>",
+                 "Everything business owners usually ask us before getting started: timelines, contracts, reports, pricing and how we work.",
+                 "hero-team-strategy", "support-team", "10 common questions", "Still stuck? Just ask")
+    items = []
+    for i, (q, a) in enumerate(FAQ10):
+        n = f"FQ {i+1}"
+        title = flex(b, n + " Row", [
+            P(b, n + " Num", f"{i+1:02d}", "font-family: var(--em-mono); font-size: 13px; font-weight: 700; color: #FF8A1F; flex: 0 0 34px;"),
+            P(b, n + " Q", q, "font-weight: 800; font-size: 18px; color: #0C1530; flex: 1 1 0%; min-width: 0px; @media(--mobile){ font-size: 16px; }"),
+            flex(b, n + " Plus", [icon(b, n + " PlusI", "plus", 14, "#FFFFFF")],
+                 "flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%; align-items: center; justify-content: center; background: linear-gradient(135deg, #22C6E0, #1F6BE0);", ["em-faq-plus"])],
+            "gap: 14px; align-items: center; width: 100%;")
+        items.append(e("e-accordion-item", n, [
+            e("e-accordion-item-header", n + " Header", [e("e-accordion-item-title", n + " Title", [title])], style="padding: 20px 22px; cursor: pointer;"),
+            e("e-accordion-item-content", n + " Content", [P(b, n + " A", a, "font-size: 16.5px; line-height: 1.7; color: #5B6683;")], style="padding: 0px 22px 22px 70px; @media(--mobile){ padding: 0px 18px 20px 18px; }")],
+            style="padding: 0px; border-radius: 20px; border: 1px solid #D3E3FB; background: #F5F9FF;"))
+    acc = e("e-accordion", "FAQ Acc", items, cfg={"default_state": "first_expanded", "max_expanded": "one", "show_icon": False, "faq_schema": True},
+            style="gap: 12px; padding: 0px; flex: 1 1 0%; min-width: 0px;", classes=["em-acc"])
+    side = col(b, "FAQ Side", [
+        col(b, "FAQ Side Card", [eyebrow(b, "FAQ Side Eb", "Still Have Questions?", True),
+                                 H(b, "FAQ Side H", "Talk To A <strong>Real Person</strong>", "h3", "color: #FFFFFF; font-size: 30px;"),
+                                 P(b, "FAQ Side P", "Call, email or book a free audit. We reply within one business day.", "color: rgba(255,255,255,0.75);"),
+                                 flex(b, "FAQ Side Ph", [ico_tile(b, "FAQ Side PhI", "phone", True, True, 40), P(b, "FAQ Side PhT", PHONE, "font-weight: 800; color: #FFFFFF;", link=link_url(TEL))], "gap: 12px; align-items: center;"),
+                                 flex(b, "FAQ Side Em", [ico_tile(b, "FAQ Side EmI", "envelope", False, True, 40), P(b, "FAQ Side EmT", EMAIL, "font-weight: 800; color: #FFFFFF;", link=link_url(MAILTO))], "gap: 12px; align-items: center;"),
+                                 btn(b, "FAQ Side B", "Get a Free Audit", link_page("contact"), "g", "margin-top: 6px; width: 100%;")],
+            "gap: 14px; padding: 28px; border-radius: 24px; background: radial-gradient(60% 60% at 100% 0%, rgba(31,107,224,0.45), transparent 70%), #071233;"),
+        col(b, "FAQ Side Photo", [img_el(b, "FAQ Side Img", "client-report-review", "width: 100%; aspect-ratio: 4 / 3; object-fit: cover;", "EmmEnn Tech report review")],
+            "border-radius: 24px; overflow: hidden;")],
+        "gap: 16px; flex: 0 0 360px; position: sticky; top: 120px; @media(--tablet){ position: relative; top: 0px; flex: 0 0 auto; width: 100%; }")
+    body = section(b, "FAQ Body", [head(b, "FAQ Head", "FAQs", "Everything You <strong>Wanted To Ask</strong>", "Tap a question to open the answer.", center=True),
+                                   flex(b, "FAQ Grid", [acc, side], "gap: 36px; align-items: flex-start; @media(--tablet){ flex-direction: column; align-items: stretch; }")])
+    return [ban, HM.make_ticker("FAQ Ticker"), body, cta(b, "CTA")]
+
+# ---------- LEGAL ----------
+def legal_doc(prefix, sections, intro, updated):
+    kids = [P(b, prefix + " Upd", updated, "font-family: var(--em-mono); font-size: 12.5px; color: #1F6BE0; letter-spacing: 0.06em;"),
+            P(b, prefix + " Intro", intro, "font-size: 19px; line-height: 1.7; color: #0C1530; font-weight: 600;")]
+    for i, (h, paras) in enumerate(sections):
+        kids.append(H(b, f"{prefix} H{i}", h, "h2", "font-size: 26px; margin-top: 14px; @media(--mobile){ font-size: 22px; }"))
+        for j, t in enumerate(paras):
+            kids.append(P(b, f"{prefix} P{i}-{j}", t, "font-size: 17px; line-height: 1.75; color: #3B4663;"))
+    return kids
+
+PRIVACY = [
+    ("1. Who We Are", ["EmmEnn Tech is a digital marketing agency operated by EmmEnn Group LLC, 1500 N Grant St, Ste 76430, Denver, CO 80203, United States. In this policy, \"we\", \"us\" and \"our\" refer to EmmEnn Tech."]),
+    ("2. Information We Collect", ["Information you give us: when you fill in a form on this website (such as the free audit, consultation, newsletter or client agreement form) we collect the details you enter, for example your name, email address, phone number, website address, the service you are interested in, your message and, for agreements, your electronic signature.",
+                                    "Information collected automatically: like most websites, our hosting provider records basic technical data such as your IP address, browser type, device type, pages visited and the date and time of your visit. This is used for security and to keep the site working."]),
+    ("3. How We Use Your Information", ["We use your information to reply to your enquiry, prepare audits and proposals, deliver and manage the services you request, send invoices and service updates, send our monthly newsletter if you subscribed, and improve our website and services.",
+                                        "We do not sell your personal information."]),
+    ("4. Cookies and Third-Party Services", ["Our website uses essential cookies needed for it to work. Video reviews are embedded from YouTube in privacy-enhanced mode, and fonts may be loaded from Google. These providers may receive technical data such as your IP address when their content loads. Their own privacy policies apply to that data.",
+                                             "If we add analytics or advertising tools in the future, we will update this policy and, where required, ask for your consent."]),
+    ("5. Sharing Your Information", ["We only share personal information with trusted service providers who help us run our business, such as website hosting, email and payment providers, and only as needed to provide our services. We may also disclose information if required by law or to protect our rights."]),
+    ("6. Client Account Access", ["When we work on your website, Google Business Profile, ad accounts or other platforms, we use the access you grant only to perform the agreed services, and we keep credentials confidential."]),
+    ("7. How Long We Keep Information", ["We keep enquiry and client information for as long as needed to provide our services and to meet legal, tax and accounting requirements. Newsletter subscribers can unsubscribe at any time."]),
+    ("8. Your Rights", ["Depending on where you live, you may have the right to access, correct or delete your personal information, object to or limit how we use it, and withdraw consent. To make a request, email us at " + EMAIL + ". We will respond within a reasonable time."]),
+    ("9. Security", ["We use reasonable technical and organisational measures to protect your information. No method of transmission over the internet is completely secure, so we cannot guarantee absolute security."]),
+    ("10. Children's Privacy", ["Our services are intended for businesses and are not directed at children under 16. We do not knowingly collect personal information from children."]),
+    ("11. Changes to This Policy", ["We may update this policy from time to time. The latest version will always be on this page with the date it was last updated."]),
+    ("12. Contact Us", ["If you have questions about this policy or your information, contact EmmEnn Tech at " + EMAIL + " or call " + PHONE + "."])]
+
+def privacy_page():
+    ban = banner(b, "Banner", "Privacy Policy", "Privacy <strong>Policy</strong>",
+                 "How EmmEnn Tech collects, uses and protects the information you share with us.",
+                 "contact-banner", "about-team-office", "Your data, protected", "EmmEnn Group LLC")
+    doc = legal_doc("PV", PRIVACY, "This Privacy Policy explains what information we collect when you visit emmenntech.com or use our services, how we use it, and the choices you have.", "LAST UPDATED · OCTOBER 4, 2026")
+    body = section(b, "Doc", [col(b, "Doc Col", doc, "gap: 16px; max-width: 860px; width: 100%; align-self: center; padding: 44px; border-radius: 28px; background: #FFFFFF; border: 1px solid #D3E3FB; @media(--mobile){ padding: 24px; }")], ["em-band-light"])
+    return [ban, HM.make_ticker("PV Ticker"), body, cta(b, "CTA")]
+
+TERMS = [
+    ("1. Services", "EmmEnnTech agrees to provide digital marketing, web development, AI-powered search, paid media, consulting, or other services described and agreed upon between EmmEnnTech and the Client."),
+    ("2. Client Responsibilities", "The Client agrees to provide accurate information, required materials, access, approvals, and other resources reasonably necessary for EmmEnnTech to perform the agreed services."),
+    ("3. Payment", "The Client agrees to pay all fees according to the pricing, payment schedule, proposal, invoice, or other written agreement provided by EmmEnnTech."),
+    ("4. Advertising and Third-Party Costs", "Advertising budgets, software subscriptions, third-party platform fees, domains, hosting, and other external costs are separate from service fees unless expressly stated otherwise in writing."),
+    ("5. Results and Performance", "EmmEnnTech will provide services using commercially reasonable efforts. However, specific business results, sales, leads, rankings, advertising performance, or revenue cannot be guaranteed because performance may depend on market conditions, competition, platforms, budgets, offers, and other factors."),
+    ("6. Communication", "The Client agrees to maintain reasonable communication and provide timely feedback, approvals, and required information when requested."),
+    ("7. Intellectual Property", "Ownership and usage rights for deliverables will be determined according to the applicable proposal, invoice, or written agreement between the Client and EmmEnnTech."),
+    ("8. Confidentiality", "Both parties agree to treat confidential business information, credentials, strategies, customer information, and other non-public information received during the engagement appropriately and confidentially."),
+    ("9. Termination", "Either party may terminate services according to the terms stated in the applicable proposal, agreement, or written communication. Any outstanding approved fees or committed expenses may remain payable."),
+    ("10. Electronic Acceptance", "By signing electronically and submitting this agreement, the Client confirms that they have reviewed the information above, understand the terms presented, and agree to proceed with EmmEnnTech under the applicable service arrangement.")]
+
+def agreement_page():
+    hero = flex(b, "AG Hero", [col(b, "AG Hero Wrap", [
+        P(b, "AG Badge", "CLIENT SERVICE AGREEMENT", "font-family: var(--em-mono); font-size: 12.5px; letter-spacing: 0.14em; color: #7AF0F5; padding: 8px 16px; border-radius: 50px; border: 1px dashed rgba(122,240,245,0.45); width: auto; align-self: center;"),
+        H(b, "AG Title", "EmmEnnTech Client <strong>Service Agreement</strong>", "h1", "color: #FFFFFF; font-size: 58px; text-align: center; @media(--tablet){ font-size: 44px; } @media(--mobile){ font-size: 32px; }"),
+        P(b, "AG Lead", "Please review the agreement carefully, complete your information, provide your electronic signature, and submit the agreement.", "color: rgba(255,255,255,0.8); font-size: 18px; text-align: center; max-width: 640px; align-self: center;")],
+        "gap: 18px; align-items: center;", ["em-wrap"])],
+        "flex-direction: column; align-items: center; padding: 170px 24px 72px 24px; background: radial-gradient(40% 70% at 85% 40%, rgba(63,208,222,0.22), transparent 70%), radial-gradient(35% 50% at 0% 100%, rgba(255,138,31,0.16), transparent 70%), #071233; @media(--mobile){ padding: 120px 16px 48px 16px; }", ["em-banner"])
+    def step(cid, num, title):
+        return flex(b, cid, [flex(b, cid + " N", [P(b, cid + " NT", num, "font-family: var(--em-num); font-weight: 700; color: #FFFFFF;")],
+                                  "flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50% 50% 50% 6px; align-items: center; justify-content: center; background: linear-gradient(90deg, #22C6E0, #1F6BE0);"),
+                             H(b, cid + " H", title, "h2", "font-size: 24px;")], "gap: 14px; align-items: center; width: 100%; padding-bottom: 14px; border-bottom: 1px solid #D3E3FB;")
+    def fld(cid, fid, label, kind, ph, full=False):
+        return e("e-div-block", cid, [e("e-form-label", cid + " L", cfg={"text": label, "input-id": fid}, classes=["em-label"]),
+                                      e("e-form-input", cid + " F", cfg={"placeholder": ph, "type": kind, "required": True, "_cssid": fid}, classes=["em-input"])],
+                 style="display: flex; flex-direction: column; gap: 8px; padding: 0px; " + ("flex: 1 1 100%;" if full else "flex: 1 1 calc(33% - 12px); min-width: 220px;"))
+    terms = [col(b, f"AG T{i}", [H(b, f"AG T{i} H", h, "h3", "font-size: 18px;"), P(b, f"AG T{i} P", t, "font-size: 15.5px; line-height: 1.7; color: #3B4663;")], "gap: 6px;")
+             for i, (h, t) in enumerate(TERMS)]
+    terms_box = col(b, "AG Terms", terms, "flex: 1 1 100%; gap: 18px; max-height: 460px; overflow-y: auto; padding: 24px; border-radius: 18px; background: #F5F9FF; border: 1px solid #D3E3FB;")
+    consent = e("e-div-block", "AG Consent", [
+        e("e-div-block", "AG Box", [e("e-form-checkbox", "AG Check", cfg={"name": "agreement_accepted", "value": "Accepted", "required": True})],
+          style="display: grid; place-items: center; flex: 0 0 24px; width: 24px; height: 24px; padding: 0px; border-radius: 6px; border: 1.5px solid #1F6BE0; background: #FFFFFF; margin-top: 2px;"),
+        P(b, "AG Consent T", "I confirm that I have read and understood this Client Service Agreement and agree to the terms presented above. I understand that my electronic signature represents my acceptance of this agreement.", "font-size: 15px; color: #0C1530; flex: 1 1 0%; min-width: 0px;")],
+        style="display: flex; gap: 12px; align-items: flex-start; flex: 1 1 100%; padding: 16px; border-radius: 14px; background: #FFF6EE; border: 1px solid #FFD9B8;")
+    kids = [step("AG S1", "1", "Client Information"),
+            fld("AG Name", "ag-name", "Full Name *", "text", "Enter your full name"),
+            fld("AG Email", "ag-email", "Email Address *", "email", "Enter your email address"),
+            fld("AG Phone", "ag-phone", "Phone Number *", "tel", "Enter your phone number"),
+            step("AG S2", "2", "Service Agreement"), terms_box,
+            step("AG S3", "3", "Electronic Signature"),
+            fld("AG Sign", "ag-signature", "Type your full legal name as your signature *", "text", "Your full legal name", True),
+            consent,
+            e("e-form-submit-button", "AG Submit", cfg={"text": "Sign & Submit Agreement"}, classes=["em-btn", "em-btn-g"]),
+            P(b, "AG Note", "Your signed agreement will be securely submitted to EmmEnnTech.", "font-size: 13.5px; color: #5B6683; flex: 1 1 100%;"),
+            e("e-form-success-message", "AG Ok", [P(b, "AG OkT", "Thank you. Your signed agreement has been submitted to EmmEnnTech. We will be in touch shortly.", "font-size: 15px; color: #0C1530;")],
+              style="flex: 1 1 100%; border-radius: 12px; background: #E3F3FF; padding: 14px;"),
+            e("e-form-error-message", "AG Err", [P(b, "AG ErrT", f"Sorry, the agreement could not be submitted. Please check the required fields, or email {EMAIL}.", "font-size: 15px; color: #8A2A0F;")],
+              style="flex: 1 1 100%; border-radius: 12px; background: #FFF1E6; padding: 14px;")]
+    frm = e("e-form", "AG Form", kids, cfg={"form-name": "Client Service Agreement", "actions-after-submit": ["email"],
+                                             "email": {"to": [EMAIL], "subject": "Signed Client Service Agreement", "reply-to": "", "from-name": "EmmEnnTech Agreements"}},
+            style="gap: 18px 16px; align-items: flex-start;", classes=["em-form"])
+    card = col(b, "AG Card", [frm], "max-width: 920px; width: 100%; align-self: center; padding: 40px; border-radius: 28px; background: #FFFFFF; border: 1px solid #D3E3FB; box-shadow: 0 30px 70px -36px rgba(7,18,51,0.45); @media(--mobile){ padding: 22px; }")
+    return [hero, HM.make_ticker("AG Ticker"), section(b, "AG Body", [card], ["em-band-light"])]
 
 if which.startswith("post"):
     i = int(which[4:]); kids = post(i); pid = PAGES["posts"][i]
 else:
-    kids = {"about": about, "services": services, "blog": blog, "contact": contact}[which](); pid = PAGES[which]
+    kids = {"about": about, "services": services, "blog": blog, "contact": contact, "faq": faq_page, "privacy": privacy_page, "agreement": agreement_page}[which](); pid = PAGES[which]
 root = col(b, "Page", kids, "gap: 0px; width: 100%;")
 json.dump(b.payload(pid, root), open(f'/tmp/p_{which}.json', 'w'))

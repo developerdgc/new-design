@@ -1,7 +1,7 @@
 import json
 from blocks import *
 b = B(); e = b.el
-NAV = [("home", "Home"), ("about", "About Us"), ("services", "Our Services"), ("blog", "Our Blog"), ("contact", "Contact Us")]
+NAV = [("home", "Home"), ("about", "About Us"), ("services", "Our Services"), ("blog", "Our Blog"), ("faq", "FAQs"), ("contact", "Contact Us")]
 links = [P(b, f"M {l}", l, "font-size: 26px; font-weight: 800; color: #FFFFFF; padding: 10px 0px; border-bottom: 1px solid rgba(255,255,255,0.1);", link=link_page(k)) for k, l in NAV]
 box = col(b, "Mobile Menu", [
     img_el(b, "M Logo", "logo-for-dark-bg", "width: 170px; margin-bottom: 18px;", "EmmEnn Tech")] + links + [

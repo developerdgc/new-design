@@ -66,6 +66,8 @@ CLASSES = {
     "em-cta": "position: relative; overflow: hidden;",
     "em-banner": "position: relative; overflow: hidden;",
     "em-btab": "cursor: pointer;",
+    "em-nl-faq": "transition: background 0.2s, color 0.2s;",
+    "em-faq-plus": "border-radius: 50%;",
     "em-jp": "position: relative;",
     "em-jp-node": "border-radius: 50%;",
     "em-jp-img": "border-radius: 16px;",

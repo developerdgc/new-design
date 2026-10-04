@@ -15,7 +15,7 @@ strip = flex(b, "Connect", [col(b, "Connect Wrap", [flex(b, "Connect Row", [
     "flex-direction: column; align-items: center; padding: 26px 24px; background: linear-gradient(90deg, #22C6E0 0%, #1F6BE0 100%); @media(--mobile){ padding: 24px 16px; }")
 def fcol(cid, title, kids, style=""):
     return col(b, cid, [P(b, cid + " T", title, "color: #FFFFFF; margin-bottom: 14px;", ["em-eb"])] + kids, "gap: 12px; " + style)
-NAV = [("home", "Home"), ("about", "About Us"), ("services", "Our Services"), ("blog", "Our Blog"), ("contact", "Contact Us")]
+NAV = [("home", "Home"), ("about", "About Us"), ("services", "Our Services"), ("blog", "Our Blog"), ("faq", "FAQs"), ("contact", "Contact Us")]
 explore = fcol("F Explore", "Explore", [P(b, f"F N {l}", l, "font-size: 15.5px; color: rgba(255,255,255,0.72);", link=link_page(k)) for k, l in NAV])
 services = fcol("F Services", "Services", [P(b, f"F S {s['name']}", s['name'], "font-size: 15.5px; color: rgba(255,255,255,0.72);", link=link_page("services")) for s in C["SVC"]])
 def reach(cid, ic, text, link=None, strong=False):
@@ -30,7 +30,7 @@ grid = e("e-grid", "F Grid", [about, explore, services, contact],
          style="grid-template-columns: 1.4fr 0.8fr 1fr 1.2fr; grid-template-rows: auto; gap: 40px; padding: 0px; @media(--tablet){ grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; } @media(--mobile){ grid-template-columns: 1fr; grid-template-rows: auto; }")
 word = P(b, "F Wordmark", "EmmEnn Tech", "font-size: 190px; margin-top: 50px; @media(--tablet){ font-size: 110px; } @media(--mobile){ font-size: 54px; }", ["em-wordmark"])
 bottom = flex(b, "F Bottom", [P(b, "F Copy", "© 2021–2026 EmmEnn Group LLC. All rights reserved.", "font-size: 14px; color: rgba(255,255,255,0.6);"),
-                              P(b, "F Legal", "Privacy Policy · Online Agreement", "font-size: 14px; color: rgba(255,255,255,0.6);", link=link_page("contact"))],
+                              P(b, "F Legal", "Privacy Policy", "font-size: 14px; color: rgba(255,255,255,0.6);", link=link_page("privacy"))],
               "justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 20px 0px; border-top: 1px solid rgba(255,255,255,0.12); width: 100%;")
 foot = flex(b, "Footer", [col(b, "Footer Wrap", [grid, word, bottom], "", ["em-wrap"])],
             "flex-direction: column; align-items: center; padding: 80px 24px 0px 24px; overflow: hidden; @media(--mobile){ padding: 56px 16px 0px 16px; }", ["em-footer"])
