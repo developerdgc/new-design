@@ -130,6 +130,14 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - ⚠️ Store name is still "My Store" (shows in header + footer). User must change it in Settings → Store details to "Kylie Washington Studio", or upload a logo.
 - Gift Certificate not in footer yet: no gift card product exists (connector blocks gift card writes); create in admin.
 
+### Phase D (homepage): DONE Oct 4
+- `templates/index.json` replaced (Prestige demo removed). Order: hero (image-with-text-overlay, View Originals / Shop Prints) → The Studio (rich text, About excerpt) → Explore 3 columns (Originals / Fine Art Prints / Licencing) → Original paintings (6, `originals`) → testimonials → Fine art prints (6) → Created with care (image with text) → newsletter "Join the collectors list".
+- Gift certificate banner left out (user: decide later).
+- **Placeholder images (Unsplash, uploaded to Files, alt text starts "KW placeholder")**: hero `photo-1541961017774-22349e4a1262.jpg` (abstract painting, not Kylie's), licencing column `photo-1586023492125-27b2c045efd7.jpg`, created-with-care `photo-1452802447250-470a88ac82bc.jpg`. Replace with the client's own studio/artwork photos. Column images for Originals/Prints use Kylie's real files (`banksia-x-two.jpg`, `wattle-me-fine-art-print.jpg`).
+- ⚠️ **Testimonials are DUMMY text written by Claude at the user's request** (Sarah M., James and Olivia T., Rachel K.). They must be replaced with real collector quotes or removed before launch (fake reviews breach Australian Consumer Law).
+- Featured grids show Prestige placeholder cards until products are set to Active.
+- Store name: cannot be changed through the Admin API; user must set "Kylie Washington Studio" in Settings → Store details.
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft
