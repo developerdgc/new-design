@@ -1,7 +1,9 @@
 /* Kylie Washington Studio: overrides on top of Prestige theme.css */
 :root {
-  --kw-muted: #6e6962;
-  --kw-line: #e3ded6;
+  --kw-muted: #7a6e64;
+  --kw-line: #ddd1bf;
+  --kw-accent: #b5562f;
+  --kw-band: #e9dfd0;
 }
 
 /* Muted text and hairlines from the design system */
@@ -70,3 +72,25 @@
 
 /* The homepage has its own collector-list section, so hide the footer copy there */
 .template-index .footer__block--newsletter { display: none; }
+
+/* ---- Warm editorial direction (Oct 4) ---- */
+
+/* Links and small text links pick up the terracotta accent */
+.link, .rte a:not(.button), .artwork-details a { text-decoration-color: var(--kw-accent); }
+.rte a:not(.button):hover, .link:hover { color: var(--kw-accent); }
+
+/* Eyebrow subheadings: small, spaced, accent coloured */
+.subheading, p.subheading, .section-header .subheading { color: var(--kw-accent); letter-spacing: 0.18em; }
+
+/* Homepage rhythm: band behind "Find art for your space" */
+[id$="__find-art"] { background: var(--kw-band); }
+.kw-finder h3 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); }
+.kw-pill { background: #fbf8f3; border-color: var(--kw-line); }
+.kw-pill:hover { border-color: var(--kw-accent); color: var(--kw-accent); }
+
+/* Keep the big two-panel and project images from taking over the page */
+[id$="__two-journeys"] img,
+[id$="__projects"] img { max-height: 34rem; width: 100%; object-fit: cover; }
+
+/* Hero: give the artist name real presence */
+[id$="__hero"] h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.05; }

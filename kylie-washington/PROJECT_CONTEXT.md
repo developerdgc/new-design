@@ -77,7 +77,7 @@ Dropped from earlier plans: Projects menu, Commissions page, Banksia/Australian 
 - Custom code needed in Prestige: caption with year/medium/size on product cards; "Sold" instead of price on sold originals.
 
 ### Design system
-Background `#F7F5F1`, text `#1F1D1B`, muted `#6E6962`, lines `#E3DED6`, charcoal buttons. Strong contemporary sans headings (uppercase, letter-spaced), clean sans body. Turn OFF: newsletter popup, quick view/add, hover second image, vendor, reviews, sale badges. Theme text: "Add to cart" → "Acquire this work" (originals), "Sold out" → "Sold".
+SUPERSEDED Oct 4 by "Warm editorial" (see status below). Original plan was: background `#F7F5F1`, text `#1F1D1B`, charcoal buttons, uppercase letter-spaced sans headings. Turn OFF: newsletter popup, quick view/add, hover second image, vendor, reviews, sale badges. Theme text: "Add to cart" → "Acquire this work" (originals), "Sold out" → "Sold".
 
 ### Pages content status
 About ✅ (PDF) · FAQ ✅ draft in `reports/fine-art-prints-FAQ_draft.md` · Contact ✅ · Wholesale 🔨 rewrite (PDF text is copied) · Licencing 🔨 Terri structure, client text needed · Studio Journal ⏳ client stories · Gift card 🔨 create · Policies: Terms ✅, Shipping ✅ (PDF), Returns ❌, Privacy (Shopify template)
@@ -170,6 +170,13 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - The store is still **password protected**, so the public sees only the password page. Removing the password (Online Store → Preferences) is the actual launch.
 - Before removing the password: rename store (still "My Store"), paste policies from `policies/`, replace Unsplash placeholders, add Orchid image, confirm open client questions.
 - From now on edits to `#146130927667` change the live theme. For bigger changes, duplicate it first and work on the copy.
+
+### Redesign: "Warm editorial" (Oct 4, user chose this after finding the homepage unclear)
+- Pushed to the LIVE theme (`--allow-live`; store still password protected). NOT yet visually verified.
+- Colours: scheme 1 cream `#f4efe6` / ink `#2a2420` / terracotta buttons `#b5562f`; scheme 2 paper `#fbf8f3`; scheme 3 ink background; scheme 5 band `#e9dfd0`. CSS vars in `kylie.css`: muted `#7a6e64`, line `#ddd1bf`, accent `#b5562f`, band `#e9dfd0`.
+- Fonts: headings **Playfair Display** (normal case, no letter spacing, size factor 1.15); body **Karla** 17/16 px; buttons body font uppercase. Product card titles use the heading font.
+- Homepage (all 10 brief sections kept, user's choice): Available work 4 per row; alternating section backgrounds (practice/see-it paper, find-art band, projects band, collector list dark); hero overlay 45 % and larger h1; two-panel and project images capped at 34rem.
+- Known gap: subheadings render as `p.h6` (section-header snippet), so the `.subheading` accent rule in `kylie.css` does not apply yet.
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)

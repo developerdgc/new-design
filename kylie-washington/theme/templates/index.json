@@ -20,7 +20,7 @@
         "remove_vertical_spacing": true,
         "content_width": "md",
         "overlay_color": "#1f1d1b",
-        "overlay_opacity": 35,
+        "overlay_opacity": 45,
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center"
       },
@@ -68,8 +68,8 @@
         "hide_product_information": false,
         "stack_products": true,
         "products_per_row_mobile": "1",
-        "products_per_row_desktop": 2,
-        "horizontal_spacing_factor": 2,
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1.5,
         "vertical_spacing_factor": 1.5,
         "header_alignment": "center",
         "heading_style": "h3",
@@ -95,7 +95,7 @@
     "the-practice": {
       "type": "image-with-text",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/banksia-aemula.jpg",
         "reveal_on_scroll": true,
@@ -193,7 +193,7 @@
     "see-it": {
       "type": "image-with-text",
       "settings": {
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/photo-1615529182904-14819c35db37.jpg",
         "reveal_on_scroll": true,
@@ -280,7 +280,7 @@
     "projects": {
       "type": "multi-column",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "separate_section_with_border": false,
         "columns_per_row": 3,
         "stack_on_mobile": true,

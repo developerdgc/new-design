@@ -10,40 +10,40 @@
 {
   "current": {
     "section_vertical_spacing": "lg",
-    "heading_font": "tenor_sans_n4",
-    "heading_letter_spacing": 12,
+    "heading_font": "playfair_display_n4",
+    "heading_letter_spacing": 0,
     "text_font": "karla_n4",
-    "text_font_size_desktop": 16,
-    "button_letter_spacing": 12,
+    "text_font_size_desktop": 17,
+    "button_letter_spacing": 10,
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#f7f5f1",
-          "text_color": "#1f1d1b",
-          "primary_button_background": "#1f1d1b",
-          "primary_button_text_color": "#f7f5f1",
+          "background": "#f4efe6",
+          "text_color": "#2a2420",
+          "primary_button_background": "#b5562f",
+          "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#1f1d1b"
+          "circle_button_icon": "#2a2420"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#ffffff",
-          "text_color": "#1f1d1b",
-          "primary_button_background": "#1f1d1b",
+          "background": "#fbf8f3",
+          "text_color": "#2a2420",
+          "primary_button_background": "#b5562f",
           "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#f7f5f1",
-          "circle_button_icon": "#1f1d1b"
+          "circle_button_background": "#f4efe6",
+          "circle_button_icon": "#2a2420"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#1f1d1b",
-          "text_color": "#f7f5f1",
-          "primary_button_background": "#f7f5f1",
-          "primary_button_text_color": "#1f1d1b",
-          "circle_button_background": "#f7f5f1",
-          "circle_button_icon": "#1f1d1b"
+          "background": "#2a2420",
+          "text_color": "#f4efe6",
+          "primary_button_background": "#b5562f",
+          "primary_button_text_color": "#ffffff",
+          "circle_button_background": "#f4efe6",
+          "circle_button_icon": "#2a2420"
         }
       },
       "scheme-4": {
@@ -51,46 +51,46 @@
           "background": "rgba(0,0,0,0)",
           "text_color": "#ffffff",
           "primary_button_background": "#ffffff",
-          "primary_button_text_color": "#1f1d1b",
+          "primary_button_text_color": "#2a2420",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#1f1d1b"
+          "circle_button_icon": "#2a2420"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#e3ded6",
-          "text_color": "#1f1d1b",
-          "primary_button_background": "#1f1d1b",
-          "primary_button_text_color": "#f7f5f1",
+          "background": "#e9dfd0",
+          "text_color": "#2a2420",
+          "primary_button_background": "#b5562f",
+          "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#1f1d1b"
+          "circle_button_icon": "#2a2420"
         }
       }
     },
     "success_color": "#307a07",
     "warning_color": "#ed8a00",
     "error_color": "#cb2b2b",
-    "product_rating_color": "#1f1d1b",
-    "product_on_sale_accent": "#1f1d1b",
-    "product_sold_out_badge_background": "#e3ded6",
-    "product_custom_badge_background": "#1f1d1b",
+    "product_rating_color": "#2a2420",
+    "product_on_sale_accent": "#b5562f",
+    "product_sold_out_badge_background": "#e9dfd0",
+    "product_custom_badge_background": "#2a2420",
     "default_color_scheme": "scheme-1",
     "modal_color_scheme": "scheme-2",
     "button_border_radius": 0,
     "input_border_radius": 0,
     "icon_stroke_width": 1.2,
-    "heading_text_transform": "uppercase",
-    "heading_font_size_factor": 1.0,
-    "text_font_size_mobile": 15,
+    "heading_text_transform": "normal",
+    "heading_font_size_factor": 1.15,
+    "text_font_size_mobile": 16,
     "text_font_letter_spacing": 0,
-    "button_text_font": "heading",
+    "button_text_font": "body",
     "button_text_transform": "uppercase",
     "show_image_zoom_on_hover": false,
     "product_image_aspect_ratio": "natural",
     "show_secondary_image": false,
     "show_vendor": false,
     "product_title_max_lines": 0,
-    "product_card_text_font": "body",
+    "product_card_text_font": "heading",
     "product_card_text_casing": "inherit",
     "product_color_display": "hide",
     "show_product_rating": false,
