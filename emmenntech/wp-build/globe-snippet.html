@@ -1,0 +1,73 @@
+<!-- EmmEnn Globe Script: paste into Elementor → Custom Code → "EmmEnn Globe Script" (Location: </body> - End, Display: Entire Site) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var slot = document.querySelector('.em-globe-slot');
+  if (!slot || !window.THREE || !window.WebGLRenderingContext) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  slot.appendChild(renderer.domElement);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.z = 6.2;
+  var globe = new THREE.Group();
+  globe.rotation.x = 0.35;
+  scene.add(globe);
+
+  // dotted sphere (Fibonacci points), cyan → blue
+  var N = 2600, pos = new Float32Array(N * 3), col = new Float32Array(N * 3);
+  var c1 = new THREE.Color('#22C6E0'), c2 = new THREE.Color('#1F6BE0'), tmp = new THREE.Color();
+  for (var i = 0; i < N; i++) {
+    var y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), t = i * 2.399963;
+    pos[i*3] = Math.cos(t) * r * 1.6; pos[i*3+1] = y * 1.6; pos[i*3+2] = Math.sin(t) * r * 1.6;
+    tmp.copy(c1).lerp(c2, (y + 1) / 2); col[i*3] = tmp.r; col[i*3+1] = tmp.g; col[i*3+2] = tmp.b;
+  }
+  var g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  globe.add(new THREE.Points(g, new THREE.PointsMaterial({size: 0.028, vertexColors: true, transparent: true, opacity: 0.9})));
+
+  // inner glow sphere + wire rings
+  globe.add(new THREE.Mesh(new THREE.SphereGeometry(1.55, 48, 48), new THREE.MeshBasicMaterial({color: '#071233', transparent: true, opacity: 0.55})));
+  [1.82, 2.02].forEach(function(rad, k){
+    var ring = new THREE.Mesh(new THREE.TorusGeometry(rad, 0.006, 8, 160), new THREE.MeshBasicMaterial({color: k ? '#FF8A1F' : '#7AF0F5', transparent: true, opacity: 0.45}));
+    ring.rotation.x = Math.PI / 2 + (k ? 0.5 : -0.3); scene.add(ring);
+  });
+
+  // Denver HQ marker (39.74N, 104.99W)
+  function ll(lat, lon, R){ var p = (90 - lat) * Math.PI / 180, l = (lon + 180) * Math.PI / 180;
+    return new THREE.Vector3(-R * Math.sin(p) * Math.cos(l), R * Math.cos(p), R * Math.sin(p) * Math.sin(l)); }
+  var pin = new THREE.Mesh(new THREE.SphereGeometry(0.06, 16, 16), new THREE.MeshBasicMaterial({color: '#FF8A1F'}));
+  pin.position.copy(ll(39.74, -104.99, 1.62)); globe.add(pin);
+  var halo = new THREE.Mesh(new THREE.RingGeometry(0.08, 0.12, 32), new THREE.MeshBasicMaterial({color: '#FF8A1F', transparent: true, side: THREE.DoubleSide}));
+  halo.position.copy(pin.position); halo.lookAt(new THREE.Vector3()); globe.add(halo);
+
+  function size(){ var w = slot.clientWidth, h = slot.clientHeight || w;
+    renderer.setSize(w * 1.2, h * 1.2, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+  size(); window.addEventListener('resize', size);
+
+  var mx = 0, my = 0;
+  slot.addEventListener('pointermove', function(e){ var b = slot.getBoundingClientRect();
+    mx = (e.clientX - b.left) / b.width - 0.5; my = (e.clientY - b.top) / b.height - 0.5; });
+
+  var visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(en){ visible = en[0].isIntersecting; }).observe(slot);
+
+  globe.rotation.y = 2.2;
+  var t0 = performance.now();
+  (function loop(now){
+    requestAnimationFrame(loop);
+    if (!visible) return;
+    var t = (now - t0) / 1000;
+    if (!reduce) globe.rotation.y += 0.0025;
+    globe.rotation.x += ((0.35 + my * 0.4) - globe.rotation.x) * 0.05;
+    camera.position.x += (mx * 0.8 - camera.position.x) * 0.05; camera.lookAt(0, 0, 0);
+    var s = 1 + (t % 1.6) / 1.6 * 1.8; halo.scale.set(s, s, s); halo.material.opacity = 1 - (t % 1.6) / 1.6;
+    renderer.render(scene, camera);
+  })(t0);
+  slot.classList.add('em-globe-live');
+})();
+</script>

@@ -1,0 +1,1 @@
+{"type":"object","properties":[],"llm_guidance":{"can_have_children":false,"instructions":"These are the default styles applied to the widget. Override only when necessary.","default_styles":{"width":"100%","height":"1px","border-width":"0px","border-color":"transparent","border-style":"none","background-color":"#000"}}}

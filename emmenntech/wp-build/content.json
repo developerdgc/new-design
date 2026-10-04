@@ -1,0 +1,520 @@
+{
+ "SVC": [
+  {
+   "id": "seo",
+   "name": "SEO",
+   "ico": "seo",
+   "img": "{{img:s-seo}}",
+   "short": "Improve your visibility in Google and attract people actively searching for your products or services.",
+   "head": "SEO That Turns Searches Into Customers",
+   "intro": "We improve the pages, content and technical health of your website so Google understands what you offer, and the right people find you when they search.",
+   "feats": [
+    [
+     "Technical SEO",
+     "Site speed, indexing, crawl errors and Core Web Vitals fixed first."
+    ],
+    [
+     "On-page optimisation",
+     "Titles, headings and content written around real search terms."
+    ],
+    [
+     "Content that ranks",
+     "Service and location pages built for buyer-intent keywords."
+    ],
+    [
+     "Authority building",
+     "Quality backlinks and mentions from relevant websites."
+    ]
+   ],
+   "probs": [
+    "Website not showing on page one",
+    "Traffic that never turns into leads",
+    "Competitors outranking you",
+    "No idea which keywords matter",
+    "Slow or broken pages",
+    "Reports full of jargon"
+   ]
+  },
+  {
+   "id": "local-seo",
+   "name": "Local SEO",
+   "ico": "local",
+   "img": "{{img:s-gbp}}",
+   "short": "Improve your Google Business Profile, local rankings, citations, and visibility in Google Maps.",
+   "head": "Get Found in Google Maps and Local Search",
+   "intro": "For businesses that serve a city or region, the map pack is where calls come from. We optimise your Google Business Profile, citations and reviews so you show up there.",
+   "feats": [
+    [
+     "Google Business Profile",
+     "Categories, services, photos and posts kept complete and active."
+    ],
+    [
+     "Citations",
+     "Consistent name, address and phone across directories."
+    ],
+    [
+     "Review strategy",
+     "A simple system to earn and reply to more reviews."
+    ],
+    [
+     "Local landing pages",
+     "Pages for each service area you want to rank in."
+    ]
+   ],
+   "probs": [
+    "Not appearing in the map pack",
+    "Few or old Google reviews",
+    "Wrong details on directories",
+    "Calls going to competitors",
+    "Multiple locations to manage",
+    "Unclear service areas"
+   ]
+  },
+  {
+   "id": "google-ads",
+   "name": "Google Ads",
+   "ico": "ads",
+   "img": "{{img:s-landing}}",
+   "short": "Reach potential customers who are already searching for what you offer and optimize campaigns around leads and sales.",
+   "head": "Google Ads Built Around Leads, Not Clicks",
+   "intro": "We set up and manage Search, Performance Max and call campaigns with proper conversion tracking, so every dollar is measured against real leads and sales.",
+   "feats": [
+    [
+     "Campaign structure",
+     "Tight ad groups matched to the services you sell."
+    ],
+    [
+     "Conversion tracking",
+     "Calls, forms and purchases tracked correctly."
+    ],
+    [
+     "Ad copy & landing pages",
+     "Messages and pages that match what people searched."
+    ],
+    [
+     "Ongoing optimisation",
+     "Weekly bid, keyword and negative keyword work."
+    ]
+   ],
+   "probs": [
+    "High cost per lead",
+    "Clicks with no calls",
+    "Broken or missing tracking",
+    "Wasted spend on wrong searches",
+    "No clear reporting",
+    "Agency lock-in contracts"
+   ]
+  },
+  {
+   "id": "web",
+   "name": "Website Development",
+   "ico": "web",
+   "img": "{{img:s-webdev}}",
+   "short": "Build or improve a fast, mobile-friendly website that clearly communicates your offer and makes it easier for visitors to contact you.",
+   "head": "Websites That Make It Easy to Contact You",
+   "intro": "We design and build fast, mobile-first websites on WordPress and modern stacks, with clear messaging and conversion paths that turn visitors into enquiries.",
+   "feats": [
+    [
+     "Conversion-focused design",
+     "Clear offer, trust signals and calls to action on every page."
+    ],
+    [
+     "Fast & mobile-first",
+     "Built to load quickly on any phone."
+    ],
+    [
+     "SEO-ready build",
+     "Clean structure, schema and on-page basics from day one."
+    ],
+    [
+     "Easy to update",
+     "A CMS your team can edit without a developer."
+    ]
+   ],
+   "probs": [
+    "Outdated or slow website",
+    "Visitors leave without contacting",
+    "Hard to update content",
+    "Not mobile friendly",
+    "Unclear services and pricing",
+    "No tracking on forms"
+   ]
+  },
+  {
+   "id": "social",
+   "name": "Social Media Marketing",
+   "ico": "social",
+   "img": "{{img:s-social}}",
+   "short": "Create and manage content that keeps your business visible and helps you reach potential customers across major social platforms.",
+   "head": "Social Media That Keeps You Visible",
+   "intro": "We plan, create and publish content across Facebook, Instagram, LinkedIn and TikTok, and run paid social campaigns when you want to reach new audiences.",
+   "feats": [
+    [
+     "Content calendar",
+     "A monthly plan built around your services and seasons."
+    ],
+    [
+     "Creative production",
+     "Graphics, short videos and captions in your brand style."
+    ],
+    [
+     "Community management",
+     "Comments and messages answered on time."
+    ],
+    [
+     "Paid social",
+     "Meta and LinkedIn campaigns for leads and retargeting."
+    ]
+   ],
+   "probs": [
+    "Inconsistent posting",
+    "No time to create content",
+    "Low engagement",
+    "Followers that never become customers",
+    "Off-brand visuals",
+    "No reporting"
+   ]
+  },
+  {
+   "id": "ai-search",
+   "name": "AI Search Optimization",
+   "ico": "ai",
+   "img": "{{img:hero-bg}}",
+   "short": "Improve your online presence for AI-powered search and answer engines, including Google's AI search features and other AI platforms.",
+   "head": "Get Recommended by AI Search",
+   "intro": "People now ask ChatGPT, Perplexity and Google's AI features for recommendations. We structure your content and brand signals so these tools understand and cite your business.",
+   "feats": [
+    [
+     "Entity & schema",
+     "Structured data that clearly describes your business."
+    ],
+    [
+     "Answer-ready content",
+     "Clear answers to the questions customers ask."
+    ],
+    [
+     "Brand mentions",
+     "Consistent presence on the sources AI tools trust."
+    ],
+    [
+     "AI visibility tracking",
+     "Monitoring where and how you are mentioned."
+    ]
+   ],
+   "probs": [
+    "Not mentioned in AI answers",
+    "Competitors cited instead of you",
+    "Thin or unclear service content",
+    "Missing structured data",
+    "Inconsistent brand info online",
+    "No way to measure AI visibility"
+   ]
+  }
+ ],
+ "WHY": [
+  [
+   "Clear Strategy",
+   "We focus on what your business actually needs. Every plan starts from your goals, customers and current online presence."
+  ],
+  [
+   "Practical Execution",
+   "We handle the work, not just the planning. Our team implements the SEO, ads and website changes ourselves."
+  ],
+  [
+   "Business-Focused",
+   "Our goal is more leads, customers, and sales, not just traffic. We report on calls, forms and revenue."
+  ],
+  [
+   "Transparent Reporting",
+   "See exactly what we’re doing and the results we’re getting, in plain language, every month."
+  ]
+ ],
+ "STEPS": [
+  [
+   "Understand",
+   "We learn about your business, goals, customers, and current online presence."
+  ],
+  [
+   "Plan",
+   "We identify what needs improvement and create a practical strategy."
+  ],
+  [
+   "Execute",
+   "We do the agreed work and keep you informed throughout the process."
+  ],
+  [
+   "Improve",
+   "We review the data, identify what is working, and make improvements over time."
+  ]
+ ],
+ "PLAT": [
+  [
+   "G",
+   "Google Search",
+   "Organic SEO",
+   "#2F7BEA"
+  ],
+  [
+   "GB",
+   "Business Profile",
+   "Maps & local",
+   "#0B4FB0"
+  ],
+  [
+   "Ads",
+   "Google Ads",
+   "Paid search",
+   "#E2A400"
+  ],
+  [
+   "GA4",
+   "Analytics 4",
+   "Tracking",
+   "#E8710A"
+  ],
+  [
+   "f",
+   "Meta",
+   "Facebook & Instagram",
+   "#1877F2"
+  ],
+  [
+   "in",
+   "LinkedIn",
+   "B2B social",
+   "#0A66C2"
+  ],
+  [
+   "Tk",
+   "TikTok",
+   "Short video",
+   "#111827"
+  ],
+  [
+   "WP",
+   "WordPress",
+   "Websites",
+   "#21759B"
+  ]
+ ],
+ "VIDS": [
+  {
+   "id": "fV2UIO6vWaM",
+   "t": "“They explained everything in plain language”",
+   "s": "Client video review",
+   "img": "{{v_fV2UIO6vWaM}}"
+  },
+  {
+   "id": "LByRG9RuCSY",
+   "t": "Working with EmmEnn Tech on SEO",
+   "s": "Client video review",
+   "img": "{{v_LByRG9RuCSY}}"
+  },
+  {
+   "id": "uLUuJYvsjco",
+   "t": "More enquiries from our website",
+   "s": "Client video review",
+   "img": "{{v_uLUuJYvsjco}}"
+  },
+  {
+   "id": "0HTQh_vvbmc",
+   "t": "Quick review from a happy client",
+   "s": "YouTube Short",
+   "img": "{{v_0HTQh_vvbmc}}",
+   "short": true
+  }
+ ],
+ "TST": [
+  [
+   "Yusuf was easy to work with from the start. He understood what we needed, explained the strategy clearly, and kept us updated throughout the project.",
+   "London, UK"
+  ],
+  [
+   "We hired EmmEnn Tech for SEO and website improvements. The communication was straightforward, and Yusuf always explained what was being done instead of using complicated marketing language.",
+   "New York, USA"
+  ],
+  [
+   "Yusuf and his team handled our digital marketing professionally. We had a clear plan from the beginning and could see what work was being completed each month.",
+   "Virginia, USA"
+  ],
+  [
+   "Working with EmmEnn Tech has been a good experience. Yusuf is responsive, practical, and focused on solving the actual problems instead of making big promises.",
+   "California, USA"
+  ],
+  [
+   "We needed help improving our online presence and generating more enquiries. Yusuf took the time to understand our business and gave us a clear plan to work with.",
+   "Maryland, USA"
+  ],
+  [
+   "Our Google Business Profile finally shows up in the map pack for our main service. The monthly reports make it easy to see what changed.",
+   "Denver, USA"
+  ]
+ ],
+ "FAQ": [
+  [
+   "How long does SEO take to show results?",
+   "Most clients see early movement in rankings within 6–12 weeks. Steady growth in leads usually comes between months 3 and 6, depending on competition."
+  ],
+  [
+   "Do you require long-term contracts?",
+   "No. Our monthly plans run month to month after the first 3 months, so you stay because it works."
+  ],
+  [
+   "What do your monthly reports include?",
+   "Work completed, rankings, traffic, calls, form leads and ad spend, plus what we plan to do next. Written in plain language."
+  ],
+  [
+   "Do you work with businesses outside the US?",
+   "Yes. We work with clients in the US, UK and other markets, and schedule calls around your time zone."
+  ],
+  [
+   "Can you work on my existing website?",
+   "Yes. We can improve your current site or rebuild it if that is the better option. We’ll tell you honestly which one makes sense."
+  ],
+  [
+   "How much should I spend on Google Ads?",
+   "It depends on your market and cost per click. We start with a test budget, track leads, and scale what is profitable."
+  ]
+ ],
+ "CASES": [
+  [
+   "Home services, Denver",
+   "Faster replies turned searches into booked jobs",
+   "Avg. response time",
+   "4 hours",
+   "2 minutes",
+   "30x faster",
+   "{{img:s-reviews}}"
+  ],
+  [
+   "Dental clinic, Virginia",
+   "Map pack rankings for every core service",
+   "Calls from Maps / month",
+   "38",
+   "112",
+   "+195%",
+   "{{img:s-gbp}}"
+  ],
+  [
+   "E-commerce, California",
+   "Cheaper leads and a fuller pipeline",
+   "Cost per lead",
+   "$96",
+   "$57",
+   "-41%",
+   "{{img:s-ecom}}"
+  ]
+ ],
+ "POSTS": [
+  {
+   "t": "How Local SEO Gets Your Business Into the Google Map Pack",
+   "c": "Local SEO",
+   "d": "Sep 22, 2026",
+   "m": 6,
+   "img": "{{img:s-gbp}}",
+   "x": "Three things decide who shows up in the map pack: relevance, distance and prominence. Here is how to improve the two you control.",
+   "b": [
+    "When someone searches “near me”, Google shows three businesses on a map before any normal result. Those three spots get most of the calls.",
+    "Start with a complete Google Business Profile: the right primary category, every service you offer, real photos each month and accurate hours.",
+    "Then build consistent citations, and earn recent, detailed reviews. Reply to every review within a couple of days."
+   ]
+  },
+  {
+   "t": "Google Ads vs SEO: Where Should Your First Marketing Dollar Go?",
+   "c": "Google Ads",
+   "d": "Sep 15, 2026",
+   "m": 5,
+   "img": "{{img:s-landing}}",
+   "x": "Ads bring leads this week, SEO compounds over months. The right answer depends on your cash flow and how competitive your market is.",
+   "b": [
+    "Google Ads put you at the top of results today, but the leads stop when the budget stops.",
+    "SEO takes 3 to 6 months to build, then keeps sending leads without paying per click.",
+    "For most service businesses we start with a small, tightly tracked ads campaign while SEO builds in the background."
+   ]
+  },
+  {
+   "t": "AI Search Optimization: Getting Mentioned by ChatGPT and Google AI",
+   "c": "AI Search",
+   "d": "Sep 8, 2026",
+   "m": 7,
+   "img": "{{img:hero-bg}}",
+   "x": "More customers ask AI tools for recommendations. Clear structured data and answer-ready content help these tools understand and cite you.",
+   "b": [
+    "AI answer engines pull from sources they trust and content they can understand quickly.",
+    "Add structured data that describes your business, write clear answers to the questions customers ask, and keep your details consistent across the web.",
+    "Then track where you are mentioned, and improve the pages that AI tools cite."
+   ]
+  },
+  {
+   "t": "7 Website Fixes That Turn Visitors Into Phone Calls",
+   "c": "Web Design",
+   "d": "Aug 30, 2026",
+   "m": 4,
+   "img": "{{img:s-webdev}}",
+   "x": "Small changes like a visible phone number, faster pages and one clear offer per page often double enquiries.",
+   "b": [
+    "Put your phone number and main call to action at the top of every page, especially on mobile.",
+    "Make pages load in under three seconds, and show reviews near the contact form.",
+    "Give each service its own page with one clear offer and one next step."
+   ]
+  },
+  {
+   "t": "What a Transparent Marketing Report Should Show You",
+   "c": "Reporting",
+   "d": "Aug 21, 2026",
+   "m": 5,
+   "img": "{{img:s-seo}}",
+   "x": "If your report is full of impressions and jargon, something is missing. Here are the numbers that actually matter.",
+   "b": [
+    "A useful report starts with business results: calls, form leads, booked jobs and sales.",
+    "Then it shows the work done that month and what is planned next.",
+    "Rankings and traffic matter, but only as signals on the way to leads."
+   ]
+  },
+  {
+   "t": "Social Media for Service Businesses: A Simple Monthly Plan",
+   "c": "Social Media",
+   "d": "Aug 12, 2026",
+   "m": 4,
+   "img": "{{img:s-social}}",
+   "x": "You don’t need to post every day. A simple monthly mix of proof, tips and offers keeps you visible without burning out.",
+   "b": [
+    "Plan four types of posts: before-and-after work, quick tips, customer reviews and one clear offer.",
+    "Batch-create them once a month and schedule them.",
+    "Reply to every comment and message quickly. That is where social turns into leads."
+   ]
+  }
+ ],
+ "COMPARE": [
+  [
+   "Contracts",
+   "Month-to-month after the first 3 months",
+   "12-month lock-in contracts"
+  ],
+  [
+   "Reporting",
+   "Plain-English monthly report: calls, forms, sales",
+   "Vanity metrics and jargon"
+  ],
+  [
+   "Who does the work",
+   "The same team you talk to",
+   "Outsourced, hand-offs, delays"
+  ],
+  [
+   "Channels",
+   "SEO, Ads, web, social & AI search under one roof",
+   "Separate vendors that don't talk"
+  ],
+  [
+   "Response time",
+   "Reply within one business day",
+   "Days, sometimes weeks"
+  ],
+  [
+   "Success measured by",
+   "Leads, customers and sales",
+   "Traffic and impressions"
+  ]
+ ]
+}

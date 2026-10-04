@@ -1,0 +1,19 @@
+{"operations":[
+{"action":"create","type":"global-color-variable","label":"em-navy","value":"#071233"},
+{"action":"create","type":"global-color-variable","label":"em-navy-deep","value":"#040B22"},
+{"action":"create","type":"global-color-variable","label":"em-ink","value":"#0C1530"},
+{"action":"create","type":"global-color-variable","label":"em-text","value":"#2B3550"},
+{"action":"create","type":"global-color-variable","label":"em-soft","value":"#5B6683"},
+{"action":"create","type":"global-color-variable","label":"em-light","value":"#EEF5FF"},
+{"action":"create","type":"global-color-variable","label":"em-tint","value":"#F5F9FF"},
+{"action":"create","type":"global-color-variable","label":"em-edge","value":"#D3E3FB"},
+{"action":"create","type":"global-color-variable","label":"em-cyan","value":"#22C6E0"},
+{"action":"create","type":"global-color-variable","label":"em-cyan-hi","value":"#7AF0F5"},
+{"action":"create","type":"global-color-variable","label":"em-blue","value":"#1F6BE0"},
+{"action":"create","type":"global-color-variable","label":"em-pop","value":"#FF8A1F"},
+{"action":"create","type":"global-color-variable","label":"em-pop-2","value":"#FF5F3A"},
+{"action":"create","type":"global-color-variable","label":"em-white","value":"#FFFFFF"},
+{"action":"create","type":"global-font-variable","label":"em-font","value":"Urbanist"},
+{"action":"create","type":"global-font-variable","label":"em-num","value":"Space Grotesk"},
+{"action":"create","type":"global-font-variable","label":"em-mono","value":"JetBrains Mono"}
+]}
