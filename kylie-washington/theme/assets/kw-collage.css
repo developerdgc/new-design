@@ -147,16 +147,14 @@
 .kwc-h2.kwc-mb { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
 .kwc-head { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
 
-/* 2. Bigger header menu */
+/* 2. Bigger header menu, always on one line (scales with the window so it never wraps) */
+.header__primary-nav { flex-wrap: nowrap; column-gap: clamp(0.9rem, 1.6vw, 1.75rem); }
+.header__primary-nav-item { white-space: nowrap; }
 .header__primary-nav-item > a,
 .header__primary-nav-item > details > summary,
-.header__primary-nav-item [data-title] { font-size: 1.05rem; }
-@media (min-width: 1200px) {
-  .header__primary-nav-item > a,
-  .header__primary-nav-item > details > summary,
-  .header__primary-nav-item [data-title] { font-size: 1.125rem; }
-  .header__primary-nav { column-gap: 1.75rem; }
-}
+.header__primary-nav-item [data-title] { font-size: clamp(0.85rem, 1.05vw, 1.125rem); }
+/* keep the centred logo from crowding the menu on mid-size laptops */
+@media (min-width: 1000px) and (max-width: 1299px) { .kw-logo-text { font-size: clamp(1.25rem, 2vw, 1.7rem); } }
 
 /* 3. Hover on every button */
 .button, .kwc-pill, button[type="submit"], .shopify-payment-button__button {
