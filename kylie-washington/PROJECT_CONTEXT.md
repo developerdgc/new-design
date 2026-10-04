@@ -83,7 +83,7 @@ Background `#F7F5F1`, text `#1F1D1B`, muted `#6E6962`, lines `#E3DED6`, charcoal
 About ✅ (PDF) · FAQ ✅ draft in `reports/fine-art-prints-FAQ_draft.md` · Contact ✅ · Wholesale 🔨 rewrite (PDF text is copied) · Licencing 🔨 Terri structure, client text needed · Studio Journal ⏳ client stories · Gift card 🔨 create · Policies: Terms ✅, Shipping ✅ (PDF), Returns ❌, Privacy (Shopify template)
 
 ## 7. NEXT PHASE: theme build (not started)
-Plan: Claude edits the theme via **Shopify CLI + Theme Access** on a duplicated theme; data (pages, menus) via the Shopify connector.
+Plan (done, see status below): Claude edits the theme via **Shopify CLI + Theme Access** on a duplicated theme; data (pages, menus) via the Shopify connector.
 User setup checklist:
 1. Duplicate Prestige → name **"Prestige – Kylie Build"** (never edit live theme)
 2. Install **Theme Access** app → password `shptka_…`
@@ -164,6 +164,12 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - No horizontal overflow on any page. Mobile menu, accordions, size buttons, forms OK.
 - Fixed: "Enquire about this work" rendered as an empty black bar (transparent background setting) → now a `liquid` block rendering the theme's outline button. Homepage had two newsletter forms back to back (section + footer) → homepage newsletter section removed. About page had "About" + "About Kylie Washington" headings → page title is now "About Kylie Washington", h2 removed from body.
 - Remaining visual items: "MY STORE" in header/footer (rename store), Unsplash hero is another artist's painting (replace), Shopify preview bar overlaps in screenshots only.
+
+### Theme PUBLISHED Oct 4 (user's explicit instruction)
+- "Prestige – Kylie Build" `#146130927667` is now the **live** theme (`shopify theme publish`). Horizon `#145878089779` is unpublished and kept as the fallback.
+- The store is still **password protected**, so the public sees only the password page. Removing the password (Online Store → Preferences) is the actual launch.
+- Before removing the password: rename store (still "My Store"), paste policies from `policies/`, replace Unsplash placeholders, add Orchid image, confirm open client questions.
+- From now on edits to `#146130927667` change the live theme. For bigger changes, duplicate it first and work on the copy.
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
