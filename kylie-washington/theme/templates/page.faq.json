@@ -12,41 +12,158 @@
     "faq": {
       "type": "faq",
       "blocks": {
-        "category": {
+        "category-1": {
           "type": "category",
           "settings": {
-            "title": "Order"
+            "title": "About the prints"
           }
         },
         "question-1": {
           "type": "question",
           "settings": {
-            "question": "Do you ship overseas?",
-            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "question": "What is a fine art print?",
+            "answer": "<p>Each fine art print is created from one of Kylie Washington’s original artworks. The prints capture the colour, texture and expressive energy of the original painting, so you can live with the work at a more accessible price.</p>"
           }
         },
         "question-2": {
           "type": "question",
           "settings": {
-            "question": "How long will it take to get my orders?",
-            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "question": "What paper and inks are used?",
+            "answer": "<p>Prints are made in Australia on museum-grade fine art paper using archival inks, so they keep their depth and vibrancy for years to come.</p>"
           }
         },
         "question-3": {
           "type": "question",
           "settings": {
-            "question": "Any question?",
-            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "question": "Are the prints limited editions?",
+            "answer": "<p>Yes. Each print is released as a limited edition. Once an edition is complete, no further prints are made.</p>"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "question": "What sizes are available?",
+            "answer": "<p>Square works are available in Small (40 × 40 cm, $80), Medium (50 × 50 cm, $120) and Large (75 × 75 cm, $250). All other works are printed to standard paper sizes: A4 (21 × 29.7 cm, $80), A3 (29.7 × 42 cm, $120) and A2 (42 × 59.4 cm, $250). Choose your size on the product page and the price will update. Custom sizes are available on request.</p>"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "question": "Do the prints come framed?",
+            "answer": "<p>Prints are supplied unframed. If you are framing your print yourself, we recommend a local framer using acid-free mounts and UV-protective glazing.</p>"
+          }
+        },
+        "question-6": {
+          "type": "question",
+          "settings": {
+            "question": "Will the colours look exactly like they do on screen?",
+            "answer": "<p>We work hard to photograph and reproduce each work accurately, but colours can vary depending on your screen, device settings and lighting.</p>"
+          }
+        },
+        "category-2": {
+          "type": "category",
+          "settings": {
+            "title": "Orders and delivery"
+          }
+        },
+        "question-7": {
+          "type": "question",
+          "settings": {
+            "question": "How long will my print take?",
+            "answer": "<p>Prints are made to order and are usually processed within 14 days. Delivery time then depends on your location. You’ll receive a tracking number when your order is on its way. Prints often ship well within this time, but busy periods can occasionally take a little longer.</p>"
+          }
+        },
+        "question-8": {
+          "type": "question",
+          "settings": {
+            "question": "How much is shipping?",
+            "answer": "<p>Shipping is free on all physical products within Australia. There are no hidden costs.</p>"
+          }
+        },
+        "question-9": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>Australia Post usually delivers within 3–10 business days to most Australian locations. Remote areas may take longer.</p>"
+          }
+        },
+        "question-10": {
+          "type": "question",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>We don’t currently ship outside Australia, but please <a href=\"/pages/contact\">get in touch</a>. We may be able to help.</p>"
+          }
+        },
+        "question-11": {
+          "type": "question",
+          "settings": {
+            "question": "Can I pick up my order?",
+            "answer": "<p>We don’t offer pickup or local delivery. If you live within 40 km of Pearl Beach, NSW, please <a href=\"/pages/contact\">contact us</a> and we may be able to arrange something.</p>"
+          }
+        },
+        "category-3": {
+          "type": "category",
+          "settings": {
+            "title": "Care and other questions"
+          }
+        },
+        "question-12": {
+          "type": "question",
+          "settings": {
+            "question": "What if my print arrives damaged?",
+            "answer": "<p>Please contact us as soon as possible and keep the original packaging. We may ask for photos of the print, the packaging and the damage so we can sort it out and, where needed, make a claim with the carrier. Your rights under Australian Consumer Law always apply.</p>"
+          }
+        },
+        "question-13": {
+          "type": "question",
+          "settings": {
+            "question": "How should I care for my print?",
+            "answer": "<p>Display your print away from direct sunlight and humidity, handle it with clean, dry hands, and frame it with UV-protective glazing for the longest life.</p>"
+          }
+        },
+        "question-14": {
+          "type": "question",
+          "settings": {
+            "question": "Can I use the artwork for commercial purposes?",
+            "answer": "<p>Buying a print doesn’t include reproduction or commercial rights. Copyright stays with Kylie Washington. For licensing, please see our <a href=\"/pages/licencing\">Licencing</a> page.</p>"
+          }
+        },
+        "question-15": {
+          "type": "question",
+          "settings": {
+            "question": "I have a question that isn’t answered here.",
+            "answer": "<p>We’re happy to help. Please <a href=\"/pages/contact\">contact us</a>.</p>"
           }
         }
       },
       "block_order": [
-        "category",
+        "category-1",
         "question-1",
         "question-2",
-        "question-3"
+        "question-3",
+        "question-4",
+        "question-5",
+        "question-6",
+        "category-2",
+        "question-7",
+        "question-8",
+        "question-9",
+        "question-10",
+        "question-11",
+        "category-3",
+        "question-12",
+        "question-13",
+        "question-14",
+        "question-15"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "show_categories": true,
+        "subheading": "Fine art prints",
+        "title": "Frequently asked questions",
+        "heading_style": "h3"
+      }
     }
   },
   "order": [

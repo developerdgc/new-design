@@ -11,74 +11,53 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "text-with-icons": {
-      "type": "text-with-icons",
-      "blocks": {
-        "icon-1": {
-          "type": "item",
-          "settings": {
-            "title": "Free delivery worldwide"
-          }
-        },
-        "icon-2": {
-          "type": "item",
-          "settings": {
-            "title": "Satisfied or refunded"
-          }
-        },
-        "icon-3": {
-          "type": "item",
-          "settings": {
-            "title": "Top-notch support"
-          }
-        },
-        "icon-4": {
-          "type": "item",
-          "settings": {
-            "title": "Secure payments"
-          }
-        }
-      },
-      "block_order": [
-        "icon-1",
-        "icon-2",
-        "icon-3",
-        "icon-4"
-      ],
-      "settings": {}
-    },
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {}
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "Kylie Washington Studio",
+            "content": "<p>Original paintings and limited edition fine art prints from Pearl Beach, on the NSW Central Coast.</p>",
+            "enable_follow_on_shop": false
+          }
         },
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
-            "show_menu_title": true
+            "menu": "kw-footer",
+            "show_menu_title": true,
+            "menu_title": "Information",
+            "collapse_on_mobile": false
           }
         },
-        "text": {
-          "type": "text",
+        "newsletter": {
+          "type": "newsletter",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+            "title": "Join the collectors list",
+            "content": "<p>Be the first to hear about new work, exhibitions and studio news.</p>"
           }
         }
       },
       "block_order": [
-        "newsletter",
+        "text",
         "links",
-        "text"
+        "newsletter"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "show_social_media": true,
+        "show_payment_icons": true,
+        "show_powered_by_shopify": false,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "show_locale_selector": false
+      }
     }
   },
   "order": [
-    "text-with-icons",
     "footer"
   ]
 }

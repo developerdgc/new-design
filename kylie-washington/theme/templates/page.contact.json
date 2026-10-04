@@ -16,7 +16,34 @@
     },
     "contact-form": {
       "type": "contact",
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "title": "Contact",
+        "heading_style": "h3",
+        "content": "<p>For questions about an artwork, an order, licencing or media, please get in touch using the form below.</p>"
+      },
+      "blocks": {
+        "field-1": {
+          "type": "text",
+          "settings": {
+            "title": "Phone",
+            "required": false,
+            "use_long_text": false
+          }
+        },
+        "field-2": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Enquiry type",
+            "values": "General, Original artwork, Fine art print, Licencing, Wholesale, Media"
+          }
+        }
+      },
+      "block_order": [
+        "field-1",
+        "field-2"
+      ]
     }
   },
   "order": [

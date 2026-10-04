@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_title": true,
+        "page_width": "sm"
+      }
+    },
+    "form": {
+      "type": "contact",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "title": "Wholesale enquiry",
+        "heading_style": "h3",
+        "content": ""
+      },
+      "blocks": {
+        "field-1": {
+          "type": "text",
+          "settings": {
+            "title": "Business name",
+            "required": true,
+            "use_long_text": false
+          }
+        },
+        "field-2": {
+          "type": "text",
+          "settings": {
+            "title": "Website or Instagram",
+            "required": false,
+            "use_long_text": false
+          }
+        },
+        "field-3": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Business type",
+            "values": "Interior designer, Gallery, Retailer, Other"
+          }
+        },
+        "field-4": {
+          "type": "text",
+          "settings": {
+            "title": "Location",
+            "required": false,
+            "use_long_text": false
+          }
+        }
+      },
+      "block_order": [
+        "field-1",
+        "field-2",
+        "field-3",
+        "field-4"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

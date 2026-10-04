@@ -117,8 +117,18 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - `templates/collection.json` + `collection.archive.json`: title banner without image, 3 per row desktop / 1 per row mobile, wider spacing, filter drawer, no grid switcher/result count. Archive has no sort.
 - Assigned via Admin API: 57 Originals → `original`, 45 prints → `print`, Archive collection → `archive`. (Live Horizon theme has no such templates, so it falls back to its default; harmless.)
 - Custom code: `snippets/artwork-caption.liquid` (Year · Medium · Size under cards for products tagged `Originals`); `product-card.liquid` shows "Sold" instead of price for tag `Sold`; `buy-buttons.liquid` uses `product.general.acquire_button` for tag `Originals`; `assets/kylie.css` (muted #6E6962, details list) loaded in `layout/theme.liquid`; `acquire_button` key added to every locale.
-- Not yet visually verified: product pages 404 on the storefront while products are Draft. Collections render without Liquid errors.
+- Verified Oct 4: temporarily set A Poem With AI + Wattle Me to Active and published to Online Store, checked both product templates on the preview (all tabs, metafield details, Acquire/Enquire buttons, size buttons, card caption), then set both back to **Draft**. They are still *published* to the Online Store channel (unpublish is blocked by the connector) but Draft keeps them hidden.
 - Preview check from the sandbox works with curl (cookie jar + POST /password with `$STORE_PASSWORD`, then `?preview_theme_id=`); Playwright does not (TLS).
+
+### Phase C (pages + menus): DONE Oct 4
+- Pages created (all published; store is password protected): `about` (client text, PDF), `wholesale` (template `page.wholesale`, **rewritten by Claude**, needs client OK), `licencing` (template `page.licencing`, **structure + draft text by Claude**, client must supply real text and images), `fine-art-print-faqs` (template `page.faq`, 15 questions from `reports/fine-art-prints-FAQ_draft.md`; unconfirmed items left out: signed/numbered, edition size, paper name, packaging, change-of-mind returns, gift card). `contact` already existed.
+- Blog `journal` (Studio Journal) created, empty. Old `news` blog left as is.
+- New menus `kw-main` and `kw-footer` (the existing `main-menu`/`footer` are used by the live Horizon theme, so they were NOT touched). Kylie Build header uses `kw-main`, footer links use `kw-footer`.
+- Footer menu links to /policies/shipping-policy, refund-policy, terms-of-service: these 404 until policies are added (Phase E). Only Privacy exists.
+- Header group: demo countdown removed, announcement bar "Free shipping Australia-wide" (scheme 5), logo left + inline nav, country selector off. Footer group: demo icon row removed; blocks Kylie Washington Studio text / Information menu / "Join the collectors list" newsletter; Powered by Shopify off.
+- Forms: Contact (Phone, Enquiry type dropdown), Wholesale (Business name*, Website/Instagram, Business type, Location), Licencing (Company, Artworks, Intended use, Territory and duration). All submissions go to the store email.
+- ⚠️ Store name is still "My Store" (shows in header + footer). User must change it in Settings → Store details to "Kylie Washington Studio", or upload a logo.
+- Gift Certificate not in footer yet: no gift card product exists (connector blocks gift card writes); create in admin.
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
