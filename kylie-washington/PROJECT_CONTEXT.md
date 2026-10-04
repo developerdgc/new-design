@@ -138,9 +138,18 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - Featured grids show Prestige placeholder cards until products are set to Active.
 - Store name: cannot be changed through the Admin API; user must set "Kylie Washington Studio" in Settings → Store details.
 
+### Phase E (policies + remaining content): PARTLY DONE Oct 4
+- Policies could NOT be written: connector lacks `write_legal_policies`. HTML ready in `policies/` (Terms = client text, Shipping = client text, Refund = **Claude draft**, change-of-mind section deliberately left for the client). User pastes them in Settings → Policies (see `policies/README.md`). Until then the footer Shipping/Returns/Terms links 404.
+- Privacy policy is Shopify's generated template and says "My Store": regenerate after the store is renamed.
+- Collection descriptions set: Fine Art Prints = client's intro text from the PDF (verbatim); Originals and Archive = one-line drafts.
+- Still waiting on client: Studio Journal stories, Licencing text + images, Wholesale text approval, Returns policy decisions, gift certificate (user: later), real testimonials, real hero/studio photos.
+- Not done: Search & Discovery filters (app setup in admin, tags `Size:`, `Subject:`, `Colour:`, `Shape:` are already on products).
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft
 - `scripts/`: Python generators used (`build_paintings.py`, `build_prints.py`, `add_images.py`) and the image→product maps (`map.py`, `pmap.py`, `newfiles.json`). Paths inside the scripts point to the old session scratchpad, so adjust them before re-running.
 - `source-docs/`: client briefs
+- `policies/`: Terms / Shipping / Refund policy HTML to paste into Shopify admin
+- `theme/`: Prestige – Kylie Build theme source (#146130927667)
 - Product images themselves are already in Shopify Content → Files and are not stored here. Dropbox source folders: Paintings `https://www.dropbox.com/scl/fo/gneb4m57m822xeuh3mynx/...` and Prints `https://www.dropbox.com/scl/fo/8x295966lx5j8bcdlmv7p/...` (ask the user for full links if needed).
