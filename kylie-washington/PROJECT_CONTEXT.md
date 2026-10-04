@@ -93,6 +93,12 @@ User setup checklist:
 
 First steps in the new session: test the connector (`get-shop-info`), `npm i -g @shopify/cli`, `shopify theme list`, `shopify theme pull --theme "Prestige – Kylie Build"`, list the available Prestige sections, then Phase A (theme settings) → B (templates + custom code) → C (pages, menus) → D (homepage) → E (remaining pages) → F (mobile QA). Estimate ~10–15 h of build plus client content waits. Never publish the theme; the user publishes.
 
+### Status, Oct 4 2026 (session 2)
+- Connector OK: store `7m41tm-1v.myshopify.com` ("My Store", Basic, AUD, AEDT). Env secrets `SHOPIFY_FLAG_STORE`, `SHOPIFY_CLI_THEME_TOKEN`, `STORE_PASSWORD` are set. Shopify CLI 4.8.4 works.
+- Themes: Horizon `#145878089779` (live) · Prestige 11.4.1 `#145878188083` (unpublished, complete, ~220 files) · **Prestige – New Build `#146128306227`** (unpublished; the duplicate was named this instead of "Kylie Build").
+- ⚠️ **"Prestige – New Build" is incomplete on Shopify itself**: only 98 files (stops at `sections/newsletter.liquid`; no `snippets/`, no `templates/`, no `overlay-group.json`). Confirmed via Admin API `theme.files`, not a CLI problem. Do NOT build on it: delete it and re-duplicate Prestige (or `shopify theme push --unpublished` a fresh copy from the complete Prestige).
+- Prestige sections usable on the homepage: announcement-bar, slideshow, image-with-text-overlay, rich-text, multi-column, featured-collections, testimonials, image-with-text, newsletter (+ others in `reports/prestige-sections.md`).
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft
