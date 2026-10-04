@@ -28,7 +28,7 @@ The user (a developer with collaborator access through their organisation's Part
 
 ## 3. What is DONE in Shopify
 - **Metafield definitions** (Products, all Single line text): `custom.custom_year`, `custom.custom_medium`, `custom.custom_dimensions`, `custom.custom_framing`. Note the doubled `custom_` in the key.
-- **Originals: 57 products imported with images** (`csv/kylie-washington_originals_WITH-IMAGES.csv`). 37 available, 20 sold (price $0, qty 0, tags `Sold`, `Archive`). Banksia 120×55 has price $0 + tag `Price Pending`. Colour Studies = 1 product with 4 variants. Year/medium are placeholders (2026, Acrylic on canvas).
+- **Originals: 57 products imported with images** (`csv/kylie-washington_originals_WITH-IMAGES.csv`). 37 available, 20 sold (price $0, qty 0, tags `Sold`, `Archive`). Banksia 120×55 now $1,200 (was $0 + `Price Pending`). Colour Studies = 1 product with 4 variants. Year/medium are placeholders (2026, Acrylic on canvas).
 - **Fine Art Prints: 45 products imported with images** (`csv/kylie-washington_fine-art-prints_FINAL.csv`). 19 square (Small 40×40 / Medium 50×50 / Large 75×75) and 26 rectangle (A4 / A3 / A2). All sizes $80 / $120 / $250 (A-size prices are an **assumption**, awaiting client). Inventory not tracked. "Orchid" print has no image (pending). Grevillea Spinning was removed (not in client list).
 - All products are **Draft**.
 - **Collections** (automated, by tag): Originals (`Originals` AND inventory > 0), Archive (`Originals` AND inventory < 1), Fine Art Prints (`Fine Art Prints`), Banksia (`Subject: Banksia`), Australian Flora (`Subject: Australian Flora`), Featured (manual, 4 homepage paintings).
@@ -147,8 +147,9 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - Store name: cannot be changed through the Admin API; user must set "Kylie Washington Studio" in Settings → Store details.
 
 ### Products: ACTIVE Oct 4
-- 100 of 102 products set to Active and published to the Online Store channel (store is still password protected).
-- Kept as **Draft** on purpose: `banksia` (Banksia 120×55, price $0 with stock 1 → would be purchasable for free; needs a price) and `orchid-fine-art-print` (no image, client hasn't confirmed it).
+- 101 of 102 products Active and published to the Online Store channel (store is still password protected).
+- `banksia` (Banksia 120×55): price set to **$1,200** on Oct 4 (user's instruction), "Price Pending" tag removed, then Active + published.
+- Kept as **Draft** on purpose: `orchid-fine-art-print` (no image, client hasn't confirmed it).
 - Sold originals have price $0 but inventory 0 with policy DENY, so they can't be bought; cards show "Sold".
 
 ### Phase E (policies + remaining content): PARTLY DONE Oct 4
