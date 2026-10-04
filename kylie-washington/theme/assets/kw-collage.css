@@ -118,3 +118,17 @@
   .kwc-tilt-card:nth-child(even) { margin-top: 2rem; }
   .kwc-cards--2, .kwc-cards--3 { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Footer (Painterly Collage) */
+.kwc-footer-top { background: #231f1c; color: #f6f1e8; border-top: 6px solid #f2c230; }
+.kwc-footer-top__inner { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; align-items: end; padding-block: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 3rem); border-bottom: 1px solid rgb(246 241 232 / 0.15); }
+.kwc-footer-top__word { margin: 0; font-family: var(--heading-font-family); font-weight: 700; font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.9; letter-spacing: -0.02em; }
+.kwc-footer-top__word em { font-style: italic; font-weight: 400; color: #f2c230; }
+.kwc-footer-top__side { display: flex; flex-direction: column; gap: 1.25rem; }
+.kwc-footer-top__side p { margin: 0; opacity: 0.85; max-width: 28rem; }
+.footer .h6 { font-family: var(--heading-font-family); font-weight: 700; font-size: 1.2rem; letter-spacing: 0; text-transform: none; color: #f2c230; }
+.footer .link-faded, .footer .unstyled-list a { opacity: 0.85; }
+.footer .unstyled-list a:hover, .footer .prose a:hover { color: #f2c230; opacity: 1; }
+.footer .prose a { text-decoration-color: #f2c230; }
+.footer input[type="email"] { border-radius: 999px; }
+@media (max-width: 899px) { .kwc-footer-top__inner { grid-template-columns: minmax(0, 1fr); align-items: start; } }

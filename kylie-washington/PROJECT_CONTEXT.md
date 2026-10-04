@@ -186,6 +186,11 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - Verified by HTML only (all sections render, no Liquid errors, 4 product cards, 3 collage frames). NOT visually verified: the screenshot command was blocked by the permission classifier.
 - The "Warm editorial" settings above are superseded by this.
 
+### Footer rebuilt (Oct 4)
+- Footer group = `footer-top` (custom-liquid: big "Kylie *Washington*" wordmark, studio line, Instagram / YouTube / Get in touch pills; ink background, yellow top rule) + Prestige footer with 5 blocks: Visit the studio (Pearl Beach NSW, email, free shipping), Shop (`kw-footer-shop`: Available originals, Archive, Fine art prints, Licencing), Studio (`kw-footer-studio`: About Kylie, Studio journal, See it in your space, Wholesale, Contact), Information (`kw-footer`: FAQs, Shipping, Returns, Terms, Privacy), newsletter (hidden on the homepage). Social icons + payment icons on, Powered by Shopify off. Styling in `kw-collage.css` (yellow menu titles in Playfair).
+- custom-liquid sections must have `remove_vertical_spacing`, `remove_horizontal_spacing` true and no border, otherwise Prestige wraps them in a padded cream box (fixed for `footer-top` and homepage `find-art`).
+- Copyright line still says "My Store" until the store is renamed.
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft

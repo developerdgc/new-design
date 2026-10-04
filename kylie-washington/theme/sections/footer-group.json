@@ -11,15 +11,44 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
+    "footer-top": {
+      "type": "custom-liquid",
+      "settings": {
+        "liquid": "<div class=\"kwc-footer-top\">\n  <div class=\"kwc-wrap kwc-footer-top__inner\">\n    <p class=\"kwc-footer-top__word\">Kylie <em>Washington</em></p>\n    <div class=\"kwc-footer-top__side\">\n      <p>Original paintings and limited edition fine art prints, made in the Pearl Beach studio on the NSW Central Coast.</p>\n      <div class=\"kwc-finder__row\" style=\"justify-content: flex-start;\">\n        {%- if settings.social_instagram != blank -%}<a class=\"kwc-pill\" href=\"{{ settings.social_instagram }}\" target=\"_blank\" rel=\"noopener\" style=\"--kwc-pill-bg: #f2c230; --kwc-pill-fg: #231f1c;\">Instagram</a>{%- endif -%}\n        {%- if settings.social_youtube != blank -%}<a class=\"kwc-pill\" href=\"{{ settings.social_youtube }}\" target=\"_blank\" rel=\"noopener\" style=\"--kwc-pill-bg: #e8572a; --kwc-pill-fg: #ffffff;\">YouTube</a>{%- endif -%}\n        <a class=\"kwc-pill kwc-pill--outline\" href=\"{{ pages.contact.url | default: '/pages/contact' }}\">Get in touch</a>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "text_alignment": "start"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
         "text": {
           "type": "text",
           "settings": {
-            "title": "Kylie Washington Studio",
-            "content": "<p>Original paintings and limited edition fine art prints from Pearl Beach, on the NSW Central Coast.</p>",
+            "title": "Visit the studio",
+            "content": "<p>Pearl Beach, NSW Central Coast<br>Australia</p><p><a href=\"mailto:kyliewashington@mail.com\">kyliewashington@mail.com</a></p><p>Free shipping Australia-wide</p>",
             "enable_follow_on_shop": false
+          }
+        },
+        "shop": {
+          "type": "links",
+          "settings": {
+            "menu": "kw-footer-shop",
+            "show_menu_title": true,
+            "menu_title": "Shop",
+            "collapse_on_mobile": false
+          }
+        },
+        "studio": {
+          "type": "links",
+          "settings": {
+            "menu": "kw-footer-studio",
+            "show_menu_title": true,
+            "menu_title": "Studio",
+            "collapse_on_mobile": false
           }
         },
         "links": {
@@ -34,19 +63,21 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "title": "Join the collectors list",
-            "content": "<p>Be the first to hear about new work, exhibitions and studio news.</p>"
+            "title": "Join the collector list",
+            "content": "<p>New work, exhibition invitations and private previews.</p>"
           }
         }
       },
       "block_order": [
         "text",
+        "shop",
+        "studio",
         "links",
         "newsletter"
       ],
       "settings": {
         "color_scheme": "scheme-3",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": true,
         "show_powered_by_shopify": false,
@@ -58,6 +89,7 @@
     }
   },
   "order": [
+    "footer-top",
     "footer"
   ]
 }
