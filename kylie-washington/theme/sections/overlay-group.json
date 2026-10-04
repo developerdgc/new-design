@@ -17,7 +17,8 @@
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "settings": {}
+      "settings": {},
+      "disabled": true
     },
     "privacy-banner": {
       "type": "privacy-banner",

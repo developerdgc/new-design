@@ -101,6 +101,16 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - Editor: https://7m41tm-1v.myshopify.com/admin/themes/146130927667/editor · Preview: https://7m41tm-1v.myshopify.com?preview_theme_id=146130927667
 - Prestige sections usable on the homepage: announcement-bar, slideshow, image-with-text-overlay, rich-text, multi-column, featured-collections, testimonials, image-with-text, newsletter (+ others in `reports/prestige-sections.md`).
 
+### Phase A (theme settings): DONE Oct 4, pushed to #146130927667
+- `config/settings_data.json` `current` is now an object (was the "Prestige" preset). Colour schemes: 1 = paper `#f7f5f1`/ink `#1f1d1b` (default) · 2 = white (modals/drawers) · 3 = ink dark · 4 = transparent/white text (image overlays) · 5 = line-beige `#e3ded6`.
+- Fonts: headings Jost 400 uppercase, letter spacing 15; body Instrument Sans 400, 15px desktop / 14px mobile. Buttons heading font, uppercase, square corners. Section spacing `lg`.
+- Product cards: natural ratio, no hover image, no vendor, no rating, no quick buy, no discount badge, colour swatches hidden, body font. Sale accent set to ink (no red). Image zoom on hover off.
+- Newsletter popup disabled (`overlay-group.json`). Free shipping bar off. Empty cart link → Originals.
+- Locale `en.default.json`: "Sold out" → "Sold" (button + badge).
+- Social: instagram.com/kyliewashington_art, youtube.com/@kyliewashington_art (URL format assumed; confirm).
+- Not settable in theme settings, do in Phase B CSS: muted text `#6E6962`, line colour `#E3DED6`. Favicon/logo: need files from client.
+- Playwright screenshots of the preview fail with ERR_CERT_AUTHORITY_INVALID through the sandbox proxy; verify visually via the preview link instead.
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft
