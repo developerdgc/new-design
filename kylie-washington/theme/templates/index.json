@@ -10,328 +10,246 @@
 {
   "sections": {
     "hero": {
-      "type": "image-with-text-overlay",
+      "type": "kw-hero-collage",
       "settings": {
-        "color_scheme": "scheme-4",
-        "image": "shopify://shop_images/banksia.jpg",
-        "image_size": "fill",
-        "allow_transparent_header": false,
-        "reveal_on_scroll": true,
-        "remove_vertical_spacing": true,
-        "content_width": "md",
-        "overlay_color": "#1f1d1b",
-        "overlay_opacity": 45,
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center"
+        "background": "#f6f1e8",
+        "text_color": "#231f1c",
+        "accent": "#2b45c8",
+        "eyebrow": "Contemporary Australian Artist",
+        "eyebrow_background": "#f2c230",
+        "heading": "Kylie",
+        "heading_italic": "Washington",
+        "text": "<p>Exploring resilience, regeneration and our relationship with the Australian landscape.</p>",
+        "button_label": "View available work",
+        "button_url": "shopify://collections/originals",
+        "button_background": "#e8572a",
+        "image_1": "shopify://shop_images/dusk-flowers.jpg",
+        "image_2": "shopify://shop_images/a-poem-with-ai.jpg",
+        "image_3": "shopify://shop_images/tulip.jpg",
+        "sticker": "New work 2026"
+      }
+    },
+    "words": {
+      "type": "kw-marquee",
+      "settings": {
+        "background": "#231f1c",
+        "text_color": "#f6f1e8"
       },
       "blocks": {
-        "heading-1": {
-          "type": "heading",
+        "words-1": {
+          "type": "word",
           "settings": {
-            "text": "Kylie Washington",
-            "heading_tag": "h1"
+            "text": "Banksia",
+            "star_color": "#f2c230"
           }
         },
-        "subheading-2": {
-          "type": "subheading",
+        "words-2": {
+          "type": "word",
           "settings": {
-            "text": "Contemporary Australian Artist"
+            "text": "Waratah",
+            "star_color": "#e8572a"
           }
         },
-        "richtext-3": {
-          "type": "richtext",
+        "words-3": {
+          "type": "word",
           "settings": {
-            "content": "<p>Exploring resilience, regeneration and our relationship with the Australian landscape.</p>"
+            "text": "Wattle",
+            "star_color": "#8fb3ff"
           }
         },
-        "button-4": {
-          "type": "button",
+        "words-4": {
+          "type": "word",
           "settings": {
-            "style": "solid",
-            "text": "View available work",
-            "url": "shopify://collections/originals"
+            "text": "Protea",
+            "star_color": "#f2c230"
+          }
+        },
+        "words-5": {
+          "type": "word",
+          "settings": {
+            "text": "Stars",
+            "star_color": "#e8572a"
+          }
+        },
+        "words-6": {
+          "type": "word",
+          "settings": {
+            "text": "Berries",
+            "star_color": "#8fb3ff"
           }
         }
       },
       "block_order": [
-        "heading-1",
-        "subheading-2",
-        "richtext-3",
-        "button-4"
+        "words-1",
+        "words-2",
+        "words-3",
+        "words-4",
+        "words-5",
+        "words-6"
       ]
     },
     "available-work": {
-      "type": "featured-collections",
+      "type": "kw-tilt-products",
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "hide_product_information": false,
-        "stack_products": true,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1.5,
-        "vertical_spacing_factor": 1.5,
-        "header_alignment": "center",
-        "heading_style": "h3",
-        "subheading": "",
-        "hide_collection_title": false
-      },
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "featured",
-            "products_count": 4,
-            "title": "Available work",
-            "link_url": "shopify://collections/originals",
-            "link_text": "View all available work"
-          }
-        }
-      },
-      "block_order": [
-        "collection-1"
-      ]
+        "background": "#f6f1e8",
+        "text_color": "#231f1c",
+        "heading": "Available work",
+        "collection": "featured",
+        "products_count": 4,
+        "link_label": "View all available work",
+        "link_url": "shopify://collections/originals",
+        "price_background": "#f2c230"
+      }
     },
     "the-practice": {
-      "type": "image-with-text",
+      "type": "kw-split",
       "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "image": "shopify://shop_images/banksia-aemula.jpg",
-        "reveal_on_scroll": true,
-        "image_position": "start",
-        "content_width": "md",
-        "remove_vertical_spacing": false
-      },
-      "blocks": {
-        "subheading-1": {
-          "type": "subheading",
-          "settings": {
-            "text": "The practice"
-          }
-        },
-        "heading-2": {
-          "type": "heading",
-          "settings": {
-            "text": "Nature, resilience and regeneration",
-            "heading_tag": "h3"
-          }
-        },
-        "richtext-3": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Central to Kylie’s practice is the Australian landscape and, in particular, the banksia. Growing abundantly around her Pearl Beach studio, banksias have become a recurring motif in her work: sculptural, unruly and uniquely Australian, but also powerful symbols of survival and renewal.</p><p>Many species regenerate after fire, an idea Kylie uses to explore the ways people, landscapes and communities recover, adapt and emerge changed.</p>"
-          }
-        },
-        "button-4": {
-          "type": "button",
-          "settings": {
-            "style": "outline",
-            "text": "About the artist",
-            "url": "shopify://pages/about"
-          }
-        }
-      },
-      "block_order": [
-        "subheading-1",
-        "heading-2",
-        "richtext-3",
-        "button-4"
-      ]
+        "background": "#2b45c8",
+        "text_color": "#ffffff",
+        "boxed": false,
+        "image_side": "right",
+        "eyebrow": "The practice",
+        "eyebrow_background": "#ffffff",
+        "eyebrow_text": "#2b45c8",
+        "heading": "Nature, resilience and regeneration",
+        "huge_heading": false,
+        "text": "<p>Central to Kylie’s practice is the Australian landscape and, in particular, the banksia. Many species regenerate after fire, an idea Kylie uses to explore how people, landscapes and communities recover, adapt and emerge changed.</p>",
+        "button_label": "About the artist",
+        "button_url": "shopify://pages/about",
+        "button_background": "#f2c230",
+        "button_text": "#231f1c",
+        "image_1": "shopify://shop_images/banksia-aemula.jpg",
+        "image_2": "shopify://shop_images/banksia-x-two.jpg"
+      }
     },
     "two-journeys": {
-      "type": "multi-column",
+      "type": "kw-cards",
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "columns_per_row": 2,
-        "stack_on_mobile": true,
-        "overlap_image": false,
-        "content_alignment": "start",
-        "text_alignment": "center",
-        "spacing": "lg",
-        "subheading": "",
-        "title": "",
-        "heading_style": "h3",
-        "content": ""
+        "background": "#f6f1e8",
+        "text_color": "#231f1c",
+        "heading": "",
+        "columns": "2"
       },
       "blocks": {
-        "image_with_text-1": {
-          "type": "image_with_text",
+        "two-journeys-1": {
+          "type": "card",
           "settings": {
             "image": "shopify://shop_images/starstruck.jpg",
             "title": "Original works",
-            "heading_tag": "h3",
-            "content": "<p>One-of-a-kind paintings.</p>",
-            "link_url": "shopify://collections/originals",
-            "link_text": "View original works"
+            "text": "One-of-a-kind paintings. →",
+            "url": "shopify://collections/originals",
+            "background": "#f2c230",
+            "text_color": "#231f1c"
           }
         },
-        "image_with_text-2": {
-          "type": "image_with_text",
+        "two-journeys-2": {
+          "type": "card",
           "settings": {
             "image": "shopify://shop_images/wattle-me-fine-art-print.jpg",
             "title": "Limited editions",
-            "heading_tag": "h3",
-            "content": "<p>Signed archival editions.</p>",
-            "link_url": "shopify://collections/fine-art-prints",
-            "link_text": "View limited editions"
+            "text": "Signed archival editions. →",
+            "url": "shopify://collections/fine-art-prints",
+            "background": "#e8572a",
+            "text_color": "#ffffff"
           }
         }
       },
       "block_order": [
-        "image_with_text-1",
-        "image_with_text-2"
+        "two-journeys-1",
+        "two-journeys-2"
       ]
     },
     "find-art": {
       "type": "custom-liquid",
       "settings": {
-        "liquid": "<div class=\"kw-finder\">\n  <p class=\"kw-finder__eyebrow\">Find art for your space</p>\n  <h3 class=\"h3\">Browse by colour and size</h3>\n  <div class=\"kw-finder__group\">\n    <p class=\"kw-finder__label\">Colour</p>\n    <ul class=\"kw-finder__list\">\n      {%- assign colours = 'Amber,Yellow,Green,Blue,Pink,Purple,Red' | split: ',' -%}\n      {%- for c in colours -%}\n        {%- assign tag = 'Colour: ' | append: c -%}\n        <li><a class=\"kw-pill\" href=\"{{ routes.collections_url }}/all/{{ tag | handleize }}\">{{ c }}</a></li>\n      {%- endfor -%}\n    </ul>\n  </div>\n  <div class=\"kw-finder__group\">\n    <p class=\"kw-finder__label\">Size</p>\n    <ul class=\"kw-finder__list\">\n      {%- assign sizes = 'Small,Medium,Large,Statement' | split: ',' -%}\n      {%- for s in sizes -%}\n        {%- assign tag = 'Size: ' | append: s -%}\n        <li><a class=\"kw-pill\" href=\"{{ routes.collections_url }}/originals/{{ tag | handleize }}\">{{ s }}</a></li>\n      {%- endfor -%}\n    </ul>\n  </div>\n</div>"
+        "liquid": "<div class=\"kwc-section\" style=\"--kwc-bg: #f6f1e8; --kwc-fg: #231f1c;\">\n  <div class=\"kwc-wrap kwc-pad kwc-finder\" style=\"padding-top: 0;\">\n    <h2 class=\"kwc-h2\">Find art for <em style=\"color: #2b45c8;\">your space</em></h2>\n    {%- assign colours = 'Amber:#c9822b:#ffffff,Yellow:#f2c230:#231f1c,Green:#3f6b3a:#ffffff,Blue:#2b45c8:#ffffff,Pink:#f2a7b9:#231f1c,Purple:#6f4c8e:#ffffff,Red:#c8352b:#ffffff' | split: ',' -%}\n    <div class=\"kwc-finder__row\">\n      {%- for entry in colours -%}\n        {%- assign parts = entry | split: ':' -%}\n        {%- assign tag = 'Colour: ' | append: parts[0] -%}\n        <a class=\"kwc-pill\" href=\"{{ routes.collections_url }}/all/{{ tag | handleize }}\" style=\"--kwc-pill-bg: {{ parts[1] }}; --kwc-pill-fg: {{ parts[2] }};\">{{ parts[0] }}</a>\n      {%- endfor -%}\n    </div>\n    {%- assign sizes = 'Small,Medium,Large,Statement' | split: ',' -%}\n    <div class=\"kwc-finder__row\">\n      {%- for s in sizes -%}\n        {%- assign tag = 'Size: ' | append: s -%}\n        <a class=\"kwc-pill kwc-pill--outline\" href=\"{{ routes.collections_url }}/originals/{{ tag | handleize }}\">{{ s }}</a>\n      {%- endfor -%}\n    </div>\n  </div>\n</div>"
       }
     },
     "see-it": {
-      "type": "image-with-text",
+      "type": "kw-split",
       "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "image": "shopify://shop_images/photo-1615529182904-14819c35db37.jpg",
-        "reveal_on_scroll": true,
-        "image_position": "end",
-        "content_width": "md",
-        "remove_vertical_spacing": true
-      },
-      "blocks": {
-        "heading-1": {
-          "type": "heading",
-          "settings": {
-            "text": "See it in your space",
-            "heading_tag": "h3"
-          }
-        },
-        "richtext-2": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Send us a photograph of your wall and we will prepare a visual mock-up showing an artwork at scale.</p>"
-          }
-        },
-        "button-3": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "Visualise an artwork",
-            "url": "shopify://pages/visualise"
-          }
-        }
-      },
-      "block_order": [
-        "heading-1",
-        "richtext-2",
-        "button-3"
-      ]
+        "background": "#231f1c",
+        "text_color": "#f6f1e8",
+        "boxed": true,
+        "image_side": "right",
+        "eyebrow": "",
+        "heading": "See it in your space",
+        "huge_heading": false,
+        "text": "<p>Send us a photograph of your wall and we will prepare a visual mock-up showing an artwork at scale.</p>",
+        "button_label": "Visualise an artwork",
+        "button_url": "shopify://pages/visualise",
+        "button_background": "#f2c230",
+        "button_text": "#231f1c",
+        "image_1": "shopify://shop_images/photo-1615529182904-14819c35db37.jpg"
+      }
     },
     "current": {
-      "type": "image-with-text",
+      "type": "kw-split",
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "image": "shopify://shop_images/banksia-x-two.jpg",
-        "reveal_on_scroll": true,
-        "image_position": "end",
-        "content_width": "md",
-        "remove_vertical_spacing": false
-      },
-      "blocks": {
-        "subheading-1": {
-          "type": "subheading",
-          "settings": {
-            "text": "Current body of work"
-          }
-        },
-        "heading-2": {
-          "type": "heading",
-          "settings": {
-            "text": "Banksia",
-            "heading_tag": "h3"
-          }
-        },
-        "richtext-3": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Sculptural, unruly and uniquely Australian. A series drawn from the banksias that grow around the Pearl Beach studio.</p>"
-          }
-        },
-        "button-4": {
-          "type": "button",
-          "settings": {
-            "style": "outline",
-            "text": "Explore the collection",
-            "url": "shopify://collections/banksia"
-          }
-        }
-      },
-      "block_order": [
-        "subheading-1",
-        "heading-2",
-        "richtext-3",
-        "button-4"
-      ]
+        "background": "#e8572a",
+        "text_color": "#ffffff",
+        "boxed": false,
+        "image_side": "left",
+        "eyebrow": "Current body of work",
+        "eyebrow_background": "#231f1c",
+        "eyebrow_text": "#ffffff",
+        "heading": "Banksia",
+        "huge_heading": true,
+        "text": "<p>Sculptural, unruly and uniquely Australian. A series drawn from the banksias that grow around the Pearl Beach studio.</p>",
+        "button_label": "Explore the collection",
+        "button_url": "shopify://collections/banksia",
+        "button_background": "#ffffff",
+        "button_text": "#231f1c",
+        "image_1": "shopify://shop_images/banksia.jpg"
+      }
     },
     "projects": {
-      "type": "multi-column",
+      "type": "kw-cards",
       "settings": {
-        "color_scheme": "scheme-5",
-        "separate_section_with_border": false,
-        "columns_per_row": 3,
-        "stack_on_mobile": true,
-        "overlap_image": false,
-        "content_alignment": "start",
-        "text_alignment": "center",
-        "spacing": "lg",
-        "subheading": "Beyond the studio",
-        "title": "Projects and collaborations",
-        "heading_style": "h3",
-        "content": ""
+        "background": "#f6f1e8",
+        "text_color": "#231f1c",
+        "heading": "Projects & collaborations",
+        "columns": "3"
       },
       "blocks": {
-        "image_with_text-1": {
-          "type": "image_with_text",
+        "projects-1": {
+          "type": "card",
           "settings": {
-            "image": "shopify://shop_images/photo-1524758631624-e2822e304c36.jpg",
+            "image": "shopify://shop_images/last-star.jpg",
             "title": "Commercial art",
-            "heading_tag": "h4",
-            "content": "<p>Artwork for interiors, hospitality and commercial spaces.</p>",
-            "link_url": "shopify://pages/licencing",
-            "link_text": "Licencing"
+            "text": "Artwork for interiors, hospitality and commercial spaces.",
+            "url": "shopify://pages/licencing",
+            "background": "#ffffff",
+            "text_color": "#231f1c"
           }
         },
-        "image_with_text-2": {
-          "type": "image_with_text",
+        "projects-2": {
+          "type": "card",
           "settings": {
-            "image": "shopify://shop_images/photo-1586023492125-27b2c045efd7.jpg",
+            "image": "shopify://shop_images/pink-waratah.jpg",
             "title": "Collaborations",
-            "heading_tag": "h4",
-            "content": "<p>Working with interior designers, galleries and selected retailers.</p>",
-            "link_url": "shopify://pages/wholesale",
-            "link_text": "Work with us"
+            "text": "Working with interior designers, galleries and selected retailers.",
+            "url": "shopify://pages/wholesale",
+            "background": "#ffffff",
+            "text_color": "#231f1c"
           }
         },
-        "image_with_text-3": {
-          "type": "image_with_text",
+        "projects-3": {
+          "type": "card",
           "settings": {
-            "image": "shopify://shop_images/photo-1452802447250-470a88ac82bc.jpg",
+            "image": "shopify://shop_images/berry-me-red.jpg",
             "title": "Art + wellbeing",
-            "heading_tag": "h4",
-            "content": "<p>Exploring the relationship between creativity and wellbeing.</p>",
-            "link_url": "shopify://pages/contact",
-            "link_text": "Get in touch"
+            "text": "Exploring the relationship between creativity and wellbeing.",
+            "url": "shopify://pages/contact",
+            "background": "#ffffff",
+            "text_color": "#231f1c"
           }
         }
       },
       "block_order": [
-        "image_with_text-1",
-        "image_with_text-2",
-        "image_with_text-3"
+        "projects-1",
+        "projects-2",
+        "projects-3"
       ]
     },
     "from-the-studio": {
@@ -349,13 +267,13 @@
     "collector-list": {
       "type": "newsletter",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-5",
         "separate_section_with_border": false,
         "image_size": "auto",
-        "subheading": "From the studio",
-        "title": "Collector list",
+        "subheading": "",
+        "title": "Join the collector list",
         "heading_style": "h3",
-        "content": "<p>Join the collectors list for new work, exhibition invitations and private previews of upcoming collections.</p>",
+        "content": "<p>New work, exhibition invitations and private previews of upcoming collections.</p>",
         "button_text": "Join",
         "overlay_color": "#000000",
         "overlay_opacity": 0
@@ -364,6 +282,7 @@
   },
   "order": [
     "hero",
+    "words",
     "available-work",
     "the-practice",
     "two-journeys",

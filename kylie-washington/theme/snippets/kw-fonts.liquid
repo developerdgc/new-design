@@ -1,0 +1,5 @@
+{%- comment -%} Extra font faces for the KW collage look: italic heading for the accent words. {%- endcomment -%}
+<style>
+  {{ settings.heading_font | font_modify: 'weight', '400' | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+  {{ settings.heading_font | font_modify: 'weight', '400' | font_face: font_display: 'swap' }}
+</style>

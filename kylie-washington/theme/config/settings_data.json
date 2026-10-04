@@ -10,40 +10,40 @@
 {
   "current": {
     "section_vertical_spacing": "lg",
-    "heading_font": "playfair_display_n4",
-    "heading_letter_spacing": 0,
+    "heading_font": "playfair_display_n7",
+    "heading_letter_spacing": -1,
     "text_font": "karla_n4",
     "text_font_size_desktop": 17,
-    "button_letter_spacing": 10,
+    "button_letter_spacing": 0,
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#f4efe6",
-          "text_color": "#2a2420",
-          "primary_button_background": "#b5562f",
+          "background": "#f6f1e8",
+          "text_color": "#231f1c",
+          "primary_button_background": "#e8572a",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#2a2420"
+          "circle_button_icon": "#231f1c"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#fbf8f3",
-          "text_color": "#2a2420",
-          "primary_button_background": "#b5562f",
+          "background": "#ffffff",
+          "text_color": "#231f1c",
+          "primary_button_background": "#e8572a",
           "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#f4efe6",
-          "circle_button_icon": "#2a2420"
+          "circle_button_background": "#f6f1e8",
+          "circle_button_icon": "#231f1c"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#2a2420",
-          "text_color": "#f4efe6",
-          "primary_button_background": "#b5562f",
-          "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#f4efe6",
-          "circle_button_icon": "#2a2420"
+          "background": "#231f1c",
+          "text_color": "#f6f1e8",
+          "primary_button_background": "#f2c230",
+          "primary_button_text_color": "#231f1c",
+          "circle_button_background": "#f6f1e8",
+          "circle_button_icon": "#231f1c"
         }
       },
       "scheme-4": {
@@ -51,19 +51,29 @@
           "background": "rgba(0,0,0,0)",
           "text_color": "#ffffff",
           "primary_button_background": "#ffffff",
-          "primary_button_text_color": "#2a2420",
+          "primary_button_text_color": "#231f1c",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#2a2420"
+          "circle_button_icon": "#231f1c"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#e9dfd0",
-          "text_color": "#2a2420",
-          "primary_button_background": "#b5562f",
-          "primary_button_text_color": "#ffffff",
+          "background": "#f2c230",
+          "text_color": "#231f1c",
+          "primary_button_background": "#231f1c",
+          "primary_button_text_color": "#f6f1e8",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#2a2420"
+          "circle_button_icon": "#231f1c"
+        }
+      },
+      "scheme-6": {
+        "settings": {
+          "background": "#2b45c8",
+          "text_color": "#ffffff",
+          "primary_button_background": "#f2c230",
+          "primary_button_text_color": "#231f1c",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#231f1c"
         }
       }
     },
@@ -71,20 +81,20 @@
     "warning_color": "#ed8a00",
     "error_color": "#cb2b2b",
     "product_rating_color": "#2a2420",
-    "product_on_sale_accent": "#b5562f",
+    "product_on_sale_accent": "#e8572a",
     "product_sold_out_badge_background": "#e9dfd0",
     "product_custom_badge_background": "#2a2420",
     "default_color_scheme": "scheme-1",
     "modal_color_scheme": "scheme-2",
-    "button_border_radius": 0,
-    "input_border_radius": 0,
+    "button_border_radius": 60,
+    "input_border_radius": 30,
     "icon_stroke_width": 1.2,
     "heading_text_transform": "normal",
-    "heading_font_size_factor": 1.15,
+    "heading_font_size_factor": 1.1,
     "text_font_size_mobile": 16,
     "text_font_letter_spacing": 0,
     "button_text_font": "body",
-    "button_text_transform": "uppercase",
+    "button_text_transform": "normal",
     "show_image_zoom_on_hover": false,
     "product_image_aspect_ratio": "natural",
     "show_secondary_image": false,

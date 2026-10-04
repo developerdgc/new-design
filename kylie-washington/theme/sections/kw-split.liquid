@@ -1,0 +1,50 @@
+{%- comment -%} Kylie Washington: colour block with text and one or two tilted images. {%- endcomment -%}
+<section class="kwc-section{% if section.settings.boxed %} kwc-section--boxed{% endif %}" style="--kwc-bg: {{ section.settings.background }}; --kwc-fg: {{ section.settings.text_color }};">
+  <div class="kwc-wrap {% if section.settings.boxed %}kwc-pad-x{% endif %}">
+    <div class="kwc-split{% if section.settings.image_side == 'left' %} kwc-split--img-left{% endif %}{% if section.settings.boxed %} kwc-split--boxed{% endif %}">
+      <div class="kwc-split__text">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="kwc-tag" style="--kwc-tag-bg: {{ section.settings.eyebrow_background }}; --kwc-tag-fg: {{ section.settings.eyebrow_text }};">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="kwc-h2{% if section.settings.huge_heading %} kwc-h2--huge{% endif %}">{{ section.settings.heading }}</h2>
+        {%- if section.settings.text != blank -%}<div class="kwc-body">{{ section.settings.text }}</div>{%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a class="kwc-pill" href="{{ section.settings.button_url }}" style="--kwc-pill-bg: {{ section.settings.button_background }}; --kwc-pill-fg: {{ section.settings.button_text }};">{{ section.settings.button_label }} →</a>
+        {%- endif -%}
+      </div>
+      <div class="kwc-split__media{% if section.settings.image_2 != blank %} kwc-split__media--pair{% endif %}{% if section.settings.boxed %} kwc-split__media--flat{% endif %}">
+        {%- if section.settings.image_1 != blank -%}
+          <div class="kwc-frame kwc-frame--a">{{ section.settings.image_1 | image_url: width: 1100 | image_tag: loading: 'lazy', sizes: '(max-width: 899px) 90vw, 45vw', alt: section.settings.image_1.alt }}</div>
+        {%- endif -%}
+        {%- if section.settings.image_2 != blank -%}
+          <div class="kwc-frame kwc-frame--b">{{ section.settings.image_2 | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(max-width: 899px) 60vw, 25vw', alt: section.settings.image_2.alt }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KW colour split",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#2b45c8" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#ffffff" },
+    { "type": "checkbox", "id": "boxed", "label": "Rounded box inside page margins", "default": false },
+    { "type": "select", "id": "image_side", "label": "Image side", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "right" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "color", "id": "eyebrow_background", "label": "Eyebrow background", "default": "#ffffff" },
+    { "type": "color", "id": "eyebrow_text", "label": "Eyebrow text", "default": "#231f1c" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Heading" },
+    { "type": "checkbox", "id": "huge_heading", "label": "Extra large heading", "default": false },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "text", "id": "button_label", "label": "Button label" },
+    { "type": "url", "id": "button_url", "label": "Button link" },
+    { "type": "color", "id": "button_background", "label": "Button background", "default": "#f2c230" },
+    { "type": "color", "id": "button_text", "label": "Button text", "default": "#231f1c" },
+    { "type": "image_picker", "id": "image_1", "label": "Image" },
+    { "type": "image_picker", "id": "image_2", "label": "Second image (optional)" }
+  ],
+  "presets": [{ "name": "KW colour split" }]
+}
+{% endschema %}

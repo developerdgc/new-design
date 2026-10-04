@@ -1,0 +1,29 @@
+{%- comment -%} Kylie Washington: scrolling word strip. {%- endcomment -%}
+{%- capture items -%}
+  {%- for block in section.blocks -%}
+    <span class="kwc-marquee__word" {{ block.shopify_attributes }}>{{ block.settings.text }}</span><span class="kwc-marquee__star" style="color: {{ block.settings.star_color }};" aria-hidden="true">✳</span>
+  {%- endfor -%}
+{%- endcapture -%}
+<div class="kwc-marquee" style="--kwc-bg: {{ section.settings.background }}; --kwc-fg: {{ section.settings.text_color }};">
+  <div class="kwc-marquee__track">
+    <div class="kwc-marquee__group">{{ items }}</div>
+    <div class="kwc-marquee__group" aria-hidden="true">{{ items }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KW word strip",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#231f1c" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#f6f1e8" }
+  ],
+  "blocks": [
+    { "type": "word", "name": "Word", "settings": [
+      { "type": "text", "id": "text", "label": "Word", "default": "Banksia" },
+      { "type": "color", "id": "star_color", "label": "Star colour", "default": "#f2c230" }
+    ] }
+  ],
+  "presets": [{ "name": "KW word strip", "blocks": [{ "type": "word" }, { "type": "word" }, { "type": "word" }] }]
+}
+{% endschema %}

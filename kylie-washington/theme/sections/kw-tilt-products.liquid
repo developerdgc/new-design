@@ -1,0 +1,51 @@
+{%- comment -%} Kylie Washington: products as slightly tilted "pinned" cards with gallery captions. {%- endcomment -%}
+{%- assign collection_obj = section.settings.collection -%}
+<section class="kwc-section" style="--kwc-bg: {{ section.settings.background }}; --kwc-fg: {{ section.settings.text_color }};">
+  <div class="kwc-wrap kwc-pad">
+    <div class="kwc-head">
+      <h2 class="kwc-h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.link_label != blank -%}
+        <a class="kwc-pill kwc-pill--outline" href="{{ section.settings.link_url | default: collection_obj.url }}">{{ section.settings.link_label }} →</a>
+      {%- endif -%}
+    </div>
+    <div class="kwc-tilt-grid">
+      {%- if collection_obj != blank -%}
+        {%- for product in collection_obj.products limit: section.settings.products_count -%}
+          <a class="kwc-tilt-card" href="{{ product.url }}">
+            <div class="kwc-tilt-card__frame">
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 800 | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 50vw, 25vw', alt: product.title }}
+              {%- endif -%}
+            </div>
+            <span class="kwc-tilt-card__title">{{ product.title }}</span>
+            {%- render 'artwork-caption', product: product -%}
+            {%- if product.tags contains 'Sold' -%}
+              <span class="kwc-price kwc-price--sold">{{ 'product.general.sold_out_badge' | t }}</span>
+            {%- else -%}
+              <span class="kwc-price" style="background: {{ section.settings.price_background }};">{{ product.price | money_without_trailing_zeros }}</span>
+            {%- endif -%}
+          </a>
+        {%- endfor -%}
+      {%- else -%}
+        <p>Choose a collection in the theme editor.</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KW tilted products",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#f6f1e8" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#231f1c" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Available work" },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "products_count", "label": "Products", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "View all available work" },
+    { "type": "url", "id": "link_url", "label": "Link" },
+    { "type": "color", "id": "price_background", "label": "Price tag colour", "default": "#f2c230" }
+  ],
+  "presets": [{ "name": "KW tilted products" }]
+}
+{% endschema %}

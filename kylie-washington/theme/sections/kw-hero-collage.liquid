@@ -1,0 +1,55 @@
+{%- comment -%} Kylie Washington: "Painterly Collage" hero. Big serif name + tilted painting collage. {%- endcomment -%}
+<section class="kwc-section" style="--kwc-bg: {{ section.settings.background }}; --kwc-fg: {{ section.settings.text_color }};">
+  <div class="kwc-wrap kwc-hero">
+    <div class="kwc-hero__text">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="kwc-tag" style="--kwc-tag-bg: {{ section.settings.eyebrow_background }}; --kwc-tag-fg: #231f1c;">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h1 class="kwc-display">
+        {{- section.settings.heading -}}
+        {%- if section.settings.heading_italic != blank %} <em style="color: {{ section.settings.accent }};">{{ section.settings.heading_italic }}</em>{%- endif -%}
+      </h1>
+      {%- if section.settings.text != blank -%}<div class="kwc-lead">{{ section.settings.text }}</div>{%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a class="kwc-pill" href="{{ section.settings.button_url | default: routes.collections_url }}" style="--kwc-pill-bg: {{ section.settings.button_background }}; --kwc-pill-fg: #ffffff;">{{ section.settings.button_label }} →</a>
+      {%- endif -%}
+    </div>
+    <div class="kwc-hero__collage" aria-hidden="true">
+      {%- for i in (1..3) -%}
+        {%- assign key = 'image_' | append: i -%}
+        {%- assign img = section.settings[key] -%}
+        {%- if img != blank -%}
+          <div class="kwc-frame kwc-frame--{{ i }}">{{ img | image_url: width: 900 | image_tag: loading: 'eager', sizes: '(max-width: 899px) 60vw, 360px', alt: img.alt }}</div>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if section.settings.sticker != blank -%}
+        <span class="kwc-sticker" style="background: {{ section.settings.button_background }};">{{ section.settings.sticker }}</span>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KW collage hero",
+  "class": "shopify-section--kw",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#f6f1e8" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#231f1c" },
+    { "type": "color", "id": "accent", "label": "Italic word colour", "default": "#2b45c8" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Contemporary Australian Artist" },
+    { "type": "color", "id": "eyebrow_background", "label": "Eyebrow background", "default": "#f2c230" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Kylie" },
+    { "type": "text", "id": "heading_italic", "label": "Heading (italic part)", "default": "Washington" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Exploring resilience, regeneration and our relationship with the Australian landscape.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "View available work" },
+    { "type": "url", "id": "button_url", "label": "Button link" },
+    { "type": "color", "id": "button_background", "label": "Button and sticker colour", "default": "#e8572a" },
+    { "type": "image_picker", "id": "image_1", "label": "Collage image 1" },
+    { "type": "image_picker", "id": "image_2", "label": "Collage image 2" },
+    { "type": "image_picker", "id": "image_3", "label": "Collage image 3" },
+    { "type": "text", "id": "sticker", "label": "Round sticker text", "default": "New work 2026" }
+  ],
+  "presets": [{ "name": "KW collage hero" }]
+}
+{% endschema %}

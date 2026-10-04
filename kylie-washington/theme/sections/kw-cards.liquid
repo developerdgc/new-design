@@ -1,0 +1,40 @@
+{%- comment -%} Kylie Washington: rounded colour cards (2 or 3 per row). {%- endcomment -%}
+<section class="kwc-section" style="--kwc-bg: {{ section.settings.background }}; --kwc-fg: {{ section.settings.text_color }};">
+  <div class="kwc-wrap kwc-pad">
+    {%- if section.settings.heading != blank -%}<h2 class="kwc-h2 kwc-mb">{{ section.settings.heading }}</h2>{%- endif -%}
+    <div class="kwc-cards kwc-cards--{{ section.settings.columns }}">
+      {%- for block in section.blocks -%}
+        <a class="kwc-card" href="{{ block.settings.url }}" style="--kwc-card-bg: {{ block.settings.background }}; --kwc-card-fg: {{ block.settings.text_color }};" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="kwc-card__img">{{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 90vw, 40vw', alt: block.settings.image.alt }}</div>
+          {%- endif -%}
+          <h3 class="kwc-card__title">{{ block.settings.title }}</h3>
+          {%- if block.settings.text != blank -%}<p class="kwc-card__text">{{ block.settings.text }}</p>{%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KW colour cards",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#f6f1e8" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#231f1c" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "select", "id": "columns", "label": "Cards per row", "options": [{ "value": "2", "label": "2" }, { "value": "3", "label": "3" }], "default": "3" }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Card", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "title", "label": "Title", "default": "Card title" },
+      { "type": "text", "id": "text", "label": "Text" },
+      { "type": "url", "id": "url", "label": "Link" },
+      { "type": "color", "id": "background", "label": "Card colour", "default": "#ffffff" },
+      { "type": "color", "id": "text_color", "label": "Card text", "default": "#231f1c" }
+    ] }
+  ],
+  "presets": [{ "name": "KW colour cards", "blocks": [{ "type": "card" }, { "type": "card" }] }]
+}
+{% endschema %}

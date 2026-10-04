@@ -1,0 +1,120 @@
+/* Kylie Washington: "Painterly Collage" sections (kw-*.liquid). */
+.kwc-section { background: var(--kwc-bg); color: var(--kwc-fg); }
+.kwc-section--boxed { background: transparent; padding-block: 0 clamp(3rem, 7vw, 6.5rem); }
+.kwc-wrap { max-width: 90rem; margin-inline: auto; padding-inline: clamp(1rem, 3.5vw, 3rem); box-sizing: border-box; }
+.kwc-pad { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+.kwc-mb { margin-bottom: 2.5rem; }
+
+.kwc-display, .kwc-h2, .kwc-card__title, .kwc-tilt-card__title {
+  font-family: var(--heading-font-family); font-weight: 700; color: inherit; letter-spacing: -0.01em; text-transform: none;
+}
+.kwc-display em, .kwc-h2 em { font-style: italic; font-weight: 400; }
+.kwc-display { font-size: clamp(3.4rem, 9vw, 7.5rem); line-height: 0.92; margin: 0; }
+.kwc-h2 { font-size: clamp(2.2rem, 4.4vw, 3.75rem); line-height: 1.02; margin: 0; }
+.kwc-h2--huge { font-size: clamp(3.4rem, 7vw, 6rem); line-height: 0.95; }
+.kwc-lead { font-size: clamp(1.1rem, 1.6vw, 1.3rem); max-width: 30rem; }
+.kwc-lead p, .kwc-body p { margin: 0 0 0.8em; }
+.kwc-body { max-width: 34rem; opacity: 0.92; }
+
+.kwc-tag {
+  display: inline-block; align-self: flex-start; margin: 0; padding: 0.35rem 0.85rem;
+  background: var(--kwc-tag-bg); color: var(--kwc-tag-fg);
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.kwc-pill {
+  display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start;
+  padding: 1rem 1.75rem; border-radius: 999px; text-decoration: none; font-weight: 700;
+  background: var(--kwc-pill-bg, #231f1c); color: var(--kwc-pill-fg, #fff);
+  transition: transform .2s ease;
+}
+.kwc-pill:hover { transform: translateY(-2px); }
+.kwc-pill--outline { background: transparent; color: inherit; border: 2px solid currentColor; padding: 0.75rem 1.4rem; }
+
+.kwc-frame { background: #fff; padding: 10px; box-shadow: 0 18px 40px rgb(35 31 28 / 0.22); }
+.kwc-frame img { display: block; width: 100%; height: auto; }
+
+/* Hero */
+.kwc-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: center; padding-block: clamp(2.5rem, 6vw, 5rem); min-height: 38rem; }
+.kwc-hero__text { display: flex; flex-direction: column; gap: 1.4rem; }
+.kwc-hero__collage { position: relative; height: 38rem; }
+.kwc-hero__collage .kwc-frame { position: absolute; }
+.kwc-frame--1 { left: 0; top: 4.5rem; width: 46%; transform: rotate(-5deg); }
+.kwc-frame--2 { left: 38%; top: 0; width: 54%; transform: rotate(4deg); }
+.kwc-frame--3 { left: 22%; top: 21rem; width: 44%; transform: rotate(-2deg); z-index: 2; }
+.kwc-sticker {
+  position: absolute; right: 2%; top: 25rem; z-index: 3; width: 8rem; height: 8rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem; box-sizing: border-box;
+  color: #fff; font-weight: 700; line-height: 1.2; transform: rotate(12deg);
+}
+
+/* Word strip */
+.kwc-marquee { background: var(--kwc-bg); color: var(--kwc-fg); overflow: hidden; padding: 1.1rem 0; }
+.kwc-marquee__track { display: flex; width: max-content; animation: kwc-scroll 40s linear infinite; }
+.kwc-marquee__group { display: flex; align-items: center; white-space: nowrap; }
+.kwc-marquee__word { font-family: var(--heading-font-family); font-style: italic; font-weight: 400; font-size: clamp(1.4rem, 2.4vw, 1.9rem); padding: 0 1.5rem; }
+@keyframes kwc-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .kwc-marquee__track { animation: none; } }
+
+/* Tilted product cards */
+.kwc-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.75rem; }
+.kwc-tilt-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.75rem; align-items: start; }
+.kwc-tilt-card { display: flex; flex-direction: column; gap: 0.55rem; text-decoration: none; color: inherit; }
+.kwc-tilt-card:nth-child(even) { margin-top: 3.5rem; }
+.kwc-tilt-card__frame { background: #fff; padding: 1rem; transform: rotate(-1.5deg); transition: transform .3s ease; }
+.kwc-tilt-card:nth-child(even) .kwc-tilt-card__frame { transform: rotate(1.5deg); }
+.kwc-tilt-card:hover .kwc-tilt-card__frame { transform: rotate(0deg) scale(1.02); }
+.kwc-tilt-card__frame img { display: block; width: 100%; height: auto; }
+.kwc-tilt-card__title { font-size: 1.35rem; margin-top: 0.4rem; }
+.kwc-tilt-card .artwork-caption { color: inherit; opacity: 0.7; }
+.kwc-price { align-self: flex-start; padding: 0.2rem 0.65rem; font-weight: 700; color: #231f1c; }
+.kwc-price--sold { background: #231f1c; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+
+/* Colour split */
+.kwc-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; padding-block: clamp(3.5rem, 7vw, 6rem); }
+.kwc-split--img-left .kwc-split__media { order: -1; }
+.kwc-split--boxed { background: var(--kwc-bg); color: var(--kwc-fg); border-radius: 1.75rem; overflow: hidden; padding: 0; gap: 0; }
+.kwc-split--boxed .kwc-split__text { padding: clamp(2rem, 5vw, 4rem); }
+.kwc-split__text { display: flex; flex-direction: column; gap: 1.25rem; }
+.kwc-split__media { position: relative; }
+.kwc-split__media--pair { min-height: 34rem; }
+.kwc-split__media--pair .kwc-frame { position: absolute; }
+.kwc-split__media--pair .kwc-frame--a { left: 0; top: 0; width: 62%; transform: rotate(-3deg); }
+.kwc-split__media--pair .kwc-frame--b { right: 0; bottom: 0; width: 50%; transform: rotate(4deg); }
+.kwc-split__media:not(.kwc-split__media--pair):not(.kwc-split__media--flat) .kwc-frame { transform: rotate(-2deg); max-width: 34rem; margin-inline: auto; }
+.kwc-split__media--flat .kwc-frame { padding: 0; box-shadow: none; height: 100%; }
+.kwc-split__media--flat .kwc-frame img { height: 100%; min-height: 26rem; object-fit: cover; }
+
+/* Colour cards */
+.kwc-cards { display: grid; gap: 1.75rem; }
+.kwc-cards--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.kwc-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kwc-card { display: flex; flex-direction: column; gap: 0.9rem; padding: clamp(1.5rem, 3vw, 3rem); border-radius: 1.6rem; background: var(--kwc-card-bg); color: var(--kwc-card-fg); text-decoration: none; transition: transform .25s ease; }
+.kwc-card:hover { transform: translateY(-4px); }
+.kwc-card__img { display: flex; justify-content: center; }
+.kwc-card__img img { max-height: 22rem; width: auto; max-width: 100%; height: auto; display: block; }
+.kwc-cards--3 .kwc-card__img img { max-height: 15rem; }
+.kwc-card__title { margin: 0.3rem 0 0; font-size: clamp(1.5rem, 2.4vw, 2.5rem); line-height: 1.1; }
+.kwc-cards--3 .kwc-card__title { font-size: 1.6rem; }
+.kwc-card__text { margin: 0; opacity: 0.85; }
+
+/* Find art pills (custom-liquid section on the homepage) */
+.kwc-finder { text-align: center; display: grid; gap: 1.5rem; justify-items: center; }
+.kwc-finder__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.kwc-finder .kwc-pill { align-self: auto; padding: 0.75rem 1.4rem; }
+
+/* Collector list (Prestige newsletter section) as a pill form */
+[id$="__collector-list"] input[type="email"] { border-radius: 999px; }
+[id$="__collector-list"] .button { border-radius: 999px; }
+
+@media (max-width: 899px) {
+  .kwc-hero, .kwc-split { grid-template-columns: minmax(0, 1fr); }
+  .kwc-hero { min-height: 0; }
+  .kwc-hero__collage { height: 24rem; max-width: 30rem; width: 100%; margin-inline: auto; }
+  .kwc-frame--3 { top: 12rem; }
+  .kwc-sticker { top: 14rem; width: 6.5rem; height: 6.5rem; font-size: 0.85rem; }
+  .kwc-split--img-left .kwc-split__media { order: 0; }
+  .kwc-split__media--pair { min-height: 24rem; }
+  .kwc-tilt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .kwc-tilt-card:nth-child(even) { margin-top: 2rem; }
+  .kwc-cards--2, .kwc-cards--3 { grid-template-columns: minmax(0, 1fr); }
+}
