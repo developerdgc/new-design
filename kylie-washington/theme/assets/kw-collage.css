@@ -171,3 +171,11 @@
 @media (prefers-reduced-motion: reduce) {
   .button:hover, .kwc-pill:hover, button[type="submit"]:hover { transform: none; }
 }
+
+/* Mobile header: keep icons in one row next to the centred text logo */
+.header__secondary-nav { flex-wrap: nowrap; }
+@media (max-width: 699px) {
+  .kw-logo-text { font-size: 1rem; }
+  .header__secondary-nav { column-gap: 0.75rem; }
+}
+@media (max-width: 359px) { .kw-logo-text em { display: none; } }

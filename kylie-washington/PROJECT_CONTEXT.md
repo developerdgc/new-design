@@ -197,6 +197,11 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - Footer copyright and page titles still use the store name until it is renamed in admin.
 - Tweaks (end of `kw-collage.css`): space under KW section headings (`.kwc-h2.kwc-mb`, `.kwc-head`), header menu 1.05rem (1.125rem ≥1200px, wider gap), hover on all buttons (lift + shadow + slight brighten; outline pills invert to the section's fg/bg; reduced-motion safe).
 
+### Mobile check of the Collage homepage (Oct 4, user asked)
+- iPhone 13 (390 px) screenshots of every homepage section + menu drawer: `reports/qa-screenshots/collage-mobile-*.jpg`. No horizontal overflow.
+- Fixed: header icons were stacking vertically next to the big text logo → icons `nowrap`, logo 16px on phones (italic "Studio" hidden under 360px). Header now one 54px row.
+- Waiting on: client approval of the homepage (user is sending it). Next steps after approval are the user's call.
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft
