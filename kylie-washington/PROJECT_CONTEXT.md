@@ -109,7 +109,7 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - Locale `en.default.json`: "Sold out" → "Sold" (button + badge).
 - Social: instagram.com/kyliewashington_art, youtube.com/@kyliewashington_art (URL format assumed; confirm).
 - Not settable in theme settings, do in Phase B CSS: muted text `#6E6962`, line colour `#E3DED6`. Favicon/logo: need files from client.
-- Playwright screenshots of the preview fail with ERR_CERT_AUTHORITY_INVALID through the sandbox proxy; verify visually via the preview link instead.
+- Playwright: works once the sandbox's Anthropic CAs (in `/root/.ccr/ca-bundle.crt`, subjects `O = Anthropic`) are added to `~/.pki/nssdb` with `certutil -A -t C,,` (the NSS store was empty), launch with `proxy:{server:process.env.HTTPS_PROXY}`, use `waitUntil:'load'` (networkidle never settles). Log in with curl and import the cookies; do NOT pass the store password to Playwright (its error log prints `fill()` values).
 
 ### Phase B (templates + custom code): DONE Oct 4, pushed to #146130927667
 - `templates/product.original.json`: title, price, variant picker (Colour Studies), buy button "Acquire this work" (no quantity, no dynamic checkout), outline "Enquire about this work" button → /pages/contact, accordions About the Work (description) / Artwork Details (`snippets/artwork-details.liquid`, metafields) / Collecting this Work / Delivery (text from client shipping policy). Sticky add to cart off. Related products below.
@@ -144,6 +144,12 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - Collection descriptions set: Fine Art Prints = client's intro text from the PDF (verbatim); Originals and Archive = one-line drafts.
 - Still waiting on client: Studio Journal stories, Licencing text + images, Wholesale text approval, Returns policy decisions, gift certificate (user: later), real testimonials, real hero/studio photos.
 - Not done: Search & Discovery filters (app setup in admin, tags `Size:`, `Subject:`, `Colour:`, `Shape:` are already on products).
+
+### Phase F (mobile QA): DONE Oct 4
+- iPhone 13 (390 px) screenshots of home, Originals, Fine Art Prints, original + print product (temporarily Active, then back to Draft), About, FAQ, Contact, Licencing, Wholesale, mobile menu; plus desktop 1440. Saved in `reports/qa-screenshots/`.
+- No horizontal overflow on any page. Mobile menu, accordions, size buttons, forms OK.
+- Fixed: "Enquire about this work" rendered as an empty black bar (transparent background setting) → now a `liquid` block rendering the theme's outline button. Homepage had two newsletter forms back to back (section + footer) → homepage newsletter section removed. About page had "About" + "About Kylie Washington" headings → page title is now "About Kylie Washington", h2 removed from body.
+- Remaining visual items: "MY STORE" in header/footer (rename store), Unsplash hero is another artist's painting (replace), Shopify preview bar overlaps in screenshots only.
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)

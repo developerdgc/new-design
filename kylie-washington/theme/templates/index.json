@@ -321,21 +321,6 @@
         "richtext-3",
         "link-4"
       ]
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
-        "image_size": "auto",
-        "subheading": "Join the collectors list",
-        "title": "New work, first",
-        "heading_style": "h3",
-        "content": "<p>Be the first to hear about new paintings, print releases and exhibitions.</p>",
-        "button_text": "Subscribe",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
     }
   },
   "order": [
@@ -345,7 +330,6 @@
     "featured-originals",
     "testimonials",
     "featured-prints",
-    "created-with-care",
-    "newsletter"
+    "created-with-care"
   ]
 }

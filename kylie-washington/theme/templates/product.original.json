@@ -46,13 +46,9 @@
           }
         },
         "enquire": {
-          "type": "button",
+          "type": "liquid",
           "settings": {
-            "link": "shopify://pages/contact",
-            "text": "Enquire about this work",
-            "stretch": true,
-            "background": "rgba(0,0,0,0)",
-            "text_color": "#1f1d1b"
+            "liquid": "{%- render 'button', content: 'Enquire about this work', href: '/pages/contact', style: 'outline', stretch: true -%}"
           }
         },
         "about": {
