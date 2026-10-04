@@ -147,9 +147,9 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - Store name: cannot be changed through the Admin API; user must set "Kylie Washington Studio" in Settings → Store details.
 
 ### Products: ACTIVE Oct 4
-- 101 of 102 products Active and published to the Online Store channel (store is still password protected).
+- All 102 products Active and published to the Online Store channel (store is still password protected).
 - `banksia` (Banksia 120×55): price set to **$1,200** on Oct 4 (user's instruction), "Price Pending" tag removed, then Active + published.
-- Kept as **Draft** on purpose: `orchid-fine-art-print` (no image, client hasn't confirmed it).
+- `orchid-fine-art-print` set Active on Oct 4 at the user's request. ⚠️ It still has **no image** (card shows a placeholder) and the client hasn't confirmed it is on the print list.
 - Sold originals have price $0 but inventory 0 with policy DENY, so they can't be bought; cards show "Sold".
 
 ### Phase E (policies + remaining content): PARTLY DONE Oct 4
