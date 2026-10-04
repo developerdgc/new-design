@@ -31,3 +31,42 @@
 }
 .artwork-details dt { color: var(--kw-muted); }
 .artwork-details dd { margin: 0; }
+
+/* Homepage: "Find art for your space" (brief section 5) */
+.kw-finder {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 4rem 1.25rem;
+  text-align: center;
+  display: grid;
+  gap: 1.75rem;
+}
+.kw-finder__eyebrow, .kw-finder__label {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kw-muted);
+}
+.kw-finder h3 { margin: 0; }
+.kw-finder__group { display: grid; gap: 0.75rem; }
+.kw-finder__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.kw-pill {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--kw-line);
+  font-size: 0.875rem;
+  transition: border-color .2s, background-color .2s;
+}
+.kw-pill:hover { border-color: currentColor; }
+
+/* The homepage has its own collector-list section, so hide the footer copy there */
+.template-index .footer__block--newsletter { display: none; }

@@ -130,13 +130,26 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 - ⚠️ Store name is still "My Store" (shows in header + footer). User must change it in Settings → Store details to "Kylie Washington Studio", or upload a logo.
 - Gift Certificate not in footer yet: no gift card product exists (connector blocks gift card writes); create in admin.
 
-### Phase D (homepage): DONE Oct 4
-- `templates/index.json` replaced (Prestige demo removed). Order: hero (image-with-text-overlay, View Originals / Shop Prints) → The Studio (rich text, About excerpt) → Explore 3 columns (Originals / Fine Art Prints / Licencing) → Original paintings (6, `originals`) → testimonials → Fine art prints (6) → Created with care (image with text) → newsletter "Join the collectors list".
-- Gift certificate banner left out (user: decide later).
-- **Placeholder images (Unsplash, uploaded to Files, alt text starts "KW placeholder")**: hero `photo-1541961017774-22349e4a1262.jpg` (abstract painting, not Kylie's), licencing column `photo-1586023492125-27b2c045efd7.jpg`, created-with-care `photo-1452802447250-470a88ac82bc.jpg`. Replace with the client's own studio/artwork photos. Column images for Originals/Prints use Kylie's real files (`banksia-x-two.jpg`, `wattle-me-fine-art-print.jpg`).
-- ⚠️ **Testimonials are DUMMY text written by Claude at the user's request** (Sarah M., James and Olivia T., Rachel K.). They must be replaced with real collector quotes or removed before launch (fake reviews breach Australian Consumer Law).
-- Featured grids show Prestige placeholder cards until products are set to Active.
+### Phase D (homepage): REBUILT Oct 4 to follow the client's docx brief (section 6 "Homepage wireframe")
+User asked for the homepage "as in the client's docs". `templates/index.json` now follows the 10 brief sections:
+1. Hero (`image-with-text-overlay`, fill): Kylie's own **Banksia** painting `banksia.jpg`; "Kylie Washington / Contemporary Australian Artist / Exploring resilience, regeneration and our relationship with the Australian landscape. / View available work".
+2. Available work: `featured-collections`, 2 per row, from new manual collection **`featured`** (She's So Ambitious, A Poem With AI, Dusk Flowers, Tulip; published to Online Store). Caption = year · medium · size + price.
+3. The practice: image with text (`banksia-aemula.jpg`), client's About text on the banksia, "About the artist".
+4. Original works / Limited editions: 2 panels (`starstruck.jpg`, `wattle-me-fine-art-print.jpg`). Copy from the brief: "One-of-a-kind paintings." / "**Signed** archival editions." ← signed is unconfirmed, check with client.
+5. Find art for your space: `custom-liquid` pill links to tag URLs (`/collections/all/colour-x`, `/collections/originals/size-x`) using existing tags; styles `.kw-finder` / `.kw-pill` in `kylie.css`. Brief colours (Earth, Ochre, Monochrome, Bright) don't exist as tags; existing ones used (Amber, Yellow, Green, Blue, Pink, Purple, Red).
+6. See it in your space: image with text (Unsplash placeholder) → new page **`/pages/visualise`** (template `page.visualise`, form: Artwork, wall dimensions). Shopify contact forms can't upload photos, so the page asks people to reply to our email with the photo. Confirm Kylie actually offers mock-ups.
+7. Current / recent: "Banksia" body of work (`banksia-x-two.jpg`) → `/collections/banksia`. Brief example was Radical Radiance, but no content exists for it.
+8. Projects & collaborations: 3 tiles Commercial art → Licencing, Collaborations → Wholesale, Art + wellbeing → Contact (Unsplash placeholders). No Projects pages exist (dropped earlier); links are stand-ins.
+9. From the studio: `blog-posts` (journal, 3) is **disabled** until the first stories exist (an empty blog shows Prestige placeholder cards). Enable it in the editor once posts are added.
+10. Collector list: newsletter "From the studio / Collector list / … / Join". Footer newsletter is hidden on the homepage only (`.template-index .footer__block--newsletter`, body class added in `layout/theme.liquid`).
+- Removed vs. the first homepage: dummy testimonials (not in the brief), "The Studio" rich text, 3-column explore, featured prints, Created with care.
+- Unsplash placeholders still used: see-it (`photo-1615529182904…`), projects tiles (`photo-1524758631624…`, `photo-1586023492125…`, `photo-1452802447250…`). `photo-1541961017774…` (old hero) is now unused in Files.
 - Store name: cannot be changed through the Admin API; user must set "Kylie Washington Studio" in Settings → Store details.
+
+### Products: ACTIVE Oct 4
+- 100 of 102 products set to Active and published to the Online Store channel (store is still password protected).
+- Kept as **Draft** on purpose: `banksia` (Banksia 120×55, price $0 with stock 1 → would be purchasable for free; needs a price) and `orchid-fine-art-print` (no image, client hasn't confirmed it).
+- Sold originals have price $0 but inventory 0 with policy DENY, so they can't be bought; cards show "Sold".
 
 ### Phase E (policies + remaining content): PARTLY DONE Oct 4
 - Policies could NOT be written: connector lacks `write_legal_policies`. HTML ready in `policies/` (Terms = client text, Shipping = client text, Refund = **Claude draft**, change-of-mind section deliberately left for the client). User pastes them in Settings → Policies (see `policies/README.md`). Until then the footer Shipping/Returns/Terms links 404.
