@@ -84,7 +84,11 @@
           {{- section.settings.transparent_logo | image_url: width: section.settings.transparent_logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image header__logo-image--transparent' -}}
         {%- endif -%}
       {%- else -%}
-        <span class="header__logo-text h5">{{ shop.name }}</span>
+        {%- if section.settings.logo_text != blank -%}
+          <span class="header__logo-text kw-logo-text">{{ section.settings.logo_text }}{% if section.settings.logo_text_italic != blank %} <em>{{ section.settings.logo_text_italic }}</em>{% endif %}</span>
+        {%- else -%}
+          <span class="header__logo-text h5">{{ shop.name }}</span>
+        {%- endif -%}
       {%- endif -%}
     {%- endcapture -%}
 
@@ -375,6 +379,18 @@
     {
       "type": "header",
       "content": "t:sections.header.logo_category"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text (used when no logo image)",
+      "default": "Kylie Washington"
+    },
+    {
+      "type": "text",
+      "id": "logo_text_italic",
+      "label": "Logo text, italic part",
+      "default": "Studio"
     },
     {
       "type": "image_picker",

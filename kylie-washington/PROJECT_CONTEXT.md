@@ -191,6 +191,11 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - custom-liquid sections must have `remove_vertical_spacing`, `remove_horizontal_spacing` true and no border, otherwise Prestige wraps them in a padded cream box (fixed for `footer-top` and homepage `find-art`).
 - Copyright line still says "My Store" until the store is renamed.
 
+### Header (Oct 4)
+- Layout `logo_center_navigation_inline`: menu left, logo centred, icons right (grid "primary-nav logo secondary-nav").
+- `sections/header.liquid` has two new settings, **Logo text** ("Kylie Washington") and **Logo text, italic part** ("Studio", coral italic), used when no logo image is set, so the header no longer shows the store name "My Store". Style `.kw-logo-text` in `kw-collage.css` (Fraunces 700, up to ~34px; 18px on mobile).
+- Footer copyright and page titles still use the store name until it is renamed in admin.
+
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)
 - `reports/`: image match reports, FAQ draft

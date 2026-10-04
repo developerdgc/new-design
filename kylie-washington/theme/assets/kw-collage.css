@@ -132,3 +132,11 @@
 .footer .prose a { text-decoration-color: #f2c230; }
 .footer input[type="email"] { border-radius: 999px; }
 @media (max-width: 899px) { .kwc-footer-top__inner { grid-template-columns: minmax(0, 1fr); align-items: start; } }
+
+/* Header: large centred text logo */
+.kw-logo-text {
+  font-family: var(--heading-font-family); font-weight: 700; letter-spacing: -0.01em; text-transform: none;
+  font-size: clamp(1.25rem, 2.3vw, 2.1rem); line-height: 1; white-space: nowrap;
+}
+.kw-logo-text em { font-style: italic; font-weight: 400; color: #e8572a; }
+@media (max-width: 699px) { .kw-logo-text { font-size: 1.15rem; } }
