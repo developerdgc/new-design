@@ -3,8 +3,8 @@ from blocks import *
 b = B(); e = b.el
 soc = [("facebook-f", "Facebook"), ("instagram", "Instagram"), ("linkedin-in", "LinkedIn"), ("youtube", "YouTube")]
 def social(prefix, dark=True):
-    return flex(b, prefix + " Social", [flex(b, f"{prefix} {n}", [icon(b, f"{prefix} {n} Svg", ic, 16, None, "fa-brands")],
-        "flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.55);",
+    return flex(b, prefix + " Social", [flex(b, f"{prefix} {n}", [icon(b, f"{prefix} {n} Svg", ic, 16, "#FFFFFF", "fa-brands")],
+        "flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; color: #FFFFFF; " + ("background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.7);" if prefix == "Strip" else "background: linear-gradient(135deg, #22C6E0 0%, #1F6BE0 100%); border: 1px solid rgba(122,240,245,0.35);"),
         ["em-social"], cfg={"link": link_page("contact")}) for ic, n in soc], "gap: 10px; width: auto;")
 # connect strip
 strip = flex(b, "Connect", [col(b, "Connect Wrap", [flex(b, "Connect Row", [

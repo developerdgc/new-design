@@ -59,13 +59,14 @@ for i, (ic, hot, im, t, p) in enumerate(CK):
     n = f"CP {i+1}"
     cps.append(col(b, n, [
         flex(b, n + " Node", [ico_tile(b, n + " Ico", ic, hot, True, 52)],
-             "flex: 0 0 76px; width: 76px; height: 76px; border-radius: 50%; background: #FFFFFF; border: 2px solid #D3E3FB; align-items: center; justify-content: center; box-shadow: 0 14px 30px -18px rgba(31,107,224,0.6);"),
-        img_el(b, n + " Img", im, "width: 100%; max-width: 300px; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; border: 4px solid #FFFFFF; box-shadow: 0 18px 34px -20px rgba(7,18,51,0.6);"),
+             "flex: 0 0 76px; width: 76px; height: 76px; border-radius: 50%; background: #FFFFFF; border: 2px solid #D3E3FB; align-items: center; justify-content: center; box-shadow: 0 14px 30px -18px rgba(31,107,224,0.6);", ["em-jp-node"]),
+        img_el(b, n + " Img", im, "width: 100%; max-width: 300px; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; border: 4px solid #FFFFFF; box-shadow: 0 18px 34px -20px rgba(7,18,51,0.6);", "", ["em-jp-img"]),
         P(b, n + " K", f"CHECKPOINT 0{i+1}", "font-family: var(--em-mono); font-size: 12px; color: #FF8A1F; letter-spacing: 0.12em;"),
         H(b, n + " T", t, "h3", "font-size: 24px;"),
-        P(b, n + " P", p, "color: #5B6683; max-width: 320px;")],
-        "gap: 12px; align-items: center; text-align: center; z-index: 1;", ["em-lift"]))
-route_line = flex(b, "Route Line", [], "position: absolute; left: 12%; right: 12%; top: 38px; border-top: 2px dashed #B8CCEE; @media(--tablet){ display: none; }")
+        P(b, n + " P", p, "color: #5B6683; max-width: 320px;")] +
+        ([icon(b, n + " Arrow", "arrow-right", 20, "#1F6BE0", style="position: absolute; right: -24px; top: 28px; @media(--tablet){ display: none; }")] if i < 2 else []),
+        "position: relative; gap: 12px; align-items: center; text-align: center; z-index: 1;", ["em-jp"]))
+route_line = flex(b, "Route Line", [], "position: absolute; left: 16.6%; top: 38px; width: 66.8%; height: 0px; border-top: 2px dashed #B8CCEE; z-index: 0; @media(--tablet){ display: none; }")
 route = section(b, "Route", [
     head(b, "Route Head", "Your Growth Route", "From Searching To <strong>Signed Customer</strong>", "Every service we run moves a customer one checkpoint closer to calling you.", center=True),
     e("e-grid", "Route Grid", [route_line] + cps, style="position: relative; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; gap: 28px; padding: 0px; @media(--tablet){ grid-template-columns: 1fr; grid-template-rows: auto; gap: 44px; }")])
@@ -137,7 +138,7 @@ def make_ticker(prefix="Ticker"):
         for i, w in enumerate(WORDS):
             items.append(P(b, f"{prefix} {k} {i}", w.upper(), "font-size: 30px; font-weight: 800; color: #FFFFFF; line-height: 1; @media(--mobile){ font-size: 20px; }"))
             items.append(P(b, f"{prefix} {k} {i} Sep", "■", "font-size: 14px; color: #FF8A1F;"))
-    return flex(b, prefix, [flex(b, prefix + " Track", items, "", ["em-ticker-track"])], "border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);", ["em-ticker"])
+    return flex(b, prefix, [flex(b, prefix + " Track", items, "", ["em-ticker-track"])], "padding: 34px 0px; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); @media(--mobile){ padding: 24px 0px; }", ["em-ticker"])
 ticker = make_ticker()
 
 # ---------------- 6. AUDIT FORM ----------------
@@ -194,8 +195,13 @@ def videos(prefix):
     for i, v in enumerate(V):
         n = f"{prefix} {i+1}"
         t = v["t"].replace("“", "").replace("”", "")
-        tabs.append(e("e-tab", n + " Tab", [P(b, n + " TabT", f"<span>0{i+1} · {v['s']}</span><br><b>{t}</b>", "font-size: 15.5px; color: #FFFFFF; line-height: 1.35;")],
-                      style="width: 100%; padding: 16px 18px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); &:hover { background: rgba(255,255,255,0.08); }",
+        thumb = flex(b, n + " Th", [b.el("e-image", n + " ThImg", cfg={"image": {"src": {"url": f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg", "alt": ""}, "size": "full"}},
+                                         style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; object-fit: cover;"),
+                                    flex(b, n + " ThPlay", [icon(b, n + " ThPlayI", "play", 14, "#FFFFFF", style="margin-left: 3px;")],
+                                         "position: absolute; left: calc(50% - 18px); top: calc(50% - 18px); width: 36px; height: 36px; border-radius: 50%; align-items: center; justify-content: center; background: linear-gradient(90deg, #FFA53D, #FF5F3A); z-index: 2;")],
+                     "position: relative; flex: 0 0 132px; width: 132px; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #0C1530; @media(--mobile){ flex: 0 0 104px; width: 104px; }")
+        tabs.append(e("e-tab", n + " Tab", [flex(b, n + " TabRow", [thumb, P(b, n + " TabT", f"<span>0{i+1} · {v['s']}</span><br><b>{t}</b>", "font-size: 15.5px; color: #FFFFFF; line-height: 1.35; flex: 1 1 0%; min-width: 0px; white-space: normal;")], "gap: 14px; align-items: center; width: 100%;")],
+                      style="width: 100%; padding: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); &:hover { background: rgba(255,255,255,0.08); }",
                       classes=["em-vtab"]))
         panels.append(e("e-tab-content", n + " Panel", [b.el("e-youtube", n + " Video", cfg={"source": f"https://www.youtube.com/watch?v={v['id']}", "player_controls": True, "privacy_mode": True, "lazyload": True, "rel": False},
                                                              style="width: 100%; aspect-ratio: 16 / 9; border-radius: 24px; border: 1px solid rgba(122,240,245,0.25);")], style="padding: 0px;"))
@@ -220,7 +226,7 @@ wphoto = col(b, "Wall Photo", [img_el(b, "Wall Photo Img", "small-business-owner
                                P(b, "Wall Photo T", "Real businesses, real results", "position: absolute; left: 14px; bottom: 14px; padding: 8px 14px; border-radius: 50px; background: #FFFFFF; font-weight: 800; font-size: 14px; color: #0C1530;")],
              "position: relative; border-radius: 22px; overflow: hidden; break-inside: avoid; margin-bottom: 18px;")
 cards = [score, wphoto]
-for i, (q, loc) in enumerate(C["TST"]):
+for i, (q, loc) in enumerate([t for t in C["TST"] if t[1] not in ("London, UK", "Denver, USA")]):
     n = f"Rev {i+1}"
     ini = "".join(w[0] for w in loc.split(",")[0].split())[:2]
     cards.append(col(b, n, [

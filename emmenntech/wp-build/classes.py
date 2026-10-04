@@ -66,6 +66,9 @@ CLASSES = {
     "em-cta": "position: relative; overflow: hidden;",
     "em-banner": "position: relative; overflow: hidden;",
     "em-btab": "cursor: pointer;",
+    "em-jp": "position: relative;",
+    "em-jp-node": "border-radius: 50%;",
+    "em-jp-img": "border-radius: 16px;",
 }
 
 if __name__ == "__main__":

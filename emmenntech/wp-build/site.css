@@ -90,7 +90,7 @@ h1 em,h2 em,h3 em{font-style:normal;color:#FF8A1F}
 /* footer */
 .em-footer a{color:inherit!important}
 .em-footer a:hover,.em-footer a:hover p{color:#7AF0F5!important}
-.em-social:hover{background:#fff!important;color:#1F6BE0!important}
+
 .em-wordmark{color:transparent!important;-webkit-text-stroke:1.5px rgba(122,240,245,.35);background:linear-gradient(180deg,rgba(122,240,245,.22),rgba(31,107,224,0) 85%);-webkit-background-clip:text;background-clip:text;white-space:nowrap;user-select:none}
 
 /* mobile menu popup */
@@ -115,3 +115,19 @@ h1 em,h2 em,h3 em{font-style:normal;color:#FF8A1F}
 .em-btab p{color:#0C1530;font-weight:700;white-space:nowrap}
 .em-btab[aria-selected="true"],.em-btab.e--selected{background:#071233!important;border-color:#071233!important}
 .em-btab[aria-selected="true"] p,.em-btab.e--selected p{color:#fff!important}
+
+/* growth route: hover moves node + photo only (as in the design) */
+.em-jp-node,.em-jp-img{transition:transform .35s,border-color .3s}
+.em-jp:hover .em-jp-node{border-color:#1F6BE0!important;transform:translateY(-4px)}
+.em-jp:hover .em-jp-img{transform:translateY(-4px) rotate(-1deg)}
+
+/* video playlist with thumbnails */
+.em-vtab p{color:#fff}
+.em-vtab img{transition:transform .5s}
+.em-vtab:hover img{transform:scale(1.06)}
+
+/* social icons */
+.em-social svg{fill:#fff!important;color:#fff!important}
+.em-social{transition:background .25s,transform .25s,border-color .25s!important}
+.em-social:hover{background:linear-gradient(90deg,#FFA53D,#FF5F3A)!important;border-color:transparent!important;color:#fff!important;transform:translateY(-3px)}
+.em-vtab{min-width:0;overflow:hidden}.em-vtab p{white-space:normal!important;overflow-wrap:anywhere}
