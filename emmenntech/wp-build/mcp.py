@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Minimal Elementor MCP client: mcp.py <tool> [json-args | @file.json]"""
 import json, sys, os, base64, urllib.request, ssl
-U="https://aqua-pony-816588.hostingersite.com/wp-json/elementor/mcp/"
+U=os.environ.get("EMM_MCP_URL","https://emmenntech.com/wp-json/elementor/mcp/")
 AUTH="Basic "+os.environ["EMM_MCP_AUTH"]
-SF="/tmp/.sid-emm"
+import hashlib; SF="/tmp/.sid-emm-"+hashlib.md5(U.encode()).hexdigest()[:8]
 ctx=ssl.create_default_context(cafile=os.environ.get("SSL_CERT_FILE","/root/.ccr/ca-bundle.crt"))
 def post(body,sid=None):
     h={"Authorization":AUTH,"Content-Type":"application/json","Accept":"application/json, text/event-stream","MCP-Protocol-Version":"2025-06-18"}

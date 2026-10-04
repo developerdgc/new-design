@@ -7,5 +7,5 @@ box = col(b, "Mobile Menu", [
     img_el(b, "M Logo", "logo-for-dark-bg", "width: 170px; margin-bottom: 18px;", "EmmEnn Tech")] + links + [
     btn(b, "M CTA", "Get a Free Audit", link_page("contact"), "g", "margin-top: 18px; width: 100%;"),
     P(b, "M Phone", PHONE, "font-weight: 700; color: #7AF0F5; margin-top: 10px;", link=link_url(TEL))],
-    "gap: 4px; padding: 32px 28px; background: #071233; width: 100%; min-height: 100%;", ["em-mobile-menu"])
+    "gap: 4px; padding: 90px 28px 40px 28px; background: #071233; width: 100%; min-height: 100vh;", ["em-mobile-menu"])
 json.dump(b.payload(PAGES["popup"], box), open('/tmp/p_popup.json', 'w'))
