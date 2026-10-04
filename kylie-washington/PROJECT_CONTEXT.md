@@ -195,6 +195,7 @@ User asked for the homepage "as in the client's docs". `templates/index.json` no
 - Layout `logo_center_navigation_inline`: menu left, logo centred, icons right (grid "primary-nav logo secondary-nav").
 - `sections/header.liquid` has two new settings, **Logo text** ("Kylie Washington") and **Logo text, italic part** ("Studio", coral italic), used when no logo image is set, so the header no longer shows the store name "My Store". Style `.kw-logo-text` in `kw-collage.css` (Fraunces 700, up to ~34px; 18px on mobile).
 - Footer copyright and page titles still use the store name until it is renamed in admin.
+- Tweaks (end of `kw-collage.css`): space under KW section headings (`.kwc-h2.kwc-mb`, `.kwc-head`), header menu 1.05rem (1.125rem ≥1200px, wider gap), hover on all buttons (lift + shadow + slight brighten; outline pills invert to the section's fg/bg; reduced-motion safe).
 
 ## 8. Files in this folder
 - `csv/`: Shopify import CSVs (originals with/without images, prints FINAL with images)

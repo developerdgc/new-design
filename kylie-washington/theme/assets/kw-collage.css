@@ -140,3 +140,36 @@
 }
 .kw-logo-text em { font-style: italic; font-weight: 400; color: #e8572a; }
 @media (max-width: 699px) { .kw-logo-text { font-size: 1.15rem; } }
+
+/* --- Oct 4 tweaks --- */
+
+/* 1. Space under section headings in KW sections (was overridden by .kwc-h2 margin: 0) */
+.kwc-h2.kwc-mb { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+.kwc-head { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+
+/* 2. Bigger header menu */
+.header__primary-nav-item > a,
+.header__primary-nav-item > details > summary,
+.header__primary-nav-item [data-title] { font-size: 1.05rem; }
+@media (min-width: 1200px) {
+  .header__primary-nav-item > a,
+  .header__primary-nav-item > details > summary,
+  .header__primary-nav-item [data-title] { font-size: 1.125rem; }
+  .header__primary-nav { column-gap: 1.75rem; }
+}
+
+/* 3. Hover on every button */
+.button, .kwc-pill, button[type="submit"], .shopify-payment-button__button {
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.button:hover, .kwc-pill:hover, button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(35 31 28 / 0.18);
+}
+.button:not(.button--outline):hover, .kwc-pill:not(.kwc-pill--outline):hover, button[type="submit"]:not(.button--outline):hover { filter: brightness(1.08) saturate(1.05); }
+.kwc-pill--outline:hover { background: var(--kwc-fg, #231f1c); color: var(--kwc-bg, #f6f1e8); border-color: var(--kwc-fg, #231f1c); }
+.kwc-footer-top { --kwc-fg: #f6f1e8; --kwc-bg: #231f1c; }
+.button:active, .kwc-pill:active, button[type="submit"]:active { transform: translateY(0); box-shadow: none; }
+@media (prefers-reduced-motion: reduce) {
+  .button:hover, .kwc-pill:hover, button[type="submit"]:hover { transform: none; }
+}
