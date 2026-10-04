@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 470 460" width="470" height="460">
+  <title>EmmEnn Tech icon</title>
+  <g fill="#5AD8E0">
+    <path d="M28 249A221 221 0 1 1 249 470L249 387A138 138 0 1 0 111 249Z"/>
+    <rect x="165" y="300" width="85" height="87"/>
+    <rect x="42" y="330" width="55" height="55"/>
+    <rect x="97" y="385" width="68" height="67"/>
+  </g>
+</svg>
