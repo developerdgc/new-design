@@ -96,7 +96,9 @@ First steps in the new session: test the connector (`get-shop-info`), `npm i -g 
 ### Status, Oct 4 2026 (session 2)
 - Connector OK: store `7m41tm-1v.myshopify.com` ("My Store", Basic, AUD, AEDT). Env secrets `SHOPIFY_FLAG_STORE`, `SHOPIFY_CLI_THEME_TOKEN`, `STORE_PASSWORD` are set. Shopify CLI 4.8.4 works.
 - Themes: Horizon `#145878089779` (live) · Prestige 11.4.1 `#145878188083` (unpublished, complete, ~220 files) · **Prestige – New Build `#146128306227`** (unpublished; the duplicate was named this instead of "Kylie Build").
-- ⚠️ **"Prestige – New Build" is incomplete on Shopify itself**: only 98 files (stops at `sections/newsletter.liquid`; no `snippets/`, no `templates/`, no `overlay-group.json`). Confirmed via Admin API `theme.files`, not a CLI problem. Do NOT build on it: delete it and re-duplicate Prestige (or `shopify theme push --unpublished` a fresh copy from the complete Prestige).
+- ⚠️ **"Prestige – New Build" `#146128306227` is incomplete on Shopify itself**: only 98 files (no `snippets/`, no `templates/`). Confirmed via Admin API `theme.files`. Do NOT use it; the user can delete it.
+- ✅ **Build theme = "Prestige – Kylie Build" `#146130927667`** (unpublished). Created by pulling the complete Prestige and `shopify theme push --unpublished`. Verified complete via Admin API. Local copy: `kylie-washington/theme/` (in git). Work flow: edit locally → `shopify theme push --theme 146130927667 --path kylie-washington/theme` (never `--publish`, never `--allow-live`). Pull first if the user changed settings in the editor.
+- Editor: https://7m41tm-1v.myshopify.com/admin/themes/146130927667/editor · Preview: https://7m41tm-1v.myshopify.com?preview_theme_id=146130927667
 - Prestige sections usable on the homepage: announcement-bar, slideshow, image-with-text-overlay, rich-text, multi-column, featured-collections, testimonials, image-with-text, newsletter (+ others in `reports/prestige-sections.md`).
 
 ## 8. Files in this folder
