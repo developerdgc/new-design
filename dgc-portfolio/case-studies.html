@@ -137,16 +137,16 @@ p { margin: 0; }
 .vthumb { position: relative; width: 196px; flex: none; transition: transform .45s cubic-bezier(.2,.8,.2,1.2), opacity .35s, filter .35s; }
 .vthumb button { position: relative; display: block; width: 100%; padding: 0; border: 1px solid var(--line-d); border-radius: 16px; overflow: hidden; background: var(--navy-3); cursor: pointer; aspect-ratio: 9 / 16; transition: border-color .35s, box-shadow .45s; }
 .vthumb video, .vthumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.vthumb button::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,23,32,.9), transparent 45%); }
-.play { position: absolute; z-index: 2; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; display: grid; place-items: center; background: rgba(246,164,64,.95); color: var(--abyss); box-shadow: 0 0 0 8px rgba(246,164,64,.25); transition: transform .3s, opacity .3s; }
+.vthumb button::after { content: ""; position: absolute; inset: 0; background: rgba(2,23,32,.0); transition: background .3s; }
+.play { position: absolute; z-index: 2; left: 50%; top: 58%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; display: grid; place-items: center; background: rgba(246,164,64,.95); color: var(--abyss); box-shadow: 0 0 0 8px rgba(246,164,64,.25); transition: transform .3s, opacity .3s; }
 .play svg { width: 20px; height: 20px; fill: currentColor; margin-left: 3px; }
-.vcap { position: absolute; z-index: 2; left: 14px; right: 14px; bottom: 14px; text-align: left; color: #fff; }
+.vcap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .vcap b { display: block; font-size: .92rem; line-height: 1.25; }
 .vcap em { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-style: normal; font-size: .74rem; font-weight: 700; color: var(--orange); }
 .clients ul:has(.vthumb:hover) .vthumb:not(:hover) { opacity: .3; filter: grayscale(.6) blur(1px); }
 .vthumb:hover { z-index: 5; transform: scale(1.22); }
 .vthumb:hover button { border-color: var(--orange); box-shadow: 0 30px 60px -20px rgba(0,0,0,.85), 0 0 0 3px var(--orange); }
-.vthumb:hover .play { transform: scale(.8); opacity: .85; }
+.vthumb:hover .play { transform: scale(.7); opacity: 0; }
 .clients__head a { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: .88rem; color: var(--orange); text-decoration: none; }
 .clients__head a svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 .clients__head a:hover { color: #fff; }
@@ -247,6 +247,24 @@ p { margin: 0; }
 .more small { font-weight: 700; color: var(--ink-3); font-size: .82rem; font-variant-numeric: tabular-nums; }
 .meter { width: 220px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .meter i { display: block; height: 100%; background: var(--orange); transition: width .5s; }
+
+/* Logo mockups: stacked business cards on a tinted desk */
+.lmock { --c: var(--navy); position: relative; aspect-ratio: 4 / 3.3; border-radius: 22px; overflow: hidden; isolation: isolate; perspective: 900px;
+  background: radial-gradient(80% 70% at 85% 10%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%), linear-gradient(160deg, #f7fafb, #e4edf0); box-shadow: inset 0 0 0 1px var(--line); }
+.lmock::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(6,40,54,.09) 1px, transparent 1px); background-size: 18px 18px; }
+.lmock__back, .lmock__front { position: absolute; left: 50%; top: 50%; width: 64%; aspect-ratio: 1.75; border-radius: 10px; transition: transform .7s cubic-bezier(.2,.7,.2,1), box-shadow .7s; }
+.lmock__back { background: var(--c); transform: translate(-58%, -66%) rotate(-11deg); box-shadow: 0 24px 40px -22px rgba(6,40,54,.6); padding: 9% 9%; display: flex; flex-direction: column; justify-content: flex-end; gap: 7px; overflow: hidden; }
+.lmock__back::after { content: ""; position: absolute; right: -18%; top: -30%; width: 70%; aspect-ratio: 1; border-radius: 50%; border: 14px solid rgba(255,255,255,.14); }
+.lmock__back i { display: block; height: 5px; border-radius: 4px; background: rgba(255,255,255,.55); width: 46%; }
+.lmock__back i:nth-child(2) { width: 34%; opacity: .7; } .lmock__back i:nth-child(3) { width: 26%; opacity: .5; }
+.lmock__front { display: grid; place-items: center; padding: 6% 9%; background: linear-gradient(135deg, #fff 60%, #f1f4f5); transform: translate(-44%, -40%) rotate(5deg); box-shadow: 0 30px 50px -26px rgba(6,40,54,.7), 0 2px 0 rgba(255,255,255,.9) inset; }
+.lmock__front::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 10px 10px; background: var(--c); }
+.lmock__front img { max-width: 100%; max-height: 100%; width: auto; object-fit: contain; }
+.lmock__seal { position: absolute; right: 7%; bottom: 8%; width: 23%; aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; padding: 12%; padding: 3.5%; box-shadow: 0 16px 30px -16px rgba(6,40,54,.6), 0 0 0 5px color-mix(in srgb, var(--c) 30%, #fff); transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.lmock__seal img { width: 100%; height: 100%; object-fit: contain; }
+.work:hover .lmock__front { transform: translate(-50%, -50%) rotate(0deg) scale(1.06); box-shadow: 0 40px 60px -26px rgba(6,40,54,.8); }
+.work:hover .lmock__back { transform: translate(-64%, -74%) rotate(-17deg); }
+.work:hover .lmock__seal { transform: rotate(-24deg) scale(1.08); }
 
 /* Case study cards: DGC navy card, brand mark watermark, industry icon */
 .case { --gx: 80%; --gy: 100%; position: relative; display: flex; flex-direction: column; width: 100%; aspect-ratio: 5 / 4; padding: 24px; border: 1px solid rgba(28,222,225,.18); border-radius: 22px; color: #fff; text-align: left; font: inherit; cursor: pointer; overflow: hidden; isolation: isolate; container-type: inline-size;
