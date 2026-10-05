@@ -1,0 +1,739 @@
+<meta charset="utf-8">
+<title>DGC Success Stories</title>
+<meta name="description" content="Real Google Business Profile, AI Overview, Google Ads, Local Services Ads and SEO results from Digital Growth Catalyze clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark editorial hero with live-scrolling screens, then alternating white / navy bands like digitalgrowthcatalyze.com */
+:root {
+  color-scheme: light;
+  --navy: #062836;        /* DGC brand dark */
+  --navy-2: #04202c;
+  --navy-3: #0a3546;
+  --abyss: #021720;
+  --teal: #116466;
+  --cyan: #1cdee1;        /* DGC accent */
+  --orange: #f6a440;      /* DGC buttons */
+  --orange-ink: #b9650c;  /* orange for text on white */
+  --paper: #ffffff;
+  --mist: #eef5f6;
+  --ink: #071c25;
+  --ink-2: #3a4f58;
+  --ink-3: #6a7d85;
+  --fog: #b9cdd3;
+  --line: #dde8ea;
+  --line-d: rgba(255,255,255,.09);
+  --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --wrap: 1240px;
+  --r: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { background: var(--paper); color: var(--ink-2); font-family: var(--body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; line-height: 1.08; text-wrap: balance; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: calc(var(--wrap) + 48px); margin: 0 auto; padding-inline: 24px; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
+.kicker { display: inline-flex; align-items: center; gap: 10px; font-size: .74rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: var(--orange-ink); }
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--orange); transform: rotate(45deg); }
+.dark .kicker { color: var(--cyan); }
+.h2 { font-size: clamp(1.9rem, 4.2vw, 3.3rem); letter-spacing: -.025em; margin-top: 16px; }
+.dark .h2 { color: #fff; }
+.h2 em { font-style: normal; color: var(--orange-ink); }
+.dark .h2 em { color: var(--cyan); }
+.process .h2 em, .dark.process .kicker { color: var(--orange); }
+.sub { max-width: 54ch; color: var(--ink-3); font-size: 1.04rem; }
+.dark .sub { color: var(--fog); }
+.dark { background: var(--navy); color: var(--fog); }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; font: 700 .95rem/1 var(--body); text-decoration: none; border: 1.5px solid transparent; cursor: pointer; transition: transform .25s, background .25s, color .25s, border-color .25s, box-shadow .25s; white-space: nowrap; }
+.btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
+.btn:hover svg { transform: translate(2px, -2px); }
+.btn--hot { background: var(--orange); color: var(--abyss); box-shadow: 0 10px 30px -10px rgba(246,164,64,.7); }
+.btn--hot:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -12px rgba(246,164,64,.9); }
+.btn--ghost { border-color: rgba(255,255,255,.22); color: #fff; }
+.btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+.btn--ink { background: var(--navy); color: #fff; }
+.btn--ink:hover { background: var(--teal); }
+
+/* Header */
+.top { background: var(--abyss); color: var(--fog); font-size: .82rem; }
+.top .wrap { display: flex; justify-content: space-between; gap: 16px; min-height: 40px; align-items: center; }
+.top a { text-decoration: none; } .top a:hover { color: var(--cyan); }
+.top b { color: #fff; font-weight: 600; }
+.top__r { display: flex; gap: 22px; }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: rgba(6,40,54,.82); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line-d); }
+.nav .wrap { display: flex; align-items: center; gap: 28px; min-height: 76px; }
+.nav__logo img { height: 42px; width: auto; }
+.nav__links { display: flex; gap: 4px; margin-left: auto; }
+.nav__links a { color: #dbe8eb; text-decoration: none; font-weight: 600; font-size: .92rem; padding: 9px 14px; border-radius: 999px; transition: background .2s, color .2s; }
+.nav__links a:hover { background: rgba(255,255,255,.06); color: #fff; }
+.nav__links a[aria-current] { background: rgba(28,222,225,.12); color: var(--cyan); }
+.nav .btn { padding: 12px 20px; }
+.burger { display: none; margin-left: auto; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line-d); background: none; color: #fff; cursor: pointer; }
+.burger svg { width: 22px; height: 22px; fill: currentColor; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; background: var(--navy); color: var(--fog); padding-block: 60px 0; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; background: radial-gradient(closest-side, rgba(28,222,225,.26), transparent 70%); z-index: -1; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 40px; align-items: center; }
+.rate { display: inline-flex; align-items: center; gap: 12px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid var(--line-d); background: rgba(255,255,255,.04); font-size: .84rem; color: #dbe8eb; }
+.rate b { color: #fff; }
+.faces { display: flex; }
+.faces span { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: .74rem; color: var(--abyss); border: 2px solid var(--navy); margin-left: -8px; }
+.faces span:first-child { margin-left: 0; }
+.stars { color: var(--orange); letter-spacing: 2px; font-size: .9rem; }
+.hero h1 { color: #fff; font-size: clamp(2.3rem, 4.6vw, 4.1rem); letter-spacing: -.035em; line-height: 1.04; margin-top: 22px; }
+.hero h1 .ring { position: relative; display: inline-block; color: var(--cyan); }
+.hero h1 .ring svg { position: absolute; left: -4%; bottom: -.22em; width: 108%; height: .42em; overflow: visible; }
+.hero h1 .ring path { fill: none; stroke: var(--orange); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 420; stroke-dashoffset: 0; animation: draw 1.4s .3s cubic-bezier(.6,0,.2,1) backwards; }
+@keyframes draw { from { stroke-dashoffset: 420; } }
+.hero h1 .out { color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.6); }
+.hero__lead { margin-top: 22px; font-size: 1.06rem; max-width: 46ch; color: var(--fog); }
+.hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+
+/* Hero showcase: three live-scrolling screens */
+.show { position: relative; height: 470px; }
+.screen { position: absolute; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 40px 80px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08); }
+.screen__bar { height: 24px; background: #f1f5f6; display: flex; align-items: center; gap: 5px; padding-inline: 10px; }
+.screen__bar i { width: 7px; height: 7px; border-radius: 50%; background: #cbd8dc; }
+.screen__bar i:nth-child(1) { background: #ff6b5f; } .screen__bar i:nth-child(2) { background: var(--orange); } .screen__bar i:nth-child(3) { background: #3ccf6e; }
+.screen img { width: 100%; height: calc(100% - 24px); object-fit: cover; object-position: top; animation: pan 16s ease-in-out infinite alternate; }
+.screen--a { width: 56%; height: 400px; left: 22%; top: 24px; z-index: 3; }
+.screen--b { width: 42%; height: 320px; left: 0; top: 100px; z-index: 2; transform: rotate(-5deg); opacity: .92; }
+.screen--c { width: 42%; height: 320px; right: 0; top: 76px; z-index: 1; transform: rotate(5deg); opacity: .92; }
+.screen--b img { animation-delay: -5s; } .screen--c img { animation-delay: -10s; }
+@keyframes pan { 0%, 8% { object-position: top; } 92%, 100% { object-position: bottom; } }
+.float { position: absolute; z-index: 5; display: flex; align-items: center; gap: 12px; padding: 11px 15px; border-radius: 16px; background: rgba(4,32,44,.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line-d); box-shadow: 0 20px 40px -20px rgba(0,0,0,.6); color: #fff; animation: bob 6s ease-in-out infinite; }
+.float strong { font-family: var(--display); font-size: 1.25rem; line-height: 1; }
+.float small { display: block; color: var(--fog); font-size: .72rem; line-height: 1.3; }
+.float .ic { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; background: var(--cyan); color: var(--abyss); }
+.float .ic svg { width: 19px; height: 19px; fill: currentColor; }
+.float--1 { left: 4%; bottom: 10px; }
+.float--2 { right: -4px; top: 0; animation-delay: -3s; }
+.float--2 .ic { background: var(--orange); }
+@keyframes bob { 50% { transform: translateY(-10px); } }
+
+/* Client wall: moving thumbnails crossed by an industry ribbon */
+.clients { position: relative; margin-top: 56px; background: var(--navy-2); border-top: 1px solid var(--line-d); padding-block: 36px 44px; overflow: hidden; }
+.clients__head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+.clients__head p { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 12px; }
+.clients__head p::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #3ccf6e; box-shadow: 0 0 0 5px rgba(60,207,110,.18); animation: pulse 2s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 9px rgba(60,207,110,0); } }
+.clients__head span { font-size: .86rem; }
+.track { display: flex; width: max-content; animation: slide 90s linear infinite; }
+.clients > .track { padding-block: 44px 40px; margin-block: -44px -10px; }
+.clients:hover .track { animation-play-state: paused; }
+.track ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0 18px 0 0; }
+.thumb { position: relative; width: 240px; flex: none; border-radius: 12px; overflow: hidden; background: var(--navy-3); border: 1px solid var(--line-d); transition: transform .45s cubic-bezier(.2,.8,.2,1.2), opacity .35s, filter .35s, border-color .35s, box-shadow .45s; }
+.clients ul:hover .thumb { opacity: .3; filter: grayscale(.6) blur(1px); }
+.clients ul .thumb:hover { opacity: 1; filter: none; z-index: 5; transform: scale(1.32); border-color: var(--orange); box-shadow: 0 30px 60px -20px rgba(0,0,0,.85), 0 0 0 3px var(--orange); }
+.thumb a { text-decoration: none; display: block; }
+.thumb img { width: 100%; aspect-ratio: 360 / 237; object-fit: cover; object-position: top; filter: saturate(.85); transition: filter .35s; }
+.thumb:hover img { filter: none; }
+.thumb:hover span { background: var(--orange); color: var(--abyss); }
+.thumb:hover span em { color: var(--navy); }
+.thumb span { display: block; padding: 10px 12px 12px; font-size: .8rem; font-weight: 700; color: #e3eef1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.35; }
+.thumb span em { display: block; font-style: normal; font-weight: 600; font-size: .72rem; color: var(--cyan); }
+.ribbon { position: relative; z-index: 1; margin: 22px -2% 0; background: var(--orange); transform: rotate(-2.2deg); padding-block: 14px; box-shadow: 0 20px 40px -20px rgba(0,0,0,.6); overflow: hidden; }
+.ribbon .track { animation: slide 50s linear infinite reverse; }
+.ribbon ul { display: flex; list-style: none; margin: 0; padding: 0; }
+.ribbon li { font-family: var(--display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; color: var(--abyss); white-space: nowrap; display: flex; align-items: center; gap: 26px; padding-right: 26px; }
+.ribbon li::after { content: "✺"; font-size: .9rem; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.stat { padding: 44px 24px; border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat:first-child strong { color: var(--orange-ink); }
+.stat strong { display: block; font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3.4rem); color: var(--ink); line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.stat strong sup { font-size: .5em; color: var(--orange); vertical-align: top; position: relative; top: .15em; margin-left: 2px; }
+.stat span { display: block; margin-top: 10px; font-weight: 600; color: var(--ink-3); font-size: .92rem; }
+
+/* Work: staggered device wall. Each project sits in a dark monitor bezel; hovering pans the full page and a rail tracks progress */
+.work-sec { padding-block: 120px 150px; position: relative; overflow: hidden; background: var(--paper); }
+.work-sec::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 80px 80px; opacity: .45; mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000); -webkit-mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000); pointer-events: none; }
+.work-sec .wrap { position: relative; }
+.wtitle { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px 40px; }
+.wtitle__big { font-family: var(--display); font-weight: 800; font-size: clamp(4.2rem, 15vw, 12.5rem); line-height: .8; letter-spacing: -.06em; color: var(--ink); margin: 18px 0 0; display: flex; align-items: flex-start; gap: .08em; }
+.wtitle__big span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
+.wtitle__big sup { font-family: var(--body); font-size: clamp(1rem, 2.2vw, 1.6rem); font-weight: 800; letter-spacing: 0; color: var(--orange); -webkit-text-stroke: 0; margin-top: .4em; }
+.wtitle__side { max-width: 34ch; padding-bottom: 8px; }
+.wtitle__side p { color: var(--ink-3); }
+.hint { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; font-size: .82rem; font-weight: 700; color: var(--ink); }
+.hint i { width: 22px; height: 34px; border-radius: 12px; border: 2px solid var(--ink); position: relative; flex: none; }
+.hint i::after { content: ""; position: absolute; left: 50%; top: 6px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--orange); animation: wheel 1.6s ease-in-out infinite; }
+.hint--touch { display: none; }
+@media (hover: none) { .hint--mouse { display: none; } .hint--touch { display: inline; } }
+@keyframes wheel { 60% { transform: translateY(10px); opacity: 0; } 100% { opacity: 0; } }
+
+.filters { display: flex; flex-wrap: wrap; gap: 6px 34px; margin-top: 56px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.tab { position: relative; font: 700 1.02rem/1.2 var(--display); padding: 8px 0; border: 0; background: none; color: var(--ink-3); cursor: pointer; letter-spacing: -.01em; transition: color .25s; }
+.tab sup { font-family: var(--body); font-size: .62rem; font-weight: 800; margin-left: 3px; color: var(--orange-ink); }
+.tab::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 3px; background: var(--orange); transition: right .35s cubic-bezier(.2,.7,.2,1); }
+.tab:hover { color: var(--ink); }
+.tab[aria-pressed="true"] { color: var(--ink); }
+.tab[aria-pressed="true"]::after { right: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 34px; margin-top: 64px; }
+.tab--win { color: var(--orange-ink); }
+.story { margin-top: 40px; }
+.story__head { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: 26px 30px; border-radius: 18px; background: linear-gradient(120deg, var(--navy), var(--navy-3)); color: var(--fog); border-left: 6px solid var(--orange); }
+.story__head > div { min-width: 0; flex: 1 1 320px; }
+.feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 28px; }
+.fcard { border-radius: 20px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 30px 50px -40px rgba(6,40,54,.6); transition: transform .35s, box-shadow .35s; }
+.fcard:hover { transform: translateY(-6px); box-shadow: 0 40px 60px -36px rgba(6,40,54,.7); }
+.fcard__img { height: 250px; overflow: hidden; background: var(--mist); border-bottom: 1px solid var(--line); }
+.fcard__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s; }
+.fcard:hover .fcard__img img { transform: scale(1.04); }
+.fcard__body { padding: 24px 26px 28px; }
+.fcard__tag { font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(246,164,64,.16); color: var(--orange-ink); }
+.fcard h3 { margin-top: 14px; font-size: 1.25rem; }
+.fcard p { margin-top: 6px; color: var(--ink-3); font-size: .95rem; }
+.fnums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.fnums div { padding: 12px; border-radius: 12px; background: var(--mist); border-top: 3px solid var(--orange); }
+.fnums strong { display: block; font-family: var(--display); font-size: 1.15rem; color: var(--ink); line-height: 1.15; }
+.fnums span { display: block; margin-top: 4px; font-size: .74rem; font-weight: 600; color: var(--ink-3); }
+.story strong { display: block; font-family: var(--display); color: #fff; font-size: 1.25rem; }
+.story p { margin-top: 6px; font-size: .95rem; }
+.story[hidden], .grid[hidden], .more[hidden] { display: none; }
+
+.win { position: absolute; z-index: 2; top: 50px; left: 22px; font-style: normal; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: var(--orange); color: var(--abyss); box-shadow: 0 8px 20px -8px rgba(0,0,0,.5); }
+.work { min-width: 0; transition: opacity .4s, filter .4s, translate .5s; }
+.grid.is-staggered .work.lift { translate: 0 96px; }
+.grid.is-staggered { padding-bottom: 96px; }
+@media (hover: hover) {
+  .grid:has(.work:hover) .work:not(:hover) { opacity: .45; filter: saturate(.3); }
+}
+.device { position: relative; display: block; text-decoration: none; border-radius: 18px; padding: 0 10px; background: linear-gradient(160deg, #0d3c4f, var(--abyss) 70%); box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 30px 50px -30px rgba(6,40,54,.6); transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s; cursor: none; }
+.device:not([href]) { cursor: default; }
+.work:hover .device { transform: translateY(-10px) rotate(-.6deg); box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 50px 70px -36px rgba(6,40,54,.75); }
+.work:nth-child(even):hover .device { transform: translateY(-10px) rotate(.6deg); }
+.device__top { display: flex; align-items: center; gap: 6px; height: 38px; }
+.device__top i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); }
+.work:hover .device__top i:nth-child(1) { background: #ff6b5f; }
+.work:hover .device__top i:nth-child(2) { background: var(--orange); }
+.work:hover .device__top i:nth-child(3) { background: #3ccf6e; }
+.device__url { margin-left: 10px; flex: 1; min-width: 0; font-size: .72rem; color: rgba(255,255,255,.55); background: rgba(255,255,255,.06); border-radius: 6px; padding: 3px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.device__url b { color: var(--orange); font-weight: 700; }
+.screen2 { position: relative; height: 430px; border-radius: 8px; overflow: hidden; background: #fff; }
+.screen2 img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: object-position var(--dur, 6s) cubic-bezier(.45,.05,.4,1); }
+.rail { position: absolute; top: 10px; bottom: 10px; right: 6px; width: 4px; border-radius: 4px; background: rgba(6,40,54,.15); opacity: 0; transition: opacity .3s; }
+.rail i { position: absolute; left: 0; right: 0; top: 0; height: 22%; border-radius: 4px; background: var(--orange); transition: top var(--dur, 6s) cubic-bezier(.45,.05,.4,1); }
+.work:hover .screen2 img, .work:focus-within .screen2 img, .work.is-live .screen2 img { object-position: bottom; }
+.work:hover .rail, .work:focus-within .rail, .work.is-live .rail { opacity: 1; }
+.work:hover .rail i, .work:focus-within .rail i, .work.is-live .rail i { top: 78%; }
+.device__chin { height: 30px; display: grid; place-items: center; }
+.device__chin span { font-family: var(--display); font-size: .56rem; letter-spacing: .3em; color: rgba(255,255,255,.28); }
+.device--logo .screen2 { display: grid; place-items: center; padding: 34px; height: 300px; background: radial-gradient(circle at 50% 40%, #fff, var(--mist)); }
+.device--logo .screen2 img { width: auto; height: auto; max-height: 200px; object-fit: contain; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.work:hover .device--logo .screen2 img { transform: scale(1.08) rotate(-2deg); }
+
+.wmeta { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 20px 4px 0; }
+.wmeta__n { font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px var(--orange); font-variant-numeric: tabular-nums; transition: color .3s; }
+.work:hover .wmeta__n { color: var(--orange); -webkit-text-stroke-color: var(--orange); }
+.wmeta h3 { font-family: var(--body); font-size: 1.04rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wmeta p { font-size: .84rem; color: var(--ink-3); margin-top: 2px; display: flex; gap: 8px; align-items: center; }
+.wmeta p em { font-style: normal; font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-ink); background: rgba(246,164,64,.16); padding: 3px 8px; border-radius: 4px; }
+.go { width: 46px; height: 46px; flex: none; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--line); color: var(--ink); transition: background .3s, border-color .3s, color .3s, transform .3s; }
+.go svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.go:hover, .work:hover .go { background: var(--orange); border-color: var(--orange); color: var(--abyss); transform: rotate(45deg); }
+.go--off { opacity: .35; }
+.work:hover .go--off { background: none; border-color: var(--line); color: var(--ink); transform: none; }
+
+.cursor { position: fixed; left: 0; top: 0; z-index: 60; width: 104px; height: 104px; margin: -52px 0 0 -52px; border-radius: 50%; display: grid; place-items: center; text-align: center; background: var(--orange); color: var(--abyss); font: 800 .78rem/1.2 var(--body); letter-spacing: .04em; text-transform: uppercase; pointer-events: none; transform: scale(0); transition: transform .3s cubic-bezier(.2,.7,.2,1); box-shadow: 0 16px 30px -12px rgba(246,164,64,.8); }
+.cursor.on { transform: scale(1); }
+.more { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 40px; }
+.more small { font-weight: 700; color: var(--ink-3); font-size: .82rem; font-variant-numeric: tabular-nums; }
+.meter { width: 220px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--orange); transition: width .5s; }
+
+/* Hand-made touches: film grain + rotating seal */
+body::before { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.badge { position: absolute; z-index: 6; left: -18px; top: -14px; width: 132px; height: 132px; border-radius: 50%; background: var(--orange); color: var(--abyss); display: grid; place-items: center; box-shadow: 0 20px 40px -18px rgba(246,164,64,.9); text-decoration: none; }
+.badge svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 18s linear infinite; }
+.badge text { font: 800 10.5px var(--body); letter-spacing: 2.6px; fill: var(--abyss); text-transform: uppercase; }
+.badge b { font-family: var(--display); font-size: 1.5rem; line-height: 1; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.badge:hover svg.ring { animation-duration: 6s; }
+
+/* Process: sticky photo column + four focused steps */
+.process { padding-block: 110px; position: relative; overflow: hidden; }
+.process__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
+.process__aside { position: sticky; top: 110px; }
+.process__img { position: relative; margin-top: 34px; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; }
+.process__img img { width: 100%; height: 100%; object-fit: cover; }
+.process__img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,23,32,.85), transparent 55%); }
+.process__img p { position: absolute; z-index: 1; left: 22px; right: 22px; bottom: 18px; color: #fff; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.process__img p::before { content: ""; width: 10px; height: 10px; flex: none; border-radius: 50%; background: var(--orange); }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; border-top: 1px solid var(--line-d); }
+.step { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 20px; padding-block: 30px; border-bottom: 1px solid var(--line-d); transition: background .3s; }
+.step::before { counter-increment: s; content: "0" counter(s); font-family: var(--display); font-size: 2.4rem; font-weight: 800; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(246,164,64,.75); transition: color .35s; }
+.step:hover::before { color: var(--orange); }
+.step h3 { color: #fff; font-size: 1.3rem; }
+.step p { margin-top: 8px; }
+.step ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 16px 0 0; }
+.step li { font-size: .78rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: rgba(246,164,64,.1); border: 1px solid rgba(246,164,64,.3); color: #ffd9a8; }
+
+/* About: photo collage + copy + service list */
+.about { padding-block: 120px; background: var(--mist); }
+.about__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 80px; align-items: center; }
+.collage { position: relative; padding: 0 60px 70px 0; isolation: isolate; }
+.collage::before { content: ""; position: absolute; z-index: -1; right: 24px; top: -24px; width: 46%; height: 52%; border-radius: 24px; background: repeating-linear-gradient(-45deg, var(--orange) 0 2px, transparent 2px 12px); opacity: .55; }
+.collage__main { border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 4.6; box-shadow: 0 40px 60px -40px rgba(6,40,54,.6); }
+.collage__main img { width: 100%; height: 100%; object-fit: cover; }
+.collage__small { position: absolute; right: 0; bottom: 0; width: 52%; border-radius: 18px; overflow: hidden; border: 8px solid var(--mist); aspect-ratio: 4 / 3; box-shadow: 0 30px 50px -30px rgba(6,40,54,.6); }
+.collage__small img { width: 100%; height: 100%; object-fit: cover; }
+.since { position: absolute; left: -22px; top: 36px; padding: 18px 22px; border-radius: 18px; background: var(--orange); color: var(--abyss); box-shadow: 0 24px 40px -20px rgba(6,40,54,.8); }
+.since strong { display: block; font-family: var(--display); font-size: 2.4rem; line-height: 1; color: var(--abyss); }
+.since span { font-size: .82rem; font-weight: 700; color: var(--navy); }
+.about .sub { margin-top: 18px; }
+.ticks { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ticks li { display: flex; gap: 8px; align-items: center; font-weight: 700; font-size: .88rem; color: var(--ink); padding: 8px 14px 8px 8px; border-radius: 999px; background: #fff; border: 1px solid var(--line); }
+.ticks svg { width: 22px; height: 22px; flex: none; padding: 4px; border-radius: 50%; background: var(--orange); fill: var(--abyss); }
+.svc-list { list-style: none; padding: 0; margin: 34px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.svc-list a { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 16px 4px; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 700; color: var(--ink); transition: color .25s, padding .25s; }
+.svc-list li:nth-child(odd) a { margin-right: 18px; }
+.svc-list a svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
+.svc-list a:hover { color: var(--orange-ink); padding-left: 10px; }
+.svc-list a:hover svg { transform: rotate(45deg); color: var(--orange); }
+.about .btn { margin-top: 34px; }
+
+/* Reviews: one row (to be replaced by live Google reviews) */
+.reviews { padding-block: 100px; }
+.reviews__head { display: flex; justify-content: space-between; align-items: end; gap: 28px; flex-wrap: wrap; }
+.score { display: inline-flex; gap: 16px; align-items: center; padding: 14px 20px; border-radius: 16px; border: 1px solid var(--line-d); background: rgba(255,255,255,.03); }
+.score strong { font-family: var(--display); font-size: 2.2rem; color: var(--orange); line-height: 1; }
+.score small { display: block; font-size: .84rem; }
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 48px; }
+.quote { position: relative; display: flex; flex-direction: column; margin: 0; padding: 28px; border-radius: 18px; background: var(--navy-3); border: 1px solid var(--line-d); transition: transform .3s, border-color .3s; }
+.quote:hover { transform: translateY(-4px); border-color: rgba(28,222,225,.4); }
+.quote::before { content: "“"; position: absolute; right: 22px; top: 6px; font-family: var(--display); font-size: 4.4rem; line-height: 1; color: rgba(246,164,64,.35); }
+.quote blockquote { margin: 12px 0 0; font-size: .95rem; color: #d3e2e6; }
+figcaption { display: flex; gap: 12px; align-items: center; margin-top: auto; padding-top: 20px; }
+figcaption b { color: #fff; display: block; line-height: 1.3; overflow-wrap: anywhere; }
+figcaption small { font-size: .78rem; color: var(--fog); }
+.avatar { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: var(--cyan); color: var(--abyss); }
+.quote:nth-child(odd) .avatar { background: var(--orange); }
+
+/* CTA */
+.cta { padding-block: 110px; }
+.cta__box { position: relative; overflow: hidden; border-radius: 28px; padding: 90px 56px; background: var(--abyss); text-align: center; isolation: isolate; }
+.cta__box > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: .35; filter: saturate(.6); }
+.cta__box::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(2,23,32,.55), rgba(2,23,32,.92)), radial-gradient(600px 300px at 15% 0%, rgba(28,222,225,.35), transparent 70%); }
+.cta h2 { color: #fff; font-size: clamp(2rem, 5vw, 3.8rem); letter-spacing: -.03em; max-width: 16ch; margin: 18px auto 0; }
+.cta p { color: var(--fog); margin: 20px auto 0; max-width: 48ch; font-size: 1.06rem; }
+.cta__btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+
+/* Footer */
+.foot { background: var(--abyss); color: var(--fog); font-size: .92rem; padding-block: 80px 0; }
+.foot__grid { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 44px; }
+.foot__logo { height: 52px; width: auto; }
+.foot p { margin-top: 18px; max-width: 38ch; }
+.foot h4 { margin: 0 0 18px; font-family: var(--display); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: #fff; font-weight: 600; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.foot a { text-decoration: none; } .foot a:hover { color: var(--cyan); }
+.foot__pay { display: inline-block; margin-top: 18px; padding: 8px 12px; background: #fff; border-radius: 10px; }
+.foot__pay img { height: 24px; width: auto; }
+.soc { display: flex; gap: 8px; margin-top: 22px; }
+.soc a { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line-d); transition: background .2s, border-color .2s; }
+.soc a:hover { background: var(--cyan); border-color: var(--cyan); }
+.soc svg { width: 15px; height: 15px; fill: #fff; } .soc a:hover svg { fill: var(--abyss); }
+.foot__base { margin-top: 64px; border-top: 1px solid var(--line-d); padding-block: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .84rem; }
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .nav__links { display: none; }
+  .nav__links.open { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; padding: 12px 24px 20px; background: var(--navy); border-bottom: 1px solid var(--line-d); }
+  .burger { display: inline-grid; place-items: center; }
+  .nav .btn { display: none; }
+  .hero__grid, .about__grid, .process__grid { grid-template-columns: minmax(0, 1fr); gap: 56px; }
+  .process__aside { position: static; }
+  .collage { max-width: 560px; }
+  .feat { grid-template-columns: minmax(0, 1fr); }
+  .show { height: 460px; max-width: 640px; width: 100%; margin-inline: auto; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quotes { grid-template-columns: minmax(0, 1fr); max-width: 640px; }
+  .foot__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .wrap { padding-inline: 16px; }
+  .top__mail, .top__tag { display: none; }
+  .top .wrap { justify-content: center; }
+  .hero { padding-block: 56px 0; }
+  .show { height: 380px; }
+  .screen--a { width: 70%; left: 15%; height: 340px; }
+  .screen--b, .screen--c { width: 52%; height: 260px; }
+  .thumb { width: 190px; }
+  .step { grid-template-columns: 56px minmax(0, 1fr); }
+  .step::before { font-size: 1.9rem; }
+  .collage { padding: 0 24px 50px 0; }
+  .since { left: -6px; top: 18px; padding: 14px 16px; }
+  .since strong { font-size: 1.8rem; }
+  .svc-list { grid-template-columns: minmax(0, 1fr); }
+  .feat, .fnums { grid-template-columns: minmax(0, 1fr); }
+  .fnums { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fcard__img { height: 190px; }
+  .svc-list li:nth-child(odd) a { margin-right: 0; }
+  .float--1 { left: 0; bottom: 0; } .float--2 { right: 0; top: 0; }
+  .badge { width: 104px; height: 104px; left: -4px; top: auto; bottom: 70px; }
+  .badge text { font-size: 12.5px; letter-spacing: 2px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { padding: 30px 16px; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .grid, .foot__grid { grid-template-columns: minmax(0, 1fr); }
+  .screen2 { height: 400px; }
+  .wtitle { grid-template-columns: minmax(0, 1fr); }
+  .filters { gap: 4px 22px; }
+  .work-sec, .process, .about, .reviews, .cta { padding-block: 76px; }
+  .cta__box { padding: 56px 22px; border-radius: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .screen img, .track, .float, .ring path, .clients__head p::before { animation: none; }
+  .screen2 img, .rail i { transition: none; }
+  .hint i::after, .badge svg { animation: none; }
+}
+/* Success stories */
+.ss-hero { position: relative; overflow: hidden; background: var(--navy); color: var(--fog); padding-block: 72px 80px; isolation: isolate; }
+.ss-hero::before { content: ""; position: absolute; right: -10%; top: -40%; width: 760px; height: 760px; background: radial-gradient(closest-side, rgba(246,164,64,.22), transparent 70%); z-index: -1; }
+.ss-hero::after { content: ""; position: absolute; left: -10%; bottom: -50%; width: 700px; height: 700px; background: radial-gradient(closest-side, rgba(28,222,225,.18), transparent 70%); z-index: -1; }
+.ss-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.ss-hero h1 { color: #fff; font-size: clamp(2.3rem, 4.8vw, 4.2rem); letter-spacing: -.035em; line-height: 1.04; margin-top: 18px; }
+.ss-hero h1 em { font-style: normal; color: var(--orange); }
+.ss-hero p { margin-top: 20px; max-width: 50ch; font-size: 1.05rem; }
+.ss-hero .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.big { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.big div { padding: 24px; border-radius: 18px; background: rgba(255,255,255,.04); border: 1px solid var(--line-d); }
+.big div:nth-child(1) { background: var(--orange); border-color: var(--orange); color: var(--abyss); }
+.big strong { display: block; font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1; color: #fff; letter-spacing: -.03em; }
+.big div:nth-child(1) strong { color: var(--abyss); }
+.big span { display: block; margin-top: 10px; font-size: .9rem; font-weight: 600; }
+.big small { display: block; margin-top: 4px; font-size: .78rem; opacity: .8; }
+
+.chan { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 76px); z-index: 30; background: rgba(255,255,255,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.chan .wrap { display: flex; gap: 6px 28px; overflow-x: auto; scrollbar-width: none; }
+.chan .wrap::-webkit-scrollbar { display: none; }
+.chan button { flex: none; position: relative; font: 700 .95rem/1 var(--body); padding: 22px 0; border: 0; background: none; color: var(--ink-3); cursor: pointer; white-space: nowrap; }
+.chan button sup { margin-left: 3px; font-size: .66rem; color: var(--orange-ink); }
+.chan button::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 3px; background: var(--orange); transition: right .3s; }
+.chan button[aria-pressed="true"] { color: var(--ink); }
+.chan button[aria-pressed="true"]::after { right: 0; }
+
+.ss-list { padding-block: 40px 100px; }
+.ss { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 48px; align-items: start; padding-block: 56px; border-bottom: 1px solid var(--line); }
+.ss[hidden] { display: none; }
+.ss__logo { display: inline-grid; place-items: center; height: 74px; min-width: 120px; padding: 10px 16px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.ss__logo--dark { background: var(--navy); border-color: var(--navy); }
+.ss__logo img { max-height: 54px; max-width: 170px; width: auto; }
+.ss__logo b { font-family: var(--display); color: var(--ink); font-size: .95rem; }
+.ss__tag { display: inline-flex; margin-left: 12px; vertical-align: middle; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(246,164,64,.16); color: var(--orange-ink); }
+.ss h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); margin-top: 22px; letter-spacing: -.02em; }
+.ss__place { display: block; margin-top: 6px; font-size: .88rem; font-weight: 600; color: var(--ink-3); }
+.ss__line { margin-top: 14px; color: var(--ink-2); }
+.nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-top: 26px; }
+.nums div { padding: 16px 18px; border-radius: 14px; background: var(--mist); border-left: 4px solid var(--orange); }
+.nums strong { display: block; font-family: var(--display); font-size: 1.55rem; line-height: 1.1; color: var(--ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.nums span { display: block; margin-top: 6px; font-size: .8rem; font-weight: 600; color: var(--ink-3); }
+.proof { min-width: 0; }
+.proof__main { position: relative; display: block; width: 100%; padding: 0; border: 0; cursor: zoom-in; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 30px 50px -34px rgba(6,40,54,.6), 0 0 0 1px var(--line); }
+.proof__main img { width: 100%; max-height: 420px; object-fit: contain; object-position: top; background: #fff; }
+.proof__main span { position: absolute; left: 14px; bottom: 14px; padding: 8px 12px; border-radius: 10px; background: rgba(2,23,32,.86); color: #fff; font-size: .8rem; font-weight: 600; max-width: calc(100% - 28px); text-align: left; }
+.proof__main::after { content: "⤢"; position: absolute; right: 12px; top: 12px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: var(--orange); color: var(--abyss); font-weight: 800; opacity: 0; transition: opacity .25s; }
+.proof__main:hover::after { opacity: 1; }
+.thumbs { display: flex; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 4px; }
+.thumbs button { flex: none; width: 92px; height: 60px; padding: 0; border-radius: 10px; overflow: hidden; border: 2px solid var(--line); background: #fff; cursor: pointer; transition: border-color .2s, transform .2s; }
+.thumbs button img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.thumbs button[aria-pressed="true"] { border-color: var(--orange); transform: translateY(-2px); }
+
+.lb { width: min(1200px, 94vw); max-height: 92vh; padding: 0; border: 0; border-radius: 16px; background: #fff; overflow: auto; }
+.lb::backdrop { background: rgba(2,23,32,.88); }
+.lb img { width: 100%; height: auto; }
+.lb__bar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: var(--navy); color: #fff; font-weight: 600; font-size: .9rem; }
+.lb__bar button { border: 0; border-radius: 999px; padding: 8px 14px; background: var(--orange); color: var(--abyss); font: 800 .85rem var(--body); cursor: pointer; }
+
+@media (max-width: 1080px) {
+  .ss-hero__grid, .ss { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 680px) {
+  .ss-hero { padding-block: 52px 56px; }
+  .chan { top: calc(env(safe-area-inset-top, 0px) + 76px); }
+  .ss { padding-block: 40px; }
+  .big div { padding: 18px; }
+}
+</style>
+
+<div class="top">
+  <div class="wrap">
+    <span class="top__tag">Websites, SEO &amp; Google Ads for local service businesses since 2009</span>
+    <div class="top__r">
+      <a href="tel:+18482062002">Call <b>+1 848-206-2002</b></a>
+      <a class="top__mail" href="mailto:info@digitalgrowthcatalyze.com">info@digitalgrowthcatalyze.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav__logo" href="https://claude.ai/artifact/V7aRsgUfucDzCMmVpQvS83"><img src="img/brand/dgc-logo-white.png" alt="Digital Growth Catalyze" width="149" height="42"></a>
+    <nav class="nav__links" id="menu" aria-label="Main">
+      <a href="https://claude.ai/artifact/V7aRsgUfucDzCMmVpQvS83">Portfolio</a>
+      <a href="https://digitalgrowthcatalyze.com/about-us/">About Us</a>
+      <a href="https://digitalgrowthcatalyze.com/our-services/">Our Services</a>
+      <a href="#stories" aria-current="page">Success Stories</a>
+      <a href="https://digitalgrowthcatalyze.com/blog-2/">Blog</a>
+    </nav>
+    <a class="btn btn--hot" href="https://digitalgrowthcatalyze.com/contact/">Start a Project <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    <button class="burger" type="button" id="burger" aria-controls="menu" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <section class="ss-hero">
+    <div class="wrap ss-hero__grid">
+      <div>
+        <span class="kicker">Customer success stories</span>
+        <h1>Proven results across <em>industries.</em></h1>
+        <p>Discover how our proven digital marketing strategies have helped businesses increase leads, improve online visibility, and achieve measurable growth through Google Ads, Local SEO, GMB optimization, and website performance enhancements.</p>
+        <div class="hero__cta">
+          <a class="btn btn--hot" href="#stories">Browse the results <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn--ghost" href="https://digitalgrowthcatalyze.com/contact/">Get a Free Quote</a>
+        </div>
+      </div>
+      <div class="big">
+        <div><strong>+434%</strong><span>Google profile interactions</span><small>Tampa Bay Exotic Car Rentals</small></div>
+        <div><strong>7.5×</strong><span>more search clicks</span><small>Adam’s Coating</small></div>
+        <div><strong>753</strong><span>Local Services Ads leads</span><small>MDF Air Duct Cleaning</small></div>
+        <div><strong>#1</strong><span>on Google Maps</span><small>3 clients in their city</small></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="chan" aria-label="Filter by channel"><div class="wrap" role="group"><button type="button" data-f="all" aria-pressed="true">All stories<sup>17</sup></button><button type="button" data-f="gmb" aria-pressed="false">Google Business Profile<sup>3</sup></button><button type="button" data-f="ai" aria-pressed="false">AI Overviews<sup>3</sup></button><button type="button" data-f="ads" aria-pressed="false">Google Ads<sup>5</sup></button><button type="button" data-f="lsa" aria-pressed="false">Local Services Ads<sup>3</sup></button><button type="button" data-f="web" aria-pressed="false">Website & SEO<sup>3</sup></button></div></nav>
+
+  <section class="ss-list" id="stories">
+    <div class="wrap">
+<article class="ss" data-cat="gmb" id="story-1">
+  <div><span class="ss__logo ss__logo--dark"><img src="img/stories/logo-tampa.png" alt="Tampa Bay Exotic Car Rentals logo" loading="lazy"></span><span class="ss__tag">Google Business Profile</span>
+    <h2>Tampa Bay Exotic Car Rentals</h2><span class="ss__place">Tampa, FL</span>
+    <p class="ss__line">Ranked #1 on Google Maps for “Luxury car rental Tampa, FL”.</p>
+    <div class="nums"><div><strong>+434%</strong><span>profile interactions</span></div><div><strong>+390%</strong><span>website clicks</span></div><div><strong>+208%</strong><span>calls</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/tampa-map.jpg" alt="Tampa Bay Exotic Car Rentals: #1 in the Maps pack" loading="lazy"><span>#1 in the Maps pack</span></button><div class="thumbs"><button type="button" data-src="img/stories/tampa-map.jpg" data-cap="#1 in the Maps pack" aria-pressed="true" aria-label="Show: #1 in the Maps pack"><img src="img/stories/tampa-map.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/tampa-1.jpg" data-cap="1,165 profile interactions" aria-pressed="false" aria-label="Show: 1,165 profile interactions"><img src="img/stories/tampa-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/tampa-3.jpg" data-cap="809 website clicks" aria-pressed="false" aria-label="Show: 809 website clicks"><img src="img/stories/tampa-3.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/tampa-2.jpg" data-cap="40 calls from the profile" aria-pressed="false" aria-label="Show: 40 calls from the profile"><img src="img/stories/tampa-2.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="gmb" id="story-2">
+  <div><span class="ss__logo"><img src="img/stories/logo-upstate.png" alt="Upstate Exotics logo" loading="lazy"></span><span class="ss__tag">Google Business Profile</span>
+    <h2>Upstate Exotics</h2><span class="ss__place">Niagara Falls, NY</span>
+    <p class="ss__line">Top of Google Maps for “cannabis dispensary in Niagara Falls, NY”.</p>
+    <div class="nums"><div><strong>1,838</strong><span>profile interactions</span></div><div><strong>1,427</strong><span>website clicks</span></div><div><strong>104</strong><span>calls (+23.8%)</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/upstate-map.jpg" alt="Upstate Exotics: #1 in the Maps pack" loading="lazy"><span>#1 in the Maps pack</span></button><div class="thumbs"><button type="button" data-src="img/stories/upstate-map.jpg" data-cap="#1 in the Maps pack" aria-pressed="true" aria-label="Show: #1 in the Maps pack"><img src="img/stories/upstate-map.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/upstate-1.jpg" data-cap="1,838 profile interactions" aria-pressed="false" aria-label="Show: 1,838 profile interactions"><img src="img/stories/upstate-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/upstate-3.jpg" data-cap="1,427 website clicks" aria-pressed="false" aria-label="Show: 1,427 website clicks"><img src="img/stories/upstate-3.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/upstate-2.jpg" data-cap="104 calls from the profile" aria-pressed="false" aria-label="Show: 104 calls from the profile"><img src="img/stories/upstate-2.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="gmb" id="story-3">
+  <div><span class="ss__logo ss__logo--dark"><img src="img/stories/logo-allamerican.png" alt="All American Limousine logo" loading="lazy"></span><span class="ss__tag">Google Business Profile</span>
+    <h2>All American Limousine</h2><span class="ss__place">Chicago, IL</span>
+    <p class="ss__line">First result on Google Maps for “Limo Service to O’Hare Airport”.</p>
+    <div class="nums"><div><strong>+72.9%</strong><span>profile interactions</span></div><div><strong>158</strong><span>website clicks</span></div><div><strong>52</strong><span>calls</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/allamerican-map.jpg" alt="All American Limousine: #1 in the Maps pack" loading="lazy"><span>#1 in the Maps pack</span></button><div class="thumbs"><button type="button" data-src="img/stories/allamerican-map.jpg" data-cap="#1 in the Maps pack" aria-pressed="true" aria-label="Show: #1 in the Maps pack"><img src="img/stories/allamerican-map.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/allamerican-1.jpg" data-cap="740 profile interactions" aria-pressed="false" aria-label="Show: 740 profile interactions"><img src="img/stories/allamerican-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/allamerican-3.jpg" data-cap="158 website clicks" aria-pressed="false" aria-label="Show: 158 website clicks"><img src="img/stories/allamerican-3.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/allamerican-2.jpg" data-cap="52 calls from the profile" aria-pressed="false" aria-label="Show: 52 calls from the profile"><img src="img/stories/allamerican-2.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="ai" id="story-4">
+  <div><span class="ss__logo"><img src="img/stories/logo-cleaningcan.png" alt="Cleaning Can logo" loading="lazy"></span><span class="ss__tag">AI Overviews</span>
+    <h2>Cleaning Can</h2><span class="ss__place">Windsor, Ontario</span>
+    <p class="ss__line">Recommended by Google AI Mode when people ask for cleaning companies in Windsor and Belle River.</p>
+    <div class="nums"><div><strong>5</strong><span>AI answers that name the business</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/cleaningcan-1.jpg" alt="Cleaning Can: “Best cleaning companies of Windsor, Ontario”" loading="lazy"><span>“Best cleaning companies of Windsor, Ontario”</span></button><div class="thumbs"><button type="button" data-src="img/stories/cleaningcan-1.jpg" data-cap="“Best cleaning companies of Windsor, Ontario”" aria-pressed="true" aria-label="Show: “Best cleaning companies of Windsor, Ontario”"><img src="img/stories/cleaningcan-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/cleaningcan-2.jpg" data-cap="“Deep cleaning services in Windsor, Ontario”" aria-pressed="false" aria-label="Show: “Deep cleaning services in Windsor, Ontario”"><img src="img/stories/cleaningcan-2.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/cleaningcan-3.jpg" data-cap="“House cleaning in Belle River, Ontario”" aria-pressed="false" aria-label="Show: “House cleaning in Belle River, Ontario”"><img src="img/stories/cleaningcan-3.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/cleaningcan-4.jpg" data-cap="“Post-construction cleaners in Windsor, Ontario”" aria-pressed="false" aria-label="Show: “Post-construction cleaners in Windsor, Ontario”"><img src="img/stories/cleaningcan-4.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/cleaningcan-5.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/cleaningcan-5.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="ai" id="story-5">
+  <div><span class="ss__logo"><img src="img/stories/logo-dnl.png" alt="DnL Transportation logo" loading="lazy"></span><span class="ss__tag">AI Overviews</span>
+    <h2>DnL Transportation</h2>
+    <p class="ss__line">Cited by Google AI Mode in answers about transportation services.</p>
+    <div class="nums"><div><strong>3</strong><span>AI answers that name the business</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/dnl-1.jpg" alt="DnL Transportation: Google AI Mode answer" loading="lazy"><span>Google AI Mode answer</span></button><div class="thumbs"><button type="button" data-src="img/stories/dnl-1.jpg" data-cap="Google AI Mode answer" aria-pressed="true" aria-label="Show: Google AI Mode answer"><img src="img/stories/dnl-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/dnl-2.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/dnl-2.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/dnl-3.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/dnl-3.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="ai" id="story-6">
+  <div><span class="ss__logo"><b>Donald Jewell Architect</b></span><span class="ss__tag">AI Overviews</span>
+    <h2>Donald Jewell Architect</h2><span class="ss__place">Coronado, CA</span>
+    <p class="ss__line">Named by Google AI Mode for architect and schematic design questions in Coronado, CA.</p>
+    <div class="nums"><div><strong>5</strong><span>AI answers that name the business</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/jewell-1.jpg" alt="Donald Jewell Architect: “What is included in your schematic design services in Coronado, CA?”" loading="lazy"><span>“What is included in your schematic design services in Coronado, CA?”</span></button><div class="thumbs"><button type="button" data-src="img/stories/jewell-1.jpg" data-cap="“What is included in your schematic design services in Coronado, CA?”" aria-pressed="true" aria-label="Show: “What is included in your schematic design services in Coronado, CA?”"><img src="img/stories/jewell-1.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/jewell-2.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/jewell-2.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/jewell-3.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/jewell-3.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/jewell-4.jpg" data-cap="Google AI Mode answer" aria-pressed="false" aria-label="Show: Google AI Mode answer"><img src="img/stories/jewell-4.jpg" alt="" loading="lazy"></button><button type="button" data-src="img/stories/jewell-5.jpg" data-cap="“Who are providing architects in Coronado, CA”" aria-pressed="false" aria-label="Show: “Who are providing architects in Coronado, CA”"><img src="img/stories/jewell-5.jpg" alt="" loading="lazy"></button></div></div>
+</article>
+<article class="ss" data-cat="ads" id="story-7">
+  <div><span class="ss__logo"><img src="img/stories/logo-mdf.png" alt="MDF Air Duct Cleaning logo" loading="lazy"></span><span class="ss__tag">Google Ads</span>
+    <h2>MDF Air Duct Cleaning</h2>
+    <p class="ss__line">Google Ads campaign driving conversions at scale.</p>
+    <div class="nums"><div><strong>6.65K</strong><span>conversions</span></div><div><strong>854K</strong><span>impressions</span></div><div><strong>183</strong><span>phone calls</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/ads-mdf.jpg" alt="MDF Air Duct Cleaning: Google Ads overview" loading="lazy"><span>Google Ads overview</span></button></div>
+</article>
+<article class="ss" data-cat="ads" id="story-8">
+  <div><span class="ss__logo"><img src="img/stories/logo-drwrecker.png" alt="Dr. Wrecker logo" loading="lazy"></span><span class="ss__tag">Google Ads</span>
+    <h2>Dr. Wrecker</h2><span class="ss__place">Atlanta, GA</span>
+    <p class="ss__line">Towing calls from Google Ads at a $5.51 average cost per click.</p>
+    <div class="nums"><div><strong>403</strong><span>phone calls</span></div><div><strong>299</strong><span>conversions</span></div><div><strong>$5.51</strong><span>avg. CPC</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/ads-drwrecker.jpg" alt="Dr. Wrecker: Google Ads overview" loading="lazy"><span>Google Ads overview</span></button></div>
+</article>
+<article class="ss" data-cat="ads" id="story-9">
+  <div><span class="ss__logo"><img src="img/stories/logo-peachstate.png" alt="PeachState Tires logo" loading="lazy"></span><span class="ss__tag">Google Ads</span>
+    <h2>PeachState Tires</h2>
+    <p class="ss__line">Hundreds of calls for a local tire shop.</p>
+    <div class="nums"><div><strong>419</strong><span>phone calls</span></div><div><strong>104</strong><span>conversions</span></div><div><strong>$3.97</strong><span>avg. CPC</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/ads-peachstate.jpg" alt="PeachState Tires: Google Ads overview" loading="lazy"><span>Google Ads overview</span></button></div>
+</article>
+<article class="ss" data-cat="ads" id="story-10">
+  <div><span class="ss__logo ss__logo--dark"><img src="img/stories/logo-apex.png" alt="Apex Exotics logo" loading="lazy"></span><span class="ss__tag">Google Ads</span>
+    <h2>Apex Exotics</h2>
+    <p class="ss__line">Exotic car rental calls at under a dollar per click.</p>
+    <div class="nums"><div><strong>267</strong><span>phone calls</span></div><div><strong>214</strong><span>conversions</span></div><div><strong>$0.89</strong><span>avg. CPC</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/ads-apex.jpg" alt="Apex Exotics: Google Ads overview" loading="lazy"><span>Google Ads overview</span></button></div>
+</article>
+<article class="ss" data-cat="ads" id="story-11">
+  <div><span class="ss__logo"><img src="img/stories/logo-morfin.png" alt="Morfin Cleaning Services logo" loading="lazy"></span><span class="ss__tag">Google Ads</span>
+    <h2>Morfin Cleaning Services</h2>
+    <p class="ss__line">Thousands of clicks and conversions on a $3K budget.</p>
+    <div class="nums"><div><strong>2.86K</strong><span>clicks</span></div><div><strong>2.18K</strong><span>conversions</span></div><div><strong>$3K</strong><span>total cost</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/ads-morfin.jpg" alt="Morfin Cleaning Services: Google Ads overview" loading="lazy"><span>Google Ads overview</span></button></div>
+</article>
+<article class="ss" data-cat="lsa" id="story-12">
+  <div><span class="ss__logo"><img src="img/stories/logo-mdf.png" alt="MDF Air Duct Cleaning logo" loading="lazy"></span><span class="ss__tag">Local Services Ads</span>
+    <h2>MDF Air Duct Cleaning</h2>
+    <p class="ss__line">Local Services Ads bringing in phone and message leads.</p>
+    <div class="nums"><div><strong>753</strong><span>charged leads</span></div><div><strong>536</strong><span>phone leads</span></div><div><strong>217</strong><span>message leads</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/lsa-mdf.jpg" alt="MDF Air Duct Cleaning: Local Services Ads leads" loading="lazy"><span>Local Services Ads leads</span></button></div>
+</article>
+<article class="ss" data-cat="lsa" id="story-13">
+  <div><span class="ss__logo"><img src="img/stories/logo-eversteam.png" alt="EverSteam Carpet Cleaning logo" loading="lazy"></span><span class="ss__tag">Local Services Ads</span>
+    <h2>EverSteam Carpet Cleaning</h2>
+    <p class="ss__line">465 charged leads from Local Services Ads, all of them phone calls.</p>
+    <div class="nums"><div><strong>465</strong><span>phone leads</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/lsa-eversteam.jpg" alt="EverSteam Carpet Cleaning: Local Services Ads leads" loading="lazy"><span>Local Services Ads leads</span></button></div>
+</article>
+<article class="ss" data-cat="lsa" id="story-14">
+  <div><span class="ss__logo"><img src="img/stories/logo-drwrecker.png" alt="Dr. Wrecker logo" loading="lazy"></span><span class="ss__tag">Local Services Ads</span>
+    <h2>Dr. Wrecker</h2><span class="ss__place">Atlanta, GA</span>
+    <p class="ss__line">Steady towing leads from Google Local Services Ads.</p>
+    <div class="nums"><div><strong>322</strong><span>phone leads</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/lsa-drwrecker.jpg" alt="Dr. Wrecker: Local Services Ads leads" loading="lazy"><span>Local Services Ads leads</span></button></div>
+</article>
+<article class="ss" data-cat="web" id="story-15">
+  <div><span class="ss__logo"><img src="img/stories/logo-adams.png" alt="Adam’s Coating logo" loading="lazy"></span><span class="ss__tag">Website & SEO</span>
+    <h2>Adam’s Coating</h2>
+    <p class="ss__line">Six months after our SEO work vs. the six months before.</p>
+    <div class="nums"><div><strong>7.5×</strong><span>search clicks (1.77K → 13.3K)</span></div><div><strong>3×</strong><span>impressions (222K → 681K)</span></div><div><strong>23.7 → 11</strong><span>avg. Google position</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/web-adams.jpg" alt="Adam’s Coating: Google Search Console, 6 months vs. previous 6" loading="lazy"><span>Google Search Console, 6 months vs. previous 6</span></button></div>
+</article>
+<article class="ss" data-cat="web" id="story-16">
+  <div><span class="ss__logo"><img src="img/stories/logo-agp.png" alt="AGP Drywall logo" loading="lazy"></span><span class="ss__tag">Website & SEO</span>
+    <h2>AGP Drywall</h2>
+    <p class="ss__line">Doubled search visibility and moved up 19 spots on average.</p>
+    <div class="nums"><div><strong>2.2×</strong><span>impressions (29.2K → 63.5K)</span></div><div><strong>37.6 → 18.5</strong><span>avg. Google position</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/web-agp.jpg" alt="AGP Drywall: Google Search Console, 6 months vs. previous 6" loading="lazy"><span>Google Search Console, 6 months vs. previous 6</span></button></div>
+</article>
+<article class="ss" data-cat="web" id="story-17">
+  <div><span class="ss__logo"><img src="img/stories/logo-ajts.png" alt="AJTS Cleaning logo" loading="lazy"></span><span class="ss__tag">Website & SEO</span>
+    <h2>AJTS Cleaning</h2>
+    <p class="ss__line">Seven times more people seeing the site in Google search.</p>
+    <div class="nums"><div><strong>7×</strong><span>impressions (19.7K → 139K)</span></div><div><strong>24.5 → 22.1</strong><span>avg. Google position</span></div></div></div>
+  <div class="proof"><button class="proof__main" type="button" aria-label="Enlarge screenshot"><img src="img/stories/web-ajts.jpg" alt="AJTS Cleaning: Google Search Console, 6 months vs. previous 6" loading="lazy"><span>Google Search Console, 6 months vs. previous 6</span></button></div>
+</article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta__box">
+        <img src="img/stock/designers-desk.jpg" alt="" loading="lazy">
+        <span class="kicker" style="color:var(--cyan)">Your turn</span>
+        <h2>Want results like these?</h2>
+        <p>Tell us about your business and we’ll show you where your next calls will come from.</p>
+        <div class="cta__btns">
+          <a class="btn btn--hot" href="https://digitalgrowthcatalyze.com/contact/">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn--ghost" href="https://claude.ai/artifact/V7aRsgUfucDzCMmVpQvS83">See our website work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <img class="foot__logo" src="img/brand/dgc-logo-white.png" alt="Digital Growth Catalyze" width="185" height="52">
+        <p>At Digital Growth Catalyze LLC our aim is to assist the small and medium-sized businesses to grow online. DGC is a world-class digital marketing agency with over 17 years of experience.</p>
+        <div class="soc">
+          <a href="https://www.facebook.com/people/Digital-Growth-Catalyze/100095160666262/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l.5-4H14V8.6c0-.4.2-.6.6-.6z"/></svg></a>
+          <a href="https://www.instagram.com/digitalgrowthcatalyze/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8c0-1.7-.5-3.3-1.7-4.4C19 2.4 17.5 2 15.8 2H8.2c-1.7 0-3.3.4-4.4 1.6C2.6 4.7 2.1 6.3 2.1 8v8c0 1.7.5 3.3 1.7 4.4 1.2 1.2 2.7 1.6 4.4 1.6h7.6c1.7 0 3.3-.4 4.4-1.6 1.2-1.1 1.7-2.7 1.7-4.4zM19.8 18a3 3 0 0 1-1.7 1.7c-1.2.5-3.9.4-6.1.4s-4.9.1-6.1-.4A3 3 0 0 1 4.2 18c-.5-1.2-.4-3.9-.4-6s-.1-4.9.4-6a3 3 0 0 1 1.7-1.7C7.1 3.8 9.8 3.9 12 3.9s4.9-.1 6.1.4A3 3 0 0 1 19.8 6c.5 1.2.4 3.9.4 6s.1 4.9-.4 6z"/></svg></a>
+          <a href="https://www.linkedin.com/in/digital-growth-catalyze-8b8b28284/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.9 21H2.6V8.9h4.3zM4.8 7.1a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM21.4 21h-4.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H8.6V8.9h4.1v1.7h.1a4.5 4.5 0 0 1 4-2.2c4.3 0 5.1 2.8 5.1 6.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="https://digitalgrowthcatalyze.com/">Home</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/about-us/">About Us</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/our-services/">Our Services</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://digitalgrowthcatalyze.com/ai-geo-optimization/">AI &amp; GEO Optimization</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/google-business-profile/">Google Business Profile</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/seo-services/">Search Engine Optimization</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/google-ads-lsa/">Google Ads &amp; LSA</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/website-development/">Website Development</a></li>
+          <li><a href="https://digitalgrowthcatalyze.com/social-media-marketing/">Social Media Management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+1 848-206-2002</li>
+          <li style="overflow-wrap:anywhere">info@digitalgrowthcatalyze.com</li>
+        </ul>
+        <h4 style="margin-top:26px">We accept</h4>
+        <span class="foot__pay"><img src="img/brand/payments.png" alt="Visa, Mastercard, American Express, PayPal" width="115" height="24"></span>
+      </div>
+    </div>
+    <div class="foot__base"><span>2009-2026 © Copyrights Digital Growth Catalyze. All rights reserved.</span><span>Evolution toward digital era</span></div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Screenshot"><div class="lb__bar"><span id="lbCap"></span><button type="button" id="lbClose">Close</button></div><img id="lbImg" alt=""></dialog>
+
+<script>
+  const burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+
+  const tabs = [...document.querySelectorAll('.chan button')];
+  const stories = [...document.querySelectorAll('.ss')];
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(b => b.setAttribute('aria-pressed', b === t));
+    stories.forEach(s => s.hidden = t.dataset.f !== 'all' && s.dataset.cat !== t.dataset.f);
+    document.getElementById('stories').scrollIntoView({ block: 'start' });
+  }));
+
+  // Gallery: thumbnails swap the main screenshot
+  document.querySelectorAll('.proof').forEach(p => {
+    const main = p.querySelector('.proof__main'), img = main.querySelector('img'), cap = main.querySelector('span');
+    p.querySelectorAll('.thumbs button').forEach(b => b.addEventListener('click', () => {
+      p.querySelectorAll('.thumbs button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      img.src = b.dataset.src; cap.textContent = b.dataset.cap;
+    }));
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  document.querySelectorAll('.proof__main').forEach(m => m.addEventListener('click', () => {
+    const i = m.querySelector('img');
+    lbImg.src = i.src; lbImg.alt = i.alt; lbCap.textContent = m.querySelector('span').textContent;
+    if (lb.showModal) lb.showModal();
+  }));
+  document.getElementById('lbClose').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+</script>
