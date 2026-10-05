@@ -37,7 +37,7 @@ Each website card shows a browser frame. On hover the full-page screenshot scrol
 ## Notes
 
 - Category typos from the live page are fixed (Guter → Gutter, Concreate → Concrete, Remolding → Remodeling).
-- 13 projects have no live link on the current site, so their card has no arrow. Add the URL to show it.
+- 15 projects have no live link on the current site, so their card has no arrow. Add the URL to show it.
 - The page now has one H1 and a meta description (the live page has neither).
 
 ## Files
