@@ -137,42 +137,90 @@ p { margin: 0; }
 .stat strong sup { font-size: .5em; color: var(--orange); vertical-align: top; position: relative; top: .15em; margin-left: 2px; }
 .stat span { display: block; margin-top: 10px; font-weight: 600; color: var(--ink-3); font-size: .92rem; }
 
-/* Work */
-.work-sec { padding-block: 110px; }
-.head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; }
-.head > div { min-width: 0; }
-.tabs { display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; background: var(--mist); border: 1px solid var(--line); flex-wrap: wrap; }
-.tab { font: 700 .9rem/1 var(--body); padding: 12px 18px; border-radius: 999px; border: 0; background: none; color: var(--ink-2); cursor: pointer; display: inline-flex; gap: 8px; align-items: center; transition: background .2s, color .2s; }
-.tab span { font-size: .74rem; padding: 3px 7px; border-radius: 999px; background: #fff; color: var(--ink-3); font-variant-numeric: tabular-nums; }
-.tab:hover { color: var(--teal); }
-.tab[aria-pressed="true"] { background: var(--navy); color: #fff; box-shadow: 0 8px 20px -10px rgba(6,40,54,.8); }
-.tab[aria-pressed="true"] span { background: var(--cyan); color: var(--abyss); }
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 28px; margin-top: 52px; }
-.work { min-width: 0; }
-.work__frame { position: relative; border-radius: var(--r); overflow: hidden; background: var(--mist); border: 1px solid var(--line); transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s; }
-.work:hover .work__frame { transform: translateY(-8px); box-shadow: 0 40px 60px -34px rgba(6,40,54,.55); }
-.work__bar { display: flex; align-items: center; gap: 5px; height: 34px; padding-inline: 12px; background: #fff; border-bottom: 1px solid var(--line); }
-.work__bar i { width: 8px; height: 8px; border-radius: 50%; background: #d5e0e3; }
-.work__bar span { margin-left: 10px; font-size: .72rem; color: var(--ink-3); background: var(--mist); border-radius: 6px; padding: 2px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
-.work__shot { height: 400px; overflow: hidden; background: #fff; }
-.work__shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: object-position 7s ease-in-out; }
-.work:hover .work__shot img, .work:focus-within .work__shot img { object-position: bottom; }
-.work__hover { position: absolute; inset: auto 0 0 0; padding: 60px 16px 16px; display: flex; justify-content: center; background: linear-gradient(to top, rgba(4,32,44,.92), transparent); opacity: 0; transform: translateY(10px); transition: opacity .35s, transform .35s; }
-.work:hover .work__hover, .work:focus-within .work__hover { opacity: 1; transform: none; }
-.visit { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; background: var(--orange); color: var(--abyss); font-weight: 800; font-size: .86rem; text-decoration: none; }
-.visit svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-.visit--off { background: rgba(255,255,255,.14); color: #fff; }
-.work__frame--logo { aspect-ratio: 1 / 1; display: grid; place-items: center; padding: 40px; background: #fff; }
-.work__frame--logo img { max-height: 210px; width: auto; transition: transform .45s; }
-.work:hover .work__frame--logo img { transform: scale(1.06); }
-.work__meta { display: flex; justify-content: space-between; align-items: start; gap: 12px; padding: 18px 4px 0; }
-.work__meta > div { min-width: 0; }
-.work h3 { font-family: var(--body); font-size: 1.06rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.work__meta p { font-size: .88rem; color: var(--ink-3); margin-top: 2px; }
-.tag { flex: none; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(17,100,102,.1); color: var(--teal); }
-.tag--alt { background: rgba(28,222,225,.16); color: #0b7c7e; }
-.tag--warm { background: rgba(246,164,64,.18); color: #a35f0a; }
-.more { display: flex; justify-content: center; margin-top: 64px; }
+/* Work: staggered device wall. Each project sits in a dark monitor bezel; hovering pans the full page and a rail tracks progress */
+.work-sec { padding-block: 120px 150px; position: relative; overflow: hidden; background: var(--paper); }
+.work-sec::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 80px 80px; opacity: .45; mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000); -webkit-mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000); pointer-events: none; }
+.work-sec .wrap { position: relative; }
+.wtitle { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px 40px; }
+.wtitle__big { font-family: var(--display); font-weight: 800; font-size: clamp(4.2rem, 15vw, 12.5rem); line-height: .8; letter-spacing: -.06em; color: var(--ink); margin: 18px 0 0; display: flex; align-items: flex-start; gap: .08em; }
+.wtitle__big span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
+.wtitle__big sup { font-family: var(--body); font-size: clamp(1rem, 2.2vw, 1.6rem); font-weight: 800; letter-spacing: 0; color: var(--orange); -webkit-text-stroke: 0; margin-top: .4em; }
+.wtitle__side { max-width: 34ch; padding-bottom: 8px; }
+.wtitle__side p { color: var(--ink-3); }
+.hint { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; font-size: .82rem; font-weight: 700; color: var(--ink); }
+.hint i { width: 22px; height: 34px; border-radius: 12px; border: 2px solid var(--ink); position: relative; flex: none; }
+.hint i::after { content: ""; position: absolute; left: 50%; top: 6px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--orange); animation: wheel 1.6s ease-in-out infinite; }
+.hint--touch { display: none; }
+@media (hover: none) { .hint--mouse { display: none; } .hint--touch { display: inline; } }
+@keyframes wheel { 60% { transform: translateY(10px); opacity: 0; } 100% { opacity: 0; } }
+
+.filters { display: flex; flex-wrap: wrap; gap: 6px 34px; margin-top: 56px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.tab { position: relative; font: 700 1.02rem/1.2 var(--display); padding: 8px 0; border: 0; background: none; color: var(--ink-3); cursor: pointer; letter-spacing: -.01em; transition: color .25s; }
+.tab sup { font-family: var(--body); font-size: .62rem; font-weight: 800; margin-left: 3px; color: var(--teal); }
+.tab::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 3px; background: var(--orange); transition: right .35s cubic-bezier(.2,.7,.2,1); }
+.tab:hover { color: var(--ink); }
+.tab[aria-pressed="true"] { color: var(--ink); }
+.tab[aria-pressed="true"]::after { right: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 34px; margin-top: 64px; }
+.work { min-width: 0; transition: opacity .4s, filter .4s, translate .5s; }
+.grid.is-staggered .work.lift { translate: 0 96px; }
+.grid.is-staggered { padding-bottom: 96px; }
+@media (hover: hover) {
+  .grid:has(.work:hover) .work:not(:hover) { opacity: .45; filter: saturate(.3); }
+}
+.device { position: relative; display: block; text-decoration: none; border-radius: 18px; padding: 0 10px; background: linear-gradient(160deg, #0d3c4f, var(--abyss) 70%); box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 30px 50px -30px rgba(6,40,54,.6); transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s; cursor: none; }
+.device:not([href]) { cursor: default; }
+.work:hover .device { transform: translateY(-10px) rotate(-.6deg); box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 50px 70px -36px rgba(6,40,54,.75); }
+.work:nth-child(even):hover .device { transform: translateY(-10px) rotate(.6deg); }
+.device__top { display: flex; align-items: center; gap: 6px; height: 38px; }
+.device__top i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); }
+.work:hover .device__top i:nth-child(1) { background: #ff6b5f; }
+.work:hover .device__top i:nth-child(2) { background: var(--orange); }
+.work:hover .device__top i:nth-child(3) { background: #3ccf6e; }
+.device__url { margin-left: 10px; flex: 1; min-width: 0; font-size: .72rem; color: rgba(255,255,255,.55); background: rgba(255,255,255,.06); border-radius: 6px; padding: 3px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.device__url b { color: var(--cyan); font-weight: 700; }
+.screen2 { position: relative; height: 430px; border-radius: 8px; overflow: hidden; background: #fff; }
+.screen2 img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: object-position var(--dur, 6s) cubic-bezier(.45,.05,.4,1); }
+.rail { position: absolute; top: 10px; bottom: 10px; right: 6px; width: 4px; border-radius: 4px; background: rgba(6,40,54,.15); opacity: 0; transition: opacity .3s; }
+.rail i { position: absolute; left: 0; right: 0; top: 0; height: 22%; border-radius: 4px; background: var(--orange); transition: top var(--dur, 6s) cubic-bezier(.45,.05,.4,1); }
+.work:hover .screen2 img, .work:focus-within .screen2 img, .work.is-live .screen2 img { object-position: bottom; }
+.work:hover .rail, .work:focus-within .rail, .work.is-live .rail { opacity: 1; }
+.work:hover .rail i, .work:focus-within .rail i, .work.is-live .rail i { top: 78%; }
+.device__chin { height: 30px; display: grid; place-items: center; }
+.device__chin span { font-family: var(--display); font-size: .56rem; letter-spacing: .3em; color: rgba(255,255,255,.28); }
+.device--logo .screen2 { display: grid; place-items: center; padding: 34px; height: 300px; background: radial-gradient(circle at 50% 40%, #fff, var(--mist)); }
+.device--logo .screen2 img { width: auto; height: auto; max-height: 200px; object-fit: contain; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.work:hover .device--logo .screen2 img { transform: scale(1.08) rotate(-2deg); }
+
+.wmeta { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 20px 4px 0; }
+.wmeta__n { font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px var(--teal); font-variant-numeric: tabular-nums; transition: color .3s; }
+.work:hover .wmeta__n { color: var(--orange); -webkit-text-stroke-color: var(--orange); }
+.wmeta h3 { font-family: var(--body); font-size: 1.04rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wmeta p { font-size: .84rem; color: var(--ink-3); margin-top: 2px; display: flex; gap: 8px; align-items: center; }
+.wmeta p em { font-style: normal; font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); background: rgba(17,100,102,.09); padding: 3px 8px; border-radius: 4px; }
+.go { width: 46px; height: 46px; flex: none; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--line); color: var(--ink); transition: background .3s, border-color .3s, color .3s, transform .3s; }
+.go svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.go:hover, .work:hover .go { background: var(--orange); border-color: var(--orange); color: var(--abyss); transform: rotate(45deg); }
+.go--off { opacity: .35; }
+.work:hover .go--off { background: none; border-color: var(--line); color: var(--ink); transform: none; }
+
+.cursor { position: fixed; left: 0; top: 0; z-index: 60; width: 104px; height: 104px; margin: -52px 0 0 -52px; border-radius: 50%; display: grid; place-items: center; text-align: center; background: var(--orange); color: var(--abyss); font: 800 .78rem/1.2 var(--body); letter-spacing: .04em; text-transform: uppercase; pointer-events: none; transform: scale(0); transition: transform .3s cubic-bezier(.2,.7,.2,1); box-shadow: 0 16px 30px -12px rgba(246,164,64,.8); }
+.cursor.on { transform: scale(1); }
+.more { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 40px; }
+.more small { font-weight: 700; color: var(--ink-3); font-size: .82rem; font-variant-numeric: tabular-nums; }
+.meter { width: 220px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--teal); transition: width .5s; }
+
+/* Hand-made touches: film grain + rotating seal */
+body::before { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.badge { position: absolute; z-index: 6; left: -18px; top: -14px; width: 132px; height: 132px; border-radius: 50%; background: var(--orange); color: var(--abyss); display: grid; place-items: center; box-shadow: 0 20px 40px -18px rgba(246,164,64,.9); text-decoration: none; }
+.badge svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 18s linear infinite; }
+.badge text { font: 800 10.5px var(--body); letter-spacing: 2.6px; fill: var(--abyss); text-transform: uppercase; }
+.badge b { font-family: var(--display); font-size: 1.5rem; line-height: 1; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.badge:hover svg.ring { animation-duration: 6s; }
 
 /* Process */
 .process { padding-block: 110px; position: relative; overflow: hidden; }
@@ -279,20 +327,24 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .screen--a { width: 70%; left: 15%; height: 380px; }
   .screen--b, .screen--c { width: 52%; height: 300px; }
   .float--1 { left: 0; bottom: 0; } .float--2 { right: 0; top: 0; }
+  .badge { width: 104px; height: 104px; left: -4px; top: auto; bottom: 70px; }
+  .badge text { font-size: 12.5px; letter-spacing: 2px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat { padding: 30px 16px; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .grid, .steps, .svc, .foot__grid { grid-template-columns: minmax(0, 1fr); }
   .quotes { columns: 1; }
-  .work__shot { height: 360px; }
+  .screen2 { height: 400px; }
+  .wtitle { grid-template-columns: minmax(0, 1fr); }
+  .filters { gap: 4px 22px; }
   .work-sec, .process, .results, .about, .reviews, .cta { padding-block: 76px; }
   .cta__box { padding: 56px 22px; border-radius: 22px; }
   .big-quote { padding: 32px 24px; }
-  .tabs { width: 100%; border-radius: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .screen img, .track, .float { animation: none; }
-  .work__shot img { transition: none; }
+  .screen2 img, .rail i { transition: none; }
+  .hint i::after, .badge svg { animation: none; }
 }
 </style>
 
@@ -337,12 +389,13 @@ figcaption small { font-size: .78rem; color: var(--fog); }
           <div><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><b>5.0 on Google</b><small>from 13 verified reviews</small></div>
         </div>
       </div>
-      <div class="show" aria-hidden="true">
-        <div class="screen screen--b"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/orange-county-towing.jpg" alt=""></div>
-        <div class="screen screen--c"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/black-n-black.jpg" alt=""></div>
-        <div class="screen screen--a"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/exotic-cars.jpg" alt=""></div>
-        <div class="float float--1"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><span><strong>55+</strong><small>websites launched</small></span></div>
-        <div class="float float--2"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 17.3 18.2 21l-1.6-7L22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2 7.4 14l-1.6 7z"/></svg></span><span><strong>17+</strong><small>years in digital</small></span></div>
+      <div class="show">
+        <a class="badge" href="#work" aria-label="See our work"><svg class="ring" viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66 66m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text><textPath href="#circ">Since 2009 · 55+ websites · DGC ·</textPath></text></svg><b aria-hidden="true">↓</b></a>
+        <div class="screen screen--b" aria-hidden="true"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/orange-county-towing.jpg" alt=""></div>
+        <div class="screen screen--c" aria-hidden="true"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/black-n-black.jpg" alt=""></div>
+        <div class="screen screen--a" aria-hidden="true"><div class="screen__bar"><i></i><i></i><i></i></div><img src="img/work/exotic-cars.jpg" alt=""></div>
+        <div class="float float--1" aria-hidden="true"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><span><strong>55+</strong><small>websites launched</small></span></div>
+        <div class="float float--2" aria-hidden="true"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 17.3 18.2 21l-1.6-7L22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2 7.4 14l-1.6 7z"/></svg></span><span><strong>17+</strong><small>years in digital</small></span></div>
       </div>
     </div>
     <div class="marquee">
@@ -361,399 +414,96 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 
   <section class="work-sec" id="work">
     <div class="wrap">
-      <div class="head">
+      <div class="wtitle">
         <div>
-          <span class="kicker">Selected work</span>
-          <h2 class="h2">Our beautiful <em>works.</em></h2>
-          <p class="sub" style="margin-top:14px">Hover a project to scroll the full page. Every site is live and bringing in leads for a real business.</p>
+          <span class="kicker">Selected work, 2009 to today</span>
+          <h2 class="wtitle__big" aria-label="Work, 65 projects">W<span>o</span>rk<sup>(65)</sup></h2>
         </div>
-        <div class="tabs" role="group" aria-label="Filter projects">
-          <button class="tab" type="button" data-f="all" aria-pressed="true">All <span>65</span></button>
-          <button class="tab" type="button" data-f="web" aria-pressed="false">Websites <span>55</span></button>
-          <button class="tab" type="button" data-f="uiux" aria-pressed="false">UI / UX <span>6</span></button>
-          <button class="tab" type="button" data-f="logo" aria-pressed="false">Logos <span>4</span></button>
+        <div class="wtitle__side">
+          <p>Real websites for real towing, cleaning, contracting and limo companies. Every screen below is the full homepage, captured top to bottom.</p>
+          <span class="hint"><i aria-hidden="true"></i><span class="hint--mouse">Hover a screen to scroll the whole page</span><span class="hint--touch">Scroll down and each site plays on its own</span></span>
         </div>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="tab" type="button" data-f="all" aria-pressed="true">All work<sup>65</sup></button>
+        <button class="tab" type="button" data-f="web" aria-pressed="false">Websites<sup>55</sup></button>
+        <button class="tab" type="button" data-f="uiux" aria-pressed="false">UI / UX<sup>6</sup></button>
+        <button class="tab" type="button" data-f="logo" aria-pressed="false">Logos<sup>4</sup></button>
       </div>
       <div class="grid" id="grid">
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>libertyhomeinspectionspllc.com</span></div>
-    <div class="work__shot"><img src="img/work/librity-home-inspection.jpg" alt="Home Inspection website by Digital Growth Catalyze for libertyhomeinspectionspllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://libertyhomeinspectionspllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>libertyhomeinspectionspllc.com</h3><p>Home Inspection</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>kdkpowercontractor.com</span></div>
-    <div class="work__shot"><img src="img/work/kdk-power.jpg" alt="General Contractor website by Digital Growth Catalyze for kdkpowercontractor.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://kdkpowercontractor.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>kdkpowercontractor.com</h3><p>General Contractor</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>luxprousa.com</span></div>
-    <div class="work__shot"><img src="img/work/luxprousa.jpg" alt="Limousine Services website by Digital Growth Catalyze for luxprousa.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://luxprousa.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>luxprousa.com</h3><p>Limousine Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>garagedoorrepair.com</span></div>
-    <div class="work__shot"><img src="img/work/apexxx.jpg" alt="Garage Door Repair website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Garage Door Repair Website</h3><p>Garage Door Repair</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>chimneyservices.com</span></div>
-    <div class="work__shot"><img src="img/work/csr-chimney-services.jpg" alt="Chimney Services website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Chimney Services Website</h3><p>Chimney Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>tampabayexoticcars.net</span></div>
-    <div class="work__shot"><img src="img/work/exotic-cars.jpg" alt="Exotic Car Rentals website by Digital Growth Catalyze for tampabayexoticcars.net" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://www.tampabayexoticcars.net/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>tampabayexoticcars.net</h3><p>Exotic Car Rentals</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>oakllc.co</span></div>
-    <div class="work__shot"><img src="img/work/oak-builders.jpg" alt="Construction website by Digital Growth Catalyze for oakllc.co" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://oakllc.co/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>oakllc.co</h3><p>Construction</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>orangecountytowingllc.com</span></div>
-    <div class="work__shot"><img src="img/work/orange-county-towing.jpg" alt="Towing Services website by Digital Growth Catalyze for orangecountytowingllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://orangecountytowingllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>orangecountytowingllc.com</h3><p>Towing Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>huskinsllc.com</span></div>
-    <div class="work__shot"><img src="img/work/huskins.jpg" alt="Cleaning website by Digital Growth Catalyze for huskinsllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://huskinsllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>huskinsllc.com</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>painting.com</span></div>
-    <div class="work__shot"><img src="img/work/manycolor.jpg" alt="Painting website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Painting Website</h3><p>Painting</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>gcrbuildersllc.com</span></div>
-    <div class="work__shot"><img src="img/work/gsk.jpg" alt="Remodeling website by Digital Growth Catalyze for gcrbuildersllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://gcrbuildersllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>gcrbuildersllc.com</h3><p>Remodeling</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>realestate.com</span></div>
-    <div class="work__shot"><img src="img/work/genia.jpg" alt="Real Estate website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Real Estate Website</h3><p>Real Estate</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>flooring.com</span></div>
-    <div class="work__shot"><img src="img/work/tampafci.jpg" alt="Flooring website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Flooring Website</h3><p>Flooring</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>thedragonflyfields.com</span></div>
-    <div class="work__shot"><img src="img/work/thedragons.jpg" alt="Event Planner website by Digital Growth Catalyze for thedragonflyfields.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://thedragonflyfields.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>thedragonflyfields.com</h3><p>Event Planner</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>homesbygenia.com</span></div>
-    <div class="work__shot"><img src="img/work/iriana.jpg" alt="Real Estate website by Digital Growth Catalyze for homesbygenia.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://homesbygenia.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>homesbygenia.com</h3><p>Real Estate</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>clarkexteriorsllc.com</span></div>
-    <div class="work__shot"><img src="img/work/clark-exteriors.jpg" alt="Roofing Contractor website by Digital Growth Catalyze for clarkexteriorsllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://clarkexteriorsllc.com/home/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>clarkexteriorsllc.com</h3><p>Roofing Contractor</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>painting.com</span></div>
-    <div class="work__shot"><img src="img/work/clean-cut-painting.jpg" alt="Painting website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Painting Website</h3><p>Painting</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>generalcontractor.com</span></div>
-    <div class="work__shot"><img src="img/work/freebird.jpg" alt="General Contractor website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>General Contractor Website</h3><p>General Contractor</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>gripenbuildingservices.com</span></div>
-    <div class="work__shot"><img src="img/work/gripenbuildingservices.jpg" alt="Janitorial website by Digital Growth Catalyze for gripenbuildingservices.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://gripenbuildingservices.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>gripenbuildingservices.com</h3><p>Janitorial</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>generalcontractor.com</span></div>
-    <div class="work__shot"><img src="img/work/wisechoicecontractors-com-2.jpg" alt="General Contractor website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>General Contractor Website</h3><p>General Contractor</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>cleaning.com</span></div>
-    <div class="work__shot"><img src="img/work/dreamscometrue-services.jpg" alt="Cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Cleaning Website</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>digitalmarketing.com</span></div>
-    <div class="work__shot"><img src="img/work/kamrc-digital-marketing.jpg" alt="Digital Marketing website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Digital Marketing Website</h3><p>Digital Marketing</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>mdfairductclean.com</span></div>
-    <div class="work__shot"><img src="img/work/mdf-air-clean.jpg" alt="Air Duct Cleaning website by Digital Growth Catalyze for mdfairductclean.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://www.mdfairductclean.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>mdfairductclean.com</h3><p>Air Duct Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>cleaning.com</span></div>
-    <div class="work__shot"><img src="img/work/meti.jpg" alt="Cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Cleaning Website</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>visahelp247.com</span></div>
-    <div class="work__shot"><img src="img/work/visa-help-247.jpg" alt="Visa Help website by Digital Growth Catalyze for visahelp247.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://visahelp247.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>visahelp247.com</h3><p>Visa Help</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>adamscoatings.com</span></div>
-    <div class="work__shot"><img src="img/work/adamscoatings.jpg" alt="Auto Detailing website by Digital Growth Catalyze for adamscoatings.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://adamscoatings.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>adamscoatings.com</h3><p>Auto Detailing</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>agpdrywall.com</span></div>
-    <div class="work__shot"><img src="img/work/agp.jpg" alt="Drywall Service website by Digital Growth Catalyze for agpdrywall.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://agpdrywall.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>agpdrywall.com</h3><p>Drywall Service</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>repair&amp;restoration.com</span></div>
-    <div class="work__shot"><img src="img/work/grout.jpg" alt="Repair &amp; Restoration website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Repair &amp; Restoration Website</h3><p>Repair &amp; Restoration</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>cleaning.com</span></div>
-    <div class="work__shot"><img src="img/work/haveitmaid.jpg" alt="Cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Cleaning Website</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>sunrisegaragedoorsllc.com</span></div>
-    <div class="work__shot"><img src="img/work/sunise.jpg" alt="Garage Door website by Digital Growth Catalyze for sunrisegaragedoorsllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://sunrisegaragedoorsllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>sunrisegaragedoorsllc.com</h3><p>Garage Door</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>t-townpristineclean.com</span></div>
-    <div class="work__shot"><img src="img/work/ttown-pristine.jpg" alt="Cleaning website by Digital Growth Catalyze for t-townpristineclean.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://t-townpristineclean.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>t-townpristineclean.com</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>renovation.com</span></div>
-    <div class="work__shot"><img src="img/work/spb.jpg" alt="Renovation website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Renovation Website</h3><p>Renovation</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>drbucketllc.com</span></div>
-    <div class="work__shot"><img src="img/work/dr-buk.jpg" alt="Cleaning website by Digital Growth Catalyze for drbucketllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://drbucketllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>drbucketllc.com</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>miamivalleyjanitorial.com</span></div>
-    <div class="work__shot"><img src="img/work/miaa.jpg" alt="Janitorial website by Digital Growth Catalyze for miamivalleyjanitorial.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://miamivalleyjanitorial.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>miamivalleyjanitorial.com</h3><p>Janitorial</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>floorplan.com</span></div>
-    <div class="work__shot"><img src="img/work/texusdesign.jpg" alt="Floor Plan website by Digital Growth Catalyze" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><span class="visit visit--off">Live link coming soon</span></div></div>
-  <div class="work__meta"><div><h3>Floor Plan Website</h3><p>Floor Plan</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>warriorgutters.net</span></div>
-    <div class="work__shot"><img src="img/work/warrior-gutter.jpg" alt="Gutter Cleaning website by Digital Growth Catalyze for warriorgutters.net" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://warriorgutters.net/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>warriorgutters.net</h3><p>Gutter Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>eversteamcarpet.com</span></div>
-    <div class="work__shot"><img src="img/work/eversteamcarpetcleaning.jpg" alt="Carpet Cleaning website by Digital Growth Catalyze for eversteamcarpet.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://eversteamcarpet.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>eversteamcarpet.com</h3><p>Carpet Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>moutonconcreteservices.com</span></div>
-    <div class="work__shot"><img src="img/work/moutonconcreteservices.jpg" alt="Concrete website by Digital Growth Catalyze for moutonconcreteservices.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://moutonconcreteservices.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>moutonconcreteservices.com</h3><p>Concrete</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>fivediamondslimo.com</span></div>
-    <div class="work__shot"><img src="img/work/22222222.jpg" alt="Limo Services website by Digital Growth Catalyze for fivediamondslimo.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://www.fivediamondslimo.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>fivediamondslimo.com</h3><p>Limo Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>ywcscorp.com</span></div>
-    <div class="work__shot"><img src="img/work/ywcscorp.jpg" alt="Cleaning Services website by Digital Growth Catalyze for ywcscorp.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://ywcscorp.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>ywcscorp.com</h3><p>Cleaning Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>3iinspectors.com</span></div>
-    <div class="work__shot"><img src="img/work/3i-inspectos.jpg" alt="Inspection website by Digital Growth Catalyze for 3iinspectors.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://3iinspectors.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>3iinspectors.com</h3><p>Inspection</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>fumarehookahlounge.com</span></div>
-    <div class="work__shot"><img src="img/work/fumare-hookah.jpg" alt="Hookah Bar website by Digital Growth Catalyze for fumarehookahlounge.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://fumarehookahlounge.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>fumarehookahlounge.com</h3><p>Hookah Bar</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>presidentialpaintings.com</span></div>
-    <div class="work__shot"><img src="img/work/presential-painting.jpg" alt="Painting Services website by Digital Growth Catalyze for presidentialpaintings.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://presidentialpaintings.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>presidentialpaintings.com</h3><p>Painting Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>evolveskinbar.com</span></div>
-    <div class="work__shot"><img src="img/work/evolove-skinbar.jpg" alt="Skin Care website by Digital Growth Catalyze for evolveskinbar.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://evolveskinbar.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>evolveskinbar.com</h3><p>Skin Care</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>urbanduct.com</span></div>
-    <div class="work__shot"><img src="img/work/air-duct-cleaning.jpg" alt="Duct Cleaning website by Digital Growth Catalyze for urbanduct.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://urbanduct.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>urbanduct.com</h3><p>Duct Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>geauxdumpdat.com</span></div>
-    <div class="work__shot"><img src="img/work/junk-removal.jpg" alt="Junk Removal website by Digital Growth Catalyze for geauxdumpdat.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://geauxdumpdat.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>geauxdumpdat.com</h3><p>Junk Removal</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>burmstowing.com</span></div>
-    <div class="work__shot"><img src="img/work/burns-towing.jpg" alt="Towing Services website by Digital Growth Catalyze for burmstowing.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://burmstowing.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>burmstowing.com</h3><p>Towing Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>limos4less.com</span></div>
-    <div class="work__shot"><img src="img/work/limos.jpg" alt="Limousine Services website by Digital Growth Catalyze for limos4less.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://limos4less.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>limos4less.com</h3><p>Limousine Services</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>blacknblacklimo.com</span></div>
-    <div class="work__shot"><img src="img/work/black-n-black.jpg" alt="Transportation website by Digital Growth Catalyze for blacknblacklimo.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://blacknblacklimo.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>blacknblacklimo.com</h3><p>Transportation</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>tomcookbuilder.com</span></div>
-    <div class="work__shot"><img src="img/work/tom-cook.jpg" alt="Construction website by Digital Growth Catalyze for tomcookbuilder.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://tomcookbuilder.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>tomcookbuilder.com</h3><p>Construction</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>alamocarpetandtilecleaning.com</span></div>
-    <div class="work__shot"><img src="img/work/alamo-carpet.jpg" alt="Carpet Cleaning website by Digital Growth Catalyze for alamocarpetandtilecleaning.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://alamocarpetandtilecleaning.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>alamocarpetandtilecleaning.com</h3><p>Carpet Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>crystaltouchcleaningtx.com</span></div>
-    <div class="work__shot"><img src="img/work/crystal.jpg" alt="Cleaning website by Digital Growth Catalyze for crystaltouchcleaningtx.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://crystaltouchcleaningtx.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>crystaltouchcleaningtx.com</h3><p>Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>santacruzaptosautotowing.com</span></div>
-    <div class="work__shot"><img src="img/work/santa-cruz.jpg" alt="Towing website by Digital Growth Catalyze for santacruzaptosautotowing.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://santacruzaptosautotowing.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>santacruzaptosautotowing.com</h3><p>Towing</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>stormshieldguttersllc.com</span></div>
-    <div class="work__shot"><img src="img/work/storm-sheild.jpg" alt="Gutter Cleaning website by Digital Growth Catalyze for stormshieldguttersllc.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://stormshieldguttersllc.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>stormshieldguttersllc.com</h3><p>Gutter Cleaning</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="web">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>stevestowingga.com</span></div>
-    <div class="work__shot"><img src="img/work/stevestowingga.jpg" alt="Towing website by Digital Growth Catalyze for stevestowingga.com" loading="lazy" decoding="async"></div>
-    <div class="work__hover"><a class="visit" href="https://stevestowingga.com/" target="_blank" rel="noopener nofollow">Visit live site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div>
-  <div class="work__meta"><div><h3>stevestowingga.com</h3><p>Towing</p></div><span class="tag">Website</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / crm-2</span></div>
-    <div class="work__shot"><img src="img/uiux/crm-2.jpg" alt="CRM Dashboard UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>CRM Dashboard</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / app-development</span></div>
-    <div class="work__shot"><img src="img/uiux/app-development.jpg" alt="App Development UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>App Development</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / construction</span></div>
-    <div class="work__shot"><img src="img/uiux/construction.jpg" alt="Construction UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>Construction</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / real-estate</span></div>
-    <div class="work__shot"><img src="img/uiux/real-estate.jpg" alt="Real Estate UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>Real Estate</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / roofing</span></div>
-    <div class="work__shot"><img src="img/uiux/roofing.jpg" alt="Roofing UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>Roofing</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="uiux">
-  <div class="work__frame"><div class="work__bar"><i></i><i></i><i></i><span>figma / plumbing</span></div>
-    <div class="work__shot"><img src="img/uiux/plumbing.jpg" alt="Plumbing UI/UX design concept" loading="lazy" decoding="async"></div></div>
-  <div class="work__meta"><div><h3>Plumbing</h3><p>Interface concept</p></div><span class="tag tag--alt">UI / UX</span></div>
-</article>
-<article class="work" data-cat="logo">
-  <div class="work__frame work__frame--logo"><img src="img/logos/rainbow-restoration.png" alt="Rainbow Restoration logo" loading="lazy" decoding="async"></div>
-  <div class="work__meta"><div><h3>Rainbow Restoration</h3><p>Brand identity</p></div><span class="tag tag--warm">Logo</span></div>
-</article>
-<article class="work" data-cat="logo">
-  <div class="work__frame work__frame--logo"><img src="img/logos/clean-environments.png" alt="Clean Environments logo" loading="lazy" decoding="async"></div>
-  <div class="work__meta"><div><h3>Clean Environments</h3><p>Brand identity</p></div><span class="tag tag--warm">Logo</span></div>
-</article>
-<article class="work" data-cat="logo">
-  <div class="work__frame work__frame--logo"><img src="img/logos/many-colors.png" alt="Many Colors logo" loading="lazy" decoding="async"></div>
-  <div class="work__meta"><div><h3>Many Colors</h3><p>Brand identity</p></div><span class="tag tag--warm">Logo</span></div>
-</article>
-<article class="work" data-cat="logo">
-  <div class="work__frame work__frame--logo"><img src="img/logos/clark-exteriors.png" alt="Clark Exteriors logo" loading="lazy" decoding="async"></div>
-  <div class="work__meta"><div><h3>Clark Exteriors</h3><p>Brand identity</p></div><span class="tag tag--warm">Logo</span></div>
-</article>
+<article class="work" data-cat="web"><a class="device" href="https://libertyhomeinspectionspllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>libertyhomeinspectionspllc.com</b></span></div><div class="screen2"><img src="img/work/librity-home-inspection.jpg" alt="Full homepage of a home inspection website by Digital Growth Catalyze for libertyhomeinspectionspllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>libertyhomeinspectionspllc.com</h3><p><em>Web</em>Home Inspection</p></div><a class="go" href="https://libertyhomeinspectionspllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit libertyhomeinspectionspllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://kdkpowercontractor.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:9.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>kdkpowercontractor.com</b></span></div><div class="screen2"><img src="img/work/kdk-power.jpg" alt="Full homepage of a general contractor website by Digital Growth Catalyze for kdkpowercontractor.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>kdkpowercontractor.com</h3><p><em>Web</em>General Contractor</p></div><a class="go" href="https://kdkpowercontractor.com/" target="_blank" rel="noopener nofollow" aria-label="Visit kdkpowercontractor.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://luxprousa.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>luxprousa.com</b></span></div><div class="screen2"><img src="img/work/luxprousa.jpg" alt="Full homepage of a limousine services website by Digital Growth Catalyze for luxprousa.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>luxprousa.com</h3><p><em>Web</em>Limousine Services</p></div><a class="go" href="https://luxprousa.com/" target="_blank" rel="noopener nofollow" aria-label="Visit luxprousa.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:7.1s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/apexxx.jpg" alt="Full homepage of a garage door repair website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Garage Door Repair Website</h3><p><em>Web</em>Garage Door Repair</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:9.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/csr-chimney-services.jpg" alt="Full homepage of a chimney services website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Chimney Services Website</h3><p><em>Web</em>Chimney Services</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://www.tampabayexoticcars.net/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.3s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>tampabayexoticcars.net</b></span></div><div class="screen2"><img src="img/work/exotic-cars.jpg" alt="Full homepage of a exotic car rentals website by Digital Growth Catalyze for tampabayexoticcars.net" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>tampabayexoticcars.net</h3><p><em>Web</em>Exotic Car Rentals</p></div><a class="go" href="https://www.tampabayexoticcars.net/" target="_blank" rel="noopener nofollow" aria-label="Visit tampabayexoticcars.net"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://oakllc.co/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.9s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>oakllc.co</b></span></div><div class="screen2"><img src="img/work/oak-builders.jpg" alt="Full homepage of a construction website by Digital Growth Catalyze for oakllc.co" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>oakllc.co</h3><p><em>Web</em>Construction</p></div><a class="go" href="https://oakllc.co/" target="_blank" rel="noopener nofollow" aria-label="Visit oakllc.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://orangecountytowingllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.1s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>orangecountytowingllc.com</b></span></div><div class="screen2"><img src="img/work/orange-county-towing.jpg" alt="Full homepage of a towing services website by Digital Growth Catalyze for orangecountytowingllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>orangecountytowingllc.com</h3><p><em>Web</em>Towing Services</p></div><a class="go" href="https://orangecountytowingllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit orangecountytowingllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://huskinsllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>huskinsllc.com</b></span></div><div class="screen2"><img src="img/work/huskins.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze for huskinsllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>huskinsllc.com</h3><p><em>Web</em>Cleaning</p></div><a class="go" href="https://huskinsllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit huskinsllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:5.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/manycolor.jpg" alt="Full homepage of a painting website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Painting Website</h3><p><em>Web</em>Painting</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://gcrbuildersllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>gcrbuildersllc.com</b></span></div><div class="screen2"><img src="img/work/gsk.jpg" alt="Full homepage of a remodeling website by Digital Growth Catalyze for gcrbuildersllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>gcrbuildersllc.com</h3><p><em>Web</em>Remodeling</p></div><a class="go" href="https://gcrbuildersllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit gcrbuildersllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:6.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/genia.jpg" alt="Full homepage of a real estate website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Real Estate Website</h3><p><em>Web</em>Real Estate</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/tampafci.jpg" alt="Full homepage of a flooring website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Flooring Website</h3><p><em>Web</em>Flooring</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://thedragonflyfields.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.0s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>thedragonflyfields.com</b></span></div><div class="screen2"><img src="img/work/thedragons.jpg" alt="Full homepage of a event planner website by Digital Growth Catalyze for thedragonflyfields.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>thedragonflyfields.com</h3><p><em>Web</em>Event Planner</p></div><a class="go" href="https://thedragonflyfields.com/" target="_blank" rel="noopener nofollow" aria-label="Visit thedragonflyfields.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://homesbygenia.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.3s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>homesbygenia.com</b></span></div><div class="screen2"><img src="img/work/iriana.jpg" alt="Full homepage of a real estate website by Digital Growth Catalyze for homesbygenia.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>homesbygenia.com</h3><p><em>Web</em>Real Estate</p></div><a class="go" href="https://homesbygenia.com/" target="_blank" rel="noopener nofollow" aria-label="Visit homesbygenia.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://clarkexteriorsllc.com/home/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>clarkexteriorsllc.com</b></span></div><div class="screen2"><img src="img/work/clark-exteriors.jpg" alt="Full homepage of a roofing contractor website by Digital Growth Catalyze for clarkexteriorsllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>clarkexteriorsllc.com</h3><p><em>Web</em>Roofing Contractor</p></div><a class="go" href="https://clarkexteriorsllc.com/home/" target="_blank" rel="noopener nofollow" aria-label="Visit clarkexteriorsllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:8.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/clean-cut-painting.jpg" alt="Full homepage of a painting website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Painting Website</h3><p><em>Web</em>Painting</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:5.8s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/freebird.jpg" alt="Full homepage of a general contractor website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>General Contractor Website</h3><p><em>Web</em>General Contractor</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://gripenbuildingservices.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.1s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>gripenbuildingservices.com</b></span></div><div class="screen2"><img src="img/work/gripenbuildingservices.jpg" alt="Full homepage of a janitorial website by Digital Growth Catalyze for gripenbuildingservices.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>gripenbuildingservices.com</h3><p><em>Web</em>Janitorial</p></div><a class="go" href="https://gripenbuildingservices.com/" target="_blank" rel="noopener nofollow" aria-label="Visit gripenbuildingservices.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:7.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/wisechoicecontractors-com-2.jpg" alt="Full homepage of a general contractor website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>General Contractor Website</h3><p><em>Web</em>General Contractor</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/dreamscometrue-services.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Cleaning Website</h3><p><em>Web</em>Cleaning</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:5.8s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/kamrc-digital-marketing.jpg" alt="Full homepage of a digital marketing website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Digital Marketing Website</h3><p><em>Web</em>Digital Marketing</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://www.mdfairductclean.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.9s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>mdfairductclean.com</b></span></div><div class="screen2"><img src="img/work/mdf-air-clean.jpg" alt="Full homepage of a air duct cleaning website by Digital Growth Catalyze for mdfairductclean.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>mdfairductclean.com</h3><p><em>Web</em>Air Duct Cleaning</p></div><a class="go" href="https://www.mdfairductclean.com/" target="_blank" rel="noopener nofollow" aria-label="Visit mdfairductclean.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:8.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/meti.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Cleaning Website</h3><p><em>Web</em>Cleaning</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://visahelp247.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>visahelp247.com</b></span></div><div class="screen2"><img src="img/work/visa-help-247.jpg" alt="Full homepage of a visa help website by Digital Growth Catalyze for visahelp247.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>visahelp247.com</h3><p><em>Web</em>Visa Help</p></div><a class="go" href="https://visahelp247.com/" target="_blank" rel="noopener nofollow" aria-label="Visit visahelp247.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://adamscoatings.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>adamscoatings.com</b></span></div><div class="screen2"><img src="img/work/adamscoatings.jpg" alt="Full homepage of a auto detailing website by Digital Growth Catalyze for adamscoatings.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>adamscoatings.com</h3><p><em>Web</em>Auto Detailing</p></div><a class="go" href="https://adamscoatings.com/" target="_blank" rel="noopener nofollow" aria-label="Visit adamscoatings.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://agpdrywall.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>agpdrywall.com</b></span></div><div class="screen2"><img src="img/work/agp.jpg" alt="Full homepage of a drywall service website by Digital Growth Catalyze for agpdrywall.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>agpdrywall.com</h3><p><em>Web</em>Drywall Service</p></div><a class="go" href="https://agpdrywall.com/" target="_blank" rel="noopener nofollow" aria-label="Visit agpdrywall.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:5.0s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/grout.jpg" alt="Full homepage of a repair &amp; restoration website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Repair &amp; Restoration Website</h3><p><em>Web</em>Repair &amp; Restoration</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:7.9s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/haveitmaid.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Cleaning Website</h3><p><em>Web</em>Cleaning</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://sunrisegaragedoorsllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>sunrisegaragedoorsllc.com</b></span></div><div class="screen2"><img src="img/work/sunise.jpg" alt="Full homepage of a garage door website by Digital Growth Catalyze for sunrisegaragedoorsllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>sunrisegaragedoorsllc.com</h3><p><em>Web</em>Garage Door</p></div><a class="go" href="https://sunrisegaragedoorsllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit sunrisegaragedoorsllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://t-townpristineclean.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.9s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>t-townpristineclean.com</b></span></div><div class="screen2"><img src="img/work/ttown-pristine.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze for t-townpristineclean.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>t-townpristineclean.com</h3><p><em>Web</em>Cleaning</p></div><a class="go" href="https://t-townpristineclean.com/" target="_blank" rel="noopener nofollow" aria-label="Visit t-townpristineclean.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:9.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/spb.jpg" alt="Full homepage of a renovation website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Renovation Website</h3><p><em>Web</em>Renovation</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://drbucketllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>drbucketllc.com</b></span></div><div class="screen2"><img src="img/work/dr-buk.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze for drbucketllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>drbucketllc.com</h3><p><em>Web</em>Cleaning</p></div><a class="go" href="https://drbucketllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit drbucketllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://miamivalleyjanitorial.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.3s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>miamivalleyjanitorial.com</b></span></div><div class="screen2"><img src="img/work/miaa.jpg" alt="Full homepage of a janitorial website by Digital Growth Catalyze for miamivalleyjanitorial.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>miamivalleyjanitorial.com</h3><p><em>Web</em>Janitorial</p></div><a class="go" href="https://miamivalleyjanitorial.com/" target="_blank" rel="noopener nofollow" aria-label="Visit miamivalleyjanitorial.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><div class="device" style="--dur:6.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">Private client</span></div><div class="screen2"><img src="img/work/texusdesign.jpg" alt="Full homepage of a floor plan website by Digital Growth Catalyze" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Floor Plan Website</h3><p><em>Web</em>Floor Plan</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://warriorgutters.net/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>warriorgutters.net</b></span></div><div class="screen2"><img src="img/work/warrior-gutter.jpg" alt="Full homepage of a gutter cleaning website by Digital Growth Catalyze for warriorgutters.net" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>warriorgutters.net</h3><p><em>Web</em>Gutter Cleaning</p></div><a class="go" href="https://warriorgutters.net/" target="_blank" rel="noopener nofollow" aria-label="Visit warriorgutters.net"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://eversteamcarpet.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.9s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>eversteamcarpet.com</b></span></div><div class="screen2"><img src="img/work/eversteamcarpetcleaning.jpg" alt="Full homepage of a carpet cleaning website by Digital Growth Catalyze for eversteamcarpet.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>eversteamcarpet.com</h3><p><em>Web</em>Carpet Cleaning</p></div><a class="go" href="https://eversteamcarpet.com/" target="_blank" rel="noopener nofollow" aria-label="Visit eversteamcarpet.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://moutonconcreteservices.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>moutonconcreteservices.com</b></span></div><div class="screen2"><img src="img/work/moutonconcreteservices.jpg" alt="Full homepage of a concrete website by Digital Growth Catalyze for moutonconcreteservices.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>moutonconcreteservices.com</h3><p><em>Web</em>Concrete</p></div><a class="go" href="https://moutonconcreteservices.com/" target="_blank" rel="noopener nofollow" aria-label="Visit moutonconcreteservices.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://www.fivediamondslimo.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>fivediamondslimo.com</b></span></div><div class="screen2"><img src="img/work/22222222.jpg" alt="Full homepage of a limo services website by Digital Growth Catalyze for fivediamondslimo.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>fivediamondslimo.com</h3><p><em>Web</em>Limo Services</p></div><a class="go" href="https://www.fivediamondslimo.com/" target="_blank" rel="noopener nofollow" aria-label="Visit fivediamondslimo.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://ywcscorp.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>ywcscorp.com</b></span></div><div class="screen2"><img src="img/work/ywcscorp.jpg" alt="Full homepage of a cleaning services website by Digital Growth Catalyze for ywcscorp.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>ywcscorp.com</h3><p><em>Web</em>Cleaning Services</p></div><a class="go" href="https://ywcscorp.com/" target="_blank" rel="noopener nofollow" aria-label="Visit ywcscorp.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://3iinspectors.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.8s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>3iinspectors.com</b></span></div><div class="screen2"><img src="img/work/3i-inspectos.jpg" alt="Full homepage of a inspection website by Digital Growth Catalyze for 3iinspectors.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>3iinspectors.com</h3><p><em>Web</em>Inspection</p></div><a class="go" href="https://3iinspectors.com/" target="_blank" rel="noopener nofollow" aria-label="Visit 3iinspectors.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://fumarehookahlounge.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>fumarehookahlounge.com</b></span></div><div class="screen2"><img src="img/work/fumare-hookah.jpg" alt="Full homepage of a hookah bar website by Digital Growth Catalyze for fumarehookahlounge.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>fumarehookahlounge.com</h3><p><em>Web</em>Hookah Bar</p></div><a class="go" href="https://fumarehookahlounge.com/" target="_blank" rel="noopener nofollow" aria-label="Visit fumarehookahlounge.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://presidentialpaintings.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>presidentialpaintings.com</b></span></div><div class="screen2"><img src="img/work/presential-painting.jpg" alt="Full homepage of a painting services website by Digital Growth Catalyze for presidentialpaintings.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>presidentialpaintings.com</h3><p><em>Web</em>Painting Services</p></div><a class="go" href="https://presidentialpaintings.com/" target="_blank" rel="noopener nofollow" aria-label="Visit presidentialpaintings.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://evolveskinbar.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>evolveskinbar.com</b></span></div><div class="screen2"><img src="img/work/evolove-skinbar.jpg" alt="Full homepage of a skin care website by Digital Growth Catalyze for evolveskinbar.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>evolveskinbar.com</h3><p><em>Web</em>Skin Care</p></div><a class="go" href="https://evolveskinbar.com/" target="_blank" rel="noopener nofollow" aria-label="Visit evolveskinbar.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://urbanduct.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.1s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>urbanduct.com</b></span></div><div class="screen2"><img src="img/work/air-duct-cleaning.jpg" alt="Full homepage of a duct cleaning website by Digital Growth Catalyze for urbanduct.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>urbanduct.com</h3><p><em>Web</em>Duct Cleaning</p></div><a class="go" href="https://urbanduct.com/" target="_blank" rel="noopener nofollow" aria-label="Visit urbanduct.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://geauxdumpdat.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>geauxdumpdat.com</b></span></div><div class="screen2"><img src="img/work/junk-removal.jpg" alt="Full homepage of a junk removal website by Digital Growth Catalyze for geauxdumpdat.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>geauxdumpdat.com</h3><p><em>Web</em>Junk Removal</p></div><a class="go" href="https://geauxdumpdat.com/" target="_blank" rel="noopener nofollow" aria-label="Visit geauxdumpdat.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://burmstowing.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>burmstowing.com</b></span></div><div class="screen2"><img src="img/work/burns-towing.jpg" alt="Full homepage of a towing services website by Digital Growth Catalyze for burmstowing.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>burmstowing.com</h3><p><em>Web</em>Towing Services</p></div><a class="go" href="https://burmstowing.com/" target="_blank" rel="noopener nofollow" aria-label="Visit burmstowing.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://limos4less.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>limos4less.com</b></span></div><div class="screen2"><img src="img/work/limos.jpg" alt="Full homepage of a limousine services website by Digital Growth Catalyze for limos4less.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>limos4less.com</h3><p><em>Web</em>Limousine Services</p></div><a class="go" href="https://limos4less.com/" target="_blank" rel="noopener nofollow" aria-label="Visit limos4less.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://blacknblacklimo.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.0s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>blacknblacklimo.com</b></span></div><div class="screen2"><img src="img/work/black-n-black.jpg" alt="Full homepage of a transportation website by Digital Growth Catalyze for blacknblacklimo.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>blacknblacklimo.com</h3><p><em>Web</em>Transportation</p></div><a class="go" href="https://blacknblacklimo.com/" target="_blank" rel="noopener nofollow" aria-label="Visit blacknblacklimo.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://tomcookbuilder.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>tomcookbuilder.com</b></span></div><div class="screen2"><img src="img/work/tom-cook.jpg" alt="Full homepage of a construction website by Digital Growth Catalyze for tomcookbuilder.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>tomcookbuilder.com</h3><p><em>Web</em>Construction</p></div><a class="go" href="https://tomcookbuilder.com/" target="_blank" rel="noopener nofollow" aria-label="Visit tomcookbuilder.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://alamocarpetandtilecleaning.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>alamocarpetandtilecleaning.com</b></span></div><div class="screen2"><img src="img/work/alamo-carpet.jpg" alt="Full homepage of a carpet cleaning website by Digital Growth Catalyze for alamocarpetandtilecleaning.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>alamocarpetandtilecleaning.com</h3><p><em>Web</em>Carpet Cleaning</p></div><a class="go" href="https://alamocarpetandtilecleaning.com/" target="_blank" rel="noopener nofollow" aria-label="Visit alamocarpetandtilecleaning.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://crystaltouchcleaningtx.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:7.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>crystaltouchcleaningtx.com</b></span></div><div class="screen2"><img src="img/work/crystal.jpg" alt="Full homepage of a cleaning website by Digital Growth Catalyze for crystaltouchcleaningtx.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>crystaltouchcleaningtx.com</h3><p><em>Web</em>Cleaning</p></div><a class="go" href="https://crystaltouchcleaningtx.com/" target="_blank" rel="noopener nofollow" aria-label="Visit crystaltouchcleaningtx.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://santacruzaptosautotowing.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.8s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>santacruzaptosautotowing.com</b></span></div><div class="screen2"><img src="img/work/santa-cruz.jpg" alt="Full homepage of a towing website by Digital Growth Catalyze for santacruzaptosautotowing.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>santacruzaptosautotowing.com</h3><p><em>Web</em>Towing</p></div><a class="go" href="https://santacruzaptosautotowing.com/" target="_blank" rel="noopener nofollow" aria-label="Visit santacruzaptosautotowing.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://stormshieldguttersllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:6.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>stormshieldguttersllc.com</b></span></div><div class="screen2"><img src="img/work/storm-sheild.jpg" alt="Full homepage of a gutter cleaning website by Digital Growth Catalyze for stormshieldguttersllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>stormshieldguttersllc.com</h3><p><em>Web</em>Gutter Cleaning</p></div><a class="go" href="https://stormshieldguttersllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit stormshieldguttersllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="web"><a class="device" href="https://stevestowingga.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:5.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>stevestowingga.com</b></span></div><div class="screen2"><img src="img/work/stevestowingga.jpg" alt="Full homepage of a towing website by Digital Growth Catalyze for stevestowingga.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>stevestowingga.com</h3><p><em>Web</em>Towing</p></div><a class="go" href="https://stevestowingga.com/" target="_blank" rel="noopener nofollow" aria-label="Visit stevestowingga.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>crm-2</b></span></div><div class="screen2"><img src="img/uiux/crm-2.jpg" alt="CRM Dashboard UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>CRM Dashboard</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:10.0s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>app-development</b></span></div><div class="screen2"><img src="img/uiux/app-development.jpg" alt="App Development UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>App Development</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:5.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>construction</b></span></div><div class="screen2"><img src="img/uiux/construction.jpg" alt="Construction UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Construction</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:7.3s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>real-estate</b></span></div><div class="screen2"><img src="img/uiux/real-estate.jpg" alt="Real Estate UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Real Estate</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:5.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>roofing</b></span></div><div class="screen2"><img src="img/uiux/roofing.jpg" alt="Roofing UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Roofing</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="uiux"><div class="device" style="--dur:7.7s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">figma / <b>plumbing</b></span></div><div class="screen2"><img src="img/uiux/plumbing.jpg" alt="Plumbing UI/UX design concept" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Plumbing</h3><p><em>UI/UX</em>Interface concept</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="logo"><div class="device device--logo" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">brand / <b>rainbow-restoration</b></span></div><div class="screen2"><img src="img/logos/rainbow-restoration.png" alt="Rainbow Restoration logo" loading="lazy" decoding="async"></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Rainbow Restoration</h3><p><em>Logo</em>Brand identity</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="logo"><div class="device device--logo" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">brand / <b>clean-environments</b></span></div><div class="screen2"><img src="img/logos/clean-environments.png" alt="Clean Environments logo" loading="lazy" decoding="async"></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Clean Environments</h3><p><em>Logo</em>Brand identity</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="logo"><div class="device device--logo" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">brand / <b>many-colors</b></span></div><div class="screen2"><img src="img/logos/many-colors.png" alt="Many Colors logo" loading="lazy" decoding="async"></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Many Colors</h3><p><em>Logo</em>Brand identity</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
+<article class="work" data-cat="logo"><div class="device device--logo" style="--dur:3.5s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">brand / <b>clark-exteriors</b></span></div><div class="screen2"><img src="img/logos/clark-exteriors.png" alt="Clark Exteriors logo" loading="lazy" decoding="async"></div><div class="device__chin"><span>DGC</span></div></div><div class="wmeta"><span class="wmeta__n" aria-hidden="true">00</span><div><h3>Clark Exteriors</h3><p><em>Logo</em>Brand identity</p></div><span class="go go--off" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></article>
       </div>
-      <div class="more" id="moreWrap"><button class="btn btn--ink" type="button" id="more">Load more projects <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button></div>
+      <div class="more" id="moreWrap">
+        <small id="count"></small>
+        <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+        <button class="btn btn--ink" type="button" id="more">Show more projects <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
+      </div>
     </div>
+    <div class="cursor" id="cursor" aria-hidden="true">Visit<br>site ↗</div>
   </section>
 
   <section class="dark process">
@@ -921,20 +671,47 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); } });
 
   const PAGE = 9;
-  const cards = [...document.querySelectorAll('#grid .work')];
+  const grid = document.getElementById('grid');
+  const cards = [...grid.querySelectorAll('.work')];
   const tabs = [...document.querySelectorAll('.tab')];
   const moreWrap = document.getElementById('moreWrap');
+  const count = document.getElementById('count'), meter = document.getElementById('meter');
+  const wide = matchMedia('(min-width: 1081px)');
   let cur = 'all', shown = PAGE;
   function render() {
     const list = cards.filter(c => cur === 'all' || c.dataset.cat === cur);
-    cards.forEach(c => c.hidden = true);
-    list.forEach((c, i) => c.hidden = i >= shown);
-    moreWrap.hidden = shown >= list.length;
+    cards.forEach(c => { c.hidden = true; c.classList.remove('lift'); });
+    list.forEach((c, i) => {
+      c.hidden = i >= shown;
+      c.classList.toggle('lift', i % 3 === 1);
+      c.querySelector('.wmeta__n').textContent = String(i + 1).padStart(2, '0');
+    });
+    grid.classList.toggle('is-staggered', wide.matches);
+    const n = Math.min(shown, list.length);
+    count.textContent = `Showing ${n} of ${list.length} projects`;
+    meter.style.width = (n / list.length * 100) + '%';
+    document.getElementById('more').hidden = shown >= list.length;
   }
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(b => b.setAttribute('aria-pressed', b === t));
     cur = t.dataset.f; shown = PAGE; render();
   }));
   document.getElementById('more').addEventListener('click', () => { shown += PAGE; render(); });
+  wide.addEventListener('change', render);
   render();
+
+  // Cursor bubble over linked screens (mouse only)
+  const cursor = document.getElementById('cursor');
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    grid.addEventListener('pointermove', e => {
+      const d = e.target.closest('a.device');
+      cursor.classList.toggle('on', !!d);
+      cursor.style.translate = `${e.clientX}px ${e.clientY}px`;
+    });
+    grid.addEventListener('pointerleave', () => cursor.classList.remove('on'));
+  } else if ('IntersectionObserver' in window) {
+    // Touch screens: pan each site while it sits in the middle of the viewport
+    const io = new IntersectionObserver(es => es.forEach(en => en.target.classList.toggle('is-live', en.isIntersecting)), { rootMargin: '-35% 0px -35% 0px' });
+    cards.forEach(c => io.observe(c));
+  }
 </script>
