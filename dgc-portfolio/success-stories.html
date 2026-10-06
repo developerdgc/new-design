@@ -319,7 +319,7 @@ p { margin: 0; }
 /* Video player modal */
 .vmodal { width: auto; max-width: 94vw; padding: 0; border: 0; border-radius: 10px; background: #000; overflow: hidden; }
 .vmodal::backdrop { background: rgba(2,23,32,.9); }
-.vmodal video { display: block; height: min(78vh, 760px); width: auto; aspect-ratio: 9 / 16; max-width: 88vw; object-fit: contain; background: #000; }
+.vmodal video { display: block; height: min(88vh, 960px); width: auto; aspect-ratio: 9 / 16; max-width: 88vw; object-fit: contain; background: #000; }
 .vmodal__bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; background: var(--navy); color: #fff; font-weight: 700; font-size: .9rem; }
 .vmodal { overflow: visible; width: fit-content; }
 .vmodal__x { position: absolute; z-index: 3; right: -16px; top: -16px; width: 44px; height: 44px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--abyss); cursor: pointer; box-shadow: 0 10px 24px -8px rgba(0,0,0,.6); transition: background .25s, color .25s, transform .25s; }
@@ -553,6 +553,16 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .hero__top { padding-top: 170px !important; }
 }
 
+/* Case study sub-filters in the Work section */
+.subfilters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
+.subfilters[hidden] { display: none; }
+.stab { font: 700 .88rem/1 var(--body); padding: 11px 18px; border-radius: 10px; border: 1.5px solid var(--navy); background: #fff; color: var(--navy); cursor: pointer; transition: background .25s, color .25s; }
+.stab:hover { background: var(--navy); color: #fff; }
+.stab[aria-pressed="true"] { background: var(--navy); color: #fff; }
+/* Stats: clearer border, dark icon discs */
+.stats { border: 2px solid var(--navy) !important; }
+.stat__ic { background: var(--navy) !important; color: #fff !important; box-shadow: 0 10px 20px -10px rgba(6,40,54,.8); }
+
 .phero { padding-top: 222px !important; }
 @media (max-width: 680px) { .phero { padding-top: 180px !important; } }
 .phero { background: radial-gradient(38% 55% at 0% 0%, rgba(28,222,225,.55), transparent 70%), radial-gradient(34% 50% at 100% 100%, rgba(28,222,225,.45), transparent 70%), #062836 !important; }
@@ -599,11 +609,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     <a class="nav__logo" href="https://claude.ai/artifact/V7aRsgUfucDzCMmVpQvS83"><img src="img/brand/dgc-logo-white.png" alt="Digital Growth Catalyze" width="149" height="42"></a>
     <nav class="nav__links" id="menu" aria-label="Main">
       <a href="https://claude.ai/artifact/V7aRsgUfucDzCMmVpQvS83">Portfolio</a>
-      <a href="https://digitalgrowthcatalyze.com/about-us/">About Us</a>
-      <a href="https://digitalgrowthcatalyze.com/our-services/">Our Services</a>
       <a href="https://claude.ai/artifact/GHGqaZctwdU8NkR8bJHtrF">Case Studies</a>
       <a href="#main" aria-current="page">Video Reviews</a>
-      <a href="https://digitalgrowthcatalyze.com/blog-2/">Blog</a>
     </nav>
     <a class="btn btn--hot" href="https://digitalgrowthcatalyze.com/contact/">Contact Us <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <button class="burger" type="button" id="burger" aria-controls="menu" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
