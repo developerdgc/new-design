@@ -563,6 +563,11 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 /* Stats: clearer border, dark icon discs */
 .stats { border: 2px solid var(--navy) !important; }
 .stat__ic { background: var(--navy) !important; color: #fff !important; box-shadow: 0 10px 20px -10px rgba(6,40,54,.8); }
+
+/* Paragraph text on white sections: #181818 for stronger contrast */
+:root { --ink-2: #181818; }
+.sub, .wtitle__side p, .wmeta p, .fcard p, .vnote, .ticks li, .svc-list a { color: #181818; }
+.dark .sub, .dark p { color: var(--fog); }
 </style>
 
 <div class="site-head" id="siteHead">
