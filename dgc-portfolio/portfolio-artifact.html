@@ -720,6 +720,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
       </div>
       <div class="more" id="moreWrap">
         <button class="btn btn--hot" type="button" id="more">Show more websites <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
+        <a class="btn btn--hot" id="allCase" href="https://claude.ai/artifact/GHGqaZctwdU8NkR8bJHtrF" hidden>View All Case Studies <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
     </div>
     <div class="cursor" id="cursor" aria-hidden="true">Visit<br>site ↗</div>
@@ -871,6 +872,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   const cards = [...grid.querySelectorAll('.work')];
   const heads = [...grid.querySelectorAll('.ghead')];
   const tabs = [...document.querySelectorAll('.tab')];
+  const allCase = document.getElementById('allCase');
   const more = document.getElementById('more');
   const wide = matchMedia('(min-width: 1081px)');
   let cur = 'all', shown = PAGE;
@@ -896,6 +898,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
       c.classList.toggle('lift', k++ % 3 === 1);
     });
     grid.classList.toggle('is-staggered', wide.matches);
+    allCase.hidden = cur !== 'case';
     more.hidden = !(cur === 'web' && shown < cards.filter(c => c.dataset.cat === 'web').length);
   }
   function openTab(f) {
