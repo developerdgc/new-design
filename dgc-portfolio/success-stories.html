@@ -55,11 +55,13 @@ p { margin: 0; }
 .btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
 .btn:hover svg { transform: translate(2px, -2px); }
 .btn--hot { background: var(--orange); color: var(--abyss); box-shadow: 0 10px 30px -10px rgba(246,164,64,.7); }
-.btn--hot:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -12px rgba(246,164,64,.9); }
+.btn--hot:hover { transform: translateY(-2px); background: var(--navy); color: #fff; box-shadow: 0 16px 36px -12px rgba(6,40,54,.7); }
+.nav .btn--hot:hover, .hero .btn--hot:hover, .dark .btn--hot:hover, .phero .btn--hot:hover, .story__head .btn--hot:hover, .cmodal .btn--hot:hover { background: #fff; color: var(--navy); }
 .btn--ghost { border-color: rgba(255,255,255,.22); color: #fff; }
-.btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+.btn--ghost:hover { background: var(--cyan); border-color: var(--cyan); color: var(--abyss); }
 .btn--ink { background: var(--navy); color: #fff; }
-.btn--ink:hover { background: var(--teal); }
+.btn--ink:hover { background: var(--orange); color: var(--abyss); }
+.cta .btn--ink:hover { background: #fff; color: var(--navy); }
 
 /* Header */
 .top { background: var(--abyss); color: var(--fog); font-size: .82rem; }
@@ -102,6 +104,7 @@ p { margin: 0; }
 .show { position: relative; height: 470px; }
 .show__cta { display: flex; justify-content: center; margin-top: 26px; position: relative; z-index: 6; }
 .show__cta .btn { background: rgba(255,255,255,.06); backdrop-filter: blur(6px); }
+.show__cta .btn:hover { background: var(--cyan); border-color: var(--cyan); color: var(--abyss); }
 .screen { position: absolute; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 40px 80px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08); }
 .screen__bar { height: 24px; background: #f1f5f6; display: flex; align-items: center; gap: 5px; padding-inline: 10px; }
 .screen__bar i { width: 7px; height: 7px; border-radius: 50%; background: #cbd8dc; }
@@ -138,15 +141,16 @@ p { margin: 0; }
 .vthumb button { position: relative; display: block; width: 100%; padding: 0; border: 1px solid var(--line-d); border-radius: 16px; overflow: hidden; background: var(--navy-3); cursor: pointer; aspect-ratio: 9 / 16; transition: border-color .35s, box-shadow .45s; }
 .vthumb video, .vthumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .vthumb button::after { content: ""; position: absolute; inset: 0; background: rgba(2,23,32,.0); transition: background .3s; }
-.play { position: absolute; z-index: 2; left: 50%; top: 58%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; display: grid; place-items: center; background: rgba(246,164,64,.95); color: var(--abyss); box-shadow: 0 0 0 8px rgba(246,164,64,.25); transition: transform .3s, opacity .3s; }
+.play { position: absolute; z-index: 2; left: 50%; top: 64%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; display: grid; place-items: center; background: rgba(246,164,64,.95); color: var(--abyss); box-shadow: 0 0 0 8px rgba(246,164,64,.25); transition: transform .3s, opacity .3s; }
 .play svg { width: 20px; height: 20px; fill: currentColor; margin-left: 3px; }
-.vcap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.vcap { display: block; margin-top: 12px; text-align: left; color: #fff; transition: opacity .3s; }
 .vcap b { display: block; font-size: .92rem; line-height: 1.25; }
 .vcap em { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-style: normal; font-size: .74rem; font-weight: 700; color: var(--orange); }
 .clients ul:has(.vthumb:hover) .vthumb:not(:hover) { opacity: .3; filter: grayscale(.6) blur(1px); }
 .vthumb:hover { z-index: 5; transform: scale(1.22); }
 .vthumb:hover button { border-color: var(--orange); box-shadow: 0 30px 60px -20px rgba(0,0,0,.85), 0 0 0 3px var(--orange); }
-.vthumb:hover .play { transform: scale(.7); opacity: 0; }
+.vthumb:hover .play { transform: scale(1.15); background: #fff; box-shadow: 0 0 0 10px rgba(255,255,255,.25); }
+.vthumb:hover .vcap { opacity: 0; }
 .clients__head a { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: .88rem; color: var(--orange); text-decoration: none; }
 .clients__head a svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 .clients__head a:hover { color: #fff; }
@@ -194,8 +198,8 @@ p { margin: 0; }
 .ghead h3 em { font-style: normal; color: var(--orange-ink); }
 .ghead__line { flex: 1; height: 2px; min-width: 20px; background: linear-gradient(90deg, var(--orange), transparent); border-radius: 2px; }
 .ghead a { flex: none; font-weight: 800; font-size: .88rem; color: var(--ink); text-decoration: none; padding: 10px 16px; border-radius: 999px; border: 1.5px solid var(--line); transition: border-color .25s, color .25s; }
-.ghead a:hover { border-color: var(--orange); color: var(--orange-ink); }
-.tab:hover { border-color: var(--orange); color: var(--orange-ink); transform: translateY(-2px); }
+.ghead a:hover { background: var(--orange); border-color: var(--orange); color: var(--abyss); }
+.tab:hover { background: var(--navy); border-color: var(--navy); color: #fff; transform: translateY(-2px); }
 .tab[aria-pressed="true"] { background: var(--orange); border-color: var(--orange); color: var(--abyss); box-shadow: 0 12px 26px -12px rgba(246,164,64,.9); }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 34px; margin-top: 64px; }
 .tab--win { color: var(--orange-ink); }
@@ -303,9 +307,13 @@ p { margin: 0; }
 /* Video player modal */
 .vmodal { width: auto; max-width: 94vw; padding: 0; border: 0; border-radius: 18px; background: #000; overflow: hidden; }
 .vmodal::backdrop { background: rgba(2,23,32,.9); }
-.vmodal video { display: block; max-height: 86vh; max-width: 94vw; width: auto; height: auto; }
+.vmodal video { display: block; height: min(78vh, 760px); width: auto; aspect-ratio: 9 / 16; max-width: 88vw; object-fit: contain; background: #000; }
 .vmodal__bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; background: var(--navy); color: #fff; font-weight: 700; font-size: .9rem; }
-.vmodal__bar button { border: 0; border-radius: 999px; padding: 8px 14px; background: var(--orange); color: var(--abyss); font: 800 .85rem var(--body); cursor: pointer; }
+.vmodal { overflow: visible; width: fit-content; }
+.vmodal__x { position: absolute; z-index: 3; right: -16px; top: -16px; width: 44px; height: 44px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--abyss); cursor: pointer; box-shadow: 0 10px 24px -8px rgba(0,0,0,.6); transition: background .25s, color .25s, transform .25s; }
+.vmodal__x svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; }
+.vmodal__x:hover { background: #fff; color: var(--navy); transform: rotate(90deg); }
+.vmodal__frame { border-radius: 18px; overflow: hidden; background: #000; }
 
 /* Hand-made touches: film grain + rotating seal */
 body::before { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
@@ -474,6 +482,9 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .vgrid .vthumb:hover { transform: translateY(-8px); }
 .vgrid:has(.vthumb:hover) .vthumb:not(:hover) { opacity: .45; filter: grayscale(.5); }
 .vgrid .vthumb button { border-color: var(--line); }
+.vgrid .vcap b { color: var(--ink); }
+.vgrid .vcap em { color: var(--orange-ink); }
+.vgrid .vthumb:hover .vcap { opacity: 1; }
 .vnote { margin-top: 36px; text-align: center; color: var(--ink-3); font-size: .92rem; }
 @media (max-width: 1080px) { .cgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 680px) { .cgrid { grid-template-columns: minmax(0, 1fr); } .vgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .phero { padding-block: 52px 56px; } }
@@ -511,7 +522,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     <div class="wrap">
       <span class="kicker">Video reviews</span>
       <h1>Hear it from our <em>clients.</em></h1>
-      <p>Real business owners, on camera, talking about working with Digital Growth Catalyze. Hover a video to preview it, click to watch with sound.</p>
+      <p>Real business owners, on camera, talking about working with Digital Growth Catalyze. Click any video to watch it with sound.</p>
       <div class="hero__cta"><a class="btn btn--hot" href="#videos">Watch the reviews <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a class="btn btn--ghost" href="https://claude.ai/artifact/GHGqaZctwdU8NkR8bJHtrF">Read case studies</a></div>
     </div>
   </section>
@@ -519,10 +530,10 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     <div class="wrap">
       <!-- Add new reviews to VIDEOS in common.py: video/review-N.mp4 + poster video/review-N.jpg -->
       <ul class="vgrid" style="list-style:none;margin:0;padding:0">
-<li class="vthumb" data-src="video/review-1.mp4" data-name="Clark Exteriors"><button type="button" aria-label="Play video review from Clark Exteriors"><video src="video/review-1.mp4" poster="video/review-1.jpg" muted playsinline loop preload="none"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vcap"><b>Clark Exteriors</b><em>Roofing contractor</em></span></button></li>
-<li class="vthumb" data-src="video/review-2.mp4" data-name="Huskins Services LLC"><button type="button" aria-label="Play video review from Huskins Services LLC"><video src="video/review-2.mp4" poster="video/review-2.jpg" muted playsinline loop preload="none"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vcap"><b>Huskins Services LLC</b><em>Cleaning &amp; remodeling</em></span></button></li>
-<li class="vthumb" data-src="video/review-3.mp4" data-name="Happy client"><button type="button" aria-label="Play video review from Happy client"><video src="video/review-3.mp4" poster="video/review-3.jpg" muted playsinline loop preload="none"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vcap"><b>Happy client</b><em>Video review</em></span></button></li>
-<li class="vthumb" data-src="video/review-4.mp4" data-name="Happy client"><button type="button" aria-label="Play video review from Happy client"><video src="video/review-4.mp4" poster="video/review-4.jpg" muted playsinline loop preload="none"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vcap"><b>Happy client</b><em>Video review</em></span></button></li>
+<li class="vthumb" data-src="video/review-1.mp4" data-name="Clark Exteriors"><button type="button" aria-label="Play video review from Clark Exteriors"><img src="video/review-1.jpg" alt="Video review from Clark Exteriors" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button><span class="vcap"><b>Clark Exteriors</b><em>Roofing contractor</em></span></li>
+<li class="vthumb" data-src="video/review-2.mp4" data-name="Huskins Services LLC"><button type="button" aria-label="Play video review from Huskins Services LLC"><img src="video/review-2.jpg" alt="Video review from Huskins Services LLC" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button><span class="vcap"><b>Huskins Services LLC</b><em>Cleaning &amp; remodeling</em></span></li>
+<li class="vthumb" data-src="video/review-3.mp4" data-name="Dawn"><button type="button" aria-label="Play video review from Dawn"><img src="video/review-3.jpg" alt="Video review from Dawn" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button><span class="vcap"><b>Dawn</b><em>Client video review</em></span></li>
+<li class="vthumb" data-src="video/review-4.mp4" data-name="Chase, Clean Cut"><button type="button" aria-label="Play video review from Chase, Clean Cut"><img src="video/review-4.jpg" alt="Video review from Chase, Clean Cut" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button><span class="vcap"><b>Chase, Clean Cut</b><em>Client video review</em></span></li>
       </ul>
       <p class="vnote">More video reviews are on the way.</p>
     </div>
@@ -591,25 +602,21 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   </div>
 </footer>
 
-<dialog class="vmodal" id="vmodal" aria-label="Video review"><div class="vmodal__bar"><span id="vmName"></span><button type="button" id="vmClose">Close</button></div><video id="vmVideo" controls playsinline></video></dialog>
+<dialog class="vmodal" id="vmodal" aria-label="Video review"><button class="vmodal__x" type="button" id="vmClose" aria-label="Close video"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div class="vmodal__frame"><div class="vmodal__bar"><span id="vmName"></span></div><video id="vmVideo" controls playsinline></video></div></dialog>
 <script>
   const burger = document.getElementById('burger'), menu = document.getElementById('menu');
   burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+  // Video reviews: hover only pops the thumbnail; click opens the player
   const vm = document.getElementById('vmodal'), vmv = document.getElementById('vmVideo');
-  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
-  document.querySelectorAll('.vthumb').forEach(v => {
-    const vid = v.querySelector('video');
-    v.addEventListener('pointerenter', () => { if (fine) { vid.muted = true; vid.play().catch(() => {}); } });
-    v.addEventListener('pointerleave', () => vid.pause());
-    v.querySelector('button').addEventListener('click', () => {
-      vid.pause();
-      document.getElementById('vmName').textContent = v.dataset.name;
-      vmv.src = v.dataset.src; vmv.muted = false;
-      vm.showModal && vm.showModal(); vmv.play().catch(() => {});
-    });
-  });
-  const closeV = () => { vmv.pause(); vm.close(); };
-  document.getElementById('vmClose').addEventListener('click', closeV);
-  vm.addEventListener('click', e => { if (e.target === vm) closeV(); });
-  vm.addEventListener('close', () => vmv.pause());
+  document.querySelectorAll('.vthumb button').forEach(b => b.addEventListener('click', () => {
+    const v = b.closest('.vthumb');
+    document.getElementById('vmName').textContent = v.dataset.name;
+    vmv.poster = v.querySelector('img').src; vmv.src = v.dataset.src;
+    vm.showModal && vm.showModal();
+    vmv.play().catch(() => {});
+  }));
+  const stopV = () => { vmv.pause(); vmv.removeAttribute('src'); vmv.load(); };
+  document.getElementById('vmClose').addEventListener('click', () => vm.close());
+  vm.addEventListener('click', e => { if (e.target === vm) vm.close(); });
+  vm.addEventListener('close', stopV);
 </script>
