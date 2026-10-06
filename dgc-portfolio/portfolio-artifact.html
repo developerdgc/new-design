@@ -200,8 +200,8 @@ p { margin: 0; }
 .ghead h3 { font-size: clamp(1.4rem, 2.6vw, 2.1rem); letter-spacing: -.02em; white-space: nowrap; }
 .ghead h3 em { font-style: normal; color: var(--orange-ink); }
 .ghead__line { flex: 1; height: 2px; min-width: 20px; background: linear-gradient(90deg, var(--orange), transparent); border-radius: 2px; }
-.ghead a { flex: none; font-weight: 800; font-size: .88rem; color: var(--ink); text-decoration: none; padding: 10px 16px; border-radius: 999px; border: 1.5px solid var(--line); transition: border-color .25s, color .25s; }
-.ghead a:hover { background: var(--orange); border-color: var(--orange); color: var(--abyss); }
+.ghead a { flex: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: .92rem; color: var(--abyss); text-decoration: none; padding: 13px 22px; border-radius: 999px; background: var(--orange); box-shadow: 0 12px 24px -12px rgba(246,164,64,.9); transition: background .25s, color .25s, transform .25s, box-shadow .25s; }
+.ghead a:hover { background: var(--navy); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 26px -12px rgba(6,40,54,.7); }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 34px; margin-top: 64px; }
 .work { min-width: 0; transition: opacity .4s, filter .4s, translate .5s; }
 .grid.is-staggered .work.lift { translate: 0 96px; }
@@ -612,6 +612,10 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 <article class="work" data-cat="logo"><div class="lmock" style="--c:#2f8fc4"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/clean-environments.png" alt="Clean Environments logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/clean-environments.png" alt=""></span></div><div class="wmeta"><div><h3>Clean Environments</h3><p><em>Logo</em>Brand identity</p></div></div></article>
 <article class="work" data-cat="logo"><div class="lmock" style="--c:#f2c230"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/many-colors.png" alt="Many Colors logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/many-colors.png" alt=""></span></div><div class="wmeta"><div><h3>Many Colors</h3><p><em>Logo</em>Brand identity</p></div></div></article>
 <article class="work" data-cat="logo"><div class="lmock" style="--c:#d03030"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/clark-exteriors.png" alt="Clark Exteriors logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/clark-exteriors.png" alt=""></span></div><div class="wmeta"><div><h3>Clark Exteriors</h3><p><em>Logo</em>Brand identity</p></div></div></article>
+<article class="work" data-cat="logo"><div class="lmock" style="--c:#1f3a5f"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/kdk-power.png" alt="KDK Power Contractor logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/kdk-power.png" alt=""></span></div><div class="wmeta"><div><h3>KDK Power Contractor</h3><p><em>Logo</em>Brand identity</p></div></div></article>
+<article class="work" data-cat="logo"><div class="lmock" style="--c:#c0202a"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/adams-coatings.png" alt="Adam’s Detailing &amp; Coatings logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/adams-coatings.png" alt=""></span></div><div class="wmeta"><div><h3>Adam’s Detailing & Coatings</h3><p><em>Logo</em>Brand identity</p></div></div></article>
+<article class="work" data-cat="logo"><div class="lmock" style="--c:#d42a1e"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/orange-county-towing.png" alt="Orange County Towing logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/orange-county-towing.png" alt=""></span></div><div class="wmeta"><div><h3>Orange County Towing</h3><p><em>Logo</em>Brand identity</p></div></div></article>
+<article class="work" data-cat="logo"><div class="lmock" style="--c:#1d2a7a"><span class="lmock__back" aria-hidden="true"><i></i><i></i><i></i></span><span class="lmock__front"><img src="img/logos/interstate-roadside.png" alt="Interstate Roadside Service logo" loading="lazy"></span><span class="lmock__seal" aria-hidden="true"><img src="img/logos/interstate-roadside.png" alt=""></span></div><div class="wmeta"><div><h3>Interstate Roadside Service</h3><p><em>Logo</em>Brand identity</p></div></div></article>
 <article class="work work--case" data-cat="case"><button class="case" type="button" data-title="Exotic Car Rental" data-file=""><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15v-2.5l2.2-4A2 2 0 0 1 7 7.5h7.5a3 3 0 0 1 2.3 1.1L19 11l1.6.5a1.5 1.5 0 0 1 1.1 1.4V15"/><path d="M2 15h20"/><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M6 11h11"/></svg></span><span class="case__label">Case study</span></span><span class="case__title">Exotic Car Rental</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button></article>
 <article class="work work--case" data-cat="case"><button class="case" type="button" data-title="Cannabis Dispensary" data-file=""><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 15C7 15 3 11 3 6c4 0 7 2 9 5 2-3 5-5 9-5 0 5-4 9-9 9z"/><path d="M12 15V3"/></svg></span><span class="case__label">Case study</span></span><span class="case__title">Cannabis Dispensary</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button></article>
 <article class="work work--case" data-cat="case"><button class="case" type="button" data-title="Limousine Service" data-file=""><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 15v-2l2-3h17l2 3v2z"/><path d="M6 10l1.5-2h9L18 10"/><circle cx="6" cy="16" r="1.8"/><circle cx="18" cy="16" r="1.8"/><path d="M10 10v5M14 10v5"/></svg></span><span class="case__label">Case study</span></span><span class="case__title">Limousine Service</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button></article>
@@ -621,8 +625,6 @@ figcaption small { font-size: .78rem; color: var(--fog); }
       </div>
       <div class="more" id="moreWrap">
         <button class="btn btn--hot" type="button" id="more">Show more websites <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
-        <button class="btn btn--hot" type="button" id="allWeb" data-open="web">See All Web Projects <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></button>
-        <a class="btn btn--hot" id="allCase" href="https://claude.ai/artifact/GHGqaZctwdU8NkR8bJHtrF">View all case studies <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
     </div>
     <div class="cursor" id="cursor" aria-hidden="true">Visit<br>site ↗</div>
@@ -770,7 +772,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   const cards = [...grid.querySelectorAll('.work')];
   const heads = [...grid.querySelectorAll('.ghead')];
   const tabs = [...document.querySelectorAll('.tab')];
-  const more = document.getElementById('more'), allWeb = document.getElementById('allWeb'), allCase = document.getElementById('allCase');
+  const more = document.getElementById('more');
   const wide = matchMedia('(min-width: 1081px)');
   let cur = 'all', shown = PAGE;
   function render() {
@@ -778,7 +780,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     if (cur === 'all') {
       // All: first six websites, then logos, then case studies
       const web = cards.filter(c => c.dataset.cat === 'web').slice(0, 6);
-      list = [...web, ...cards.filter(c => c.dataset.cat === 'logo'), ...cards.filter(c => c.dataset.cat === 'case')];
+      list = [...web, ...cards.filter(c => c.dataset.cat === 'logo').slice(0, 6), ...cards.filter(c => c.dataset.cat === 'case')];
     } else {
       list = cards.filter(c => c.dataset.cat === cur);
       if (cur === 'web') list = list.slice(0, shown);
@@ -796,8 +798,6 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     });
     grid.classList.toggle('is-staggered', wide.matches);
     more.hidden = !(cur === 'web' && shown < cards.filter(c => c.dataset.cat === 'web').length);
-    allWeb.hidden = cur !== 'all';
-    allCase.hidden = cur !== 'case';
   }
   function openTab(f) {
     tabs.forEach(b => b.setAttribute('aria-pressed', b.dataset.f === f));
