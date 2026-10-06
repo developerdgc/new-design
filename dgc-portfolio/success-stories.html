@@ -81,7 +81,8 @@ p { margin: 0; }
 .burger svg { width: 22px; height: 22px; fill: currentColor; }
 
 /* Hero */
-.hero { position: relative; overflow: hidden; background: var(--navy); color: var(--fog); padding-block: 60px 0; isolation: isolate; }
+.hero { position: relative; overflow: hidden; background: var(--navy-2); color: var(--fog); isolation: isolate; }
+.hero__top { position: relative; padding-block: 60px 56px; background: radial-gradient(55% 75% at 0% 0%, rgba(251,142,40,.55), transparent 62%), radial-gradient(50% 70% at 100% 100%, rgba(34,200,204,.55), transparent 62%), radial-gradient(40% 50% at 75% 20%, rgba(34,200,204,.18), transparent 70%), linear-gradient(-60deg, #0b4250 0%, #062836 55%, #041d28 100%); }
 .hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; background: radial-gradient(closest-side, rgba(28,222,225,.26), transparent 70%); z-index: -1; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 40px; align-items: center; }
@@ -97,7 +98,7 @@ p { margin: 0; }
 .hero h1 .ring path { fill: none; stroke: var(--orange); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 420; stroke-dashoffset: 0; animation: draw 1.4s .3s cubic-bezier(.6,0,.2,1) backwards; }
 @keyframes draw { from { stroke-dashoffset: 420; } }
 .hero h1 .out { color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.6); }
-.hero__lead { margin-top: 22px; font-size: 1.06rem; max-width: 46ch; color: var(--fog); }
+.hero__lead { margin-top: 22px; font-size: 1.06rem; max-width: 46ch; color: #eaf8fa; }
 .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 
 /* Hero showcase: three live-scrolling screens */
@@ -126,7 +127,7 @@ p { margin: 0; }
 @keyframes bob { 50% { transform: translateY(-10px); } }
 
 /* Client wall: moving thumbnails crossed by an industry ribbon */
-.clients { position: relative; margin-top: 56px; background: var(--navy-2); border-top: 1px solid var(--line-d); padding-block: 36px 44px; overflow: hidden; }
+.clients { position: relative; margin-top: 0; background: var(--navy-2); border-top: 1px solid var(--line-d); padding-block: 36px 44px; overflow: hidden; }
 .clients__head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
 .clients__head p { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 12px; }
 .clients__head p::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #3ccf6e; box-shadow: 0 0 0 5px rgba(60,207,110,.18); animation: pulse 2s infinite; }
@@ -439,7 +440,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .wrap { padding-inline: 16px; }
   .top__mail, .top__tag { display: none; }
   .top .wrap { justify-content: center; }
-  .hero { padding-block: 56px 0; }
+  .hero__top { padding-block: 44px 40px; }
   .show { height: 380px; }
   .screen--a { width: 70%; left: 15%; height: 340px; }
   .screen--b, .screen--c { width: 52%; height: 260px; }
@@ -473,9 +474,29 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .hint i::after, .badge svg { animation: none; }
 }
 
+/* Hero: dark navy with orange + cyan brand glows */
+.hero__top::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); }
+.hero__top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #FB8E28, #22C8CC); }
+.hero__top > .wrap { position: relative; z-index: 1; }
+.hero h1 { text-transform: capitalize; }
+.hero h1 .ring { color: #fff; background: linear-gradient(90deg, #FB8E28, #f6a440); color: var(--abyss); padding: 0 .16em .04em; border-radius: 10px; box-shadow: 0 16px 34px -14px rgba(251,142,40,.8); }
+.hero h1 .ring svg { display: none; }
+.hero h1 .out { color: transparent; -webkit-text-stroke: 1.5px #22C8CC; }
+.hero__lead { color: #dcebef; }
+.hero .rate { background: rgba(255,255,255,.06); }
+.hero .show__cta .btn { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.3); }
+.hero .show__cta .btn:hover { background: #22C8CC; border-color: #22C8CC; color: var(--abyss); }
+.hero::before, .hero::after { display: none; }
+
+/* Dark sections: navy with cyan corner glows like the live site */
+.dark, .clients, .foot, .phero { background: radial-gradient(38% 55% at 0% 0%, rgba(28,222,225,.55), transparent 70%), radial-gradient(34% 50% at 100% 100%, rgba(28,222,225,.45), transparent 70%), #062836; }
+.clients { background: radial-gradient(30% 70% at 0% 0%, rgba(28,222,225,.35), transparent 70%), radial-gradient(30% 70% at 100% 100%, rgba(28,222,225,.3), transparent 70%), #04202c; }
+.process::before { display: none; }
+
+.phero { background: radial-gradient(38% 55% at 0% 0%, rgba(28,222,225,.55), transparent 70%), radial-gradient(34% 50% at 100% 100%, rgba(28,222,225,.45), transparent 70%), #062836 !important; }
 /* Sub-page hero */
 .phero { position: relative; overflow: hidden; background: var(--navy); color: var(--fog); padding-block: 72px 76px; isolation: isolate; }
-.phero::before { content: ""; position: absolute; right: -8%; top: -50%; width: 720px; height: 720px; background: radial-gradient(closest-side, rgba(246,164,64,.24), transparent 70%); z-index: -1; }
+.phero::before { display: none; }
 .phero .mark-wm { right: 6%; top: 50%; width: 320px; margin-top: -160px; opacity: .07; }
 .phero h1 { color: #fff; font-size: clamp(2.3rem, 5vw, 4.4rem); letter-spacing: -.035em; line-height: 1.02; margin-top: 18px; max-width: 16ch; }
 .phero h1 em { font-style: normal; color: var(--orange); }
