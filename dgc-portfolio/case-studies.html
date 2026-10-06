@@ -187,8 +187,11 @@ p { margin: 0; }
 @media (hover: none) { .hint--mouse { display: none; } .hint--touch { display: inline; } }
 @keyframes wheel { 60% { transform: translateY(10px); opacity: 0; } 100% { opacity: 0; } }
 
-.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 56px; }
-.tab { font: 700 .98rem/1 var(--body); padding: 15px 28px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; transition: background .25s, color .25s, border-color .25s, transform .25s, box-shadow .25s; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 48px; }
+.tab { font: 800 1rem/1 var(--body); padding: 17px 32px; border-radius: 12px; border: 0; background: var(--orange); color: var(--abyss); cursor: pointer; box-shadow: 0 10px 22px -14px rgba(246,164,64,.9); transition: background .25s, color .25s, transform .25s, box-shadow .25s; }
+.tab:hover { background: var(--navy); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 26px -14px rgba(6,40,54,.8); }
+.tab[aria-pressed="true"] { background: var(--teal); color: #fff; box-shadow: 0 14px 28px -12px rgba(17,100,102,.8); }
+.filters { padding-top: 34px; border-top: 1px solid var(--line); }
 .ghead { grid-column: 1 / -1; display: flex; align-items: center; gap: 22px; }
 .ghead[hidden], .grid[hidden], [hidden].btn, .work[hidden] { display: none; }
 .ghead + .work, .ghead ~ .work { min-width: 0; }
@@ -199,10 +202,7 @@ p { margin: 0; }
 .ghead__line { flex: 1; height: 2px; min-width: 20px; background: linear-gradient(90deg, var(--orange), transparent); border-radius: 2px; }
 .ghead a { flex: none; font-weight: 800; font-size: .88rem; color: var(--ink); text-decoration: none; padding: 10px 16px; border-radius: 999px; border: 1.5px solid var(--line); transition: border-color .25s, color .25s; }
 .ghead a:hover { background: var(--orange); border-color: var(--orange); color: var(--abyss); }
-.tab:hover { background: var(--navy); border-color: var(--navy); color: #fff; transform: translateY(-2px); }
-.tab[aria-pressed="true"] { background: var(--orange); border-color: var(--orange); color: var(--abyss); box-shadow: 0 12px 26px -12px rgba(246,164,64,.9); }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 34px; margin-top: 64px; }
-.tab--win { color: var(--orange-ink); }
 .work { min-width: 0; transition: opacity .4s, filter .4s, translate .5s; }
 .grid.is-staggered .work.lift { translate: 0 96px; }
 .grid.is-staggered { padding-bottom: 96px; }
@@ -252,23 +252,17 @@ p { margin: 0; }
 .meter { width: 220px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .meter i { display: block; height: 100%; background: var(--orange); transition: width .5s; }
 
-/* Logo mockups: stacked business cards on a tinted desk */
-.lmock { --c: var(--navy); position: relative; aspect-ratio: 4 / 3.3; border-radius: 22px; overflow: hidden; isolation: isolate; perspective: 900px;
-  background: radial-gradient(80% 70% at 85% 10%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%), linear-gradient(160deg, #f7fafb, #e4edf0); box-shadow: inset 0 0 0 1px var(--line); }
-.lmock::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(6,40,54,.09) 1px, transparent 1px); background-size: 18px 18px; }
-.lmock__back, .lmock__front { position: absolute; left: 50%; top: 50%; width: 64%; aspect-ratio: 1.75; border-radius: 10px; transition: transform .7s cubic-bezier(.2,.7,.2,1), box-shadow .7s; }
-.lmock__back { background: var(--c); transform: translate(-58%, -66%) rotate(-11deg); box-shadow: 0 24px 40px -22px rgba(6,40,54,.6); padding: 9% 9%; display: flex; flex-direction: column; justify-content: flex-end; gap: 7px; overflow: hidden; }
-.lmock__back::after { content: ""; position: absolute; right: -18%; top: -30%; width: 70%; aspect-ratio: 1; border-radius: 50%; border: 14px solid rgba(255,255,255,.14); }
-.lmock__back i { display: block; height: 5px; border-radius: 4px; background: rgba(255,255,255,.55); width: 46%; }
-.lmock__back i:nth-child(2) { width: 34%; opacity: .7; } .lmock__back i:nth-child(3) { width: 26%; opacity: .5; }
-.lmock__front { display: grid; place-items: center; padding: 6% 9%; background: linear-gradient(135deg, #fff 60%, #f1f4f5); transform: translate(-44%, -40%) rotate(5deg); box-shadow: 0 30px 50px -26px rgba(6,40,54,.7), 0 2px 0 rgba(255,255,255,.9) inset; }
-.lmock__front::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 10px 10px; background: var(--c); }
-.lmock__front img { max-width: 100%; max-height: 100%; width: auto; object-fit: contain; }
-.lmock__seal { position: absolute; right: 7%; bottom: 8%; width: 23%; aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; padding: 12%; padding: 3.5%; box-shadow: 0 16px 30px -16px rgba(6,40,54,.6), 0 0 0 5px color-mix(in srgb, var(--c) 30%, #fff); transition: transform .8s cubic-bezier(.2,.7,.2,1); }
-.lmock__seal img { width: 100%; height: 100%; object-fit: contain; }
-.work:hover .lmock__front { transform: translate(-50%, -50%) rotate(0deg) scale(1.06); box-shadow: 0 40px 60px -26px rgba(6,40,54,.8); }
-.work:hover .lmock__back { transform: translate(-64%, -74%) rotate(-17deg); }
-.work:hover .lmock__seal { transform: rotate(-24deg) scale(1.08); }
+/* Logo mockups: two real photo mockups that cross-fade on hover */
+.lmock { position: relative; aspect-ratio: 900 / 743; border-radius: 22px; overflow: hidden; background: var(--mist); box-shadow: 0 30px 50px -36px rgba(6,40,54,.6); isolation: isolate; }
+.lmock > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .7s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.lmock__b { opacity: 0; transform: scale(1.08); }
+.work:hover .lmock__a { opacity: 0; transform: scale(1.06); }
+.work:hover .lmock__b { opacity: 1; transform: scale(1); }
+.lmock::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(6,40,54,.08); pointer-events: none; }
+.lmock__logo { position: absolute; z-index: 2; left: 14px; top: 14px; height: 46px; padding: 6px 12px; border-radius: 12px; background: rgba(255,255,255,.92); backdrop-filter: blur(6px); display: grid; place-items: center; box-shadow: 0 10px 24px -12px rgba(6,40,54,.6); }
+.lmock__logo img { position: static; display: block; height: 32px; width: auto; max-width: 120px; object-fit: contain; }
+.lmock__hint { position: absolute; z-index: 2; right: 14px; bottom: 14px; padding: 7px 12px; border-radius: 999px; background: var(--navy); color: #fff; font-size: .72rem; font-weight: 800; letter-spacing: .04em; transition: background .3s, color .3s; }
+.work:hover .lmock__hint { background: var(--orange); color: var(--abyss); }
 
 /* Case study cards: DGC navy card, brand mark watermark, industry icon */
 .case { --gx: 80%; --gy: 100%; position: relative; display: flex; flex-direction: column; width: 100%; aspect-ratio: 5 / 4; padding: 24px; border: 1px solid rgba(28,222,225,.18); border-radius: 22px; color: #fff; text-align: left; font: inherit; cursor: pointer; overflow: hidden; isolation: isolate; container-type: inline-size;
