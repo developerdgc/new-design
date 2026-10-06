@@ -81,7 +81,8 @@ p { margin: 0; }
 .burger svg { width: 22px; height: 22px; fill: currentColor; }
 
 /* Hero */
-.hero { position: relative; overflow: hidden; background: var(--navy); color: var(--fog); padding-block: 60px 0; isolation: isolate; }
+.hero { position: relative; overflow: hidden; background: var(--navy-2); color: var(--fog); isolation: isolate; }
+.hero__top { position: relative; padding-block: 60px 56px; background: linear-gradient(180deg, #062836 0%, #1CDEE1 100%); }
 .hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; background: radial-gradient(closest-side, rgba(28,222,225,.26), transparent 70%); z-index: -1; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 40px; align-items: center; }
@@ -97,7 +98,7 @@ p { margin: 0; }
 .hero h1 .ring path { fill: none; stroke: var(--orange); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 420; stroke-dashoffset: 0; animation: draw 1.4s .3s cubic-bezier(.6,0,.2,1) backwards; }
 @keyframes draw { from { stroke-dashoffset: 420; } }
 .hero h1 .out { color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.6); }
-.hero__lead { margin-top: 22px; font-size: 1.06rem; max-width: 46ch; color: var(--fog); }
+.hero__lead { margin-top: 22px; font-size: 1.06rem; max-width: 46ch; color: #eaf8fa; }
 .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 
 /* Hero showcase: three live-scrolling screens */
@@ -126,7 +127,7 @@ p { margin: 0; }
 @keyframes bob { 50% { transform: translateY(-10px); } }
 
 /* Client wall: moving thumbnails crossed by an industry ribbon */
-.clients { position: relative; margin-top: 56px; background: var(--navy-2); border-top: 1px solid var(--line-d); padding-block: 36px 44px; overflow: hidden; }
+.clients { position: relative; margin-top: 0; background: var(--navy-2); border-top: 1px solid var(--line-d); padding-block: 36px 44px; overflow: hidden; }
 .clients__head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
 .clients__head p { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 12px; }
 .clients__head p::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #3ccf6e; box-shadow: 0 0 0 5px rgba(60,207,110,.18); animation: pulse 2s infinite; }
@@ -439,7 +440,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .wrap { padding-inline: 16px; }
   .top__mail, .top__tag { display: none; }
   .top .wrap { justify-content: center; }
-  .hero { padding-block: 56px 0; }
+  .hero__top { padding-block: 44px 40px; }
   .show { height: 380px; }
   .screen--a { width: 70%; left: 15%; height: 340px; }
   .screen--b, .screen--c { width: 52%; height: 260px; }
@@ -502,6 +503,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 
 <main>
   <section class="hero">
+    <div class="hero__top">
     <div class="wrap hero__grid">
       <div>
         <span class="rate"><span class="faces" aria-hidden="true"><span style="background:#1cdee1">B</span><span style="background:#f6a440">D</span><span style="background:#9ff6f7">J</span><span style="background:#ffd29a">N</span></span><span class="stars" aria-hidden="true">★★★★★</span><span><b>5.0 on Google</b> · 13 reviews</span></span>
@@ -522,6 +524,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
       </div>
       <div class="show__cta"><a class="btn btn--ghost" href="#work" data-open="web">See All Web Projects <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
       </div>
+    </div>
     </div>
     <div class="clients" id="video-reviews">
       <div class="wrap clients__head"><p>Video reviews</p><a href="https://claude.ai/artifact/UJVdEQgTu5RaGLeUZTtCWL">Watch all video reviews <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
