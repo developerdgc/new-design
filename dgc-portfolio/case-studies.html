@@ -514,9 +514,9 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .vthumb:hover button { border-color: var(--orange) !important; box-shadow: 0 30px 60px -20px rgba(0,0,0,.85), 0 0 0 4px var(--orange) !important; }
 
 /* Header v2: top info bar + floating glass pill over the hero */
-.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; margin-bottom: -150px; pointer-events: none; }
+.site-head { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 50; pointer-events: none; transition: transform .35s ease; will-change: transform; }
 .site-head > * { pointer-events: auto; }
-.site-head .top { background: transparent; color: #fff; font-size: .92rem; max-height: 60px; overflow: hidden; transition: max-height .35s, opacity .3s; }
+.site-head .top { background: transparent; color: #fff; font-size: .92rem; height: 50px; overflow: hidden; transition: opacity .3s; }
 .site-head .top .wrap { min-height: 50px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .site-head .top a { display: inline-flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font-weight: 600; }
 .site-head .top a:hover { color: var(--cyan); }
@@ -536,7 +536,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .site-head .nav__links a[aria-current] { background: none; color: var(--cyan); }
 .site-head .nav .btn { padding: 15px 26px; font-size: 1rem; }
 .site-head .nav .btn svg { width: 18px; height: 18px; }
-.site-head.scrolled .top { max-height: 0; opacity: 0; }
+.site-head.scrolled { transform: translateY(-50px); }
+.site-head.scrolled .top { opacity: 0; pointer-events: none; }
 .site-head.scrolled .nav .wrap { background: rgba(4,32,44,.92); border-color: rgba(255,255,255,.35); }
 .hero__top { padding-top: 210px !important; }
 @media (max-width: 1080px) {
@@ -544,7 +545,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .site-head .nav .wrap { padding: 0 14px 0 18px; min-height: 72px; }
 }
 @media (max-width: 680px) {
-  .site-head { margin-bottom: -130px; }
+  .site-head .top { height: 44px; }
+  .site-head.scrolled { transform: translateY(-44px); }
   .site-head .top .wrap { grid-template-columns: 1fr; justify-items: center; min-height: 44px; }
   .site-head .top__mail, .top__soc { display: none !important; }
   .site-head .nav__logo img { height: 40px; }
@@ -709,7 +711,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 
 <script>
   const siteHead = document.getElementById('siteHead');
-  const onScroll = () => siteHead.classList.toggle('scrolled', scrollY > 40);
+  let headOn = false;
+  const onScroll = () => { const y = scrollY; if (!headOn && y > 80) headOn = true; else if (headOn && y < 20) headOn = false; siteHead.classList.toggle('scrolled', headOn); };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   const burger = document.getElementById('burger'), menu = document.getElementById('menu');
   burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
