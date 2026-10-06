@@ -82,7 +82,7 @@ p { margin: 0; }
 
 /* Hero */
 .hero { position: relative; overflow: hidden; background: var(--navy-2); color: var(--fog); isolation: isolate; }
-.hero__top { position: relative; padding-block: 60px 56px; background: linear-gradient(180deg, #062836 0%, #1CDEE1 100%); }
+.hero__top { position: relative; padding-block: 60px 56px; background: linear-gradient(-60deg, #22C8CC 0%, #FB8E28 100%); }
 .hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; background: radial-gradient(closest-side, rgba(28,222,225,.26), transparent 70%); z-index: -1; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 75%); }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 40px; align-items: center; }
@@ -473,6 +473,24 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   .screen2 img, .rail i { transition: none; }
   .hint i::after, .badge svg { animation: none; }
 }
+
+/* Hero on the live orange-to-cyan gradient */
+.hero h1 { text-shadow: 0 6px 18px rgba(6,40,54,.35); }
+.hero h1 .ring { color: #fff; background: var(--teal); padding: 0 .16em .04em; border-radius: 10px; text-shadow: none; box-shadow: 0 14px 30px -14px rgba(6,40,54,.7); }
+.hero h1 .ring svg { display: none; }
+.hero h1 .out { color: #fff; -webkit-text-stroke: 0; }
+.hero__lead { color: #fff; text-shadow: 0 1px 10px rgba(6,40,54,.35); }
+.hero .rate { background: rgba(6,40,54,.55); border-color: rgba(255,255,255,.18); }
+.hero .btn--hot { background: var(--navy); color: #fff; box-shadow: 0 14px 30px -14px rgba(6,40,54,.8); }
+.hero .btn--hot:hover { background: #fff; color: var(--navy); }
+.hero .btn--ghost { border-color: rgba(255,255,255,.7); color: #fff; background: rgba(255,255,255,.08); }
+.hero .btn--ghost:hover { background: #fff; border-color: #fff; color: var(--navy); }
+.hero .show__cta .btn { background: rgba(6,40,54,.55); border-color: rgba(255,255,255,.4); }
+.hero .show__cta .btn:hover { background: #fff; color: var(--navy); }
+.badge { background: var(--navy) !important; box-shadow: 0 20px 40px -18px rgba(6,40,54,.9) !important; }
+.badge text { fill: #fff !important; }
+.badge b { color: var(--orange); }
+.hero::before { display: none; }
 </style>
 
 <div class="top">
