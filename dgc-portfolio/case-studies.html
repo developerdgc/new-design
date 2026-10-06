@@ -554,6 +554,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 }
 
 /* Case study sub-filters in the Work section */
+.subfilters--grid { grid-column: 1 / -1; justify-content: flex-start; margin-top: -24px; }
 .subfilters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
 .subfilters[hidden] { display: none; }
 .stab { font: 700 .88rem/1 var(--body); padding: 11px 18px; border-radius: 10px; border: 1.5px solid var(--navy); background: #fff; color: var(--navy); cursor: pointer; transition: background .25s, color .25s; }
@@ -728,10 +729,9 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
   // Channel filters
   const ctabs = [...document.querySelectorAll('.filters .tab')], ccards = [...document.querySelectorAll('#cgrid .case')];
-  ccards.forEach(c => c.hidden = +c.dataset.rank >= 3);
   ctabs.forEach(t => t.addEventListener('click', () => {
     ctabs.forEach(b => b.setAttribute('aria-pressed', b === t));
-    ccards.forEach(c => c.hidden = t.dataset.f === 'all' ? +c.dataset.rank >= 3 : c.dataset.channel !== t.dataset.f);
+    ccards.forEach(c => c.hidden = t.dataset.f !== 'all' && c.dataset.channel !== t.dataset.f);
   }));
   // Case studies: open the full case study as a scrollable image
   const cm = document.getElementById('cmodal'), cmImg = document.getElementById('cmImg'), cmLoad = document.getElementById('cmLoad');
