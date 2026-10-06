@@ -565,6 +565,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .phero p { margin-top: 18px; max-width: 54ch; font-size: 1.06rem; }
 .phero .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .pbody { padding-block: 80px 100px; }
+.pbody .filters { margin: 0 0 44px; padding-top: 0; border-top: 0; }
+.case[hidden] { display: none; }
 .cgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
 .vgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 .vgrid .vthumb { width: auto; }
@@ -620,7 +622,8 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     </div>
   </section>
   <section class="pbody" id="cases">
-    <div class="wrap cgrid">
+    <div class="wrap"><div class="filters" role="group" aria-label="Filter case studies"><button class="tab" type="button" data-f="all" aria-pressed="true">All</button><button class="tab" type="button" data-f="Google Business Profile" aria-pressed="false">Google Business Profile</button><button class="tab" type="button" data-f="AI Overview" aria-pressed="false">AI Overview</button><button class="tab" type="button" data-f="Google Ads" aria-pressed="false">Google Ads</button><button class="tab" type="button" data-f="Local Services Ads" aria-pressed="false">Local Services Ads</button><button class="tab" type="button" data-f="Web SEO" aria-pressed="false">Web SEO</button></div></div>
+    <div class="wrap cgrid" id="cgrid">
 <button class="case" type="button" data-title="Cannabis Dispensary" data-channel="Google Business Profile" data-file="img/casestudies/gbp-cannabis-dispensary.jpg"><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 15C7 15 3 11 3 6c4 0 7 2 9 5 2-3 5-5 9-5 0 5-4 9-9 9z"/><path d="M12 15V3"/></svg></span><span class="case__label">Google Business Profile</span></span><span class="case__title">Cannabis Dispensary</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button>
 <button class="case" type="button" data-title="Towing Company" data-channel="Google Ads" data-file="img/casestudies/ads-towing-company.jpg"><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16V9h8v7"/><path d="M10 11h4l3 3v2h-7"/><path d="M2 9l5-4h3"/><path d="M21 7l-4 6"/><path d="M21 7v3"/><circle cx="6" cy="17" r="2"/><circle cx="15" cy="17" r="2"/></svg></span><span class="case__label">Google Ads</span></span><span class="case__title">Towing Company</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button>
 <button class="case" type="button" data-title="Cleaning Company" data-channel="AI Overview" data-file="img/casestudies/aio-cleaning-company.jpg"><img class="case__mark" src="img/brand/dgc-mark-white.png" alt="" aria-hidden="true"><span class="case__top"><span class="case__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h6l1 3v9a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-9z"/><path d="M9 8V5h4v3"/><path d="M13 5h3l1 2"/><path d="M19 4l2-1M19 7h2.5M19 10l2 1"/></svg></span><span class="case__label">AI Overview</span></span><span class="case__title">Cleaning Company</span><span class="case__foot"><img src="img/brand/dgc-logo-white.png" alt="DGC" width="78" height="22"><span class="case__go">Read the case study<i aria-hidden="true">→</i></span></span></button>
@@ -716,6 +719,12 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   const burger = document.getElementById('burger'), menu = document.getElementById('menu');
   burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+  // Channel filters
+  const ctabs = [...document.querySelectorAll('.filters .tab')], ccards = [...document.querySelectorAll('#cgrid .case')];
+  ctabs.forEach(t => t.addEventListener('click', () => {
+    ctabs.forEach(b => b.setAttribute('aria-pressed', b === t));
+    ccards.forEach(c => c.hidden = t.dataset.f !== 'all' && c.dataset.channel !== t.dataset.f);
+  }));
   // Case studies: open the full case study as a scrollable image
   const cm = document.getElementById('cmodal'), cmImg = document.getElementById('cmImg'), cmLoad = document.getElementById('cmLoad');
   document.querySelectorAll('.case').forEach(b => b.addEventListener('click', () => {
