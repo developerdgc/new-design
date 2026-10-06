@@ -554,6 +554,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 }
 
 /* Case study sub-filters in the Work section */
+.subfilters--grid { grid-column: 1 / -1; justify-content: flex-start; margin-top: -24px; }
 .subfilters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
 .subfilters[hidden] { display: none; }
 .stab { font: 700 .88rem/1 var(--body); padding: 11px 18px; border-radius: 10px; border: 1.5px solid var(--navy); background: #fff; color: var(--navy); cursor: pointer; transition: background .25s, color .25s; }
@@ -656,6 +657,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
         <div class="ghead" data-group="web"><h3>Website <em>Projects</em></h3><span class="ghead__line" aria-hidden="true"></span><a href="#work" data-open="web">All websites →</a></div>
         <div class="ghead" data-group="logo"><h3>Client <em>Logos</em></h3><span class="ghead__line" aria-hidden="true"></span><a href="#work" data-open="logo">Logo work →</a></div>
         <div class="ghead" data-group="case"><h3>Case <em>Studies</em></h3><span class="ghead__line" aria-hidden="true"></span><a href="https://claude.ai/artifact/GHGqaZctwdU8NkR8bJHtrF">All case studies →</a></div>
+        <div class="subfilters subfilters--grid" id="subAll" role="group" aria-label="Filter case studies"><button class="stab" type="button" data-f="all" aria-pressed="true">All</button><button class="stab" type="button" data-f="Google Business Profile" aria-pressed="false">Google Profile</button><button class="stab" type="button" data-f="AI Overview" aria-pressed="false">AI Overview</button><button class="stab" type="button" data-f="Google Ads" aria-pressed="false">PPC</button><button class="stab" type="button" data-f="Local Services Ads" aria-pressed="false">LSA</button><button class="stab" type="button" data-f="Web SEO" aria-pressed="false">Web SEO</button></div>
 <article class="work" data-cat="web"><a class="device" href="https://libertyhomeinspectionspllc.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.6s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>libertyhomeinspectionspllc.com</b></span></div><div class="screen2"><img src="img/work/librity-home-inspection.jpg" alt="Full homepage of a home inspection website by Digital Growth Catalyze for libertyhomeinspectionspllc.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><div><h3>libertyhomeinspectionspllc.com</h3><p><em>Web</em>Home Inspection</p></div><a class="go" href="https://libertyhomeinspectionspllc.com/" target="_blank" rel="noopener nofollow" aria-label="Visit libertyhomeinspectionspllc.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
 <article class="work" data-cat="web"><a class="device" href="https://kdkpowercontractor.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:9.2s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>kdkpowercontractor.com</b></span></div><div class="screen2"><img src="img/work/kdk-power.jpg" alt="Full homepage of a general contractor website by Digital Growth Catalyze for kdkpowercontractor.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><div><h3>kdkpowercontractor.com</h3><p><em>Web</em>General Contractor</p></div><a class="go" href="https://kdkpowercontractor.com/" target="_blank" rel="noopener nofollow" aria-label="Visit kdkpowercontractor.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
 <article class="work" data-cat="web"><a class="device" href="https://luxprousa.com/" target="_blank" rel="noopener nofollow" tabindex="-1" style="--dur:8.4s"><div class="device__top"><i></i><i></i><i></i><span class="device__url">https://<b>luxprousa.com</b></span></div><div class="screen2"><img src="img/work/luxprousa.jpg" alt="Full homepage of a limousine services website by Digital Growth Catalyze for luxprousa.com" loading="lazy" decoding="async"><span class="rail" aria-hidden="true"><i></i></span></div><div class="device__chin"><span>DGC</span></div></a><div class="wmeta"><div><h3>luxprousa.com</h3><p><em>Web</em>Limousine Services</p></div><a class="go" href="https://luxprousa.com/" target="_blank" rel="noopener nofollow" aria-label="Visit luxprousa.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></article>
@@ -897,7 +899,9 @@ figcaption small { font-size: .78rem; color: var(--fog); }
   const allCase = document.getElementById('allCase');
   const more = document.getElementById('more');
   const wide = matchMedia('(min-width: 1081px)');
-  let cur = 'all', shown = PAGE, sub = 'all';
+  let cur = 'all', shown = PAGE, sub = 'all', subA = 'all';
+  const subAll = document.getElementById('subAll'), atabs = [...subAll.querySelectorAll('.stab')];
+  atabs.forEach(s => s.addEventListener('click', () => { atabs.forEach(b => b.setAttribute('aria-pressed', b === s)); subA = s.dataset.f; render(); }));
   const subWrap = document.getElementById('subfilters'), stabs = [...subWrap.querySelectorAll('.stab')];
   stabs.forEach(s => s.addEventListener('click', () => { stabs.forEach(b => b.setAttribute('aria-pressed', b === s)); sub = s.dataset.f; render(); }));
   function render() {
@@ -905,7 +909,7 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     if (cur === 'all') {
       // All: first six websites, then logos, then case studies
       const web = cards.filter(c => c.dataset.cat === 'web').slice(0, 6);
-      list = [...web, ...cards.filter(c => c.dataset.cat === 'logo').slice(0, 6), ...cards.filter(c => c.dataset.cat === 'case' && +c.dataset.rank < 3).slice(0, 6)];
+      list = [...web, ...cards.filter(c => c.dataset.cat === 'logo').slice(0, 6), ...(subA === 'all' ? cards.filter(c => c.dataset.cat === 'case' && +c.dataset.rank < 3).slice(0, 6) : cards.filter(c => c.dataset.cat === 'case' && c.dataset.ch === subA))];
     } else if (cur === 'case') {
       const cs = cards.filter(c => c.dataset.cat === 'case');
       // All: first three of each channel, one row per channel; a channel tab shows all of it
@@ -916,16 +920,18 @@ figcaption small { font-size: .78rem; color: var(--fog); }
     }
     cards.forEach(c => { c.hidden = true; c.classList.remove('lift'); c.style.order = ''; });
     heads.forEach(h => h.hidden = cur !== 'all');
+    subAll.hidden = cur !== 'all';
     let order = 0, k = 0, group = null;
     list.forEach(c => {
       if (cur === 'all' && c.dataset.cat !== group) {
         group = c.dataset.cat; k = 0;
         heads.find(h => h.dataset.group === group).style.order = order++;
+        if (group === 'case') subAll.style.order = order++;
       }
       c.hidden = false; c.style.order = order++;
       c.classList.toggle('lift', k++ % 3 === 1);
     });
-    grid.classList.toggle('is-staggered', wide.matches && cur !== 'case');
+    grid.classList.toggle('is-staggered', wide.matches);
     allCase.hidden = cur !== 'case';
     subWrap.hidden = cur !== 'case';
     more.hidden = !(cur === 'web' && shown < cards.filter(c => c.dataset.cat === 'web').length);
