@@ -20,12 +20,12 @@
   --mist:#f4f6f9;
   --line:#e3e7ee;
   --text:#0e1726;
-  --muted:#5b6676;
-  --muted-d:#93a0b4;
+  --muted:#475163;
+  --muted-d:#aab5c5;
   --on-dark:#eef2f7;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --r:10px;
-  --glow:0 0 40px rgba(220,38,38,.35);
+  --glow:none;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -44,8 +44,8 @@ button,input,select,textarea{font:inherit}
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;padding:.9em 1.5em;border-radius:8px;font-weight:700;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
 .btn:hover{transform:translateY(-1px)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -8px rgba(220,38,38,.6)}
-.btn-red:hover{background:var(--red-d);box-shadow:var(--glow)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
 .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.04)}
 .btn-ghost:hover{border-color:#fff}
 .btn-line{border-color:var(--text);color:var(--text);background:transparent}
@@ -70,7 +70,7 @@ button,input,select,textarea{font:inherit}
 .nav{display:flex;align-items:center;gap:4px;margin-inline:auto}
 .nav > a,.nav .dd > button{display:flex;align-items:center;gap:5px;padding:9px 9px;white-space:nowrap;border-radius:7px;color:#b8c2d1;font-size:.92rem;font-weight:500;background:none;border:0;cursor:pointer}
 .nav > a:hover,.nav .dd > button:hover,.nav a.on,.nav .dd.on > button{color:#fff;background:rgba(255,255,255,.06)}
-.nav .pill{border:1px solid rgba(220,38,38,.55);background:rgba(220,38,38,.1);color:#ff6b6b;border-radius:999px;padding:7px 13px}
+.nav .pill{border:1px solid rgba(255,255,255,.18);background:transparent;color:#d6dde8;border-radius:999px;padding:7px 13px}
 .nav .pill:hover{background:rgba(220,38,38,.2);color:#fff}
 .dd{position:relative}
 .dd .menu{position:absolute;top:calc(100% + 8px);left:0;min-width:260px;background:var(--panel);border:1px solid var(--line-d);border-radius:12px;padding:8px;box-shadow:0 25px 50px -12px rgba(0,0,0,.6);display:none}
@@ -101,32 +101,32 @@ button,input,select,textarea{font:inherit}
 @media (max-width:400px){.hide-xs{display:none}}
 
 /* ---------- sections ---------- */
-.sec{padding-block:88px}
-.sec.tight{padding-block:64px}
+.sec{padding-block:72px}
+.sec.tight{padding-block:56px}
 .dark{background:var(--ink);color:var(--on-dark)}
 .dark2{background:linear-gradient(180deg,var(--ink),var(--panel));color:var(--on-dark)}
 .mist{background:var(--mist)}
 .navyband{background:linear-gradient(135deg,#0b2340,#0f3157);color:#fff}
-.head{max-width:720px;margin:0 auto 48px;text-align:center;display:grid;gap:14px}
+.head{max-width:680px;margin:0 auto 36px;text-align:center;display:grid;gap:14px}
 .head.left{margin-inline:0;text-align:left}
 .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-.h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800}
-.lead{font-size:1.1rem;color:var(--muted)}
+.h2{font-size:clamp(1.65rem,3vw,2.35rem);font-weight:800}
+.lead{font-size:1.06rem;color:var(--muted)}
 .dark .lead,.dark2 .lead,.navyband .lead{color:var(--muted-d)}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;border:1px solid rgba(220,38,38,.5);background:rgba(220,38,38,.12);color:#ff6b6b;font-size:.85rem;font-weight:600;width:max-content;max-width:100%}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#f1f5f9;font-size:.85rem;font-weight:600;width:max-content;max-width:100%}
 .grid{display:grid;gap:22px}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:980px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}.sec{padding-block:64px}}
+@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}.sec{padding-block:52px}}
 
 /* ---------- home hero ---------- */
 .hero{position:relative;color:#fff;background:var(--ink);overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;background:url(img/hero-bg.jpg) center/cover;filter:blur(3px) brightness(.38);transform:scale(1.05);z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 40%,rgba(220,38,38,.12),transparent 70%),linear-gradient(180deg,rgba(6,11,19,.2),var(--ink) 96%);z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,11,19,.2),var(--ink) 96%);z-index:-1}
 .hero .wrap{display:grid;justify-items:center;text-align:center;gap:20px;padding-block:64px 40px}
-.hero h1{font-size:clamp(2.4rem,6.2vw,4.6rem);font-weight:800;letter-spacing:-.035em;max-width:16ch}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.9rem);font-weight:800;letter-spacing:-.035em;max-width:16ch}
 .hero .towns{font-size:clamp(1rem,1.8vw,1.35rem);color:#9fb0c5}
 .hero .promise{font-size:clamp(1.15rem,2.2vw,1.7rem);font-weight:700}
 .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
@@ -153,7 +153,7 @@ button,input,select,textarea{font:inherit}
 .tp-stars.sm i{width:17px;height:17px}.tp-stars.sm i svg{width:11px;height:11px}
 .tp-word{color:var(--tp);font-weight:700;display:inline-flex;align-items:center;gap:4px}
 .marquee{overflow:hidden;padding-block:22px 34px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.track{display:flex;gap:18px;width:max-content;animation:scroll 70s linear infinite}
+.track{display:flex;gap:18px;width:max-content;animation:scroll 110s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
 .rv{width:310px;flex:none;background:#fff;color:var(--text);border-radius:12px;padding:18px 18px 16px;display:grid;gap:8px;align-content:start;box-shadow:0 10px 30px -12px rgba(0,0,0,.5)}
@@ -166,15 +166,27 @@ button,input,select,textarea{font:inherit}
 .ticker b{color:#fff}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.dot{animation:none}}
 
+/* ---------- 3-step strip ---------- */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.how div{padding:22px 24px;display:grid;grid-template-columns:40px minmax(0,1fr);gap:4px 14px;align-items:start}
+.how div + div{border-left:1px solid var(--line)}
+.how b.n{grid-row:span 2;width:40px;height:40px;border-radius:50%;background:var(--text);color:#fff;display:grid;place-items:center;font-size:1rem}
+.how h3{font-size:1.02rem}
+.how p{font-size:.92rem;color:var(--muted);grid-column:2}
+@media (max-width:760px){.how{grid-template-columns:minmax(0,1fr)}.how div + div{border-left:0;border-top:1px solid var(--line)}}
+.slim{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:14px;padding:20px 24px;background:#fff}
+.slim p{color:var(--muted)}
+.slim b{display:block;color:var(--text);font-size:1.05rem}
+
 /* ---------- service image cards ---------- */
-.svc{position:relative;min-height:290px;border-radius:14px;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;isolation:isolate;background:var(--navy)}
+.svc{position:relative;min-height:250px;border-radius:14px;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;isolation:isolate;background:var(--navy)}
 .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s}
-.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,35,64,.15) 0%,rgba(6,11,19,.92) 85%);z-index:-1}
+.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,11,19,.25) 0%,rgba(6,11,19,.95) 72%);z-index:-1}
 .svc:hover img{transform:scale(1.06)}
 .svc .tag{position:absolute;top:14px;right:14px;background:var(--red);font-size:.75rem;font-weight:800;padding:4px 9px;border-radius:5px}
 .svc .ic{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);display:grid;place-items:center;font-size:1.25rem;margin-bottom:12px}
 .svc h3{font-size:1.25rem;margin-bottom:6px}
-.svc p{font-size:.92rem;color:#c8d2df}
+.svc p{font-size:.95rem;color:#e2e8f0}
 .svc .more{margin-top:12px;font-weight:700;font-size:.9rem;color:#ff7a7a;display:flex;gap:6px;align-items:center}
 
 /* ---------- light cards ---------- */
@@ -243,11 +255,11 @@ form.done .sent{display:block}
 @media (max-width:900px){.plans{grid-template-columns:minmax(0,1fr);max-width:460px;margin-inline:auto}}
 .plan{position:relative;background:var(--panel);border:2px solid var(--line-d);border-radius:16px;padding:34px 26px 26px;display:flex;flex-direction:column;gap:14px;color:var(--on-dark)}
 .plan .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:5px 12px;border-radius:5px;white-space:nowrap}
-.plan.p1{border-color:var(--red);box-shadow:0 0 50px -10px rgba(220,38,38,.5)}
+.plan.p1{border-color:var(--red)}
 .plan.p1 .flag{background:var(--red);color:#fff}
-.plan.p2{border-color:#16a34a;box-shadow:0 0 50px -14px rgba(22,163,74,.45)}
+.plan.p2{border-color:#2a4a3a}
 .plan.p2 .flag{background:#16a34a;color:#fff}
-.plan.p3{border-color:#eab308;box-shadow:0 0 50px -14px rgba(234,179,8,.4)}
+.plan.p3{border-color:#4a4426}
 .plan.p3 .flag{background:#eab308;color:#1a1400}
 .plan .ic{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;font-size:1.3rem;background:rgba(255,255,255,.06)}
 .plan.p1 .ic{color:#ff6b6b}.plan.p2 .ic{color:#4ade80}.plan.p3 .ic{color:#facc15}
@@ -257,6 +269,7 @@ form.done .sent{display:block}
 .plan.p1 .price b{color:var(--red)}
 .price span{color:var(--muted-d);font-size:.9rem}
 .plan > p{color:var(--muted-d);font-size:.93rem}
+.plan .pick{background:rgba(255,255,255,.05);border-radius:8px;padding:10px 12px;font-size:.92rem;color:#fff;font-weight:600}
 .ticks{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:.92rem}
 .ticks li{display:flex;gap:9px;align-items:flex-start}
 .ticks .ico{margin-top:4px;color:#4ade80}
@@ -289,13 +302,13 @@ form.done .sent{display:block}
 .phero{position:relative;color:#fff;background:var(--ink);isolation:isolate;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;background:var(--img,url(img/hero-kitchen.jpg)) center/cover;filter:brightness(.32);z-index:-2}
 .phero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,11,19,.92) 0%,rgba(6,11,19,.55) 60%,rgba(6,11,19,.3)),linear-gradient(0deg,var(--ink),transparent 40%);z-index:-1}
-.phero .wrap{padding-block:56px 64px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center}
+.phero .wrap{padding-block:48px 56px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center}
 .phero.solo .wrap{grid-template-columns:minmax(0,1fr)}
 @media (max-width:900px){.phero .wrap{grid-template-columns:minmax(0,1fr)}}
 .phero .txt{display:grid;gap:18px;align-content:start}
 .crumbs{font-size:.82rem;color:#8c9bb0;display:flex;gap:8px;flex-wrap:wrap}
 .crumbs a:hover{color:#fff}
-.phero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.035em}
+.phero h1{font-size:clamp(1.95rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.035em}
 .phero .sub{font-size:1.15rem;color:#c3cedc;max-width:58ch}
 .phero .btns{justify-content:flex-start}
 .issuebar{font-size:.9rem;color:#9fb0c5;line-height:1.9}
@@ -320,7 +333,7 @@ form.done .sent{display:block}
 .vid .th img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .vid:hover .th img{transform:scale(1.05)}
 .vid .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(6,11,19,.55),transparent)}
-.vid .play i{width:58px;height:58px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:var(--glow)}
+.vid .play i{width:54px;height:54px;border-radius:50%;background:var(--red);display:grid;place-items:center}
 .vid .play svg{width:22px;height:22px;fill:#fff;stroke:none;margin-left:3px}
 .vid .n{font-size:.75rem;font-weight:800;color:var(--red);letter-spacing:.1em}
 .vid h3{font-size:1.05rem}
@@ -402,9 +415,9 @@ form.done .sent{display:block}
 
 /* CTA band */
 .cta{position:relative;background:var(--ink);color:#fff;text-align:center;overflow:hidden;isolation:isolate}
-.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 70% at 50% 50%,rgba(220,38,38,.22),transparent 70%);z-index:-1}
-.cta .wrap{display:grid;justify-items:center;gap:18px;padding-block:88px}
-.cta h2{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 70% at 50% 50%,rgba(220,38,38,.1),transparent 70%);z-index:-1}
+.cta .wrap{display:grid;justify-items:center;gap:16px;padding-block:64px}
+.cta h2{font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:800}
 .cta p{color:#a9b6c8;font-size:1.12rem;max-width:56ch}
 .cta .bignum{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;font-variant-numeric:tabular-nums}
 
@@ -422,7 +435,7 @@ form.done .sent{display:block}
 .ftr .bottom{border-top:1px solid var(--line-d);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem}
 
 /* mobile call bar + floating button */
-.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:var(--glow);z-index:40}
+.fab{display:none!important;position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:var(--glow);z-index:40}
 .fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--red);animation:ring 2s infinite}
 @keyframes ring{to{transform:scale(1.5);opacity:0}}
 .mbar{display:none}
@@ -480,12 +493,7 @@ form.done .sent{display:block}
 </svg>
 
 <!-- ============ HEADER ============ -->
-<div class="strip">
-  <div class="wrap">
-    <span class="live"><span class="dot"></span> Engineers on call now <span class="hide-s">· Leeds, Harrogate &amp; all of Yorkshire</span></span>
-    <span>24/7 line: <a href="tel:+447848298987">07848 298987</a> <span class="hide-s">· <a href="mailto:Admin@redshield.uk">Admin@redshield.uk</a></span></span>
-  </div>
-</div>
+
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a class="logo" href="#home" aria-label="RedShield Water home"><img src="img/logo.svg" alt=""><span><span class="red">Red</span><span class="s">Shield</span><span class="w">Water</span></span></a>
@@ -536,13 +544,6 @@ form.done .sent{display:block}
         <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now – Immediate Response</a>
         <a class="btn btn-ghost btn-lg" href="#services">View Our Services</a>
       </div>
-      <div class="eta" aria-label="Response summary">
-        <div><small>Typical arrival</small><span class="big">45 min</span></div>
-        <span class="sep"></span>
-        <div><small>Call-out from</small><span class="big">£0</span></div>
-        <span class="sep"></span>
-        <div><small>Phone line</small><b>Answered 24 hours, 7 days</b></div>
-      </div>
       <div class="trust-row">
         <span><span class="stars" data-stars="5"></span> Rated 5 Stars by Yorkshire Homeowners</span>
         <span><svg class="ico"><use href="#i-wrench"/></svg> Arrive Within 45 Minutes</span>
@@ -551,6 +552,16 @@ form.done .sent{display:block}
     </div>
     <div data-reviews></div>
     <div class="ticker"><div class="wrap"><b>Our Services:</b> Emergency Plumbing • Burst Pipes • Leaks &amp; Drips • Blocked Drains • Heating Issues • Installations &amp; Repairs</div></div>
+  </section>
+
+  <section class="sec tight mist">
+    <div class="wrap">
+      <div class="how" aria-label="How it works">
+        <div><b class="n">1</b><h3>Call us, any time</h3><p>A real plumber answers 24/7 and tells you how to stop the water.</p></div>
+        <div><b class="n">2</b><h3>We come to you</h3><p>For emergencies we aim to be at your door within 45 minutes.</p></div>
+        <div><b class="n">3</b><h3>Price first, then the fix</h3><p>You get the price before we start. Repairs are guaranteed for 12 months.</p></div>
+      </div>
+    </div>
   </section>
 
   <section class="sec" id="h-services">
@@ -613,15 +624,12 @@ form.done .sent{display:block}
     </div>
   </section>
 
-  <section class="sec">
-    <div class="wrap split">
-      <div class="head left" style="margin:0">
-        <span class="eyebrow">Free safety tutorials</span>
-        <h2 class="h2">Stop the damage while we're on the way</h2>
-        <p class="lead">Short videos showing where your stop cock is, how to use an isolation valve and what to do if water keeps coming after you've turned it off.</p>
-        <div><a class="btn btn-red" href="#tutorials"><svg class="ico"><use href="#i-playc"/></svg> Watch the Tutorials</a></div>
+  <section class="sec tight">
+    <div class="wrap">
+      <div class="slim">
+        <div><b>Waiting for the plumber?</b><p>Watch our free short videos on turning off your water and limiting the damage.</p></div>
+        <a class="btn btn-line btn-sm" href="#tutorials">Watch free videos</a>
       </div>
-      <div class="grid g2" data-videos="2"></div>
     </div>
   </section>
 
@@ -696,7 +704,7 @@ form.done .sent{display:block}
           <li><svg class="ico"><use href="#i-check"/></svg> 24/7 emergency call out, always answered</li>
           <li><svg class="ico"><use href="#i-check"/></svg> Fully qualified &amp; insured engineers</li>
           <li><svg class="ico"><use href="#i-check"/></svg> 15+ years of industry experience</li>
-          <li><svg class="ico"><use href="#i-check"/></svg> State-of-the-art jetting and CCTV equipment</li>
+          <li><svg class="ico"><use href="#i-check"/></svg> Modern drain-clearing and camera equipment</li>
           <li><svg class="ico"><use href="#i-check"/></svg> Competitive, transparent pricing</li>
           <li><svg class="ico"><use href="#i-check"/></svg> 12-month repair guarantee</li>
         </ul>
@@ -723,7 +731,6 @@ form.done .sent{display:block}
         <span class="badge"><svg class="ico"><use href="#i-wrench"/></svg> Plumbing &amp; drainage, 24/7</span>
         <h1>Our <span class="red">Services</span></h1>
         <p class="sub">Emergency plumbing, leak detection, blocked drains, boilers and everyday repairs. One local team for every plumbing problem in your home or business.</p>
-        <div class="issuebar"><b>Burst Pipe</b> | Blocked Toilet | <b>Leak Detection</b> | Toilet Overflowing | <b>Blocked Kitchen Drains</b> | Hot Water Cylinder | <b>Sewage Jetting</b> | Manhole Clearing</div>
         <div class="btns">
           <a class="btn btn-red" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now</a>
           <a class="btn btn-ghost" href="#pricing">See Pricing</a>
@@ -741,17 +748,6 @@ form.done .sent{display:block}
         <p class="lead">Fixed on arrival wherever possible. We stop the water first, then repair the cause.</p>
       </div>
       <div class="grid g3" data-svc-cards></div>
-    </div>
-  </section>
-
-  <section class="sec mist">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Every common problem</span>
-        <h2 class="h2">What We Fix</h2>
-        <p class="lead">Fast, insured emergency response for every common plumbing problem.</p>
-      </div>
-      <div class="grid g4" data-problems></div>
     </div>
   </section>
 
@@ -1022,7 +1018,6 @@ form.done .sent{display:block}
           <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now</a>
           <a class="btn btn-ghost btn-lg" href="#contact">Request a Call Back</a>
         </div>
-        <div class="checks"><span><svg class="ico"><use href="#i-check"/></svg>24/7 emergency response</span><span><svg class="ico"><use href="#i-check"/></svg>Local Leeds plumber</span><span><svg class="ico"><use href="#i-check"/></svg>45-min response (where available)</span><span><svg class="ico"><use href="#i-check"/></svg>Fully insured</span><span><svg class="ico"><use href="#i-check"/></svg>12-month repair guarantee</span><span><svg class="ico"><use href="#i-check"/></svg>5-star rated</span></div>
       </div>
       <div data-callcard></div>
     </div>
@@ -1068,7 +1063,7 @@ form.done .sent{display:block}
       <div style="display:grid;gap:12px">
         <span class="eyebrow">Live board</span>
         <h2 class="h2" style="font-size:1.8rem">Recent Emergency Plumbing Jobs in Leeds</h2>
-        <div style="display:grid;gap:12px" data-jobs="6"></div>
+        <div style="display:grid;gap:12px" data-jobs="3"></div>
       </div>
     </div>
   </section>
@@ -1097,13 +1092,11 @@ form.done .sent{display:block}
         <nav class="crumbs"><a href="#home">Home</a> / <a href="#areas">Areas</a> / <span>Harrogate</span></nav>
         <span class="badge"><svg class="ico"><use href="#i-clock"/></svg> 24/7 Emergency Response</span>
         <h1>Emergency Plumber <span class="red">Harrogate</span></h1>
-        <div class="issuebar"><b>Burst Pipe</b> | Blocked Toilet | <b>Leak Detection</b> | Toilet Overflowing | <b>Blocked Kitchen Drains</b> | Hot Water Cylinder | <b>Sewage Jetting</b> | Manhole Clearing</div>
         <p class="sub">Serving all Harrogate areas including Starbeck, Bilton, Knaresborough, Pannal, Killinghall, Hampsthwaite, Boroughbridge &amp; more.</p>
         <div class="btns">
           <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now</a>
           <a class="btn btn-ghost btn-lg" href="#contact">Send a Message</a>
         </div>
-        <div class="checks"><span><svg class="ico"><use href="#i-check"/></svg>45 Min Response</span><span><svg class="ico"><use href="#i-check"/></svg>Work Guaranteed</span><span><svg class="ico"><use href="#i-check"/></svg>5-Star Rated</span></div>
       </div>
       <div data-callcard="Harrogate &amp; all surrounding areas"></div>
     </div>
@@ -1161,12 +1154,10 @@ form.done .sent{display:block}
         <span class="badge"><svg class="ico"><use href="#i-clock"/></svg> 24/7 Emergency Response</span>
         <h1>Need an <span class="red">Emergency Plumber</span> in Yorkshire?</h1>
         <p class="sub">We serve the whole of West Yorkshire and all surrounding areas, including Leeds, Harrogate, York, Huddersfield, Halifax, Doncaster, Wakefield &amp; more.</p>
-        <div class="issuebar"><b>Burst Pipe</b> | Blocked Toilet | <b>Leak Detection</b> | Toilet Overflowing | <b>Blocked Kitchen Drains</b> | Hot Water Cylinder | <b>Sewage Jetting</b> | Manhole Clearing</div>
         <div class="btns">
           <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now</a>
           <a class="btn btn-ghost btn-lg" href="#contact">Send a Message</a>
         </div>
-        <div class="checks"><span><svg class="ico"><use href="#i-check"/></svg>45 Min Response</span><span><svg class="ico"><use href="#i-check"/></svg>Work Guaranteed</span><span><svg class="ico"><use href="#i-check"/></svg>5-Star Rated</span></div>
       </div>
       <div data-callcard="Yorkshire wide coverage"></div>
     </div>
@@ -1189,13 +1180,6 @@ form.done .sent{display:block}
         <p>We prioritise rapid response times, transparent pricing, and long-lasting repairs. If you're searching for a “plumber near me” in Yorkshire, trust our local team to deliver professional, efficient, and affordable solutions when you need them most.</p>
       </div>
       <div data-map></div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="wrap">
-      <div class="head"><h2 class="h2">Our Service Area</h2><p class="lead">Covering all of Yorkshire, from the Dales to the coast.</p></div>
-      <div class="grid g4" data-areas></div>
     </div>
   </section>
 
@@ -1227,7 +1211,6 @@ form.done .sent{display:block}
           <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call 07848 298987</a>
           <a class="btn btn-ghost btn-lg" href="#ldu-pricing" data-scroll>See Pricing</a>
         </div>
-        <div class="checks"><span><svg class="ico"><use href="#i-check"/></svg>45-Min Response</span><span><svg class="ico"><use href="#i-check"/></svg>Work Guaranteed</span><span><svg class="ico"><use href="#i-check"/></svg>5-Star Rated</span></div>
       </div>
       <div data-callcard="Leeds &amp; surrounding areas"></div>
     </div>
@@ -1239,8 +1222,8 @@ form.done .sent{display:block}
       <div class="grid g4">
         <div class="card"><div class="ic"><svg class="ico"><use href="#i-toilet"/></svg></div><h3>Blocked Toilets</h3><p>Fast clearance of blocked or overflowing toilets, sanitised, no mess left behind.</p></div>
         <div class="card"><div class="ic"><svg class="ico"><use href="#i-tap"/></svg></div><h3>Blocked Sinks &amp; Showers</h3><p>Kitchen sinks, bathroom basins and shower trays cleared with the right tool for the job.</p></div>
-        <div class="card"><div class="ic"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>High-Pressure Drain Jetting</h3><p>Industrial jetting equipment shifts grease, scale, roots and silt that plungers can't.</p></div>
-        <div class="card"><div class="ic"><svg class="ico"><use href="#i-drain"/></svg></div><h3>Outdoor Drains &amp; Manholes</h3><p>Blocked gullies, soil stacks and manhole clearance across Leeds and surrounding areas.</p></div>
+        <div class="card"><div class="ic"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>Powerful Water Jetting</h3><p>A strong jet of water clears grease, roots and dirt that a plunger can't shift.</p></div>
+        <div class="card"><div class="ic"><svg class="ico"><use href="#i-drain"/></svg></div><h3>Outside Drains &amp; Manholes</h3><p>Blocked outside drains, drain covers and manholes cleared across Leeds.</p></div>
       </div>
     </div>
   </section>
@@ -1258,8 +1241,8 @@ form.done .sent{display:block}
         <span class="eyebrow">Why Leeds calls us first</span>
         <h2 class="h2">Why Leeds Calls RedShield First</h2>
         <ul class="tlist" style="margin-top:8px">
-          <li><svg class="ico"><use href="#i-check"/></svg> Industrial high-pressure jetting equipment on every van</li>
-          <li><svg class="ico"><use href="#i-check"/></svg> CCTV surveys for recurring or unknown blockages</li>
+          <li><svg class="ico"><use href="#i-check"/></svg> Powerful drain-clearing equipment on every van</li>
+          <li><svg class="ico"><use href="#i-check"/></svg> Camera checks inside the pipe if a drain keeps blocking</li>
           <li><svg class="ico"><use href="#i-check"/></svg> Fixed-fee quotes before any work starts</li>
           <li><svg class="ico"><use href="#i-check"/></svg> Local Leeds engineers, no national call-centre delays</li>
           <li><svg class="ico"><use href="#i-check"/></svg> Fully insured, guaranteed workmanship</li>
@@ -1420,9 +1403,9 @@ const PROBLEMS = [
   ["tap", "Stop Tap / Water Shut-Off Help", "Can't find or turn your stop tap while water is escaping? We'll talk you through it and get an engineer out fast."]
 ];
 const JOBS = [
-  ["Today", "Burst pipe in Headingley", "Pipe burst behind kitchen wall — water isolated, damaged pipework cut out and replaced, tested under pressure.", "pipe"],
-  ["Today", "Overflowing toilet in Roundhay", "Blocked toilet cleared, waste pipe rodded and checked for further blockages downstream.", "toilet"],
-  ["Yesterday", "Water leak in Morley", "Leak continued after stop tap was turned off — source traced to a fitting under the floor, repaired and re-tested.", "drop"],
+  ["Today", "Burst pipe in Headingley", "Pipe burst behind the kitchen wall. We stopped the water, replaced the damaged pipe and tested it.", "pipe"],
+  ["Today", "Overflowing toilet in Roundhay", "Blocked toilet cleared and the pipe checked so it won't happen again.", "toilet"],
+  ["Yesterday", "Water leak in Morley", "Water kept leaking after the main tap was turned off. We found a faulty joint under the floor and fixed it.", "drop"],
   ["Yesterday", "Leaking ceiling in Chapel Allerton", "Bathroom waste leaking into ceiling below — joint resealed and pipework repaired to stop further water damage.", "ceiling"],
   ["This week", "No hot water in Horsforth", "Cylinder element fault diagnosed and replaced, hot water restored same visit.", "flame"],
   ["This week", "Blocked drain in Pudsey", "External drain backing up — jetted clear and CCTV checked to confirm full flow.", "drain"]
@@ -1431,10 +1414,10 @@ const AREAS = [
   ["Leeds", "All areas including city centre, Headingley, Chapel Allerton", "#leeds-emergency-plumber"],
   ["Harrogate", "Harrogate town and surrounding villages", "#harrogate-emergency-plumber"],
   ["York", "York city and nearby areas including Selby", "#yorkshire-emergency-plumber"],
-  ["Huddersfield", "Huddersfield and Kirklees district", "#yorkshire-emergency-plumber"],
-  ["Halifax", "Halifax and the Calderdale area", "#yorkshire-emergency-plumber"],
+  ["Huddersfield", "Huddersfield and nearby areas", "#yorkshire-emergency-plumber"],
+  ["Halifax", "Halifax and nearby areas", "#yorkshire-emergency-plumber"],
   ["Doncaster", "Doncaster town and surrounding areas", "#yorkshire-emergency-plumber"],
-  ["Wakefield", "Wakefield and the Five Towns district", "#yorkshire-emergency-plumber"],
+  ["Wakefield", "Wakefield and nearby towns", "#yorkshire-emergency-plumber"],
   ["Yorkshire", "Emergency plumber coverage across all of Yorkshire", "#yorkshire-emergency-plumber"]
 ];
 const CHIPS = {
@@ -1445,7 +1428,7 @@ const VIDEOS = [
   ["Where to find a stop cock and how to use it", "Locate your stop tap and shut the water off fast.", "img/vid-ZyQuyIcJnHo.jpg", "https://www.youtube.com/watch?v=ZyQuyIcJnHo"],
   ["Reduce Damage from Uncontrollable Leak", "What to do in the first minutes of a major leak.", "img/vid-zOQcxnZ-STY.jpg", "https://www.youtube.com/watch?v=zOQcxnZ-STY"],
   ["Water turned off but still leaking", "Why water keeps coming after isolation and how to drain down.", "img/vid-lfkMmAMZ2wg.jpg", "https://www.youtube.com/watch?v=lfkMmAMZ2wg"],
-  ["Stop water to appliances with an isolation valve", "Isolate a leaking washing machine, dishwasher or tap.", "img/vid-isolation.jpg", "https://www.youtube.com/@RedShieldWater"]
+  ["Turn off water to one appliance", "Stop a leaking washing machine, dishwasher or tap using its small valve.", "img/vid-isolation.jpg", "https://www.youtube.com/@RedShieldWater"]
 ];
 const ISSUES = {
   "Burst Pipe": ["pipe", ["Turn off the stop tap (usually under the kitchen sink).", "Switch off electrics if water is near sockets or fittings.", "Open cold taps to drain the system.", "Catch water with buckets and towels, then call us."]],
@@ -1474,7 +1457,7 @@ const FAQ = [
   ["emergency leeds harrogate", "Why should I call a plumber instead of waiting?", "Waiting turns a small leak into ceiling damage, ruined flooring, mould and electrical risk, and a much bigger bill. If water is escaping, overflowing or stopping you from using the property, calling us now is almost always the cheaper, safer option."],
   ["drains ldu", "How quickly can you get to me in Leeds?", "Our emergency engineers target a 45-minute arrival time across central Leeds, with same-day cover for surrounding areas including Headingley, Roundhay, Morley, Pudsey, Horsforth and Otley."],
   ["drains ldu pricing", "How much does drain unblocking in Leeds cost?", "Standard drain unblocking starts at £80 with the call-out fee deducted from the final bill. High-pressure jetting and complex blockages are quoted upfront before any work starts, with no hidden extras."],
-  ["drains ldu", "Do you use CCTV drain surveys?", "Yes. For recurring blockages or unknown causes we run a CCTV survey to locate root ingress, collapsed pipework or fat build-up before recommending a fix."],
+  ["drains ldu", "Can you see inside the drain?", "Yes. If a drain keeps blocking, we put a small camera inside the pipe to find the cause, such as tree roots, a broken pipe or a grease build-up, before we fix it."],
   ["drains ldu emergency", "Are you available 24/7?", "Yes. We run a 24/7 emergency line on 07848 298987 for blocked toilets, sewage backups and external flooding."]
 ];
 
@@ -1508,22 +1491,18 @@ $$("[data-videos]").forEach(el => { const s = +(el.dataset.vstart || 0);
   `<a class="vid" href="${url}" target="_blank" rel="noopener"><div class="th"><img src="${img}" alt="" loading="lazy"><span class="play"><i>${'<svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>'}</i></span></div><span class="n">TUTORIAL ${s + k + 1}</span><h3>${t}</h3><p>${d}</p></a>`).join(""); });
 
 const PLANS = `<div class="plans">
-  <div class="plan p1"><span class="flag">FASTEST</span><div class="ic">${ic("bolt")}</div><h3>Immediate Response</h3><div class="price"><b>£50</b><span>Call-Out</span></div><p>Engineer dispatched immediately. Priority emergency service.</p>
-    <ul class="ticks"><li>${ic("check")}Arrival ASAP (typically within 45 mins)</li><li>${ic("check")}Jump queue priority</li><li>${ic("check")}Ideal for leaks, flooding, urgent issues</li></ul>
-    <a class="btn btn-red btn-block" href="${TEL}">Get Help Now</a><span class="foot">Most customers choose immediate response for emergencies</span></div>
-  <div class="plan p2"><span class="flag">BEST PRICE</span><div class="ic">${ic("sun")}</div><h3>Same Day Service</h3><div class="price"><b>£25</b><span>Call-Out</span></div><p>We'll attend later today at the earliest available slot.</p>
-    <ul class="ticks"><li>${ic("check")}Same-day resolution</li><li>${ic("check")}Lower priority than emergency</li><li>${ic("check")}Best for non-critical issues</li></ul>
+  <div class="plan p1"><span class="flag">FASTEST</span><div class="ic">${ic("bolt")}</div><h3>Immediate Response</h3><div class="price"><b>£50</b><span>call-out</span></div><p class="pick">Choose this if water is leaking or flooding right now.</p>
+    <ul class="ticks"><li>${ic("check")}Engineer sent straight away</li><li>${ic("check")}Usually with you within 45 minutes</li><li>${ic("check")}You go to the front of the queue</li></ul>
+    <a class="btn btn-red btn-block" href="${TEL}">Get Help Now</a></div>
+  <div class="plan p2"><span class="flag">BEST PRICE</span><div class="ic">${ic("sun")}</div><h3>Same Day Service</h3><div class="price"><b>£25</b><span>call-out</span></div><p class="pick">Choose this if there's a problem but it isn't getting worse.</p>
+    <ul class="ticks"><li>${ic("check")}We visit later today</li><li>${ic("check")}Fixed the same day</li><li>${ic("check")}Emergencies are seen first</li></ul>
     <a class="btn btn-ghost btn-block" href="${TEL}">Book Today</a></div>
-  <div class="plan p3"><span class="flag">FLEXIBLE BOOKING</span><div class="ic">${ic("cal")}</div><h3>Standard Booking</h3><div class="price"><b>£0</b><span>Call-Out</span></div><p>Schedule for the next available day at no call-out cost.</p>
-    <ul class="ticks"><li>${ic("check")}No call-out fee</li><li>${ic("check")}Flexible scheduling</li><li>${ic("check")}Ideal for planned work</li></ul>
+  <div class="plan p3"><span class="flag">FLEXIBLE BOOKING</span><div class="ic">${ic("cal")}</div><h3>Standard Booking</h3><div class="price"><b>£0</b><span>call-out</span></div><p class="pick">Choose this if the job can wait a day or more.</p>
+    <ul class="ticks"><li>${ic("check")}No call-out fee</li><li>${ic("check")}Pick a day that suits you</li><li>${ic("check")}Good for planned work</li></ul>
     <a class="btn btn-ghost btn-block" href="#contact">Schedule Visit</a></div>
 </div>
-<div class="bands"><h3>Hours Pricing</h3><div class="tbl"><table>
-  <thead><tr><th>Time band</th><th>Hours</th><th>Rate level</th></tr></thead>
-  <tbody><tr><td><b>Daytime</b></td><td><b>9am – 5pm</b></td><td><span class="lvl a">Standard rate</span></td></tr>
-  <tr><td><b>Evening</b></td><td><b>5pm – 8pm</b></td><td><span class="lvl b">Evening rate</span></td></tr>
-  <tr><td><b>Out of hours</b></td><td><b>8pm – 9am</b></td><td><span class="lvl c">Out-of-hours rate</span></td></tr></tbody></table></div></div>
-<div class="assure"><span>${ic("shield")}Fully insured</span><span>${ic("check")}12-month guarantee</span><span>${ic("pin")}Local Leeds engineers</span></div>`;
+
+<p class="assure" style="max-width:640px;margin-inline:auto;text-align:center;display:block">The call-out fee is taken off your final bill if you go ahead. You always get the price for the repair before we start. Fully insured, 12-month guarantee.</p>`;
 $$("[data-plans]").forEach(el => el.innerHTML = PLANS);
 
 const TIERS = `<div class="tiers">
