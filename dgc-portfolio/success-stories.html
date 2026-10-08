@@ -620,6 +620,11 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 }
 @media (max-width: 680px) { .lmodal { width: 100vw; max-width: 100vw; max-height: 100vh; border-radius: 0; } .lmodal__body { max-height: 100vh; border-radius: 0; } .lmodal .cmodal__x { right: 10px; top: 10px; } }
 @media (max-width: 520px) { .ghead { gap: 12px; } .ghead__line { display: none; } .ghead h3 { white-space: normal; } .ghead a { margin-left: auto; padding: 10px 14px; font-size: .8rem; } .bm__ph small { display: none; } }
+.lcard--dark .lcard__sheet { background: linear-gradient(150deg, #17191b, #070809); box-shadow: 0 30px 50px -24px rgba(0,0,0,.85), inset 0 0 0 1px rgba(255,255,255,.07), inset 0 -4px 0 var(--c); }
+.work:hover .lcard--dark .lcard__sheet, .lmodal .brand:hover .lcard--dark .lcard__sheet { box-shadow: 0 40px 60px -24px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,255,255,.1), inset 0 -4px 0 var(--c); }
+.bm__img { background: #0c0e10; }
+.lcard__sheet { grid-template: minmax(0, 1fr) / minmax(0, 1fr); padding: 5% 8%; }
+.lcard__sheet img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; }
 
 .phero { padding-top: 222px !important; }
 @media (max-width: 680px) { .phero { padding-top: 180px !important; } }
