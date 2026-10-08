@@ -59,6 +59,14 @@ body.admin-bar .dgc-hdr { top: 32px; }
   .elementor .dgc-stat:nth-child(even) { border-right: 0; }
   .elementor .dgc-stat:last-child { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor .dgc-stats-band .dgc-stats { grid-template-columns: repeat(6, 1fr); }
+  .elementor .dgc-stats-band .dgc-stat { grid-column: span 2; }
+  .elementor .dgc-stats-band .dgc-stat:nth-child(n+4) { grid-column: span 3; }
+  .elementor .dgc-stats-band .dgc-stat:nth-child(5) { border-right: 0; }
+  .elementor .dgc-reviews .dgc-quotes { grid-template-columns: repeat(2, 1fr); max-width: none; }
+  .elementor .dgc-reviews .dgc-quote:nth-child(3) { grid-column: 1 / -1; }
+}
 /* Work section */
 html { scroll-padding-top: 110px; }
 .elementor .dgc-kicker::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: #f6a440; transform: rotate(45deg); }
