@@ -644,6 +644,16 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .lcard__id small { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--c) 75%, #fff); }
 .lcard__sw { flex-wrap: wrap; justify-content: flex-end; }
 @media (max-width: 900px) { .brand__main .lcard { aspect-ratio: 4 / 3.4; min-height: 0; } }
+/* logo sheet: full brand-colour border; tighter, more prominent panels */
+.lcard__sheet, .lcard--dark .lcard__sheet { box-shadow: 0 30px 50px -24px rgba(0,0,0,.85), 0 0 0 2px var(--c), 0 0 28px -6px color-mix(in srgb, var(--c) 55%, transparent); }
+.work:hover .lcard__sheet, .work:hover .lcard--dark .lcard__sheet, .lmodal .brand:hover .lcard__sheet { box-shadow: 0 40px 60px -24px rgba(0,0,0,.9), 0 0 0 2px var(--c), 0 0 40px -4px color-mix(in srgb, var(--c) 70%, transparent); }
+.brand { gap: 16px; padding: 18px; border: 1.5px solid color-mix(in srgb, var(--c) 45%, var(--line)); background: linear-gradient(180deg, #fff, color-mix(in srgb, var(--c) 6%, #f7fafb)); box-shadow: 0 30px 60px -34px rgba(6,40,54,.6), 0 0 0 6px color-mix(in srgb, var(--c) 8%, transparent); }
+.brand::before { height: 4px; }
+.brand__mocks { gap: 10px; }
+.bm__img { aspect-ratio: 16 / 9.6; }
+.brand__main .lcard { min-height: 270px; }
+.work--brand + .work--brand { margin-top: -32px; }
+@media (max-width: 900px) { .brand { padding: 12px; gap: 12px; } .brand__mocks { gap: 8px; } .work--brand + .work--brand { margin-top: -24px; } }
 
 .phero { padding-top: 222px !important; }
 @media (max-width: 680px) { .phero { padding-top: 180px !important; } }
