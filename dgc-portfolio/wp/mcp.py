@@ -56,3 +56,17 @@ def drop_dups():
     d = [l for l in class_labels() if l and l.startswith('DUP_')]
     if d: call('elementor-manage-classes', {'operations': [{'action': 'delete', 'label': l} for l in d]})
     return d
+
+def put_section(post_id, title, index, **kw):
+    """(Re)build one root section, identified by its root configuration-id/title, at a fixed position on the page."""
+    roots = call('elementor-get-page-structure', {'post_id': post_id}).get('elements', [])
+    old = [e['id'] for e in roots if e.get('title') == title]
+    if old: call('elementor-manage-elements', {'post_id': post_id, 'operations': [{'action': 'delete', 'element_id': i} for i in old]})
+    r = call('elementor-build-composition', dict(post_id=post_id, parent_id='document', mode='append', **kw))
+    call('elementor-publish-document', {'post_id': post_id})
+    roots = call('elementor-get-page-structure', {'post_id': post_id}).get('elements', [])
+    ids = [e['id'] for e in roots if e.get('title') == title]
+    if ids and [e['id'] for e in roots].index(ids[-1]) != index:
+        call('elementor-manage-elements', {'post_id': post_id, 'operations': [{'action': 'move', 'element_id': ids[-1], 'new_parent_id': 'document', 'index': index}]})
+        call('elementor-publish-document', {'post_id': post_id})
+    return r

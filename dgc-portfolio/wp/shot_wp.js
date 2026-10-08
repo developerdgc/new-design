@@ -27,6 +27,8 @@ async function viaCurl(route) {
     await p.waitForTimeout(800);
     await p.screenshot({ path: `${out}-${n}.png`, fullPage: process.env.FULL === '1' });
     if (n === 'm' && process.env.MENU) { await p.click('.dgc-burger'); await p.waitForTimeout(300); await p.screenshot({ path: `${out}-m-menu.png` }); }
+    if (process.env.SEL) { const el = await p.$(process.env.SEL); if (el) { await el.scrollIntoViewIfNeeded(); await p.waitForTimeout(500); await el.screenshot({ path: `${out}-${n}-sel.png` }); }
+      if (process.env.HOVER) { const h = await p.$(process.env.HOVER); if (h) { await h.hover({ force: true }); await p.waitForTimeout(700); await p.screenshot({ path: `${out}-${n}-hover.png` }); await h.click({ force: true }); await p.waitForTimeout(900); await p.screenshot({ path: `${out}-${n}-click.png` }); console.log('modal open', await p.evaluate(() => !!document.querySelector('.dgc-vmodal[open]'))); } } }
     if (process.env.BOTTOM) { await p.evaluate(() => scrollTo(0, document.body.scrollHeight)); await p.waitForTimeout(700); await p.screenshot({ path: `${out}-${n}-bottom.png`, fullPage: false }); }
     if (process.env.SCROLL) { await p.evaluate(() => scrollTo(0, 400)); await p.waitForTimeout(600); await p.screenshot({ path: `${out}-${n}-scrolled.png` }); }
     console.log(n, 'errors', errs.slice(0, 3), 'scrollW', await p.evaluate(() => document.documentElement.scrollWidth));
