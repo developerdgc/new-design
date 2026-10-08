@@ -128,10 +128,29 @@ button,input,select,textarea{font:inherit}
 
 /* ---------- home hero ---------- */
 .hero{position:relative;color:#fff;background:var(--ink);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;background:url(img/hero-bg.jpg) center/cover;filter:blur(3px) brightness(.38);transform:scale(1.05);z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,11,19,.2),var(--ink) 96%);z-index:-1}
-.hero .wrap{display:grid;justify-items:center;text-align:center;gap:20px;padding-block:64px 40px}
-.hero h1{font-size:clamp(2.1rem,5.2vw,3.9rem);font-weight:800;letter-spacing:-.035em;max-width:16ch}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/hero-bg.jpg) center/cover;filter:brightness(.5) saturate(.9);transform:scale(1.03);z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 38%,rgba(6,11,19,.35),rgba(6,11,19,.85) 100%),linear-gradient(180deg,rgba(6,11,19,.15) 0%,rgba(6,11,19,.4) 60%,var(--ink) 98%);z-index:-1}
+.hero .wrap{display:grid;justify-items:center;text-align:center;gap:22px;padding-block:72px 44px}
+.hero .avail{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 12px;border-radius:999px;background:rgba(6,11,19,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);font-size:.88rem;font-weight:600;color:#e2e8f0}
+.hero .avail i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:gpulse 2s infinite}
+.hero .avail span{color:#94a3b8;font-weight:500}
+@keyframes gpulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero h1 .l2{position:relative;display:inline-block;color:var(--red);padding-bottom:.08em}
+.hero h1 .l2 svg{position:absolute;left:2%;right:2%;bottom:-.22em;width:96%;height:.32em;overflow:visible}
+.hero .chipsrow{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.hero .chipsrow span{padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);font-size:.88rem;color:#d5dde8;backdrop-filter:blur(4px)}
+.btn-call{flex-direction:column;align-items:flex-start;gap:0;line-height:1.15;padding-block:.65em}
+.btn-call small{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.btn-call b{display:flex;align-items:center;gap:.5em;font-size:1.2rem;font-variant-numeric:tabular-nums}
+.hstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:100%;max-width:860px;margin-top:6px}
+.hstat{background:rgba(9,15,27,.6);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 12px;backdrop-filter:blur(8px);display:grid;gap:2px}
+.hstat b{font-size:1.55rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#fff;display:flex;align-items:center;justify-content:center;gap:6px}
+.hstat b em{font-style:normal;color:var(--red)}
+.hstat b .stars{color:#fbbf24}
+.hstat b .stars svg{width:14px;height:14px}
+.hstat span{font-size:.8rem;color:#9fb0c5}
+@media (max-width:700px){.hstats{grid-template-columns:repeat(2,minmax(0,1fr))}.btn-call{align-items:center}.hero .avail span{display:none}.hero .chipsrow span{font-size:.82rem;padding:5px 11px}}
+.hero h1{font-size:clamp(2.3rem,5.8vw,4.3rem);font-weight:800;letter-spacing:-.035em;max-width:16ch;line-height:1.08;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero .towns{font-size:clamp(1rem,1.8vw,1.35rem);color:#9fb0c5}
 .hero .promise{font-size:clamp(1.15rem,2.2vw,1.7rem);font-weight:700}
 .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
@@ -169,7 +188,7 @@ button,input,select,textarea{font:inherit}
 .rv .by{font-size:.78rem;color:var(--muted)}
 .ticker{border-top:1px solid var(--line-d);color:#9fb0c5;font-size:.92rem;text-align:center;padding-block:18px}
 .ticker b{color:#fff}
-@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.dot{animation:none}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.dot,.hero .avail i{animation:none}}
 
 /* ---------- 3-step strip ---------- */
 .how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;box-shadow:var(--sh)}
@@ -565,18 +584,18 @@ form.done .sent{display:block}
 <main data-page="home">
   <section class="hero">
     <div class="wrap">
-      <span class="badge"><svg class="ico"><use href="#i-clock"/></svg> 24/7 Emergency Response</span>
-      <h1>Emergency Plumber <span class="red">45 Minutes Away</span></h1>
-      <p class="towns">Leeds • Harrogate • York • Huddersfield • Halifax • Doncaster • Wakefield</p>
-      <p class="promise">45 Minute Response • <span class="blue">12 Month Guarantee</span></p>
+      <span class="avail"><i></i> Engineers available now <span>· 24/7 emergency response</span></span>
+      <h1>Emergency Plumber<br><span class="l2">45 Minutes Away<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C 70 4, 150 4, 296 10" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" opacity=".85"/></svg></span></h1>
+      <div class="chipsrow" aria-label="Areas covered"><span>Leeds</span><span>Harrogate</span><span>York</span><span>Huddersfield</span><span>Halifax</span><span>Doncaster</span><span>Wakefield</span></div>
       <div class="btns">
-        <a class="btn btn-red btn-lg" href="tel:+447848298987"><svg class="ico"><use href="#i-phone"/></svg> Call Now – Immediate Response</a>
+        <a class="btn btn-red btn-lg btn-call" href="tel:+447848298987"><small>Call now · immediate response</small><b><svg class="ico"><use href="#i-phone"/></svg> 07848 298987</b></a>
         <a class="btn btn-ghost btn-lg" href="#services">View Our Services</a>
       </div>
-      <div class="trust-row">
-        <span><span class="stars" data-stars="5"></span> Rated 5 Stars by Yorkshire Homeowners</span>
-        <span><svg class="ico"><use href="#i-wrench"/></svg> Arrive Within 45 Minutes</span>
-        <span><svg class="ico"><use href="#i-shield"/></svg> 12-Month Repair Guarantee</span>
+      <div class="hstats">
+        <div class="hstat"><b>45<em> min</em></b><span>Typical arrival</span></div>
+        <div class="hstat"><b>12<em> mo</em></b><span>Repair guarantee</span></div>
+        <div class="hstat"><b>5.0 <span class="stars" data-stars="5"></span></b><span>Trustpilot rating</span></div>
+        <div class="hstat"><b>24<em>/</em>7</b><span>Always answered</span></div>
       </div>
     </div>
     <div data-reviews></div>
