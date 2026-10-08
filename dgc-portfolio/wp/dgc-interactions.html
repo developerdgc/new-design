@@ -140,6 +140,7 @@ html.dgc-fine .elementor a.dgc-device { cursor: none; }
 .elementor .dgc-quote::before { content: "\201C"; position: absolute; left: auto; bottom: auto; width: auto; height: auto; right: 22px; top: 6px; font-family: Unbounded, sans-serif; font-size: 4.4rem; line-height: 1; color: rgba(246,164,64,.35); }
 .elementor .dgc-kicker-navy::before { background: #062836; }
 .elementor .dgc-cta-mark { filter: brightness(0); }
+.elementor .dgc-phero-mark { opacity: .07; transform: rotate(-14deg); filter: brightness(0) invert(1); }
 /* Video popup */
 .dgc-vmodal { width: fit-content; max-width: 94vw; padding: 0; border: 0; border-radius: 10px; background: #000; overflow: visible; }
 .dgc-vmodal::backdrop { background: rgba(2,23,32,.9); }
@@ -329,6 +330,20 @@ dialog .dgc-x:hover, dialog .dgc-x:focus-visible { background: #fff; color: #062
   cm.querySelector('.dgc-x').addEventListener('click', function () { cm.close(); });
   cm.addEventListener('click', function (e) { if (e.target === cm) cm.close(); });
   cm.addEventListener('close', function () { document.documentElement.style.overflow = ''; });
+  // Case studies page: channel filters
+  var lib = document.querySelector('.dgc-pbody');
+  if (lib) {
+    lib.id = lib.id || 'cases';
+    var ltabs = [].slice.call(lib.querySelectorAll('.dgc-tab')), litems = [].slice.call(lib.querySelectorAll('.dgc-cgrid > .dgc-cs-item'));
+    var lkey = function (el, pre) { var m = el.className.match(new RegExp('\\b' + pre + '([a-z]+)')); return m ? m[1] : ''; };
+    var pick = function (t) {
+      ltabs.forEach(function (b) { var on = b === t; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      var f = lkey(t, 'dgc-sf-');
+      litems.forEach(function (c) { c.style.display = (f === 'all' || lkey(c, 'dgc-ch-') === f) ? '' : 'none'; });
+    };
+    ltabs.forEach(function (t) { t.setAttribute('type', 'button'); t.addEventListener('click', function () { pick(t); }); });
+    if (ltabs[0]) pick(ltabs[0]);
+  }
   // Highlight the current page in the menu
   var norm = function (p) { return p.replace(/\/+$/, '') || '/'; };
   document.querySelectorAll('.dgc-navlink').forEach(function (a) {
