@@ -141,6 +141,10 @@ html.dgc-fine .elementor a.dgc-device { cursor: none; }
 .elementor .dgc-kicker-navy::before { background: #062836; }
 .elementor .dgc-cta-mark { filter: brightness(0); }
 .elementor .dgc-phero-mark { opacity: .07; transform: rotate(-14deg); filter: brightness(0) invert(1); }
+.elementor .dgc-vgrid .dgc-vthumb:hover { transform: translateY(-8px); }
+.elementor .dgc-vgrid:has(.dgc-vthumb:hover) .dgc-vthumb:not(:hover) { opacity: .45; filter: grayscale(.5); }
+.elementor .dgc-vgrid .dgc-vthumb:hover .dgc-vcap { opacity: 1; }
+.elementor .dgc-vgrid .dgc-vthumb:hover .dgc-vbtn { box-shadow: 0 30px 50px -22px rgba(6,40,54,.7), 0 0 0 3px #f6a440; }
 /* Video popup */
 .dgc-vmodal { width: fit-content; max-width: 94vw; padding: 0; border: 0; border-radius: 10px; background: #000; overflow: visible; }
 .dgc-vmodal::backdrop { background: rgba(2,23,32,.9); }
@@ -333,7 +337,7 @@ dialog .dgc-x:hover, dialog .dgc-x:focus-visible { background: #fff; color: #062
   // Case studies page: channel filters
   var lib = document.querySelector('.dgc-pbody');
   if (lib) {
-    lib.id = lib.id || 'cases';
+    lib.id = lib.id || (lib.querySelector('.dgc-vgrid') ? 'videos' : 'cases');
     var ltabs = [].slice.call(lib.querySelectorAll('.dgc-tab')), litems = [].slice.call(lib.querySelectorAll('.dgc-cgrid > .dgc-cs-item'));
     var lkey = function (el, pre) { var m = el.className.match(new RegExp('\\b' + pre + '([a-z]+)')); return m ? m[1] : ''; };
     var pick = function (t) {
