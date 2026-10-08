@@ -1,7 +1,7 @@
 """Global classes: CSS-mask icons + header/footer building blocks."""
 import mcp, json, urllib.parse, re
-def icon_css(svg_body, size=16, stroke=False):
-    svg = re.sub(r'<svg[^>]*>', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ' + ('fill="none" stroke="black" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">' if stroke else 'fill="black">'), svg_body, count=1)
+def icon_css(svg_body, size=16, stroke=False, sw=2.6):
+    svg = re.sub(r'<svg[^>]*>', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ' + ('fill="none" stroke="black" stroke-width="' + str(sw) + '" stroke-linecap="round" stroke-linejoin="round">' if stroke else 'fill="black">'), svg_body, count=1)
     u = 'url("data:image/svg+xml,' + urllib.parse.quote(svg) + '")'
     return f'display: inline-block; width: {size}px; height: {size}px; min-width: 0; padding: 0; flex: none; background-color: currentColor; -webkit-mask: {u} center / contain no-repeat; mask: {u} center / contain no-repeat;'
 ICONS = {n: open(f'icons/{n}.svg').read() for n in ['phone', 'mail', 'facebook', 'instagram', 'linkedin', 'arrow-right', 'burger', 'pin', 'chevron-up']}
