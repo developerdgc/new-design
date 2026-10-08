@@ -1,0 +1,800 @@
+{
+ "img/brand/dgc-mark-white.png": {
+  "id": 9,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brand-dgc-mark-white.webp",
+  "w": 215,
+  "h": 220,
+  "bytes": 9484
+ },
+ "img/brands/genia-mcpherson/m1.jpg": {
+  "id": 10,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-genia-mcpherson-m1.webp",
+  "w": 1400,
+  "h": 979,
+  "bytes": 61684
+ },
+ "img/brand/payments.png": {
+  "id": 11,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brand-payments.webp",
+  "w": 1024,
+  "h": 213,
+  "bytes": 26254
+ },
+ "img/brands/genia-mcpherson/m2.jpg": {
+  "id": 12,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-genia-mcpherson-m2.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 225952
+ },
+ "img/brands/genia-mcpherson/logo.png": {
+  "id": 13,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-genia-mcpherson-logo.webp",
+  "w": 871,
+  "h": 900,
+  "bytes": 73334
+ },
+ "img/brand/dgc-logo-white.png": {
+  "id": 14,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brand-dgc-logo-white.webp",
+  "w": 942,
+  "h": 265,
+  "bytes": 19736
+ },
+ "img/brands/genia-mcpherson/m3.jpg": {
+  "id": 15,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-genia-mcpherson-m3.webp",
+  "w": 1400,
+  "h": 1240,
+  "bytes": 52428
+ },
+ "img/brands/genia-mcpherson/m4.jpg": {
+  "id": 16,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-genia-mcpherson-m4.webp",
+  "w": 1400,
+  "h": 788,
+  "bytes": 50854
+ },
+ "img/brands/irina-stoyan/m1.jpg": {
+  "id": 17,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-irina-stoyan-m1.webp",
+  "w": 1400,
+  "h": 1050,
+  "bytes": 220100
+ },
+ "img/brands/irina-stoyan/m2.jpg": {
+  "id": 18,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-irina-stoyan-m2.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 230008
+ },
+ "img/brands/irina-stoyan/m3.jpg": {
+  "id": 19,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-irina-stoyan-m3.webp",
+  "w": 1400,
+  "h": 1240,
+  "bytes": 77566
+ },
+ "img/brands/irina-stoyan/m4.jpg": {
+  "id": 20,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-irina-stoyan-m4.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 76828
+ },
+ "img/brands/kam-rc/m1.jpg": {
+  "id": 21,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-kam-rc-m1.webp",
+  "w": 1400,
+  "h": 788,
+  "bytes": 47932
+ },
+ "img/brands/kam-rc/m2.jpg": {
+  "id": 22,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-kam-rc-m2.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 224238
+ },
+ "img/brands/kam-rc/m3.jpg": {
+  "id": 23,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-kam-rc-m3.webp",
+  "w": 1400,
+  "h": 1240,
+  "bytes": 61378
+ },
+ "img/brands/kam-rc/m4.jpg": {
+  "id": 24,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-kam-rc-m4.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 74108
+ },
+ "img/brands/specialized-cabinets/m1.jpg": {
+  "id": 25,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-specialized-cabinets-m1.webp",
+  "w": 1400,
+  "h": 1050,
+  "bytes": 214966
+ },
+ "img/brands/irina-stoyan/logo.png": {
+  "id": 26,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-irina-stoyan-logo.webp",
+  "w": 795,
+  "h": 900,
+  "bytes": 82216
+ },
+ "img/brands/specialized-cabinets/m2.jpg": {
+  "id": 27,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-specialized-cabinets-m2.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 232102
+ },
+ "img/brands/kam-rc/logo.png": {
+  "id": 28,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-kam-rc-logo.webp",
+  "w": 900,
+  "h": 691,
+  "bytes": 47344
+ },
+ "img/brands/specialized-cabinets/m3.jpg": {
+  "id": 29,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-specialized-cabinets-m3.webp",
+  "w": 1400,
+  "h": 1240,
+  "bytes": 73430
+ },
+ "img/brands/specialized-cabinets/m4.jpg": {
+  "id": 30,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-specialized-cabinets-m4.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 63892
+ },
+ "img/brands/specialized-cabinets/logo.png": {
+  "id": 31,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-specialized-cabinets-logo.webp",
+  "w": 875,
+  "h": 855,
+  "bytes": 43330
+ },
+ "img/brands/visa-help/m1.jpg": {
+  "id": 32,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-visa-help-m1.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 221588
+ },
+ "img/brands/visa-help/m3.jpg": {
+  "id": 34,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-visa-help-m3.webp",
+  "w": 1400,
+  "h": 933,
+  "bytes": 87756
+ },
+ "img/brands/visa-help/m2.jpg": {
+  "id": 33,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-visa-help-m2.webp",
+  "w": 1400,
+  "h": 1240,
+  "bytes": 65340
+ },
+ "img/brands/visa-help/logo.png": {
+  "id": 35,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-visa-help-logo.webp",
+  "w": 900,
+  "h": 357,
+  "bytes": 42122
+ },
+ "img/brands/visa-help/m4.jpg": {
+  "id": 36,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/brands-visa-help-m4.webp",
+  "w": 1400,
+  "h": 788,
+  "bytes": 30174
+ },
+ "img/casestudies/ads-exotic-car-rental.jpg": {
+  "id": 37,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-ads-exotic-car-rental-scaled.webp",
+  "w": 544,
+  "h": 2560,
+  "bytes": 364930
+ },
+ "img/casestudies/ads-mobile-tire-service.jpg": {
+  "id": 38,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-ads-mobile-tire-service-scaled.webp",
+  "w": 544,
+  "h": 2560,
+  "bytes": 368828
+ },
+ "img/casestudies/ads-cleaning-company.jpg": {
+  "id": 39,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-ads-cleaning-company-scaled.webp",
+  "w": 534,
+  "h": 2560,
+  "bytes": 361242
+ },
+ "img/casestudies/ads-air-duct-cleaning.jpg": {
+  "id": 40,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-ads-air-duct-cleaning-scaled.webp",
+  "w": 528,
+  "h": 2560,
+  "bytes": 385340
+ },
+ "img/casestudies/ads-towing-company.jpg": {
+  "id": 41,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-ads-towing-company-scaled.webp",
+  "w": 538,
+  "h": 2560,
+  "bytes": 369968
+ },
+ "img/casestudies/aio-airport-transportation.jpg": {
+  "id": 42,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-aio-airport-transportation-scaled.webp",
+  "w": 425,
+  "h": 2560,
+  "bytes": 556378
+ },
+ "img/casestudies/aio-cleaning-company.jpg": {
+  "id": 44,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-aio-cleaning-company-scaled.webp",
+  "w": 385,
+  "h": 2560,
+  "bytes": 636526
+ },
+ "img/casestudies/aio-architecture-firm.jpg": {
+  "id": 43,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-aio-architecture-firm-scaled.webp",
+  "w": 391,
+  "h": 2560,
+  "bytes": 633434
+ },
+ "img/casestudies/gbp-cannabis-dispensary.jpg": {
+  "id": 45,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-gbp-cannabis-dispensary-scaled.webp",
+  "w": 388,
+  "h": 2560,
+  "bytes": 571634
+ },
+ "img/casestudies/gbp-concrete-contractor.jpg": {
+  "id": 46,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-gbp-concrete-contractor-scaled.webp",
+  "w": 350,
+  "h": 2560,
+  "bytes": 584620
+ },
+ "img/casestudies/gbp-hookah-lounge.jpg": {
+  "id": 47,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-gbp-hookah-lounge-scaled.webp",
+  "w": 376,
+  "h": 2560,
+  "bytes": 591244
+ },
+ "img/casestudies/lsa-air-duct-cleaning.jpg": {
+  "id": 48,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-lsa-air-duct-cleaning-scaled.webp",
+  "w": 462,
+  "h": 2560,
+  "bytes": 388076
+ },
+ "img/casestudies/gbp-exotic-car-rental.jpg": {
+  "id": 49,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-gbp-exotic-car-rental-scaled.webp",
+  "w": 393,
+  "h": 2560,
+  "bytes": 559148
+ },
+ "img/casestudies/lsa-carpet-cleaning.jpg": {
+  "id": 50,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-lsa-carpet-cleaning-scaled.webp",
+  "w": 458,
+  "h": 2560,
+  "bytes": 385388
+ },
+ "img/casestudies/gbp-limousine-service.jpg": {
+  "id": 51,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-gbp-limousine-service-scaled.webp",
+  "w": 391,
+  "h": 2560,
+  "bytes": 564168
+ },
+ "img/casestudies/lsa-towing-company.jpg": {
+  "id": 52,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-lsa-towing-company-scaled.webp",
+  "w": 460,
+  "h": 2560,
+  "bytes": 381358
+ },
+ "img/casestudies/seo-auto-detailing-coatings.jpg": {
+  "id": 53,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-seo-auto-detailing-coatings-scaled.webp",
+  "w": 443,
+  "h": 2560,
+  "bytes": 501004
+ },
+ "img/casestudies/seo-commercial-cleaning.jpg": {
+  "id": 54,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-seo-commercial-cleaning-scaled.webp",
+  "w": 446,
+  "h": 2560,
+  "bytes": 527808
+ },
+ "img/stock/client-high-five.jpg": {
+  "id": 55,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/stock-client-high-five.webp",
+  "w": 800,
+  "h": 533,
+  "bytes": 43540
+ },
+ "img/stock/planning-wall.jpg": {
+  "id": 57,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/stock-planning-wall.webp",
+  "w": 1000,
+  "h": 667,
+  "bytes": 35094
+ },
+ "img/stock/team-laptops.jpg": {
+  "id": 58,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/stock-team-laptops.webp",
+  "w": 1200,
+  "h": 800,
+  "bytes": 73724
+ },
+ "img/work/22222222.jpg": {
+  "id": 60,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-22222222.webp",
+  "w": 520,
+  "h": 2168,
+  "bytes": 124922
+ },
+ "img/work/3i-inspectos.jpg": {
+  "id": 61,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-3i-inspectos.webp",
+  "w": 520,
+  "h": 2420,
+  "bytes": 96952
+ },
+ "img/casestudies/seo-exotic-car-rental.jpg": {
+  "id": 56,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-seo-exotic-car-rental-scaled.webp",
+  "w": 430,
+  "h": 2560,
+  "bytes": 552264
+ },
+ "img/work/adamscoatings.jpg": {
+  "id": 62,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-adamscoatings.webp",
+  "w": 419,
+  "h": 2560,
+  "bytes": 137158
+ },
+ "img/casestudies/seo-drywall-contractor.jpg": {
+  "id": 59,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/casestudies-seo-drywall-contractor-scaled.webp",
+  "w": 440,
+  "h": 2560,
+  "bytes": 540710
+ },
+ "img/work/air-duct-cleaning.jpg": {
+  "id": 63,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-air-duct-cleaning.webp",
+  "w": 452,
+  "h": 2560,
+  "bytes": 144710
+ },
+ "img/work/alamo-carpet.jpg": {
+  "id": 64,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-alamo-carpet.webp",
+  "w": 478,
+  "h": 2560,
+  "bytes": 123190
+ },
+ "img/work/apexxx.jpg": {
+  "id": 65,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-apexxx.webp",
+  "w": 452,
+  "h": 2560,
+  "bytes": 135266
+ },
+ "img/work/black-n-black.jpg": {
+  "id": 66,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-black-n-black.webp",
+  "w": 454,
+  "h": 2560,
+  "bytes": 127872
+ },
+ "img/work/burns-towing.jpg": {
+  "id": 67,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-burns-towing.webp",
+  "w": 445,
+  "h": 2560,
+  "bytes": 122056
+ },
+ "img/work/agp.jpg": {
+  "id": 68,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-agp.webp",
+  "w": 486,
+  "h": 2560,
+  "bytes": 119692
+ },
+ "img/work/clark-exteriors.jpg": {
+  "id": 69,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-clark-exteriors.webp",
+  "w": 422,
+  "h": 2560,
+  "bytes": 119182
+ },
+ "img/work/clean-cut-painting.jpg": {
+  "id": 70,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-clean-cut-painting.webp",
+  "w": 379,
+  "h": 2560,
+  "bytes": 105126
+ },
+ "img/work/crystal.jpg": {
+  "id": 71,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-crystal.webp",
+  "w": 422,
+  "h": 2560,
+  "bytes": 121160
+ },
+ "img/work/csr-chimney-services.jpg": {
+  "id": 72,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-csr-chimney-services.webp",
+  "w": 338,
+  "h": 2560,
+  "bytes": 119094
+ },
+ "img/work/dreamscometrue-services.jpg": {
+  "id": 73,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-dreamscometrue-services.webp",
+  "w": 423,
+  "h": 2560,
+  "bytes": 141464
+ },
+ "img/work/dr-buk.jpg": {
+  "id": 74,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-dr-buk.webp",
+  "w": 520,
+  "h": 2252,
+  "bytes": 114300
+ },
+ "img/work/eversteamcarpetcleaning.jpg": {
+  "id": 75,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-eversteamcarpetcleaning.webp",
+  "w": 407,
+  "h": 2560,
+  "bytes": 136034
+ },
+ "img/work/evolove-skinbar.jpg": {
+  "id": 76,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-evolove-skinbar.webp",
+  "w": 420,
+  "h": 2560,
+  "bytes": 111988
+ },
+ "img/work/exotic-cars.jpg": {
+  "id": 77,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-exotic-cars.webp",
+  "w": 441,
+  "h": 2560,
+  "bytes": 137164
+ },
+ "img/work/fumare-hookah.jpg": {
+  "id": 78,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-fumare-hookah.webp",
+  "w": 442,
+  "h": 2560,
+  "bytes": 142772
+ },
+ "img/work/genia.jpg": {
+  "id": 79,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-genia.webp",
+  "w": 499,
+  "h": 2560,
+  "bytes": 122232
+ },
+ "img/work/gsk.jpg": {
+  "id": 80,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-gsk.webp",
+  "w": 376,
+  "h": 2560,
+  "bytes": 102276
+ },
+ "img/work/grout.jpg": {
+  "id": 81,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-grout.webp",
+  "w": 520,
+  "h": 2080,
+  "bytes": 82962
+ },
+ "img/work/freebird.jpg": {
+  "id": 82,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-freebird.webp",
+  "w": 520,
+  "h": 2403,
+  "bytes": 121622
+ },
+ "img/work/haveitmaid.jpg": {
+  "id": 83,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-haveitmaid.webp",
+  "w": 403,
+  "h": 2560,
+  "bytes": 131510
+ },
+ "img/work/huskins.jpg": {
+  "id": 84,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-huskins.webp",
+  "w": 513,
+  "h": 2560,
+  "bytes": 130986
+ },
+ "img/work/iriana.jpg": {
+  "id": 85,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-iriana.webp",
+  "w": 441,
+  "h": 2560,
+  "bytes": 116398
+ },
+ "img/work/gripenbuildingservices.jpg": {
+  "id": 86,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-gripenbuildingservices.webp",
+  "w": 520,
+  "h": 2106,
+  "bytes": 119040
+ },
+ "img/work/junk-removal.jpg": {
+  "id": 87,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-junk-removal.webp",
+  "w": 417,
+  "h": 2560,
+  "bytes": 143844
+ },
+ "img/work/kamrc-digital-marketing.jpg": {
+  "id": 88,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-kamrc-digital-marketing.webp",
+  "w": 520,
+  "h": 2425,
+  "bytes": 105702
+ },
+ "img/work/kdk-power.jpg": {
+  "id": 89,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-kdk-power.webp",
+  "w": 346,
+  "h": 2560,
+  "bytes": 124494
+ },
+ "img/work/luxprousa.jpg": {
+  "id": 90,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-luxprousa.webp",
+  "w": 380,
+  "h": 2560,
+  "bytes": 149404
+ },
+ "img/work/librity-home-inspection.jpg": {
+  "id": 91,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-librity-home-inspection.webp",
+  "w": 373,
+  "h": 2560,
+  "bytes": 131380
+ },
+ "img/work/limos.jpg": {
+  "id": 92,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-limos.webp",
+  "w": 479,
+  "h": 2560,
+  "bytes": 155024
+ },
+ "img/work/manycolor.jpg": {
+  "id": 93,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-manycolor.webp",
+  "w": 520,
+  "h": 2295,
+  "bytes": 100286
+ },
+ "img/work/mdf-air-clean.jpg": {
+  "id": 94,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-mdf-air-clean.webp",
+  "w": 462,
+  "h": 2560,
+  "bytes": 116396
+ },
+ "img/work/miaa.jpg": {
+  "id": 95,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-miaa.webp",
+  "w": 504,
+  "h": 2560,
+  "bytes": 130342
+ },
+ "img/work/meti.jpg": {
+  "id": 97,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-meti.webp",
+  "w": 380,
+  "h": 2560,
+  "bytes": 118692
+ },
+ "img/work/moutonconcreteservices.jpg": {
+  "id": 96,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-moutonconcreteservices.webp",
+  "w": 421,
+  "h": 2560,
+  "bytes": 155494
+ },
+ "img/work/oak-builders.jpg": {
+  "id": 98,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-oak-builders.webp",
+  "w": 406,
+  "h": 2560,
+  "bytes": 152620
+ },
+ "img/work/orange-county-towing.jpg": {
+  "id": 99,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-orange-county-towing.webp",
+  "w": 451,
+  "h": 2560,
+  "bytes": 123852
+ },
+ "img/work/presential-painting.jpg": {
+  "id": 100,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-presential-painting.webp",
+  "w": 421,
+  "h": 2560,
+  "bytes": 130190
+ },
+ "img/work/spb.jpg": {
+  "id": 101,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-spb.webp",
+  "w": 347,
+  "h": 2560,
+  "bytes": 91438
+ },
+ "img/work/santa-cruz.jpg": {
+  "id": 102,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-santa-cruz.webp",
+  "w": 520,
+  "h": 2416,
+  "bytes": 150154
+ },
+ "img/work/stevestowingga.jpg": {
+  "id": 103,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-stevestowingga.webp",
+  "w": 520,
+  "h": 2260,
+  "bytes": 132154
+ },
+ "img/work/storm-sheild.jpg": {
+  "id": 104,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-storm-sheild.webp",
+  "w": 515,
+  "h": 2560,
+  "bytes": 176640
+ },
+ "img/work/tampafci.jpg": {
+  "id": 105,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-tampafci.webp",
+  "w": 520,
+  "h": 1112,
+  "bytes": 46962
+ },
+ "img/work/sunise.jpg": {
+  "id": 106,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-sunise.webp",
+  "w": 430,
+  "h": 2560,
+  "bytes": 100906
+ },
+ "img/work/texusdesign.jpg": {
+  "id": 107,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-texusdesign.webp",
+  "w": 495,
+  "h": 2560,
+  "bytes": 116624
+ },
+ "img/work/thedragons.jpg": {
+  "id": 108,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-thedragons.webp",
+  "w": 399,
+  "h": 2560,
+  "bytes": 96288
+ },
+ "img/work/tom-cook.jpg": {
+  "id": 109,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-tom-cook.webp",
+  "w": 423,
+  "h": 2560,
+  "bytes": 131126
+ },
+ "img/work/ttown-pristine.jpg": {
+  "id": 110,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-ttown-pristine.webp",
+  "w": 520,
+  "h": 2461,
+  "bytes": 133046
+ },
+ "img/work/visa-help-247.jpg": {
+  "id": 111,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-visa-help-247.webp",
+  "w": 413,
+  "h": 2560,
+  "bytes": 138804
+ },
+ "img/work/wisechoicecontractors-com-2.jpg": {
+  "id": 112,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-wisechoicecontractors-com-2.webp",
+  "w": 417,
+  "h": 2560,
+  "bytes": 85748
+ },
+ "video/review-1.jpg": {
+  "id": 114,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-1.webp",
+  "w": 540,
+  "h": 959,
+  "bytes": 57666
+ },
+ "img/work/ywcscorp.jpg": {
+  "id": 113,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-ywcscorp.webp",
+  "w": 430,
+  "h": 2560,
+  "bytes": 135142
+ },
+ "video/review-2.jpg": {
+  "id": 115,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-2.webp",
+  "w": 540,
+  "h": 959,
+  "bytes": 54526
+ },
+ "video/review-2.mp4": {
+  "id": 116,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-2.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 486283
+ },
+ "video/review-3.jpg": {
+  "id": 117,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-3.webp",
+  "w": 540,
+  "h": 959,
+  "bytes": 57190
+ },
+ "video/review-3.mp4": {
+  "id": 118,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-3.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 2308106
+ },
+ "img/work/warrior-gutter.jpg": {
+  "id": 119,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-warrior-gutter.webp",
+  "w": 446,
+  "h": 2560,
+  "bytes": 128444
+ },
+ "video/review-4.mp4": {
+  "id": 120,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-4.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 3997116
+ },
+ "video/review-4.jpg": {
+  "id": 121,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-4.webp",
+  "w": 540,
+  "h": 959,
+  "bytes": 55882
+ },
+ "video/review-1.mp4": {
+  "id": 122,
+  "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/video-review-1.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 931971
+ }
+}
