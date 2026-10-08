@@ -70,3 +70,14 @@ def put_section(post_id, title, index, **kw):
         call('elementor-manage-elements', {'post_id': post_id, 'operations': [{'action': 'move', 'element_id': ids[-1], 'new_parent_id': 'document', 'index': index}]})
         call('elementor-publish-document', {'post_id': post_id})
     return r
+
+def class_ids():
+    g = call('elementor-read-resource', {'uri': 'elementor://global-classes'})
+    c = json.loads(g['content']) if isinstance(g.get('content'), str) else g
+    items = c if isinstance(c, list) else c.get('classes', c.get('items', []))
+    return {x.get('label'): x.get('id') for x in items}
+def prioritize(labels):
+    """Move modifier classes to the top of the priority list so they beat base classes."""
+    ids = class_ids()
+    moves = [{'id': ids[l], 'position': 'start'} for l in reversed(labels) if l in ids]
+    for i in range(0, len(moves), 20): call('elementor-reorder-classes', {'moves': moves[i:i + 20]})

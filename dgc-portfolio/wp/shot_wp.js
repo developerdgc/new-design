@@ -22,7 +22,7 @@ async function viaCurl(route) {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
   for (const [n, w, h] of [['d', 1440, 900], ['m', 390, 844]]) {
     const p = await b.newPage({ viewport: { width: w, height: h }, ignoreHTTPSErrors: true }); const errs = []; p.on('pageerror', e => errs.push(e.message)); await p.route('**/*', viaCurl);
-    await p.goto(url + (url.includes('?') ? '&' : '?') + 'nc=' + Date.now(), { waitUntil: 'load', timeout: 90000 });
+    await p.goto(url + (url.includes('?') ? '&' : '?') + 'nc=' + Date.now() + Math.random(), { waitUntil: 'load', timeout: 90000 });
     if (bg) await p.addStyleTag({ content: bg });
     await p.waitForTimeout(800);
     await p.screenshot({ path: `${out}-${n}.png`, fullPage: process.env.FULL === '1' });
