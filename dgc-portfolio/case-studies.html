@@ -625,6 +625,25 @@ figcaption small { font-size: .78rem; color: var(--fog); }
 .bm__img { background: #0c0e10; }
 .lcard__sheet { grid-template: minmax(0, 1fr) / minmax(0, 1fr); padding: 5% 8%; }
 .lcard__sheet img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; }
+/* brand cards take the logo's own palette (no teal), panel columns line up */
+.lcard { background: radial-gradient(85% 70% at 100% 0%, color-mix(in srgb, var(--c) 42%, transparent), transparent 62%), radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--c) 16%, transparent), transparent 70%), linear-gradient(160deg, #1a1a1b, #050505); }
+.lcard::before { background-image: linear-gradient(color-mix(in srgb, var(--c) 10%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, transparent) 1px, transparent 1px); }
+.lcard--light { background: radial-gradient(85% 70% at 100% 0%, color-mix(in srgb, var(--c) 30%, transparent), transparent 62%), linear-gradient(160deg, #f4f8fb, #dfe7ee); }
+.lcard--light .lcard__sheet::before, .lcard--light .lcard__sheet::after { border-color: rgba(30,40,50,.35); }
+.lcard--light .lcard__foot { color: #5b6670; }
+.lcard--light .lcard__sw b, .lcard--light .lcard__id b { color: #10202a; }
+.lcard--light .lcard__sw i { border-color: rgba(0,0,0,.15); }
+.brand::before { background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 30%, transparent) 60%, transparent); }
+.brand { align-items: stretch; }
+.brand__main { display: flex; }
+.brand__main .lcard { flex: 1; aspect-ratio: auto; min-height: 320px; }
+.brand__main .lcard__sheet { top: 9%; bottom: 24%; left: 10%; right: 10%; }
+.brand__mocks { gap: 16px; }
+.lcard__id { display: grid; gap: 4px; letter-spacing: 0; text-transform: none; }
+.lcard__id b { font-family: var(--body); font-size: 1.02rem; font-weight: 800; color: #fff; letter-spacing: -.01em; }
+.lcard__id small { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--c) 75%, #fff); }
+.lcard__sw { flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 900px) { .brand__main .lcard { aspect-ratio: 4 / 3.4; min-height: 0; } }
 
 .phero { padding-top: 222px !important; }
 @media (max-width: 680px) { .phero { padding-top: 180px !important; } }
