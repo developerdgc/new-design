@@ -48,8 +48,8 @@ def upsert_classes(C):
     for k, v in C.items():
         ops.append({'action': 'update', 'label': k, 'css': v, 'mode': 'replace'} if k in have else {'action': 'create', 'label': k, 'css': v})
     out = []
-    for i in range(0, len(ops), 50):
-        r = call('elementor-manage-classes', {'operations': ops[i:i + 50]})
+    for i in range(0, len(ops), 8):
+        r = call('elementor-manage-classes', {'operations': ops[i:i + 8]})
         out += [(x.get('label'), x.get('error')) for x in r['results'] if x['status'] != 'ok']
     return out or 'ok'
 def drop_dups():
