@@ -332,15 +332,27 @@ form.done .sent{display:block}
 
 /* ---------- page hero (inner) ---------- */
 .phero{position:relative;color:#fff;background:var(--ink);isolation:isolate;overflow:hidden}
-.phero::before{content:"";position:absolute;inset:0;background:var(--img,url(img/hero-kitchen.jpg)) center/cover;filter:brightness(.32);z-index:-2}
-.phero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,11,19,.92) 0%,rgba(6,11,19,.55) 60%,rgba(6,11,19,.3)),linear-gradient(0deg,var(--ink),transparent 40%);z-index:-1}
+.phero::before{content:"";position:absolute;inset:0;background:var(--img,url(img/hero-kitchen.jpg)) center/cover;filter:brightness(.5) saturate(.9);transform:scale(1.03);z-index:-2}
+.phero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,11,19,.88) 0%,rgba(6,11,19,.5) 62%,rgba(6,11,19,.35)),linear-gradient(0deg,var(--ink),transparent 38%);z-index:-1}
+.phero.solo::after{background:radial-gradient(70% 70% at 50% 45%,rgba(6,11,19,.4),rgba(6,11,19,.85) 100%),linear-gradient(0deg,var(--ink),transparent 40%)}
+.phero .badge{background:rgba(6,11,19,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);color:#e2e8f0;padding:7px 16px 7px 12px}
+.phero .badge .ico{color:#22c55e}
+.phero h1{text-shadow:0 2px 24px rgba(0,0,0,.35);line-height:1.1}
+.phero h1 .l2,.hero h1 .l2{position:relative;display:inline-block;color:var(--red);padding-bottom:.08em}
+.phero h1 .l2 svg{position:absolute;left:2%;bottom:-.2em;width:96%;height:.3em;overflow:visible}
+.phero .hstats{grid-template-columns:repeat(3,minmax(0,1fr));max-width:520px;margin-top:2px}
+.phero .hstat{text-align:center}
+.phero .hstat b{font-size:1.35rem}
+.phero .txt[style*="center"] .hstats{margin-inline:auto}
+@media (max-width:520px){.phero .hstat{padding:12px 6px}.phero .hstat b{font-size:1.1rem}.phero .hstat b .stars{display:none}.phero .hstat span{font-size:.74rem}}
+.callcard{background:rgba(9,15,27,.66);border-color:rgba(255,255,255,.12);box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
 .phero .wrap{padding-block:48px 56px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center}
 .phero.solo .wrap{grid-template-columns:minmax(0,1fr)}
 @media (max-width:900px){.phero .wrap{grid-template-columns:minmax(0,1fr)}}
 .phero .txt{display:grid;gap:18px;align-content:start}
 .crumbs{font-size:.82rem;color:#8c9bb0;display:flex;gap:8px;flex-wrap:wrap}
 .crumbs a:hover{color:#fff}
-.phero h1{font-size:clamp(1.95rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.035em}
+.phero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;letter-spacing:-.035em}
 .phero .sub{font-size:1.15rem;color:#c3cedc;max-width:58ch}
 .phero .btns{justify-content:flex-start}
 .issuebar{font-size:.9rem;color:#9fb0c5;line-height:1.9}
@@ -1514,6 +1526,14 @@ $$("[data-reviews]").forEach(el => {
   <div class="marquee"><div class="track">${cards}<span aria-hidden="true" style="display:contents">${cards}</span></div></div>`;
 });
 $$("[data-tp]").forEach(el => el.outerHTML = tpStars("sm"));
+/* inner page heroes: same treatment as the home hero */
+const BRUSH = '<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C 70 4, 150 4, 296 10" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" opacity=".85"/></svg>';
+$$(".phero").forEach(h => {
+  const r = $("h1 .red", h); if (r) { r.classList.replace("red", "l2"); r.insertAdjacentHTML("beforeend", BRUSH); }
+  $$('.btns a.btn-red[href^="tel:"]', h).forEach(a => { a.classList.add("btn-call"); a.innerHTML = `<small>Call now · 24/7</small><b>${ic("phone")} ${PHONE}</b>`; });
+  const b = $(".txt .btns", h) || $(".txt .sub", h);
+  if (b) b.insertAdjacentHTML("afterend", `<div class="hstats"><div class="hstat"><b>45<em> min</em></b><span>Typical arrival</span></div><div class="hstat"><b>12<em> mo</em></b><span>Repair guarantee</span></div><div class="hstat"><b>5.0 <span class="stars" data-stars="5"></span></b><span>Trustpilot rating</span></div></div>`);
+});
 $$("[data-stars]").forEach(el => el.innerHTML = Array(5).fill(STAR).join(""));
 
 $$("[data-svc-cards]").forEach(el => el.innerHTML = SERVICES.map(([img, t, d, i, hot, href]) =>
