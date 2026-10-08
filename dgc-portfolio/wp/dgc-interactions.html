@@ -13,6 +13,24 @@ body.admin-bar .dgc-hdr { top: 32px; }
 }
 /* Back to top */
 .elementor .dgc-totop.is-on { opacity: 1; transform: translateY(0); pointer-events: auto; }
+/* Hero: highlighted words in the heading */
+.elementor .dgc-hero-h1 span:nth-of-type(1) { display: inline-block; padding: 0 .16em .04em; border-radius: 10px; background: linear-gradient(90deg, #fb8e28, #f6a440); color: #021720; box-shadow: 0 16px 34px -14px rgba(251,142,40,.8); }
+.elementor .dgc-hero-h1 span:nth-of-type(2) { color: transparent; -webkit-text-stroke: 1.5px #22c8cc; }
+.elementor .dgc-rate b { color: #fff; }
+.elementor .dgc-face:first-child { margin-left: 0; }
+/* Motion (Elementor drops animation declarations from atomic styles, so they live here) */
+@keyframes dgc-spin { to { transform: rotate(360deg); } }
+@keyframes dgc-pan { 0%, 8% { object-position: top; } 92%, 100% { object-position: bottom; } }
+@keyframes dgc-bob { 50% { transform: translateY(-10px); } }
+.elementor .dgc-spin { animation: dgc-spin 18s linear infinite; }
+.elementor .dgc-badge:hover .dgc-spin { animation-duration: 6s; }
+.elementor .dgc-pan { animation: dgc-pan 16s ease-in-out infinite alternate; }
+.elementor .dgc-screen:nth-of-type(2) .dgc-pan { animation-delay: -5s; }
+.elementor .dgc-screen:nth-of-type(3) .dgc-pan { animation-delay: -10s; }
+.elementor .dgc-bob { animation: dgc-bob 6s ease-in-out infinite; animation-delay: -3s; }
+.elementor .dgc-btn .ico-arrow-ur { transition: transform .25s; }
+.elementor .dgc-btn:hover .ico-arrow-ur { transform: translate(2px, -2px); }
+@media (prefers-reduced-motion: reduce) { .elementor .dgc-spin, .elementor .dgc-pan, .elementor .dgc-bob { animation: none; } }
 </style>
 <script id="dgc-interactions-js">
 (function () {

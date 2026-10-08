@@ -36,3 +36,23 @@ def tools():
     return _post({'jsonrpc': '2.0', 'id': _id, 'method': 'tools/list'})['result']['tools']
 if __name__ == '__main__':
     print(json.dumps(call(sys.argv[1], json.loads(sys.argv[2]) if len(sys.argv) > 2 else {}), indent=1)[:int(os.environ.get('N', 4000))])
+
+def class_labels():
+    g = call('elementor-read-resource', {'uri': 'elementor://global-classes'})
+    c = json.loads(g['content']) if isinstance(g.get('content'), str) else g
+    items = c if isinstance(c, list) else c.get('classes', c.get('items', []))
+    return [x.get('label') for x in items]
+def upsert_classes(C):
+    """Create new global classes and replace the CSS of ones that already exist (never makes DUP_ copies)."""
+    have = set(class_labels()); ops = []
+    for k, v in C.items():
+        ops.append({'action': 'update', 'label': k, 'css': v, 'mode': 'replace'} if k in have else {'action': 'create', 'label': k, 'css': v})
+    out = []
+    for i in range(0, len(ops), 50):
+        r = call('elementor-manage-classes', {'operations': ops[i:i + 50]})
+        out += [(x.get('label'), x.get('error')) for x in r['results'] if x['status'] != 'ok']
+    return out or 'ok'
+def drop_dups():
+    d = [l for l in class_labels() if l and l.startswith('DUP_')]
+    if d: call('elementor-manage-classes', {'operations': [{'action': 'delete', 'label': l} for l in d]})
+    return d
