@@ -17,13 +17,13 @@ PAGES = {  # page id: (cases, heading, text)
  3235: (by['AI Overview'][:4], 'Real AI Overview Results', 'How we got local businesses named in Google\'s AI answers.'),
 }
 C = {
- 'dgc-svc-cases': 'flex-direction: column; gap: 0; padding: 80px 0 90px; background: #ffffff; font-family: Manrope; @media(--mobile) { padding: 56px 0 64px; }',
- 'dgc-svc-head': 'flex-direction: column; align-items: center; gap: 0; margin-bottom: 40px; padding: 0 16px; text-align: center; @media(--mobile) { margin-bottom: 28px; }',
+ 'dgc-svc-cases': 'flex-direction: column; gap: 0; padding: 44px 0 48px; background: #ffffff; font-family: Manrope; @media(--mobile) { padding: 36px 0 40px; }',
+ 'dgc-svc-head': 'flex-direction: column; align-items: center; gap: 0; margin-bottom: 24px; padding: 0 16px; text-align: center; @media(--mobile) { margin-bottom: 20px; }',
  'dgc-svc-kicker': 'display: inline-block; padding: 12px 21px; border-radius: 5px; background: #f6a440; color: #000000; font-family: Marcellus SC; font-size: 14px; font-weight: 700; line-height: 1.2; letter-spacing: 1.4px; text-transform: uppercase;',
- 'dgc-svc-h2': 'display: block; margin-top: 18px; font-family: Raleway; font-size: 34px; font-weight: 700; line-height: 1.2; color: #06232f; @media(--mobile) { font-size: 26px; }',
+ 'dgc-svc-h2': 'display: block; margin-top: 14px; font-family: Raleway; font-size: 34px; font-weight: 700; line-height: 1.2; color: #06232f; @media(--mobile) { font-size: 26px; }',
  'dgc-svc-p': 'display: block; max-width: 640px; margin-top: 10px; font-family: Poppins; font-size: 16px; line-height: 1.6; color: #333333; @media(--mobile) { font-size: 14px; }',
- 'dgc-svc-cgrid': 'display: flex; flex-wrap: nowrap; justify-content: center; gap: 24px; padding: 0 0 6px; @media(--tablet) { justify-content: flex-start; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 14px; } @media(--mobile) { gap: 14px; }',
- 'dgc-svc-citem': 'flex: 0 0 calc(25% - 18px); min-width: 0; padding: 0; scroll-snap-align: start; @media(--tablet) { flex: 0 0 46%; } @media(--mobile) { flex: 0 0 86%; }',
+ 'dgc-svc-cgrid': 'display: flex; flex-wrap: nowrap; justify-content: center; gap: 20px; padding: 0 0 6px; @media(--tablet) { justify-content: flex-start; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 14px; } @media(--mobile) { gap: 14px; }',
+ 'dgc-svc-citem': 'flex: 0 0 calc(33.333% - 14px); min-width: 0; padding: 0; scroll-snap-align: start; @media(--tablet) { flex: 0 0 46%; } @media(--mobile) { flex: 0 0 86%; }',
  'dgc-svc-more': 'justify-content: center; margin-top: 36px; padding: 0;',
 }
 def build(pid):
@@ -35,12 +35,10 @@ def build(pid):
     f.x = (f'<e-flexbox configuration-id="{TITLE}"><e-div-block configuration-id="SC Wrap"><e-flexbox configuration-id="SC Head">'
            '<e-paragraph configuration-id="SC Kicker"></e-paragraph><e-heading configuration-id="SC Title"></e-heading><e-paragraph configuration-id="SC Text"></e-paragraph></e-flexbox>'
            f'<e-flexbox configuration-id="SC Grid">{f.x}</e-flexbox>'
-           '<e-flexbox configuration-id="SC More"><e-flexbox configuration-id="SC Button"><e-paragraph configuration-id="SC Button Text"></e-paragraph><e-div-block configuration-id="SC Button Icon"></e-div-block></e-flexbox></e-flexbox>'
            '</e-div-block></e-flexbox>')
-    f.cfg.update({TITLE: {'tag': 'section'}, 'SC Kicker': {'paragraph': 'Case Studies', 'tag': 'span'}, 'SC Title': {'tag': 'h2', 'title': h2}, 'SC Text': {'paragraph': p},
-                  'SC Button': {'tag': 'a', 'link': link(SITE + '/case-studies/')}, 'SC Button Text': {'paragraph': 'View All Case Studies', 'tag': 'span'}})
+    f.cfg.update({TITLE: {'tag': 'section'}, 'SC Kicker': {'paragraph': 'Case Studies', 'tag': 'span'}, 'SC Title': {'tag': 'h2', 'title': h2}, 'SC Text': {'paragraph': p}})
     f.cls.update({TITLE: ['dgc-svc-cases'], 'SC Wrap': ['dgc-wrap'], 'SC Head': ['dgc-svc-head'], 'SC Kicker': ['dgc-svc-kicker'], 'SC Title': ['dgc-svc-h2'],
-                  'SC Text': ['dgc-svc-p'], 'SC Grid': ['dgc-svc-cgrid'], 'SC More': ['dgc-svc-more'], 'SC Button': ['dgc-mhero-btn'], 'SC Button Icon': ['ico-arrow-right']})
+                  'SC Text': ['dgc-svc-p'], 'SC Grid': ['dgc-svc-cgrid']})
     roots = mcp.call('elementor-get-page-structure', {'post_id': pid})['elements']
     old = [e['id'] for e in roots if e.get('title') == TITLE]
     if old: mcp.call('elementor-manage-elements', {'post_id': pid, 'operations': [{'action': 'delete', 'element_id': i} for i in old]})
