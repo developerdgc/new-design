@@ -217,6 +217,15 @@ dialog .dgc-x:focus-visible { box-shadow: 0 0 0 3px rgba(246,164,64,.6), 0 10px 
 .elementor .dgc-lslider button.dgc-lslider__arrow:active { background: #062836; color: #fff; }
 .elementor .dgc-lslider__arrow::before { content: ""; position: absolute; left: 50%; top: 50%; width: 9px; height: 9px; margin: -5px 0 0 -3px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(135deg); }
 .elementor .dgc-lslider__arrow[data-dir="1"]::before { margin-left: -6px; transform: rotate(-45deg); }
+/* phones: branding panel logo card (popup) - logo clear of the name row, one-line subtitle */
+@media (max-width: 767px) {
+  .elementor .dgc-lcard-panel .dgc-lsheet { left: 10%; right: 10%; top: 8%; bottom: 31%; }
+  .elementor .dgc-lcard-panel .dgc-lfoot { left: 8%; right: 8%; bottom: 7%; gap: 8px; }
+  .elementor .dgc-lcard-panel .dgc-lid-name { font-size: .9rem; }
+  .elementor .dgc-lcard-panel .dgc-lid-sub { font-size: .58rem; letter-spacing: .1em; white-space: nowrap; }
+  .elementor .dgc-lcard-panel .dgc-lsw { flex: none; }
+}
+@media (max-width: 400px) { .elementor .dgc-lcard-panel .dgc-lhex { display: none; } }
 /* ---- Parity pass: stats divider + artifact easing curves ---- */
 .elementor .dgc-stat + .dgc-stat::before { height: auto; }
 @property --gx { syntax: "<percentage>"; inherits: false; initial-value: 80%; }
