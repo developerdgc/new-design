@@ -14,6 +14,7 @@
   --night-2:#2a2e43;
   --cream:#fdf8ea;
   --white:#ffffff;
+  --page:#fbf5e8;          /* warm page ground instead of flat white */
   --text:#1d1f2b;
   --muted:#636779;
   --line:#ebe6db;
@@ -23,7 +24,7 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-body{background:var(--white);color:var(--text);font:400 1rem/1.7 var(--f)}
+body{background:var(--page);color:var(--text);font:400 1rem/1.7 var(--f)}
 h1,h2,h3,h4{font-weight:800;line-height:1.15;margin:0;letter-spacing:-.02em;text-wrap:balance}
 p{margin:0}a{color:inherit}
 img{max-width:100%}
@@ -66,7 +67,7 @@ section{padding-block:clamp(64px,8vw,110px)}
 .top .wrap{display:flex;justify-content:space-between;gap:6px 24px;flex-wrap:wrap;padding-block:9px}
 .top span{display:inline-flex;gap:8px;align-items:center}
 .top b{color:var(--gold)}
-nav.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--white);box-shadow:0 1px 0 var(--line)}
+nav.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--white);box-shadow:0 3px 0 var(--gold)}
 nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 .logo img{height:54px;width:auto;display:block}
 .links{display:flex;gap:4px;margin-left:auto;font-weight:700;font-size:.93rem}
@@ -127,6 +128,7 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 @media(max-width:520px){.sgrid{grid-template-columns:minmax(0,1fr)}}
 
 /* about */
+.about{background:radial-gradient(circle at 0% 15%,rgba(253,217,79,.45),transparent 38%),radial-gradient(circle at 100% 90%,rgba(133,1,0,.12),transparent 40%),radial-gradient(rgba(133,1,0,.13) 1.2px,transparent 1.3px) 0 0/22px 22px,var(--page)}
 .about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,80px);align-items:center}
 .col{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;gap:16px;padding-left:46px}
 .col .v{position:absolute;left:0;top:10px;writing-mode:vertical-rl;transform:rotate(180deg);font:800 4.2rem/1 var(--f);color:transparent;-webkit-text-stroke:2px var(--edge);letter-spacing:.02em}
@@ -176,8 +178,8 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 .tile .notch svg{width:24px;height:24px}
 .tile h3{font-size:1.2rem;margin:16px 10px 8px}
 .tile p{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0 10px 14px}
-.tile a.more{margin:auto 10px 0;color:var(--crimson);font-weight:800;font-size:.9rem;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
-.tile a.more:hover{gap:12px;color:var(--night)}
+.tile a.more{margin:auto 10px 0;align-self:flex-start;background:var(--crimson);color:#fff;font-weight:800;font-size:.88rem;text-decoration:none;display:inline-flex;gap:10px;align-items:center;padding:.7rem 1.1rem;border-radius:10px;border:2px solid var(--crimson);transition:background .2s,color .2s,gap .2s}
+.tile a.more:hover{gap:14px;background:var(--gold);border-color:var(--gold);color:var(--night)}
 .tile.cta{background:var(--crimson);color:#fff;border-color:var(--gold);justify-content:center;padding:30px 26px;gap:14px}
 .tile.cta h3{margin:0;font-size:1.5rem}
 .tile.cta p{margin:0;color:#f3d7d4}
@@ -189,7 +191,7 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 /* dark CTA with stat bar */
 .ctab-gap{height:clamp(56px,7vw,90px)}
 .cta-out{width:min(1330px,100%);margin-inline:auto;padding:0 20px}
-.ctab{background:radial-gradient(circle at 10% 0%,#a3120a,transparent 50%),var(--crimson-d);color:#fff;border-radius:10px;padding-block:clamp(56px,7vw,90px) 0;overflow:hidden}
+.ctab{padding-bottom:0!important;background:radial-gradient(circle at 10% 0%,#a3120a,transparent 50%),var(--crimson-d);color:#fff;border-radius:10px;padding-block:clamp(56px,7vw,90px) 0;overflow:hidden}
 .ctab .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
 .ctab .txt{display:grid;gap:20px;justify-items:start;padding-bottom:clamp(40px,6vw,80px)}
 .ctab h2{font-size:clamp(2rem,4vw,3.1rem)}
@@ -202,7 +204,7 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 .ctab .float .av i{border-color:#fff;width:40px;height:40px}
 .ctab .float b{display:block;font-size:.95rem;line-height:1.2}
 .ctab .float small{color:var(--muted);font-weight:600}
-.sbar{position:relative;z-index:2;margin:-80px auto 0;width:min(1250px,calc(100% - 40px));background:var(--white);border-radius:10px;padding:12px}
+.sbar{position:relative;margin:22px auto clamp(56px,7vw,90px);width:min(1290px,calc(100% - 40px));border-radius:10px;overflow:hidden;border:3px solid var(--gold);box-shadow:0 30px 60px -34px rgba(31,34,51,.7)}
 .sbar .in{background:var(--night-2);border-radius:10px 10px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .sbar .in div{padding:30px 16px;text-align:center;display:grid;gap:10px;justify-items:center;border-left:1px solid rgba(255,255,255,.1);color:#fff}
 .sbar .in div:first-child{border-left:0}
@@ -215,31 +217,42 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 @media(max-width:900px){.ctab .grid{grid-template-columns:minmax(0,1fr)}.ctab .pic{min-height:300px}.sbar .in{grid-template-columns:repeat(2,minmax(0,1fr))}.sbar .in div:nth-child(3){border-left:0}.sbar .in div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
 @media(max-width:480px){.ctab .float{display:none}}
 
-/* why */
-.why{background:linear-gradient(180deg,#fff6d6,#fdf8ea);border-block:3px solid var(--edge)}
-.why .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,5vw,70px);align-items:start}
-.why .left{display:grid;gap:20px;justify-items:start;position:sticky;top:110px}
-.why .lp{position:relative;width:100%;margin-top:10px}
-.why .lp img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;border:3px solid var(--gold)}
-.why .lp .chip{position:absolute;left:16px;bottom:16px;background:var(--white);border:2px solid var(--edge);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 16px 30px -18px rgba(0,0,0,.5)}
-.why .lp .chip .ic{width:44px;height:44px;border-radius:10px;background:var(--gold);color:var(--night);display:grid;place-items:center}
-.why .lp .chip .ic svg{width:22px;height:22px}
-.why .lp .chip b{display:block;font-size:1.3rem;line-height:1.1}
-.why .lp .chip small{color:var(--muted);font-weight:600}
-.wl{display:grid;gap:18px}
-.wi{display:grid;grid-template-columns:170px minmax(0,1fr);background:var(--white);border:2px solid var(--edge);box-shadow:0 18px 40px -30px rgba(31,34,51,.6);border-radius:10px;overflow:hidden;transition:transform .25s,box-shadow .25s}
-.wi:hover{transform:translateX(-6px);border-color:var(--crimson);box-shadow:0 26px 50px -26px rgba(133,1,0,.45)}
-.wi:hover h3{color:var(--crimson)}
-.wi .th{position:relative}
-.wi .th img{width:100%;height:100%;object-fit:cover;display:block;min-height:150px}
-.wi .th span{position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;background:var(--crimson);color:var(--gold);display:grid;place-items:center;border:4px solid var(--white)}
-.wi:nth-child(even) .th span{background:var(--gold);color:var(--crimson)}
-.wi .th span svg{width:20px;height:20px}
-.wi .tx{padding:24px 24px 24px 44px;display:grid;gap:8px;align-content:center}
-.wi h3{font-size:1.3rem;transition:color .2s}
-.wi p{color:var(--muted);font-size:.93rem;line-height:1.55}
-@media(max-width:940px){.why .wrap{grid-template-columns:minmax(0,1fr)}.why .left{position:static}}
-@media(max-width:520px){.wi{grid-template-columns:minmax(0,1fr)}.wi .th img{aspect-ratio:16/9;min-height:0}.wi .th span{right:16px;top:auto;bottom:-24px;transform:none}.wi .tx{padding:30px 22px 22px}}
+/* why: bold gold band, photo + stamp, dark feature cards */
+.why{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,rgba(255,255,255,.18) 0 2px,transparent 2px 22px),var(--gold);color:var(--night)}
+.why .badge{background:var(--white);border-color:var(--night);color:var(--night)}
+.why .badge svg{color:var(--crimson)}
+.why .h2 span{color:var(--crimson)}
+.wtop{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(30px,5vw,70px);align-items:center;margin-bottom:46px}
+.wtx{display:grid;gap:20px;justify-items:start}
+.wtx p{color:#3c3520;font-weight:600;max-width:56ch}
+.wlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;width:100%}
+.wlist li{display:flex;gap:10px;align-items:center;font-weight:800}
+.wlist li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:8px;background:var(--crimson);color:var(--gold);display:grid;place-items:center;font-size:.8rem}
+.wimg{position:relative}
+.wimg img{width:100%;aspect-ratio:16/11;object-fit:cover;display:block;border-radius:10px;border:5px solid var(--night);box-shadow:16px 16px 0 var(--crimson)}
+.stamp{position:absolute;left:-46px;top:-46px;width:140px;height:140px;border-radius:50%;background:var(--crimson);color:var(--gold);display:grid;place-items:center;border:5px solid var(--gold);box-shadow:0 0 0 4px var(--crimson)}
+.stamp svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 20s linear infinite}
+.stamp text{fill:var(--gold);font:800 10.5px var(--f);letter-spacing:2.2px;text-transform:uppercase}
+.stamp b{font-size:1.5rem;line-height:1;text-align:center}
+.stamp b small{display:block;font-size:.6rem;letter-spacing:.14em;color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wchip{position:absolute;right:18px;bottom:-26px;background:var(--night);color:#fff;border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:center;border:3px solid var(--gold)}
+.wchip .ic{width:42px;height:42px;border-radius:8px;background:var(--gold);color:var(--night);display:grid;place-items:center}
+.wchip .ic svg{width:22px;height:22px}
+.wchip b{display:block;line-height:1.15}.wchip small{color:#c4c7d6;font-weight:600}
+.wcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.wc{position:relative;background:var(--night);color:#fff;border-radius:10px;padding:28px 24px 26px;display:grid;gap:12px;align-content:start;border:3px solid var(--night);transition:transform .25s,background .25s,border-color .25s;overflow:hidden}
+.wc::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:rgba(253,217,79,.08)}
+.wc .ic{width:60px;height:60px;border-radius:10px;background:var(--gold);color:var(--crimson);display:grid;place-items:center;transition:background .25s,color .25s}
+.wc .ic svg{width:28px;height:28px}
+.wc h3{font-size:1.2rem}
+.wc p{color:#c4c7d6;font-size:.93rem;line-height:1.55}
+.wc:hover{transform:translateY(-8px);background:var(--crimson);border-color:var(--white)}
+.wc:hover .ic{background:var(--white)}
+.wc:hover p{color:#f3d7d4}
+@media(max-width:1000px){.wcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.wtop{grid-template-columns:minmax(0,1fr)}.stamp{left:auto;right:12px;top:-30px;width:116px;height:116px}}
+@media(max-width:520px){.wcards,.wlist{grid-template-columns:minmax(0,1fr)}.wimg img{box-shadow:8px 8px 0 var(--crimson)}}
 
 /* testimonials (dark crimson, original two-column bubble layout) */
 .reviews{background:radial-gradient(circle at 15% 0%,#a01208 0%,transparent 45%),var(--crimson-d);color:#fff}
@@ -270,9 +283,12 @@ nav.bar .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
 .gal figure:hover img{transform:scale(1.08)}
 @media(max-width:860px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+#gallery{background:radial-gradient(circle at 0% 0%,rgba(133,1,0,.5),transparent 40%),var(--night);color:#fff}
+#gallery .h2 span{color:var(--gold)}
+.gal figure{border-color:var(--gold)!important}
 /* final CTA box + footer */
-.final{padding-block:0;position:relative;z-index:2}
-.fbox{position:relative;overflow:hidden;background:var(--gold);border-radius:10px;padding:clamp(32px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:28px;align-items:center;margin-bottom:-110px;box-shadow:0 0 0 12px var(--white);border:3px solid var(--gold-d)}
+.final{padding-block:0;position:relative;z-index:2;background:var(--night)}
+.fbox{position:relative;overflow:hidden;background:var(--gold);border-radius:10px;padding:clamp(32px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:28px;align-items:center;margin-bottom:-110px;border:3px solid var(--gold-d);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
 .fbox h2{font-size:clamp(2rem,4.6vw,3.4rem);color:var(--night)}
 .fbox p{margin:12px 0 22px;font-weight:600;color:#3a3420}
 .fbox .acts{display:flex;align-items:center;gap:16px 26px;flex-wrap:wrap}
@@ -402,13 +418,13 @@ footer .soc a{width:36px;height:36px;border-radius:8px;background:var(--gold);co
     <div class="side"><p class="muted">From weekly home visits to the final polish after construction, one trusted local crew handles it all.</p><a class="pill" href="#quote">Get a Free Quote <i>→</i></a></div>
   </div>
   <div class="tiles">
-    <article class="tile"><div class="im"><img src="img/living.jpg" alt="Cleaner vacuuming a bright living room"><div class="notch"><span><svg><use href="#home"/></svg></span></div></div><h3>Residential Cleaning</h3><p>Kitchens, baths, floors and every room in between, one-time or recurring.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/janitor.jpg" alt="Cleaner mopping a commercial lobby"><div class="notch"><span><svg><use href="#bld"/></svg></span></div></div><h3>Commercial Cleaning</h3><p>Retail, clinics and business spaces, scheduled around your hours.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/office.jpg" alt="Clean modern office"><div class="notch"><span><svg><use href="#brief"/></svg></span></div></div><h3>Office Cleaning</h3><p>Desks, break rooms and restrooms, fresh for your team and clients.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/bath2.jpg" alt="Sparkling renovated bathroom"><div class="notch"><span><svg><use href="#ham"/></svg></span></div></div><h3>Remodeling Cleaning</h3><p>Dust and residue removed so your renovation shines as planned.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/kitchen3.jpg" alt="Brand-new kitchen after construction"><div class="notch"><span><svg><use href="#hat"/></svg></span></div></div><h3>Post-Construction</h3><p>Fine dust, debris and final detail before move-in day.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/window.jpg" alt="Cleaner wiping a window"><div class="notch"><span><svg><use href="#win"/></svg></span></div></div><h3>Window Cleaning</h3><p>Streak-free glass, tracks and sills to let the Florida light in.</p><a class="more" href="#quote">Read More →</a></article>
-    <article class="tile"><div class="im"><img src="img/bedroom.jpg" alt="Sunlit bedroom freshly made"><div class="notch"><span><svg><use href="#cal"/></svg></span></div></div><h3>Program Cleaning</h3><p>A recurring plan with the same trusted crew every visit.</p><a class="more" href="#quote">Read More →</a></article>
+    <article class="tile"><div class="im"><img src="img/living.jpg" alt="Cleaner vacuuming a bright living room"><div class="notch"><span><svg><use href="#home"/></svg></span></div></div><h3>Residential Cleaning</h3><p>Kitchens, baths, floors and every room in between, one-time or recurring.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/janitor.jpg" alt="Cleaner mopping a commercial lobby"><div class="notch"><span><svg><use href="#bld"/></svg></span></div></div><h3>Commercial Cleaning</h3><p>Retail, clinics and business spaces, scheduled around your hours.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/office.jpg" alt="Clean modern office"><div class="notch"><span><svg><use href="#brief"/></svg></span></div></div><h3>Office Cleaning</h3><p>Desks, break rooms and restrooms, fresh for your team and clients.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/bath2.jpg" alt="Sparkling renovated bathroom"><div class="notch"><span><svg><use href="#ham"/></svg></span></div></div><h3>Remodeling Cleaning</h3><p>Dust and residue removed so your renovation shines as planned.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/kitchen3.jpg" alt="Brand-new kitchen after construction"><div class="notch"><span><svg><use href="#hat"/></svg></span></div></div><h3>Post-Construction</h3><p>Fine dust, debris and final detail before move-in day.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/window.jpg" alt="Cleaner wiping a window"><div class="notch"><span><svg><use href="#win"/></svg></span></div></div><h3>Window Cleaning</h3><p>Streak-free glass, tracks and sills to let the Florida light in.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
+    <article class="tile"><div class="im"><img src="img/bedroom.jpg" alt="Sunlit bedroom freshly made"><div class="notch"><span><svg><use href="#cal"/></svg></span></div></div><h3>Program Cleaning</h3><p>A recurring plan with the same trusted crew every visit.</p><a class="more" href="#quote">Read More <span aria-hidden="true">→</span></a></article>
     <article class="tile cta"><h3>Not sure which service you need?</h3><p>Tell us about your space and we'll recommend the right clean, free of charge.</p><a class="pill" href="#quote">Free Estimate <i>→</i></a></article>
   </div>
 </div></section>
@@ -433,18 +449,25 @@ footer .soc a{width:36px;height:36px;border-radius:8px;background:var(--gold);co
 </div><div class="gb"><i>★★★★★</i>Real Service / Real Value<i>★★★★★</i></div></div>
 
 <section class="why" id="why"><div class="wrap">
-  <div class="left">
-    <span class="badge"><svg><use href="#sp"/></svg>Why Choose Us</span>
-    <h2 class="h2">Trusted for Quality &amp; <span>Reliability</span></h2>
-    <p class="muted">Busy families and businesses across Southwest Florida rely on Gloria's crew for cleaning that's done right, on time and at a fair price.</p>
-    <a class="pill dark" href="#quote">Book an Appointment <i>→</i></a>
-    <div class="lp"><img src="img/lounge.jpg" alt="Spotless, bright living room"><div class="chip"><span class="ic"><svg><use href="#home"/></svg></span><div><b>Since 2000</b><small>Local families served</small></div></div></div>
+  <div class="wtop">
+    <div class="wtx">
+      <span class="badge"><svg><use href="#sp"/></svg>Why Choose Us</span>
+      <h2 class="h2">Trusted for Quality &amp; <span>Reliability</span></h2>
+      <p>Busy families and businesses across Southwest Florida rely on Gloria's crew for cleaning that's done right, on time and at a fair price.</p>
+      <ul class="wlist"><li>Local Estero crew</li><li>Free, clear quotes</li><li>Homes &amp; offices</li><li>Work guaranteed</li></ul>
+      <a class="pill dark" href="#quote">Book an Appointment <i>→</i></a>
+    </div>
+    <div class="wimg">
+      <img src="img/kitchen2.jpg" alt="Smiling cleaner with spray bottle in a bright kitchen">
+      <div class="stamp" aria-hidden="true"><svg class="ring" viewBox="0 0 140 140"><defs><path id="wr" d="M70 70m-52 0a52 52 0 1 1 104 0a52 52 0 1 1-104 0"/></defs><text><textPath href="#wr">Licensed · Bonded · Insured · </textPath></text></svg><b>100%<small>Guaranteed</small></b></div>
+      <div class="wchip"><span class="ic"><svg><use href="#home"/></svg></span><div><b>Since 2000</b><small>Local families served</small></div></div>
+    </div>
   </div>
-  <div class="wl">
-    <div class="wi"><div class="th"><img src="img/team.jpg" alt="Tidy office team"><span><svg><use href="#sh"/></svg></span></div><div class="tx"><h3>Licensed, Bonded &amp; Insured</h3><p>You and your property are fully protected every time our crew walks through the door.</p></div></div>
-    <div class="wi"><div class="th"><img src="img/mop.jpg" alt="Cleaner mopping a floor"><span><svg><use href="#cl"/></svg></span></div><div class="tx"><h3>On Time, Every Time</h3><p>Our customers say it best: the crew always shows up when promised and gets the job done.</p></div></div>
-    <div class="wi"><div class="th"><img src="img/robot.jpg" alt="Clean carpet"><span><svg><use href="#st"/></svg></span></div><div class="tx"><h3>Work Guaranteed</h3><p>If something isn't right, tell us. We'll make it right, because we stand behind every clean.</p></div></div>
-    <div class="wi"><div class="th"><img src="img/oven.jpg" alt="Deep cleaning an oven"><span><svg><use href="#tag"/></svg></span></div><div class="tx"><h3>Fair, Upfront Pricing</h3><p>Cost-effective rates and free quotes for homes and offices, with no surprises on the bill.</p></div></div>
+  <div class="wcards">
+    <div class="wc"><span class="ic"><svg><use href="#sh"/></svg></span><h3>Licensed, Bonded &amp; Insured</h3><p>You and your property are fully protected every time our crew walks through the door.</p></div>
+    <div class="wc"><span class="ic"><svg><use href="#cl"/></svg></span><h3>On Time, Every Time</h3><p>Our customers say it best: the crew always shows up when promised and gets the job done.</p></div>
+    <div class="wc"><span class="ic"><svg><use href="#st"/></svg></span><h3>Work Guaranteed</h3><p>If something isn't right, tell us. We'll make it right, because we stand behind every clean.</p></div>
+    <div class="wc"><span class="ic"><svg><use href="#tag"/></svg></span><h3>Fair, Upfront Pricing</h3><p>Cost-effective rates and free quotes for homes and offices, with no surprises on the bill.</p></div>
   </div>
 </div></section>
 
@@ -468,7 +491,7 @@ footer .soc a{width:36px;height:36px;border-radius:8px;background:var(--gold);co
 </div></section>
 
 <section id="gallery"><div class="wrap">
-  <div class="center"><span class="badge"><svg><use href="#sp"/></svg>Our Gallery</span><h2 class="h2">Shining Spaces <span>Gallery</span></h2></div>
+  <div class="center"><span class="badge dk"><svg><use href="#sp"/></svg>Our Gallery</span><h2 class="h2">Shining Spaces <span>Gallery</span></h2></div>
   <div class="gal">
     <figure><img src="img/lounge.jpg" alt="Bright living room"></figure>
     <figure><img src="img/kitchen3.jpg" alt="Gleaming kitchen"></figure>
