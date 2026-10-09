@@ -1,9 +1,10 @@
 import mcp, json
 from classes_base import icon_css
-MM = json.load(open('media-map.json')); M = {k: v['id'] for k, v in MM.items()}
-SITE = 'https://newportfolio.digitalgrowthcatalyze.com'
+from dgc_site import SITE, MEDIA, PAGES
+MM = json.load(open(MEDIA)); M = {k: v['id'] for k, v in MM.items()}
+PAGE = json.load(open(PAGES))['portfolio']['id']
 PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>'
-VIDEOS = [('review-1', 'Clark Exteriors', 'Roofing contractor'), ('review-2', 'Huskins Services LLC', 'Cleaning & remodeling'), ('review-3', 'Dawn', 'Client video review'), ('review-4', 'Chase, Clean Cut', 'Client video review')]
+VIDEOS = ['review-1', 'review-2', 'review-3', 'review-4', 'review-5', 'review-6']  # thumbnails only, no captions
 INDUSTRIES = ['Towing', 'Cleaning', 'Limousine', 'Construction', 'Roofing', 'Painting', 'Home Inspection', 'Carpet Cleaning', 'Garage Doors', 'Janitorial', 'Real Estate', 'Junk Removal', 'Auto Detailing', 'Gutters']
 C = {
  'ico-play': icon_css(PLAY, 20),
@@ -30,16 +31,14 @@ print('classes', mcp.upsert_classes(C))
 link = lambda u, blank=False: {'destination': u, 'isTargetBlank': blank, 'tag': 'a'}
 cards = ''
 cfg, cls, sty = {}, {}, {}
-for i, (k, name, sub) in enumerate(VIDEOS, 1):
+for i, k in enumerate(VIDEOS, 1):
     p = f'Video {i}'
     cards += (f'<e-div-block configuration-id="{p}"><e-flexbox configuration-id="{p} Button"><e-image configuration-id="{p} Poster"></e-image>'
-              f'<e-flexbox configuration-id="{p} Play"><e-div-block configuration-id="{p} Play Icon"></e-div-block></e-flexbox></e-flexbox>'
-              f'<e-div-block configuration-id="{p} Caption"><e-paragraph configuration-id="{p} Name"></e-paragraph><e-paragraph configuration-id="{p} Sub"></e-paragraph></e-div-block></e-div-block>')
+              f'<e-flexbox configuration-id="{p} Play"><e-div-block configuration-id="{p} Play Icon"></e-div-block></e-flexbox></e-flexbox></e-div-block>')
     cfg[f'{p} Button'] = {'tag': 'a', 'link': link(MM[f'video/{k}.mp4']['url'])}
     cfg[f'{p} Poster'] = {'image': {'src': {'id': M[f'video/{k}.jpg']}, 'size': 'full'}}
-    cfg[f'{p} Name'] = {'paragraph': name, 'tag': 'span'}; cfg[f'{p} Sub'] = {'paragraph': sub, 'tag': 'span'}
     cls[p] = ['dgc-vthumb']; cls[f'{p} Button'] = ['dgc-vbtn']; cls[f'{p} Poster'] = ['dgc-vimg']; cls[f'{p} Play'] = ['dgc-play']
-    cls[f'{p} Play Icon'] = ['ico-play']; cls[f'{p} Caption'] = ['dgc-vcap']; cls[f'{p} Name'] = ['dgc-vname']; cls[f'{p} Sub'] = ['dgc-vsub']
+    cls[f'{p} Play Icon'] = ['ico-play']
     sty[f'{p} Play Icon'] = 'margin-left: 3px;'
 words = ''
 for i, w in enumerate(INDUSTRIES, 1):
@@ -59,6 +58,6 @@ cls.update({'Video Strip': ['dgc-clients'], 'Strip Head': ['dgc-wrap', 'dgc-clie
             'Strip Link': ['dgc-textlink'], 'Strip Link Icon': ['ico-arrow-ur'], 'Video Track': ['dgc-track'], 'Video List': ['dgc-vlist'],
             'Industry Ribbon': ['dgc-ribbon'], 'Ribbon Track': ['dgc-rtrack'], 'Ribbon List': ['dgc-rlist']})
 sty['Strip Link Icon'] = 'width: 15px; height: 15px;'
-r = mcp.put_section(126, 'Video Strip', 1, xml_structure=X, element_config=cfg, classes=cls, style=sty)
+r = mcp.put_section(PAGE, 'Video Strip', 1, xml_structure=X, element_config=cfg, classes=cls, style=sty)
 print(json.dumps({k: r.get(k) for k in ('success', 'warnings', 'root_element_ids')})[:600])
-print(json.dumps(mcp.call('elementor-publish-document', {'post_id': 126}))[:120])
+print(json.dumps(mcp.call('elementor-publish-document', {'post_id': PAGE}))[:120])

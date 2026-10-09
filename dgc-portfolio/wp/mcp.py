@@ -1,7 +1,7 @@
 """Tiny JSON-RPC client for the Elementor MCP endpoint (used until the session loads the server natively)."""
 import json, os, re, sys, urllib.request
-# DGC_SITE=main targets digitalgrowthcatalyze.com; default is the portfolio staging site.
-SERVER = {'main': 'digital-growth-catalyze-elementor'}.get(os.environ.get('DGC_SITE', ''), 'portfolio-site-elementor')
+# DGC_SITE=main -> digitalgrowthcatalyze.com, DGC_SITE=portfolio -> portfolio.digitalgrowthcatalyze.com (live portfolio), default -> staging.
+SERVER = {'main': 'digital-growth-catalyze-main-elementor', 'portfolio': 'digital-growth-catalyze-elementor'}.get(os.environ.get('DGC_SITE', ''), 'portfolio-site-elementor')
 _cfg = json.load(open(os.path.expanduser('~/.claude.json')))['mcpServers'][SERVER]
 URL = _cfg['url']; AUTH = _cfg['headers']['Authorization']
 _sid = None; _id = 0
@@ -21,7 +21,7 @@ def init():
 def call(name, args=None):
     global _id
     # Drafts on the live main site must stay drafts: publishing is blocked unless DGC_ALLOW_PUBLISH=1.
-    if name == 'elementor-publish-document' and SERVER != 'portfolio-site-elementor' and os.environ.get('DGC_ALLOW_PUBLISH') != '1':
+    if name == 'elementor-publish-document' and SERVER == 'digital-growth-catalyze-main-elementor' and os.environ.get('DGC_ALLOW_PUBLISH') != '1':
         return {'skipped': 'publish blocked on main site', 'post_id': (args or {}).get('post_id')}
     if not _sid: init()
     _id += 1

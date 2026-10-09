@@ -1,6 +1,6 @@
 """Upload what the Case Studies + Video Reviews pages need to digitalgrowthcatalyze.com (resumable, WebP for images)."""
 import os, io, json, sys, urllib.request, concurrent.futures as cf
-os.environ['DGC_SITE'] = 'main'
+os.environ.setdefault('DGC_SITE', 'main')
 sys.path.insert(0, '..')
 from PIL import Image
 import mcp
