@@ -7,8 +7,10 @@ from dgc_site import MEDIA, PAGES
 MM = json.load(open(MEDIA))
 PAGE = json.load(open(PAGES))['video-reviews']['id']
 VIDEOS = ['review-1', 'review-2', 'review-3', 'review-4', 'review-5', 'review-6']
+# rows of 4 (3 on tablet, 2 on phones); an unfinished last row is centred
 print('classes', mcp.upsert_classes({
- 'dgc-vgrid': 'display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: auto; gap: 20px; @media(--tablet) { grid-template-columns: repeat(3, 1fr); gap: 20px; } @media(--mobile) { grid-template-columns: repeat(2, 1fr); gap: 14px; }',
+ 'dgc-vgrid': 'display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px; @media(--tablet) { gap: 20px; } @media(--mobile) { gap: 14px; }',
+ 'dgc-vg-item': 'flex: none; width: calc(25% - 18px); @media(--tablet) { width: calc(33.333% - 14px); } @media(--mobile) { width: calc(50% - 7px); }',
 }))
 cards, cfg, cls, sty = '', {}, {}, {}
 for i, k in enumerate(VIDEOS, 1):
