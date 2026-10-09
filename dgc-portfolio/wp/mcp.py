@@ -1,7 +1,9 @@
 """Tiny JSON-RPC client for the Elementor MCP endpoint (used until the session loads the server natively)."""
 import json, os, re, sys, urllib.request
-URL = 'https://newportfolio.digitalgrowthcatalyze.com/wp-json/elementor/mcp/'
-AUTH = json.load(open(os.path.expanduser('~/.claude.json')))['mcpServers']['portfolio-site-elementor']['headers']['Authorization']
+# DGC_SITE=main targets digitalgrowthcatalyze.com; default is the portfolio staging site.
+SERVER = {'main': 'digital-growth-catalyze-elementor'}.get(os.environ.get('DGC_SITE', ''), 'portfolio-site-elementor')
+_cfg = json.load(open(os.path.expanduser('~/.claude.json')))['mcpServers'][SERVER]
+URL = _cfg['url']; AUTH = _cfg['headers']['Authorization']
 _sid = None; _id = 0
 def _post(payload):
     global _sid
