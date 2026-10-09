@@ -347,14 +347,18 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-22222222.webp",
   "w": 520,
   "h": 2168,
-  "bytes": 124922
+  "bytes": 124922,
+  "hd_id": 518,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-22222222.webp"
  },
  "img/work/3i-inspectos.jpg": {
   "id": 61,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-3i-inspectos.webp",
   "w": 520,
   "h": 2420,
-  "bytes": 96952
+  "bytes": 96952,
+  "hd_id": 523,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-3i-inspectos.webp"
  },
  "img/casestudies/seo-exotic-car-rental.jpg": {
   "id": 56,
@@ -382,14 +386,18 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-air-duct-cleaning.webp",
   "w": 452,
   "h": 2560,
-  "bytes": 144710
+  "bytes": 144710,
+  "hd_id": 527,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-air-duct-cleaning.webp"
  },
  "img/work/alamo-carpet.jpg": {
   "id": 64,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-alamo-carpet.webp",
   "w": 478,
   "h": 2560,
-  "bytes": 123190
+  "bytes": 123190,
+  "hd_id": 501,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-alamo-carpet.webp"
  },
  "img/work/apexxx.jpg": {
   "id": 65,
@@ -403,14 +411,18 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-black-n-black.webp",
   "w": 454,
   "h": 2560,
-  "bytes": 127872
+  "bytes": 127872,
+  "hd_id": 514,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-black-n-black.webp"
  },
  "img/work/burns-towing.jpg": {
   "id": 67,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-burns-towing.webp",
   "w": 445,
   "h": 2560,
-  "bytes": 122056
+  "bytes": 122056,
+  "hd_id": 535,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-burns-towing.webp"
  },
  "img/work/agp.jpg": {
   "id": 68,
@@ -438,7 +450,9 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-crystal.webp",
   "w": 422,
   "h": 2560,
-  "bytes": 121160
+  "bytes": 121160,
+  "hd_id": 519,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-crystal.webp"
  },
  "img/work/csr-chimney-services.jpg": {
   "id": 72,
@@ -459,42 +473,54 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-dr-buk.webp",
   "w": 520,
   "h": 2252,
-  "bytes": 114300
+  "bytes": 114300,
+  "hd_id": 512,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-dr-buk.webp"
  },
  "img/work/eversteamcarpetcleaning.jpg": {
   "id": 75,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-eversteamcarpetcleaning.webp",
   "w": 407,
   "h": 2560,
-  "bytes": 136034
+  "bytes": 136034,
+  "hd_id": 528,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-eversteamcarpetcleaning.webp"
  },
  "img/work/evolove-skinbar.jpg": {
   "id": 76,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-evolove-skinbar.webp",
   "w": 420,
   "h": 2560,
-  "bytes": 111988
+  "bytes": 111988,
+  "hd_id": 517,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-evolove-skinbar.webp"
  },
  "img/work/exotic-cars.jpg": {
   "id": 77,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-exotic-cars.webp",
   "w": 441,
   "h": 2560,
-  "bytes": 137164
+  "bytes": 137164,
+  "hd_id": 505,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-exotic-cars.webp"
  },
  "img/work/fumare-hookah.jpg": {
   "id": 78,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-fumare-hookah.webp",
   "w": 442,
   "h": 2560,
-  "bytes": 142772
+  "bytes": 142772,
+  "hd_id": 507,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-fumare-hookah.webp"
  },
  "img/work/genia.jpg": {
   "id": 79,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-genia.webp",
   "w": 499,
   "h": 2560,
-  "bytes": 122232
+  "bytes": 122232,
+  "hd_id": 533,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-genia.webp"
  },
  "img/work/gsk.jpg": {
   "id": 80,
@@ -508,14 +534,18 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-grout.webp",
   "w": 520,
   "h": 2080,
-  "bytes": 82962
+  "bytes": 82962,
+  "hd_id": 510,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-grout.webp"
  },
  "img/work/freebird.jpg": {
   "id": 82,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-freebird.webp",
   "w": 520,
   "h": 2403,
-  "bytes": 121622
+  "bytes": 121622,
+  "hd_id": 536,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-freebird.webp"
  },
  "img/work/haveitmaid.jpg": {
   "id": 83,
@@ -536,77 +566,99 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-iriana.webp",
   "w": 441,
   "h": 2560,
-  "bytes": 116398
+  "bytes": 116398,
+  "hd_id": 509,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-iriana.webp"
  },
  "img/work/gripenbuildingservices.jpg": {
   "id": 86,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-gripenbuildingservices.webp",
   "w": 520,
   "h": 2106,
-  "bytes": 119040
+  "bytes": 119040,
+  "hd_id": 503,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-gripenbuildingservices.webp"
  },
  "img/work/junk-removal.jpg": {
   "id": 87,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-junk-removal.webp",
   "w": 417,
   "h": 2560,
-  "bytes": 143844
+  "bytes": 143844,
+  "hd_id": 506,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-junk-removal.webp"
  },
  "img/work/kamrc-digital-marketing.jpg": {
   "id": 88,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-kamrc-digital-marketing.webp",
   "w": 520,
   "h": 2425,
-  "bytes": 105702
+  "bytes": 105702,
+  "hd_id": 521,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-kamrc-digital-marketing.webp"
  },
  "img/work/kdk-power.jpg": {
   "id": 89,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-kdk-power.webp",
   "w": 346,
   "h": 2560,
-  "bytes": 124494
+  "bytes": 124494,
+  "hd_id": 526,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-kdk-power.webp"
  },
  "img/work/luxprousa.jpg": {
   "id": 90,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-luxprousa.webp",
   "w": 380,
   "h": 2560,
-  "bytes": 149404
+  "bytes": 149404,
+  "hd_id": 502,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-luxprousa.webp"
  },
  "img/work/librity-home-inspection.jpg": {
   "id": 91,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-librity-home-inspection.webp",
   "w": 373,
   "h": 2560,
-  "bytes": 131380
+  "bytes": 131380,
+  "hd_id": 532,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-librity-home-inspection.webp"
  },
  "img/work/limos.jpg": {
   "id": 92,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-limos.webp",
   "w": 479,
   "h": 2560,
-  "bytes": 155024
+  "bytes": 155024,
+  "hd_id": 513,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-limos.webp"
  },
  "img/work/manycolor.jpg": {
   "id": 93,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-manycolor.webp",
   "w": 520,
   "h": 2295,
-  "bytes": 100286
+  "bytes": 100286,
+  "hd_id": 515,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-manycolor.webp"
  },
  "img/work/mdf-air-clean.jpg": {
   "id": 94,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-mdf-air-clean.webp",
   "w": 462,
   "h": 2560,
-  "bytes": 116396
+  "bytes": 116396,
+  "hd_id": 522,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-mdf-air-clean.webp"
  },
  "img/work/miaa.jpg": {
   "id": 95,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-miaa.webp",
   "w": 504,
   "h": 2560,
-  "bytes": 130342
+  "bytes": 130342,
+  "hd_id": 530,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-miaa.webp"
  },
  "img/work/meti.jpg": {
   "id": 97,
@@ -627,21 +679,27 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-oak-builders.webp",
   "w": 406,
   "h": 2560,
-  "bytes": 152620
+  "bytes": 152620,
+  "hd_id": 520,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-oak-builders.webp"
  },
  "img/work/orange-county-towing.jpg": {
   "id": 99,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-orange-county-towing.webp",
   "w": 451,
   "h": 2560,
-  "bytes": 123852
+  "bytes": 123852,
+  "hd_id": 534,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-orange-county-towing.webp"
  },
  "img/work/presential-painting.jpg": {
   "id": 100,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-presential-painting.webp",
   "w": 421,
   "h": 2560,
-  "bytes": 130190
+  "bytes": 130190,
+  "hd_id": 504,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-presential-painting.webp"
  },
  "img/work/spb.jpg": {
   "id": 101,
@@ -655,28 +713,36 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-santa-cruz.webp",
   "w": 520,
   "h": 2416,
-  "bytes": 150154
+  "bytes": 150154,
+  "hd_id": 500,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-santa-cruz.webp"
  },
  "img/work/stevestowingga.jpg": {
   "id": 103,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-stevestowingga.webp",
   "w": 520,
   "h": 2260,
-  "bytes": 132154
+  "bytes": 132154,
+  "hd_id": 508,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-stevestowingga.webp"
  },
  "img/work/storm-sheild.jpg": {
   "id": 104,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-storm-sheild.webp",
   "w": 515,
   "h": 2560,
-  "bytes": 176640
+  "bytes": 176640,
+  "hd_id": 516,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-storm-sheild.webp"
  },
  "img/work/tampafci.jpg": {
   "id": 105,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-tampafci.webp",
   "w": 520,
   "h": 1112,
-  "bytes": 46962
+  "bytes": 46962,
+  "hd_id": 511,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-tampafci.webp"
  },
  "img/work/sunise.jpg": {
   "id": 106,
@@ -704,14 +770,18 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-tom-cook.webp",
   "w": 423,
   "h": 2560,
-  "bytes": 131126
+  "bytes": 131126,
+  "hd_id": 531,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-tom-cook.webp"
  },
  "img/work/ttown-pristine.jpg": {
   "id": 110,
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-ttown-pristine.webp",
   "w": 520,
   "h": 2461,
-  "bytes": 133046
+  "bytes": 133046,
+  "hd_id": 529,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-ttown-pristine.webp"
  },
  "img/work/visa-help-247.jpg": {
   "id": 111,
@@ -725,7 +795,9 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-wisechoicecontractors-com-2.webp",
   "w": 417,
   "h": 2560,
-  "bytes": 85748
+  "bytes": 85748,
+  "hd_id": 525,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-wisechoicecontractors-com-2.webp"
  },
  "video/review-1.jpg": {
   "id": 114,
@@ -774,7 +846,9 @@
   "url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-warrior-gutter.webp",
   "w": 446,
   "h": 2560,
-  "bytes": 128444
+  "bytes": 128444,
+  "hd_id": 524,
+  "hd_url": "https://newportfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-warrior-gutter.webp"
  },
  "video/review-4.mp4": {
   "id": 120,

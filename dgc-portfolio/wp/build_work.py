@@ -6,7 +6,11 @@ from common import BRANDS, N_PANELS, CASES, cases_by_channel, CH_ORDER, CH_LABEL
 SITE = 'https://newportfolio.digitalgrowthcatalyze.com'
 MM = json.load(open('media-map.json')); MID = {k: v['id'] for k, v in MM.items()}
 link = lambda u, blank=False: {'destination': u, 'isTargetBlank': blank, 'tag': 'a'}
-img = lambda key: {'src': {'id': MID[key]}, 'size': 'full'}
+def img(key):
+    # HD website screenshots are referenced by their unscaled file URL (WP's -scaled copy is only ~450px wide).
+    hd = MM.get(key, {}).get('hd_url')
+    if hd: return {'src': {'url': hd, 'alt': 'Website screenshot'}, 'size': 'full'}
+    return {'src': {'id': MID[key]}, 'size': 'full'}
 CH = {'Google Business Profile': 'gbp', 'AI Overview': 'aio', 'Google Ads': 'ppc', 'Local Services Ads': 'lsa', 'Web SEO': 'seo'}
 FIX = {'Guter Cleaning': 'Gutter Cleaning', 'Concreate': 'Concrete', 'Remolding': 'Remodeling', 'Junk removal': 'Junk Removal', 'Dry Wall Service': 'Drywall Service'}
 def dom(u): return re.sub(r'^https?://(www\.)?', '', u).split('/')[0] if u else ''

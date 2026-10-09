@@ -7,7 +7,7 @@ from common import ICONS
 LINE = '#dde8ea'
 C = {
  # section + title
- 'dgc-work-sec': 'position: relative; overflow: hidden; flex-direction: column; gap: 0; padding: 120px 0 150px; background: #ffffff; font-family: Manrope; color: #181818; @media(--mobile) { padding: 80px 0 100px; }',
+ 'dgc-work-sec': 'position: relative; overflow: hidden; flex-direction: column; gap: 0; padding: 120px 0 150px; background: #ffffff; font-family: Manrope; color: #181818; @media(--mobile) { padding: 76px 0; }',
  'dgc-work-gridbg': 'position: absolute; inset: 0; padding: 0; pointer-events: none; opacity: 0.45; background-image: linear-gradient(#dde8ea 1px, transparent 1px), linear-gradient(90deg, #dde8ea 1px, transparent 1px); background-size: 80px 80px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000); mask-image: linear-gradient(180deg, #000, transparent 30%, transparent 70%, #000);',
  'dgc-work-wrap': 'position: relative; z-index: 1;',
  'dgc-wtitle': 'display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto; align-items: end; gap: 40px; padding: 0; @media(--mobile) { grid-template-columns: 1fr; gap: 24px; }',
@@ -53,14 +53,14 @@ C = {
  'dgc-go': 'display: flex; align-items: center; justify-content: center; flex: none; width: 46px; height: 46px; padding: 0; border-radius: 50%; border: 1.5px solid #dde8ea; color: var(--ink); text-decoration: none; transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s; &:hover { background: var(--orange); border: 1.5px solid #f6a440; color: var(--abyss); transform: rotate(45deg); }',
  'dgc-go-off': 'opacity: 0.35;',
  # brand panel / logo card
- 'dgc-brand': 'position: relative; display: grid; grid-template-columns: 0.92fr 1.3fr; grid-template-rows: auto; gap: 16px; align-items: stretch; padding: 18px; overflow: hidden; border-radius: 10px; @media(--tablet) { grid-template-columns: 1fr; padding: 12px; gap: 12px; }',
+ 'dgc-brand': 'position: relative; display: grid; grid-template-columns: 0.92fr 1.3fr; grid-template-rows: auto; gap: 12px; align-items: stretch; width: 100%; max-width: 1040px; margin: 0 auto; padding: 14px; overflow: hidden; border-radius: 10px; @media(--tablet) { grid-template-columns: 0.92fr 1.3fr; padding: 14px; gap: 12px; } @media(--mobile) { grid-template-columns: 1fr; padding: 10px; gap: 10px; }',
  'dgc-brand-top': 'position: absolute; left: 0; right: 0; top: 0; width: auto; height: 4px; padding: 0;',
  'dgc-brand-main': 'display: flex; padding: 0; min-width: 0;',
- 'dgc-brand-mocks': 'display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 10px; align-content: start; padding: 0; @media(--mobile) { gap: 8px; }',
- 'dgc-bm': 'display: block; padding: 0; overflow: hidden; aspect-ratio: 16 / 9.6; border-radius: 10px; border: 1px solid #dde8ea; background: #0c0e10;',
+ 'dgc-brand-mocks': 'display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 8px; align-content: start; padding: 0;',
+ 'dgc-bm': 'display: block; padding: 0; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid #dde8ea; background: #0c0e10;',
  'dgc-bm-img': 'display: block; width: 100%; height: 100%; object-fit: cover; transition: scale 0.7s;',
  'dgc-lcard': 'position: relative; display: block; width: 100%; aspect-ratio: 4 / 3.3; padding: 0; overflow: hidden; border-radius: 10px; isolation: isolate; box-shadow: 0 30px 50px -30px rgba(6,40,54,0.7);',
- 'dgc-lcard-panel': 'flex: 1; aspect-ratio: auto; min-height: 270px; @media(--tablet) { aspect-ratio: 4 / 3.4; min-height: 0; }',
+ 'dgc-lcard-panel': 'flex: 1; aspect-ratio: auto; min-height: 220px; @media(--tablet) { aspect-ratio: auto; min-height: 220px; } @media(--mobile) { aspect-ratio: 4 / 3.4; min-height: 0; }',
  'dgc-lsheet': 'position: absolute; left: 12%; right: 12%; top: 13%; bottom: 25%; width: auto; height: auto; display: flex; align-items: center; justify-content: center; padding: 5% 8%; border-radius: 10px; transition: transform 0.6s, box-shadow 0.6s;',
  'dgc-lsheet-panel': 'left: 10%; right: 10%; top: 9%; bottom: 24%;',
  'dgc-lsheet-img': 'display: block; width: 100%; height: 100%; object-fit: contain;',

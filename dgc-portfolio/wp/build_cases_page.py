@@ -10,7 +10,7 @@ C = {
  'dgc-phero-h1': 'display: block; max-width: 16ch; margin-top: 18px; font-family: Unbounded; font-size: clamp(2.3rem, 5vw, 4.4rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: #ffffff;',
  'dgc-phero-p': 'display: block; max-width: 54ch; margin-top: 18px; font-family: Manrope; font-size: 1.06rem; line-height: 1.7; color: var(--fog);',
  'dgc-phero-btns': 'flex-wrap: wrap; gap: 12px; margin-top: 28px; padding: 0;',
- 'dgc-pbody': 'flex-direction: column; gap: 0; padding: 80px 0 100px; background: #ffffff; font-family: Manrope;',
+ 'dgc-pbody': 'flex-direction: column; gap: 0; padding: 80px 0 100px; background: #ffffff; font-family: Manrope; @media(--mobile) { padding: 56px 0 72px; }',
  'dgc-cs-filters': 'margin: 0 0 44px; padding: 0; border-top: 0;',
  'dgc-cgrid': 'display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; gap: 26px; @media(--tablet) { grid-template-columns: repeat(2, 1fr); } @media(--mobile) { grid-template-columns: 1fr; }',
 }

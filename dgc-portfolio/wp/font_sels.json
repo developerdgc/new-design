@@ -13,6 +13,11 @@
 ".elementor .dgc-cta-p",
 ".elementor .dgc-device-url",
 ".elementor .dgc-face",
+".elementor .dgc-ftr",
+".elementor .dgc-ftr-base",
+".elementor .dgc-ftr-crow",
+".elementor .dgc-ftr-link",
+".elementor .dgc-ftr-p",
 ".elementor .dgc-ghead-btn",
 ".elementor .dgc-hdr-top",
 ".elementor .dgc-hero",
@@ -44,6 +49,8 @@
 ".elementor .dgc-case-title",
 ".elementor .dgc-chin",
 ".elementor .dgc-cta-h",
+".elementor .dgc-ftr-h",
+".elementor .dgc-ftr-h5",
 ".elementor .dgc-ghead-h",
 ".elementor .dgc-h2",
 ".elementor .dgc-hero-h1",
@@ -56,11 +63,5 @@
 ".elementor .dgc-step-n",
 ".elementor .dgc-wtitle-big"
 ],
-"Poppins": [
-".elementor .dgc-ftr",
-".elementor .dgc-ftr-base",
-".elementor .dgc-ftr-h",
-".elementor .dgc-ftr-h5",
-".elementor .dgc-ftr-p"
-]
+"Poppins": []
 }

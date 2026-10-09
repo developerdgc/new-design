@@ -15,6 +15,7 @@ def fallback_css():
     for fam, adj in ADJ.items():
         out.append(f'@font-face{{font-family:"{fam} Fallback";src:local("Arial"),local("Liberation Sans"),local("Helvetica");font-weight:100 500;size-adjust:{adj}%}}')
         out.append(f'@font-face{{font-family:"{fam} Fallback";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Helvetica Bold");font-weight:600 900;size-adjust:{adj}%}}')
+        if not SELS.get(fam): continue
         out.append(',\n'.join('body ' + x for x in SELS[fam]) + f'{{font-family:{fam},"{fam} Fallback",sans-serif}}')
     return '<style id="dgc-font-fallbacks">\n' + '\n'.join(out) + '\n</style>'
 FONTS += '\n' + fallback_css()
