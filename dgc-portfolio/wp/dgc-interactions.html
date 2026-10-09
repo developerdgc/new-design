@@ -126,7 +126,7 @@ html.dgc-fine .elementor a.dgc-device { cursor: none; }
 .elementor .dgc-case-title { font-size: clamp(1.05rem, 7cqi, 2rem); }
 @container (max-width: 240px) { .elementor .dgc-case-go > span:first-child { display: none; } }
 /* popups: brand kit + case study */
-.dgc-kitmodal { width: min(1040px, 94vw); max-height: 92vh; padding: 0; border: 0; border-radius: 10px; background: transparent; overflow: visible; }
+.dgc-kitmodal { width: min(1240px, 94vw); max-height: 92vh; padding: 0; border: 0; border-radius: 10px; background: transparent; overflow: visible; }
 .dgc-kitmodal::backdrop, .dgc-cmodal::backdrop { background: rgba(2,23,32,.88); backdrop-filter: blur(4px); }
 .dgc-kitmodal__body { max-height: 92vh; overflow-y: auto; overscroll-behavior: contain; border-radius: 10px; }
 .dgc-kitmodal .dgc-kit { display: block; }
@@ -136,6 +136,7 @@ html.dgc-fine .elementor a.dgc-device { cursor: none; }
 .dgc-cmodal__bar span { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #f6a440; }
 .dgc-cmodal__bar b { display: block; font-family: Unbounded, sans-serif; font-size: 1.05rem; margin-top: 2px; }
 .dgc-cmodal__scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; border-radius: 0 0 10px 10px; background: #07222f; }
+.dgc-cmodal__scroll img[hidden] { display: none; }
 .dgc-cmodal__scroll img { display: block; width: 100%; max-width: 1080px; height: auto; margin: 0 auto; }
 .dgc-cmodal__load { padding: 60px; text-align: center; color: #b9cdd3; font-family: Manrope, sans-serif; }
 /* phones: popups float inside the screen with room for the close button */
@@ -185,9 +186,8 @@ dialog .dgc-x:focus-visible { box-shadow: 0 0 0 3px rgba(246,164,64,.6), 0 10px 
 @media (prefers-reduced-motion: reduce) { .dgc-kitmodal[open], .dgc-cmodal[open], .dgc-vmodal[open] { animation: none; } }
 @media (prefers-reduced-motion: reduce) { .elementor .dgc-spin, .elementor .dgc-pan, .elementor .dgc-bob, .elementor .dgc-track.is-ready, .elementor .dgc-rtrack.is-ready, .elementor .dgc-live-dot { animation: none; } }
 /* ---- Review round 2 ---- */
-/* header: artifact size (nav 1260 wide, 50px button; full-width bar on phones) */
+/* header: artifact size (nav 1260 wide, 50px button) */
 .elementor .dgc-nav .dgc-btn-hot { font-weight: 700; line-height: 20px; }
-@media (max-width: 767px) { .elementor .dgc-hdr { padding-left: 0; padding-right: 0; } }
 /* phones: hero buttons side by side */
 @media (max-width: 767px) {
   .elementor .e-con:has(> .dgc-btn-orange + .dgc-btn-ghost), .elementor .dgc-phero-btns { flex-wrap: nowrap; gap: 10px; }
@@ -430,15 +430,25 @@ body .elementor .dgc-case-ic { transition: transform .45s cubic-bezier(.2,.8,.2,
   cm.innerHTML = '<button class="dgc-x" type="button" aria-label="Close case study">' + X_ICON + '</button><div class="dgc-cmodal__bar"><span></span><b></b></div><div class="dgc-cmodal__scroll"><p class="dgc-cmodal__load">Loading case study…</p><img alt="" hidden></div>';
   document.body.appendChild(cm);
   var cImg = cm.querySelector('img'), cLoad = cm.querySelector('.dgc-cmodal__load');
+  var full = function (a) { return a.getAttribute('href').replace(/-scaled(\.\w+)$/, '$1'); }; // full-width original, not WP's downscaled copy
+  var warm = {};
+  ['pointerenter', 'touchstart', 'focusin'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) {
+      var a = e.target.closest && e.target.closest('a.dgc-case'); if (!a) return;
+      var u = full(a); if (warm[u]) return; warm[u] = new Image(); warm[u].decoding = 'async'; warm[u].src = u;
+    }, { capture: true, passive: true });
+  });
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a.dgc-case'); if (!a || !cm.showModal) return;
     e.preventDefault();
     var t = a.querySelector('.dgc-case-title'), l = a.querySelector('.dgc-case-label');
     cm.querySelector('.dgc-cmodal__bar b').textContent = t ? t.textContent : '';
     cm.querySelector('.dgc-cmodal__bar span').textContent = (l ? l.textContent : '') + ' case study';
-    cImg.hidden = true; cLoad.hidden = false;
-    cImg.onload = function () { cLoad.hidden = true; cImg.hidden = false; };
-    cImg.alt = (t ? t.textContent : '') + ' case study'; cImg.src = a.getAttribute('href').replace(/-scaled(\.\w+)$/, '$1'); // full-width original, not WP's downscaled copy
+    var src = full(a);
+    cImg.onload = null; cImg.hidden = true; cImg.removeAttribute('src'); cLoad.hidden = false;
+    cImg.onload = function () { if (cImg.getAttribute('src') !== src) return; cLoad.hidden = true; cImg.hidden = false; };
+    cImg.alt = (t ? t.textContent : '') + ' case study'; cImg.src = src;
+    if (cImg.complete && cImg.naturalWidth) cImg.onload();
     cm.querySelector('.dgc-cmodal__scroll').scrollTop = 0;
     cm.showModal(); document.documentElement.style.overflow = 'hidden';
   });

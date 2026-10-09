@@ -53,7 +53,7 @@ C = {
  'dgc-go': 'display: flex; align-items: center; justify-content: center; flex: none; width: 46px; height: 46px; padding: 0; border-radius: 50%; border: 1.5px solid #dde8ea; color: var(--ink); text-decoration: none; transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s; &:hover { background: var(--orange); border: 1.5px solid #f6a440; color: var(--abyss); transform: rotate(45deg); }',
  'dgc-go-off': 'opacity: 0.35;',
  # brand panel / logo card
- 'dgc-brand': 'position: relative; display: grid; grid-template-columns: 0.92fr 1.3fr; grid-template-rows: auto; gap: 12px; align-items: stretch; width: 100%; max-width: 1040px; margin: 0 auto; padding: 14px; overflow: hidden; border-radius: 10px; @media(--tablet) { grid-template-columns: 0.92fr 1.3fr; padding: 14px; gap: 12px; } @media(--mobile) { grid-template-columns: 1fr; padding: 10px; gap: 10px; }',
+ 'dgc-brand': 'position: relative; display: grid; grid-template-columns: 1fr 1.15fr; grid-template-rows: auto; gap: 12px; align-items: stretch; width: 100%; padding: 14px; overflow: hidden; border-radius: 10px; @media(--tablet) { grid-template-columns: 1fr 1.15fr; padding: 14px; gap: 12px; } @media(--mobile) { grid-template-columns: 1fr; padding: 10px; gap: 10px; }',
  'dgc-brand-top': 'position: absolute; left: 0; right: 0; top: 0; width: auto; height: 4px; padding: 0;',
  'dgc-brand-main': 'display: flex; padding: 0; min-width: 0;',
  'dgc-brand-mocks': 'display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 8px; align-content: start; padding: 0;',
