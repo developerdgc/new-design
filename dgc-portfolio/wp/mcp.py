@@ -20,6 +20,9 @@ def init():
     return _post({'jsonrpc': '2.0', 'id': _id, 'method': 'initialize', 'params': {'protocolVersion': '2025-03-26', 'capabilities': {}, 'clientInfo': {'name': 'claude', 'version': '1'}}})
 def call(name, args=None):
     global _id
+    # Drafts on the live main site must stay drafts: publishing is blocked unless DGC_ALLOW_PUBLISH=1.
+    if name == 'elementor-publish-document' and SERVER != 'portfolio-site-elementor' and os.environ.get('DGC_ALLOW_PUBLISH') != '1':
+        return {'skipped': 'publish blocked on main site', 'post_id': (args or {}).get('post_id')}
     if not _sid: init()
     _id += 1
     d = _post({'jsonrpc': '2.0', 'id': _id, 'method': 'tools/call', 'params': {'name': name, 'arguments': args or {}}})

@@ -1,5 +1,6 @@
 import json
-M = {k: v['id'] for k, v in json.load(open('media-map.json')).items()}
+from dgc_site import MEDIA
+M = {k: v['id'] for k, v in json.load(open(MEDIA)).items()}
 link = lambda u: {'destination': u, 'isTargetBlank': False, 'tag': 'a'}
 def cta():
     XC = '''<e-flexbox configuration-id="CTA"><e-div-block configuration-id="CTA Wrap"><e-grid configuration-id="CTA Box">

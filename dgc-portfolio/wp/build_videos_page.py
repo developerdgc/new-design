@@ -2,8 +2,9 @@ import sys, json
 sys.path.insert(0, '/tmp/claude-0/-home-user-new-design/c0b0073b-578a-5cca-805d-2082208a4256/scratchpad')
 import mcp
 from build_work import MID, link, SITE
-MM = json.load(open('media-map.json'))
-PAGE = json.load(open('pages.json'))['video-reviews']['id']
+from dgc_site import MEDIA, PAGES
+MM = json.load(open(MEDIA))
+PAGE = json.load(open(PAGES))['video-reviews']['id']
 VIDEOS = [('review-1', 'Clark Exteriors', 'Roofing contractor'), ('review-2', 'Huskins Services LLC', 'Cleaning & remodeling'), ('review-3', 'Dawn', 'Client video review'), ('review-4', 'Chase, Clean Cut', 'Client video review')]
 C = {
  'dgc-vgrid': 'display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto; gap: 24px; @media(--tablet) { grid-template-columns: repeat(3, 1fr); } @media(--mobile) { grid-template-columns: repeat(2, 1fr); gap: 14px; }',

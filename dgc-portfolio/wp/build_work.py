@@ -3,8 +3,8 @@ import sys, json, re, html
 sys.path.insert(0, '/tmp/claude-0/-home-user-new-design/c0b0073b-578a-5cca-805d-2082208a4256/scratchpad')
 import mcp
 from common import BRANDS, N_PANELS, CASES, cases_by_channel, CH_ORDER, CH_LABEL
-SITE = 'https://newportfolio.digitalgrowthcatalyze.com'
-MM = json.load(open('media-map.json')); MID = {k: v['id'] for k, v in MM.items()}
+from dgc_site import SITE, MEDIA
+MM = json.load(open(MEDIA)); MID = {k: v['id'] for k, v in MM.items()}
 link = lambda u, blank=False: {'destination': u, 'isTargetBlank': blank, 'tag': 'a'}
 def img(key):
     # HD website screenshots are referenced by their unscaled file URL (WP's -scaled copy is only ~450px wide).

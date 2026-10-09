@@ -3,7 +3,8 @@ sys.path.insert(0, '/tmp/claude-0/-home-user-new-design/c0b0073b-578a-5cca-805d-
 import mcp
 from build_work import Frag, case_card, append, CH, MID, link, SITE
 from common import cases_by_channel, CH_ORDER, CH_LABEL
-PAGE = json.load(open('pages.json'))['case-studies']['id']
+from dgc_site import PAGES
+PAGE = json.load(open(PAGES))['case-studies']['id']
 C = {
  'dgc-phero': 'position: relative; overflow: hidden; isolation: isolate; flex-direction: column; gap: 0; padding: 222px 0 76px; color: var(--fog); font-family: Manrope; background: radial-gradient(38% 55% at 0% 0%, rgba(28,222,225,0.55), transparent 70%), radial-gradient(34% 50% at 100% 100%, rgba(28,222,225,0.45), transparent 70%), #062836; @media(--mobile) { padding: 180px 0 56px; }',
  'dgc-phero-mark': 'position: absolute; z-index: -1; right: 6%; top: 50%; width: 320px; height: auto; margin-top: -160px; opacity: 0.07; pointer-events: none; transform: rotate(-14deg);',
@@ -12,6 +13,7 @@ C = {
  'dgc-phero-btns': 'flex-wrap: wrap; gap: 12px; margin-top: 28px; padding: 0;',
  'dgc-pbody': 'flex-direction: column; gap: 0; padding: 80px 0 100px; background: #ffffff; font-family: Manrope; @media(--mobile) { padding: 56px 0 72px; }',
  'dgc-cs-filters': 'margin: 0 0 44px; padding: 0; border-top: 0;',
+ 'dgc-cs-item': 'min-width: 0;',
  'dgc-cgrid': 'display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; gap: 26px; @media(--tablet) { grid-template-columns: repeat(2, 1fr); } @media(--mobile) { grid-template-columns: 1fr; }',
 }
 print('classes', mcp.upsert_classes(C))

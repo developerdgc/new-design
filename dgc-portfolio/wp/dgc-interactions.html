@@ -242,7 +242,7 @@ body .elementor .dgc-case::after { transition: transform .5s cubic-bezier(.2,.7,
 body .elementor .dgc-case-mark { transition: transform .8s cubic-bezier(.2,.7,.2,1), opacity .5s; }
 body .elementor .dgc-case-ic { transition: transform .45s cubic-bezier(.2,.8,.2,1.3); }
 </style>
-<script id="dgc-interactions-js">
+<script id="dgc-interactions-js" data-no-optimize="1" data-no-defer="1">
 (function () {
   // Header: hide the top bar after scrolling (with hysteresis so it never jitters)
   var h = document.querySelector('.dgc-hdr');
@@ -435,6 +435,12 @@ body .elementor .dgc-case-ic { transition: transform .45s cubic-bezier(.2,.8,.2,
     km.querySelector('.dgc-x').addEventListener('click', function () { km.close(); });
     km.addEventListener('click', function (e) { if (e.target === km) km.close(); });
     km.addEventListener('close', function () { document.documentElement.style.overflow = ''; });
+  }
+  // sites with their own (non-portfolio) header that sits in the page flow: tuck the page hero under it, like the overlay header here
+  var siteHd = document.querySelector('[data-elementor-type="header"]'), pHero = document.querySelector('.dgc-phero');
+  if (siteHd && pHero && !document.querySelector('.dgc-hdr') && getComputedStyle(siteHd).position === 'static') {
+    var tuck = function () { pHero.style.marginTop = ''; var gap = pHero.getBoundingClientRect().top - siteHd.getBoundingClientRect().top; if (gap > 0) pHero.style.marginTop = (-gap) + 'px'; };
+    tuck(); window.addEventListener('resize', tuck); window.addEventListener('load', tuck);
   }
   // case study popup (cards link to the full case-study image)
   var cm = document.createElement('dialog'); cm.className = 'dgc-cmodal'; cm.setAttribute('aria-label', 'Case study');
