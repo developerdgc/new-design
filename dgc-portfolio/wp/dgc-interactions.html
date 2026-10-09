@@ -206,17 +206,9 @@ body .elementor .dgc-svc-kicker { font-family: "Marcellus SC", sans-serif; }
 body .elementor .dgc-svc-h2 { font-family: Raleway, sans-serif; }
 body .elementor .dgc-svc-p, body .elementor .dgc-svc-cases .dgc-mhero-btn { font-family: Poppins, sans-serif; }
 body .elementor .dgc-svc-cgrid { scrollbar-width: thin; scrollbar-color: #f6a440 transparent; }
-body .elementor .dgc-svc-cgrid .dgc-case-go { gap: 6px; font-size: .72rem; }
-body .elementor .dgc-svc-cgrid .dgc-case-logo { max-width: 72px; }
-body .elementor .dgc-svc-cgrid .dgc-case-foot { gap: 8px; }
-/* one row only: 4 cards where the content column is wide enough, otherwise 3 (desktop); tablet/phone swipe the row */
-body .elementor .dgc-svc-cases .dgc-wrap { container-type: inline-size; container-name: dgcsvc; }
-@media (min-width: 1025px) {
-  @container dgcsvc (max-width: 1060px) {
-    body .elementor .dgc-svc-cgrid > .dgc-svc-citem { flex-basis: calc(33.333% - 16px); }
-    body .elementor .dgc-svc-cgrid > .dgc-svc-citem:nth-child(n+4) { display: none; }
-  }
-}
+/* one row only: 3 large cards on desktop (extra cards hidden); tablet/phone swipe the row */
+@media (min-width: 1025px) { body .elementor .dgc-svc-cgrid > .dgc-svc-citem:nth-child(n+4) { display: none; } }
+
 /* live-site page hero (same pattern as the other digitalgrowthcatalyze.com pages) */
 body .elementor .dgc-mhero-h1 { font-family: Raleway, sans-serif; }
 body .elementor .dgc-mhero-sub, body .elementor .dgc-mhero-btn { font-family: Poppins, sans-serif; }
