@@ -1,0 +1,2352 @@
+[
+ {
+  "id": 2324,
+  "title": {
+   "raw": "Home",
+   "rendered": "Home"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Front Page",
+  "object": "page",
+  "object_id": 1977,
+  "parent": 0,
+  "menu_order": 1,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2324",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2324"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/1977"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2324"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2324"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2324"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2324"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3291,
+  "title": {
+   "raw": "Home",
+   "rendered": "Home"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Front Page",
+  "object": "page",
+  "object_id": 1977,
+  "parent": 0,
+  "menu_order": 1,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3291",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3291"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/1977"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3291"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3291"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3291"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3291"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2060,
+  "title": {
+   "raw": "About Us",
+   "rendered": "About Us"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/about-us/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 534,
+  "parent": 0,
+  "menu_order": 2,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2060",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2060"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/534"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2060"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2060"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2060"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2060"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 616,
+  "title": {
+   "raw": "About Us",
+   "rendered": "About Us"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/about-us/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 534,
+  "parent": 0,
+  "menu_order": 2,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/616",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=616"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/534"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/616"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/616"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/616"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/616"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2061,
+  "title": {
+   "raw": "Our Services",
+   "rendered": "Our Services"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/our-services/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 592,
+  "parent": 0,
+  "menu_order": 3,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2061",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2061"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/592"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2061"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2061"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2061"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2061"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 617,
+  "title": {
+   "raw": "Our Services",
+   "rendered": "Our Services"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/our-services/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 592,
+  "parent": 0,
+  "menu_order": 3,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/617",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=617"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/592"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/617"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/617"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/617"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/617"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3279,
+  "title": {
+   "raw": "AI &#038; GEO Optimization",
+   "rendered": "AI &#038; GEO Optimization"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/ai-geo-optimization/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3235,
+  "parent": 617,
+  "menu_order": 4,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3279",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3279"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3235"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3279"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3279"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3279"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3279"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3285,
+  "title": {
+   "raw": "AI &#038; GEO Optimization",
+   "rendered": "AI &#038; GEO Optimization"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/ai-geo-optimization/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3235,
+  "parent": 2061,
+  "menu_order": 4,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3285",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3285"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3235"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3285"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3285"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3285"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3285"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3280,
+  "title": {
+   "raw": "SEO Services",
+   "rendered": "SEO Services"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/seo-services/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3249,
+  "parent": 617,
+  "menu_order": 5,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3280",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3280"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3249"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3280"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3280"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3280"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3280"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3286,
+  "title": {
+   "raw": "Google Business Profile",
+   "rendered": "Google Business Profile"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/google-business-profile/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3260,
+  "parent": 2061,
+  "menu_order": 5,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3286",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3286"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3260"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3286"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3286"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3286"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3286"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3281,
+  "title": {
+   "raw": "Google Business Profile",
+   "rendered": "Google Business Profile"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/google-business-profile/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3260,
+  "parent": 617,
+  "menu_order": 6,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3281",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3281"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3260"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3281"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3281"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3281"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3281"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3287,
+  "title": {
+   "raw": "SEO Services",
+   "rendered": "SEO Services"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/seo-services/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3249,
+  "parent": 2061,
+  "menu_order": 6,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3287",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3287"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3249"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3287"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3287"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3287"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3287"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2924,
+  "title": {
+   "raw": "Google Ads &#038; LSA",
+   "rendered": "Google Ads &#038; LSA"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/google-ads-lsa/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 2634,
+  "parent": 617,
+  "menu_order": 7,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2924",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2924"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/2634"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2924"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2924"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2924"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2924"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3289,
+  "title": {
+   "raw": "Google Ads &#038; LSA",
+   "rendered": "Google Ads &#038; LSA"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/google-ads-lsa/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 2634,
+  "parent": 2061,
+  "menu_order": 7,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3289",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3289"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/2634"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3289"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3289"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3289"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3289"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3282,
+  "title": {
+   "raw": "Website Development",
+   "rendered": "Website Development"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/website-development/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3265,
+  "parent": 617,
+  "menu_order": 8,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3282",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3282"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3265"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3282"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3282"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3282"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3282"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3288,
+  "title": {
+   "raw": "Website Development",
+   "rendered": "Website Development"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/website-development/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3265,
+  "parent": 2061,
+  "menu_order": 8,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3288",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3288"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3265"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3288"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3288"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3288"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3288"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3283,
+  "title": {
+   "raw": "Social Media Marketing",
+   "rendered": "Social Media Marketing"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/social-media-marketing/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3273,
+  "parent": 617,
+  "menu_order": 9,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3283",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3283"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3273"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3283"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3283"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3283"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3283"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3290,
+  "title": {
+   "raw": "Social Media Marketing",
+   "rendered": "Social Media Marketing"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/social-media-marketing/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3273,
+  "parent": 2061,
+  "menu_order": 9,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3290",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3290"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3273"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3290"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3290"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3290"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3290"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2254,
+  "title": {
+   "raw": "Customer Success",
+   "rendered": "Customer Success"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/customer-success-stories/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 2184,
+  "parent": 0,
+  "menu_order": 10,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2254",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2254"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/2184"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2254"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2254"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2254"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2254"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2256,
+  "title": {
+   "raw": "Customer Success Stories",
+   "rendered": "Customer Success Stories"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/customer-success-stories/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 2184,
+  "parent": 0,
+  "menu_order": 10,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2256",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2256"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/2184"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2256"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2256"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2256"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2256"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2074,
+  "title": {
+   "raw": "Blog",
+   "rendered": "Blog"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/blog/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 605,
+  "parent": 0,
+  "menu_order": 11,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2074",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2074"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/605"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2074"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2074"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2074"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2074"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3482,
+  "title": {
+   "raw": "FAQs",
+   "rendered": "FAQs"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/faqs/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3471,
+  "parent": 0,
+  "menu_order": 11,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3482",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3482"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3471"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3482"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3482"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3482"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3482"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 618,
+  "title": {
+   "raw": "Blog",
+   "rendered": "Blog"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/blog/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 605,
+  "parent": 0,
+  "menu_order": 12,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 6,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/618",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=618"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/605"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/618"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/618"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/618"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/618"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3481,
+  "title": {
+   "raw": "FAQs",
+   "rendered": "FAQs"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/faqs/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 3471,
+  "parent": 0,
+  "menu_order": 12,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3481",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=3481"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/3471"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3481"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3481"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3481"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/3481"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2075,
+  "title": {
+   "raw": "Contact Us",
+   "rendered": "Contact Us"
+  },
+  "status": "publish",
+  "url": "https://digitalgrowthcatalyze.com/contact-us/",
+  "attr_title": "",
+  "description": "",
+  "type": "post_type",
+  "type_label": "Page",
+  "object": "page",
+  "object_id": 610,
+  "parent": 0,
+  "menu_order": 13,
+  "target": "",
+  "classes": [
+   ""
+  ],
+  "xfn": [
+   ""
+  ],
+  "invalid": false,
+  "meta": [],
+  "menus": 14,
+  "_links": {
+   "self": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2075",
+     "targetHints": {
+      "allow": [
+       "GET",
+       "POST",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/types/nav_menu_item"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "nav_menu",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menus?post=2075"
+    }
+   ],
+   "wp:menu-item-object": [
+    {
+     "post_type": "page",
+     "embeddable": true,
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/pages/610"
+    }
+   ],
+   "wp:action-publish": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2075"
+    }
+   ],
+   "wp:action-unfiltered-html": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2075"
+    }
+   ],
+   "wp:action-create-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2075"
+    }
+   ],
+   "wp:action-assign-menus": [
+    {
+     "href": "https://digitalgrowthcatalyze.com/wp-json/wp/v2/menu-items/2075"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]
