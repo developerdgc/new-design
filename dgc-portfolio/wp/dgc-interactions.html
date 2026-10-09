@@ -201,6 +201,22 @@ body .elementor .dgc-ch-seo .dgc-case::before { background-image: url("data:imag
 body .elementor img.dgc-vimg[data-lazyloaded], body .elementor img.dgc-case-logo[data-lazyloaded], [data-elementor-type="header"] img[data-lazyloaded] { opacity: 1 !important; }
 /* lazy-load placeholders (LiteSpeed) must not stretch the card footer */
 body .elementor .dgc-case-logo { flex: none; width: auto; max-width: 96px; height: 22px; object-fit: contain; object-position: left center; }
+/* service-page case-study row (digitalgrowthcatalyze.com): site fonts with the same fallbacks the site uses */
+body .elementor .dgc-svc-kicker { font-family: "Marcellus SC", sans-serif; }
+body .elementor .dgc-svc-h2 { font-family: Raleway, sans-serif; }
+body .elementor .dgc-svc-p, body .elementor .dgc-svc-cases .dgc-mhero-btn { font-family: Poppins, sans-serif; }
+body .elementor .dgc-svc-cgrid { scrollbar-width: thin; scrollbar-color: #f6a440 transparent; }
+body .elementor .dgc-svc-cgrid .dgc-case-go { gap: 6px; font-size: .72rem; }
+body .elementor .dgc-svc-cgrid .dgc-case-logo { max-width: 72px; }
+body .elementor .dgc-svc-cgrid .dgc-case-foot { gap: 8px; }
+/* one row only: 4 cards where the content column is wide enough, otherwise 3 (desktop); tablet/phone swipe the row */
+body .elementor .dgc-svc-cases .dgc-wrap { container-type: inline-size; container-name: dgcsvc; }
+@media (min-width: 1025px) {
+  @container dgcsvc (max-width: 1060px) {
+    body .elementor .dgc-svc-cgrid > .dgc-svc-citem { flex-basis: calc(33.333% - 16px); }
+    body .elementor .dgc-svc-cgrid > .dgc-svc-citem:nth-child(n+4) { display: none; }
+  }
+}
 /* live-site page hero (same pattern as the other digitalgrowthcatalyze.com pages) */
 body .elementor .dgc-mhero-h1 { font-family: Raleway, sans-serif; }
 body .elementor .dgc-mhero-sub, body .elementor .dgc-mhero-btn { font-family: Poppins, sans-serif; }
@@ -463,7 +479,7 @@ body .elementor .dgc-case-ic { transition: transform .45s cubic-bezier(.2,.8,.2,
     tuck(); window.addEventListener('resize', tuck); window.addEventListener('load', tuck);
   }
   // LiteSpeed lazy load waits for the first user interaction on some sites: load the small card logos and video posters right away
-  [].forEach.call(document.querySelectorAll('.dgc-cgrid img[data-src], .dgc-grid img.dgc-case-logo[data-src], .dgc-vgrid img[data-src], .dgc-vlist img[data-src], [data-elementor-type="header"] img[data-src]'), function (im) {
+  [].forEach.call(document.querySelectorAll('.dgc-cgrid img[data-src], .dgc-svc-cgrid img[data-src], .dgc-grid img.dgc-case-logo[data-src], .dgc-vgrid img[data-src], .dgc-vlist img[data-src], [data-elementor-type="header"] img[data-src]'), function (im) {
     if (im.getAttribute('data-srcset')) im.setAttribute('srcset', im.getAttribute('data-srcset'));
     im.src = im.getAttribute('data-src'); im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); im.setAttribute('data-lazyloaded', '1');
   });

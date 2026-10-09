@@ -6,6 +6,8 @@ import mcp
 from head_snippets import FONTS
 PAGES = json.load(open('pages-main.json')); IDS = [PAGES['case-studies']['id'], PAGES['video-reviews']['id']]
 COND = [f'include/singular/page/{i}' for i in IDS]
+SERVICE_IDS = [3260, 2634, 3249, 3235]  # GBP, Google Ads & LSA, SEO Services, AI & GEO: case-study rows (no noindex there)
+SCOND = [f'include/singular/page/{i}' for i in SERVICE_IDS]
 B = 'https://digitalgrowthcatalyze.com/wp-json/wp/v2/'
 def req(path, data=None, method='GET'):
     r = urllib.request.Request(B + path, json.dumps(data).encode() if data is not None else None, {'Authorization': mcp.AUTH, 'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}, method=method)
@@ -16,13 +18,14 @@ GFONTS = ('<style id="dgc-webfonts">'  # LiteSpeed strips Google Fonts <link>s o
           '@font-face{font-family:"Unbounded";font-style:normal;font-weight:200 900;font-display:swap;src:url(https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTXCb04q32xlpwu8Zf.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}'
           '@font-face{font-family:"Manrope";font-style:normal;font-weight:200 800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}'
           '</style>')
-SNIPS = [('DGC interactions (case studies + video reviews)', open('/home/user/new-design/dgc-portfolio/wp/dgc-interactions.html').read(), 'elementor_body_end'),
-         ('DGC head: fonts + noindex (case studies + video reviews)', NOINDEX + '\n' + GFONTS + '\n' + FONTS, 'elementor_head')]
+SNIPS = [('DGC interactions (case studies + video reviews)', open('/home/user/new-design/dgc-portfolio/wp/dgc-interactions.html').read(), 'elementor_body_end', COND + SCOND),
+         ('DGC head: fonts + noindex (case studies + video reviews)', NOINDEX + '\n' + GFONTS + '\n' + FONTS, 'elementor_head', COND),
+         ('DGC head: fonts (service pages)', GFONTS + '\n' + FONTS, 'elementor_head', SCOND)]
 ids = json.load(open('snippets-main.json')) if os.path.exists('snippets-main.json') else {}
-for title, code, loc in SNIPS:
+for title, code, loc, cond in SNIPS:
     body = {'title': title, 'status': 'publish', 'meta': {'_elementor_code': code, '_elementor_location': loc, '_elementor_priority': 1}}
     d = req('elementor_snippet' + (f'/{ids[title]}' if title in ids else ''), body, 'POST'); ids[title] = d['id']
-    r = mcp.call('elementor-manage-site-parts', {'operations': [{'action': 'update', 'post_id': d['id'], 'conditions': COND}]})
+    r = mcp.call('elementor-manage-site-parts', {'operations': [{'action': 'update', 'post_id': d['id'], 'conditions': cond}]})
     print(title, d['id'], json.dumps(r)[:160])
 json.dump(ids, open('snippets-main.json', 'w'), indent=1)
 # Yoast noindex too (keeps the pages out of the Yoast sitemap) - only works if Yoast exposes the meta over REST
