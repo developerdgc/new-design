@@ -208,5 +208,33 @@
   "w": 540,
   "h": 959,
   "bytes": 55882
+ },
+ "video/review-5.mp4": {
+  "id": 4252,
+  "url": "https://digitalgrowthcatalyze.com/wp-content/uploads/2026/10/dgc-video-review-5.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 2660817
+ },
+ "video/review-5.jpg": {
+  "id": 4251,
+  "url": "https://digitalgrowthcatalyze.com/wp-content/uploads/2026/10/dgc-video-review-5.webp",
+  "w": 540,
+  "h": 960,
+  "bytes": 51832
+ },
+ "video/review-6.jpg": {
+  "id": 4250,
+  "url": "https://digitalgrowthcatalyze.com/wp-content/uploads/2026/10/dgc-video-review-6.webp",
+  "w": 540,
+  "h": 960,
+  "bytes": 60738
+ },
+ "video/review-6.mp4": {
+  "id": 4253,
+  "url": "https://digitalgrowthcatalyze.com/wp-content/uploads/2026/10/dgc-video-review-6.mp4",
+  "w": 540,
+  "h": 960,
+  "bytes": 936494
  }
 }

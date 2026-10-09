@@ -10,7 +10,7 @@ ROOT = '/home/user/new-design/dgc-portfolio/'
 B = SITE + '/wp-json/wp/v2/media'
 done = json.load(open(MEDIA)) if os.path.exists(MEDIA) else {}
 refs = [f'img/casestudies/{c[3]}.jpg' for c in CASES] + ['img/brand/dgc-mark-white.png', 'img/brand/dgc-logo-white.png'] \
-     + [f'video/review-{i}.{e}' for i in range(1, 5) for e in ('jpg', 'mp4')]
+     + [f'video/review-{i}.{e}' for i in range(1, 7) for e in ('jpg', 'mp4')]
 def prep(r):
     p = ROOT + r; slug = 'dgc-' + r.replace('img/', '').replace('/', '-').rsplit('.', 1)[0]
     if r.endswith('.mp4'): return open(p, 'rb').read(), slug + '.mp4', 'video/mp4'
