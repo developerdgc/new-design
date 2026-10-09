@@ -1,0 +1,318 @@
+<title>Gloria's Cleaning Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: full-bleed photo hero with quote form on the right, then alternating image/text bands, crimson CTA bands, and a mosaic gallery. */
+:root{
+  --crimson:#850100;      /* logo red */
+  --crimson-deep:#4d0300;
+  --gold:#FDD94F;         /* logo gold */
+  --slate:#59607D;        /* logo slate */
+  --bg:#fbf8f7;
+  --surface:#ffffff;
+  --soft:#f4ecea;
+  --fg:#241b1b;
+  --muted:#6a5f62;
+  --line:#e6dadb;
+  --accent:#850100;
+  --on-accent:#ffffff;
+  --shadow:0 18px 50px -20px rgba(77,3,0,.35);
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#150d0d;--surface:#1f1414;--soft:#241818;--fg:#f5ecea;--muted:#b9a9aa;--line:#3a2828;
+  --accent:#FDD94F;--on-accent:#2a0300;--shadow:0 18px 50px -20px rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#150d0d;--surface:#1f1414;--soft:#241818;--fg:#f5ecea;--muted:#b9a9aa;--line:#3a2828;
+  --accent:#FDD94F;--on-accent:#2a0300;--shadow:0 18px 50px -20px rgba(0,0,0,.7);color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 1.0625rem/1.65 var(--font-body);padding-inline:0}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,100%);margin-inline:auto;padding-inline:20px}
+section{padding-block:clamp(56px,8vw,104px)}
+.eyebrow{font:700 .78rem/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.lead{color:var(--muted);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.5rem;border-radius:999px;font:700 1rem/1 var(--font-body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#2a0300}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-red{background:var(--crimson);color:#fff}
+.hd{display:flex;flex-direction:column;gap:14px;margin-bottom:44px}
+.hd h2{font-size:clamp(2rem,4vw,3rem)}
+
+/* top bar */
+.top{background:var(--crimson-deep);color:#f6e3e0;font-size:.9rem}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:9px}
+.top b{color:var(--gold)}
+nav.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{background:#fff;border-radius:12px;padding:4px 10px;display:flex}
+.logo img{height:52px;width:auto;display:block}
+.links{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+.links a{text-decoration:none;color:var(--fg)}
+.links a:hover{color:var(--accent)}
+nav .btn{padding:.75rem 1.2rem;font-size:.95rem}
+@media(max-width:860px){.links{display:none}}
+@media(max-width:480px){nav .btn span{display:none}}
+
+/* hero */
+.hero{position:relative;color:#fff;padding-block:clamp(48px,7vw,88px);background:linear-gradient(100deg,rgba(60,2,0,.94) 0%,rgba(77,3,0,.82) 45%,rgba(77,3,0,.45) 100%),url(img/hero.jpg) center/cover}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem)}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .lead{color:#f1dedb;font-size:1.15rem;margin-top:20px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.ticks{display:flex;gap:10px 22px;flex-wrap:wrap;margin:30px 0 0;padding:0;list-style:none;font-weight:600;font-size:.95rem}
+.ticks li::before{content:"✓";color:var(--gold);margin-right:8px;font-weight:800}
+.quote{background:var(--surface);color:var(--fg);border-radius:22px;padding:clamp(22px,3vw,34px);box-shadow:var(--shadow);border-top:6px solid var(--gold)}
+.quote h2{font-size:1.65rem}
+.quote p.sub{color:var(--muted);font-size:.95rem;margin:6px 0 18px}
+.quote form{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quote label{display:grid;gap:5px;font-size:.82rem;font-weight:700;letter-spacing:.02em;min-width:0}
+.quote input,.quote select,.quote textarea{width:100%;font:500 1rem var(--font-body);padding:.8rem .9rem;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg)}
+.quote textarea{resize:vertical;min-height:72px}
+.quote .btn{width:100%;margin-top:4px;padding:1.05rem}
+.quote .note{font-size:.8rem;color:var(--muted);text-align:center}
+.ok{display:none;background:var(--soft);border-radius:12px;padding:14px;font-weight:600}
+.ok.show{display:block}
+@media(max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.row2{grid-template-columns:minmax(0,1fr)}}
+
+/* trust strip */
+.strip{background:var(--gold);color:#2a0300;padding-block:22px}
+.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 24px}
+.strip li{font-weight:700;display:flex;align-items:center;gap:12px;line-height:1.25}
+.strip svg{flex:none;width:30px;height:30px}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:center}
+.about .pic{position:relative}
+.about .pic img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px 120px 6px 6px;display:block}
+.about .badge{position:absolute;right:-12px;bottom:28px;background:var(--crimson);color:#fff;border-radius:16px;padding:18px 22px;box-shadow:var(--shadow);max-width:210px}
+.about .badge b{display:block;font:700 2.6rem/1 var(--font-display);color:var(--gold)}
+.about h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 18px}
+.about .copy{display:grid;gap:16px}
+.pill{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.pill span{border:1.5px solid var(--line);border-radius:999px;padding:.4rem .95rem;font-weight:600;font-size:.9rem}
+@media(max-width:860px){.about .wrap{grid-template-columns:minmax(0,1fr)}.about .badge{right:8px}}
+
+/* services */
+.services{background:var(--soft)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.card{background:var(--surface);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.card .b{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.4rem}
+.card p{color:var(--muted);font-size:.98rem}
+.card a.more{margin-top:auto;font-weight:700;color:var(--accent);text-decoration:none;padding-top:6px}
+
+/* cta bands */
+.band{background:linear-gradient(115deg,var(--crimson-deep),var(--crimson));color:#fff;padding-block:clamp(40px,6vw,64px)}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.band h2{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:22ch}
+.band p{color:#f1dedb;margin-top:10px}
+.band .cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:22px}
+.t{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.t .stars{color:#e0a800;letter-spacing:3px;font-size:1.05rem}
+.t blockquote{margin:0;font:500 1.15rem/1.55 var(--font-display)}
+.t .who{margin-top:auto;display:flex;align-items:center;gap:12px;font-weight:700;line-height:1.3}
+.t .who i{width:42px;height:42px;border-radius:50%;background:var(--crimson);color:var(--gold);display:grid;place-items:center;font:700 1rem var(--font-display);font-style:normal;flex:none}
+.t .who small{display:block;color:var(--muted);font-weight:500}
+.t.big{background:var(--crimson);color:#fff;border-color:transparent}
+.t.big .who small{color:#f1dedb}
+.t.big .stars{color:var(--gold)}
+.t.big .who i{background:var(--gold);color:var(--crimson)}
+
+/* why */
+.why{background:var(--soft)}
+.why .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,72px);align-items:center}
+.why .pic img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:120px 6px 6px 6px;display:block}
+.why h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 28px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:22px}
+.feat div{display:grid;gap:6px}
+.feat svg{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.feat h3{font:700 1.15rem/1.2 var(--font-body)}
+.feat p{color:var(--muted);font-size:.96rem}
+@media(max-width:860px){.why .wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* gallery */
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:12px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:14px}
+.mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.mosaic figure:hover img{transform:scale(1.06)}
+.mosaic figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(40,2,0,.8));color:#fff;font-weight:600;font-size:.9rem}
+.mosaic .w2{grid-column:span 2}.mosaic .h2{grid-row:span 2}
+@media(max-width:860px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}}
+
+/* final cta */
+.final{background:linear-gradient(rgba(60,2,0,.9),rgba(60,2,0,.92)),url(img/bedroom.jpg) center/cover;color:#fff;text-align:center}
+.final .wrap{display:grid;gap:22px;justify-items:center}
+.final h2{font-size:clamp(2.2rem,5vw,3.8rem);max-width:18ch}
+.final h2 em{color:var(--gold)}
+.final p{color:#f1dedb;max-width:52ch}
+.phone{font:700 clamp(1.8rem,5vw,2.8rem)/1 var(--font-display);color:var(--gold);text-decoration:none}
+.final .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* footer */
+footer{background:#120a0a;color:#cdbcbc;padding-block:56px 28px;font-size:.96rem}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+footer h4{margin:0 0 14px;color:#fff;font:700 .8rem var(--font-body);letter-spacing:.16em;text-transform:uppercase}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+footer .logo{display:inline-flex;margin-bottom:16px}
+footer .legal{border-top:1px solid #2c1f1f;margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.86rem;color:#9a8a8a}
+@media(max-width:860px){footer .cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){footer .cols{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="top"><div class="wrap"><span>Serving Estero, Fort Myers &amp; all of Southwest Florida</span><span>Free estimates · Call <b>(239) 822-9448</b></span></div></div>
+
+<nav class="bar"><div class="wrap">
+  <a class="logo" href="#top" aria-label="Gloria's Cleaning Solutions"><img src="img/logo.png" alt="Gloria's Cleaning Solutions. Real Service / Real Value"></a>
+  <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#why">Why Us</a><a href="#gallery">Gallery</a></div>
+  <a class="btn btn-red" href="#quote">Free Quote <span>→</span></a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <p class="eyebrow" style="color:var(--gold)">Residential &amp; commercial cleaning</p>
+    <h1 style="margin-top:16px">Real service. <em>Real value.</em> A home that feels brand new.</h1>
+    <p class="lead">Local, licensed, bonded and insured. Gloria's crew has been cleaning homes and offices across Southwest Florida since 2000, and every job is guaranteed.</p>
+    <div class="cta"><a class="btn btn-gold" href="#quote">Get my free quote</a><a class="btn btn-ghost" href="#services">See our services</a></div>
+    <ul class="ticks"><li>Licensed &amp; bonded</li><li>Fully insured</li><li>Satisfaction guaranteed</li></ul>
+  </div>
+  <aside class="quote" id="quote">
+    <h2>Get a free estimate</h2>
+    <p class="sub">Tell us a little about your space. We'll call you back with a clear price.</p>
+    <form id="qf">
+      <div class="row2">
+        <label for="f-name">Full name<input id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith"></label>
+        <label for="f-phone">Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(239) 555-0123"></label>
+      </div>
+      <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+      <div class="row2">
+        <label for="f-svc">Service<select id="f-svc" name="service"><option>Residential Cleaning</option><option>Commercial Cleaning</option><option>Office Cleaning</option><option>Remodeling Cleaning</option><option>Post-Construction Cleaning</option><option>Window Cleaning</option><option>Program Cleaning (recurring)</option></select></label>
+        <label for="f-zip">Zip code<input id="f-zip" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="33928"></label>
+      </div>
+      <label for="f-msg">Details<textarea id="f-msg" name="message" placeholder="Size of space, how often, anything we should know"></textarea></label>
+      <button class="btn btn-red" type="submit">Request my free quote</button>
+      <p class="ok" id="ok" role="status">Thanks! Your request is filled in. This preview form is not connected yet, so please call (239) 822-9448.</p>
+      <p class="note">Prefer to talk? Call <b>(239) 822-9448</b></p>
+    </form>
+  </aside>
+</div></header>
+
+<div class="strip"><div class="wrap"><ul>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Licensed, bonded &amp; insured</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Serving Florida since 2000</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a4 4 0 017-2.6A4 4 0 0119 10c0 6-7 11-7 11z"/></svg>Local Southwest Florida team</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Work guaranteed, free quotes</li>
+</ul></div></div>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="pic"><img src="img/about.jpg" alt="A bright, spotless kitchen with fresh lemons on the counter" loading="lazy">
+    <div class="badge"><b>25+</b>years keeping Florida homes and offices spotless</div></div>
+  <div class="copy">
+    <p class="eyebrow">About us</p>
+    <h2>We treat your place like it's our own.</h2>
+    <p class="lead">Gloria's Cleaning Solutions is a local, family-run cleaning company based in Estero. We started with a simple promise, Real Service / Real Value, and we still work that way: show up on time, clean thoroughly, and stand behind the result.</p>
+    <p class="lead">Our goal is to exceed your expectations and guarantee our work. For busy households and busy offices, we offer free quotes and cost-effective cleaning that fits your schedule and budget.</p>
+    <div class="pill"><span>Homes</span><span>Offices</span><span>Remodels</span><span>Windows</span></div>
+    <div><a class="btn btn-red" href="#quote" style="margin-top:8px">Book a free estimate</a></div>
+  </div>
+</div></section>
+
+<section class="services" id="services"><div class="wrap">
+  <div class="hd"><p class="eyebrow">Our services</p><h2>Cleaning for every space we serve</h2><p class="lead">From weekly home visits to the final polish after construction, one crew handles it all.</p></div>
+  <div class="grid3">
+    <article class="card"><img src="img/living.jpg" alt="Cleaner vacuuming a bright living room" loading="lazy"><div class="b"><h3>Residential Cleaning</h3><p>Kitchens, baths, floors and every room in between. One-time, weekly, bi-weekly or monthly.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/office.jpg" alt="Clean, empty commercial office space" loading="lazy"><div class="b"><h3>Commercial Cleaning</h3><p>Reliable cleaning for retail, clinics and business spaces, scheduled around your hours.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/team.jpg" alt="Co-workers celebrating in a tidy modern office" loading="lazy"><div class="b"><h3>Office Cleaning</h3><p>Desks, break rooms, restrooms and floors. A fresh workplace your team and clients notice.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/bath.jpg" alt="Sparkling renovated bathroom with glass shower" loading="lazy"><div class="b"><h3>Remodeling Cleaning</h3><p>Dust, residue and leftover mess removed so your renovation looks the way you planned it.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/exterior.jpg" alt="New modern home at dusk after construction" loading="lazy"><div class="b"><h3>Post-Construction Cleaning</h3><p>Builders and owners: we handle the fine dust, debris and final detail before move-in.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/window.jpg" alt="Cleaner wiping a window and shutters" loading="lazy"><div class="b"><h3>Window Cleaning</h3><p>Streak-free glass, tracks and sills, inside and out, to bring the Florida light back in.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+    <article class="card"><img src="img/bedroom.jpg" alt="Sunlit bedroom freshly made up" loading="lazy"><div class="b"><h3>Program Cleaning</h3><p>A recurring plan built around you. Same trusted crew, same standard, every visit.</p><a class="more" href="#quote">Get a quote →</a></div></article>
+  </div>
+</div></section>
+
+<div class="band"><div class="wrap">
+  <div><h2>Ready for a cleaner, calmer space?</h2><p>Free estimates. No pressure. Most quotes are quick once we know your space.</p></div>
+  <div class="cta"><a class="btn btn-gold" href="#quote">Get a free quote</a><a class="btn btn-ghost" href="#quote">(239) 822-9448</a></div>
+</div></div>
+
+<section id="reviews"><div class="wrap">
+  <div class="hd"><p class="eyebrow">Testimonials</p><h2>Neighbors who trust Gloria's crew</h2><p class="lead">Real words from customers around Fort Myers and Southwest Florida.</p></div>
+  <div class="tgrid">
+    <figure class="t big" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"Gloria, I can't begin to tell you how thrilled I am with the awesome job you and your ladies did on my house today!!"</blockquote><figcaption class="who"><i>H</i><span>Hazel Lemen<small>Customer</small></span></figcaption></figure>
+    <figure class="t" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"I have used Gloria's Cleaning Solutions for 12 months and they've never let me down. I would recommend them to others."</blockquote><figcaption class="who"><i>M</i><span>Maria Fischer<small>Fort Myers, FL</small></span></figcaption></figure>
+    <figure class="t" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"Her crew cleans my house and my Mother even approves. They show up always on time. I recommend them to all my friends."</blockquote><figcaption class="who"><i>R</i><span>Richard Palsch<small>Fort Myers, FL</small></span></figcaption></figure>
+    <figure class="t" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"We have employed Gloria's Cleaning Solutions for 18 months now and are quite impressed with the services they provide."</blockquote><figcaption class="who"><i>C</i><span>Carrie Collins<small>Fort Myers, FL</small></span></figcaption></figure>
+    <figure class="t" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"Hi Gloria. Just wanted to thank you again for helping me out today. I walked to the back rooms and the perfect vacuum job…"</blockquote><figcaption class="who"><i>A</i><span>Ann Baker<small>Customer</small></span></figcaption></figure>
+    <figure class="t" style="margin:0"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>"We are in Florida at the house and I want to thank you for doing such a great job cleaning and opening up the house…"</blockquote><figcaption class="who"><i>L</i><span>Leslie Asadorian<small>Customer</small></span></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="pic"><img src="img/spray.jpg" alt="Gloved hand holding a yellow spray bottle against a mint background" loading="lazy"></div>
+  <div>
+    <p class="eyebrow">Why choose us</p>
+    <h2>Cleaning you can count on, visit after visit</h2>
+    <div class="feat">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Licensed, bonded &amp; insured</h3><p>You're protected, and so is your property, every time we walk in.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>On time, every time</h3><p>Customers tell us the same thing: the crew shows up when promised.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg><h3>Work guaranteed</h3><p>If something isn't right, tell us. We stand behind the clean.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5C17 4.8 14.8 4 12 4S7 5 7 7c0 4.5 10 2.5 10 7 0 2-2.2 3-5 3s-5-.8-5-2.5"/></svg><h3>Fair, upfront pricing</h3><p>Cost-effective rates and free quotes, with no surprises on the bill.</p></div>
+    </div>
+    <p style="margin-top:30px"><a class="btn btn-red" href="#quote">Request my free quote</a></p>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="hd"><p class="eyebrow">Gallery</p><h2>A look at the clean we leave behind</h2></div>
+  <div class="mosaic">
+    <figure class="w2 h2"><img src="img/hero.jpg" alt="Tidy, plant-filled living room" loading="lazy"><figcaption>Living spaces</figcaption></figure>
+    <figure><img src="img/kitchen2.jpg" alt="Smiling cleaner in a bright kitchen" loading="lazy"><figcaption>Kitchens</figcaption></figure>
+    <figure><img src="img/bath.jpg" alt="Clean bathroom" loading="lazy"><figcaption>Bathrooms</figcaption></figure>
+    <figure class="h2"><img src="img/window.jpg" alt="Window and shutter cleaning" loading="lazy"><figcaption>Windows</figcaption></figure>
+    <figure><img src="img/oven.jpg" alt="Cleaning inside an oven" loading="lazy"><figcaption>Deep clean</figcaption></figure>
+    <figure class="w2"><img src="img/mop.jpg" alt="Mopping a commercial floor" loading="lazy"><figcaption>Commercial floors</figcaption></figure>
+    <figure><img src="img/vacuum.jpg" alt="Vacuuming a carpet" loading="lazy"><figcaption>Carpets</figcaption></figure>
+    <figure><img src="img/hotel.jpg" alt="Fresh guest room" loading="lazy"><figcaption>Rooms</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="final" id="contact"><div class="wrap">
+  <p class="eyebrow" style="color:var(--gold)">Free estimate</p>
+  <h2>Come home to a place that <em>sparkles</em>.</h2>
+  <p>Call Gloria's team or request a quote online. We serve Estero, Fort Myers and all of Southwest Florida.</p>
+  <a class="phone" href="tel:+12398229448">(239) 822-9448</a>
+  <div class="cta"><a class="btn btn-gold" href="#quote">Get my free quote</a><a class="btn btn-ghost" href="#services">Browse services</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="#top"><img src="img/logo.png" alt="Gloria's Cleaning Solutions"></a><p>Real Service / Real Value. Licensed, bonded and insured cleaning for Southwest Florida homes and businesses.</p></div>
+    <div><h4>Services</h4><ul><li><a href="#services">Residential</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">Office</a></li><li><a href="#services">Remodeling</a></li><li><a href="#services">Post-Construction</a></li><li><a href="#services">Windows</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="#about">About us</a></li><li><a href="#reviews">Testimonials</a></li><li><a href="#why">Why choose us</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>(239) 822-9448</li><li>19970 S Tamiami Trl #107<br>Estero, FL</li><li>Serving Fort Myers &amp; Southwest Florida</li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Gloria's Cleaning Solutions Inc. All rights reserved.</span><span>Licensed · Bonded · Insured</span></div>
+</div></footer>
+
+<script>
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('ok').classList.add('show');
+});
+</script>
