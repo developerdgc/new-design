@@ -123,7 +123,7 @@ textarea.in{min-height:110px;resize:vertical}
 .in:focus{outline:none;border-color:var(--acc-2)}
 .note{font-size:13px;margin-top:12px;min-height:1.2em;color:var(--acc-2);font-weight:600}
 .hero-main{position:relative;isolation:isolate;display:flex;align-items:center;padding:clamp(40px,6vw,90px) clamp(20px,4vw,40px)}
-.hero-main::before{content:"";position:absolute;inset:0;background:url(img/mine-pit.jpg) center/cover;z-index:-2}
+.hero-main::before{content:"";position:absolute;inset:0;background:url(img/hq/loader.jpg) center/cover;z-index:-2}
 .hero-main::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,12,.78) 0%,rgba(10,14,12,.45) 70%,rgba(10,14,12,.25));z-index:-1}
 .hero-main .inner{max-width:640px;display:grid;gap:22px;justify-items:start}
 .hero-main .pill{background:rgba(14,21,18,.75);border:1px solid rgba(255,255,255,.15)}
@@ -142,7 +142,7 @@ textarea.in{min-height:110px;resize:vertical}
 /* about block (Home-4 image panel with overlay cards) */
 .about-text{max-width:900px;margin:0 auto;text-align:center;display:grid;gap:20px;justify-items:center}
 .about-text p{font-size:18px}
-.panel{margin-top:clamp(40px,5vw,70px);position:relative;border-radius:var(--r);overflow:hidden;min-height:540px;background:url(img/hero.jpg) center/cover;display:flex;align-items:center;padding:clamp(16px,2.5vw,26px)}
+.panel{margin-top:clamp(40px,5vw,70px);position:relative;border-radius:var(--r);overflow:hidden;min-height:540px;background:url(img/hq/mine-aerial.jpg) center/cover;display:flex;align-items:center;padding:clamp(16px,2.5vw,26px)}
 .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0) 60%)}
 .panel .stack{position:relative;z-index:1;display:grid;gap:22px;width:min(470px,100%)}
 .card-dark{background:#0b0f0d;color:#fff;border-radius:var(--r);padding:14px;display:grid;grid-template-columns:44% 1fr;gap:22px;align-items:center}
@@ -194,7 +194,7 @@ textarea.in{min-height:110px;resize:vertical}
 .why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:400px}
 .why .txt{display:grid;gap:22px;justify-items:start}
 .why .txt p{color:#d3d9d5}
-.why .img{align-self:stretch;min-height:380px;border-radius:var(--r);background:url(img/mine-conveyor.jpg) center/cover;mask-image:linear-gradient(90deg,transparent,#000 25%)}
+.why .img{align-self:stretch;min-height:380px;border-radius:var(--r);background:url(img/hq/conveyor.jpg) center/cover;mask-image:linear-gradient(90deg,transparent,#000 25%)}
 .feat4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-block:60px;border-bottom:1px solid rgba(255,255,255,.14)}
 .feat{display:grid;gap:12px;align-content:start}
 .feat .fi{position:relative;width:46px;height:46px;color:var(--acc)}
@@ -242,7 +242,7 @@ textarea.in{min-height:110px;resize:vertical}
 
 /* feature band (template testimonial band, in logo green) */
 .band{position:relative;isolation:isolate;background:var(--green);color:#fff}
-.band::before{content:"";position:absolute;inset:0;background:url(img/ore-closeup.jpg) center/cover;opacity:.18;z-index:-1;filter:blur(3px)}
+.band::before{content:"";position:absolute;inset:0;background:url(img/hq/ore-red.jpg) center/cover;opacity:.18;z-index:-1;filter:blur(3px)}
 .band .pill{background:var(--night)}
 .band h2{color:#fff}
 .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
@@ -299,7 +299,7 @@ textarea.in{min-height:110px;resize:vertical}
 
 /* CTA image band */
 .cta-band{position:relative;isolation:isolate;text-align:center;color:#fff;padding-block:clamp(80px,10vw,140px)}
-.cta-band::before{content:"";position:absolute;inset:0;background:url(img/ore-closeup.jpg) center/cover;z-index:-2}
+.cta-band::before{content:"";position:absolute;inset:0;background:url(img/hq/ore-red.jpg) center/cover;z-index:-2}
 .cta-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,21,18,.55),rgba(14,21,18,.82));z-index:-1}
 .cta-band h2{color:#fff;max-width:20ch;margin:0 auto}
 .cta-band p{max-width:56ch;margin:22px auto 32px;color:#e8ece9}
@@ -507,6 +507,121 @@ textarea.lt{min-height:110px;resize:vertical}
   .logo img{width:52px;height:52px}
   .mgrid{grid-template-columns:1fr}
 }
+
+/* ===== v3: slim overlay header, full-width hero, premium home ===== */
+.site-head{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s,box-shadow .3s}
+.site-head::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,8,.55),rgba(6,10,8,0));z-index:-1;transition:opacity .3s}
+.tb{font-size:13px;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.14);max-height:42px;overflow:hidden;transition:max-height .3s,border-color .3s}
+.tb .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}
+.tb-l{display:flex;gap:24px;flex-wrap:nowrap;white-space:nowrap}
+.tb-l span{display:inline-flex;gap:7px;align-items:center}
+.tb .ico{width:14px;height:14px;color:var(--acc-2)}
+.tb .soc{gap:6px}
+.tb .soc a{width:26px;height:26px;background:rgba(255,255,255,.1);font-size:10.5px}
+.nb .wrap{display:flex;align-items:center;gap:18px;height:74px;position:relative}
+.site-head .logo img{width:46px;height:46px}
+.site-head .logo span{font-size:21px;color:#fff;transition:color .3s}
+.site-head .nav a.top{color:#fff;padding:27px 10px;font-size:14.5px;transition:color .2s}
+.site-head .nav a.top.on{color:var(--acc-2)}
+.site-head .cta{padding:12px 20px;font-size:14px}
+.site-head.solid{background:#fff;box-shadow:0 10px 30px -14px rgba(0,0,0,.25)}
+.site-head.solid::before{opacity:0}
+.site-head.solid .tb{max-height:0;border-color:transparent}
+.site-head.solid .logo span,.site-head.solid .nav a.top{color:var(--ink)}
+.site-head.solid .nav a.top:hover,.site-head.solid .nav a.top.on{color:var(--acc)}
+.site-head .burger{background:rgba(255,255,255,.14)}
+.site-head.solid .burger{background:var(--night)}
+@media (max-width:1280px){
+  .site-head .nav a.top{color:var(--ink);padding:14px 4px}
+  .site-head .nav{top:100%}
+}
+@media (max-width:720px){.tb .hm,.tb .soc{display:none}.tb-l{gap:16px}}
+
+/* hero */
+.hx{position:relative;isolation:isolate;min-height:min(900px,100svh);display:flex;flex-direction:column;justify-content:flex-end;color:#fff;padding-top:150px;overflow:hidden}
+.hx-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:kb 20s ease-out both}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hx::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,11,9,.82) 0%,rgba(7,11,9,.55) 45%,rgba(7,11,9,.15) 100%),linear-gradient(180deg,rgba(7,11,9,.2) 50%,rgba(7,11,9,.85) 100%)}
+.hx > .wrap{width:100%}
+.hx-in{display:grid;gap:26px;justify-items:start;width:100%;padding-bottom:64px}
+.hx h1{color:#fff;font-size:clamp(42px,6vw,82px);font-weight:600;letter-spacing:-.035em;line-height:1.04;max-width:16ch}
+.hx p{font-size:clamp(16px,1.4vw,19px);color:#dfe5e1;max-width:56ch}
+.acts{display:flex;flex-wrap:wrap;gap:14px}
+.btn-lg{padding:18px 30px;font-size:16px}
+.pill.glass{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px)}
+.hx-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.22)}
+.hx-stats div{display:flex;gap:16px;align-items:center;padding:28px 24px 34px 0}
+.hx-stats div + div{padding-left:24px;border-left:1px solid rgba(255,255,255,.14)}
+.hx-stats b{font:600 46px/1 var(--font);color:var(--acc-2);letter-spacing:-.03em}
+.hx-stats span{font-size:14px;line-height:1.4;color:#dfe5e1}
+@media (max-width:900px){.hx-stats{grid-template-columns:1fr 1fr}.hx-stats div:nth-child(3){border-left:0;padding-left:0}.hx-stats div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}}
+@media (max-width:520px){.hx-stats b{font-size:34px}.hx-stats div{flex-direction:column;align-items:flex-start;gap:6px;padding:20px 12px 22px 0}.hx-stats div + div{padding-left:12px}}
+
+/* ticker slimmer */
+.ticker .track{padding-block:16px}
+.ticker span{font-size:clamp(30px,3.6vw,52px)}
+.ticker span svg{width:40px;height:40px}
+
+/* about composition */
+.about2{align-items:center}
+.comp{position:relative;padding:0 12% 14% 0}
+.comp .c1{border-radius:var(--r);aspect-ratio:4/4.3;object-fit:cover;width:100%}
+.comp .c2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);border:8px solid #fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.35)}
+.comp .c3{position:absolute;left:-14px;top:28px;background:linear-gradient(135deg,var(--acc),#a8761f);color:#fff;border-radius:14px;padding:18px 22px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 40px -14px rgba(160,110,20,.6)}
+.comp .c3 b{font:600 44px/1 var(--font)}
+.comp .c3 span{font-size:13px;line-height:1.35;font-weight:600}
+.row-acts{display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+.callme{display:flex;gap:12px;align-items:center}
+.callme i{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--acc)}
+.callme small{display:block;font-size:13px}
+.callme b{color:var(--ink);font-size:18px;font-weight:700}
+
+/* focus + elements */
+.elbar{margin-top:28px;background:#fff;border-radius:var(--r);padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+.elbar > span{font-weight:600;color:var(--ink)}
+.elbar > div{display:flex;flex-wrap:wrap;gap:10px 22px}
+.elbar .e{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);font-size:15px}
+.elbar .e i{font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--night);color:var(--acc-2);display:grid;place-items:center;font:700 14px/1 var(--font)}
+
+/* category cards */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cat{position:relative;isolation:isolate;border-radius:var(--r);overflow:hidden;min-height:480px;display:flex;align-items:flex-end;color:#fff}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s}
+.cat:hover img{transform:scale(1.06)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.88));z-index:-1}
+.cat .bd{padding:30px;display:grid;gap:12px;width:100%}
+.cat .n{font:600 70px/0.9 var(--font);color:var(--acc-2);letter-spacing:-.04em}
+.cat h3{color:#fff;font-size:26px}
+.cat p{color:#e1e6e3;font-size:15px}
+.cat .more{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.3);padding-top:16px;font-weight:600}
+.cat .more i{width:40px;height:40px;border-radius:50%;background:var(--acc);display:grid;place-items:center}
+.cat .more i svg{width:16px;height:16px}
+
+/* why image + global */
+.why .img{background-image:url(img/hq/why.jpg)}
+.ptmini{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;width:100%}
+.ptmini div{border:1px solid var(--line);border-radius:10px;padding:10px 10px 12px;display:grid;gap:2px;background:#fff}
+.ptmini small{font-size:11px}
+.ptmini b{font:700 26px/1 var(--font);color:var(--ink)}
+.ptmini span{font-size:11px;color:var(--acc-ink);font-weight:600}
+.gimg{position:relative}
+.gimg img{border-radius:var(--r);aspect-ratio:4/3.6;object-fit:cover;width:100%}
+.gcard{position:absolute;left:-24px;bottom:28px;background:var(--night);color:#d4dad6;border-radius:14px;padding:22px 24px;max-width:300px;border-left:4px solid var(--acc)}
+.gcard b{color:#fff;font-size:17px;display:block;margin-bottom:6px}
+.gcard p{font-size:14px}
+.cta-band::before{background-image:url(img/hq/cta.jpg)}
+.cta-band .pill{margin-bottom:20px}
+.band::before{background-image:url(img/hq/mountains.jpg);opacity:.16}
+.pban{padding-top:calc(clamp(80px,9vw,130px) + 114px)}
+.pban::before{background-image:var(--img)}
+
+/* whatsapp icon */
+.wa{width:58px;height:58px;padding:0;justify-content:center;border-radius:50%;background:#25d366}
+.wa svg{width:30px;height:30px;fill:#fff}
+@media (max-width:900px){.cats,.ptmini{grid-template-columns:1fr 1fr 1fr}.cats{grid-template-columns:1fr}.cat{min-height:380px}.gcard{left:12px}.comp{max-width:560px}}
+@media (max-width:520px){.ptmini{grid-template-columns:repeat(3,1fr)}.comp .c3{left:8px}}
+
+.tcard{border:1px solid #efe7d8}.bg-night .pc h3{color:var(--ink)}.bg-night .pc p{color:var(--body)}.shead.row > .navbtns{display:flex}
 </style>
 </head>
 <body>
@@ -556,123 +671,118 @@ textarea.lt{min-height:110px;resize:vertical}
   <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></symbol>
 </svg>
 
-<div class="topbar"><div class="wrap">
-  <div class="info">
-    <span><svg class="ico"><use href="#i-phone"/></svg>Call Us: 0337-8907960 · 0336-7119888</span>
-    <span><svg class="ico"><use href="#i-mail"/></svg>Send Mail Us: info@afaqmines.com</span>
-    <span><svg class="ico"><use href="#i-clock"/></svg>Mon – Sat: 9:00 AM – 6:00 PM (PKT)</span>
-  </div>
-  <div class="soc" aria-label="Social media"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="X">X</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="WhatsApp"><svg class="ico" style="width:16px;height:16px"><use href="#i-chat"/></svg></a></div>
-</div></div>
+<header class="site-head" id="sitehead">
+  <div class="tb"><div class="wrap">
+    <div class="tb-l">
+      <span><svg class="ico"><use href="#i-phone"/></svg>0337-8907960</span>
+      <span class="hm"><svg class="ico"><use href="#i-phone"/></svg>0336-7119888</span>
+      <span><svg class="ico"><use href="#i-mail"/></svg>info@afaqmines.com</span>
+    </div>
+    <div class="tb-r soc" aria-label="Social media"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">ig</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="YouTube">yt</a><a href="#contact" aria-label="X">X</a></div>
+  </div></div>
+  <div class="nb"><div class="wrap">
+    <a class="logo" href="#home" aria-label="Afaq Mines home"><img src="img/logo.png" alt=""><span>Afaq <b>Mines</b></span></a>
+    <ul class="nav" id="nav">
+      <li><a class="top" href="#home" data-r="home">Home</a></li>
+      <li><a class="top" href="#about" data-r="about why-afaq team">About Us <svg class="ico"><use href="#i-down"/></svg></a>
+        <div class="drop"><a href="#about">Profile</a><a href="#about-mission">Our Mission</a><a href="#about-values">Our Core Values</a><a href="#why-afaq">Why Afaq Mines</a><a href="#team">Our Team</a></div></li>
+      <li><a class="top" href="#global" data-r="global">Global Attraction</a></li>
+      <li><a class="top" href="#why-pakistan" data-r="why-pakistan">Why Pakistan</a></li>
+      <li><a class="top" href="#regions" data-r="regions">Regions</a></li>
+      <li><a class="top" href="#metallic" data-r="metallic industrial gemstones">Minerals <svg class="ico"><use href="#i-down"/></svg></a>
+        <div class="drop"><a href="#metallic">Metallic Minerals</a><a href="#industrial">Industrial Minerals</a><a href="#gemstones">Gem Stones</a></div></li>
+      <li><a class="top" href="#products" data-r="products">Our Products</a></li>
+      <li><a class="top" href="#processing" data-r="processing">Processing</a></li>
+      <li><a class="top" href="#contact" data-r="contact">Contact Us</a></li>
+    </ul>
+    <a class="btn btn-acc cta" href="#inquiry">Inquiry <svg class="ico"><use href="#i-arrow"/></svg></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="ico"><use href="#i-menu"/></svg></button>
+  </div></div>
+</header>
 
-<header class="hdr"><div class="wrap">
-  <a class="logo" href="#home" aria-label="Afaq Mines home"><img src="img/logo.png" alt=""><span>Afaq <b>Mines</b></span></a>
-  <ul class="nav" id="nav">
-    <li><a class="top" href="#home" data-r="home">Home</a></li>
-    <li><a class="top" href="#about" data-r="about why-afaq team">About Us <svg class="ico"><use href="#i-down"/></svg></a>
-      <div class="drop"><a href="#about">Profile</a><a href="#about-mission">Our Mission</a><a href="#about-values">Our Core Values</a><a href="#why-afaq">Why Afaq Mines</a><a href="#team">Our Team</a></div></li>
-    <li><a class="top" href="#global" data-r="global">Global Attraction</a></li>
-    <li><a class="top" href="#why-pakistan" data-r="why-pakistan">Why Pakistan</a></li>
-    <li><a class="top" href="#regions" data-r="regions">Regions</a></li>
-    <li><a class="top" href="#metallic" data-r="metallic industrial gemstones">Minerals <svg class="ico"><use href="#i-down"/></svg></a>
-      <div class="drop"><a href="#metallic">Metallic Minerals</a><a href="#industrial">Industrial Minerals</a><a href="#gemstones">Gem Stones</a></div></li>
-    <li><a class="top" href="#products" data-r="products">Our Products</a></li>
-    <li><a class="top" href="#processing" data-r="processing">Processing</a></li>
-    <li><a class="top" href="#contact" data-r="contact">Contact Us</a></li>
-  </ul>
-  <a class="btn btn-acc cta" href="#inquiry"><svg class="ico"><use href="#i-arrow"/></svg>Inquiry</a>
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="ico"><use href="#i-menu"/></svg></button>
-</div></header>
 
 <main>
 <!-- ================= HOME (SteelNova Home-4 order) ================= -->
 <section class="page" data-page="home">
-  <div class="hero">
-    <form class="hero-form" id="quick" novalidate>
-      <h2>Get a Free Quotation</h2>
-      <p>Share your mineral requirement and our team will send a competitive quote with grade, price and delivery terms.</p>
-      <div class="fgrid">
-        <input class="in" id="q-name" placeholder="Your Name" aria-label="Your name">
-        <input class="in" id="q-phone" placeholder="Phone Number" aria-label="Phone number">
-        <input class="in full" id="q-company" placeholder="Company Name" aria-label="Company name">
-        <select class="in full" id="q-min" aria-label="Mineral required"></select>
-        <input class="in full" id="q-dest" placeholder="Destination Port / City" aria-label="Destination">
-        <textarea class="in full" id="q-msg" placeholder="Quantity, grade or other requirements" aria-label="Requirements"></textarea>
-        <div class="full"><button class="btn btn-white" type="submit"><svg class="ico"><use href="#i-arrow"/></svg>Get A Free Quote</button><div class="note" id="q-note" aria-live="polite"></div></div>
+  <section class="hx">
+    <img class="hx-bg" src="img/hq/hero.jpg" alt="Aerial view of a terraced open-pit mine">
+    <div class="wrap hx-in">
+      <span class="pill glass"><svg class="ico"><use href="#i-gear"/></svg>Afaq Mines Pvt. Ltd. · Pakistan</span>
+      <h1>Extracting Copper Ore &amp; <span class="acc">Rare Earth Minerals</span> From Pakistan to the World</h1>
+      <p>Responsible exploration, sustainable mining and value addition, with field operations across Khyber Pakhtunkhwa and Balochistan.</p>
+      <div class="acts">
+        <a class="btn btn-acc btn-lg" href="#metallic"><svg class="ico"><use href="#i-arrow"/></svg>Explore Our Minerals</a>
+        <a class="btn btn-ghost btn-lg" href="#inquiry">Request a Quotation</a>
       </div>
-    </form>
-    <div class="hero-main"><div class="inner">
-      <span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Afaq Mines Pvt. Ltd. · Mining &amp; Minerals Exploration</span>
-      <h1 class="h1">Extracting Copper Ore &amp; Rare Earth Minerals From Pakistan to the World</h1>
-      <div class="checks"><span><svg class="ico"><use href="#i-check"/></svg>8+ Years Experience</span><span><svg class="ico"><use href="#i-check"/></svg>Lab-Tested Ore Grades</span><span><svg class="ico"><use href="#i-check"/></svg>Export Ready</span></div>
-      <a class="btn btn-acc" href="#metallic"><svg class="ico"><use href="#i-arrow"/></svg>Explore Our Minerals</a>
+    </div>
+    <div class="wrap"><div class="hx-stats">
+      <div><b>8+</b><span>Years of exploration<br>&amp; mining experience</span></div>
+      <div><b>41</b><span>Minerals across metallic,<br>industrial &amp; gem stones</span></div>
+      <div><b>5</b><span>Field sites from Kalam<br>to Waziristan</span></div>
+      <div><b>3</b><span>Warehouses incl. Karachi<br>port dispatch</span></div>
     </div></div>
-  </div>
+  </section>
 
   <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
 
   <section class="sec">
-    <div class="wrap">
-      <div class="about-text">
-        <span class="pill"><svg class="ico"><use href="#i-gear"/></svg>About Company</span>
-        <h2 class="h2">Afaq Mines: Building <span class="acc">Value From Pakistan's</span> Mineral Wealth</h2>
-        <p>Afaq Mines Pvt. Ltd. is a dynamic and fast-growing mining and minerals exploration company committed to responsible exploration, sustainable mining and value addition. With operations across Khyber Pakhtunkhwa and Balochistan, we explore, source, grade and export minerals for domestic and international buyers.</p>
+    <div class="wrap split about2">
+      <div class="comp">
+        <img class="c1" src="img/hq/about-1.jpg" alt="Haul truck working in a mine">
+        <img class="c2" src="img/hq/about-2.jpg" alt="Geologist examining rock samples">
+        <div class="c3"><b>8+</b><span>Years of hands-on<br>mining experience</span></div>
       </div>
-      <div class="panel">
-        <div class="stack">
-          <div class="card-dark">
-            <img src="img/field-2.jpg" alt="Afaq Mines field team inspecting ore">
-            <div><div class="yr"><b>8+</b><span>Years of Exploration<br>Experience</span></div><p>Hands-on experience in mineral exploration and mining operations across KPK and Balochistan.</p></div>
-          </div>
-          <div class="card-acc">
-            <div class="tp"><div><svg class="ico" style="width:34px;height:34px"><use href="#i-award"/></svg><h3>Afaq Mines<br>Company Mission</h3></div>
-              <div class="avatars"><img src="img/team-ceo.jpg" alt=""><img src="img/team-coo.jpg" alt=""><img src="img/team-geologist.jpg" alt=""><img src="img/team-qa.jpg" alt=""></div></div>
-            <p>Discover, develop and deliver mineral resources through innovation, integrity and responsible stewardship.</p>
-          </div>
+      <div class="txt">
+        <span class="pill"><svg class="ico"><use href="#i-gear"/></svg>About Company</span>
+        <h2 class="h2">Building Value From <span class="acc">Pakistan's Mineral Wealth</span></h2>
+        <p>Afaq Mines Pvt. Ltd. is a dynamic and fast-growing mining and minerals exploration company. Our geologists explore and sample, our lab grades the ore, and our warehouses in Islamabad, Peshawar and Karachi move it to domestic and international buyers.</p>
+        <ul class="chk">
+          <li><svg class="ico"><use href="#i-check"/></svg>Mineral exploration</li><li><svg class="ico"><use href="#i-check"/></svg>Mine lease acquisition</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Ore grading &amp; testing</li><li><svg class="ico"><use href="#i-check"/></svg>International trading</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Export facilitation</li><li><svg class="ico"><use href="#i-check"/></svg>Mine development partnerships</li>
+        </ul>
+        <div class="row-acts">
+          <a class="btn btn-dark" href="#about"><svg class="ico"><use href="#i-arrow"/></svg>Company Profile</a>
+          <div class="callme"><i><svg class="ico"><use href="#i-phone"/></svg></i><span><small>Call or WhatsApp</small><b>0337-8907960</b></span></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="sec" style="padding-top:0">
-    <div class="wrap stats">
-      <div><b>8+</b><h4>Years Experience</h4><p>Hands-on mineral exploration and mining operations</p></div>
-      <div><b>41</b><h4>Minerals Portfolio</h4><p>14 metallic, 18 industrial minerals and 9 gem stones</p></div>
-      <div><b>5</b><h4>Field Sites</h4><p>Kalam, Upper Dir, Besham, Peshawar and Waziristan</p></div>
-      <div><b>3</b><h4>Warehouses</h4><p>Islamabad, Peshawar and Karachi for port dispatch</p></div>
     </div>
   </section>
 
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead row">
-        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Our Minerals</span><h2 class="h2">Minerals Targeted by Afaq Mines</h2><p class="sub">Our primary focus minerals and full portfolio of metallic, industrial and precious stones from Pakistan.</p></div>
-        <div class="navbtns"><button type="button" data-sl="-1" aria-label="Previous"><svg class="ico"><use href="#i-left"/></svg></button><button type="button" data-sl="1" aria-label="Next"><svg class="ico"><use href="#i-arrow"/></svg></button></div>
+        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Primary Focus</span><h2 class="h2">Minerals Targeted by Afaq Mines</h2><p class="sub">Four strategic minerals drive our exploration programme today.</p></div>
+        <a class="btn btn-acc" href="#products"><svg class="ico"><use href="#i-arrow"/></svg>Our Products</a>
       </div>
-      <div class="slider" id="msl"></div>
+      <div class="g4" id="hfocus"></div>
+      <div class="elbar"><span>Additional revenue opportunities</span><div id="helems"></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Mineral Portfolio</span><h2 class="h2">Pakistan, a Treasure of Critical &amp; Strategic Minerals</h2><p class="sub">Grades, reserves, uses and indicative prices for every mineral we source.</p></div>
+      <div class="cats" id="cats"></div>
     </div>
   </section>
 
   <section class="bg-night">
     <div class="wrap">
-      <div class="why" style="padding-top:clamp(60px,7vw,100px)">
+      <div class="why" style="padding-top:clamp(70px,8vw,110px)">
         <div class="txt">
           <span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Why Afaq Mines</span>
-          <h2 class="h2">Why Invest With Afaq Mines for Strategic Minerals</h2>
-          <p>Partnering with Afaq Mines means working with a team on the ground in Pakistan's mining regions, with our own geologists, lab, site supervisors and warehouses.</p>
-          <p>High-demand strategic minerals, multiple mineral streams, an export-oriented model and room to expand into mine ownership and processing facilities.</p>
+          <h2 class="h2">A Strategic Partner on the Ground in Pakistan's Mining Regions</h2>
+          <p>Our own geologists, lab, site supervisors and warehouses cover every step, giving buyers and investors one accountable partner from exploration to export.</p>
+          <a class="btn btn-acc" href="#why-afaq"><svg class="ico"><use href="#i-arrow"/></svg>Why Invest With Us</a>
         </div>
-        <div class="img" role="img" aria-label="Open pit mine with conveyor"></div>
+        <div class="img" role="img" aria-label="Mining machinery at work"></div>
       </div>
-      <div class="feat4">
-        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-pin"/></svg></div><h4>Existing Network</h4><p>Established network within mining regions with local workforce access.</p></div>
-        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-flask"/></svg></div><h4>Ore Evaluation</h4><p>Experience in ore evaluation, grading and lab testing for purity.</p></div>
-        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-truck"/></svg></div><h4>Procurement Channels</h4><p>Reliable mineral procurement and transport to processing and warehouses.</p></div>
-        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-ship"/></svg></div><h4>Export Connections</h4><p>Export market connections with port coordination from Karachi.</p></div>
-      </div>
-      <div class="partners" style="padding-bottom:clamp(60px,7vw,90px)">
-        <h4>Our Offices Across Pakistan</h4>
-        <div class="pboxes"><div>Lahore<small>Punjab</small></div><div>Islamabad<small>Capital</small></div><div>Abbottabad<small>KPK</small></div><div>Peshawar<small>KPK</small></div><div>Karachi<small>Sindh</small></div></div>
+      <div class="feat4" style="border:0;padding-bottom:clamp(70px,8vw,110px)">
+        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-pin"/></svg></div><h4>Existing Network</h4><p>Established network and local workforce access in mining regions.</p></div>
+        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-flask"/></svg></div><h4>Ore Evaluation</h4><p>Experience in grade assessment with in-house lab testing.</p></div>
+        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-truck"/></svg></div><h4>Procurement Channels</h4><p>Reliable sourcing and transport to processing and warehouses.</p></div>
+        <div class="feat"><div class="fi"><svg class="ico"><use href="#i-ship"/></svg></div><h4>Export Connections</h4><p>Buyer network with port coordination from Karachi.</p></div>
       </div>
     </div>
   </section>
@@ -680,71 +790,46 @@ textarea.lt{min-height:110px;resize:vertical}
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead row">
-        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Work Process</span><h2 class="h2">From Mine to Market, Designed for Quality Supply</h2><p class="sub">Every shipment passes through the same stages, run by our own field, lab and warehouse teams.</p></div>
-        <a class="btn btn-acc" href="#processing"><svg class="ico"><use href="#i-arrow"/></svg>Mineral Processing</a>
+        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Work Process</span><h2 class="h2">From Mine to Market in Five Steps</h2><p class="sub">Every shipment passes through the same stages, run by our own field, lab and warehouse teams.</p></div>
+        <a class="btn btn-dark" href="#processing"><svg class="ico"><use href="#i-arrow"/></svg>Mineral Processing</a>
       </div>
-      <div class="proc">
-        <div class="steps" role="tablist" id="steps"></div>
-        <div class="pcard" id="pcard"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec bg-night">
-    <div class="wrap">
-      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Our Operations</span><h2 class="h2">Delivering Excellence Through Every Operation</h2><p class="sub">From field exploration for rare earth elements to bulk copper oxide storage, see how Afaq Mines works on the ground.</p></div>
-      <div class="proj" id="proj"></div>
-      <div class="dots" id="pdots"></div>
+      <div class="proc"><div class="steps" role="tablist" id="steps"></div><div class="pcard" id="pcard"></div></div>
     </div>
   </section>
 
   <section class="sec band">
     <div class="wrap">
-      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Why Pakistan</span><h2 class="h2">Abundant Resources, Strategic Location, Global Opportunities</h2></div>
+      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Why Pakistan</span><h2 class="h2">Abundant Resources. Strategic Location. Global Opportunities.</h2></div>
       <div class="qgrid" id="pkq"></div>
     </div>
   </section>
 
-  <section class="sec bg-cream">
-    <div class="wrap">
-      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Our Team Members</span><h2 class="h2">Meet the Minds Behind Afaq Mines</h2><p class="sub">A dedicated team across exploration, procurement, processing, quality control, storage and distribution.</p></div>
-      <div class="tgrid" id="team3"></div>
-      <div class="center" style="margin-top:40px"><a class="btn btn-dark" href="#team"><svg class="ico"><use href="#i-arrow"/></svg>Meet Our Full Team</a></div>
-    </div>
-  </section>
-
   <section class="sec">
-    <div class="wrap">
-      <div class="shead row">
-        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Global Attraction</span><h2 class="h2">Why the World Is Looking at Pakistan's Minerals</h2><p class="sub">Rare earth minerals are the foundation of the modern world, and Pakistan holds untapped reserves.</p></div>
-        <a class="btn btn-acc" href="#global"><svg class="ico"><use href="#i-arrow"/></svg>Global Attraction</a>
+    <div class="wrap split">
+      <div class="txt">
+        <span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Global Attraction</span>
+        <h2 class="h2">Rare Earth Minerals Power the <span class="acc">Modern World</span></h2>
+        <p>EVs, wind turbines, smartphones, semiconductors and defence systems all depend on rare earth elements. Global supply shortages continue while demand rises rapidly.</p>
+        <div class="ptmini" id="ptmini"></div>
+        <a class="btn btn-dark" href="#global"><svg class="ico"><use href="#i-arrow"/></svg>Global Importance of REEs</a>
       </div>
-      <div class="bgrid">
-        <a class="bcard" href="#global"><img src="img/pf-ree.jpg" alt=""><div class="bd"><span class="tag">Rare Earth Minerals</span><h3>Global Importance of Rare Earth Minerals in EVs, Defence and AI</h3><div class="meta"><span>Nd · Pr · Dy · Tb · La · Ce</span><span>Read more →</span></div></div></a>
-        <a class="bcard" href="#regions"><img src="img/map-provinces.jpg" alt=""><div class="bd"><span class="tag">Regions</span><h3>Mineral Rich Provinces: Province-wise Mineral Map of Pakistan</h3><div class="meta"><span>Balochistan · KPK · GB · Punjab · Sindh</span><span>Read more →</span></div></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec bg-cream">
-    <div class="wrap">
-      <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Frequently Asked Questions</span><h2 class="h2">Common Questions About Afaq Mines</h2><p class="sub">Quick answers for buyers, partners and investors.</p></div>
-      <div class="faq" id="faq"></div>
+      <div class="gimg"><img src="img/hq/global.jpg" alt="Earth at night with city lights"><div class="gcard"><b>Market reality</b><p>Every modern economy is becoming dependent on rare earth minerals.</p></div></div>
     </div>
   </section>
 
   <section class="cta-band">
     <div class="wrap">
-      <h2 class="h2">Exploring Today, Building Tomorrow</h2>
-      <p>Talk to our team today about copper oxide, antimony, mica, rare earths or any mineral in our portfolio.</p>
-      <div class="acts"><a class="btn btn-acc" href="#contact"><svg class="ico"><use href="#i-arrow"/></svg>Request A Call</a><a class="btn btn-ghost" href="#inquiry"><svg class="ico"><use href="#i-arrow"/></svg>Get A Quote</a></div>
+      <span class="pill acc-pill"><svg class="ico"><use href="#i-gear"/></svg>Exploring Today, Building Tomorrow</span>
+      <h2 class="h2">Need Copper Ore, Antimony or Rare Earths? Get a Quotation.</h2>
+      <p>Share the mineral, grade, quantity and delivery location. Our team replies with price, quality and delivery terms within 24 hours.</p>
+      <div class="acts"><a class="btn btn-acc btn-lg" href="#inquiry"><svg class="ico"><use href="#i-arrow"/></svg>Request a Quotation</a><a class="btn btn-ghost btn-lg" href="#contact">Contact Our Team</a></div>
     </div>
   </section>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="page" data-page="about" hidden>
-  <div class="pban" style="--img:url(img/mountains.jpg)"><div class="wrap"><h1 class="h1">About Us</h1><div class="crumbs"><a href="#home">Home</a>/<b>About Us</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/mountains.jpg)"><div class="wrap"><h1 class="h1">About Us</h1><div class="crumbs"><a href="#home">Home</a>/<b>About Us</b></div></div></div>
   <section class="sec" id="about-profile">
     <div class="wrap split">
       <div class="txt">
@@ -758,8 +843,8 @@ textarea.lt{min-height:110px;resize:vertical}
         <a class="btn btn-dark" href="#why-afaq"><svg class="ico"><use href="#i-arrow"/></svg>Why Afaq Mines</a>
       </div>
       <div class="imgstack">
-        <img class="tall" src="img/field-4.jpg" alt="Geologist sampling ore">
-        <img src="img/warehouse.jpg" alt="Copper oxide warehouse" style="aspect-ratio:4/3">
+        <img class="tall" src="img/hq/step-explore.jpg" alt="Geologist sampling ore">
+        <img src="img/hq/step-store.jpg" alt="Copper oxide warehouse" style="aspect-ratio:4/3">
         <div class="yrbox"><b>8+</b><span>Years of hands-on experience in mineral exploration and mining operations</span></div>
       </div>
     </div>
@@ -794,7 +879,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= WHY AFAQ ================= -->
 <section class="page" data-page="why-afaq" hidden>
-  <div class="pban" style="--img:url(img/hero.jpg)"><div class="wrap"><h1 class="h1">Why Afaq Mines</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#about">About Us</a>/<b>Why Afaq Mines</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/mine-aerial.jpg)"><div class="wrap"><h1 class="h1">Why Afaq Mines</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#about">About Us</a>/<b>Why Afaq Mines</b></div></div></div>
   <section class="sec">
     <div class="wrap split">
       <div class="txt">
@@ -806,10 +891,10 @@ textarea.lt{min-height:110px;resize:vertical}
         </ul>
       </div>
       <div class="g2" style="gap:16px">
-        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/pf-copper.jpg" alt=""><div class="bd"><h3>Copper Oxide</h3></div></div>
-        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/pf-antimony.jpg" alt=""><div class="bd"><h3>Antimony</h3></div></div>
-        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/pf-mica.jpg" alt=""><div class="bd"><h3>Mica</h3></div></div>
-        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/pf-ree.jpg" alt=""><div class="bd"><h3>Rare Earth Minerals</h3></div></div>
+        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/hq/min-copper.jpg" alt=""><div class="bd"><h3>Copper Oxide</h3></div></div>
+        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/hq/min-antimony.jpg" alt=""><div class="bd"><h3>Antimony</h3></div></div>
+        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/hq/min-mica.jpg" alt=""><div class="bd"><h3>Mica</h3></div></div>
+        <div class="icard" style="aspect-ratio:3/3.6"><img src="img/hq/min-ree.jpg" alt=""><div class="bd"><h3>Rare Earth Minerals</h3></div></div>
       </div>
     </div>
   </section>
@@ -837,7 +922,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= TEAM ================= -->
 <section class="page" data-page="team" hidden>
-  <div class="pban" style="--img:url(img/mine-pit.jpg)"><div class="wrap"><h1 class="h1">Our Operational Team</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#about">About Us</a>/<b>Our Team</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/loader.jpg)"><div class="wrap"><h1 class="h1">Our Operational Team</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#about">About Us</a>/<b>Our Team</b></div></div></div>
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Experience · Expertise · Commitment</span><h2 class="h2">Management &amp; Technical Team</h2><p class="sub">A dedicated team working across exploration, procurement, processing, quality control, storage and distribution to deliver Pakistan's minerals to the world.</p></div>
@@ -866,7 +951,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= GLOBAL ================= -->
 <section class="page" data-page="global" hidden>
-  <div class="pban" style="--img:url(img/globe.jpg)"><div class="wrap"><h1 class="h1">Global Attraction</h1><div class="crumbs"><a href="#home">Home</a>/<b>Global Attraction</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/port-night.jpg)"><div class="wrap"><h1 class="h1">Global Attraction</h1><div class="crumbs"><a href="#home">Home</a>/<b>Global Attraction</b></div></div></div>
   <section class="sec">
     <div class="wrap">
       <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>What Are Rare Earth Minerals?</span><h2 class="h2">Global Importance of <span class="acc">Rare Earth Minerals</span></h2><p class="sub">Rare Earth Elements (REEs) are strategic minerals used in the technologies that run modern economies.</p></div>
@@ -897,7 +982,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= WHY PAKISTAN ================= -->
 <section class="page" data-page="why-pakistan" hidden>
-  <div class="pban" style="--img:url(img/mountains.jpg)"><div class="wrap"><h1 class="h1">Why Pakistan?</h1><div class="crumbs"><a href="#home">Home</a>/<b>Why Pakistan</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/mountains.jpg)"><div class="wrap"><h1 class="h1">Why Pakistan?</h1><div class="crumbs"><a href="#home">Home</a>/<b>Why Pakistan</b></div></div></div>
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Strategic Advantages</span><h2 class="h2">Abundant Resources. Strategic Location. Global Opportunities.</h2></div>
@@ -907,8 +992,8 @@ textarea.lt{min-height:110px;resize:vertical}
   <section class="sec">
     <div class="wrap split">
       <div class="imgstack">
-        <img class="tall" src="img/port.jpg" alt="Container port">
-        <img src="img/mine-pit.jpg" alt="Open pit mine" style="aspect-ratio:4/3">
+        <img class="tall" src="img/hq/step-export.jpg" alt="Container port">
+        <img src="img/hq/loader.jpg" alt="Open pit mine" style="aspect-ratio:4/3">
         <div class="yrbox"><b>3</b><span>Sea ports: Karachi, Port Qasim and Gwadar</span></div>
       </div>
       <div class="txt">
@@ -924,11 +1009,11 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= REGIONS ================= -->
 <section class="page" data-page="regions" hidden>
-  <div class="pban" style="--img:url(img/mine-conveyor.jpg)"><div class="wrap"><h1 class="h1">Regions</h1><div class="crumbs"><a href="#home">Home</a>/<b>Regions</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/conveyor.jpg)"><div class="wrap"><h1 class="h1">Regions</h1><div class="crumbs"><a href="#home">Home</a>/<b>Regions</b></div></div></div>
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Province-wise Mineral Map</span><h2 class="h2">Mineral Rich Provinces of Pakistan</h2><p class="sub">Pakistan is endowed with a wide variety of minerals across its provinces, offering immense investment potential.</p></div>
-      <div class="split" style="align-items:start"><div class="mapbox"><img src="img/map-provinces.jpg" alt="Province-wise mineral map of Pakistan"></div><div class="prov" id="prov"></div></div>
+      <div class="split" style="align-items:start"><div class="mapbox"><img src="img/hq/map-provinces.jpg" alt="Province-wise mineral map of Pakistan"></div><div class="prov" id="prov"></div></div>
     </div>
   </section>
   <section class="sec">
@@ -941,7 +1026,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= MINERALS ================= -->
 <section class="page" data-page="metallic" hidden>
-  <div class="pban" style="--img:url(img/pf-copper.jpg)"><div class="wrap"><h1 class="h1">Metallic Minerals</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Metallic Minerals</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/min-copper.jpg)"><div class="wrap"><h1 class="h1">Metallic Minerals</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Metallic Minerals</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Critical &amp; Strategic</span><h2 class="h2">Pakistan, a Treasure of Metallic Minerals</h2></div>
     <div class="toolbar"><label class="search"><svg class="ico"><use href="#i-search"/></svg><input id="s-metallic" type="search" placeholder="Search mineral, region or use" aria-label="Search metallic minerals"></label>
@@ -951,7 +1036,7 @@ textarea.lt{min-height:110px;resize:vertical}
   </div></section>
 </section>
 <section class="page" data-page="industrial" hidden>
-  <div class="pban" style="--img:url(img/ind-marble.jpg)"><div class="wrap"><h1 class="h1">Industrial Minerals</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Industrial Minerals</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/ind-marble.jpg)"><div class="wrap"><h1 class="h1">Industrial Minerals</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Industrial Minerals</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Building Blocks of Industry</span><h2 class="h2">Powering Industry. Building Tomorrow.</h2></div>
     <div class="toolbar"><label class="search"><svg class="ico"><use href="#i-search"/></svg><input id="s-industrial" type="search" placeholder="Search mineral, region or use" aria-label="Search industrial minerals"></label>
@@ -961,7 +1046,7 @@ textarea.lt{min-height:110px;resize:vertical}
   </div></section>
 </section>
 <section class="page" data-page="gemstones" hidden>
-  <div class="pban" style="--img:url(img/gem-ruby.jpg)"><div class="wrap"><h1 class="h1">Gem Stones</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Gem Stones</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/gem-ruby.jpg)"><div class="wrap"><h1 class="h1">Gem Stones</h1><div class="crumbs"><a href="#home">Home</a>/<a href="#metallic">Minerals</a>/<b>Gem Stones</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Precious Stones</span><h2 class="h2">Natural Beauty. Timeless Value.</h2><p class="sub">From mountains to markets, we deliver brilliance.</p></div>
     <div class="mgrid" id="g-gems"></div>
@@ -970,7 +1055,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= PRODUCTS ================= -->
 <section class="page" data-page="products" hidden>
-  <div class="pban" style="--img:url(img/mine-conveyor.jpg)"><div class="wrap"><h1 class="h1">Our Products</h1><div class="crumbs"><a href="#home">Home</a>/<b>Our Products</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/conveyor.jpg)"><div class="wrap"><h1 class="h1">Our Products</h1><div class="crumbs"><a href="#home">Home</a>/<b>Our Products</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Primary Focus</span><h2 class="h2">Minerals Targeted by Afaq Mines</h2><p class="sub">Exploring. Developing. Delivering value.</p></div>
     <div class="g4" id="focus"></div>
@@ -983,7 +1068,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= PROCESSING ================= -->
 <section class="page" data-page="processing" hidden>
-  <div class="pban" style="--img:url(img/mine-conveyor.jpg)"><div class="wrap"><h1 class="h1">Mineral Processing</h1><div class="crumbs"><a href="#home">Home</a>/<b>Processing</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/conveyor.jpg)"><div class="wrap"><h1 class="h1">Mineral Processing</h1><div class="crumbs"><a href="#home">Home</a>/<b>Processing</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="shead center"><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>From Ore to Metal</span><h2 class="h2">Adding Value at Every Step</h2></div>
     <div class="proc"><ol class="flow" id="flow"></ol><div class="g3" id="methods" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))"></div></div>
@@ -992,9 +1077,9 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= INQUIRY ================= -->
 <section class="page" data-page="inquiry" hidden>
-  <div class="pban" style="--img:url(img/ore-closeup.jpg)"><div class="wrap"><h1 class="h1">Request a Quotation</h1><div class="crumbs"><a href="#home">Home</a>/<b>Inquiry</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/ore-red.jpg)"><div class="wrap"><h1 class="h1">Request a Quotation</h1><div class="crumbs"><a href="#home">Home</a>/<b>Inquiry</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap inq">
-    <aside class="qside"><img src="img/warehouse.jpg" alt="Copper oxide stored for dispatch"><div class="bd"><h3>Request a Commercial Quotation</h3><p>Tell us your mineral requirements and our team will provide you with the best price, quality and delivery terms.</p>
+    <aside class="qside"><img src="img/hq/step-store.jpg" alt="Copper oxide stored for dispatch"><div class="bd"><h3>Request a Commercial Quotation</h3><p>Tell us your mineral requirements and our team will provide you with the best price, quality and delivery terms.</p>
       <ul><li><i><svg class="ico"><use href="#i-award"/></svg></i>Premium Quality</li><li><i><svg class="ico"><use href="#i-hand"/></svg></i>Reliable Supply</li><li><i><svg class="ico"><use href="#i-globe"/></svg></i>Global Delivery</li><li><i><svg class="ico"><use href="#i-clock"/></svg></i>Reply within 24 hours</li></ul></div></aside>
     <form class="qform" id="qform" novalidate>
       <div class="qs"><div class="lb"><i>1</i>Product Type <small>Select the main category</small></div>
@@ -1025,7 +1110,7 @@ textarea.lt{min-height:110px;resize:vertical}
 
 <!-- ================= CONTACT ================= -->
 <section class="page" data-page="contact" hidden>
-  <div class="pban" style="--img:url(img/mountains.jpg)"><div class="wrap"><h1 class="h1">Contact Us</h1><div class="crumbs"><a href="#home">Home</a>/<b>Contact Us</b></div></div></div>
+  <div class="pban" style="--img:url(img/hq/mountains.jpg)"><div class="wrap"><h1 class="h1">Contact Us</h1><div class="crumbs"><a href="#home">Home</a>/<b>Contact Us</b></div></div></div>
   <section class="sec bg-cream"><div class="wrap">
     <div class="cinfo">
       <div class="ci"><i><svg class="ico"><use href="#i-phone"/></svg></i><div><h3>Call / WhatsApp</h3><b>0337-8907960</b><b>0336-7119888</b></div></div>
@@ -1059,12 +1144,11 @@ textarea.lt{min-height:110px;resize:vertical}
     <div><p>Afaq Mines stands for integrity, safety and responsible mining. Extracting copper ore and rare earth minerals, from Pakistan to the world.</p><div class="soc"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="X">X</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="WhatsApp"><svg class="ico" style="width:16px;height:16px"><use href="#i-chat"/></svg></a></div></div>
     <div><h5>Our Minerals</h5><ul><li><a href="#metallic">Metallic Minerals</a></li><li><a href="#industrial">Industrial Minerals</a></li><li><a href="#gemstones">Gem Stones</a></li><li><a href="#products">Our Products</a></li><li><a href="#processing">Processing</a></li></ul></div>
     <div><h5>Quick Links</h5><ul><li><a href="#about">About Company</a></li><li><a href="#why-afaq">Why Afaq Mines</a></li><li><a href="#team">Our Team</a></li><li><a href="#regions">Regions</a></li><li><a href="#inquiry">Get Free Quote</a></li></ul></div>
-    <div><h5>Image Gallery</h5><div class="gal"><img src="img/mach-excavator.jpg" alt=""><img src="img/warehouse.jpg" alt=""><img src="img/field-3.jpg" alt=""><img src="img/pf-copper.jpg" alt=""><img src="img/mach-drill.jpg" alt=""><img src="img/gem-emerald.jpg" alt=""></div></div>
+    <div><h5>Image Gallery</h5><div class="gal"><img src="img/hq/step-extract.jpg" alt=""><img src="img/hq/step-store.jpg" alt=""><img src="img/hq/about-2.jpg" alt=""><img src="img/hq/min-copper.jpg" alt=""><img src="img/hq/drill.jpg" alt=""><img src="img/hq/gem-emerald.jpg" alt=""></div></div>
   </div>
   <div class="copy">Copyright © 2026 <b>Afaq Mines Pvt. Ltd.</b> | All Right Reserved</div>
 </div></footer>
-<a class="wa" href="#contact"><svg class="ico"><use href="#i-chat"/></svg><span>WhatsApp 0337-8907960</span></a>
-<style>.tcard{border:1px solid #efe7d8}.bg-night .pc h3{color:var(--ink)}.bg-night .pc p{color:var(--body)}.shead.row > .navbtns{display:flex}@media (max-width:900px){.hero-main{order:-1}}</style>
+<a class="wa" href="#contact" aria-label="Chat on WhatsApp: 0337-8907960"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
 <script>
 const MET=[
  ["copper","Copper","Cu","Balochistan (Chagai, Saindak, Reko Diq)","0.4% – 1.2% Cu","~9.4 Billion Tons","Electrical wires, construction, electronics, EVs, solar","High & Growing","Very High","~USD 9,500 / MT (LME)","Crushing, grinding, flotation, smelting"],
@@ -1142,11 +1226,11 @@ const FLOW=["Mine","Crushing","Grinding","Screening","Beneficiation","Concentrat
 const METHODS=[["PS","Physical Separation","Size reduction, screening and classification to separate minerals based on physical properties."],["GS","Gravity Separation","Separation of heavy minerals from lighter gangue using density differences in water or fluid."],["MS","Magnetic Separation","Removal of magnetic minerals from non-magnetic materials using magnetic force."],["FL","Flotation","Chemicals and air bubbles separate valuable minerals from gangue based on surface properties."],["LE","Leaching","Dissolving valuable minerals from ore using chemical solutions."],["HM","Hydrometallurgy","Extraction of metals from leach solutions through precipitation, solvent extraction or ion exchange."],["PM","Pyrometallurgy","Extraction of metals by high-temperature processes like smelting and roasting."],["EW","Electrowinning","Extraction of metals from solution by applying electric current to deposit pure metal."],["SX-EW","Solvent Extraction + Electrowinning","A modern, efficient route for producing high-purity metals."]];
 
 const STEPS=[
- ["Exploration & Sampling","field-3","Our geologists run field surveys and sampling to identify and evaluate mineral potential, including Rare Earth Elements across Pakistan.",[["pin","Field Surveys","Conduct field surveys and sampling, prepare geological reports and resource estimates."],["doc","Feasibility","Identify ore grade, type and extraction feasibility before any lease decision."]]],
- ["Sourcing & Extraction","mach-excavator","Site supervisors in Kalam, Upper Dir, Besham, Peshawar and Waziristan manage safe extraction, loading and local procurement.",[["helmet","Safe Extraction","Monitor daily mining activities with safety and environmental compliance."],["truck","Ore Collection","Coordinate local suppliers and transporters to move ore to processing and warehouses."]]],
- ["Grading & Lab Testing","field-1","Our QA manager and lab incharge test every lot so buyers receive the grade and purity they ordered.",[["flask","Lab Analysis","Chemical and physical analysis with calibrated lab equipment."],["award","Quality Standards","Compliance with international export quality requirements."]]],
- ["Storage & Inventory","warehouse","Warehouses in Islamabad, Peshawar and Karachi receive, weigh, document and store material safely.",[["store","Inventory Control","Receive, inspect and store material with accurate stock records."],["shield","Secure Storage","Safe storage of bulk copper oxide for domestic and international supply."]]],
- ["Export & Delivery","port","Our Karachi team handles port coordination, documentation and clearing for export via Karachi, Port Qasim and Gwadar.",[["ship","Port Coordination","Handle storage, loading and shipping with clearing agents and transporters."],["doc","Export Documents","Proper documentation for every export consignment."]]]
+ ["Exploration & Sampling","hq/step-explore","Our geologists run field surveys and sampling to identify and evaluate mineral potential, including Rare Earth Elements across Pakistan.",[["pin","Field Surveys","Conduct field surveys and sampling, prepare geological reports and resource estimates."],["doc","Feasibility","Identify ore grade, type and extraction feasibility before any lease decision."]]],
+ ["Sourcing & Extraction","hq/step-extract","Site supervisors in Kalam, Upper Dir, Besham, Peshawar and Waziristan manage safe extraction, loading and local procurement.",[["helmet","Safe Extraction","Monitor daily mining activities with safety and environmental compliance."],["truck","Ore Collection","Coordinate local suppliers and transporters to move ore to processing and warehouses."]]],
+ ["Grading & Lab Testing","hq/step-lab","Our QA manager and lab incharge test every lot so buyers receive the grade and purity they ordered.",[["flask","Lab Analysis","Chemical and physical analysis with calibrated lab equipment."],["award","Quality Standards","Compliance with international export quality requirements."]]],
+ ["Storage & Inventory","hq/step-store","Warehouses in Islamabad, Peshawar and Karachi receive, weigh, document and store material safely.",[["store","Inventory Control","Receive, inspect and store material with accurate stock records."],["shield","Secure Storage","Safe storage of bulk copper oxide for domestic and international supply."]]],
+ ["Export & Delivery","hq/step-export","Our Karachi team handles port coordination, documentation and clearing for export via Karachi, Port Qasim and Gwadar.",[["ship","Port Coordination","Handle storage, loading and shipping with clearing agents and transporters."],["doc","Export Documents","Proper documentation for every export consignment."]]]
 ];
 const PROJ=[
  ["warehouse","Warehouse","Copper Oxide Storage for Domestic & International Supply","Safe and secure storage of bulk copper oxide in jumbo bags, weighed and documented for dispatch to local and export buyers.","Islamabad · Peshawar · Karachi"],
@@ -1161,10 +1245,11 @@ const FAQ=[
  ["How do you ensure mineral quality?","Our Quality Assurance Manager and Lab Incharge run chemical and physical analysis on every lot and provide test reports for grade, purity and quality, in line with international export requirements."],
  ["How can I request a quotation?","Use the Inquiry page or the quote form on this page. Share the product, grade, quantity, delivery location and payment mode, or call / WhatsApp 0337-8907960 or 0336-7119888."]
 ];
-const CARD_IMG={copper:"pf-copper",antimony:"pf-antimony",mica:"pf-mica",ree:"pf-ree"};
+const CARD_IMG={copper:"hq/min-copper",antimony:"hq/min-antimony",mica:"hq/min-mica",ree:"hq/min-ree"};
 
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const ic=n=>`<svg class="ico"><use href="#i-${n}"/></svg>`;
+const set=(s,h)=>{const e=$(s);if(e)e.innerHTML=h};
 const notch=`<span class="notch"><i>${ic("ne")}</i></span>`;
 function lvl(t){t=t.toLowerCase();if(t.includes("very")||t.includes("exploding"))return 4;if(t.startsWith("high")||t.includes("strong"))return 3;return 2}
 const meter=t=>`<span class="lvl">${[1,2,3,4].map(i=>`<i class="${i<=lvl(t)?'on':''}"></i>`).join("")}</span>${t}`;
@@ -1172,34 +1257,30 @@ const meter=t=>`<span class="lvl">${[1,2,3,4].map(i=>`<i class="${i<=lvl(t)?'on'
 const tcard=(p,sop=true)=>`<article class="tcard"><h3>${p[1]}</h3><span class="role">${p[2]||"Afaq Mines"}</span><div class="ph"><img src="img/team-${p[0]}.jpg" alt="${p[1]} ${p[2]||''}"></div><p style="font-size:14px">${p[3]}</p>${sop?`<details><summary>View SOP</summary><ul>${p[4].map(x=>`<li>${x}</li>`).join("")}</ul></details>`:''}</article>`;
 const icard=(img,title,text,href,tag)=>`<a class="icard" href="${href}"><img src="img/${img}.jpg" alt="">${notch}<div class="bd">${tag?`<span class="tag">${tag}</span>`:''}<h3>${title}</h3><p>${text}</p></div></a>`;
 
-function metCard(m){return `<article class="mc" data-k="${m.join(' ').toLowerCase()}" data-loc="${m[3]}"><div class="ph"><img src="img/met-${m[0]}.jpg" alt="${m[1]} ore"><span class="sym">${m[2]}</span></div>
+function metCard(m){return `<article class="mc" data-k="${m.join(' ').toLowerCase()}" data-loc="${m[3]}"><div class="ph"><img src="img/hq/met-${m[0]}.jpg" alt="${m[1]} ore"><span class="sym">${m[2]}</span></div>
 <div class="bd"><h3>${m[1]}</h3><dl><div><dt>Location</dt><dd>${m[3]}</dd></div><div><dt>Ore Grade</dt><dd>${m[4]}</dd></div><div><dt>Reserve</dt><dd>${m[5]}</dd></div><div><dt>Uses</dt><dd>${m[6]}</dd></div><div><dt>Demand</dt><dd>${meter(m[7])}</dd></div><div><dt>Export</dt><dd>${meter(m[8])}</dd></div></dl></div>
 <div class="pr"><div><small>Market Price</small><b>${m[9]}</b></div><div><small>Processing</small><span>${m[10]}</span></div></div><a class="go" href="#inquiry">Request Quotation<i>${ic("ne")}</i></a></article>`}
-function indCard(m){return `<article class="mc" data-k="${m.join(' ').toLowerCase()}" data-loc="${m[2]}"><div class="ph"><img src="img/ind-${m[0]}.jpg" alt="${m[1]}"><span class="sym">${m[3]}</span></div>
+function indCard(m){return `<article class="mc" data-k="${m.join(' ').toLowerCase()}" data-loc="${m[2]}"><div class="ph"><img src="img/hq/ind-${m[0]}.jpg" alt="${m[1]}"><span class="sym">${m[3]}</span></div>
 <div class="bd"><h3>${m[1]}</h3><dl><div><dt>Location</dt><dd>${m[2]}</dd></div><div><dt>Reserve</dt><dd>${m[4]}</dd></div><div><dt>Uses</dt><dd>${m[5]}</dd></div><div><dt>Demand</dt><dd>${meter(m[6])}</dd></div><div><dt>Export</dt><dd>${m[7]}</dd></div></dl></div>
 <div class="pr"><div><small>Market Price</small><b>${m[8]}</b></div><div><small>Processing</small><span>${m[9]}</span></div></div><a class="go" href="#inquiry">Request Quotation<i>${ic("ne")}</i></a></article>`}
-function gemCard(g){return `<article class="mc gem" style="--gc:${g[3]}"><div class="ph"><img src="img/gem-${g[0]}.jpg" alt="${g[1]}"></div>
+function gemCard(g){return `<article class="mc gem" style="--gc:${g[3]}"><div class="ph"><img src="img/hq/gem-${g[0]}.jpg" alt="${g[1]}"></div>
 <div class="bd"><h3>${g[1]}<small>${g[2]}</small></h3><dl><div><dt>Mining</dt><dd>${g[4]}</dd></div><div><dt>Processing</dt><dd>${g[5]}</dd></div><div><dt>Export</dt><dd>${g[6]}</dd></div><div><dt>Value Add</dt><dd>${g[7]}</dd></div></dl></div>
 <a class="go" href="#inquiry">Request Quotation<i>${ic("ne")}</i></a></article>`}
 
 function fill(){
   const t=[["gem","Copper Oxide"],["helmet","Rare Earth"],["pick","Antimony"],["gem","Mica"],["helmet","Exploration"],["pick","Export"]];
   $("#ticker").innerHTML=[...t,...t].map(x=>`<span>${ic(x[0])}${x[1]}</span>`).join("");
-  $("#msl").innerHTML=FOCUS.map(f=>icard(CARD_IMG[f[0]],f[1],f[4],"#products","Primary Focus")).join("")
-    +icard("met-copper","Metallic Minerals","14 minerals: copper, gold, antimony, lithium, tungsten, rare earths and more.","#metallic","14 Minerals")
-    +icard("ind-marble","Industrial Minerals","18 minerals: limestone, gypsum, barite, silica sand, marble, rock salt and more.","#industrial","18 Minerals")
-    +icard("gem-emerald","Gem Stones","9 precious stones: emerald, ruby, sapphire, aquamarine, topaz and more.","#gemstones","9 Stones");
+  set("#hfocus",FOCUS.map(f=>icard(CARD_IMG[f[0]],f[1],f[4],"#products","Primary Focus")).join(""));
+  set("#helems",ELEM.map(e=>`<span class="e"><i>${e[0]}</i>${e[1]}</span>`).join(""));
+  set("#cats",[["hq/met-gold","14","Metallic Minerals","Copper, gold, antimony, lithium, tungsten, rare earths and more.","#metallic"],["hq/ind-marble","18","Industrial Minerals","Limestone, gypsum, barite, silica sand, marble, rock salt and more.","#industrial"],["hq/gems-assorted","09","Gem Stones","Emerald, ruby, sapphire, aquamarine, topaz and more.","#gemstones"]].map(k=>`<a class="cat" href="${k[4]}"><img src="img/${k[0]}.jpg" alt=""><div class="bd"><span class="n">${k[1]}</span><h3>${k[2]}</h3><p>${k[3]}</p><span class="more">View all ${k[2].toLowerCase()}<i>${ic("ne")}</i></span></div></a>`).join(""));
   $("#steps").innerHTML=STEPS.map((s,i)=>`<button role="tab" aria-selected="${i===0}" data-i="${i}">Step ${i+1}: ${s[0]} ${ic("arrow")}</button>`).join("");
   showStep(0);
-  $("#proj").innerHTML=PROJ.map((p,i)=>`<div class="slide" ${i?'hidden':''}><img src="img/${p[0]}.jpg" alt=""><div class="pc"><span class="notch" style="background:transparent"><i>${ic("ne")}</i></span><span class="tg">${p[1]}</span><h3>${p[2]}</h3><p>${p[3]}</p><div class="client"><i>${ic("pin")}</i>${p[4]}</div></div></div>`).join("");
-  $("#pdots").innerHTML=PROJ.map((p,i)=>`<button aria-label="Show ${p[1]}" aria-current="${i===0}" data-i="${i}"></button>`).join("");
+  set("#ptmini",PT.map(p=>`<div><small>${p[0]}</small><b>${p[1]}</b><span>${p[2]}</span></div>`).join(""));
   $("#pkq").innerHTML=[
     ["Large Untapped Resources",["Many mineralized zones remain underdeveloped","Diverse minerals with high value and demand"],"Rich Mineral Potential","All provinces"],
     ["Lower Operating Costs",["Labour costs lower than other countries","Lower land costs","Lower mine development costs"],"Cost Competitive","Higher returns"],
     ["Export Access & Location",["Ports: Karachi, Port Qasim, Gwadar","Close to China, UAE, Saudi Arabia, Turkey, Europe","Government focus on mining as a growth sector"],"Strategic Location","Global trade"]
   ].map(q=>`<article class="qc"><span class="q"><i>${ic("quote")}</i></span><h3>${q[0]}</h3><ul>${q[1].map(x=>`<li>${x}</li>`).join("")}</ul><div class="ft">${q[2]}<span>${q[3]}</span></div></article>`).join("");
-  $("#team3").innerHTML=LEAD.slice(0,3).map(p=>tcard([p[0],p[1].replace(/ \(.*\)/,""),p[1].match(/\((.*)\)/)?.[1]||"Afaq Mines",p[3],p[4]],false)).join("");
-  $("#faq").innerHTML=FAQ.map((f,i)=>`<details ${i?'':'open'}><summary>${f[0]}<i>${ic("arrow")}</i></summary><p>${f[1]}</p></details>`).join("");
   // inner pages
   $("#values").innerHTML=VALUES.map(v=>`<div class="box"><div class="bi">${ic(v[0])}</div><h3>${v[1]}</h3><p>${v[2]}</p></div>`).join("");
   $("#org").innerHTML=ORG.map(d=>`<div class="dir"><h4>${d[0]}</h4>${d[1].map(x=>`<span>${x}</span>`).join("")}</div>`).join("");
@@ -1211,12 +1292,13 @@ function fill(){
   $("#pt").innerHTML=PT.map(p=>`<div><small>${p[0]}</small><b>${p[1]}</b><span>${p[2]}</span><em>${p[3]}</em></div>`).join("");
   $("#pkfull").innerHTML=PKADV.map(a=>`<div class="box"><div class="bi">${ic(a[0])}</div><h3>${a[1]}</h3><p>${a[2]}</p></div>`).join("");
   $("#prov").innerHTML=PROV.map((p,i)=>`<details ${i<2?'open':''}><summary>${p[0]}<span>${p[1].length} minerals</span></summary><div class="chips">${p[1].map(x=>`<span class="chip ${KEY.includes(x)?'k':''}">${x}</span>`).join("")}</div></details>`).join("");
-  $("#presence").innerHTML=PRES.map(p=>`<div class="icard" style="aspect-ratio:3/3.8"><img src="img/${p[0]}.jpg" alt=""><div class="bd"><h3>${p[1]}</h3><p>${p[2].join("<br>")}</p></div></div>`).join("");
+  const PIMG={"pf-copper":"hq/min-copper","pf-antimony":"hq/min-antimony","mach-excavator":"hq/ore-red","pf-mica":"hq/min-mica"};
+  $("#presence").innerHTML=PRES.map(p=>`<div class="icard" style="aspect-ratio:3/3.8"><img src="img/${PIMG[p[0]]}.jpg" alt=""><div class="bd"><h3>${p[1]}</h3><p>${p[2].join("<br>")}</p></div></div>`).join("");
   $("#focus").innerHTML=FOCUS.map(f=>icard(CARD_IMG[f[0]],f[1],f[4],"#inquiry","Primary Focus")).join("");
   $("#elems").innerHTML=ELEM.map(e=>`<div class="box" style="justify-items:center;text-align:center"><div class="bi" style="width:74px;height:74px;font:700 24px/1 var(--font)">${e[0]}</div><h3>${e[1]}</h3></div>`).join("");
   $("#flow").innerHTML=FLOW.map(f=>`<li>${f}</li>`).join("");
   $("#methods").innerHTML=METHODS.map(m=>`<div class="box"><div class="bi" style="font:700 14px/1 var(--font)">${m[0]}</div><h3 style="font-size:18px">${m[1]}</h3><p>${m[2]}</p></div>`).join("");
-  $("#cities").innerHTML=CITIES.map(c=>`<figure><img src="img/city-${c[0]}.jpg" alt="${c[1]}"><figcaption>${c[1]}</figcaption></figure>`).join("");
+  $("#cities").innerHTML=CITIES.map(c=>`<figure><img src="img/hq/city-${c[0]}.jpg" alt="${c[1]}"><figcaption>${c[1]}</figcaption></figure>`).join("");
   $("#g-metallic").innerHTML=MET.map(metCard).join("");
   $("#g-industrial").innerHTML=IND.map(indCard).join("");
   $("#g-gems").innerHTML=GEM.map(gemCard).join("");
@@ -1248,22 +1330,20 @@ function route(){
   $$(".nav a.top").forEach(a=>a.classList.toggle("on",(a.dataset.r||"").split(" ").includes(h)));
   $("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");
   if(anchor){const el=document.getElementById(anchor);if(el){el.scrollIntoView();return}}
-  window.scrollTo(0,0);
+  window.scrollTo(0,0);solid&&setTimeout(solid,0);
 }
 
 fill(); wireFilter("metallic"); wireFilter("industrial");
-$("#q-min").innerHTML=`<option value="">Mineral Required</option>`+["Metallic","Industrial","Gem Stones"].map((g,i)=>`<optgroup label="${g}">${Object.values(OPTS)[i].map(x=>`<option>${x}</option>`).join("")}</optgroup>`).join("");
+if($("#q-min"))$("#q-min").innerHTML=`<option value="">Mineral Required</option>`+["Metallic","Industrial","Gem Stones"].map((g,i)=>`<optgroup label="${g}">${Object.values(OPTS)[i].map(x=>`<option>${x}</option>`).join("")}</optgroup>`).join("");
 setOpts($("#f-prod"),"metallic");
 $$('input[name="pt"]').forEach(r=>r.addEventListener("change",()=>setOpts($("#f-prod"),r.value)));
 $("#steps").addEventListener("click",e=>{const b=e.target.closest("button");if(b)showStep(+b.dataset.i)});
-$("#pdots").addEventListener("click",e=>{const b=e.target.closest("button");if(b)showProj(+b.dataset.i)});
-$$("[data-sl]").forEach(b=>b.addEventListener("click",()=>{const s=$("#msl");s.scrollBy({left:(s.firstElementChild.offsetWidth+24)*+b.dataset.sl,behavior:"smooth"})}));
-$("#quick").addEventListener("submit",e=>{e.preventDefault();const n=$("#q-name").value.trim(),p=$("#q-phone").value.trim();
-  $("#q-note").textContent=(!n||!p)?"Add your name and phone number so we can reply.":"Preview only: on the live site this request is emailed to info@afaqmines.com."});
 $("#qform").addEventListener("submit",e=>{e.preventDefault();const em=$("#f-email").value.trim(),ph=$("#f-phone").value.trim();
   $("#f-note").textContent=(!em&&!ph)?"Add an email or phone number so our team can send the quotation.":`Preview only: on the live site this request (${$("#f-qty").value} tons of ${$("#f-prod").value}) is emailed to info@afaqmines.com.`});
 $("#cform").addEventListener("submit",e=>{e.preventDefault();$("#c-note").textContent="Preview only: on the live site this message is sent to info@afaqmines.com."});
-$("#burger").addEventListener("click",()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)});
+const head=$("#sitehead");const solid=()=>head.classList.toggle("solid",scrollY>30||$("#nav").classList.contains("open"));
+addEventListener("scroll",solid,{passive:true});
+$("#burger").addEventListener("click",()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o);solid()});
 window.addEventListener("hashchange",route); route();
 </script>
 </body>
