@@ -209,7 +209,7 @@ textarea.in{min-height:110px;resize:vertical}
 .pboxes small{font:500 12px/1 var(--font);color:#aab4ae}
 
 /* process (step tabs) */
-.proc{display:grid;grid-template-columns:.65fr 1fr;gap:28px;align-items:start}
+.proc{display:grid;grid-template-columns:.65fr 1fr;gap:28px;align-items:center}
 .steps{display:grid;gap:12px}
 .steps button{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;width:100%;padding:20px 24px;border-radius:14px;border:1px solid #e3d9c8;background:#f4ece0;font:600 18px/1.3 var(--font);color:var(--ink);cursor:pointer}
 .steps button[aria-selected="true"]{background:var(--night);color:#fff;border-color:var(--night)}
@@ -538,13 +538,14 @@ textarea.lt{min-height:110px;resize:vertical}
 @media (max-width:720px){.tb .hm,.tb .soc{display:none}.tb-l{gap:16px}}
 
 /* hero */
-.hx{position:relative;isolation:isolate;min-height:min(900px,100svh);display:flex;flex-direction:column;justify-content:flex-end;color:#fff;padding-top:150px;overflow:hidden}
+.hx{position:relative;isolation:isolate;min-height:max(700px,min(940px,100svh));display:flex;flex-direction:column;color:#fff;padding-top:178px;overflow:hidden}
 .hx-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:kb 20s ease-out both}
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 .hx::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,11,9,.82) 0%,rgba(7,11,9,.55) 45%,rgba(7,11,9,.15) 100%),linear-gradient(180deg,rgba(7,11,9,.2) 50%,rgba(7,11,9,.85) 100%)}
 .hx > .wrap{width:100%}
-.hx-in{display:grid;gap:26px;justify-items:start;width:100%;padding-bottom:64px}
-.hx h1{color:#fff;font-size:clamp(42px,6vw,82px);font-weight:600;letter-spacing:-.035em;line-height:1.04;max-width:16ch}
+.hx > .wrap.hx-in{display:flex}
+.hx-in{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;width:100%;padding-bottom:56px}
+.hx h1{color:#fff;font-size:clamp(40px,min(5.4vw,8.4vh),76px);font-weight:600;letter-spacing:-.035em;line-height:1.04;max-width:16ch}
 .hx p{font-size:clamp(16px,1.4vw,19px);color:#dfe5e1;max-width:56ch}
 .acts{display:flex;flex-wrap:wrap;gap:14px}
 .btn-lg{padding:18px 30px;font-size:16px}
