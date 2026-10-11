@@ -626,6 +626,28 @@ textarea.lt{min-height:110px;resize:vertical}
 @media (max-width:520px){.ptmini{grid-template-columns:repeat(3,1fr)}.comp .c3{left:8px}}
 
 .tcard{border:1px solid #dfeae4}.bg-night .pc h3{color:var(--ink)}.bg-night .pc p{color:var(--body)}.shead.row > .navbtns{display:flex}
+
+/* how-it-works timeline (layman friendly) */
+.howto{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;counter-reset:hw;position:relative}
+.hw{position:relative;background:#fff;border:1px solid #dfeae4;border-radius:var(--r);display:flex;flex-direction:column}
+.hw + .hw::before{content:"";position:absolute;left:-22px;top:92px;width:22px;height:2px;background:var(--acc)}
+.hw + .hw::after{content:"";position:absolute;left:-9px;top:87px;border:6px solid transparent;border-left:8px solid var(--acc)}
+.hw-ph{position:relative;aspect-ratio:4/3;border-radius:var(--r) var(--r) 0 0;overflow:hidden}
+.hw-ph img{width:100%;height:100%;object-fit:cover}
+.hw-n{position:absolute;left:14px;top:14px;width:46px;height:46px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font:700 17px/1 var(--font);box-shadow:0 8px 18px -6px rgba(0,0,0,.45)}
+.hw-bd{padding:44px 20px 22px;display:flex;flex-direction:column;gap:10px;position:relative;flex:1}
+.hw-ic{position:absolute;top:-28px;left:20px;width:56px;height:56px;border-radius:14px;background:var(--night);color:var(--acc-2);display:grid;place-items:center;border:4px solid #fff}
+.hw-ic svg{width:24px;height:24px}
+.hw-k{font:600 12px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--acc-ink)}
+.hw h3{font-size:19px}
+.hw p{font-size:14.5px;line-height:1.6}
+.hw-out{margin-top:auto;display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--night);font-size:13.5px;background:#eff6f2;border-radius:100px;padding:8px 12px;align-self:flex-start}
+.hw-out svg{width:16px;height:16px;color:var(--night)}
+.howto-note{margin-top:28px;display:flex;gap:14px;align-items:center;background:var(--night);color:#d7e4dc;border-radius:var(--r);padding:20px 24px;font-size:15px}
+.howto-note b{color:#fff}
+.howto-note svg{width:28px;height:28px;color:var(--acc-2);flex:none}
+@media (max-width:1100px){.howto{grid-template-columns:repeat(3,1fr)}.hw:nth-child(4)::before,.hw:nth-child(4)::after{display:none}}
+@media (max-width:700px){.howto{grid-template-columns:1fr;gap:26px}.hw + .hw::before{left:44px;top:-26px;width:2px;height:26px}.hw + .hw::after{left:39px;top:-10px;border:6px solid transparent;border-top:8px solid var(--acc)}.hw:nth-child(4)::before,.hw:nth-child(4)::after{display:block}}
 </style>
 </head>
 <body>
@@ -794,10 +816,10 @@ textarea.lt{min-height:110px;resize:vertical}
   <section class="sec bg-cream">
     <div class="wrap">
       <div class="shead row">
-        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Work Process</span><h2 class="h2">From Mine to Market in Five Steps</h2><p class="sub">Every shipment passes through the same stages, run by our own field, lab and warehouse teams.</p></div>
+        <div><span class="pill"><svg class="ico"><use href="#i-gear"/></svg>Work Process</span><h2 class="h2">How It Works: From the Mountain to Your Door</h2><p class="sub">Five simple steps. Our own team handles every one of them, so you deal with one company from start to finish.</p></div>
         <a class="btn btn-dark" href="#processing"><svg class="ico"><use href="#i-arrow"/></svg>Mineral Processing</a>
       </div>
-      <div class="proc"><div class="steps" role="tablist" id="steps"></div><div class="pcard" id="pcard"></div></div>
+      <ol class="howto" id="howto"></ol><div class="howto-note"><svg class="ico"><use href="#i-shield"/></svg><span><b>You always know what you are buying.</b> Every batch comes with a lab test report showing its grade and purity before it ships.</span></div>
     </div>
   </section>
 
@@ -1223,6 +1245,13 @@ const PRES=[["pf-copper","Copper",["Saindak (Balochistan)","Chagai (Balochistan)
 const FLOW=["Mine","Crushing","Grinding","Screening","Beneficiation","Concentrate","Smelting","Refining","Metal"];
 const METHODS=[["PS","Physical Separation","Size reduction, screening and classification to separate minerals based on physical properties."],["GS","Gravity Separation","Separation of heavy minerals from lighter gangue using density differences in water or fluid."],["MS","Magnetic Separation","Removal of magnetic minerals from non-magnetic materials using magnetic force."],["FL","Flotation","Chemicals and air bubbles separate valuable minerals from gangue based on surface properties."],["LE","Leaching","Dissolving valuable minerals from ore using chemical solutions."],["HM","Hydrometallurgy","Extraction of metals from leach solutions through precipitation, solvent extraction or ion exchange."],["PM","Pyrometallurgy","Extraction of metals by high-temperature processes like smelting and roasting."],["EW","Electrowinning","Extraction of metals from solution by applying electric current to deposit pure metal."],["SX-EW","Solvent Extraction + Electrowinning","A modern, efficient route for producing high-purity metals."]];
 
+const HOW=[
+ ["step-explore","pin","We Find the Minerals","Our geologists travel to the mountains of KPK and Balochistan, collect rock samples and check where valuable minerals are.","Right location found"],
+ ["step-extract","truck","We Dig Them Out","Our site teams use excavators and trucks to safely take the ore out of the ground.","Raw ore collected"],
+ ["step-lab","flask","We Test the Quality","Our lab checks every batch so we know exactly how pure it is, for example 3% copper.","Lab report for you"],
+ ["step-store","store","We Store and Pack","The ore is weighed, packed in strong bags and kept safe in our warehouses.","Ready to ship"],
+ ["step-export","ship","We Deliver to You","We arrange the paperwork and ship it from Karachi port to your country.","Delivered to your door"]
+];
 const STEPS=[
  ["Exploration & Sampling","hq/step-explore","Our geologists run field surveys and sampling to identify and evaluate mineral potential, including Rare Earth Elements across Pakistan.",[["pin","Field Surveys","Conduct field surveys and sampling, prepare geological reports and resource estimates."],["doc","Feasibility","Identify ore grade, type and extraction feasibility before any lease decision."]]],
  ["Sourcing & Extraction","hq/step-extract","Site supervisors in Kalam, Upper Dir, Besham, Peshawar and Waziristan manage safe extraction, loading and local procurement.",[["helmet","Safe Extraction","Monitor daily mining activities with safety and environmental compliance."],["truck","Ore Collection","Coordinate local suppliers and transporters to move ore to processing and warehouses."]]],
@@ -1271,8 +1300,7 @@ function fill(){
   set("#hfocus",FOCUS.map(f=>icard(CARD_IMG[f[0]],f[1],f[4],"#products","Primary Focus")).join(""));
   set("#helems",ELEM.map(e=>`<span class="e"><i>${e[0]}</i>${e[1]}</span>`).join(""));
   set("#cats",[["hq/met-gold","14","Metallic Minerals","Copper, gold, antimony, lithium, tungsten, rare earths and more.","#metallic"],["hq/ind-marble","18","Industrial Minerals","Limestone, gypsum, barite, silica sand, marble, rock salt and more.","#industrial"],["hq/gems-assorted","09","Gem Stones","Emerald, ruby, sapphire, aquamarine, topaz and more.","#gemstones"]].map(k=>`<a class="cat" href="${k[4]}"><img src="img/${k[0]}.jpg" alt=""><div class="bd"><span class="n">${k[1]}</span><h3>${k[2]}</h3><p>${k[3]}</p><span class="more">View all ${k[2].toLowerCase()}<i>${ic("ne")}</i></span></div></a>`).join(""));
-  $("#steps").innerHTML=STEPS.map((s,i)=>`<button role="tab" aria-selected="${i===0}" data-i="${i}">Step ${i+1}: ${s[0]} ${ic("arrow")}</button>`).join("");
-  showStep(0);
+  set("#howto",HOW.map((s,i)=>`<li class="hw"><div class="hw-ph"><img src="img/hq/${s[0]}.jpg" alt="${s[2]}"><span class="hw-n">${String(i+1).padStart(2,"0")}</span></div><div class="hw-bd"><span class="hw-ic">${ic(s[1])}</span><span class="hw-k">Step ${i+1}</span><h3>${s[2]}</h3><p>${s[3]}</p><span class="hw-out">${ic("check")}${s[4]}</span></div></li>`).join(""));
   set("#ptmini",PT.map(p=>`<div><small>${p[0]}</small><b>${p[1]}</b><span>${p[2]}</span></div>`).join(""));
   $("#pkq").innerHTML=[
     ["Large Untapped Resources",["Many mineralized zones remain underdeveloped","Diverse minerals with high value and demand"],"Rich Mineral Potential","All provinces"],
@@ -1335,7 +1363,7 @@ fill(); wireFilter("metallic"); wireFilter("industrial");
 if($("#q-min"))$("#q-min").innerHTML=`<option value="">Mineral Required</option>`+["Metallic","Industrial","Gem Stones"].map((g,i)=>`<optgroup label="${g}">${Object.values(OPTS)[i].map(x=>`<option>${x}</option>`).join("")}</optgroup>`).join("");
 setOpts($("#f-prod"),"metallic");
 $$('input[name="pt"]').forEach(r=>r.addEventListener("change",()=>setOpts($("#f-prod"),r.value)));
-$("#steps").addEventListener("click",e=>{const b=e.target.closest("button");if(b)showStep(+b.dataset.i)});
+
 $("#qform").addEventListener("submit",e=>{e.preventDefault();const em=$("#f-email").value.trim(),ph=$("#f-phone").value.trim();
   $("#f-note").textContent=(!em&&!ph)?"Add an email or phone number so our team can send the quotation.":`Preview only: on the live site this request (${$("#f-qty").value} tons of ${$("#f-prod").value}) is emailed to info@afaqmines.com.`});
 $("#cform").addEventListener("submit",e=>{e.preventDefault();$("#c-note").textContent="Preview only: on the live site this message is sent to info@afaqmines.com."});
