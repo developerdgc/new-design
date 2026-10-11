@@ -13,3 +13,5 @@ leeds 35, harrogate 36, yorkshire 37, ldu 38, bds 39; header 40, footer 41.
 Images load from jsDelivr at the commit in `rsw/sha`.
 After each build, `refresh_css` re-saves the first section through manage-elements, because
 Elementor only regenerates a page's cached CSS on that save path.
+Header (40) and footer (41) are published, so after rebuilding them run
+`publish-document` on them again to push the staged autosave live.

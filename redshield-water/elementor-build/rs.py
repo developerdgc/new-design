@@ -105,7 +105,9 @@ def refresh_css(post_id, root_style):
     st = call("elementor-get-page-structure", {"post_id": post_id})
     ids = re.findall(r'"id": "([0-9a-f]+)"', json.dumps(st))
     if not ids: print("  css refresh: no root found"); return
-    r = call("elementor-manage-elements", {"post_id": post_id, "operations": [{"action": "update", "element_id": ids[0], "style": root_style}]})
+    for _ in range(3):
+        r = call("elementor-manage-elements", {"post_id": post_id, "operations": [{"action": "update", "element_id": ids[0], "style": root_style}]})
+        if r.get("status") == "ok": break
     print(f"  [{post_id}] css refresh: {r.get('status', json.dumps(r)[:200])}")
 
 # ---------------------------------------------------------------- shared sections

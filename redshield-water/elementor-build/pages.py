@@ -25,17 +25,18 @@ PAGES = {"home": home}
 
 # ======================================================= header / footer
 NAV = [("Home", "home"), ("About", "about"), ("Services", "services"), ("Pricing", "pricing"), ("Areas", "areas"), ("FAQs", "faqs"), ("Contact", "contact")]
-NAVST = "font-family: var(--rs-font); font-size: 15px; font-weight: 500; color: #c3ccd9; background-color: transparent; padding: 8px 10px; border-radius: 0; &:hover { color: #ffffff; }"
+NAVST = "font-family: var(--rs-font); font-size: 15px; font-weight: 500; color: #c3ccd9; background-color: transparent; padding: 8px 10px; border-radius: 0; white-space: nowrap; flex-shrink: 0; &:hover { color: #ffffff; }"
 def header():
-    logo = row("Logo", [img("Logo Mark", "logo.svg", "RedShield Water", "width: 32px;", "home"),
-                        p("Logo Text", "<em>Red</em>Shield <b>Water</b>", ["rs-em-red"], "font-family: var(--rs-font); font-size: 21px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; & b { color: #2b8fe3; }")], 9, "flex-wrap: nowrap;", href="home")
+    logo = row("Logo", [img("Logo Mark", "logo.svg", "RedShield Water", "width: 32px; min-width: 32px; flex-shrink: 0; @media(--mobile) { width: 26px; min-width: 26px; }"),
+                        p("Logo Text", "<em>Red</em>Shield <b>Water</b>", ["rs-em-red"], "font-family: var(--rs-font); font-size: 21px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; white-space: nowrap; & b { color: #2b8fe3; } @media(--mobile) { font-size: 17px; }")],
+               9, "flex-wrap: nowrap; width: auto; flex: 0 0 auto;", href="home")
     nav = row("Main Menu", [btn(f"Menu {t}", t, k, (), NAVST) for t, k in NAV] +
               [btn("Menu Safety Videos", "▶ Safety Videos", "tutorials", (), NAVST + " border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 6px 14px; margin-left: 6px;")], 2,
-              "flex-wrap: nowrap; @media(--tablet) { display: none; }", tag="nav")
-    call_b = btn("Header Call", f"📞 {PHONE}", TEL, style="font-size: 15px; padding: 11px 18px; @media(--mobile) { font-size: 14px; padding: 10px 14px; }")
+              "flex-wrap: nowrap; width: auto; flex: 1 1 auto; justify-content: center; @media(--tablet) { display: none; }", tag="nav")
+    call_b = btn("Header Call", f"📞 {PHONE}", TEL, style="font-size: 15px; padding: 11px 18px; white-space: nowrap; flex-shrink: 0; @media(--mobile) { font-size: 13px; padding: 9px 12px; }")
     bar = row("Header Bar", [logo, nav, call_b], 16, "flex-wrap: nowrap; justify-content: space-between; max-width: 1260px; margin: 0 auto; padding: 0 20px; min-height: 62px;")
     mob = row("Mobile Menu", [btn(f"Mobile {t}", t, k, (), NAVST + " font-size: 14px; padding: 6px 9px;") for t, k in NAV + [("Videos", "tutorials")]], 2,
-              "display: none; justify-content: center; padding: 4px 12px 10px; @media(--tablet) { display: flex; }", tag="nav")
+              "display: none; justify-content: center; flex-wrap: wrap; padding: 2px 12px 10px; @media(--tablet) { display: flex; }", tag="nav")
     return flex("Site Header", [bar, mob], "flex-direction: column; padding: 0; background-color: rgba(6,11,19,0.97); border-bottom: 1px solid #1c2636; position: sticky; top: 0; z-index: 50;", tag="header")
 
 def footer():
