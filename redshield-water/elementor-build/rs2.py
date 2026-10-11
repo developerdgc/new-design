@@ -4,7 +4,7 @@ import json, os, sys, html, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from call import call
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rsw")
+BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "rsw")
 SHA = open(os.path.join(BASE, "sha")).read().strip()
 IMG = f"https://cdn.jsdelivr.net/gh/developerdgc/new-design@{SHA}/redshield-water/img/"
 D = json.load(open(os.path.join(BASE, "data.json")))
@@ -26,6 +26,7 @@ F = "font-family: Inter;"
 class N:
     def __init__(s, t, label, cfg=None, style="", cls=None, kids=None):
         s.t, s.label, s.cfg, s.style, s.cls, s.kids = t, label, cfg or {}, style, cls or [], kids or []
+        s.inter = None
 
 def link(href):
     if isinstance(href, str) and href in HASH2P: href = HASH2P[href]
@@ -134,13 +135,23 @@ def review_card(i, title, text):
                                t(f"Review {i} Text", text, "font-size: 14.1px; line-height: 1.6; color: #3d4757; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;"),
                                t(f"Review {i} By", "— Verified Trustpilot reviewer", f"font-size: 12.5px; color: {MUTED};")], 8,
                "flex: 0 0 310px; width: 310px; background-color: #ffffff; border-radius: 12px; padding: 18px 18px 16px; box-shadow: 0 10px 30px -12px rgba(0,0,0,0.5);")
+def marquee(ms):
+    return {"trigger": "load", "animation": {"effect": "custom", "type": "in", "direction": "",
+            "timing_config": {"duration": {"unit": "ms", "size": ms}, "delay": {"unit": "ms", "size": 0}},
+            "config": {"easing": "linear", "repeat": "loop", "replay": True},
+            "custom_effect": {"keyframes": [{"stop": {"unit": "%", "size": 0}, "settings": {"move": {"x": {"unit": "%", "size": 0}}}},
+                                            {"stop": {"unit": "%", "size": 100}, "settings": {"move": {"x": {"unit": "%", "size": -50}}}}]}}}
 def reviews_strip():
     headrow = row("Trustpilot Head", [t("TP Excellent", "Excellent", f"font-size: 18.4px; font-weight: 700; color: {TP};"), tp_stars("TP Stars", 22),
                                       t("TP Rated", "Rated by customers on", "font-size: 15.2px; color: #c7d0dc;"),
                                       row("TP Brand", [ico("TP Brand Star", "star", "lgreen", 18), t("TP Brand Text", "Trustpilot", f"font-size: 15.2px; font-weight: 700; color: {TP};")], 4, "flex-wrap: nowrap;")],
                   14, "justify-content: center; padding-top: 6px; width: 100%;")
-    cards = [review_card(i + 1, a, b) for i, (a, b) in enumerate(D["REVIEWS"])]
-    strip = row("Review Strip", cards, 18, "width: 100%; flex-wrap: nowrap; overflow-x: auto; padding: 22px 20px 34px; align-items: stretch; scrollbar-width: none; "
+    cards = [review_card(i + 1, a, b) for i, (a, b) in enumerate(D["REVIEWS"] * 2)]
+    # explicit width (max-content is dropped by Elementor): 2 sets x (310 card + 18 gap), so -50% shifts exactly one set
+    tw = len(D["REVIEWS"]) * 2 * 328
+    track = row("Review Track", cards, 18, f"flex-wrap: nowrap; width: {tw}px; min-width: {tw}px; max-width: none; flex: 0 0 {tw}px; padding: 22px 18px 34px 0; align-items: stretch;")
+    track.inter = [marquee(len(D["REVIEWS"]) * 11000)]
+    strip = box("Review Strip", [track], "padding: 0; width: 100%; overflow: hidden; "
                 "-webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);")
     return col("Reviews", [headrow, strip], 0, "width: 100%;")
 def ticker():
@@ -422,13 +433,24 @@ def faq(cat, label=None):
     return faq_items(items, label or f"FAQ {cat.title()}")
 def problems(town=""):
     return grid("Problem Cards", [icon_card(f"Problem {i}", ic_, tt + (f" {town}" if town and "Stop Tap" not in tt else ""), d, "Call now", TEL) for i, (ic_, tt, d) in enumerate(D["PROBLEMS"], 1)], 4, 22)
+def copy_btn(label):
+    # visible pill; the click behaviour comes from the small "rs-copy" script added in WP Admin → Elementor → Custom Code
+    b = row(label, [ico(label + " Icon", "copy", "muted", 13), t(label + " Text", "Copy", f"font-size: 12.5px; font-weight: 600; color: {MUTED};")], 6,
+            f"flex-wrap: nowrap; padding: 3px 9px; border: 1px solid {LINE}; border-radius: 6px; background-color: #ffffff; cursor: pointer; &:hover {{ border-color: {RED}; }}")
+    b.cls = ["rs-copy"]
+    return b
 def contact_tiles(area="Yorkshire wide coverage"):
-    def tile(i, icon, small, big, extra=None, href=None):
-        k = [t(f"Contact {i} Label", small, f"font-size: 13.1px; color: {MUTED};"), t(f"Contact {i} Value", big, f"font-size: 16.8px; font-weight: 700; color: {TEXT}; word-break: break-word;")]
+    def tile(i, icon, small, big, extra=None, href=None, copy=False):
+        val = t(f"Contact {i} Value", big, f"font-size: 16.8px; font-weight: 700; color: {TEXT}; word-break: break-word;")
+        if copy:
+            val.cls = ["rs-copy-value"]
+            val = row(f"Contact {i} Value Row", [box(f"Contact {i} Value Link", [val], "padding: 0; width: auto;", href=href), copy_btn(f"Contact {i} Copy")], 10)
+            href = None
+        k = [t(f"Contact {i} Label", small, f"font-size: 13.1px; color: {MUTED};"), val]
         if extra: k.append(t(f"Contact {i} Extra", extra, f"font-size: 13.6px; color: {MUTED};"))
         return row(f"Contact {i}", [icbox(f"Contact {i} Icon", icon, "red", REDS, 44, 10, 19), col(f"Contact {i} Text", k, 2, "flex: 1;")], 14,
                    f"flex-wrap: nowrap; align-items: flex-start; padding: 18px; border-radius: 12px; border: 1px solid {LINE}; background-color: #ffffff; {SH}", href=href)
-    return col("Contact Tiles", [tile(1, "phone", "Call Us 24/7", "07848 298 987", href=TEL), tile(2, "mail", "Email Us", EMAIL, href=f"mailto:{EMAIL}"),
+    return col("Contact Tiles", [tile(1, "phone", "Call Us 24/7", "07848 298 987", href=TEL, copy=True), tile(2, "mail", "Email Us", EMAIL, href=f"mailto:{EMAIL}", copy=True),
                                  tile(3, "pin", "Service Area", area), tile(4, "clock", "Opening Hours", "24 hours, 7 days a week", "Emergency services always available")], 14)
 def drain_cards():
     out = []
@@ -443,13 +465,15 @@ def drain_cards():
                        0, f"background-color: #ffffff; border: 1px solid {LINE}; border-radius: 14px; overflow: hidden; {SH}"))
     return grid("Drain Cards", out, 4, 22)
 def ba_box(label, key, radius=0):
-    lab = lambda txt, side, bg: t(f"{label} {txt}", txt, f"position: absolute; bottom: 10px; {side}: 10px; font-size: 11.5px; font-weight: 700; padding: 3px 8px; border-radius: 4px; color: #ffffff; background-color: {bg};")
-    return box(label, [pic(f"{label} Before", f"{key}-before.jpg", "Before", "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"),
-                       pic(f"{label} After", f"{key}-after.jpg", "After", "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; clip-path: inset(0 0 0 50%);"),
-                       box(f"{label} Bar", [], "position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; min-width: 3px; padding: 0; background-color: #ffffff; transform: translateX(-50%);"),
-                       box(f"{label} Knob", [], "position: absolute; top: 50%; left: 50%; width: 30px; height: 30px; padding: 0; border-radius: 50%; background-color: #ffffff; transform: translate(-50%, -50%); box-shadow: 0 2px 10px rgba(0,0,0,0.4);"),
-                       lab("Before", "left", "rgba(0,0,0,0.7)"), lab("After", "right", RED)],
-               f"position: relative; padding: 0; aspect-ratio: 4 / 3; overflow: hidden; background-color: #222222; border-radius: {radius}px;")
+    lab = lambda txt, side, bg: t(f"{label} {txt}", txt, f"position: absolute; bottom: 10px; {side}: 10px; z-index: 3; font-size: 11.5px; font-weight: 700; padding: 3px 8px; border-radius: 4px; color: #ffffff; background-color: {bg}; pointer-events: none;")
+    grip = t(f"{label} Grip", "⇔", f"position: absolute; right: 0; bottom: 0; width: 32px; height: 32px; line-height: 32px; text-align: center; font-size: 20px; font-weight: 700; color: {RED}; "
+             "background-color: #ffffff; border-radius: 8px 0 0 0; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.35);")
+    before = box(f"{label} Before", [grip], f"position: absolute; top: 0; left: 0; height: 100%; width: 50%; min-width: 30px; max-width: 100%; padding: 0; overflow: hidden; resize: horizontal; transition: none; "
+                 f"background-image: url({IMG}{key}-before.jpg); background-size: 100cqw auto; background-position: left center; background-repeat: no-repeat; border-right: 3px solid #ffffff; z-index: 2; cursor: ew-resize;")
+    return box(label, [before, lab("Before", "left", "rgba(0,0,0,0.7)"), lab("After", "right", RED),
+                       t(f"{label} Hint", "Drag the handle ⇔", "position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 3; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; color: #ffffff; background-color: rgba(0,0,0,0.55); pointer-events: none; white-space: nowrap;")],
+               f"position: relative; padding: 0; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; container-type: inline-size; border-radius: {radius}px; "
+               f"background: #222222 url({IMG}{key}-after.jpg) center / cover no-repeat;")
 def guide(label, title, steps):
     return col(label, [eyebrow(label + " Eyebrow", "Quick guide"), h3(label + " Title", title, 22.4),
                        col(label + " Steps", [cgrid(f"{label} Step {i}", [t(f"{label} Step {i} No", str(i), f"font-size: 13.6px; font-weight: 800; color: #ffffff; background-color: {RED}; width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%;"),
@@ -466,8 +490,10 @@ def prose(label, eyebrow_txt, title, paras, extra=None, dark=False):
     return col(label, k, 16, "max-width: 68ch;")
 
 # ------------------------------------------------------------------ serialise / push
+INTER = {}
 def serialise(roots):
     used, cfg, sty, cls = {}, {}, {}, {}
+    INTER.clear()
     def uid(lbl):
         lbl = "".join(ch for ch in lbl if ch.isalnum() or ch in " -")[:60].strip() or "Element"
         n = used.get(lbl, 0); used[lbl] = n + 1
@@ -477,6 +503,7 @@ def serialise(roots):
         if n.cfg: cfg[cid] = n.cfg
         if n.style: sty[cid] = n.style
         if n.cls: cls[cid] = n.cls
+        if n.inter: INTER[cid] = n.inter
         return f'<{n.t} configuration-id="{html.escape(cid, quote=True)}">' + "".join(walk(k) for k in n.kids) + f"</{n.t}>"
     return "".join(walk(r) for r in roots), cfg, sty, cls
 
@@ -485,6 +512,7 @@ def push(post_id, sections, dry=False, publish=False):
         xml, cfg, sty, cls = serialise([s])
         args = {"post_id": post_id, "xml_structure": xml, "element_config": cfg, "style": sty, "classes": cls,
                 "mode": "replace_children" if i == 0 else "append", "parent_id": "document"}
+        if INTER: args["interactions"] = dict(INTER)
         if dry: args["dry_run"] = True
         r = call("elementor-build-composition", args)
         bad = r.get("_isError") or r.get("_error")

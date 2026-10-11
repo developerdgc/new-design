@@ -20,3 +20,8 @@ Header (40) and footer (41) are published, so after rebuilding them run
 `pages2.py` / `rs2.py` rebuild each page component by component from the artifact's CSS values.
 Icons are standalone SVGs generated from the artifact sprite by `icons.py` (img/icons/), loaded through jsDelivr.
 Published documents: build -> publish -> CSS refresh (manage-elements) -> publish again; `push(..., publish=True)` does this.
+
+## Interactive extras
+- **Auto-scrolling reviews**: `reviews_strip()` duplicates the cards and attaches an Elementor interaction (custom keyframes, x 0 → -50%, linear loop).
+- **Before/after drag**: `ba_box()` is CSS only — the "before" layer is a `resize: horizontal` box over the "after" photo (drag the white corner handle; desktop browsers).
+- **Copy buttons**: the pills carry the `rs-copy` / `rs-copy-value` classes. The click script (`copy-buttons.html`) must be added once in WP Admin → Elementor → Custom Code, because the MCP server cannot add JavaScript.
