@@ -59,7 +59,7 @@ def mobile_menu():
     item = N("e-accordion-item", "MM Item", {}, "position: static; padding: 0; border: 0; background-color: transparent; &[open] > summary { background-color: #dc2626; border-color: #dc2626; }", None, [
         N("e-accordion-item-header", "MM Toggle", {}, "list-style: none; cursor: pointer; width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 10px; "
           "border: 1px solid rgba(255,255,255,0.22); background-color: rgba(255,255,255,0.06); &::-webkit-details-marker { display: none; } &::after { display: none; content: none; }", None, [
-            N("e-accordion-item-title", "MM Toggle Title", {}, "padding: 0; display: flex;", None, [ico("MM Toggle Icon", "menu", "white", 20)])]),
+            N("e-accordion-item-title", "MM Toggle Title", {}, "padding: 0; margin: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex: 1 1 auto;", None, [ico("MM Toggle Icon", "menu", "white", 20, "margin: auto;")])]),
         N("e-accordion-item-content", "MM Content", {}, "position: absolute; top: 100%; left: 0; right: 0; padding: 0; z-index: 60;", None, [panel])])
     return N("e-accordion", "Mobile Menu", {"default_state": "all_collapsed", "max_expanded": "one", "show_icon": False, "faq_schema": False},
              "display: none; position: static; padding: 0; gap: 0; width: auto; flex: 0 0 auto; @media(--tablet) { display: flex; }", None, [item])
@@ -84,7 +84,10 @@ def footer():
                                    row("Footer Bottom Links", [bl("Leeds", "leeds"), t("Dot 1", "·", "font-size: 13.1px; color: #a3afc0;"), bl("Harrogate", "harrogate"), t("Dot 2", "·", "font-size: 13.1px; color: #a3afc0;"),
                                                                bl("Yorkshire", "yorkshire"), t("Footer Bottom Suffix", "Emergency Plumber", "font-size: 13.1px; color: #a3afc0;")], 5, "width: auto;")],
                  12, f"width: 100%; justify-content: space-between; border-top: 1px solid {LINED}; margin-top: 44px; padding-top: 22px;")
-    return box("Site Footer", [wrap("Footer Wrap", [g, bottom], 0, "padding-top: 64px; padding-bottom: 26px;")], "flex-direction: column; padding: 0; background-color: #04080e;", tag="footer")
+    powered = row("Footer Powered", [t("Powered By", "Powered by", "font-size: 13.1px; color: #7d8a9c;"),
+                                     box("Powered Link", [t("Powered Name", "EmmEn Tech", "font-size: 13.1px; font-weight: 700; color: #c3ccd9; &:hover { color: #ffffff; }")], "padding: 0; width: auto;", href="https://emmenntech.com/")],
+                  5, "width: 100%; justify-content: center; margin-top: 18px;")
+    return box("Site Footer", [wrap("Footer Wrap", [g, bottom, powered], 0, "padding-top: 64px; padding-bottom: 26px;")], "flex-direction: column; padding: 0; background-color: #04080e;", tag="footer")
 
 # ================================================================= HOME
 def home_hero():
