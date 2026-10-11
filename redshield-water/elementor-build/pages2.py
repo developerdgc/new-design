@@ -34,11 +34,35 @@ def header():
               [row("Menu Safety Videos", [ico("Menu Safety Videos Icon", "playc", "white", 15), t("Menu Safety Videos Text", "Safety Videos", "font-size: 14.4px; font-weight: 500; color: #d6dde8; white-space: nowrap;")], 6,
                    "flex-wrap: nowrap; width: auto; flex: 0 0 auto; margin-left: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); &:hover { background-color: rgba(220,38,38,0.2); }", href="tutorials")],
               4, "flex-wrap: nowrap; width: auto; flex: 1 1 auto; justify-content: center; @media(--tablet) { display: none; }", tag="nav")
-    call_b = btn("Header Call", PHONE, TEL, "red", "sm", "phone", "flex: 0 0 auto;")
-    bar = row("Header Bar", [logo("Logo"), nav, call_b], 14, f"flex-wrap: nowrap; justify-content: space-between; max-width: {W}px; margin: 0 auto; padding: 0 20px; min-height: 62px; width: 100%;")
-    mob = row("Mobile Menu", [navlink(f"Mobile {a}", a, b, True) for a, b in NAV + [("Videos", "tutorials")]], 2,
-              "display: none; justify-content: center; padding: 2px 12px 10px; @media(--tablet) { display: flex; }", tag="nav")
-    return box("Site Header", [bar, mob], f"flex-direction: column; padding: 0; background-color: rgba(6,11,19,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid {LINED}; position: sticky; top: 0; z-index: 50;", tag="header")
+    call_b = btn("Header Call", PHONE, TEL, "red", "sm", "phone", "flex: 0 0 auto; @media(--mobile) { display: none; }")
+    bar = row("Header Bar", [logo("Logo"), nav, row("Header Actions", [call_b, mobile_call(), mobile_menu()], 8, "flex-wrap: nowrap; flex: 0 0 auto; position: static;")], 14,
+              f"flex-wrap: nowrap; justify-content: space-between; max-width: {W}px; margin: 0 auto; padding: 0 20px; min-height: 62px; width: 100%; position: static; @media(--mobile) {{ padding: 0 14px; }}")
+    # sticky header is the containing block for the dropdown panel of the mobile menu
+    return box("Site Header", [bar], f"flex-direction: column; padding: 0; background-color: rgba(6,11,19,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid {LINED}; position: sticky; top: 0; z-index: 50;", tag="header")
+
+def mobile_call():
+    return box("Mobile Call", [ico("Mobile Call Icon", "phone", "white", 18)], f"display: none; width: 40px; height: 40px; padding: 0; align-items: center; justify-content: center; border-radius: 10px; background-color: {RED}; flex: 0 0 auto; @media(--mobile) {{ display: flex; }}", href=TEL)
+def mobile_menu():
+    """Hamburger built on the accordion widget: it renders as native <details>, so it opens and closes without any JavaScript."""
+    def mlink(label, text, href, sub=False):
+        return box(label, [t(label + " Text", text, f"font-size: {14.5 if sub else 16.5}px; font-weight: {500 if sub else 600}; color: {'#aab5c5' if sub else '#ffffff'};")],
+                   f"padding: {'9px 14px 9px 30px' if sub else '13px 14px'}; width: 100%; border-radius: 8px; &:hover {{ background-color: #111b2c; }}", href=href)
+    group = lambda title, links: col(f"MM {title}", [t(f"MM {title} Title", title, "font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ff6b6b; padding: 12px 14px 4px;")] +
+                                     [mlink(f"MM {title} {a}", a, h_, True) for a, h_ in links], 0, "width: 100%;")
+    panel = col("MM Panel", [mlink("MM Home", "Home", "home"), mlink("MM About", "About Us", "about"),
+                             group("Services", [("All Services", "services"), ("Blocked Drain Service", "bds"), ("Leeds Drain Unblocking", "ldu")]),
+                             mlink("MM Pricing", "Pricing Plan", "pricing"),
+                             group("Areas", [("All Areas We Cover", "areas"), ("Leeds Emergency Plumber", "leeds"), ("Harrogate Emergency Plumber", "harrogate"), ("Yorkshire Emergency Plumber", "yorkshire")]),
+                             mlink("MM FAQs", "FAQs", "faqs"), mlink("MM Videos", "Free Safety Tutorials", "tutorials"), mlink("MM Contact", "Contact Us", "contact"),
+                             btn("MM Call", f"Call {PHONE}", TEL, "red", "md", "phone", "width: 100%; margin-top: 10px;")], 2,
+                f"width: 100%; max-height: calc(100vh - 80px); overflow-y: auto; padding: 10px 14px 18px; background-color: #060b13; border-top: 1px solid {LINED}; box-shadow: 0 20px 40px rgba(0,0,0,0.55);")
+    item = N("e-accordion-item", "MM Item", {}, "position: static; padding: 0; border: 0; background-color: transparent; &[open] > summary { background-color: #dc2626; border-color: #dc2626; }", None, [
+        N("e-accordion-item-header", "MM Toggle", {}, "list-style: none; cursor: pointer; width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 10px; "
+          "border: 1px solid rgba(255,255,255,0.22); background-color: rgba(255,255,255,0.06); &::-webkit-details-marker { display: none; } &::after { display: none; content: none; }", None, [
+            N("e-accordion-item-title", "MM Toggle Title", {}, "padding: 0; display: flex;", None, [ico("MM Toggle Icon", "menu", "white", 20)])]),
+        N("e-accordion-item-content", "MM Content", {}, "position: absolute; top: 100%; left: 0; right: 0; padding: 0; z-index: 60;", None, [panel])])
+    return N("e-accordion", "Mobile Menu", {"default_state": "all_collapsed", "max_expanded": "one", "show_icon": False, "faq_schema": False},
+             "display: none; position: static; padding: 0; gap: 0; width: auto; flex: 0 0 auto; @media(--tablet) { display: flex; }", None, [item])
 
 def footer():
     FL = "font-size: 14.7px; color: #a3afc0; &:hover { color: #ffffff; }"

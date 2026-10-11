@@ -151,7 +151,7 @@ def reviews_strip():
     tw = len(D["REVIEWS"]) * 2 * 328
     track = row("Review Track", cards, 18, f"flex-wrap: nowrap; width: {tw}px; min-width: {tw}px; max-width: none; flex: 0 0 {tw}px; padding: 22px 18px 34px 0; align-items: stretch;")
     track.inter = [marquee(len(D["REVIEWS"]) * 11000)]
-    strip = box("Review Strip", [track], "padding: 0; width: 100%; overflow: hidden; "
+    strip = box("Review Strip", [track], "padding: 0; width: 100%; max-width: 100%; overflow: hidden; position: relative; isolation: isolate; "
                 "-webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);")
     return col("Reviews", [headrow, strip], 0, "width: 100%;")
 def ticker():
@@ -509,6 +509,7 @@ def serialise(roots):
 
 def push(post_id, sections, dry=False, publish=False):
     for i, s in enumerate(sections):
+        if s.t != "e-accordion" and "overflow-x: clip" not in s.style and s.cfg.get("tag") != "header": s.style += " overflow-x: clip;"
         xml, cfg, sty, cls = serialise([s])
         args = {"post_id": post_id, "xml_structure": xml, "element_config": cfg, "style": sty, "classes": cls,
                 "mode": "replace_children" if i == 0 else "append", "parent_id": "document"}
