@@ -905,5 +905,13 @@
   "w": 540,
   "h": 960,
   "bytes": 936494
+ },
+ "img/work/junkcarbuyer1.jpg": {
+  "id": 630,
+  "url": "https://portfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-junkcarbuyer1.webp",
+  "w": 1366,
+  "h": 5511,
+  "hd_id": 630,
+  "hd_url": "https://portfolio.digitalgrowthcatalyze.com/wp-content/uploads/2026/10/work-hd-junkcarbuyer1.webp"
  }
 }
