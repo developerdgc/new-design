@@ -17,7 +17,7 @@ parts = [('Homepage Work: Websites 1-20', 'web', list(enumerate(items[0:20], 1))
          ('Homepage Work: Logos', 'brand', list(enumerate(BRANDS, 1)))]
 STATE = 'work-holders-portfolio.json'
 st = json.load(open(STATE)) if os.path.exists(STATE) else {}
-print(mcp.upsert_classes({'dgc-work-extra': 'display: none;'}))
+print(mcp.upsert_classes({'dgc-work-extra': 'display: flex; flex-direction: column; gap: 24px;'}))
 for title, kind, rows in parts:
     if title in st: print('exists', title, st[title]); continue
     pid = mcp.call('elementor-create-page', {'title': title, 'post_type': 'page'})['id']
