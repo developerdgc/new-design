@@ -185,9 +185,12 @@ def append(post, parent, f):
     raise RuntimeError('append failed')
 
 if __name__ == '__main__':
-    PAGE = 126
+    import os
+    # WORK_PAGE=<id> builds the section into a separate (private) holder page that the homepage embeds,
+    # which keeps the homepage light enough for the Elementor editor to open.
+    PAGE = int(os.environ.get('WORK_PAGE', 126)); IDX = 0 if os.environ.get('WORK_PAGE') else 3
     f = skeleton()
-    r = mcp.put_section(PAGE, 'Work', 3, xml_structure=f.x, element_config=f.cfg, classes=f.cls, style=f.sty)
+    r = mcp.put_section(PAGE, 'Work', IDX, xml_structure=f.x, element_config=f.cfg, classes=f.cls, style=f.sty)
     print('skeleton', r.get('success'), r.get('warnings'))
     tree = mcp.call('elementor-get-page-structure', {'post_id': PAGE})['elements']
     grid = find(tree, 'Work Grid')['id']; print('grid', grid)
