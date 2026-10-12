@@ -1,0 +1,12 @@
+{
+  "name": "Afaq Mines Website Importer",
+  "id": "afaq-mines-website-importer",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["https://raw.githubusercontent.com"],
+    "reasoning": "Loads the website photos (hero, minerals, team, logo) from the project's GitHub repository."
+  }
+}

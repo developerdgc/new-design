@@ -1,0 +1,23 @@
+<script>
+/* RedShield Water: Copy buttons. Add via WP Admin → Elementor → Custom Code (Location: </body> End, Display: Entire Site). */
+document.addEventListener("click", function (e) {
+  var btn = e.target.closest(".rs-copy");
+  if (!btn) return;
+  e.preventDefault();
+  var row = btn.parentElement, val = row && row.querySelector(".rs-copy-value");
+  if (!val) return;
+  var text = val.textContent.replace(/\s+/g, "");
+  var label = btn.querySelector("p") || btn;
+  var done = function () { label.textContent = "Copied ✓"; setTimeout(function () { label.textContent = "Copy"; }, 1600); };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else { fallback(); }
+  function fallback() {
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch (err) {}
+    ta.remove();
+  }
+});
+</script>
